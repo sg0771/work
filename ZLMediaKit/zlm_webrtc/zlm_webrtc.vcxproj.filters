@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="answer.sdp" />
+    <None Include="janus_answer.sdp" />
+    <None Include="janus_offer.sdp" />
+    <None Include="offer.sdp" />
+    <None Include="offer-simulcast.sdp" />
+    <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DtlsTransport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IceServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Nack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RtpExt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SctpAssociation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sdp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SrtpSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StunPacket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TwccContext.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WebRtcEchoTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WebRtcPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WebRtcPusher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WebRtcSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WebRtcTransport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DtlsTransport.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IceServer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="logger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Nack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RtpExt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SctpAssociation.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sdp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SrtpSession.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StunPacket.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TwccContext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebRtcEchoTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebRtcPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebRtcPusher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebRtcSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebRtcTransport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

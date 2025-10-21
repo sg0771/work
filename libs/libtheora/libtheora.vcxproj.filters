@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="x86_vc\mmxencfrag.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="x86_vc\mmxfdct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="x86_vc\mmxfrag.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="x86_vc\mmxidct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="x86_vc\mmxstate.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="x86_vc\x86enc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="x86_vc\x86state.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="analyze.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apiwrapper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bitpack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decapiwrapper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decinfo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dequant.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encapiwrapper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encfrag.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encinfo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="enquant.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fdct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fragment.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="huffdec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="huffenc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="idct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="info.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="internal.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mathops.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mcenc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="quant.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rate.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="state.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tokenize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="x86_vc\mmxfrag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="x86_vc\mmxloop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="x86_vc\x86enc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="x86_vc\x86int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apiwrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bitpack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="decint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dequant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="enquant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="huffdec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="huffenc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="huffman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mathops.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="modedec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ocintrin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="quant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="theora.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="theoradec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="theoraenc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cderror.h" />
+    <ClInclude Include="cdjpeg.h" />
+    <ClInclude Include="cmyk.h" />
+    <ClInclude Include="jccolext.c.h" />
+    <ClInclude Include="jchuff.h" />
+    <ClInclude Include="jconfig.h" />
+    <ClInclude Include="jconfigint.h" />
+    <ClInclude Include="jdcoefct.h" />
+    <ClInclude Include="jdcol565.c.h" />
+    <ClInclude Include="jdcolext.c.h" />
+    <ClInclude Include="jdct.h" />
+    <ClInclude Include="jdhuff.h" />
+    <ClInclude Include="jdmainct.h" />
+    <ClInclude Include="jdmaster.h" />
+    <ClInclude Include="jdmerge.h" />
+    <ClInclude Include="jdmrg565.c.h" />
+    <ClInclude Include="jdmrgext.c.h" />
+    <ClInclude Include="jdsample.h" />
+    <ClInclude Include="jerror.h" />
+    <ClInclude Include="jinclude.h" />
+    <ClInclude Include="jmemsys.h" />
+    <ClInclude Include="jmorecfg.h" />
+    <ClInclude Include="jpegcomp.h" />
+    <ClInclude Include="jpegint.h" />
+    <ClInclude Include="jpeglib.h" />
+    <ClInclude Include="jpeg_nbits_table.h" />
+    <ClInclude Include="jsimd.h" />
+    <ClInclude Include="jsimddct.h" />
+    <ClInclude Include="jstdhuff.c.h" />
+    <ClInclude Include="jversion.h" />
+    <ClInclude Include="simd\jsimd.h" />
+    <ClInclude Include="transupp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jaricom.c" />
+    <ClCompile Include="jcapimin.c" />
+    <ClCompile Include="jcapistd.c" />
+    <ClCompile Include="jcarith.c" />
+    <ClCompile Include="jccoefct.c" />
+    <ClCompile Include="jccolor.c" />
+    <ClCompile Include="jcdctmgr.c" />
+    <ClCompile Include="jchuff.c" />
+    <ClCompile Include="jcicc.c" />
+    <ClCompile Include="jcinit.c" />
+    <ClCompile Include="jcmainct.c" />
+    <ClCompile Include="jcmarker.c" />
+    <ClCompile Include="jcmaster.c" />
+    <ClCompile Include="jcomapi.c" />
+    <ClCompile Include="jcparam.c" />
+    <ClCompile Include="jcphuff.c" />
+    <ClCompile Include="jcprepct.c" />
+    <ClCompile Include="jcsample.c" />
+    <ClCompile Include="jctrans.c" />
+    <ClCompile Include="jdapimin.c" />
+    <ClCompile Include="jdapistd.c" />
+    <ClCompile Include="jdarith.c" />
+    <ClCompile Include="jdatadst.c" />
+    <ClCompile Include="jdatasrc.c" />
+    <ClCompile Include="jdcoefct.c" />
+    <ClCompile Include="jdcolor.c" />
+    <ClCompile Include="jddctmgr.c" />
+    <ClCompile Include="jdhuff.c" />
+    <ClCompile Include="jdicc.c" />
+    <ClCompile Include="jdinput.c" />
+    <ClCompile Include="jdmainct.c" />
+    <ClCompile Include="jdmarker.c" />
+    <ClCompile Include="jdmaster.c" />
+    <ClCompile Include="jdmerge.c" />
+    <ClCompile Include="jdphuff.c" />
+    <ClCompile Include="jdpostct.c" />
+    <ClCompile Include="jdsample.c" />
+    <ClCompile Include="jdtrans.c" />
+    <ClCompile Include="jerror.c" />
+    <ClCompile Include="jfdctflt.c" />
+    <ClCompile Include="jfdctfst.c" />
+    <ClCompile Include="jfdctint.c" />
+    <ClCompile Include="jidctflt.c" />
+    <ClCompile Include="jidctfst.c" />
+    <ClCompile Include="jidctint.c" />
+    <ClCompile Include="jidctred.c" />
+    <ClCompile Include="jmemmgr.c" />
+    <ClCompile Include="jmemnobs.c" />
+    <ClCompile Include="jquant1.c" />
+    <ClCompile Include="jquant2.c" />
+    <ClCompile Include="jutils.cpp" />
+    <ClCompile Include="rdcolmap.c" />
+    <ClCompile Include="rdswitch.c" />
+    <ClCompile Include="simd\nasm\jsimd_i386.c" />
+    <ClCompile Include="simd\nasm\jsimd_x86_64.c" />
+    <ClCompile Include="transupp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="simd\nasm\jccolext-avx2_i386.inc" />
+    <None Include="simd\nasm\jccolext-avx2_x86_64.inc" />
+    <None Include="simd\nasm\jccolext-mmx_i386.inc" />
+    <None Include="simd\nasm\jccolext-sse2_i386.inc" />
+    <None Include="simd\nasm\jccolext-sse2_x86_64.inc" />
+    <None Include="simd\nasm\jcgryext-avx2_i386.inc" />
+    <None Include="simd\nasm\jcgryext-avx2_x86_64.inc" />
+    <None Include="simd\nasm\jcgryext-mmx_i386.inc" />
+    <None Include="simd\nasm\jcgryext-sse2_i386.inc" />
+    <None Include="simd\nasm\jcgryext-sse2_x86_64.inc" />
+    <None Include="simd\nasm\jcolsamp.inc" />
+    <None Include="simd\nasm\jdcolext-avx2_i386.inc" />
+    <None Include="simd\nasm\jdcolext-avx2_x86_64.inc" />
+    <None Include="simd\nasm\jdcolext-mmx_i386.inc" />
+    <None Include="simd\nasm\jdcolext-sse2_i386.inc" />
+    <None Include="simd\nasm\jdcolext-sse2_x86_64.inc" />
+    <None Include="simd\nasm\jdct.inc" />
+    <None Include="simd\nasm\jdmrgext-avx2_i386.inc" />
+    <None Include="simd\nasm\jdmrgext-avx2_x86_64.inc" />
+    <None Include="simd\nasm\jdmrgext-mmx_i386.inc" />
+    <None Include="simd\nasm\jdmrgext-sse2_i386.inc" />
+    <None Include="simd\nasm\jdmrgext-sse2_x86_64.inc" />
+    <None Include="simd\nasm\jsimdcfg.inc" />
+    <None Include="simd\nasm\jsimdext.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <NASM Include="simd\nasm\jccolor-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jccolor-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jccolor-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jccolor-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jccolor-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jcgray-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jcgray-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jcgray-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jcgray-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jcgray-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jchuff-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jchuff-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jcphuff-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jcphuff-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jcsample-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jcsample-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jcsample-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jcsample-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jcsample-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jdcolor-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jdcolor-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jdcolor-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jdcolor-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jdcolor-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jdmerge-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jdmerge-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jdmerge-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jdmerge-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jdmerge-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jdsample-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jdsample-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jdsample-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jdsample-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jdsample-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jfdctflt-3dn_i386.asm" />
+    <NASM Include="simd\nasm\jfdctflt-sse_i386.asm" />
+    <NASM Include="simd\nasm\jfdctflt-sse_x86_64.asm" />
+    <NASM Include="simd\nasm\jfdctfst-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jfdctfst-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jfdctfst-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jfdctint-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jfdctint-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jfdctint-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jfdctint-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jfdctint-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jidctflt-3dn_i386.asm" />
+    <NASM Include="simd\nasm\jidctflt-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jidctflt-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jidctflt-sse_i386.asm" />
+    <NASM Include="simd\nasm\jidctfst-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jidctfst-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jidctfst-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jidctint-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jidctint-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jidctint-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jidctint-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jidctint-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jidctred-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jidctred-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jidctred-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jquant-3dn_i386.asm" />
+    <NASM Include="simd\nasm\jquant-mmx_i386.asm" />
+    <NASM Include="simd\nasm\jquant-sse_i386.asm" />
+    <NASM Include="simd\nasm\jquantf-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jquantf-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jquanti-avx2_i386.asm" />
+    <NASM Include="simd\nasm\jquanti-avx2_x86_64.asm" />
+    <NASM Include="simd\nasm\jquanti-sse2_i386.asm" />
+    <NASM Include="simd\nasm\jquanti-sse2_x86_64.asm" />
+    <NASM Include="simd\nasm\jsimdcpu_i386.asm" />
+    <NASM Include="simd\nasm\jsimdcpu_x86_64.asm" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3cf2edc2-6378-45af-987f-3ad97f7d84b6}</ProjectGuid>
+    <RootNamespace>libjpeg</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(SolutionDir)\tools\nasm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ReferencePath>
+    </ReferencePath>
+    <LibraryPath>
+    </LibraryPath>
+    <PreBuildEventUseInBuild />
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ReferencePath>
+    </ReferencePath>
+    <LibraryPath>
+    </LibraryPath>
+    <PreBuildEventUseInBuild />
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ReferencePath>
+    </ReferencePath>
+    <LibraryPath>
+    </LibraryPath>
+    <PreBuildEventUseInBuild />
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ReferencePath>
+    </ReferencePath>
+    <LibraryPath>
+    </LibraryPath>
+    <PreBuildEventUseInBuild />
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <Lib>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <Lib>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(SolutionDir)\tools\nasm.targets" />
+  </ImportGroup>
+</Project>

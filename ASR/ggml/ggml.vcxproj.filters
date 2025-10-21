@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\cpu">
+      <UniqueIdentifier>{2f14417a-4f74-449a-8e7a-94a5466d76e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\vulkan">
+      <UniqueIdentifier>{f8f40566-0668-46a4-b2dd-a51023c445c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ggml.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-alloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-backend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-blas.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-cann.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-cpp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-cpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-cuda.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-metal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-opencl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-opt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-rpc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-sycl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-webgpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggml-zdnn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gguf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-backend-impl.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-common.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-impl.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-quants.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-threading.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\arch-fallback.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\binary-ops.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\common.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\ggml-cpu-impl.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\hbm.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\ops.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\quants.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\repack.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\simd-mappings.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\traits.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\unary-ops.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\vec.h">
+      <Filter>源文件\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\amx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\amx-common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\mmq.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\sgemm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\kernels.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ggml-cpu\kleidiai.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ggml-c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-alloc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-backend.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-backend-reg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-opt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-quants.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-threading.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gguf-cpp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-binary-ops.cpp">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu.c">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-cpp.cpp">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-hbm.cpp">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-ops.cpp">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-quants.c">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-repack.cpp">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-traits.cpp">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-unary-ops.cpp">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-vec.cpp">
+      <Filter>源文件\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-amx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-amx-mmq.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\x86-cpu-feats.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\x86-quants.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\x86-repack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-llamafile-sgemm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

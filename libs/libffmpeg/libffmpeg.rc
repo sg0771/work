@@ -1,0 +1,33 @@
+#include "afxres.h"
+
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2025,10,13,16
+ PRODUCTVERSION 2025,10,13,16
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "libffmpeg.dll "
+            VALUE "CompanyName", "ApowerSoft Ltd."
+            VALUE "FileDescription", "libffmpeg.dll"
+            VALUE "InternalName", "libFfmpeg.dll"
+            VALUE "LegalCopyright", "Copyright  ApowerSoft Ltd."
+            VALUE "OriginalFilename", "libffmpeg.dll"
+            VALUE "ProductName", "libffmpeg.dll"
+            VALUE "ProductVersion", "2025.10.13.16"
+            VALUE "SpecialBuild", "GCC 7.2.0 "
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END

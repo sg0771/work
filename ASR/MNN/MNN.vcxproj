@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="backend\cpu\compute\CommonOptFunction.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvInt8TiledExecutor.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvInt8Winograd.cpp" />
+    <ClCompile Include="backend\cpu\compute\Convolution1x1Strassen.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionDepthwise3x3.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionFloatFactory.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionGroup.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionHybrid.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionIntFactory.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionPackFreeWinograd.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionPackWinograd.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionTiledExecutor.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionWinogradBridge.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvolutionWinogradImpl.cpp" />
+    <ClCompile Include="backend\cpu\compute\ConvOpt.cpp" />
+    <ClCompile Include="backend\cpu\compute\DeconvolutionWithStride.cpp" />
+    <ClCompile Include="backend\cpu\compute\DenseConvolutionTiledExecutor.cpp" />
+    <ClCompile Include="backend\cpu\compute\GemmInt8Executor.cpp" />
+    <ClCompile Include="backend\cpu\compute\IdstConvolutionInt8.cpp" />
+    <ClCompile Include="backend\cpu\compute\ImageProcessFunction.cpp" />
+    <ClCompile Include="backend\cpu\compute\Int8FunctionsOpt.cpp" />
+    <ClCompile Include="backend\cpu\compute\OptimizedComputer.cpp" />
+    <ClCompile Include="backend\cpu\compute\ResizeFunction.cpp" />
+    <ClCompile Include="backend\cpu\compute\SparseConvInt8TiledExecutor.cpp" />
+    <ClCompile Include="backend\cpu\compute\SparseConvolutionTiledExecutor.cpp" />
+    <ClCompile Include="backend\cpu\compute\StrassenMatmulComputor.cpp" />
+    <ClCompile Include="backend\cpu\compute\WinogradOptFunction.cpp" />
+    <ClCompile Include="backend\cpu\CPUArgMax.cpp" />
+    <ClCompile Include="backend\cpu\CPUBackend.cpp" />
+    <ClCompile Include="backend\cpu\CPUBinary.cpp" />
+    <ClCompile Include="backend\cpu\CPUBinaryInt8.cpp" />
+    <ClCompile Include="backend\cpu\CPUCast.cpp" />
+    <ClCompile Include="backend\cpu\CPUConvolution.cpp" />
+    <ClCompile Include="backend\cpu\CPUConvolutionDepthwise.cpp" />
+    <ClCompile Include="backend\cpu\CPUCropAndResize.cpp" />
+    <ClCompile Include="backend\cpu\CPUDeconvolution.cpp" />
+    <ClCompile Include="backend\cpu\CPUDeconvolutionDepthwise.cpp" />
+    <ClCompile Include="backend\cpu\CPUDepthwiseConvInt8.cpp" />
+    <ClCompile Include="backend\cpu\CPUDequantize.cpp" />
+    <ClCompile Include="backend\cpu\CPUDet.cpp" />
+    <ClCompile Include="backend\cpu\CPUDetectionOutput.cpp" />
+    <ClCompile Include="backend\cpu\CPUDetectionPostProcess.cpp" />
+    <ClCompile Include="backend\cpu\CPUEltwise.cpp" />
+    <ClCompile Include="backend\cpu\CPUEltwiseInt8.cpp" />
+    <ClCompile Include="backend\cpu\CPUFloatToInt8.cpp" />
+    <ClCompile Include="backend\cpu\CPUGridSample.cpp" />
+    <ClCompile Include="backend\cpu\CPUHistogram.cpp" />
+    <ClCompile Include="backend\cpu\CPUImageProcess.cpp" />
+    <ClCompile Include="backend\cpu\CPUInstanceNorm.cpp" />
+    <ClCompile Include="backend\cpu\CPUInt8ToFloat.cpp" />
+    <ClCompile Include="backend\cpu\CPUInterp.cpp" />
+    <ClCompile Include="backend\cpu\CPUInterp3D.cpp" />
+    <ClCompile Include="backend\cpu\CPULayerNorm.cpp" />
+    <ClCompile Include="backend\cpu\CPULinSpace.cpp" />
+    <ClCompile Include="backend\cpu\CPUMatMul.cpp" />
+    <ClCompile Include="backend\cpu\CPUMatrixBandPart.cpp" />
+    <ClCompile Include="backend\cpu\CPUMoments.cpp" />
+    <ClCompile Include="backend\cpu\CPUNonMaxSuppressionV2.cpp" />
+    <ClCompile Include="backend\cpu\CPUOneHot.cpp" />
+    <ClCompile Include="backend\cpu\CPUOPRegister.cpp" />
+    <ClCompile Include="backend\cpu\CPUPlugin.cpp" />
+    <ClCompile Include="backend\cpu\CPUPool.cpp" />
+    <ClCompile Include="backend\cpu\CPUPoolInt8.cpp" />
+    <ClCompile Include="backend\cpu\CPUProposal.cpp" />
+    <ClCompile Include="backend\cpu\CPUQuanConvolutionDepthwise.cpp" />
+    <ClCompile Include="backend\cpu\CPUQuantizedAdd.cpp" />
+    <ClCompile Include="backend\cpu\CPUQuantizedAvgPool.cpp" />
+    <ClCompile Include="backend\cpu\CPUQuantizedLogistic.cpp" />
+    <ClCompile Include="backend\cpu\CPUQuantizedMaxPool.cpp" />
+    <ClCompile Include="backend\cpu\CPUQuantizedSoftmax.cpp" />
+    <ClCompile Include="backend\cpu\CPURandomUniform.cpp" />
+    <ClCompile Include="backend\cpu\CPURange.cpp" />
+    <ClCompile Include="backend\cpu\CPURaster.cpp" />
+    <ClCompile Include="backend\cpu\CPUReduction.cpp" />
+    <ClCompile Include="backend\cpu\CPURelu.cpp" />
+    <ClCompile Include="backend\cpu\CPUResize.cpp" />
+    <ClCompile Include="backend\cpu\CPUResizeCache.cpp" />
+    <ClCompile Include="backend\cpu\CPURNNSequenceGRU.cpp" />
+    <ClCompile Include="backend\cpu\CPUROIAlign.cpp" />
+    <ClCompile Include="backend\cpu\CPUROIPooling.cpp" />
+    <ClCompile Include="backend\cpu\CPURuntime.cpp" />
+    <ClCompile Include="backend\cpu\CPUScale.cpp" />
+    <ClCompile Include="backend\cpu\CPUScaleInt8.cpp" />
+    <ClCompile Include="backend\cpu\CPUSegmentMean.cpp" />
+    <ClCompile Include="backend\cpu\CPUSelect.cpp" />
+    <ClCompile Include="backend\cpu\CPUSetDiff1D.cpp" />
+    <ClCompile Include="backend\cpu\CPUSoftmax.cpp" />
+    <ClCompile Include="backend\cpu\CPUSoftMaxInt8.cpp" />
+    <ClCompile Include="backend\cpu\CPUSvd.cpp" />
+    <ClCompile Include="backend\cpu\CPUTensorConvert.cpp" />
+    <ClCompile Include="backend\cpu\CPUTFQuantizedConv2D.cpp" />
+    <ClCompile Include="backend\cpu\CPUTopKV2.cpp" />
+    <ClCompile Include="backend\cpu\CPUUnary.cpp" />
+    <ClCompile Include="backend\cpu\CPUUnique.cpp" />
+    <ClCompile Include="backend\cpu\CPUUnravelIndex.cpp" />
+    <ClCompile Include="backend\cpu\CPUWhere.cpp" />
+    <ClCompile Include="backend\cpu\OneDNNConvInt8.cpp" />
+    <ClCompile Include="backend\cpu\OneDNNConvolution.cpp" />
+    <ClCompile Include="backend\cpu\ThreadPool.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\AVX2Backend.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\AVX2Functions.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_GemmAVX2FMA.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_GemmAVX2FMABF16.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_GemmSparseFMA.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_MathFunctions.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_PackedFunction.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmAVX2.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmCommon.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmCommonBF16.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmInt8.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmSparse.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_MathFunctions.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_PackedFunction.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_ReorderFunctions.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_WinogradFunctions.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\FunctionDispatcher.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\mnn_cpu_id.cc" />
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_GemmCommon.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_GemmInt8.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_GemmSSE.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_ImageProcessFunction.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_MathFunctions.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_PackedFunction.cpp" />
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_ReorderFunctions.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\backend\VulkanBackend.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\compiler\AllShader.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\compiler\VulkanShaderMap.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanArgMax.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanBasicExecution.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanBinary.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanConvolution.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanConvolutionImpl.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanDeconvolution.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanFuse.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanGridSample.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanInterp.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanLayernorm.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanLoop.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanMatMul.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanOneHot.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanPool.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanPRelu.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanRange.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanRaster.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanReduce.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanResize.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanROIPooling.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanScale.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanSelect.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanSoftmax.cpp" />
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanUnary.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanBuffer.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanCommandPool.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanDevice.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanFence.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanFramebuffer.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanImage.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanInstance.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanMemoryPool.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanPipeline.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanQueryPool.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanRenderPass.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanSemaphore.cpp" />
+    <ClCompile Include="backend\vulkan\component\VulkanTarget.cpp" />
+    <ClCompile Include="backend\vulkan\runtime\VulkanRuntime.cpp" />
+    <ClCompile Include="backend\vulkan\runtime\vulkan_wrapper.cpp" />
+    <ClCompile Include="core\AutoTime.cpp" />
+    <ClCompile Include="core\Backend.cpp" />
+    <ClCompile Include="core\BackendRegister.cpp" />
+    <ClCompile Include="core\BufferAllocator.cpp" />
+    <ClCompile Include="core\ConvolutionCommon.cpp" />
+    <ClCompile Include="core\Execution.cpp" />
+    <ClCompile Include="core\FileLoader.cpp" />
+    <ClCompile Include="core\Interpreter.cpp" />
+    <ClCompile Include="core\MNNMemoryUtils.cpp" />
+    <ClCompile Include="core\OpCommonUtils.cpp" />
+    <ClCompile Include="core\Pipeline.cpp" />
+    <ClCompile Include="core\RuntimeFactory.cpp" />
+    <ClCompile Include="core\Schedule.cpp" />
+    <ClCompile Include="core\Session.cpp" />
+    <ClCompile Include="core\Tensor.cpp" />
+    <ClCompile Include="core\TensorUtils.cpp" />
+    <ClCompile Include="core\WrapExecution.cpp" />
+    <ClCompile Include="cv\ImageProcess.cpp" />
+    <ClCompile Include="cv\Matrix_CV.cpp" />
+    <ClCompile Include="express\Executor.cpp" />
+    <ClCompile Include="express\ExecutorScope.cpp" />
+    <ClCompile Include="express\Expr.cpp" />
+    <ClCompile Include="express\MathOp.cpp" />
+    <ClCompile Include="express\mnn_Utils.cpp" />
+    <ClCompile Include="express\module\IfModule.cpp" />
+    <ClCompile Include="express\module\Module.cpp" />
+    <ClCompile Include="express\module\NMSModule.cpp" />
+    <ClCompile Include="express\module\PipelineModule.cpp" />
+    <ClCompile Include="express\module\StaticModule.cpp" />
+    <ClCompile Include="express\module\WhileModule.cpp" />
+    <ClCompile Include="express\NeuralNetWorkOp.cpp" />
+    <ClCompile Include="express\Optimizer.cpp" />
+    <ClCompile Include="geometry\ConvertUtils.cpp" />
+    <ClCompile Include="geometry\GeometryBatchMatMul.cpp" />
+    <ClCompile Include="geometry\GeometryBinary.cpp" />
+    <ClCompile Include="geometry\GeometryBroadcastTo.cpp" />
+    <ClCompile Include="geometry\GeometryComputer.cpp" />
+    <ClCompile Include="geometry\GeometryComputerUtils.cpp" />
+    <ClCompile Include="geometry\GeometryConcat.cpp" />
+    <ClCompile Include="geometry\GeometryConv2D.cpp" />
+    <ClCompile Include="geometry\GeometryConv2DBackPropFilter.cpp" />
+    <ClCompile Include="geometry\GeometryConv3D.cpp" />
+    <ClCompile Include="geometry\GeometryConvert.cpp" />
+    <ClCompile Include="geometry\GeometryConvUtils.cpp" />
+    <ClCompile Include="geometry\GeometryCosineSimilarity.cpp" />
+    <ClCompile Include="geometry\GeometryCrop.cpp" />
+    <ClCompile Include="geometry\GeometryCumSum.cpp" />
+    <ClCompile Include="geometry\GeometryDepthToSpace.cpp" />
+    <ClCompile Include="geometry\GeometryDet.cpp" />
+    <ClCompile Include="geometry\GeometryDilation2D.cpp" />
+    <ClCompile Include="geometry\GeometryELU.cpp" />
+    <ClCompile Include="geometry\GeometryFill.cpp" />
+    <ClCompile Include="geometry\GeometryGather.cpp" />
+    <ClCompile Include="geometry\GeometryImageOp.cpp" />
+    <ClCompile Include="geometry\GeometryInnerProduct.cpp" />
+    <ClCompile Include="geometry\GeometryLRN.cpp" />
+    <ClCompile Include="geometry\GeometryLSTM.cpp" />
+    <ClCompile Include="geometry\GeometryOPRegister.cpp" />
+    <ClCompile Include="geometry\GeometryPermute.cpp" />
+    <ClCompile Include="geometry\GeometryPoolGrad.cpp" />
+    <ClCompile Include="geometry\GeometryPooling3D.cpp" />
+    <ClCompile Include="geometry\GeometryReduce.cpp" />
+    <ClCompile Include="geometry\GeometryReshape.cpp" />
+    <ClCompile Include="geometry\GeometryReverseSequence.cpp" />
+    <ClCompile Include="geometry\GeometryScatter.cpp" />
+    <ClCompile Include="geometry\GeometrySelect.cpp" />
+    <ClCompile Include="geometry\GeometryShape.cpp" />
+    <ClCompile Include="geometry\GeometrySlice.cpp" />
+    <ClCompile Include="geometry\GeometrySpaceToBatchND.cpp" />
+    <ClCompile Include="geometry\GeometrySpatialProduct.cpp" />
+    <ClCompile Include="geometry\GeometryStridedSlice.cpp" />
+    <ClCompile Include="geometry\GeometryTensorArray.cpp" />
+    <ClCompile Include="geometry\GeometryThreshold.cpp" />
+    <ClCompile Include="geometry\GeometryTile.cpp" />
+    <ClCompile Include="geometry\GeometryTopK.cpp" />
+    <ClCompile Include="geometry\GeometryUnary.cpp" />
+    <ClCompile Include="math\Matrix.cpp" />
+    <ClCompile Include="math\WingoradGenerater.cpp" />
+    <ClCompile Include="shape\ShapeArgMax.cpp" />
+    <ClCompile Include="shape\ShapeBatchToSpaceND.cpp" />
+    <ClCompile Include="shape\ShapeBinaryOp.cpp" />
+    <ClCompile Include="shape\ShapeBroadcastTo.cpp" />
+    <ClCompile Include="shape\ShapeCast.cpp" />
+    <ClCompile Include="shape\ShapeConcat.cpp" />
+    <ClCompile Include="shape\ShapeConvolution.cpp" />
+    <ClCompile Include="shape\ShapeConvolution3D.cpp" />
+    <ClCompile Include="shape\ShapeConvTranspose3D.cpp" />
+    <ClCompile Include="shape\ShapeCosineSimilarity.cpp" />
+    <ClCompile Include="shape\ShapeCrop.cpp" />
+    <ClCompile Include="shape\ShapeCropAndResize.cpp" />
+    <ClCompile Include="shape\ShapeDeconvolution.cpp" />
+    <ClCompile Include="shape\ShapeDepthToSpace.cpp" />
+    <ClCompile Include="shape\ShapeDequantize.cpp" />
+    <ClCompile Include="shape\ShapeDet.cpp" />
+    <ClCompile Include="shape\ShapeDetectionOutput.cpp" />
+    <ClCompile Include="shape\ShapeDetectionPostProcess.cpp" />
+    <ClCompile Include="shape\ShapeExpandDims.cpp" />
+    <ClCompile Include="shape\ShapeFill.cpp" />
+    <ClCompile Include="shape\ShapeGatherND.cpp" />
+    <ClCompile Include="shape\ShapeGatherV2.cpp" />
+    <ClCompile Include="shape\ShapeGridSample.cpp" />
+    <ClCompile Include="shape\ShapeHistogram.cpp" />
+    <ClCompile Include="shape\ShapeInnerProduct.cpp" />
+    <ClCompile Include="shape\ShapeInterp.cpp" />
+    <ClCompile Include="shape\ShapeLinSpace.cpp" />
+    <ClCompile Include="shape\ShapeLSTM.cpp" />
+    <ClCompile Include="shape\ShapeMatMul.cpp" />
+    <ClCompile Include="shape\ShapeMoments.cpp" />
+    <ClCompile Include="shape\ShapeNonMaxSuppressionV2.cpp" />
+    <ClCompile Include="shape\ShapeOneHot.cpp" />
+    <ClCompile Include="shape\ShapePack.cpp" />
+    <ClCompile Include="shape\ShapePadding.cpp" />
+    <ClCompile Include="shape\ShapePermute.cpp" />
+    <ClCompile Include="shape\ShapePlugin.cpp" />
+    <ClCompile Include="shape\ShapePool.cpp" />
+    <ClCompile Include="shape\ShapePool3D.cpp" />
+    <ClCompile Include="shape\ShapePriorbox.cpp" />
+    <ClCompile Include="shape\ShapeProposal.cpp" />
+    <ClCompile Include="shape\ShapeQuantizedAvgPool.cpp" />
+    <ClCompile Include="shape\ShapeQuantizedMaxPool.cpp" />
+    <ClCompile Include="shape\ShapeRandomUniform.cpp" />
+    <ClCompile Include="shape\ShapeRange.cpp" />
+    <ClCompile Include="shape\ShapeReduction.cpp" />
+    <ClCompile Include="shape\ShapeRegister.cpp" />
+    <ClCompile Include="shape\ShapeReshape.cpp" />
+    <ClCompile Include="shape\ShapeResize.cpp" />
+    <ClCompile Include="shape\ShapeRNNSequenceGRU.cpp" />
+    <ClCompile Include="shape\ShapeROIAlign.cpp" />
+    <ClCompile Include="shape\ShapeROIPooling.cpp" />
+    <ClCompile Include="shape\ShapeScatterNd.cpp" />
+    <ClCompile Include="shape\ShapeSegmentMean.cpp" />
+    <ClCompile Include="shape\ShapeSelect.cpp" />
+    <ClCompile Include="shape\ShapeSetDiff1D.cpp" />
+    <ClCompile Include="shape\ShapeShape.cpp" />
+    <ClCompile Include="shape\ShapeSize.cpp" />
+    <ClCompile Include="shape\ShapeSlice.cpp" />
+    <ClCompile Include="shape\ShapeSliceTf.cpp" />
+    <ClCompile Include="shape\ShapeSpaceToBatchND.cpp" />
+    <ClCompile Include="shape\ShapeSpaceToDepth.cpp" />
+    <ClCompile Include="shape\ShapeSqueeze.cpp" />
+    <ClCompile Include="shape\ShapeStridedSlice.cpp" />
+    <ClCompile Include="shape\ShapeSvd.cpp" />
+    <ClCompile Include="shape\ShapeTensorArray.cpp" />
+    <ClCompile Include="shape\ShapeTensorConvert.cpp" />
+    <ClCompile Include="shape\ShapeTile.cpp" />
+    <ClCompile Include="shape\ShapeTopKV2.cpp" />
+    <ClCompile Include="shape\ShapeTranspose.cpp" />
+    <ClCompile Include="shape\ShapeUnique.cpp" />
+    <ClCompile Include="shape\ShapeUnpack.cpp" />
+    <ClCompile Include="shape\ShapeUnravelIndex.cpp" />
+    <ClCompile Include="shape\ShapeWhere.cpp" />
+    <ClCompile Include="shape\SizeComputer.cpp" />
+    <ClCompile Include="utils\InitNet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutoTime.hpp" />
+    <ClInclude Include="backend\cpu\BinaryUtils.hpp" />
+    <ClInclude Include="backend\cpu\compute\CommonOptFunction.h" />
+    <ClInclude Include="backend\cpu\compute\ConvInt8TiledExecutor.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvInt8Winograd.hpp" />
+    <ClInclude Include="backend\cpu\compute\Convolution1x1Strassen.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionDepthwise3x3.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionFloatFactory.h" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionGroup.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionHybrid.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionIntFactory.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionPackFreeWinograd.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionPackWinograd.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionTiledExecutor.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionWinogradBridge.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvolutionWinogradImpl.hpp" />
+    <ClInclude Include="backend\cpu\compute\ConvOpt.h" />
+    <ClInclude Include="backend\cpu\compute\DeconvolutionWithStride.hpp" />
+    <ClInclude Include="backend\cpu\compute\DenseConvolutionTiledExecutor.hpp" />
+    <ClInclude Include="backend\cpu\compute\GemmInt8Executor.hpp" />
+    <ClInclude Include="backend\cpu\compute\IdstConvolutionInt8.hpp" />
+    <ClInclude Include="backend\cpu\compute\ImageProcessFunction.hpp" />
+    <ClInclude Include="backend\cpu\compute\Int8FunctionsOpt.h" />
+    <ClInclude Include="backend\cpu\compute\OptimizedComputer.hpp" />
+    <ClInclude Include="backend\cpu\compute\ResizeFunction.h" />
+    <ClInclude Include="backend\cpu\compute\SparseConvInt8TiledExecutor.hpp" />
+    <ClInclude Include="backend\cpu\compute\SparseConvolutionTiledExecutor.hpp" />
+    <ClInclude Include="backend\cpu\compute\StrassenMatmulComputor.hpp" />
+    <ClInclude Include="backend\cpu\compute\WinogradOptFunction.hpp" />
+    <ClInclude Include="backend\cpu\CPUArgMax.hpp" />
+    <ClInclude Include="backend\cpu\CPUBackend.hpp" />
+    <ClInclude Include="backend\cpu\CPUBinary.hpp" />
+    <ClInclude Include="backend\cpu\CPUBinaryInt8.hpp" />
+    <ClInclude Include="backend\cpu\CPUCast.hpp" />
+    <ClInclude Include="backend\cpu\CPUConvolution.hpp" />
+    <ClInclude Include="backend\cpu\CPUConvolutionDepthwise.hpp" />
+    <ClInclude Include="backend\cpu\CPUCropAndResize.hpp" />
+    <ClInclude Include="backend\cpu\CPUDeconvolution.hpp" />
+    <ClInclude Include="backend\cpu\CPUDeconvolutionDepthwise.hpp" />
+    <ClInclude Include="backend\cpu\CPUDepthwiseConvInt8.hpp" />
+    <ClInclude Include="backend\cpu\CPUDequantize.hpp" />
+    <ClInclude Include="backend\cpu\CPUDet.hpp" />
+    <ClInclude Include="backend\cpu\CPUDetectionOutput.hpp" />
+    <ClInclude Include="backend\cpu\CPUDetectionPostProcess.hpp" />
+    <ClInclude Include="backend\cpu\CPUEltwise.hpp" />
+    <ClInclude Include="backend\cpu\CPUEltwiseInt8.hpp" />
+    <ClInclude Include="backend\cpu\CPUFixedPoint.hpp" />
+    <ClInclude Include="backend\cpu\CPUFloatToInt8.hpp" />
+    <ClInclude Include="backend\cpu\CPUGridSample.hpp" />
+    <ClInclude Include="backend\cpu\CPUHistogram.hpp" />
+    <ClInclude Include="backend\cpu\CPUImageProcess.hpp" />
+    <ClInclude Include="backend\cpu\CPUInstanceNorm.hpp" />
+    <ClInclude Include="backend\cpu\CPUInt8ToFloat.hpp" />
+    <ClInclude Include="backend\cpu\CPUInterp.hpp" />
+    <ClInclude Include="backend\cpu\CPUInterp3D.hpp" />
+    <ClInclude Include="backend\cpu\CPULayerNorm.hpp" />
+    <ClInclude Include="backend\cpu\CPULinSpace.hpp" />
+    <ClInclude Include="backend\cpu\CPUMatMul.hpp" />
+    <ClInclude Include="backend\cpu\CPUMatrixBandPart.hpp" />
+    <ClInclude Include="backend\cpu\CPUMoments.hpp" />
+    <ClInclude Include="backend\cpu\CPUNonMaxSuppressionV2.hpp" />
+    <ClInclude Include="backend\cpu\CPUOneHot.hpp" />
+    <ClInclude Include="backend\cpu\CPUPool.hpp" />
+    <ClInclude Include="backend\cpu\CPUPoolInt8.hpp" />
+    <ClInclude Include="backend\cpu\CPUProposal.hpp" />
+    <ClInclude Include="backend\cpu\CPUQuanConvolutionDepthwise.hpp" />
+    <ClInclude Include="backend\cpu\CPUQuantizationUtils.hpp" />
+    <ClInclude Include="backend\cpu\CPUQuantizedAdd.hpp" />
+    <ClInclude Include="backend\cpu\CPUQuantizedAvgPool.hpp" />
+    <ClInclude Include="backend\cpu\CPUQuantizedLogistic.hpp" />
+    <ClInclude Include="backend\cpu\CPUQuantizedMaxPool.hpp" />
+    <ClInclude Include="backend\cpu\CPUQuantizedSoftmax.hpp" />
+    <ClInclude Include="backend\cpu\CPURandomUniform.hpp" />
+    <ClInclude Include="backend\cpu\CPURange.hpp" />
+    <ClInclude Include="backend\cpu\CPURaster.hpp" />
+    <ClInclude Include="backend\cpu\CPUReduction.hpp" />
+    <ClInclude Include="backend\cpu\CPURelu.hpp" />
+    <ClInclude Include="backend\cpu\CPUResize.hpp" />
+    <ClInclude Include="backend\cpu\CPUResizeCache.hpp" />
+    <ClInclude Include="backend\cpu\CPURNNSequenceGRU.hpp" />
+    <ClInclude Include="backend\cpu\CPUROIAlign.hpp" />
+    <ClInclude Include="backend\cpu\CPUROIPooling.hpp" />
+    <ClInclude Include="backend\cpu\CPURuntime.hpp" />
+    <ClInclude Include="backend\cpu\CPUScale.hpp" />
+    <ClInclude Include="backend\cpu\CPUScaleInt8.hpp" />
+    <ClInclude Include="backend\cpu\CPUSelect.hpp" />
+    <ClInclude Include="backend\cpu\CPUSetDiff1D.hpp" />
+    <ClInclude Include="backend\cpu\CPUSoftmax.hpp" />
+    <ClInclude Include="backend\cpu\CPUSoftMaxInt8.hpp" />
+    <ClInclude Include="backend\cpu\CPUSvd.hpp" />
+    <ClInclude Include="backend\cpu\CPUTensorConvert.hpp" />
+    <ClInclude Include="backend\cpu\CPUTFQuantizedConv2D.hpp" />
+    <ClInclude Include="backend\cpu\CPUTopKV2.hpp" />
+    <ClInclude Include="backend\cpu\CPUUnary.hpp" />
+    <ClInclude Include="backend\cpu\CPUUnique.hpp" />
+    <ClInclude Include="backend\cpu\CPUUnravelIndex.hpp" />
+    <ClInclude Include="backend\cpu\CPUWhere.hpp" />
+    <ClInclude Include="backend\cpu\GridSampler.hpp" />
+    <ClInclude Include="backend\cpu\OneDNNConvInt8.hpp" />
+    <ClInclude Include="backend\cpu\OneDNNConvolution.hpp" />
+    <ClInclude Include="backend\cpu\ThreadPool.hpp" />
+    <ClInclude Include="backend\cpu\UnaryUtils.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\AVX2Backend.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\AVX2Functions.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\avxfma\FunctionSummary.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\avx\FunctionSummary.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\avx\GemmCommon.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\avx\GemmFunction.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\avx\GemmFunctionEShort.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\avx\GemmFunctionPackL.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\avx\Vec8.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\cpu_id.h" />
+    <ClInclude Include="backend\cpu\x86_x64\MNNAsmGlobal.h" />
+    <ClInclude Include="backend\cpu\x86_x64\sse\FunctionSummary.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\sse\GemmCommon.hpp" />
+    <ClInclude Include="backend\cpu\x86_x64\sse\GemmFunction.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\backend\VulkanBackend.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanArgMax.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanBasicExecution.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanBinary.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanConvolution.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanConvolutionImpl.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanDeconvolution.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanGridSample.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanInterp.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanLayernorm.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanLoop.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanMatMul.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanOneHot.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanPool.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanPRelu.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanRange.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanRaster.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanReduce.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanResize.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanROIPooling.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanScale.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanSelect.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanSoftmax.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanUnary.hpp" />
+    <ClInclude Include="backend\vulkan\buffer\shaders\AllShader.h" />
+    <ClInclude Include="backend\vulkan\buffer\shaders\VulkanShaderMap.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanBuffer.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanCommandPool.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanDevice.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanFence.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanFramebuffer.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanImage.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanInstance.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanMemoryPool.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanPipeline.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanQueryPool.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanRenderPass.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanSemaphore.hpp" />
+    <ClInclude Include="backend\vulkan\component\VulkanTarget.hpp" />
+    <ClInclude Include="backend\vulkan\runtime\VulkanRuntime.hpp" />
+    <ClInclude Include="backend\vulkan\vulkan\vk_platform.h" />
+    <ClInclude Include="backend\vulkan\vulkan\vulkan.h" />
+    <ClInclude Include="backend\vulkan\vulkan\vulkan_android.h" />
+    <ClInclude Include="backend\vulkan\vulkan\vulkan_core.h" />
+    <ClInclude Include="backend\vulkan\vulkan\vulkan_wrapper.h" />
+    <ClInclude Include="CaffeOp_generated.h" />
+    <ClInclude Include="common\CommonCompute.hpp" />
+    <ClInclude Include="common\MemoryFormater.h" />
+    <ClInclude Include="common\WinogradInt8Attr.hpp" />
+    <ClInclude Include="core\AutoStorage.h" />
+    <ClInclude Include="core\Backend.hpp" />
+    <ClInclude Include="core\BufferAllocator.hpp" />
+    <ClInclude Include="core\Command.hpp" />
+    <ClInclude Include="core\Concurrency.h" />
+    <ClInclude Include="core\ConvolutionCommon.hpp" />
+    <ClInclude Include="core\Execution.hpp" />
+    <ClInclude Include="core\FileLoader.hpp" />
+    <ClInclude Include="core\Macro.h" />
+    <ClInclude Include="core\MNNMemoryUtils.h" />
+    <ClInclude Include="core\NonCopyable.hpp" />
+    <ClInclude Include="core\OpCommonUtils.hpp" />
+    <ClInclude Include="core\Pipeline.hpp" />
+    <ClInclude Include="core\RuntimeFactory.hpp" />
+    <ClInclude Include="core\Schedule.hpp" />
+    <ClInclude Include="core\Session.hpp" />
+    <ClInclude Include="core\TensorUtils.hpp" />
+    <ClInclude Include="core\WrapExecution.hpp" />
+    <ClInclude Include="cv\SkNx.h" />
+    <ClInclude Include="cv\SkNx_neon.h" />
+    <ClInclude Include="ErrorCode.hpp" />
+    <ClInclude Include="express\module\IfModule.hpp" />
+    <ClInclude Include="express\module\NMSModule.hpp" />
+    <ClInclude Include="express\module\PipelineModule.hpp" />
+    <ClInclude Include="express\module\StaticModule.hpp" />
+    <ClInclude Include="express\module\WhileModule.hpp" />
+    <ClInclude Include="express\RuntimeAttr.hpp" />
+    <ClInclude Include="express\Utils.hpp" />
+    <ClInclude Include="expr\Executor.hpp" />
+    <ClInclude Include="expr\ExecutorScope.hpp" />
+    <ClInclude Include="expr\Expr.hpp" />
+    <ClInclude Include="expr\ExprCreator.hpp" />
+    <ClInclude Include="expr\MathOp.hpp" />
+    <ClInclude Include="expr\Module.hpp" />
+    <ClInclude Include="expr\NeuralNetWorkOp.hpp" />
+    <ClInclude Include="expr\Optimizer.hpp" />
+    <ClInclude Include="expr\Scope.hpp" />
+    <ClInclude Include="ExtraInfo_generated.h" />
+    <ClInclude Include="flatbuffers\base.h" />
+    <ClInclude Include="flatbuffers\code_generators.h" />
+    <ClInclude Include="flatbuffers\flatbuffers.h" />
+    <ClInclude Include="flatbuffers\flatc.h" />
+    <ClInclude Include="flatbuffers\flexbuffers.h" />
+    <ClInclude Include="flatbuffers\grpc.h" />
+    <ClInclude Include="flatbuffers\hash.h" />
+    <ClInclude Include="flatbuffers\idl.h" />
+    <ClInclude Include="flatbuffers\minireflect.h" />
+    <ClInclude Include="flatbuffers\reflection.h" />
+    <ClInclude Include="flatbuffers\reflection_generated.h" />
+    <ClInclude Include="flatbuffers\registry.h" />
+    <ClInclude Include="flatbuffers\stl_emulation.h" />
+    <ClInclude Include="flatbuffers\util.h" />
+    <ClInclude Include="geometry\ConvertUtils.hpp" />
+    <ClInclude Include="geometry\GeometryComputer.hpp" />
+    <ClInclude Include="geometry\GeometryComputerUtils.hpp" />
+    <ClInclude Include="geometry\GeometryConvUtils.hpp" />
+    <ClInclude Include="half.hpp" />
+    <ClInclude Include="HalideRuntime.h" />
+    <ClInclude Include="ImageProcess.hpp" />
+    <ClInclude Include="Interpreter.hpp" />
+    <ClInclude Include="math\Matrix.hpp" />
+    <ClInclude Include="math\Vec.hpp" />
+    <ClInclude Include="math\WingoradGenerater.hpp" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MNNDefine.h" />
+    <ClInclude Include="MNNForwardType.h" />
+    <ClInclude Include="MNNSharedContext.h" />
+    <ClInclude Include="MNN_generated.h" />
+    <ClInclude Include="plugin\PluginContext.hpp" />
+    <ClInclude Include="plugin\PluginKernel.hpp" />
+    <ClInclude Include="plugin\PluginShapeInference.hpp" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="shape\SizeComputer.hpp" />
+    <ClInclude Include="Tensor.hpp" />
+    <ClInclude Include="TensorflowOp_generated.h" />
+    <ClInclude Include="Tensor_generated.h" />
+    <ClInclude Include="TFQuantizeOp_generated.h" />
+    <ClInclude Include="TrainInfo_generated.h" />
+    <ClInclude Include="Type_generated.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\Tensor.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorArgMax.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorAssign.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorBase.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorBlock.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorBroadcasting.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorChipping.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorConcatenation.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContraction.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionBlocking.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionCuda.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionGpu.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionMapper.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionSycl.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionThreadPool.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorConversion.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorConvolution.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorConvolutionSycl.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorCostModel.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorCustomOp.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDevice.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceCuda.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceDefault.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceGpu.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceSycl.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceThreadPool.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDimensionList.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDimensions.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorEvalTo.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorEvaluator.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorExecutor.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorExpr.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorFFT.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorFixedSize.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorForcedEval.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorForwardDeclarations.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorFunctors.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorGenerator.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorGlobalFunctions.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorGpuHipCudaDefines.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorGpuHipCudaUndefines.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorImagePatch.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorIndexList.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorInflation.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorInitializer.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorIntDiv.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorIO.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorLayoutSwap.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorMacros.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorMap.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorMeta.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorMorphing.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorPadding.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorPatch.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorRandom.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReduction.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReductionCuda.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReductionGpu.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReductionSycl.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorRef.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReverse.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorScan.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorScanSycl.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorShuffling.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorStorage.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorStriding.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorTrace.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorTraits.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorUInt128.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorVolumePatch.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\util\CXX11Meta.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\util\CXX11Workarounds.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\util\EmulateArray.h" />
+    <ClInclude Include="unsupported\Eigen\CXX11\src\util\MaxSizeVector.h" />
+    <ClInclude Include="unsupported\Eigen\src\FFT\ei_fftw_impl.h" />
+    <ClInclude Include="unsupported\Eigen\src\FFT\ei_kissfft_impl.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\AVX512\BesselFunctions.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\AVX512\SpecialFunctions.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\AVX\BesselFunctions.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\AVX\SpecialFunctions.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\GPU\SpecialFunctions.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\NEON\BesselFunctions.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\NEON\SpecialFunctions.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsArrayAPI.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsBFloat16.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsFunctors.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsHalf.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsImpl.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsPacketMath.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\HipVectorCompatibility.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsArrayAPI.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsBFloat16.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsFunctors.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsHalf.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsImpl.h" />
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsPacketMath.h" />
+    <ClInclude Include="UserDefine_generated.h" />
+    <ClInclude Include="utils\InitNet.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="my.wav" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{cc7d168e-3585-4d54-b804-bb3f1d7aa1a8}</ProjectGuid>
+    <RootNamespace>MNN</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>BUILDING_MNN_DLL;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;MNN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>BUILDING_MNN_DLL;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;MNN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>BUILDING_MNN_DLL;_CRT_SECURE_NO_WARNINGS;_DEBUG;MNN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>BUILDING_MNN_DLL;_CRT_SECURE_NO_WARNINGS;NDEBUG;MNN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

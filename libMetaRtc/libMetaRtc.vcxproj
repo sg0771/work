@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\yangaudiodev\YangAudioCapture.h" />
+    <ClInclude Include="include\yangaudiodev\YangAudioCaptureData.h" />
+    <ClInclude Include="include\yangaudiodev\YangAudioDeviceQuery.h" />
+    <ClInclude Include="include\yangaudiodev\YangAudioPlay.h" />
+    <ClInclude Include="include\yangaudiodev\YangAudioPlayerSdl.h" />
+    <ClInclude Include="include\yangaudiodev\YangAudioRenderData.h" />
+    <ClInclude Include="include\yangavutil\audio\YangAudioMix.h" />
+    <ClInclude Include="include\yangavutil\audio\YangAudioUtil.h" />
+    <ClInclude Include="include\yangavutil\audio\YangMakeWave.h" />
+    <ClInclude Include="include\yangavutil\audio\YangPreProcess.h" />
+    <ClInclude Include="include\yangavutil\audio\YangResample.h" />
+    <ClInclude Include="include\yangavutil\audio\YangRtcAec.h" />
+    <ClInclude Include="include\yangavutil\audio\YangSwResample.h" />
+    <ClInclude Include="include\yangavutil\video\YangBmp.h" />
+    <ClInclude Include="include\yangavutil\video\YangCMeta.h" />
+    <ClInclude Include="include\yangavutil\video\YangCNalu.h" />
+    <ClInclude Include="include\yangavutil\video\YangCYuvUtil.h" />
+    <ClInclude Include="include\yangavutil\video\YangMeta.h" />
+    <ClInclude Include="include\yangavutil\video\YangNalu.h" />
+    <ClInclude Include="include\yangavutil\video\YangPicConvert.h" />
+    <ClInclude Include="include\yangavutil\video\YangResize.h" />
+    <ClInclude Include="include\yangavutil\video\YangSpspps.h" />
+    <ClInclude Include="include\yangavutil\video\YangVideoEncoderMeta.h" />
+    <ClInclude Include="include\yangavutil\video\YangYuvConvert.h" />
+    <ClInclude Include="include\yangavutil\video\YangYuvUtil.h" />
+    <ClInclude Include="include\yangcapture\YangCaptureFactory.h" />
+    <ClInclude Include="include\yangcapture\YangMultiVideoCapture.h" />
+    <ClInclude Include="include\yangcapture\YangScreenCapture.h" />
+    <ClInclude Include="include\yangcapture\YangScreenCaptureHandleI.h" />
+    <ClInclude Include="include\yangcapture\YangVideoCapture.h" />
+    <ClInclude Include="include\yangdecoder\YangAudioDecoder.h" />
+    <ClInclude Include="include\yangdecoder\YangAudioDecoderHandle.h" />
+    <ClInclude Include="include\yangdecoder\YangAudioDecoderHandles.h" />
+    <ClInclude Include="include\yangdecoder\YangDecoder.h" />
+    <ClInclude Include="include\yangdecoder\YangDecoderFactory.h" />
+    <ClInclude Include="include\yangdecoder\YangVideoDecoder.h" />
+    <ClInclude Include="include\yangdecoder\YangVideoDecoderHandle.h" />
+    <ClInclude Include="include\yangdecoder\YangVideoDecoderHandles.h" />
+    <ClInclude Include="include\yangencoder\YangAudioEncoder.h" />
+    <ClInclude Include="include\yangencoder\YangAudioEncoderHandle.h" />
+    <ClInclude Include="include\yangencoder\YangAudioEncoderHandleCb.h" />
+    <ClInclude Include="include\yangencoder\YangAudioEncoderMeta.h" />
+    <ClInclude Include="include\yangencoder\YangEncoder.h" />
+    <ClInclude Include="include\yangencoder\YangEncoderFactory.h" />
+    <ClInclude Include="include\yangencoder\YangGpuEncoderFactory.h" />
+    <ClInclude Include="include\yangencoder\YangVideoEncoder.h" />
+    <ClInclude Include="include\yangencoder\YangVideoEncoderHandle.h" />
+    <ClInclude Include="include\yangjson\YangJson.h" />
+    <ClInclude Include="include\yangplayer\YangPlayerBase.h" />
+    <ClInclude Include="include\yangplayer\YangPlayerDecoder.h" />
+    <ClInclude Include="include\yangplayer\YangPlayerHandle.h" />
+    <ClInclude Include="include\yangplayer\YangPlayerPlay.h" />
+    <ClInclude Include="include\yangplayer\YangPlayFactory.h" />
+    <ClInclude Include="include\yangplayer\YangWinPlayFactroy.h" />
+    <ClInclude Include="include\yangpush\YangPushCapture.h" />
+    <ClInclude Include="include\yangpush\YangPushCommon.h" />
+    <ClInclude Include="include\yangpush\YangPushFactory.h" />
+    <ClInclude Include="include\yangpush\YangPushHandle.h" />
+    <ClInclude Include="include\yangpush\YangPushPublish.h" />
+    <ClInclude Include="include\yangpush\YangRtcPublish.h" />
+    <ClInclude Include="include\yangpush\YangSendVideoI.h" />
+    <ClInclude Include="include\yangrtc\YangMetaConnection.h" />
+    <ClInclude Include="include\yangrtc\YangPeerConnection.h" />
+    <ClInclude Include="include\yangrtc\YangPeerConnection2.h" />
+    <ClInclude Include="include\yangssl\YangMbedtls.h" />
+    <ClInclude Include="include\yangssl\YangOpenssl.h" />
+    <ClInclude Include="include\yangssl\YangSsl.h" />
+    <ClInclude Include="include\yangstream\YangStream.h" />
+    <ClInclude Include="include\yangstream\YangStreamCapture.h" />
+    <ClInclude Include="include\yangstream\YangStreamHandle.h" />
+    <ClInclude Include="include\yangstream\YangStreamManager.h" />
+    <ClInclude Include="include\yangstream\YangStreamType.h" />
+    <ClInclude Include="include\yangstream\YangSynBuffer.h" />
+    <ClInclude Include="include\yangstream\YangSynBufferManager.h" />
+    <ClInclude Include="include\yangutil\buffer2\YangMediaBuffer2.h" />
+    <ClInclude Include="include\yangutil\buffer2\YangVideoEncoderBuffer2.h" />
+    <ClInclude Include="include\yangutil\buffer\YangAudioBuffer.h" />
+    <ClInclude Include="include\yangutil\buffer\YangAudioEncoderBuffer.h" />
+    <ClInclude Include="include\yangutil\buffer\YangAudioPlayBuffer.h" />
+    <ClInclude Include="include\yangutil\buffer\YangBuffer.h" />
+    <ClInclude Include="include\yangutil\buffer\YangCBuffer.h" />
+    <ClInclude Include="include\yangutil\buffer\YangMediaBuffer.h" />
+    <ClInclude Include="include\yangutil\buffer\YangVideoBuffer.h" />
+    <ClInclude Include="include\yangutil\buffer\YangVideoDecoderBuffer.h" />
+    <ClInclude Include="include\yangutil\buffer\YangVideoEncoderBuffer.h" />
+    <ClInclude Include="include\yangutil\sys\YangAmf.h" />
+    <ClInclude Include="include\yangutil\sys\YangBits.h" />
+    <ClInclude Include="include\yangutil\sys\YangCString.h" />
+    <ClInclude Include="include\yangutil\sys\YangCTime.h" />
+    <ClInclude Include="include\yangutil\sys\YangCTimer.h" />
+    <ClInclude Include="include\yangutil\sys\YangCUrl.h" />
+    <ClInclude Include="include\yangutil\sys\YangEndian.h" />
+    <ClInclude Include="include\yangutil\sys\YangFile.h" />
+    <ClInclude Include="include\yangutil\sys\YangHttp.h" />
+    <ClInclude Include="include\yangutil\sys\YangHttpSocket.h" />
+    <ClInclude Include="include\yangutil\sys\YangIni.h" />
+    <ClInclude Include="include\yangutil\sys\YangLibHandle.h" />
+    <ClInclude Include="include\yangutil\sys\YangLoadLib.h" />
+    <ClInclude Include="include\yangutil\sys\YangLog.h" />
+    <ClInclude Include="include\yangutil\sys\YangMath.h" />
+    <ClInclude Include="include\yangutil\sys\YangSocket.h" />
+    <ClInclude Include="include\yangutil\sys\YangSRtp.h" />
+    <ClInclude Include="include\yangutil\sys\YangSsrc.h" />
+    <ClInclude Include="include\yangutil\sys\YangString.h" />
+    <ClInclude Include="include\yangutil\sys\YangSysMessageHandle.h" />
+    <ClInclude Include="include\yangutil\sys\YangSysMessageI.h" />
+    <ClInclude Include="include\yangutil\sys\YangThread.h" />
+    <ClInclude Include="include\yangutil\sys\YangThread2.h" />
+    <ClInclude Include="include\yangutil\sys\YangTime.h" />
+    <ClInclude Include="include\yangutil\sys\YangTimer.h" />
+    <ClInclude Include="include\yangutil\sys\YangUrl.h" />
+    <ClInclude Include="include\yangutil\sys\YangVector.h" />
+    <ClInclude Include="include\yangutil\sys\YangWebsocket.h" />
+    <ClInclude Include="include\yangutil\sys\YangYuvGl.h" />
+    <ClInclude Include="include\yangutil\yangautofree.h" />
+    <ClInclude Include="include\yangutil\yangavctype.h" />
+    <ClInclude Include="include\yangutil\yangavh265.h" />
+    <ClInclude Include="include\yangutil\yangavinfotype.h" />
+    <ClInclude Include="include\yangutil\yangavtype.h" />
+    <ClInclude Include="include\yangutil\yangerrorcode.h" />
+    <ClInclude Include="include\yangutil\yangframebuffer.h" />
+    <ClInclude Include="include\yangutil\yangmemory.h" />
+    <ClInclude Include="include\yangutil\yangtype.h" />
+    <ClInclude Include="include\yangutil\yangunistd.h" />
+    <ClInclude Include="include\yang_config.h" />
+    <ClInclude Include="include\yang_qedit.h" />
+    <ClInclude Include="yangaudiodev\android\YangAudioAndroid.h" />
+    <ClInclude Include="yangaudiodev\android\YangAudioCaptureAndroid.h" />
+    <ClInclude Include="yangaudiodev\android\YangAudioPlayAndroid.h" />
+    <ClInclude Include="yangaudiodev\linux\YangAudioAecLinux.h" />
+    <ClInclude Include="yangaudiodev\linux\YangAudioCaptureLinux.h" />
+    <ClInclude Include="yangaudiodev\linux\YangAudioPlayLinux.h" />
+    <ClInclude Include="yangaudiodev\win\YangAudioApiCapture.h" />
+    <ClInclude Include="yangaudiodev\win\YangAudioCaptureWindows.h" />
+    <ClInclude Include="yangaudiodev\win\YangRecAudioCaptureHandle.h" />
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApi.h" />
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApiAec.h" />
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApiCapture.h" />
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApiDevice.h" />
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApiRender.h" />
+    <ClInclude Include="yangaudiodev\win\YangWinAudioCapture.h" />
+    <ClInclude Include="yangaudiodev\win\YangWinAudioCaptureHandle.h" />
+    <ClInclude Include="yangaudiodev\win\YangWinAudioDevice.h" />
+    <ClInclude Include="yangaudiodev\YangAudioCaptureHandle.h" />
+    <ClInclude Include="yangaudiodev\YangCaptureCallback.h" />
+    <ClInclude Include="yangcapture\android\YangCameraAndroid.h" />
+    <ClInclude Include="yangcapture\android\YangVideoCaptureAndroid.h" />
+    <ClInclude Include="yangcapture\linux\YangVideoCaptureLinux.h" />
+    <ClInclude Include="yangcapture\win\YangDXGIManager.h" />
+    <ClInclude Include="yangcapture\win\YangVideoCaptureWindows.h" />
+    <ClInclude Include="yangcapture\win\YangVideoSrc.h" />
+    <ClInclude Include="yangcapture\win\YangWinVideoCaptureHandle.h" />
+    <ClInclude Include="yangcapture\YangScreenShare.h" />
+    <ClInclude Include="yangcapture\YangVideoCaptureHandle.h" />
+    <ClInclude Include="yangdecoder\pc\YangAudioDecoderAac.h" />
+    <ClInclude Include="yangdecoder\pc\YangAudioDecoderSpeex.h" />
+    <ClInclude Include="yangdecoder\pc\YangHeaderParseFfmpeg.h" />
+    <ClInclude Include="yangdecoder\pc\YangVideoDecoderFfmpeg.h" />
+    <ClInclude Include="yangdecoder\YangAudioDecoderOpus.h" />
+    <ClInclude Include="yangdecoder\YangDecoderH264.h" />
+    <ClInclude Include="yangdecoder\YangDecoderLibde265.h" />
+    <ClInclude Include="yangdecoder\YangDecoderMediacodec.h" />
+    <ClInclude Include="yangdecoder\YangDecoderOpenh264.h" />
+    <ClInclude Include="yangdecoder\YangH264Dec.h" />
+    <ClInclude Include="yangdecoder\YangH264DecoderSoft.h" />
+    <ClInclude Include="yangdecoder\YangH264DecoderSoft2.h" />
+    <ClInclude Include="yangdecoder\YangH264DecoderSoftFactory.h" />
+    <ClInclude Include="yangencoder\lame.h" />
+    <ClInclude Include="yangencoder\YangAudioEncoderAac.h" />
+    <ClInclude Include="yangencoder\YangAudioEncoderMp3.h" />
+    <ClInclude Include="yangencoder\YangAudioEncoderOpus.h" />
+    <ClInclude Include="yangencoder\YangAudioEncoderSpeex.h" />
+    <ClInclude Include="yangencoder\YangEncoderMediacodec.h" />
+    <ClInclude Include="yangencoder\YangFfmpegEncoderMeta.h" />
+    <ClInclude Include="yangencoder\YangH264EncoderMeta.h" />
+    <ClInclude Include="yangencoder\YangH264EncoderSoft.h" />
+    <ClInclude Include="yangencoder\YangH265EncoderMeta.h" />
+    <ClInclude Include="yangencoder\YangH265EncoderSoft.h" />
+    <ClInclude Include="yangencoder\YangOpenH264Encoder.h" />
+    <ClInclude Include="yangencoder\YangVideoEncoderFfmpeg.h" />
+    <ClInclude Include="yangice\YangIce.h" />
+    <ClInclude Include="yangice\YangRtcSocket.h" />
+    <ClInclude Include="yangice\YangRtcStun.h" />
+    <ClInclude Include="yangice\YangTurnConnection.h" />
+    <ClInclude Include="yangjson\YangJsonImpl.h" />
+    <ClInclude Include="yangp2p\YangP2pConnection.h" />
+    <ClInclude Include="yangp2p\YangP2pConnection2.h" />
+    <ClInclude Include="yangrtc\YangBandwidth.h" />
+    <ClInclude Include="yangrtc\YangDatachannel.h" />
+    <ClInclude Include="yangrtc\YangPlay.h" />
+    <ClInclude Include="yangrtc\YangPlayStream.h" />
+    <ClInclude Include="yangrtc\YangPlayTrack.h" />
+    <ClInclude Include="yangrtc\YangPlayTrackAudio.h" />
+    <ClInclude Include="yangrtc\YangPlayTrackH.h" />
+    <ClInclude Include="yangrtc\YangPlayTrackH264.h" />
+    <ClInclude Include="yangrtc\YangPlayTrackH265.h" />
+    <ClInclude Include="yangrtc\YangPlayTrackVideo.h" />
+    <ClInclude Include="yangrtc\YangPush.h" />
+    <ClInclude Include="yangrtc\YangPushAudio.h" />
+    <ClInclude Include="yangrtc\YangPushH.h" />
+    <ClInclude Include="yangrtc\YangPushH264.h" />
+    <ClInclude Include="yangrtc\YangPushH265.h" />
+    <ClInclude Include="yangrtc\YangPushStream.h" />
+    <ClInclude Include="yangrtc\YangPushStreamH.h" />
+    <ClInclude Include="yangrtc\YangRtcConnection.h" />
+    <ClInclude Include="yangrtc\YangRtcContext.h" />
+    <ClInclude Include="yangrtc\YangRtcContextH.h" />
+    <ClInclude Include="yangrtc\YangRtcRtcp.h" />
+    <ClInclude Include="yangrtc\YangRtcSession.h" />
+    <ClInclude Include="yangrtc\YangRtcStats.h" />
+    <ClInclude Include="yangrtc\YangRtcStream.h" />
+    <ClInclude Include="yangrtc\YangRtcTwcc.h" />
+    <ClInclude Include="yangrtc\YangStreamUrl.h" />
+    <ClInclude Include="yangrtp\YangPublishNackBuffer.h" />
+    <ClInclude Include="yangrtp\YangReceiveNackBuffer.h" />
+    <ClInclude Include="yangrtp\YangRtcp.h" />
+    <ClInclude Include="yangrtp\YangRtcpApp.h" />
+    <ClInclude Include="yangrtp\YangRtcpBye.h" />
+    <ClInclude Include="yangrtp\YangRtcpCommon.h" />
+    <ClInclude Include="yangrtp\YangRtcpCompound.h" />
+    <ClInclude Include="yangrtp\YangRtcpNack.h" />
+    <ClInclude Include="yangrtp\YangRtcpPli.h" />
+    <ClInclude Include="yangrtp\YangRtcpPsfbCommon.h" />
+    <ClInclude Include="yangrtp\YangRtcpRpsi.h" />
+    <ClInclude Include="yangrtp\YangRtcpRR.h" />
+    <ClInclude Include="yangrtp\YangRtcpSli.h" />
+    <ClInclude Include="yangrtp\YangRtcpSR.h" />
+    <ClInclude Include="yangrtp\YangRtcpTWCC.h" />
+    <ClInclude Include="yangrtp\YangRtcpXr.h" />
+    <ClInclude Include="yangrtp\YangRtp.h" />
+    <ClInclude Include="yangrtp\YangRtpBuffer.h" />
+    <ClInclude Include="yangrtp\YangRtpConstant.h" />
+    <ClInclude Include="yangrtp\YangRtpFUAPayload.h" />
+    <ClInclude Include="yangrtp\YangRtpFUAPayload2.h" />
+    <ClInclude Include="yangrtp\YangRtpHeader.h" />
+    <ClInclude Include="yangrtp\YangRtpPacket.h" />
+    <ClInclude Include="yangrtp\YangRtpRawPayload.h" />
+    <ClInclude Include="yangrtp\YangRtpRecvNack.h" />
+    <ClInclude Include="yangrtp\YangRtpSTAPPayload.h" />
+    <ClInclude Include="yangsdp\YangAnswerSdp.h" />
+    <ClInclude Include="yangsdp\YangAudioPayload.h" />
+    <ClInclude Include="yangsdp\YangCodecPayload.h" />
+    <ClInclude Include="yangsdp\YangMediaDesc.h" />
+    <ClInclude Include="yangsdp\YangMediaPayloadType.h" />
+    <ClInclude Include="yangsdp\YangRedPayload.h" />
+    <ClInclude Include="yangsdp\YangRtcSdp.h" />
+    <ClInclude Include="yangsdp\YangRtxPayloadDes.h" />
+    <ClInclude Include="yangsdp\YangSdp.h" />
+    <ClInclude Include="yangsdp\YangSdpHandle.h" />
+    <ClInclude Include="yangsdp\YangSdpType.h" />
+    <ClInclude Include="yangsdp\YangSSRCInfo.h" />
+    <ClInclude Include="yangsrs\YangSrsConnection.h" />
+    <ClInclude Include="yangssl\YangRtcDtls.h" />
+    <ClInclude Include="yangstream\YangStreamRtc.h" />
+    <ClInclude Include="yangutil\buffer2\YangSortBuffer.h" />
+    <ClInclude Include="yangutil\sys\YangSctp.h" />
+    <ClInclude Include="yangwhip\YangWhip.h" />
+    <ClInclude Include="yangwincodec6\NvCodec\encoder_info.h" />
+    <ClInclude Include="yangwincodec6\NvCodec\nvenc.h" />
+    <ClInclude Include="yangwincodec6\NvCodec\nvEncodeAPI.h" />
+    <ClInclude Include="yangwincodec6\NvCodec\NvEncoder.h" />
+    <ClInclude Include="yangwincodec6\NvCodec\NvEncoderD3D11.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\common_directx11.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\common_directx9.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\common_utils.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\QsvEncoder.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\linux_defs.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxastructures.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxaudio++.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxaudio.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxaudio_exposed_functions_list.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxbrc.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxcamera.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxcommon.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxdefs.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxenc.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxjpeg.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxla.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxmvc.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxpak.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxplugin++.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxplugin.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxsession.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxstructures.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvideo++.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvideo.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvp8.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvp9.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvstructures.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_critical_section.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher_defs.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher_log.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_dxva2_device.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_exposed_functions_list.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_library_iterator.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_load_dll.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_load_plugin.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_plugin_hive.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_vector.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_win_reg_key.h" />
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\windows_defs.h" />
+    <ClInclude Include="yangwincodec6\YangEncoderGpu.h" />
+    <ClInclude Include="yangwincodec6\YangGpuEncoderFactory.h" />
+    <ClInclude Include="yangwincodec6\YangH264EncoderGpu.h" />
+    <ClInclude Include="yangzlm\YangZlmConnection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="yangaudiodev\android\YangAudioAndroid.cpp" />
+    <ClCompile Include="yangaudiodev\android\YangAudioCaptureAndroid.cpp" />
+    <ClCompile Include="yangaudiodev\android\YangAudioPlayAndroid.cpp" />
+    <ClCompile Include="yangaudiodev\linux\YangAudioAecLinux.cpp" />
+    <ClCompile Include="yangaudiodev\linux\YangAudioCaptureLinux.cpp" />
+    <ClCompile Include="yangaudiodev\linux\YangAudioPlayLinux.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangAudioCaptureWindows.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangRecAudioCaptureHandle.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApi.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApiAec.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApiCapture.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApiDevice.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApiRender.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangWinAudioCapture.cpp" />
+    <ClCompile Include="yangaudiodev\win\YangWinAudioCaptureHandle.cpp" />
+    <ClCompile Include="yangaudiodev\YangAudioCapture.cpp" />
+    <ClCompile Include="yangaudiodev\YangAudioCaptureData.cpp" />
+    <ClCompile Include="yangaudiodev\YangAudioCaptureHandle.cpp" />
+    <ClCompile Include="yangaudiodev\YangAudioPlay.cpp" />
+    <ClCompile Include="yangaudiodev\YangAudioRenderData.cpp" />
+    <ClCompile Include="yangavutil\YangAudioMix.c" />
+    <ClCompile Include="yangavutil\YangAudioUtil.c" />
+    <ClCompile Include="yangavutil\YangConvert.c" />
+    <ClCompile Include="yangavutil\YangMakeWave.cpp" />
+    <ClCompile Include="yangavutil\YangMeta.c" />
+    <ClCompile Include="yangavutil\YangNalu.c" />
+    <ClCompile Include="yangavutil\YangPreProcess.c" />
+    <ClCompile Include="yangavutil\YangResample.c" />
+    <ClCompile Include="yangavutil\YangRtcAec.c" />
+    <ClCompile Include="yangavutil\YangSpspps.c" />
+    <ClCompile Include="yangavutil\YangVideoEncoderMeta.cpp" />
+    <ClCompile Include="yangavutil\YangYuvConvert.cpp" />
+    <ClCompile Include="yangavutil\YangYuvUtil.c" />
+    <ClCompile Include="yangcapture\android\YangCameraAndroid.cpp" />
+    <ClCompile Include="yangcapture\android\YangVideoCaptureAndroid.cpp" />
+    <ClCompile Include="yangcapture\linux\YangVideoCaptureLinux.cpp" />
+    <ClCompile Include="yangcapture\win\YangDXGIManager.cpp" />
+    <ClCompile Include="yangcapture\win\YangVideoCaptureWindows.cpp" />
+    <ClCompile Include="yangcapture\win\YangVideoSrc.cpp" />
+    <ClCompile Include="yangcapture\win\YangWinVideoCaptureHandle.cpp" />
+    <ClCompile Include="yangcapture\YangCaptureFactory.cpp" />
+    <ClCompile Include="yangcapture\YangScreenShare.cpp" />
+    <ClCompile Include="yangcapture\YangVideoCapture.cpp" />
+    <ClCompile Include="yangcapture\YangVideoCaptureHandle.cpp" />
+    <ClCompile Include="yangdecoder\pc\YangAudioDecoderAac.cpp" />
+    <ClCompile Include="yangdecoder\pc\YangAudioDecoderSpeex.cpp" />
+    <ClCompile Include="yangdecoder\pc\YangHeaderParseFfmpeg.cpp" />
+    <ClCompile Include="yangdecoder\pc\YangVideoDecoderFfmpeg.cpp" />
+    <ClCompile Include="yangdecoder\YangAudioDecoder.cpp" />
+    <ClCompile Include="yangdecoder\YangAudioDecoderHandle.cpp" />
+    <ClCompile Include="yangdecoder\YangAudioDecoderHandles.cpp" />
+    <ClCompile Include="yangdecoder\YangAudioDecoderOpus.cpp" />
+    <ClCompile Include="yangdecoder\YangDecoderFactory.cpp" />
+    <ClCompile Include="yangdecoder\YangDecoderH264.cpp" />
+    <ClCompile Include="yangdecoder\YangDecoderLibde265.cpp" />
+    <ClCompile Include="yangdecoder\YangDecoderMediacodec.cpp" />
+    <ClCompile Include="yangdecoder\YangDecoderOpenh264.cpp" />
+    <ClCompile Include="yangdecoder\YangH264DecoderSoft.cpp" />
+    <ClCompile Include="yangdecoder\YangH264DecoderSoft2.cpp" />
+    <ClCompile Include="yangdecoder\YangVideoDecoderHandle.cpp" />
+    <ClCompile Include="yangdecoder\YangVideoDecoderHandles.cpp" />
+    <ClCompile Include="yangencoder\YangAudioEncoder.cpp" />
+    <ClCompile Include="yangencoder\YangAudioEncoderAac.cpp" />
+    <ClCompile Include="yangencoder\YangAudioEncoderHandle.cpp" />
+    <ClCompile Include="yangencoder\YangAudioEncoderHandleCb.cpp" />
+    <ClCompile Include="yangencoder\YangAudioEncoderMeta.cpp" />
+    <ClCompile Include="yangencoder\YangAudioEncoderMp3.cpp" />
+    <ClCompile Include="yangencoder\YangAudioEncoderOpus.cpp" />
+    <ClCompile Include="yangencoder\YangAudioEncoderSpeex.cpp" />
+    <ClCompile Include="yangencoder\YangEncoderFactory.cpp" />
+    <ClCompile Include="yangencoder\YangEncoderMediacodec.cpp" />
+    <ClCompile Include="yangencoder\YangFfmpegEncoderMeta.cpp" />
+    <ClCompile Include="yangencoder\YangH264EncoderMeta.cpp" />
+    <ClCompile Include="yangencoder\YangH264EncoderSoft.cpp" />
+    <ClCompile Include="yangencoder\YangH265EncoderMeta.cpp" />
+    <ClCompile Include="yangencoder\YangH265EncoderSoft.cpp" />
+    <ClCompile Include="yangencoder\YangOpenH264Encoder.cpp" />
+    <ClCompile Include="yangencoder\YangVideoEncoder.cpp" />
+    <ClCompile Include="yangencoder\YangVideoEncoderFfmpeg.cpp" />
+    <ClCompile Include="yangencoder\YangVideoEncoderHandle.cpp" />
+    <ClCompile Include="yangice\YangIce.c" />
+    <ClCompile Include="yangice\YangRtcSocket.c" />
+    <ClCompile Include="yangice\YangRtcStun.c" />
+    <ClCompile Include="yangice\YangTurnConnection.c" />
+    <ClCompile Include="yangjson\YangJson.c" />
+    <ClCompile Include="yangjson\YangJsonImpl.c" />
+    <ClCompile Include="yangp2p\YangP2pConnection.c" />
+    <ClCompile Include="yangp2p\YangP2pConnection2.c" />
+    <ClCompile Include="yangrtc\YangAec.c" />
+    <ClCompile Include="yangrtc\YangBandwidth.c" />
+    <ClCompile Include="yangrtc\YangDatachannel.c" />
+    <ClCompile Include="yangrtc\YangPeerConnection.c" />
+    <ClCompile Include="yangrtc\YangPeerConnection2.cpp" />
+    <ClCompile Include="yangrtc\YangPlayStream.c" />
+    <ClCompile Include="yangrtc\YangPlayTrack.c" />
+    <ClCompile Include="yangrtc\YangPlayTrackAudio.c" />
+    <ClCompile Include="yangrtc\YangPlayTrackH264.c" />
+    <ClCompile Include="yangrtc\YangPlayTrackH265.c" />
+    <ClCompile Include="yangrtc\YangPlayTrackVideo.c" />
+    <ClCompile Include="yangrtc\YangPush.c" />
+    <ClCompile Include="yangrtc\YangPushAudio.c" />
+    <ClCompile Include="yangrtc\YangPushH264.c" />
+    <ClCompile Include="yangrtc\YangPushH265.c" />
+    <ClCompile Include="yangrtc\YangPushStream.c" />
+    <ClCompile Include="yangrtc\YangRtcConnection.c" />
+    <ClCompile Include="yangrtc\YangRtcContext.c" />
+    <ClCompile Include="yangrtc\YangRtcRtcp.c" />
+    <ClCompile Include="yangrtc\YangRtcStats.c" />
+    <ClCompile Include="yangrtc\YangRtcTwcc.c" />
+    <ClCompile Include="yangrtc\YangStreamUrl.c" />
+    <ClCompile Include="yangrtp\YangPublishNackBuffer.c" />
+    <ClCompile Include="yangrtp\YangReceiveNackBuffer.c" />
+    <ClCompile Include="yangrtp\YangRtcp.c" />
+    <ClCompile Include="yangrtp\YangRtcpApp.c" />
+    <ClCompile Include="yangrtp\YangRtcpBye.c" />
+    <ClCompile Include="yangrtp\YangRtcpCommon.c" />
+    <ClCompile Include="yangrtp\YangRtcpCompound.c" />
+    <ClCompile Include="yangrtp\YangRtcpNack.c" />
+    <ClCompile Include="yangrtp\YangRtcpPli.c" />
+    <ClCompile Include="yangrtp\YangRtcpPsfbCommon.c" />
+    <ClCompile Include="yangrtp\YangRtcpRpsi.c" />
+    <ClCompile Include="yangrtp\YangRtcpRR.c" />
+    <ClCompile Include="yangrtp\YangRtcpSli.c" />
+    <ClCompile Include="yangrtp\YangRtcpSR.c" />
+    <ClCompile Include="yangrtp\YangRtcpTWCC.c" />
+    <ClCompile Include="yangrtp\YangRtcpXr.c" />
+    <ClCompile Include="yangrtp\YangRtp.c" />
+    <ClCompile Include="yangrtp\YangRtpBuffer.c" />
+    <ClCompile Include="yangrtp\YangRtpFUAPayload.c" />
+    <ClCompile Include="yangrtp\YangRtpFUAPayload2.c" />
+    <ClCompile Include="yangrtp\YangRtpHeader.c" />
+    <ClCompile Include="yangrtp\YangRtpPacket.c" />
+    <ClCompile Include="yangrtp\YangRtpRawPayload.c" />
+    <ClCompile Include="yangrtp\YangRtpRecvNack.c" />
+    <ClCompile Include="yangrtp\YangRtpSTAPPayload.c" />
+    <ClCompile Include="yangsdp\YangAnswerSdp.c" />
+    <ClCompile Include="yangsdp\YangAudioPayload.c" />
+    <ClCompile Include="yangsdp\YangCodecPayload.c" />
+    <ClCompile Include="yangsdp\YangMediaDesc.c" />
+    <ClCompile Include="yangsdp\YangMediaPayloadType.c" />
+    <ClCompile Include="yangsdp\YangRedPayload.c" />
+    <ClCompile Include="yangsdp\YangRtcSdp.c" />
+    <ClCompile Include="yangsdp\YangRtxPayloadDes.c" />
+    <ClCompile Include="yangsdp\YangSdp.c" />
+    <ClCompile Include="yangsdp\YangSdpHandle.c" />
+    <ClCompile Include="yangsdp\YangSSRCInfo.c" />
+    <ClCompile Include="yangsrs\YangSrsConnection.c" />
+    <ClCompile Include="yangssl\YangDtlsMbedtls.c" />
+    <ClCompile Include="yangssl\YangDtlsOpenssl.c" />
+    <ClCompile Include="yangssl\YangSslMbedtls.c" />
+    <ClCompile Include="yangssl\YangSslOpenssl.c" />
+    <ClCompile Include="yangstream\YangStream.c" />
+    <ClCompile Include="yangstream\YangStreamCapture.c" />
+    <ClCompile Include="yangstream\YangStreamManager.cpp" />
+    <ClCompile Include="yangstream\YangStreamRtc.c" />
+    <ClCompile Include="yangstream\YangSynBuffer.cpp" />
+    <ClCompile Include="yangstream\YangSynBufferManager.cpp" />
+    <ClCompile Include="yangutil\buffer2\YangMediaBuffer2.c" />
+    <ClCompile Include="yangutil\buffer2\YangSortBuffer.c" />
+    <ClCompile Include="yangutil\buffer2\YangVideoEncoderBuffer2.c" />
+    <ClCompile Include="yangutil\buffer\YangAudioBuffer.cpp" />
+    <ClCompile Include="yangutil\buffer\YangAudioEncoderBuffer.cpp" />
+    <ClCompile Include="yangutil\buffer\YangAudioPlayBuffer.cpp" />
+    <ClCompile Include="yangutil\buffer\YangMediaBuffer.cpp" />
+    <ClCompile Include="yangutil\buffer\YangVideoBuffer.cpp" />
+    <ClCompile Include="yangutil\buffer\YangVideoDecoderBuffer.cpp" />
+    <ClCompile Include="yangutil\buffer\YangVideoEncoderBuffer.cpp" />
+    <ClCompile Include="yangutil\sys\YangAvtype.c" />
+    <ClCompile Include="yangutil\sys\YangBuffer.c" />
+    <ClCompile Include="yangutil\sys\YangCLog.c" />
+    <ClCompile Include="yangutil\sys\YangCString.c" />
+    <ClCompile Include="yangutil\sys\YangCTimer.c" />
+    <ClCompile Include="yangutil\sys\YangEndian.c" />
+    <ClCompile Include="yangutil\sys\YangFile.c" />
+    <ClCompile Include="yangutil\sys\YangHttp.c" />
+    <ClCompile Include="yangutil\sys\YangIni.c" />
+    <ClCompile Include="yangutil\sys\YangLibHandle.c" />
+    <ClCompile Include="yangutil\sys\YangMath.c" />
+    <ClCompile Include="yangutil\sys\YangSctp.c" />
+    <ClCompile Include="yangutil\sys\YangSocket.c" />
+    <ClCompile Include="yangutil\sys\YangSocketIP.c" />
+    <ClCompile Include="yangutil\sys\YangSRtp.c" />
+    <ClCompile Include="yangutil\sys\YangSsrc.c" />
+    <ClCompile Include="yangutil\sys\YangThread.c" />
+    <ClCompile Include="yangutil\sys\YangTime.c" />
+    <ClCompile Include="yangutil\sys\YangUrl.c" />
+    <ClCompile Include="yangutil\sys\YangVector.c" />
+    <ClCompile Include="yangutil\sys\YangWebsocket.c" />
+    <ClCompile Include="yangutil\YangAvinfo.cpp" />
+    <ClCompile Include="yangutil\YangLoadLib.cpp" />
+    <ClCompile Include="yangutil\YangString.cpp" />
+    <ClCompile Include="yangutil\YangSysMessageHandle.cpp" />
+    <ClCompile Include="yangutil\yangutil_YangThread.cpp" />
+    <ClCompile Include="yangutil\YangTimer.cpp" />
+    <ClCompile Include="yangwhip\YangWhip.c" />
+    <ClCompile Include="yangwincodec6\NvCodec\nvenc.cpp" />
+    <ClCompile Include="yangwincodec6\NvCodec\NvEncoder.cpp" />
+    <ClCompile Include="yangwincodec6\NvCodec\NvEncoderD3D11.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\common_directx11.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\common_directx9.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\common_utils.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\common_utils_windows.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\QsvEncoder.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_critical_section.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher_log.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_dxva2_device.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_function_table.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_library_iterator.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_load_dll.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_load_plugin.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_plugin_hive.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_win_reg_key.cpp" />
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\qsv_main.cpp" />
+    <ClCompile Include="yangwincodec6\YangEncoderGpu.cpp" />
+    <ClCompile Include="yangwincodec6\YangGpuEncoderFactory.cpp" />
+    <ClCompile Include="yangwincodec6\YangH264EncoderGpu.cpp" />
+    <ClCompile Include="yangzlm\YangZlmConnection.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d3fea0c4-4c53-4f48-a10c-bd3672e013d2}</ProjectGuid>
+    <RootNamespace>libMetaRtc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;__STDC_FORMAT_MACROS;HAVE_STRUCT_TIMESPEC;WIN32;_DEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4996</TreatSpecificWarningsAsErrors>
+      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/libaom;$(SolutionDir)libs/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;__STDC_FORMAT_MACROS;HAVE_STRUCT_TIMESPEC;WIN32;NDEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4996</TreatSpecificWarningsAsErrors>
+      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/libaom;$(SolutionDir)libs/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;__STDC_FORMAT_MACROS;HAVE_STRUCT_TIMESPEC;_DEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4996</TreatSpecificWarningsAsErrors>
+      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/libaom;$(SolutionDir)libs/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32_LEAN_AND_MEAN;__STDC_FORMAT_MACROS;HAVE_STRUCT_TIMESPEC;NDEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>4996</TreatSpecificWarningsAsErrors>
+      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/libaom;$(SolutionDir)libs/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

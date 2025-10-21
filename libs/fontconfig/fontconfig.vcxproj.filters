@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fonts.conf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\fc-case\fccase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fc-lang\fclang.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sys\time.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config-fixups.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcalias.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcaliastail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcarch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcatomic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcdeprecate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcftalias.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcftaliastail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcftint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcmutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcobjs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcobjshash.gperf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcobjshash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcstdint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fcwindows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fontconfig-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ftglue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unistd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fcfreetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fcprivate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fontconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\fcarch.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcatomic.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fccache.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fccfg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fccharset.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fccompat.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcdbg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcdefault.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcdir.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcformat.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcfreetype.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcfs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fchash.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcinit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fclang.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fclist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcmatch.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcmatrix.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcname.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcobjs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcpat.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcptrlist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcrange.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcserialize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcstat.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcstr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcweight.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fcxml.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ftglue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

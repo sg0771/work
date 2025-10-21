@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\mk_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_events.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_events_objects.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_frame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_h264_splitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_httpclient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_media.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_mediakit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_player.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_proxyplayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_pusher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_recorder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_rtp_server.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_tcp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_track.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_transcode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mk_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="source\mk_tcp_private.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\mk_common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_events.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_events_objects.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_frame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_h264_splitter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_httpclient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_media.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_player.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_proxyplayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_pusher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_recorder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_rtp_server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_tcp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_thread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_track.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_transcode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mk_util.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

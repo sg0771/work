@@ -1,0 +1,9 @@
+.vs
+.git
+/WXMedia_SDK/Win32
+/WXMedia_SDK/x64
+*/obj
+*/.vs
+*.aps
+/update_version/env
+/packages

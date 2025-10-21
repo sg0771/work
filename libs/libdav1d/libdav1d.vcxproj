@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common_attributes.h" />
+    <ClInclude Include="src\common_bitdepth.h" />
+    <ClInclude Include="src\common_dump.h" />
+    <ClInclude Include="src\common_frame.h" />
+    <ClInclude Include="src\common_intops.h" />
+    <ClInclude Include="src\common_validate.h" />
+    <ClInclude Include="ff_stdatomic.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="dav1d.h" />
+    <ClInclude Include="src\cdef.h" />
+    <ClInclude Include="src\cdef_apply.h" />
+    <ClInclude Include="src\cdf.h" />
+    <ClInclude Include="src\cpu.h" />
+    <ClInclude Include="src\ctx.h" />
+    <ClInclude Include="src\src_data.h" />
+    <ClInclude Include="src\decode.h" />
+    <ClInclude Include="src\dequant_tables.h" />
+    <ClInclude Include="src\env.h" />
+    <ClInclude Include="src\fg_apply.h" />
+    <ClInclude Include="src\film_grain.h" />
+    <ClInclude Include="src\getbits.h" />
+    <ClInclude Include="src\internal.h" />
+    <ClInclude Include="src\intra_edge.h" />
+    <ClInclude Include="src\ipred.h" />
+    <ClInclude Include="src\ipred_prepare.h" />
+    <ClInclude Include="src\itx.h" />
+    <ClInclude Include="src\itx_1d.h" />
+    <ClInclude Include="src\levels.h" />
+    <ClInclude Include="src\lf_apply.h" />
+    <ClInclude Include="src\lf_mask.h" />
+    <ClInclude Include="src\log.h" />
+    <ClInclude Include="src\loopfilter.h" />
+    <ClInclude Include="src\looprestoration.h" />
+    <ClInclude Include="src\lr_apply.h" />
+    <ClInclude Include="src\mc.h" />
+    <ClInclude Include="src\mem.h" />
+    <ClInclude Include="src\msac.h" />
+    <ClInclude Include="src\obu.h" />
+    <ClInclude Include="src\src_picture.h" />
+    <ClInclude Include="src\qm.h" />
+    <ClInclude Include="src\recon.h" />
+    <ClInclude Include="src\ref.h" />
+    <ClInclude Include="src\refmvs.h" />
+    <ClInclude Include="src\scan.h" />
+    <ClInclude Include="src\tables.h" />
+    <ClInclude Include="src\thread.h" />
+    <ClInclude Include="src\thread_data.h" />
+    <ClInclude Include="src\thread_task.h" />
+    <ClInclude Include="src\warpmv.h" />
+    <ClInclude Include="src\wedge.h" />
+    <ClInclude Include="src\x86\cpu.h" />
+    <ClInclude Include="src\x86\msac.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.asm.inc" />
+    <None Include="x86inc.asm.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cdef_apply_tmpl - 16.c" />
+    <ClCompile Include="src\cdef_apply_tmpl.c" />
+    <ClCompile Include="src\cdef_tmpl - 16.c" />
+    <ClCompile Include="src\cdef_tmpl.c" />
+    <ClCompile Include="src\cdf.c" />
+    <ClCompile Include="src\cpu.c" />
+    <ClCompile Include="src\data.c" />
+    <ClCompile Include="src\decode.c" />
+    <ClCompile Include="src\dequant_tables.c" />
+    <ClCompile Include="src\fg_apply_tmpl -16.c" />
+    <ClCompile Include="src\fg_apply_tmpl.c" />
+    <ClCompile Include="src\film_grain_tmpl - 16.c" />
+    <ClCompile Include="src\film_grain_tmpl.c" />
+    <ClCompile Include="src\getbits.c" />
+    <ClCompile Include="src\intra_edge.c" />
+    <ClCompile Include="src\ipred_prepare_tmpl -16.c" />
+    <ClCompile Include="src\ipred_prepare_tmpl.c" />
+    <ClCompile Include="src\ipred_tmpl - 16.c" />
+    <ClCompile Include="src\ipred_tmpl.c" />
+    <ClCompile Include="src\itx_1d.c" />
+    <ClCompile Include="src\itx_tmpl - 16.c" />
+    <ClCompile Include="src\itx_tmpl.c" />
+    <ClCompile Include="src\lf_apply_tmpl - 16.c" />
+    <ClCompile Include="src\lf_apply_tmpl.c" />
+    <ClCompile Include="src\lf_mask.c" />
+    <ClCompile Include="src\lib.c" />
+    <ClCompile Include="src\log.c" />
+    <ClCompile Include="src\loopfilter_tmpl - 16.c" />
+    <ClCompile Include="src\loopfilter_tmpl.c" />
+    <ClCompile Include="src\looprestoration_tmpl - 16.c" />
+    <ClCompile Include="src\looprestoration_tmpl.c" />
+    <ClCompile Include="src\lr_apply_tmpl - 16.c" />
+    <ClCompile Include="src\lr_apply_tmpl.c" />
+    <ClCompile Include="src\mc_tmpl - 16.c" />
+    <ClCompile Include="src\mc_tmpl.c" />
+    <ClCompile Include="src\mem.c" />
+    <ClCompile Include="src\msac.c" />
+    <ClCompile Include="src\obu.c" />
+    <ClCompile Include="src\picture.c" />
+    <ClCompile Include="src\qm.c" />
+    <ClCompile Include="src\recon_tmpl - 16.c" />
+    <ClCompile Include="src\recon_tmpl.c" />
+    <ClCompile Include="src\ref.c" />
+    <ClCompile Include="src\refmvs.c" />
+    <ClCompile Include="src\scan.c" />
+    <ClCompile Include="src\tables.c" />
+    <ClCompile Include="src\thread_task.c" />
+    <ClCompile Include="src\warpmv.c" />
+    <ClCompile Include="src\wedge.c" />
+    <ClCompile Include="src\win32\win32_thread.c" />
+    <ClCompile Include="src\x86\cdef_init_tmpl - 16.c" />
+    <ClCompile Include="src\x86\cdef_init_tmpl.c" />
+    <ClCompile Include="src\x86\x86-cpu.c" />
+    <ClCompile Include="src\x86\film_grain_init_tmpl - 16.c" />
+    <ClCompile Include="src\x86\film_grain_init_tmpl.c" />
+    <ClCompile Include="src\x86\ipred_init_tmpl - 16.c" />
+    <ClCompile Include="src\x86\ipred_init_tmpl.c" />
+    <ClCompile Include="src\x86\itx_init_tmpl - 16.c" />
+    <ClCompile Include="src\x86\itx_init_tmpl.c" />
+    <ClCompile Include="src\x86\loopfilter_init_tmpl - 16.c" />
+    <ClCompile Include="src\x86\loopfilter_init_tmpl.c" />
+    <ClCompile Include="src\x86\looprestoration_init_tmpl -16.c" />
+    <ClCompile Include="src\x86\looprestoration_init_tmpl.c" />
+    <ClCompile Include="src\x86\mc_init_tmpl -16.c" />
+    <ClCompile Include="src\x86\mc_init_tmpl.c" />
+    <ClCompile Include="src\x86\msac_init.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <NASM Include="src\x86\cdef16_avx2.asm" />
+    <NASM Include="src\x86\cdef16_sse.asm" />
+    <NASM Include="src\x86\cdef_avx2.asm" />
+    <NASM Include="src\x86\cdef_avx512.asm" />
+    <NASM Include="src\x86\cdef_sse.asm" />
+    <NASM Include="src\x86\cpuid.asm" />
+    <NASM Include="src\x86\film_grain16_avx2.asm" />
+    <NASM Include="src\x86\film_grain_avx2.asm" />
+    <NASM Include="src\x86\film_grain_sse.asm" />
+    <NASM Include="src\x86\ipred16_avx2.asm" />
+    <NASM Include="src\x86\ipred_avx2.asm" />
+    <NASM Include="src\x86\ipred_sse.asm" />
+    <NASM Include="src\x86\itx16_avx2.asm" />
+    <NASM Include="src\x86\itx_avx2.asm" />
+    <NASM Include="src\x86\itx_sse.asm" />
+    <NASM Include="src\x86\loopfilter16_avx2.asm" />
+    <NASM Include="src\x86\loopfilter_avx2.asm" />
+    <NASM Include="src\x86\loopfilter_sse.asm" />
+    <NASM Include="src\x86\looprestoration16_avx2.asm" />
+    <NASM Include="src\x86\looprestoration_avx2.asm" />
+    <NASM Include="src\x86\looprestoration_sse.asm" />
+    <NASM Include="src\x86\mc16_avx2.asm" />
+    <NASM Include="src\x86\mc_avx2.asm" />
+    <NASM Include="src\x86\mc_avx512.asm" />
+    <NASM Include="src\x86\mc_sse.asm" />
+    <NASM Include="src\x86\x86asm-msac.asm" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f26b6ec7-8757-44b7-abab-ff423ac5e5f2}</ProjectGuid>
+    <RootNamespace>libdav1d</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(SolutionDir)tools\nasm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</ExternalIncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</ExternalIncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</ExternalIncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</ExternalIncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_WIN32_WINNT=0x0601;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderOutputFile />
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalOptions> -march=core2 -msse4.1  -Wno-deprecated-non-prototype -Wno-misleading-indentation -Wno-compare-distinct-pointer-types -Wno-pointer-sign   -Wno-implicit-function-declaration</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_WIN32_WINNT=0x0601;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderOutputFile />
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalOptions> -march=core2 -msse4.1  -Wno-deprecated-non-prototype -Wno-misleading-indentation -Wno-compare-distinct-pointer-types -Wno-pointer-sign   -Wno-implicit-function-declaration</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_WIN32_WINNT=0x0601;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderOutputFile />
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalOptions> -march=core2 -msse4.1  -Wno-deprecated-non-prototype -Wno-misleading-indentation -Wno-compare-distinct-pointer-types -Wno-pointer-sign   -Wno-implicit-function-declaration</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_WIN32_WINNT=0x0601;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderOutputFile />
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalOptions> -march=core2 -msse4.1  -Wno-deprecated-non-prototype -Wno-misleading-indentation -Wno-compare-distinct-pointer-types -Wno-pointer-sign   -Wno-implicit-function-declaration</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(SolutionDir)\tools\nasm.targets" />
+  </ImportGroup>
+</Project>

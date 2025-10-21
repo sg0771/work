@@ -1,0 +1,3810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SPIRV\bitutils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\disassemble.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\doc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\GLSL.ext.AMD.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\GLSL.ext.ARM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\GLSL.ext.EXT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\GLSL.ext.KHR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\GLSL.ext.NV.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\GLSL.ext.QCOM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\GLSL.std.450.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\GlslangToSpv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\hex_float.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\Logger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\NonSemanticDebugPrintf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\NonSemanticShaderDebugInfo100.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\SpvBuilder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\spvIR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\SPVRemapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\SpvTools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPIRV\spvUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\OSDependent\osinclude.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\arrays.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\BaseTypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\ConstantUnion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\glslang_c_interface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\glslang_c_shader_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\InfoSink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\InitializeGlobals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\intermediate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\PoolAlloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\ResourceLimits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\ShHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\SpirvIntrinsics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\Types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Include\visibility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\preprocessor\PpContext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\preprocessor\PpTokens.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\attribute.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\gl_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\glslang_tab.cpp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\Initialize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\iomapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\LiveTraverser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\localintermediate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\ParseHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\parseVersions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\propagateNoContraction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\reflection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\RemoveTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\Scan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\ScanContext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\SymbolTable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\MachineIndependent\Versions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glslang\Public\ShaderLang.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="allocator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="blob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="c_api.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="datareader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer_declaration.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer_registry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer_shader_registry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer_shader_spv_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer_shader_type.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer_shader_type_enum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer_type.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer_type_enum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mat_pixel_drawing_font.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="modelbin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ncnn_export.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="net.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="option.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="paramdict.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pipeline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pipelinecache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ruapu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="simplemath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleocv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleomp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="simplestl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="simplevk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image_write.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan_header_fix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\absval.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\batchnorm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\batchnorm_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\binaryop.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\binaryop_broadcast.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\binaryop_broadcast_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\binaryop_broadcast_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\binaryop_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\cast_fp16_to_fp32.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\cast_fp16_to_fp32_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\cast_fp32_to_fp16.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\cast_fp32_to_fp16_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\celu.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\clip.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\concat.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\concat_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\concat_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convert_ycbcr.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_1x1s1d1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_1x1s1d1_cm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd23_transform_input.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd23_transform_output.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd43_transform_input.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd43_transform_output.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_gemm_cm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack1to4_1x1s1d1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack1to4_3x3s1d1_winograd_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack1to4_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_1x1s1d1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd23_transform_input.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd23_transform_output.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd43_transform_input.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd43_transform_output.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4to1_1x1s1d1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4to1_3x3s1d1_winograd_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4to1_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution_winograd_gemm_cm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution1d.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution1d_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution1d_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolution1d_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_group.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_group_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_group_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_group_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\crop.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\crop_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\crop_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\crop_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_col2im.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_gemm_cm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack1to4_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4_col2im.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4to1_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_group.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_group_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_group_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_group_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deepcopy.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\deepcopy_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\dequantize.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\dequantize_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\dropout.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\eltwise.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\eltwise_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\elu.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\erf.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\flatten.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\flatten_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\flatten_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\gelu.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\gemm_cm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\hardsigmoid.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\hardswish.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_gemm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_gemm_wp1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_gemm_wp4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_gemm_wp4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_reduce_sum8.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_reduce_sum8_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_sum8.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_sum8_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_sum8_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\innerproduct_sum8_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_coeffs.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_coeffs_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_norm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_norm_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_mean.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_mean_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_sum4_fp16_to_fp32.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_sum4_fp16_to_fp32_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_sum4_fp32.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_sum4_fp32_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_sub_mean_square.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\instancenorm_sub_mean_square_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\interp.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\interp_bicubic.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\interp_bicubic_coeffs.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\interp_bicubic_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\interp_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_coeffs.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_coeffs_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_norm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_norm_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_mean.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_mean_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_sum4_fp16_to_fp32.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_sum4_fp16_to_fp32_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_sum4_fp32.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_sum4_fp32_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_sub_mean_square.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\layernorm_sub_mean_square_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\lrn_norm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\lrn_norm_across_channel_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\lrn_norm_within_channel_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\lrn_square_pad.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\lrn_square_pad_across_channel_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\lrn_square_pad_within_channel_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\mish.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qk_cross.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qk_cross_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qk_cross_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qk_cross_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qkv_cross.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qkv_cross_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qkv_cross_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qkv_cross_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\normalize_coeffs.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\normalize_coeffs_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\normalize_norm.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\normalize_norm_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\normalize_reduce_sum4_fp16_to_fp32.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\normalize_reduce_sum4_fp16_to_fp32_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\normalize_reduce_sum4_fp32.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\normalize_reduce_sum4_fp32_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\packing.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\packing_int8.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\packing_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\packing_pack1to4_int8.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\packing_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\packing_pack4to1_int8.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\padding.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\padding_3d.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\padding_3d_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\padding_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\padding_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\padding_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\permute.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\permute_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\permute_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\permute_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pixelshuffle.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pixelshuffle_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pixelshuffle_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_adaptive.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_adaptive_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_first.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_first_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_last.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_last_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_first.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_first_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_last.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_last_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\pooling_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\prelu.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\prelu_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\priorbox.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\priorbox_mxnet.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\quantize.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\quantize_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\relu.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\reorg.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\reorg_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\reorg_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\requantize.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\requantize_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\reshape.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\reshape_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\reshape_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\reshape_pack4to1.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\scale.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\scale_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\shufflechannel.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\shufflechannel_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\sigmoid.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\slice.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\slice_pack1to4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\slice_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\softmax_div_sum.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\softmax_div_sum_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\softmax_exp_sub_max.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\softmax_exp_sub_max_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\softmax_reduce_max.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\softmax_reduce_max_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\softmax_reduce_sum.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\softmax_reduce_sum_pack4.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\swish.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\tanh.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\unaryop.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shader\vulkan_activation.comp.hex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\absval_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\batchnorm_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\binaryop_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\cast_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\celu_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\clip_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\concat_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\convolution_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\convolution1d_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\convolutiondepthwise_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\crop_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\deconvolution_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\deconvolutiondepthwise_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\deepcopy_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\dequantize_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\dropout_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\eltwise_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\elu_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\erf_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\flatten_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\gelu_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\gemm_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\hardsigmoid_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\hardswish_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\innerproduct_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\instancenorm_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\interp_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\layernorm_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\lrn_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\memorydata_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\mish_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\multiheadattention_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\noop_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\normalize_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\packing_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\padding_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\permute_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\pixelshuffle_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\pooling_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\prelu_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\priorbox_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\quantize_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\relu_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\reorg_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\requantize_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\reshape_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\scale_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\shufflechannel_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\sigmoid_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\slice_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\softmax_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\split_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\swish_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\tanh_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\vulkan\unaryop_vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\avx_mathfun.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\avx512_mathfun.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\batchnorm_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\batchnorm_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\batchnorm_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\batchnorm_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\bias_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\bias_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\bias_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\bias_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\binaryop_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\binaryop_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\binaryop_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\binaryop_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\bnll_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\bnll_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\bnll_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\bnll_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\cast_bf16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\cast_fp16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\cast_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\cast_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\cast_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\cast_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\clip_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\clip_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\clip_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\clip_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\concat_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\concat_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\concat_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\concat_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_1x1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_2x2_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3_int8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3_pack1to4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3_pack1to8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3_pack8to1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3_pack16to1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3_winograd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_3x3_winograd_int8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_5x5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_im2col_gemm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_im2col_gemm_int8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_packed.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_packed_int8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution1d_packed.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution1d_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution1d_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution1d_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolution1d_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3_int8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_5x5_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_5x5_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_5x5_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\convolutiondepthwise_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\crop_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\crop_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\crop_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\crop_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack1to4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack1to8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack1to16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack4to1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack4to8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack4to16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack8to1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack8to4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack8to16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack16to1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack16to4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_pack16to8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolution_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolutiondepthwise_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolutiondepthwise_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolutiondepthwise_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deconvolutiondepthwise_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack1to4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack1to8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack1to16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack4to1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack4to8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack4to16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack8to1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack8to4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack8to16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack16to1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack16to4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_pack16to8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\deformableconv2d_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\dequantize_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\dequantize_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\dequantize_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\dequantize_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\dropout_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\dropout_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\dropout_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\dropout_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\eltwise_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\eltwise_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\eltwise_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\eltwise_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\elu_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\elu_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\elu_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\elu_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\flatten_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\flatten_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\flatten_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\flatten_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gelu_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gelu_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gelu_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gelu_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gemm_int8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gemm_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gemm_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gemm_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gemm_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_bicubic_apply_interpolation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_bicubic_compute_blob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_bilinear_apply_interpolation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_bilinear_compute_blob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_compute_blob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_nearest_apply_interpolation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_nearest_compute_blob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\gridsample_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\groupnorm_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\groupnorm_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\groupnorm_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\groupnorm_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\hardsigmoid_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\hardsigmoid_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\hardsigmoid_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\hardsigmoid_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\hardswish_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\hardswish_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\hardswish_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\hardswish_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\innerproduct_fp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\innerproduct_gemm_fp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\innerproduct_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\innerproduct_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\innerproduct_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\innerproduct_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\instancenorm_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\instancenorm_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\instancenorm_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\instancenorm_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_bicubic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_bicubic_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_bicubic_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_bicubic_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_bilinear.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_bilinear_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_bilinear_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_bilinear_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\interp_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\layernorm_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\layernorm_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\layernorm_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\layernorm_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lrn_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lrn_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lrn_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lrn_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lstm_int8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lstm_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lstm_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lstm_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\lstm_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\matmul_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\matmul_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\matmul_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\matmul_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\mish_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\mish_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\mish_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\mish_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\multiheadattention_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\multiheadattention_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\multiheadattention_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\multiheadattention_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\packing_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\packing_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\packing_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\packing_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\padding_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\padding_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\padding_pack8_int8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\padding_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\padding_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\padding_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\padding_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\padding_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_2x2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_2x2_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_2x2_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_2x2_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_3x3_pack4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_3x3_pack8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_3x3_pack16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\pooling_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\prelu_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\prelu_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\prelu_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\prelu_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\quantize_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\quantize_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\quantize_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\quantize_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\relu_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\relu_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\relu_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\relu_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\requantize_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\requantize_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\requantize_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\requantize_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\reshape_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\reshape_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\reshape_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\reshape_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\rmsnorm_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\rmsnorm_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\rmsnorm_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\rmsnorm_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\roialign_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\roialign_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\roialign_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\roialign_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\scale_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\scale_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\scale_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\scale_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\selu_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\selu_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\selu_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\selu_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\shufflechannel_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\shufflechannel_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\shufflechannel_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\shufflechannel_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\sigmoid_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\sigmoid_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\sigmoid_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\sigmoid_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\slice_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\slice_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\slice_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\slice_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\softmax_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\softmax_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\softmax_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\softmax_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\sse_mathfun.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\swish_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\swish_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\swish_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\swish_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\tanh_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\tanh_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\tanh_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\tanh_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\unaryop_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\unaryop_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\unaryop_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\unaryop_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\x86_activation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\x86_usability.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\yolov3detectionoutput_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\yolov3detectionoutput_x86_avx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\yolov3detectionoutput_x86_avx512.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\x86\yolov3detectionoutput_x86_fma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\absval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\argmax.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\batchnorm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\bias.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\binaryop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\bnll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\cast.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\celu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\clip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\concat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\convolution.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\convolution1d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\convolution3d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\convolutiondepthwise.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\convolutiondepthwise1d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\convolutiondepthwise3d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\copyto.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\crop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\cumulativesum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\deconvolution.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\deconvolution1d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\deconvolution3d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\deconvolutiondepthwise.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\deconvolutiondepthwise1d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\deconvolutiondepthwise3d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\deepcopy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\deformableconv2d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\dequantize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\detectionoutput.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\diag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\dropout.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\einsum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\eltwise.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\elu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\embed.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\erf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\exp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\expanddims.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\flatten.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\flip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\fold.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\fused_activation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\gelu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\gemm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\glu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\gridsample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\groupnorm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\gru.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\hardsigmoid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\hardswish.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\innerproduct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\input.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\instancenorm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\interp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\inversespectrogram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\layernorm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\lrn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\lstm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\matmul.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\memorydata.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\mish.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\multiheadattention.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\mvn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\noop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\normalize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\packing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\padding.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\permute.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\pixelshuffle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\pooling.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\pooling1d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\pooling3d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\power.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\prelu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\priorbox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\proposal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\psroipooling.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\quantize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\reduction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\relu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\reorg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\requantize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\reshape.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\rmsnorm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\rnn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\roialign.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\roipooling.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\scale.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\selu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\shrink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\shufflechannel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\sigmoid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\slice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\softmax.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\softplus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\spectrogram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\split.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\spp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\squeeze.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\statisticspooling.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\swish.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\tanh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\threshold.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\tile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\unaryop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\unfold.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\yolodetectionoutput.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layer\yolov3detectionoutput.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glslang\SPIRV-stub.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\CInterface\glslang_c_interface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\GenericCodeGen\CodeGen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\GenericCodeGen\Link.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\CInterface\spirv_c_interface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\disassemble.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\doc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\GlslangToSpv.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\InReadableOrder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\Logger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\SpvBuilder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\SpvPostProcess.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\SPVRemapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SPIRV\SpvTools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\OSDependent\Windows\ossource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\Pp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\PpAtom.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\PpContext.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\PpScanner.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\PpTokens.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\attribute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\Constant.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\glslang_tab.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\InfoSink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\Initialize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\Intermediate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\intermOut.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\IntermTraverse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\iomapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\limits.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\linkValidate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\parseConst.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\ParseContextBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\ParseHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\PoolAlloc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\propagateNoContraction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\reflection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\RemoveTree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\Scan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\ShaderLang.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\SpirvIntrinsics.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\SymbolTable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glslang\MachineIndependent\Versions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="allocator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="blob.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="c_api.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="command.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="datareader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="expression.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gpu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mat_pixel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mat_pixel_affine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mat_pixel_android.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mat_pixel_drawing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mat_pixel_resize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mat_pixel_rotate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="modelbin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="net.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="option.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="paramdict.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pipeline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pipelinecache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="simplemath.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleocv.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleomp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="simplestl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="simplevk.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\absval_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\batchnorm_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\binaryop_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\cast_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\celu_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\clip_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\concat_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\convolution_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\convolution1d_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\convolutiondepthwise_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\crop_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\deconvolution_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\deconvolutiondepthwise_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\deepcopy_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\dequantize_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\dropout_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\eltwise_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\elu_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\erf_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\flatten_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\gelu_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\gemm_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\hardsigmoid_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\hardswish_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\innerproduct_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\instancenorm_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\interp_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\layernorm_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\lrn_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\memorydata_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\mish_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\multiheadattention_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\noop_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\normalize_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\packing_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\padding_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\permute_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\pixelshuffle_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\pooling_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\prelu_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\priorbox_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\quantize_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\relu_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\reorg_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\requantize_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\reshape_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\scale_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\shufflechannel_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\sigmoid_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\slice_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\softmax_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\split_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\swish_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\tanh_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\vulkan\unaryop_vulkan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\batchnorm_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\batchnorm_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\batchnorm_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\batchnorm_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\bias_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\bias_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\bias_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\bias_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\binaryop_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\binaryop_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\binaryop_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\binaryop_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\bnll_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\bnll_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\bnll_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\bnll_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\cast_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\cast_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\cast_x86_avx2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\cast_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\cast_x86_avx512bf16.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\cast_x86_f16c.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\cast_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\clip_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\clip_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\clip_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\clip_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\concat_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\concat_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\concat_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\concat_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86_avx2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86_avx512vnni.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86_avxvnni.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86_avxvnniint8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution_x86_xop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution1d_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution1d_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution1d_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolution1d_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolutiondepthwise_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolutiondepthwise_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolutiondepthwise_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\convolutiondepthwise_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\crop_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\crop_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\crop_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\crop_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deconvolution_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deconvolution_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deconvolution_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deconvolution_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deconvolutiondepthwise_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deconvolutiondepthwise_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deconvolutiondepthwise_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deconvolutiondepthwise_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deformableconv2d_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deformableconv2d_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deformableconv2d_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\deformableconv2d_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\dequantize_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\dequantize_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\dequantize_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\dequantize_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\dropout_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\dropout_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\dropout_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\dropout_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\eltwise_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\eltwise_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\eltwise_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\eltwise_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\elu_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\elu_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\elu_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\elu_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\flatten_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\flatten_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\flatten_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\flatten_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gelu_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gelu_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gelu_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gelu_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86_avx2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86_avx512vnni.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86_avxvnni.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86_avxvnniint8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gemm_x86_xop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gridsample_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gridsample_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gridsample_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\gridsample_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\groupnorm_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\groupnorm_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\groupnorm_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\groupnorm_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\hardsigmoid_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\hardsigmoid_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\hardsigmoid_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\hardsigmoid_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\hardswish_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\hardswish_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\hardswish_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\hardswish_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\innerproduct_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\innerproduct_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\innerproduct_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\innerproduct_x86_f16c.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\innerproduct_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\instancenorm_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\instancenorm_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\instancenorm_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\instancenorm_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\interp_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\interp_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\interp_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\interp_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\layernorm_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\layernorm_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\layernorm_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\layernorm_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lrn_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lrn_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lrn_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lrn_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lstm_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lstm_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lstm_x86_avx2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lstm_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lstm_x86_avx512vnni.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lstm_x86_avxvnni.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lstm_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\lstm_x86_xop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\matmul_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\matmul_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\matmul_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\matmul_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\mish_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\mish_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\mish_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\mish_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\multiheadattention_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\multiheadattention_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\multiheadattention_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\multiheadattention_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\packing_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\packing_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\packing_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\packing_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\padding_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\padding_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\padding_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\padding_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\pooling_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\pooling_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\pooling_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\pooling_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\prelu_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\prelu_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\prelu_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\prelu_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\quantize_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\quantize_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\quantize_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\quantize_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\relu_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\relu_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\relu_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\relu_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\requantize_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\requantize_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\requantize_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\requantize_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\reshape_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\reshape_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\reshape_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\reshape_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\rmsnorm_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\rmsnorm_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\rmsnorm_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\rmsnorm_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\roialign_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\roialign_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\roialign_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\roialign_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\scale_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\scale_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\scale_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\scale_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\selu_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\selu_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\selu_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\selu_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\shufflechannel_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\shufflechannel_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\shufflechannel_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\shufflechannel_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\sigmoid_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\sigmoid_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\sigmoid_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\sigmoid_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\slice_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\slice_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\slice_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\slice_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\softmax_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\softmax_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\softmax_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\softmax_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\swish_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\swish_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\swish_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\swish_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\tanh_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\tanh_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\tanh_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\tanh_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\unaryop_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\unaryop_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\unaryop_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\unaryop_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\yolov3detectionoutput_x86.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\yolov3detectionoutput_x86_avx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\yolov3detectionoutput_x86_avx512.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\x86\yolov3detectionoutput_x86_fma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\absval.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\argmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\batchnorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\bias.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\binaryop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\bnll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\cast.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\celu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\clip.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\concat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\convolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\convolution1d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\convolution3d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\convolutiondepthwise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\convolutiondepthwise1d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\convolutiondepthwise3d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\copyto.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\crop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\cumulativesum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\deconvolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\deconvolution1d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\deconvolution3d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\deconvolutiondepthwise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\deconvolutiondepthwise1d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\deconvolutiondepthwise3d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\deepcopy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\deformableconv2d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\dequantize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\detectionoutput.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\diag.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\dropout.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\einsum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\eltwise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\elu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\embed.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\erf.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\exp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\expanddims.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\flatten.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\flip.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\fold.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\gelu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\gemm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\glu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\gridsample.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\groupnorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\gru.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\hardsigmoid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\hardswish.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\innerproduct.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\input.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\instancenorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\interp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\inversespectrogram.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\layernorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\lrn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\lstm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\matmul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\memorydata.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\mish.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\multiheadattention.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\mvn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\noop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\normalize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\packing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\padding.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\permute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\pixelshuffle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\pooling.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\pooling1d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\pooling3d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\power.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\prelu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\priorbox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\proposal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\psroipooling.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\quantize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\reduction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\relu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\reorg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\requantize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\reshape.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\rmsnorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\rnn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\roialign.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\roipooling.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\scale.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\selu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\shrink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\shufflechannel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\sigmoid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\slice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\softmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\softplus.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\spectrogram.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\split.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\spp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\squeeze.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\statisticspooling.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\swish.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\tanh.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\threshold.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\tile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\unaryop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\unfold.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\yolodetectionoutput.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layer\yolov3detectionoutput.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

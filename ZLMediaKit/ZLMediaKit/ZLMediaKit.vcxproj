@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{37885ea4-2bd6-4a26-8beb-1e246d7094b1}</ProjectGuid>
+    <RootNamespace>ZLMediaKit</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs/openssl/include;./;../ZLToolKit;../libmov;../libflv;../libmpeg;../openssl-1.1.1k/include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs/openssl/include;./;../ZLToolKit;../libmov;../libflv;../libmpeg;../openssl-1.1.1k/include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs/openssl/include;./;../ZLToolKit;../libmov;../libflv;../libmpeg;../openssl-1.1.1k/include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs/openssl/include;./;../ZLToolKit;../libmov;../libflv;../libmpeg;../openssl-1.1.1k/include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Codec\AACEncoder.cpp" />
+    <ClCompile Include="Codec\H264Encoder.cpp" />
+    <ClCompile Include="Codec\Transcode.cpp" />
+    <ClCompile Include="Common\config.cpp" />
+    <ClCompile Include="Common\Device.cpp" />
+    <ClCompile Include="Common\macros.cpp" />
+    <ClCompile Include="Common\MediaSink.cpp" />
+    <ClCompile Include="Common\MediaSource.cpp" />
+    <ClCompile Include="Common\MultiMediaSourceMuxer.cpp" />
+    <ClCompile Include="Common\Parser.cpp" />
+    <ClCompile Include="Common\Stamp.cpp" />
+    <ClCompile Include="Common\strCoding.cpp" />
+    <ClCompile Include="Extension\AAC.cpp" />
+    <ClCompile Include="Extension\AACRtmp.cpp" />
+    <ClCompile Include="Extension\AACRtp.cpp" />
+    <ClCompile Include="Extension\CommonRtmp.cpp" />
+    <ClCompile Include="Extension\CommonRtp.cpp" />
+    <ClCompile Include="Extension\Factory.cpp" />
+    <ClCompile Include="Extension\Frame.cpp" />
+    <ClCompile Include="Extension\G711.cpp" />
+    <ClCompile Include="Extension\G711Rtp.cpp" />
+    <ClCompile Include="Extension\H264.cpp" />
+    <ClCompile Include="Extension\H264Rtmp.cpp" />
+    <ClCompile Include="Extension\H264Rtp.cpp" />
+    <ClCompile Include="Extension\H265.cpp" />
+    <ClCompile Include="Extension\H265Rtmp.cpp" />
+    <ClCompile Include="Extension\H265Rtp.cpp" />
+    <ClCompile Include="Extension\JPEG.cpp" />
+    <ClCompile Include="Extension\JPEGRtp.cpp" />
+    <ClCompile Include="Extension\L16.cpp" />
+    <ClCompile Include="Extension\Opus.cpp" />
+    <ClCompile Include="Extension\SPSParser.c" />
+    <ClCompile Include="Http\HlsParser.cpp" />
+    <ClCompile Include="Http\HlsPlayer.cpp" />
+    <ClCompile Include="Http\HttpBody.cpp" />
+    <ClCompile Include="Http\HttpChunkedSplitter.cpp" />
+    <ClCompile Include="Http\HttpClient.cpp" />
+    <ClCompile Include="Http\HttpClientImp.cpp" />
+    <ClCompile Include="Http\HttpConst.cpp" />
+    <ClCompile Include="Http\HttpCookie.cpp" />
+    <ClCompile Include="Http\HttpCookieManager.cpp" />
+    <ClCompile Include="Http\HttpDownloader.cpp" />
+    <ClCompile Include="Http\HttpFileManager.cpp" />
+    <ClCompile Include="Http\HttpRequester.cpp" />
+    <ClCompile Include="Http\HttpRequestSplitter.cpp" />
+    <ClCompile Include="Http\HttpSession.cpp" />
+    <ClCompile Include="Http\HttpTSPlayer.cpp" />
+    <ClCompile Include="Http\TsPlayer.cpp" />
+    <ClCompile Include="Http\TsplayerImp.cpp" />
+    <ClCompile Include="Http\WebSocketSplitter.cpp" />
+    <ClCompile Include="Player\MediaPlayer.cpp" />
+    <ClCompile Include="Player\PlayerBase.cpp" />
+    <ClCompile Include="Player\PlayerProxy.cpp" />
+    <ClCompile Include="Pusher\MediaPusher.cpp" />
+    <ClCompile Include="Pusher\PusherBase.cpp" />
+    <ClCompile Include="Pusher\PusherProxy.cpp" />
+    <ClCompile Include="Record\HlsMaker.cpp" />
+    <ClCompile Include="Record\HlsMakerImp.cpp" />
+    <ClCompile Include="Record\HlsMediaSource.cpp" />
+    <ClCompile Include="Record\MP4.cpp" />
+    <ClCompile Include="Record\MP4Demuxer.cpp" />
+    <ClCompile Include="Record\MP4Muxer.cpp" />
+    <ClCompile Include="Record\MP4Reader.cpp" />
+    <ClCompile Include="Record\MP4Recorder.cpp" />
+    <ClCompile Include="Record\MPEG.cpp" />
+    <ClCompile Include="Record\Recorder.cpp" />
+    <ClCompile Include="Rtcp\Rtcp.cpp" />
+    <ClCompile Include="Rtcp\RtcpContext.cpp" />
+    <ClCompile Include="Rtcp\RtcpFCI.cpp" />
+    <ClCompile Include="Rtmp\amf.cpp" />
+    <ClCompile Include="Rtmp\FlvMuxer.cpp" />
+    <ClCompile Include="Rtmp\FlvPlayer.cpp" />
+    <ClCompile Include="Rtmp\FlvSplitter.cpp" />
+    <ClCompile Include="Rtmp\Rtmp.cpp" />
+    <ClCompile Include="Rtmp\RtmpDemuxer.cpp" />
+    <ClCompile Include="Rtmp\RtmpMediaSourceImp.cpp" />
+    <ClCompile Include="Rtmp\RtmpMuxer.cpp" />
+    <ClCompile Include="Rtmp\RtmpPlayer.cpp" />
+    <ClCompile Include="Rtmp\RtmpProtocol.cpp" />
+    <ClCompile Include="Rtmp\RtmpPusher.cpp" />
+    <ClCompile Include="Rtmp\RtmpSession.cpp" />
+    <ClCompile Include="Rtmp\utils.cpp" />
+    <ClCompile Include="Rtp\Decoder.cpp" />
+    <ClCompile Include="Rtp\GB28181Process.cpp" />
+    <ClCompile Include="Rtp\PSDecoder.cpp" />
+    <ClCompile Include="Rtp\PSEncoder.cpp" />
+    <ClCompile Include="Rtp\RawEncoder.cpp" />
+    <ClCompile Include="Rtp\RtpCache.cpp" />
+    <ClCompile Include="Rtp\RtpProcess.cpp" />
+    <ClCompile Include="Rtp\RtpSelector.cpp" />
+    <ClCompile Include="Rtp\RtpSender.cpp" />
+    <ClCompile Include="Rtp\RtpServer.cpp" />
+    <ClCompile Include="Rtp\RtpSession.cpp" />
+    <ClCompile Include="Rtp\RtpSplitter.cpp" />
+    <ClCompile Include="Rtp\TSDecoder.cpp" />
+    <ClCompile Include="Rtsp\RtpCodec.cpp" />
+    <ClCompile Include="Rtsp\RtpMultiCaster.cpp" />
+    <ClCompile Include="Rtsp\RtpReceiver.cpp" />
+    <ClCompile Include="Rtsp\Rtsp.cpp" />
+    <ClCompile Include="Rtsp\RtspDemuxer.cpp" />
+    <ClCompile Include="Rtsp\RtspMediaSourceImp.cpp" />
+    <ClCompile Include="Rtsp\RtspMuxer.cpp" />
+    <ClCompile Include="Rtsp\RtspPlayer.cpp" />
+    <ClCompile Include="Rtsp\RtspPusher.cpp" />
+    <ClCompile Include="Rtsp\RtspSession.cpp" />
+    <ClCompile Include="Rtsp\RtspSplitter.cpp" />
+    <ClCompile Include="Rtsp\UDPServer.cpp" />
+    <ClCompile Include="Shell\ShellSession.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Codec\AACEncoder.h" />
+    <ClInclude Include="Codec\H264Encoder.h" />
+    <ClInclude Include="Codec\Transcode.h" />
+    <ClInclude Include="Common\config.h" />
+    <ClInclude Include="Common\Device.h" />
+    <ClInclude Include="Common\macros.h" />
+    <ClInclude Include="Common\MediaSink.h" />
+    <ClInclude Include="Common\MediaSource.h" />
+    <ClInclude Include="Common\MultiMediaSourceMuxer.h" />
+    <ClInclude Include="Common\PacketCache.h" />
+    <ClInclude Include="Common\Parser.h" />
+    <ClInclude Include="Common\Stamp.h" />
+    <ClInclude Include="Common\strCoding.h" />
+    <ClInclude Include="Extension\AAC.h" />
+    <ClInclude Include="Extension\AACRtmp.h" />
+    <ClInclude Include="Extension\AACRtp.h" />
+    <ClInclude Include="Extension\CommonRtmp.h" />
+    <ClInclude Include="Extension\CommonRtp.h" />
+    <ClInclude Include="Extension\Factory.h" />
+    <ClInclude Include="Extension\Frame.h" />
+    <ClInclude Include="Extension\G711.h" />
+    <ClInclude Include="Extension\G711Rtp.h" />
+    <ClInclude Include="Extension\H264.h" />
+    <ClInclude Include="Extension\H264Rtmp.h" />
+    <ClInclude Include="Extension\H264Rtp.h" />
+    <ClInclude Include="Extension\H265.h" />
+    <ClInclude Include="Extension\H265Rtmp.h" />
+    <ClInclude Include="Extension\H265Rtp.h" />
+    <ClInclude Include="Extension\JPEG.h" />
+    <ClInclude Include="Extension\JPEGRtp.h" />
+    <ClInclude Include="Extension\L16.h" />
+    <ClInclude Include="Extension\Opus.h" />
+    <ClInclude Include="Extension\SPSParser.h" />
+    <ClInclude Include="Extension\Track.h" />
+    <ClInclude Include="FMP4\FMP4MediaSource.h" />
+    <ClInclude Include="FMP4\FMP4MediaSourceMuxer.h" />
+    <ClInclude Include="Http\HlsParser.h" />
+    <ClInclude Include="Http\HlsPlayer.h" />
+    <ClInclude Include="Http\HttpBody.h" />
+    <ClInclude Include="Http\HttpChunkedSplitter.h" />
+    <ClInclude Include="Http\HttpClient.h" />
+    <ClInclude Include="Http\HttpClientImp.h" />
+    <ClInclude Include="Http\HttpConst.h" />
+    <ClInclude Include="Http\HttpCookie.h" />
+    <ClInclude Include="Http\HttpCookieManager.h" />
+    <ClInclude Include="Http\HttpDownloader.h" />
+    <ClInclude Include="Http\HttpFileManager.h" />
+    <ClInclude Include="Http\HttpRequester.h" />
+    <ClInclude Include="Http\HttpRequestSplitter.h" />
+    <ClInclude Include="Http\HttpSession.h" />
+    <ClInclude Include="Http\HttpTSPlayer.h" />
+    <ClInclude Include="Http\TsPlayer.h" />
+    <ClInclude Include="Http\TsPlayerImp.h" />
+    <ClInclude Include="Http\WebSocketClient.h" />
+    <ClInclude Include="Http\WebSocketSession.h" />
+    <ClInclude Include="Http\WebSocketSplitter.h" />
+    <ClInclude Include="Player\MediaPlayer.h" />
+    <ClInclude Include="Player\PlayerBase.h" />
+    <ClInclude Include="Player\PlayerProxy.h" />
+    <ClInclude Include="Pusher\MediaPusher.h" />
+    <ClInclude Include="Pusher\PusherBase.h" />
+    <ClInclude Include="Pusher\PusherProxy.h" />
+    <ClInclude Include="Record\HlsMaker.h" />
+    <ClInclude Include="Record\HlsMakerImp.h" />
+    <ClInclude Include="Record\HlsMediaSource.h" />
+    <ClInclude Include="Record\HlsRecorder.h" />
+    <ClInclude Include="Record\MP4.h" />
+    <ClInclude Include="Record\MP4Demuxer.h" />
+    <ClInclude Include="Record\MP4Muxer.h" />
+    <ClInclude Include="Record\MP4Reader.h" />
+    <ClInclude Include="Record\MP4Recorder.h" />
+    <ClInclude Include="Record\MPEG.h" />
+    <ClInclude Include="Record\Recorder.h" />
+    <ClInclude Include="Rtcp\Rtcp.h" />
+    <ClInclude Include="Rtcp\RtcpContext.h" />
+    <ClInclude Include="Rtcp\RtcpFCI.h" />
+    <ClInclude Include="Rtmp\amf.h" />
+    <ClInclude Include="Rtmp\FlvMuxer.h" />
+    <ClInclude Include="Rtmp\FlvPlayer.h" />
+    <ClInclude Include="Rtmp\FlvSplitter.h" />
+    <ClInclude Include="Rtmp\Rtmp.h" />
+    <ClInclude Include="Rtmp\RtmpCodec.h" />
+    <ClInclude Include="Rtmp\RtmpDemuxer.h" />
+    <ClInclude Include="Rtmp\RtmpMediaSource.h" />
+    <ClInclude Include="Rtmp\RtmpMediaSourceImp.h" />
+    <ClInclude Include="Rtmp\RtmpMediaSourceMuxer.h" />
+    <ClInclude Include="Rtmp\RtmpMuxer.h" />
+    <ClInclude Include="Rtmp\RtmpPlayer.h" />
+    <ClInclude Include="Rtmp\RtmpPlayerImp.h" />
+    <ClInclude Include="Rtmp\RtmpProtocol.h" />
+    <ClInclude Include="Rtmp\RtmpPusher.h" />
+    <ClInclude Include="Rtmp\RtmpSession.h" />
+    <ClInclude Include="Rtmp\utils.h" />
+    <ClInclude Include="Rtp\Decoder.h" />
+    <ClInclude Include="Rtp\GB28181Process.h" />
+    <ClInclude Include="Rtp\ProcessInterface.h" />
+    <ClInclude Include="Rtp\PSDecoder.h" />
+    <ClInclude Include="Rtp\PSEncoder.h" />
+    <ClInclude Include="Rtp\RawEncoder.h" />
+    <ClInclude Include="Rtp\RtpCache.h" />
+    <ClInclude Include="Rtp\RtpProcess.h" />
+    <ClInclude Include="Rtp\RtpSelector.h" />
+    <ClInclude Include="Rtp\RtpSender.h" />
+    <ClInclude Include="Rtp\RtpServer.h" />
+    <ClInclude Include="Rtp\RtpSession.h" />
+    <ClInclude Include="Rtp\RtpSplitter.h" />
+    <ClInclude Include="Rtp\TSDecoder.h" />
+    <ClInclude Include="Rtsp\RtpCodec.h" />
+    <ClInclude Include="Rtsp\RtpMultiCaster.h" />
+    <ClInclude Include="Rtsp\RtpReceiver.h" />
+    <ClInclude Include="Rtsp\Rtsp.h" />
+    <ClInclude Include="Rtsp\RtspDemuxer.h" />
+    <ClInclude Include="Rtsp\RtspMediaSource.h" />
+    <ClInclude Include="Rtsp\RtspMediaSourceImp.h" />
+    <ClInclude Include="Rtsp\RtspMediaSourceMuxer.h" />
+    <ClInclude Include="Rtsp\RtspMuxer.h" />
+    <ClInclude Include="Rtsp\RtspPlayer.h" />
+    <ClInclude Include="Rtsp\RtspPlayerImp.h" />
+    <ClInclude Include="Rtsp\RtspPusher.h" />
+    <ClInclude Include="Rtsp\RtspSession.h" />
+    <ClInclude Include="Rtsp\RtspSplitter.h" />
+    <ClInclude Include="Rtsp\UDPServer.h" />
+    <ClInclude Include="Shell\ShellCMD.h" />
+    <ClInclude Include="Shell\ShellSession.h" />
+    <ClInclude Include="TS\TSMediaSource.h" />
+    <ClInclude Include="TS\TSMediaSourceMuxer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

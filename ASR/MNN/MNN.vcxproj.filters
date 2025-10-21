@@ -1,0 +1,2012 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="backend\cpu\compute\CommonOptFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvInt8TiledExecutor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvInt8Winograd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\Convolution1x1Strassen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionDepthwise3x3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionFloatFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionGroup.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionHybrid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionIntFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionPackFreeWinograd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionPackWinograd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionTiledExecutor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionWinogradBridge.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvolutionWinogradImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ConvOpt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\DeconvolutionWithStride.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\DenseConvolutionTiledExecutor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\GemmInt8Executor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\IdstConvolutionInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ImageProcessFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\Int8FunctionsOpt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\OptimizedComputer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\ResizeFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\SparseConvInt8TiledExecutor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\SparseConvolutionTiledExecutor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\StrassenMatmulComputor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\compute\WinogradOptFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmAVX2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmCommon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmCommonBF16.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_GemmSparse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_MathFunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_PackedFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_ReorderFunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avx\avx_WinogradFunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_GemmAVX2FMA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_GemmAVX2FMABF16.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_GemmSparseFMA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_MathFunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\avxfma\avxfma_PackedFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_GemmCommon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_GemmInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_GemmSSE.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_ImageProcessFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_MathFunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_PackedFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\sse\sse_ReorderFunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\AVX2Backend.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\AVX2Functions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\FunctionDispatcher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\x86_x64\mnn_cpu_id.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUArgMax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUBackend.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUBinary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUBinaryInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUCast.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUConvolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUConvolutionDepthwise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUCropAndResize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUDeconvolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUDeconvolutionDepthwise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUDepthwiseConvInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUDequantize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUDet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUDetectionOutput.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUDetectionPostProcess.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUEltwise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUEltwiseInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUFloatToInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUGridSample.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUHistogram.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUImageProcess.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUInstanceNorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUInt8ToFloat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUInterp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUInterp3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPULayerNorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPULinSpace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUMatMul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUMatrixBandPart.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUMoments.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUNonMaxSuppressionV2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUOneHot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUOPRegister.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUPlugin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUPoolInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUProposal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUQuanConvolutionDepthwise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUQuantizedAdd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUQuantizedAvgPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUQuantizedLogistic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUQuantizedMaxPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUQuantizedSoftmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPURandomUniform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPURange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPURaster.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUReduction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPURelu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUResize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUResizeCache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPURNNSequenceGRU.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUROIAlign.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUROIPooling.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPURuntime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUScale.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUScaleInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUSegmentMean.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUSelect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUSetDiff1D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUSoftmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUSoftMaxInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUSvd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUTensorConvert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUTFQuantizedConv2D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUTopKV2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUUnary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUUnique.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUUnravelIndex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\CPUWhere.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\OneDNNConvInt8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\OneDNNConvolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\cpu\ThreadPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\backend\VulkanBackend.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\compiler\AllShader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\compiler\VulkanShaderMap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanArgMax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanBasicExecution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanBinary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanConvolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanConvolutionImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanDeconvolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanFuse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanGridSample.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanInterp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanLayernorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanLoop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanMatMul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanOneHot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanPRelu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanRange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanRaster.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanReduce.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanResize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanROIPooling.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanScale.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanSelect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanSoftmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\buffer\execution\VulkanUnary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanCommandPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanDevice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanFence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanFramebuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanInstance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanMemoryPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanPipeline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanQueryPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanRenderPass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanSemaphore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\component\VulkanTarget.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\runtime\vulkan_wrapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="backend\vulkan\runtime\VulkanRuntime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\AutoTime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Backend.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\BackendRegister.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\BufferAllocator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ConvolutionCommon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Execution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\FileLoader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Interpreter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\MNNMemoryUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\OpCommonUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Pipeline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\RuntimeFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Schedule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Session.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Tensor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\TensorUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\WrapExecution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cv\ImageProcess.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cv\Matrix_CV.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\module\IfModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\module\Module.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\module\NMSModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\module\PipelineModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\module\StaticModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\module\WhileModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\Executor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\ExecutorScope.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\Expr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\MathOp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\mnn_Utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\NeuralNetWorkOp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="express\Optimizer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\ConvertUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryBatchMatMul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryBinary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryBroadcastTo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryComputer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryComputerUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryConcat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryConv2D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryConv2DBackPropFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryConv3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryConvert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryConvUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryCosineSimilarity.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryCrop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryCumSum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryDepthToSpace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryDet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryDilation2D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryELU.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryFill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryGather.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryImageOp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryInnerProduct.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryLRN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryLSTM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryOPRegister.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryPermute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryPoolGrad.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryPooling3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryReduce.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryReshape.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryReverseSequence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryScatter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometrySelect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryShape.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometrySlice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometrySpaceToBatchND.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometrySpatialProduct.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryStridedSlice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryTensorArray.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryThreshold.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryTile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryTopK.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryUnary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="math\Matrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="math\WingoradGenerater.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeArgMax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeBatchToSpaceND.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeBinaryOp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeBroadcastTo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeCast.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeConcat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeConvolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeConvolution3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeConvTranspose3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeCosineSimilarity.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeCrop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeCropAndResize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeDeconvolution.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeDepthToSpace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeDequantize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeDet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeDetectionOutput.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeDetectionPostProcess.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeExpandDims.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeFill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeGatherND.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeGatherV2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeGridSample.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeHistogram.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeInnerProduct.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeInterp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeLinSpace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeLSTM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeMatMul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeMoments.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeNonMaxSuppressionV2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeOneHot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapePack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapePadding.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapePermute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapePlugin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapePool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapePool3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapePriorbox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeProposal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeQuantizedAvgPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeQuantizedMaxPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeRandomUniform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeRange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeReduction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeRegister.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeReshape.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeResize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeRNNSequenceGRU.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeROIAlign.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeROIPooling.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeScatterNd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSegmentMean.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSelect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSetDiff1D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeShape.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSlice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSliceTf.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSpaceToBatchND.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSpaceToDepth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSqueeze.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeStridedSlice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeSvd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeTensorArray.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeTensorConvert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeTile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeTopKV2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeTranspose.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeUnique.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeUnpack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeUnravelIndex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\ShapeWhere.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shape\SizeComputer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\InitNet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="backend\cpu\compute\CommonOptFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvInt8TiledExecutor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvInt8Winograd.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\Convolution1x1Strassen.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionDepthwise3x3.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionFloatFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionGroup.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionHybrid.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionIntFactory.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionPackFreeWinograd.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionPackWinograd.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionTiledExecutor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionWinogradBridge.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvolutionWinogradImpl.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ConvOpt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\DeconvolutionWithStride.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\DenseConvolutionTiledExecutor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\GemmInt8Executor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\IdstConvolutionInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ImageProcessFunction.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\Int8FunctionsOpt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\OptimizedComputer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\ResizeFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\SparseConvInt8TiledExecutor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\SparseConvolutionTiledExecutor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\StrassenMatmulComputor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\compute\WinogradOptFunction.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\avx\FunctionSummary.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\avx\GemmCommon.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\avx\GemmFunction.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\avx\GemmFunctionEShort.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\avx\GemmFunctionPackL.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\avx\Vec8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\avxfma\FunctionSummary.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\sse\FunctionSummary.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\sse\GemmCommon.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\sse\GemmFunction.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\AVX2Backend.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\AVX2Functions.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\cpu_id.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\x86_x64\MNNAsmGlobal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\BinaryUtils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUArgMax.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUBackend.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUBinary.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUBinaryInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUCast.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUConvolution.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUConvolutionDepthwise.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUCropAndResize.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUDeconvolution.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUDeconvolutionDepthwise.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUDepthwiseConvInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUDequantize.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUDet.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUDetectionOutput.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUDetectionPostProcess.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUEltwise.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUEltwiseInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUFixedPoint.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUFloatToInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUGridSample.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUHistogram.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUImageProcess.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUInstanceNorm.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUInt8ToFloat.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUInterp.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUInterp3D.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPULayerNorm.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPULinSpace.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUMatMul.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUMatrixBandPart.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUMoments.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUNonMaxSuppressionV2.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUOneHot.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUPool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUPoolInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUProposal.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUQuanConvolutionDepthwise.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUQuantizationUtils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUQuantizedAdd.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUQuantizedAvgPool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUQuantizedLogistic.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUQuantizedMaxPool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUQuantizedSoftmax.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPURandomUniform.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPURange.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPURaster.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUReduction.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPURelu.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUResize.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUResizeCache.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPURNNSequenceGRU.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUROIAlign.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUROIPooling.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPURuntime.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUScale.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUScaleInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUSelect.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUSetDiff1D.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUSoftmax.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUSoftMaxInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUSvd.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUTensorConvert.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUTFQuantizedConv2D.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUTopKV2.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUUnary.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUUnique.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUUnravelIndex.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\CPUWhere.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\GridSampler.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\OneDNNConvInt8.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\OneDNNConvolution.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\ThreadPool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\cpu\UnaryUtils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\backend\VulkanBackend.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanArgMax.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanBasicExecution.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanBinary.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanConvolution.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanConvolutionImpl.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanDeconvolution.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanGridSample.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanInterp.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanLayernorm.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanLoop.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanMatMul.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanOneHot.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanPool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanPRelu.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanRange.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanRaster.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanReduce.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanResize.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanROIPooling.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanScale.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanSelect.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanSoftmax.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\execution\VulkanUnary.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\shaders\AllShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\buffer\shaders\VulkanShaderMap.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanBuffer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanCommandPool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanDevice.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanFence.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanFramebuffer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanImage.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanInstance.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanMemoryPool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanPipeline.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanQueryPool.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanRenderPass.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanSemaphore.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\component\VulkanTarget.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\runtime\VulkanRuntime.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\vulkan\vk_platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\vulkan\vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\vulkan\vulkan_android.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\vulkan\vulkan_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="backend\vulkan\vulkan\vulkan_wrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonCompute.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MemoryFormater.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WinogradInt8Attr.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\AutoStorage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Backend.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\BufferAllocator.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Command.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Concurrency.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ConvolutionCommon.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Execution.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\FileLoader.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Macro.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\MNNMemoryUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\NonCopyable.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\OpCommonUtils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Pipeline.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\RuntimeFactory.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Schedule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Session.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\TensorUtils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\WrapExecution.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cv\SkNx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cv\SkNx_neon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\Executor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\ExecutorScope.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\Expr.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\ExprCreator.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\MathOp.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\Module.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\NeuralNetWorkOp.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\Optimizer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="expr\Scope.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="express\module\IfModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="express\module\NMSModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="express\module\PipelineModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="express\module\StaticModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="express\module\WhileModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="express\RuntimeAttr.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="express\Utils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\code_generators.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\flatbuffers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\flatc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\flexbuffers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\grpc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\idl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\minireflect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\reflection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\reflection_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\registry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\stl_emulation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\ConvertUtils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\GeometryComputer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\GeometryComputerUtils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\GeometryConvUtils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="math\Matrix.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="math\Vec.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="math\WingoradGenerater.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\PluginContext.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\PluginKernel.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\PluginShapeInference.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="shape\SizeComputer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\Tensor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorArgMax.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorAssign.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorBlock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorBroadcasting.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorChipping.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorConcatenation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContraction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionBlocking.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionCuda.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionGpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionMapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionSycl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorContractionThreadPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorConversion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorConvolution.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorConvolutionSycl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorCostModel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorCustomOp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDevice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceCuda.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceDefault.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceGpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceSycl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDeviceThreadPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDimensionList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorDimensions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorEvalTo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorEvaluator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorExecutor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorExpr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorFFT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorFixedSize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorForcedEval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorForwardDeclarations.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorFunctors.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorGenerator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorGlobalFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorGpuHipCudaDefines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorGpuHipCudaUndefines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorImagePatch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorIndexList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorInflation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorInitializer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorIntDiv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorIO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorLayoutSwap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorMacros.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorMeta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorMorphing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorPadding.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorPatch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorRandom.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReduction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReductionCuda.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReductionGpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReductionSycl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorRef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorReverse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorScan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorScanSycl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorShuffling.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorStorage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorStriding.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorTrace.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorTraits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorUInt128.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\Tensor\TensorVolumePatch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\util\CXX11Meta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\util\CXX11Workarounds.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\util\EmulateArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\CXX11\src\util\MaxSizeVector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\FFT\ei_fftw_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\FFT\ei_kissfft_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\AVX\BesselFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\AVX\SpecialFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\AVX512\BesselFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\AVX512\SpecialFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\GPU\SpecialFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\NEON\BesselFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\arch\NEON\SpecialFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsArrayAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsBFloat16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsFunctors.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsHalf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\BesselFunctionsPacketMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\HipVectorCompatibility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsArrayAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsBFloat16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsFunctors.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsHalf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unsupported\Eigen\src\SpecialFunctions\SpecialFunctionsPacketMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\InitNet.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoTime.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CaffeOp_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorCode.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtraInfo_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="half.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HalideRuntime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MNN_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MNNDefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MNNForwardType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MNNSharedContext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Tensor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Tensor_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TensorflowOp_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TFQuantizeOp_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TrainInfo_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Type_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UserDefine_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="my.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+  </ItemGroup>
+</Project>

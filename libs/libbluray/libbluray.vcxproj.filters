@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aacs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="attributes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bdid_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bdmv_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bdparse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bdplus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bluray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bluray_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bluray-version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="clpi_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="clpi_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dirs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="disc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="enc_info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event_queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="extdata_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="file.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filesystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics_controller.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics_processor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hdmv_insn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hdmv_pids.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hdmv_vm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ig_decode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="index_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="keys.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libbluray-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="log_control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="m2ts_demux.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="m2ts_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="macro.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="meta_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="meta_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mobj_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mobj_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mobj_print.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mount.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mpls_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mpls_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="navigation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="overlay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pes_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pg_decode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="player_settings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="properties.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="refcnt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="register.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sound_parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="strutl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="textst.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="textst_decode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="textst_render.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="time.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="udf_fs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="uo_mask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="uo_mask_table.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libbluray_aacs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_array.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_bdid_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_bdmv_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_bdplus.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_bits.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_bluray.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_clpi_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_dec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_dir_win32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_dirs_win32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_disc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_dl_win32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_event_queue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_extdata_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_file_win32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_filesystem.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_graphics_controller.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_graphics_processor.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_hdmv_vm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_ig_decode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_index_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_logging.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_m2ts_demux.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_m2ts_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_meta_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_mobj_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_mobj_print.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_mount.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_mpls_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_mutex.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_navigation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_pes_buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_pg_decode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_refcnt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_register.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_rle.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_sound_parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_strutl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_textst_decode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_textst_render.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_time.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libbluray_uo_mask.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="properties.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

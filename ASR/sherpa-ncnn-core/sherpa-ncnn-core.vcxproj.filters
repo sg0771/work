@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="circular-buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="context-graph.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="conv-emformer-model.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="endpoint.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="features.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="file-utils.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="generate-int8-scale-table.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="greedy-search-decoder.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hypothesis.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lexicon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lstm-model.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="math.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="meta-data.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="model.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="modified-beam-search-decoder.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-tts.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-tts-impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-tts-model-config.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-tts-vits-model.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-tts-vits-model-config.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-tts-vits-model-meta-data.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="parse-options.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="poolingmodulenoproj.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="recognizer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resample.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="silero-vad-model.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="silero-vad-model-config.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleupsample.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stack.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="symbol-table.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tensorasstrided.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="text-utils.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="version.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="voice-activity-detector.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wave-reader.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wave-writer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="zipformer-model.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="c-api.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="circular-buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="context-graph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="conv-emformer-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="display.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="endpoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="features.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="file-utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="greedy-search-decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hypothesis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lexicon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lstm-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="macros.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="math.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="meta-data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="modified-beam-search-decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-tts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-tts-impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-tts-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-tts-vits-impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-tts-vits-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-tts-vits-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-tts-vits-model-meta-data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="parse-options.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="poolingmodulenoproj.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="recognizer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="silero-vad-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="silero-vad-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleupsample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="symbol-table.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tensorasstrided.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="text-utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="voice-activity-detector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wave-reader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wave-writer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="zipformer-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="c-api.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CPPLINT.cfg" />
+  </ItemGroup>
+</Project>

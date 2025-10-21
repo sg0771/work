@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Network\Buffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\BufferSock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Session.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Socket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\sockutil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\TcpClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\TcpServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\UdpServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Poller\EventPoller.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Poller\Pipe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Poller\PipeWrap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Poller\SelectWrap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Poller\Timer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\TaskExecutor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\WorkThreadPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\base64.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\CMD.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\File.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\local_time.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\logger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\MD5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\mini.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\NoticeCenter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\SHA1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\SqlPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\SSLBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\SSLUtil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\strptime_win.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\util.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\uv_errno.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\getopt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Network\Buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\BufferSock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Server.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Session.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Socket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\sockutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\TcpClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\TcpServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\UdpServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Poller\EventPoller.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Poller\Pipe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Poller\PipeWrap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Poller\SelectWrap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Poller\Timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\semaphore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\TaskExecutor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\TaskQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\threadgroup.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\ThreadPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\WorkThreadPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\base64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\CMD.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\File.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\function_traits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\List.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\local_time.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\logger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\MD5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\mini.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\NoticeCenter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\onceToken.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ResourcePool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\RingBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SHA1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SpeedStatistic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SqlConnection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SqlPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SSLBox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SSLUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\strptime_win.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\TimeTicker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\uv_errno.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\getopt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\tailor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>

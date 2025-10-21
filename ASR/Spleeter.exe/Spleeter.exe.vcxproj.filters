@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cat.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="feature-window.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fftsg.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="file-utils.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="istft.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="kaldi-log.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="kaldi-math.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-lm-config.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-source-separation-impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-source-separation-model-config.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-source-separation-spleeter-model-config.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-source-separation-spleeter-model.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offline-source-separation.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="onnx-utils.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="parse-options.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="provider-config.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="provider.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resample.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rfft.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="session.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Spleeter.onnx.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stft.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="text-utils.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="transpose.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="unbind.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wave-reader.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wave-writer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="feature-window.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="file-utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="istft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="kaldi-log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="kaldi-math.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="macros.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mymath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-lm-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-source-separation-impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-source-separation-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-source-separation-spleeter-impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-source-separation-spleeter-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-source-separation-spleeter-model-meta-data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-source-separation-spleeter-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offline-source-separation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-ctc-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-lm-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-nemo-ctc-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-nemo-ctc-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-paraformer-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-transducer-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-wenet-ctc-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-wenet-ctc-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-zipformer2-ctc-model-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online-zipformer2-ctc-model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="onnx-utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="parse-options.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="provider-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="provider.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rfft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="session.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="text-utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="transpose.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unbind.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wave-reader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wave-writer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

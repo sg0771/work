@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\bidi-types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\debug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\fribidi_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\joining-types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\mem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\run.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-arabic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-begindecls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-bidi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-bidi-types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-bidi-types-list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-char-sets.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-char-sets-cap-rtl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-char-sets-cp1255.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-char-sets-cp1256.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-char-sets-iso8859-6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-char-sets-iso8859-8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-char-sets-list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-char-sets-utf8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-deprecated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-enddecls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-flags.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-joining.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-joining-types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-joining-types-list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-mirroring.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-shape.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-unicode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fribidi-unicode-version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lib\fribidi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-arabic.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-bidi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-bidi-types.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-char-sets.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-char-sets-cap-rtl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-char-sets-cp1255.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-char-sets-cp1256.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-char-sets-iso8859-6.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-char-sets-iso8859-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-char-sets-utf8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-deprecated.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-joining.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-joining-types.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-mem.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-mirroring.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-run.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\fribidi-shape.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\bidi-type.tab.i" />
+    <None Include="lib\arabic-shaping.tab.i" />
+    <None Include="lib\arabic-misc.tab.i" />
+    <None Include="lib\joining-type.tab.i" />
+    <None Include="lib\mirroring.tab.i" />
+  </ItemGroup>
+</Project>

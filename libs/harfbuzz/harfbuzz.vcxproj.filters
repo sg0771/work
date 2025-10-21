@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="hb-ucdn\ucdn.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dump-emoji.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dump-indic-data.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dump-khmer-data.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dump-myanmar-data.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dump-use-data.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-aat-layout.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-blob.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-buffer-serialize.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-common.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-coretext.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-directwrite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-face.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-fallback-shape.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-font.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ft.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-glib.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-gobject-structs.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-graphite2.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-icu.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-map.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-color.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-face.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-font.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-layout.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-map.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-math.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-arabic.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-default.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-hangul.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-hebrew.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-indic.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-indic-table.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-khmer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-myanmar.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-thai.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-use.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-complex-use-table.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-fallback.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-shape-normalize.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-tag.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ot-var.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-set.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-shape.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-shape-plan.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-shaper.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-static.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-subset.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-subset-glyf.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-subset-input.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-subset-plan.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-ucdn.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-unicode.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-uniscribe.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hb-warning.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hb-ucdn\ucdn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ucdn\ucdn_db.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-layout.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-layout-ankr-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-layout-bsln-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-layout-common.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-layout-feat-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-layout-kerx-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-layout-morx-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-layout-trak-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-aat-ltag-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-atomic.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-blob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-blob.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-buffer.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-buffer-deserialize-json.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-buffer-deserialize-text.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-cache.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-coretext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-debug.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-deprecated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-directwrite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-dsalgs.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-face.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-face.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-font.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-font.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-glib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-gobject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-gobject-structs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-graphite2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-icu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-iter.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-machinery.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-map.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-map.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-mutex.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-null.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-object.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-open-file.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-open-type.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-cmap-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-color-cbdt-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-color-colr-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-color-cpal-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-color-sbix-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-color-svg-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-face.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-font.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-glyf-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-hdmx-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-head-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-hhea-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-hmtx-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-kern-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout-base-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout-common.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout-gdef-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout-gpos-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout-gsubgpos.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout-gsub-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-layout-jstf-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-map.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-math.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-math-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-maxp-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-name.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-name-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-os2-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-os2-unicode-ranges.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-post-macroman.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-post-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-arabic.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-arabic-fallback.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-arabic-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-arabic-win1256.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-indic.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-indic-machine.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-khmer.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-khmer-machine.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-myanmar.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-myanmar-machine.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-use.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-complex-use-machine.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-fallback.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-shape-normalize.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-tag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-tag-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-var.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-var-avar-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-var-fvar-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-var-hvar-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-ot-var-mvar-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-set.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-set.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-set-digest.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-shape.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-shape-plan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-shape-plan.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-shaper.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-shaper-impl.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-shaper-list.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-string-array.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-subset.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-subset.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-subset-glyf.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-subset-input.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-subset-plan.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-unicode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-unicode.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-unicode-emoji-table.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-uniscribe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-utf.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-vector.hh">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hb-version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="harfbuzz_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="harfbuzz.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>

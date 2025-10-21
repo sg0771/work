@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ggml-alloc.h" />
+    <ClInclude Include="include\ggml-backend.h" />
+    <ClInclude Include="include\ggml-blas.h" />
+    <ClInclude Include="include\ggml-cann.h" />
+    <ClInclude Include="include\ggml-cpp.h" />
+    <ClInclude Include="include\ggml-cpu.h" />
+    <ClInclude Include="include\ggml-cuda.h" />
+    <ClInclude Include="include\ggml-metal.h" />
+    <ClInclude Include="include\ggml-opencl.h" />
+    <ClInclude Include="include\ggml-opt.h" />
+    <ClInclude Include="include\ggml-rpc.h" />
+    <ClInclude Include="include\ggml-sycl.h" />
+    <ClInclude Include="include\ggml-vulkan.h" />
+    <ClInclude Include="include\ggml-webgpu.h" />
+    <ClInclude Include="include\ggml-zdnn.h" />
+    <ClInclude Include="include\ggml.h" />
+    <ClInclude Include="include\gguf.h" />
+    <ClInclude Include="src\ggml-backend-impl.h" />
+    <ClInclude Include="src\ggml-common.h" />
+    <ClInclude Include="src\ggml-cpu\amx.h" />
+    <ClInclude Include="src\ggml-cpu\amx-common.h" />
+    <ClInclude Include="src\ggml-cpu\mmq.h" />
+    <ClInclude Include="src\ggml-cpu\arch-fallback.h" />
+    <ClInclude Include="src\ggml-cpu\binary-ops.h" />
+    <ClInclude Include="src\ggml-cpu\common.h" />
+    <ClInclude Include="src\ggml-cpu\ggml-cpu-impl.h" />
+    <ClInclude Include="src\ggml-cpu\hbm.h" />
+    <ClInclude Include="src\ggml-cpu\kernels.h" />
+    <ClInclude Include="src\ggml-cpu\kleidiai.h" />
+    <ClInclude Include="src\ggml-cpu\sgemm.h" />
+    <ClInclude Include="src\ggml-cpu\ops.h" />
+    <ClInclude Include="src\ggml-cpu\quants.h" />
+    <ClInclude Include="src\ggml-cpu\repack.h" />
+    <ClInclude Include="src\ggml-cpu\simd-mappings.h" />
+    <ClInclude Include="src\ggml-cpu\traits.h" />
+    <ClInclude Include="src\ggml-cpu\unary-ops.h" />
+    <ClInclude Include="src\ggml-cpu\vec.h" />
+    <ClInclude Include="src\ggml-impl.h" />
+    <ClInclude Include="src\ggml-quants.h" />
+    <ClInclude Include="src\ggml-threading.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ggml-alloc.c" />
+    <ClCompile Include="src\ggml-backend-reg.cpp" />
+    <ClCompile Include="src\ggml-backend.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-amx.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-amx-mmq.cpp" />
+    <ClCompile Include="src\ggml-cpu\x86-cpu-feats.cpp" />
+    <ClCompile Include="src\ggml-cpu\x86-quants.c" />
+    <ClCompile Include="src\ggml-cpu\x86-repack.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-binary-ops.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu.c" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-cpp.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-hbm.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-llamafile-sgemm.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-ops.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-quants.c" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-repack.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-traits.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-unary-ops.cpp" />
+    <ClCompile Include="src\ggml-cpu\ggml-cpu-vec.cpp" />
+    <ClCompile Include="src\ggml-opt.cpp" />
+    <ClCompile Include="src\ggml-quants.c" />
+    <ClCompile Include="src\ggml-threading.cpp" />
+    <ClCompile Include="src\ggml-c.c" />
+    <ClCompile Include="src\ggml-cpp.cpp" />
+    <ClCompile Include="src\gguf-cpp.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3835d15f-62e3-4f8f-9674-36a39ee7c9b2}</ProjectGuid>
+    <RootNamespace>ggml</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>GGML_SHARED;GGML_BUILD;GGML_BACKEND_SHARED;GGML_BACKEND_BUILD;GGML_VULKAN_COOPMAT_GLSLC_SUPPORT;GGML_VULKAN_COOPMAT2_GLSLC_SUPPORT;GGML_USE_CPU_REPACK;GGML_AVX2;GGML_FMA;GGML_F16C;GGML_VERSION="0.0.2578";GGML_COMMIT="11326902";GGML_USE_CPU;GGML_SCHED_MAX_COPIES=4;_XOPEN_SOURCE=600;_CRT_SECURE_NO_WARNINGS;ggml_EXPORTS;SQLITE_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;SQLITE_CORE;WIN32;_DEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./include;$(VK_SDK_PATH)\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(VK_SDK_PATH)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>GGML_SHARED;GGML_BUILD;GGML_BACKEND_SHARED;GGML_BACKEND_BUILD;GGML_VULKAN_COOPMAT_GLSLC_SUPPORT;GGML_VULKAN_COOPMAT2_GLSLC_SUPPORT;GGML_USE_CPU_REPACK;GGML_AVX2;GGML_FMA;GGML_F16C;GGML_VERSION="0.0.2578";GGML_COMMIT="11326902";GGML_USE_CPU;GGML_SCHED_MAX_COPIES=4;_XOPEN_SOURCE=600;_CRT_SECURE_NO_WARNINGS;ggml_EXPORTS;GGML_VULKAN_COOPMAT_GLSLC_SUPPORT;GGML_VULKAN_COOPMAT2_GLSLC_SUPPORT;GGML_USE_CPU_REPACK;GGML_AVX2;GGML_FMA;GGML_F16C;GGML_VERSION="0.0.2578";GGML_COMMIT="11326902";GGML_USE_CPU;GGML_USE_VULKAN;GGML_BUILD;GGML_SHARED;GGML_SCHED_MAX_COPIES=4;_XOPEN_SOURCE=600;_CRT_SECURE_NO_WARNINGS;GGML_BACKEND_SHARED;ggml_EXPORTS;WIN32_LEAN_AND_MEAN;WIN32;NDEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./include;$(VK_SDK_PATH)\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(VK_SDK_PATH)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>GGML_SHARED;GGML_BUILD;GGML_BACKEND_SHARED;GGML_BACKEND_BUILD;GGML_VULKAN_COOPMAT_GLSLC_SUPPORT;GGML_VULKAN_COOPMAT2_GLSLC_SUPPORT;GGML_USE_CPU_REPACK;GGML_AVX2;GGML_FMA;GGML_F16C;GGML_VERSION="0.0.2578";GGML_COMMIT="11326902";GGML_USE_CPU;GGML_SCHED_MAX_COPIES=4;_XOPEN_SOURCE=600;_CRT_SECURE_NO_WARNINGS;ggml_EXPORTS;SQLITE_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;SQLITE_CORE;_DEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./include;$(VK_SDK_PATH)\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(VK_SDK_PATH)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>GGML_SHARED;GGML_BUILD;GGML_BACKEND_SHARED;GGML_BACKEND_BUILD;GGML_VULKAN_COOPMAT_GLSLC_SUPPORT;GGML_VULKAN_COOPMAT2_GLSLC_SUPPORT;GGML_USE_CPU_REPACK;GGML_AVX2;GGML_FMA;GGML_F16C;GGML_VERSION="0.0.2578";GGML_COMMIT="11326902";GGML_USE_CPU;GGML_SCHED_MAX_COPIES=4;_XOPEN_SOURCE=600;_CRT_SECURE_NO_WARNINGS;ggml_EXPORTS;GGML_VULKAN_COOPMAT_GLSLC_SUPPORT;GGML_VULKAN_COOPMAT2_GLSLC_SUPPORT;GGML_USE_CPU_REPACK;GGML_AVX2;GGML_FMA;GGML_F16C;GGML_VERSION="0.0.2578";GGML_COMMIT="11326902";GGML_USE_CPU;GGML_USE_VULKAN;GGML_BUILD;GGML_SHARED;GGML_SCHED_MAX_COPIES=4;_XOPEN_SOURCE=600;_CRT_SECURE_NO_WARNINGS;GGML_BACKEND_SHARED;ggml_EXPORTS;WIN32_LEAN_AND_MEAN;NDEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./include;$(VK_SDK_PATH)\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(VK_SDK_PATH)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,1248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="internal\services\svbdf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svcid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svfntfmt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svgldict.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svgxval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svkern.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svmetric.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svmm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svotval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svpfr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svpostnm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svprop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svpscmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svpsinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svsfnt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svttcmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svtteng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svttglyf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\services\svwinfnt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\autohint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftcalc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftdebug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftdriver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftgloadr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\fthash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftmemory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftobjs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftpic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftrfork.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftserv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftstream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\fttrace.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ftvalid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\psaux.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\pshints.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\sfnt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\t1types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\tttypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afangles.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afangles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afblue.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afblue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afcjk.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afcjk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afcover.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afdummy.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afdummy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\aferrors.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afglobal.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afglobal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afhints.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afhints.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afindic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afindic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\aflatin.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\aflatin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\aflatin2.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\aflatin2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afloader.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afloader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afmodule.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afmodule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afpic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afpic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afranges.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afranges.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afscript.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afshaper.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afshaper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afstyles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\aftypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afwarp.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afwarp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\autofit\afwrtsys.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\basepic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\basepic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftadvanc.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftbase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftcalc.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftdbgmem.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftgloadr.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\fthash.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftmac.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftobjs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftoutln.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftpic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftrfork.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftsnames.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftstream.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\fttrigon.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\ftutil.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\md5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bdf\bdf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bdf\bdfdrivr.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bdf\bdfdrivr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bdf\bdferror.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bdf\bdflib.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcbasic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftccache.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftccache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftccback.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftccmap.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcerror.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcglyph.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcglyph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcimage.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcimage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcmanag.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcmanag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcmru.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcmru.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcsbits.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\ftcsbits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2arrst.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2arrst.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2blues.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2blues.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2error.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2fixed.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2font.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2font.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2ft.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2ft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2glue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2hints.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2hints.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2intrp.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2intrp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2read.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2read.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2stack.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2stack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cf2types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffcmap.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffcmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffdrivr.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffdrivr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cfferrs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffgload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffgload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffobjs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffobjs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffparse.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffparse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffpic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cffpic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cfftoken.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cff\cfftypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\ciderrs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidgload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidgload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidobjs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidobjs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidparse.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidparse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidriver.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidriver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cid\cidtoken.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\adler32.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\ftzconf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\infblock.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\infblock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\infcodes.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\infcodes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\inffixed.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\inflate.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\inftrees.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\inftrees.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\infutil.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\infutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\zlib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\zutil.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gzip\zutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzw\ftzopen.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzw\ftzopen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pcf\pcf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pcf\pcfdrivr.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pcf\pcfdrivr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pcf\pcferror.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pcf\pcfread.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pcf\pcfread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pcf\pcfutil.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pcf\pcfutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrcmap.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrcmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrdrivr.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrdrivr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrerror.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrgload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrgload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrobjs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrobjs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrsbit.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrsbit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pfr\pfrtypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\afmparse.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\afmparse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\psauxerr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\psauxmod.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\psauxmod.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\psconv.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\psconv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\psobjs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\psobjs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\t1cmap.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\t1cmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\t1decode.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psaux\t1decode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshalgo.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshalgo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshglob.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshglob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshmod.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshmod.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshnterr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshpic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshpic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshrec.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pshinter\pshrec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psnames\psmodule.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psnames\psmodule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psnames\psnamerr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psnames\pspic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psnames\pspic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\psnames\pstables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raster\ftmisc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raster\ftraster.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raster\ftraster.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raster\ftrend1.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raster\ftrend1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raster\rasterrs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raster\rastpic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raster\rastpic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\pngshim.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\pngshim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\sfdriver.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\sfdriver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\sferrors.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\sfntpic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\sfntpic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\sfobjs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\sfobjs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttbdf.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttbdf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttcmap.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttcmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttcmapc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttkern.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttkern.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttmtx.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttmtx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttpost.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttpost.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttsbit.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sfnt\ttsbit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smooth\ftgrays.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smooth\ftgrays.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smooth\ftsmerrs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smooth\ftsmooth.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smooth\ftsmooth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smooth\ftspic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smooth\ftspic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttdriver.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttdriver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\tterrors.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttgload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttgload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttgxvar.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttgxvar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttinterp.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttinterp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttobjs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttobjs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttpic.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttpic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttpload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttpload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttsubpix.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\truetype\ttsubpix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1afm.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1afm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1driver.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1driver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1errors.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1gload.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1gload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1load.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1load.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1objs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1objs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1parse.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type1\t1tokens.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type42\t42drivr.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type42\t42drivr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type42\t42error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type42\t42objs.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type42\t42objs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type42\t42parse.c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type42\t42parse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\type42\t42types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\winfonts\fnterrs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\winfonts\winfnt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config-ftconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config-ftheader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config-ftmodule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config-ftoption.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config-ftstdlib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="freetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ft2build.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftadvanc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftautoh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftbbox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftbdf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftbitmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftbzip2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftcache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftcffdrv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftchapters.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftcid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fterrdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fterrors.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftfntfmt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftgasp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftglyph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftgxval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftgzip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftimage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftincrem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftlcdfil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftlist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftlzw.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftmac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftmm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftmodapi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftmoderr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftotval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftoutln.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpcfdrv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftpfr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftrender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftsizes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftsnames.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftstroke.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftsynth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftsystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fttrigon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftttdrv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fttypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ftwinfnt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="t1tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ttnameid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tttables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tttags.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ttunpat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\autofit\autofit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftapi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftbase.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftbbox.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftbdf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftbitmap.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftcid.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftdebug.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftfntfmt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftfstype.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftgasp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftglyph.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftgxval.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftinit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftlcdfil.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftmm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftotval.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftpatent.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftpfr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftstroke.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftsynth.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftsystem.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\fttype1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ftwinfnt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\md5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bdf\bdf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bzip2\ftbzip2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\ftcache.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cff\cff.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cid\type1cid.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gzip\ftgzip.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzw\ftlzw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pcf\pcf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pfr\pfr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\psaux\psaux.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pshinter\pshinter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\psnames\psnames.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\raster\raster.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sfnt\sfnt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\smooth\smooth.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\truetype\truetype.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\type1\type1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\type42\type42.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\winfonts\winfnt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="win32config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wsockcompat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\buf.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\elfgcchack.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enc.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libxml.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\save.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timsort.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\trio.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\triodef.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\trionan.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\triop.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\triostr.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xzlib.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xpointer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xinclude.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xlink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlautomata.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlerror.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlexports.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlIO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlmemory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlmodule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlreader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlregexp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlsave.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlschemas.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlschemastypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlstring.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlunicode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlversion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlwriter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xpath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xpathInternals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="valid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="c14n.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="catalog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chvalid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="debugXML.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dict.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DOCBparser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoding.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="entities.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HTMLparser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HTMLtree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nanoftp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nanohttp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="parserInternals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pattern.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="relaxng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SAX.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SAX2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="schemasInternals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="schematron.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="threads.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="uri.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\buf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\c14n.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\catalog.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\chvalid.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\debugXML.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dict.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DOCBparser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encoding.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\error.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\globals.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hash.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HTMLparser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HTMLtree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\legacy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\list.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nanoftp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nanohttp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parserInternals.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pattern.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\relaxng.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\runsuite.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\runtest.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\runxmlconf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SAX.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SAX2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\schematron.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\threads.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trionan.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\triostr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uri.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\valid.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xinclude.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xlink.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlcatalog.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlIO.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmllint.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlmemory.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlmodule.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlreader.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlregexp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlsave.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlschemas.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlschemastypes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlstring.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlunicode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlwriter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xpath.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xpointer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xzlib.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xmlversion.h.in" />
+  </ItemGroup>
+</Project>

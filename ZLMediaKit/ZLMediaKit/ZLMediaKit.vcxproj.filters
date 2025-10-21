@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Codec\AACEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Codec\H264Encoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Codec\Transcode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\config.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Device.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\macros.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MediaSink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MediaSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MultiMediaSourceMuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Parser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Stamp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\strCoding.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\AAC.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\AACRtmp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\AACRtp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\CommonRtmp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\CommonRtp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\Factory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\Frame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\G711.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\G711Rtp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\H264.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\H264Rtmp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\H264Rtp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\H265.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\H265Rtmp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\H265Rtp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\JPEG.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\JPEGRtp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\L16.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\Opus.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\SPSParser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HlsParser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HlsPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpBody.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpChunkedSplitter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpClientImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpConst.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpCookie.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpCookieManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpDownloader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpFileManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpRequester.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpRequestSplitter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\HttpTSPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\TsPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\TsplayerImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Http\WebSocketSplitter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\MediaPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\PlayerBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\PlayerProxy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Pusher\MediaPusher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Pusher\PusherBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Pusher\PusherProxy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\HlsMaker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\HlsMakerImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\HlsMediaSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\MP4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\MP4Demuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\MP4Muxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\MP4Reader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\MP4Recorder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\MPEG.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Record\Recorder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtcp\Rtcp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtcp\RtcpContext.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtcp\RtcpFCI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\amf.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\FlvMuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\FlvPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\FlvSplitter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\Rtmp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\RtmpDemuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\RtmpMediaSourceImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\RtmpMuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\RtmpPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\RtmpProtocol.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\RtmpPusher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\RtmpSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtmp\utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\Decoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\GB28181Process.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\PSDecoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\PSEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\RawEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\RtpCache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\RtpProcess.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\RtpSelector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\RtpSender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\RtpServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\RtpSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\RtpSplitter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtp\TSDecoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtpCodec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtpMultiCaster.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtpReceiver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\Rtsp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtspDemuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtspMediaSourceImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtspMuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtspPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtspPusher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtspSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\RtspSplitter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rtsp\UDPServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Shell\ShellSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Codec\AACEncoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Codec\H264Encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Codec\Transcode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Device.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\macros.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MediaSink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MediaSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MultiMediaSourceMuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\PacketCache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Stamp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\strCoding.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\AAC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\AACRtmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\AACRtp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\CommonRtmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\CommonRtp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\Factory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\Frame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\G711.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\G711Rtp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\H264.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\H264Rtmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\H264Rtp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\H265.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\H265Rtmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\H265Rtp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\JPEG.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\JPEGRtp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\L16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\Opus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\SPSParser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\Track.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FMP4\FMP4MediaSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FMP4\FMP4MediaSourceMuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HlsParser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HlsPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpBody.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpChunkedSplitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpClientImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpConst.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpCookie.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpCookieManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpDownloader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpFileManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpRequester.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpRequestSplitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\HttpTSPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\TsPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\TsPlayerImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\WebSocketClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\WebSocketSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Http\WebSocketSplitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\MediaPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\PlayerBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\PlayerProxy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Pusher\MediaPusher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Pusher\PusherBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Pusher\PusherProxy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\HlsMaker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\HlsMakerImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\HlsMediaSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\HlsRecorder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\MP4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\MP4Demuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\MP4Muxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\MP4Reader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\MP4Recorder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\MPEG.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Record\Recorder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtcp\Rtcp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtcp\RtcpContext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtcp\RtcpFCI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\amf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\FlvMuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\FlvPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\FlvSplitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\Rtmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpCodec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpDemuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpMediaSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpMediaSourceImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpMediaSourceMuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpMuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpPlayerImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpProtocol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpPusher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\RtmpSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtmp\utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\Decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\GB28181Process.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\ProcessInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\PSDecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\PSEncoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\RawEncoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\RtpCache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\RtpProcess.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\RtpSelector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\RtpSender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\RtpServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\RtpSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\RtpSplitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtp\TSDecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtpCodec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtpMultiCaster.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtpReceiver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\Rtsp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspDemuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspMediaSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspMediaSourceImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspMediaSourceMuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspMuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspPlayerImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspPusher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\RtspSplitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rtsp\UDPServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Shell\ShellCMD.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Shell\ShellSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TS\TSMediaSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TS\TSMediaSourceMuxer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

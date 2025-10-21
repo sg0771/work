@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="x264.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\bitstream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\dct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\deblock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\mc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\pixel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\predict.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\quant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\bitstream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cabac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\dct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\frame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\macroblock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\mc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\oclobj.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\opencl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\osdep.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\pixel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\predict.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\quant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\rectangle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\set.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\threadpool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\win32thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x264-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\analyse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\macroblock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\me.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\ratecontrol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\rdo-8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\rdo-10.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\set.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\slicetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <NASM Include="common\x86\bitstream-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\cabac-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\const-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\cpu-a.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\dct-32-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\dct-64-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\dct-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\deblock-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\mc-a2-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\mc-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\pixel-32-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\pixel-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\predict-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\quant-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\sad-a-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="common\x86\trellis-64-8.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\x86\mc-c-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\x86\predict-c-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\base.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\bitstream-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_cabac-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_macroblock-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_set-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\cpu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\dct-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\deblock-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\frame-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\mc-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\mvpred-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\osdep.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\pixel-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\predict-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\quant-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\rectangle-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\threadpool-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vlc-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\win32thread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\analyse-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\api.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\cabac-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\cavlc-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\lookahead-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\macroblock-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\me-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\ratecontrol -8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\set-8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="common\x86\x86inc.inc">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="common\x86\x86util.inc">
+      <Filter>头文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>

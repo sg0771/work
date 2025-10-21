@@ -1,0 +1,1427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vpx_config_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_config_x64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_util\endian_inl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_util\vpx_thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_scale\vpx_scale.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_scale\yv12config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\arm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\bitops.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\emmintrin_compat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\mem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\mem_ops.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\mem_ops_aligned.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\msvc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\system_state.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\vpx_once.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\vpx_timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_ports\x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_mem\include\vpx_mem_intrnl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_mem\vpx_mem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\x86\convolve.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\x86\fdct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\x86\fwd_dct32x32_impl_avx2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\x86\fwd_dct32x32_impl_sse2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\x86\fwd_txfm_impl_sse2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\x86\fwd_txfm_sse2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\x86\inv_txfm_sse2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\x86\txfm_common_sse2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\bitreader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\bitreader_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\bitwriter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\bitwriter_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\fwd_txfm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\inv_txfm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\postproc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\prob.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\psnr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\quantize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\ssim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\txfm_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\variance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\vpx_convolve.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\vpx_dsp_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp\vpx_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\internal\vpx_codec_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\svc_context.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vp8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vp8cx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vp8dx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vpx_codec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vpx_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vpx_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vpx_frame_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vpx_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx\vpx_integer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_alloccommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_blockd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_common_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_entropy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_entropymode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_entropymv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_enums.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_frame_buffers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_idct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_loopfilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_mfqe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_mv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_mvref_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_onyxc_int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_postproc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_ppflags.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_pred_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_quant_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_reconinter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_reconintra.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_scale.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_scan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_seg_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_thread_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\common\vp9_tile_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\decoder\vp9_decodeframe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\decoder\vp9_decodemv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\decoder\vp9_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\decoder\vp9_detokenize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\decoder\vp9_dsubexp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\decoder\vp9_dthread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_alt_ref_aq.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_aq_360.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_aq_complexity.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_aq_cyclicrefresh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_aq_variance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_bitstream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_block.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_context_tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_cost.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_denoiser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_encodeframe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_encodemb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_encodemv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_ethread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_extend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_firstpass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_lookahead.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_mbgraph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_mcomp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_noise_estimate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_picklpf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_pickmode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_quantize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_ratectrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_rd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_rdopt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_resize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_segmentation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_skin_detection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_speed_features.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_subexp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_svc_layercontext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_temporal_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_tokenize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\encoder\vp9_treewriter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\vp9_dx_iface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9\vp9_iface_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\x86\filter_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\alloccommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\blockd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\coefupdateprobs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\default_coef_probs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\entropy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\entropymode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\entropymv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\extend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\findnearmv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\header.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\invtrans.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\loopfilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\modecont.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\mv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\onyx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\onyxc_int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\onyxd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\postproc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\ppflags.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\quant_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\reconinter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\reconintra.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\reconintra4x4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\setupintrarecon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\swapyv12buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\systemdependent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\threading.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\treecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\common\vp8_entropymodedata.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\decoder\dboolhuff.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\decoder\decodemv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\decoder\decoderthreading.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\decoder\detokenize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\decoder\ec_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\decoder\error_concealment.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\decoder\onyxd_int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\decoder\treereader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\bitstream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\block.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\boolhuff.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\dct_value_cost.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\dct_value_tokens.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\defaultcoefcounts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\denoising.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\encodeframe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\encodeintra.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\encodemb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\encodemv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\firstpass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\lookahead.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\mcomp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\modecosts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\mr_dissim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\onyx_int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\pickinter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\quantize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\ratectrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\rdopt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\segmentation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\tokenize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8\encoder\treewriter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9_rtcd_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp9_rtcd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8_rtcd_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vp8_rtcd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_scale_rtcd_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_scale_rtcd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp_rtcd_x86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vpx_dsp_rtcd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <YASM Include="vpx_config_x86.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_config_x64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_ports\emms.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_ports\x86_abi_support.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\add_noise_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\avg_ssse3_x86_64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\deblock_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\fwd_txfm_ssse3_x86_64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\highbd_intrapred_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\highbd_sad_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\highbd_sad4d_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\highbd_subpel_variance_impl_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\highbd_variance_impl_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\intrapred_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\intrapred_ssse3.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\inv_txfm_ssse3_x86_64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\inv_wht_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\quantize_avx_x86_64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\quantize_ssse3_x86_64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\sad_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\sad_sse3.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\sad_sse4.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\sad_ssse3.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\sad4d_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\ssim_opt_x86_64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\subpel_variance_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\subtract_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\vpx_convolve_copy_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\vpx_high_subpixel_8t_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\vpx_high_subpixel_bilinear_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\vpx_subpixel_8t_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\vpx_subpixel_8t_ssse3.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\vpx_subpixel_bilinear_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vpx_dsp\x86\vpx_subpixel_bilinear_ssse3.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp9\common\x86\vp9_mfqe_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp9\encoder\x86\vp9_dct_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp9\encoder\x86\vp9_error_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp9\encoder\x86\vp9_highbd_error_avx.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp9\encoder\x86\vp9_highbd_error_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp9\encoder\x86\vp9_quantize_ssse3_x86_64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp9\encoder\x86\vp9_temporal_filter_apply_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\copy_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\copy_sse3.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\dequantize_mmx.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\idctllm_mmx.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\idctllm_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\iwalsh_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\loopfilter_block_sse2_x86_64.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\loopfilter_sse2_asm.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\mfqe_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\recon_mmx.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\recon_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\subpixel_mmx.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\subpixel_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\common\x86\subpixel_ssse3.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\encoder\x86\dct_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\encoder\x86\encodeopt.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\encoder\x86\fwalsh_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\encoder\x86\quantize_mmx.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="vp8\encoder\x86\temporal_filter_apply_sse2.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+    <YASM Include="third_party\x86inc\x86inc.asm">
+      <Filter>源文件</Filter>
+    </YASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="vpx_util\vpx_thread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_scale\generic\gen_scalers.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_scale\generic\vpx_scale.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_scale\generic\yv12config.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_scale\generic\yv12extend.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_scale\mips\dspr2\yv12extend_dspr2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_scale\vpx_scale_rtcd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_ports\arm_cpudetect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_mem\vpx_mem.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\avg_intrin_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\fwd_txfm_avx2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\fwd_txfm_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\highbd_loopfilter_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\highbd_quantize_intrin_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\highbd_variance_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\inv_txfm_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\loopfilter_avx2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\loopfilter_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\quantize_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\sad_avx2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\sad4d_avx2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\sum_squares_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\variance_avx2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\variance_impl_avx2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\variance_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\vpx_asm_stubs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\vpx_subpixel_8t_intrin_avx2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\x86\vpx_subpixel_8t_intrin_ssse3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\add_noise.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\avg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\bitreader.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\bitreader_buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\bitwriter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\bitwriter_buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\deblock.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\fastssim.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\fwd_txfm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\intrapred.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\inv_txfm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\loopfilter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\prob.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\psnr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\psnrhvs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\quantize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\sad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\ssim.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\subtract.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\sum_squares.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\variance.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\vpx_convolve.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_dsp\vpx_dsp_rtcd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx\src\svc_encodeframe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx\src\vpx_codec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx\src\vpx_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx\src\vpx_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx\src\vpx_image.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\x86\vp9_idct_intrin_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_alloccommon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_blockd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_common_data.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_debugmodes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_entropy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_entropymode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_entropymv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_frame_buffers.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_idct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_loopfilter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_mfqe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_mvref_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_postproc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_pred_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_quant_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_reconinter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_reconintra.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_rtcd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_scale.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_scan.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_seg_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_thread_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\common\vp9_tile_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\decoder\vp9_decodeframe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\decoder\vp9_decodemv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\decoder\vp9_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\decoder\vp9_detokenize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\decoder\vp9_dsubexp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\decoder\vp9_dthread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\x86\vp9_dct_intrin_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\x86\vp9_dct_ssse3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\x86\vp9_denoiser_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\x86\vp9_diamond_search_sad_avx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\x86\vp9_error_intrin_avx2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\x86\vp9_frame_scale_ssse3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\x86\vp9_highbd_block_error_intrin_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\x86\vp9_quantize_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_alt_ref_aq.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_aq_360.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_aq_complexity.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_aq_cyclicrefresh.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_aq_variance.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_bitstream.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_blockiness.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_context_tree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_cost.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_dct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_denoiser.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_encodeframe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_encodemb.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_encodemv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_ethread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_extend.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_firstpass.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_lookahead.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_mbgraph.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_mcomp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_noise_estimate.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_picklpf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_pickmode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_quantize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_ratectrl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_rd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_rdopt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_resize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_segmentation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_skin_detection.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_speed_features.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_subexp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_svc_layercontext.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_temporal_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_tokenize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\encoder\vp9_treewriter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\vp9_cx_iface.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp9\vp9_dx_iface.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\generic\systemdependent.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\x86\filter_x86.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\x86\idct_blk_mmx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\x86\idct_blk_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\x86\loopfilter_x86.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\x86\vp8_asm_stubs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\alloccommon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\blockd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\context.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\copy_c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\debugmodes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\dequantize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\entropy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\entropymode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\entropymv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\extend.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\findnearmv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\idct_blk.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\idctllm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\loopfilter_filters.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\mbpitch.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\mfqe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\modecont.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\postproc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\quant_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\reconinter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\reconintra.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\reconintra4x4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\rtcd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\setupintrarecon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\swapyv12buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\treecoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\common\vp8_loopfilter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\decoder\dboolhuff.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\decoder\decodeframe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\decoder\decodemv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\decoder\detokenize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\decoder\error_concealment.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\decoder\onyxd_if.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\decoder\threading.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\x86\denoising_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\x86\quantize_sse4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\x86\quantize_ssse3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\x86\vp8_enc_stubs_mmx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\x86\vp8_enc_stubs_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\x86\vp8_quantize_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\bitstream.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\boolhuff.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\dct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\denoising.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\encodeframe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\encodeintra.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\encodemb.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\encodemv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\ethreading.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\firstpass.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\lookahead.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\mcomp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\modecosts.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\mr_dissim.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\onyx_if.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\pickinter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\picklpf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\ratectrl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\rdopt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\segmentation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\temporal_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\tokenize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\treewriter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\encoder\vp8_quantize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\vp8_cx_iface.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vp8\vp8_dx_iface.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vpx_config.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

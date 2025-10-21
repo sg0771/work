@@ -1,0 +1,602 @@
+// Microsoft Visual C++ generated resource script.
+//
+#pragma code_page(65001)
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 非特定语言(系统默认值) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 187, 102
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 10, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,81,50,14
+    CTEXT           "TabViewDemo Application v1.0\n\n(c) Copyright 2002",IDC_STATIC,25,57,78,32
+    ICON            IDR_MAINFRAME,IDC_STATIC,55,26,18,20
+    GROUPBOX        "",IDC_STATIC,7,7,115,88
+END
+
+IDD_PLAYTEST DIALOGEX 0, 0, 441, 224
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "播放",IDC_START_STOP_PLAY,7,5,50,14
+    PUSHBUTTON      "暂停",IDC_PAUSE_RESUME_PLAY,59,5,50,14
+    CONTROL         "",IDC_SLIDER_PLAY,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,25,420,15
+    CONTROL         "LAV",IDC_CHECK_LAV_PLAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,8,29,10
+    CONTROL         "硬解码",IDC_CHECK_HW_PLAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,8,29,10
+    CTEXT           "00:00:00/00:00:00",IDC_TIME_PLAY,273,9,61,8
+    CONTROL         "",IDC_PIC_PLAY,"Static",SS_BLACKFRAME,7,44,421,172
+    COMBOBOX        IDC_COMBO_SPEED_PLAY,176,7,80,41,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MediaInfoTest DIALOGEX 0, 0, 503, 274
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "FILE",IDC_FILE_MI,7,7,50,14
+    EDITTEXT        IDC_FILENAME_MI,59,7,437,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MSG_MI,7,24,489,243,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL
+END
+
+IDD_ReadToHex DIALOGEX 0, 0, 503, 274
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "FILE",IDC_FILE_HEX,7,7,50,14
+    EDITTEXT        IDC_FILENAME_HEX,59,7,437,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MSG_HEX,7,24,489,243,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL
+END
+
+IDD_WXREP DIALOGEX 0, 0, 481, 168
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "选择输入文件",IDC_INPUT_REP,12,15,74,17
+    PUSHBUTTON      "设置输出文件",IDC_OUTPUT_REP,12,49,74,17
+    EDITTEXT        IDC_INPUT_NAME_REP,93,15,339,17,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OUTPUT_NAME_REP,92,52,339,17,ES_AUTOHSCROLL
+    PUSHBUTTON      "文件修复(快速转换)",IDC_REP,9,84,78,23
+    CONTROL         "",IDC_PROGRESS_REP,"msctls_progress32",WS_BORDER,7,122,425,18
+    PUSHBUTTON      "中断",IDC_BREAK_REP,354,84,78,23
+    PUSHBUTTON      "文件裁剪",IDC_CUT,178,83,78,23
+END
+
+IDD_CAMERA DIALOGEX 0, 0, 367, 227
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "打开",IDC_CAMERA,7,7,39,16
+    COMBOBOX        IDC_CB_NAME_CAMERA,50,9,63,80,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CB_DECS_CAMERA,119,9,64,80,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "设置背景",IDC_VB_CAMERA,190,7,60,14
+    PUSHBUTTON      "属性设置",IDC_SETTING_CAMERA,260,6,66,16
+    CONTROL         "",IDC_PIC_CAMERA,"Static",SS_BLACKFRAME,7,24,351,197
+END
+
+IDD_MPV DIALOGEX 0, 0, 401, 206
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "播放",IDC_START_STOP_PLAY,7,5,50,14
+    PUSHBUTTON      "暂停",IDC_PAUSE_RESUME_PLAY,59,5,50,14
+    CONTROL         "",IDC_SLIDER_PLAY,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,25,420,15
+    CONTROL         "LAV",IDC_CHECK_LAV_PLAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,8,29,10
+    CONTROL         "硬解码",IDC_CHECK_HW_PLAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,8,29,10
+    CTEXT           "00:00:00/00:00:00",IDC_TIME_PLAY,273,9,61,8
+    CONTROL         "",IDC_PIC_PLAY,"Static",SS_BLACKFRAME,7,44,421,172
+    COMBOBOX        IDC_COMBO_SPEED_PLAY,176,7,80,41,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MINIREC DIALOGEX 0, 0, 351, 140
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "设置输出文件夹",IDC_SET_DIR_REC,100,49,74,14
+    PUSHBUTTON      "打开输出文件夹",IDC_OPEN_DIR_REC,100,66,74,14
+    PUSHBUTTON      "启动录制\r\n",IDC_START_REC,100,83,74,46,BS_MULTILINE
+    COMBOBOX        IDC_CB_DISPLAY,41,15,134,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "显示器",IDC_STATIC,13,16,24,8
+    COMBOBOX        IDC_CB_SYSTEM,41,31,50,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "扬声器",IDC_STATIC,12,33,24,8
+    COMBOBOX        IDC_CB_MIC,41,46,50,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "麦克风",IDC_STATIC,11,47,24,8
+    COMBOBOX        IDC_CB_VIDEO_CODEC,42,75,50,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "视频编码",IDC_STATIC,12,76,30,8
+    COMBOBOX        IDC_CB_AUDIO_CODEC,42,89,50,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "音频编码",IDC_STATIC,12,90,30,8
+    CONTROL         "加速采集",IDC_CHECK_DXGI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,101,37,38,10
+    CONTROL         "硬编码",IDC_CHECK_HW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,142,37,32,10
+    COMBOBOX        IDC_CB_FPS,42,103,50,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "视频帧率",IDC_STATIC,10,105,30,8
+    COMBOBOX        IDC_CB_VB,42,117,50,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "视频码率",IDC_STATIC,11,118,29,8
+    COMBOBOX        IDC_CB_FORMAT,41,61,50,80,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "文件格式",IDC_STATIC,12,62,29,8
+    LTEXT           "Log",IDC_LOG_REC,180,16,159,112,WS_BORDER
+    GROUPBOX        "录屏测试(开始结束(ALT+C)\r\n暂停恢复(ALT+K))",IDC_STATIC,7,6,336,129,0,WS_EX_STATICEDGE
+END
+
+IDD_FFMPEG DIALOGEX 0, 0, 352, 182
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "File",IDC_INPUT_CMD,7,7,50,14
+    EDITTEXT        IDC_CMD_NAME_CMD,61,7,177,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PARAM_CMD,7,25,338,31,ES_AUTOHSCROLL
+    PUSHBUTTON      "Run",IDC_RUN_CMD,244,7,50,14
+    PUSHBUTTON      "Break",IDC_BREAK_CMD,295,7,50,14
+    EDITTEXT        IDC_LOG_CMD,7,60,338,115,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_Medialib DIALOGEX 0, 0, 627, 288
+STYLE DS_SETFONT | WS_CHILD
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST1,334,23,286,256,LBS_SORT | LBS_HASSTRINGS | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_PIC_MEDIALIB,"Static",SS_BLACKFRAME,7,44,322,203
+    PUSHBUTTON      "加载文件",IDC_ADD,333,7,50,14
+    PUSHBUTTON      "删除文件",IDC_DEL,385,7,50,14
+    EDITTEXT        IDC_EDIT_WIDTH,39,7,40,14,ES_AUTOHSCROLL
+    LTEXT           "宽度",IDC_STATIC,13,10,18,8
+    LTEXT           "高度",IDC_STATIC,88,10,18,8
+    EDITTEXT        IDC_EDIT_HEIGHT,108,7,40,14,ES_AUTOHSCROLL
+    LTEXT           "帧率",IDC_STATIC,155,10,18,8
+    EDITTEXT        IDC_EDIT_FPS,182,7,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "播放",IDC_PLAY_START_STOP,10,250,50,14
+    PUSHBUTTON      "暂停",IDC_PLAY_PAUSE_RESUME,62,250,50,14
+    PUSHBUTTON      "导出",IDC_EXPORT,439,7,50,14
+    PUSHBUTTON      "中断导出",IDC_EXPORT_BREAK,490,7,50,14
+    PUSHBUTTON      "导出目录",IDC_EXPORT_DIR,7,24,50,14
+    EDITTEXT        IDC_EDIT_DIR,59,24,270,14,ES_AUTOHSCROLL
+    CONTROL         "使用硬解码",IDC_HW_DEC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,117,252,44,10
+    CONTROL         "使用硬编码",IDC_HW_ENC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,548,9,59,10
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,266,251,15
+    CTEXT           "00:00:00:/00:00:00",IDC_LOG_TIME,266,268,60,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_PLAYTEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 434
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 217
+    END
+
+    IDD_MediaInfoTest, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 496
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_ReadToHex, DIALOG
+    BEGIN
+    END
+
+    IDD_WXREP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 474
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_CAMERA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_MPV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 385
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+
+    IDD_MINIREC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_FFMPEG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_Medialib, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 620
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 281
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_MediaInfoTest AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PLAYTEST AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_WXREP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CAMERA AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MPV AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MINIREC AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FFMPEG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ReadToHex AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_Medialib AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\my.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2025,10,13,14
+ PRODUCTVERSION 2025,10,13,14
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080004b0"
+        BEGIN
+            VALUE "FileDescription", "My WXMedia Demo"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TEST1"
+            VALUE "LegalCopyright", "Copyright 2002"
+            VALUE "OriginalFilename", "TabViewDemo.exe"
+            VALUE "ProductName", "TabViewDemo Module"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x800, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit\tAlt-F4",               ID_APP_EXIT
+    END
+    POPUP "&Demo"
+    BEGIN
+        MENUITEM "Add Demo Tab &1\tCtrl+1",     ID_DEMO_ADDTAB
+        MENUITEM "Add Demo Tab &2\tCtrl+2",     ID_DEMO_ADDTAB2
+        MENUITEM SEPARATOR
+        MENUITEM "&Remove Tab\tCtrl+R",         ID_DEMO_REMOVETAB
+        MENUITEM "Remove &All Tabs\tCtrl+A",    ID_DEMO_REMOVEALLTABS
+        MENUITEM SEPARATOR
+        MENUITEM "Styles...\tCtrl+S",           ID_DEMO_STYLES
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About TabViewDemo...",       ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "1",            ID_DEMO_ADDTAB,         VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_DEMO_ADDTAB2,        VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_DEMO_REMOVEALLTABS,  VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_DEMO_REMOVETAB,      VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_DEMO_STYLES,         VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_DEMO_ADDTAB,         VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_DEMO_ADDTAB2,        VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+#endif    // 非特定语言(系统默认值) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TABBITMAP           BITMAP                  "res\\tab.bmp"
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "TabViewDemo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+    ATL_IDS_IDLEMESSAGE2    "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_DEMO_ADDTAB          "Add a demonstration tab"
+    ID_DEMO_ADDTAB2         "Add a demonstration tab"
+    ID_DEMO_REMOVETAB       "Remove the currently selected tab"
+    ID_DEMO_REMOVEALLTABS   "Remove all of the tabs"
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lzma-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\bcj.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\block.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\check.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\container.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\delta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\hardware.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\index.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\index_hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\lzma12.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\stream_flags.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma\vli.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\alone_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block_buffer_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\check.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crc_macros.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crc32_table_be.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crc32_table_le.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crc64_table_be.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crc64_table_le.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\delta_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\delta_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\delta_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\delta_private.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\easy_preset.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fastpos.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lz_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lz_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lz_encoder_hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lz_encoder_hash_table.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzma_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzma_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzma_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzma_encoder_private.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzma2_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzma2_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memcmplen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mythread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\outqueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\price.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\range_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\range_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\range_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\simple_coder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\simple_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\simple_encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\simple_private.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stream_decoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stream_flags_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sysdefs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_cpucores.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_exit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_gettext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_integer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_mbstr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_open_stdxxx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_physmem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tuklib_progname.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lzma.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\alone_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\alone_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\arm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\armthumb.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\auto_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block_buffer_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block_buffer_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block_header_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block_header_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block_util.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\check.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crc32_fast.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crc32_table.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crc64_fast.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crc64_table.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\delta_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\delta_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\delta_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\easy_buffer_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\easy_decoder_memusage.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\easy_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\easy_encoder_memusage.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\easy_preset.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fastpos_table.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_buffer_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_buffer_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_flags_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_flags_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hardware_cputhreads.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hardware_physmem.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ia64.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index_hash.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lz_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lz_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lz_encoder_mf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzma_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzma_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzma_encoder_optimum_fast.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzma_encoder_optimum_normal.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzma_encoder_presets.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzma2_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzma2_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\outqueue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\powerpc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\price_table.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sha256.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simple_coder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simple_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simple_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sparc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream_buffer_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream_buffer_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream_encoder_mt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream_flags_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream_flags_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream_flags_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tuklib_cpucores.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tuklib_exit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tuklib_mbstr_fw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tuklib_mbstr_width.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tuklib_open_stdxxx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tuklib_physmem.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tuklib_progname.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vli_decoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vli_encoder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vli_size.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

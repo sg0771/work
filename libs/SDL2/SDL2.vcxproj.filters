@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\atomic\SDL_atomic.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\atomic\SDL_spinlock.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\directsound\SDL_directsound.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\SDL_audio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\SDL_audiocvt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\SDL_audiodev.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\SDL_audiotypecvt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\SDL_mixer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audio\SDL_wave.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\windows\SDL_windows.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\windows\SDL_xinput.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cpuinfo\SDL_cpuinfo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_clipboardevents.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_dropevents.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_events.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_gesture.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_keyboard.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_mouse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_quit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_touch.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\events\SDL_windowevents.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_bmp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_gif.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_jpg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_lbm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_pcx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_png.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_pnm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_svg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_tga.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_tif.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_webp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_xcf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_xpm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_xv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\IMG_xxx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ext\SDL_ttf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file\SDL_rwops.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filesystem\windows\SDL_sysfilesystem_windows.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\e_atan2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\e_log.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\e_pow.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\e_rem_pio2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\e_sqrt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\k_cos.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\k_rem_pio2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\k_sin.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\k_tan.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\s_atan.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\s_copysign.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\s_cos.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\s_fabs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\s_floor.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\s_scalbn.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\s_sin.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libm\s_tan.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loadso\windows\SDL_sysloadso_windows.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\power\windows\SDL_syspower.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\power\SDL_power.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\direct3d\SDL_render_d3d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\software\SDL_blendfillrect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\software\SDL_blendline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\software\SDL_blendpoint.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\software\SDL_drawline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\software\SDL_drawpoint.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\software\SDL_render_sw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\software\SDL_rotate.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\SDL_d3dmath.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\SDL_render.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\SDL_yuv_mmx.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\SDL_yuv_sw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdlib\SDL_getenv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdlib\SDL_iconv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdlib\SDL_malloc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdlib\SDL_qsort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdlib\SDL_stdlib.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdlib\SDL_string.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread\generic\SDL_syscond.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread\windows\SDL_sysmutex_windows.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread\windows\SDL_syssem_windows.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread\windows\SDL_systhread_windows.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread\windows\SDL_systls_windows.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread\SDL_thread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timer\windows\SDL_systimer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timer\SDL_timer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\dummy\SDL_nullevents.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\dummy\SDL_nullframebuffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\dummy\SDL_nullvideo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsclipboard.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsevents.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsframebuffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowskeyboard.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsmessagebox.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsmodes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsmouse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsopengl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsopengles.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsshape.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowsvideo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\windows\SDL_windowswindow.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_blit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_blit_0.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_blit_1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_blit_A.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_blit_auto.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_blit_copy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_blit_N.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_blit_slow.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_bmp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_clipboard.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_egl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_fillrect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_pixels.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_rect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_RLEaccel.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_shape.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_stretch.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_surface.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\video\SDL_video.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDL.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDL_assert.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDL_error.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDL_hints.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDL_log.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\audio\directsound\SDL_directsound.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\SDL_audio_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\SDL_audiodev_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\SDL_sysaudio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audio\SDL_wave.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\windows\SDL_directx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\windows\SDL_windows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\windows\SDL_xinput.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\blank_cursor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\default_cursor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\scancodes_darwin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\scancodes_linux.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\scancodes_windows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\scancodes_xfree86.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_clipboardevents_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_dropevents_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_events_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_gesture_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_keyboard_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_mouse_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_sysevents.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_touch_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\SDL_windowevents_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ext\miniz.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ext\nanosvg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ext\nanosvgrast.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libm\math_libm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libm\math_private.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\software\SDL_blendfillrect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\software\SDL_blendline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\software\SDL_blendpoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\software\SDL_draw.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\software\SDL_drawline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\software\SDL_drawpoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\software\SDL_render_sw_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\software\SDL_rotate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\mmx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\SDL_d3dmath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\SDL_sysrender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\SDL_yuv_sw_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread\windows\SDL_systhread_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread\SDL_systhread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread\SDL_thread_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timer\SDL_timer_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\dummy\SDL_nullevents_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\dummy\SDL_nullframebuffer_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\dummy\SDL_nullvideo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_msctf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_vkeys.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsclipboard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsevents.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsframebuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowskeyboard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsmessagebox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsmodes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsmouse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsopengl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsopengles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsshape.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowsvideo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\SDL_windowswindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\windows\wmmsg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_blit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_blit_auto.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_blit_copy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_blit_slow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_egl_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_pixels_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_rect_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_RLEaccel_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_shape_internals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\video\SDL_sysvideo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SDL_assert_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SDL_error_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SDL_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="begin_code.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="close_code.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_assert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_atomic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_audio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_bits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_blendmode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_clipboard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_config_windows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_copying.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_cpuinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_egl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_endian.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_events.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_filesystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_gamecontroller.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_gesture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_haptic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_hints.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_joystick.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_keyboard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_keycode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_loadso.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_main.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_messagebox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_mouse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_mutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_name.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_pixels.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_power.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_quit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_rect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_render.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_revision.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_rwops.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_scancode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_shape.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_stdinc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_surface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_syswm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_touch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_ttf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_video.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

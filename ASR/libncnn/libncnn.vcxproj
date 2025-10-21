@@ -1,0 +1,1497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="allocator.h" />
+    <ClInclude Include="benchmark.h" />
+    <ClInclude Include="blob.h" />
+    <ClInclude Include="command.h" />
+    <ClInclude Include="cpu.h" />
+    <ClInclude Include="c_api.h" />
+    <ClInclude Include="datareader.h" />
+    <ClInclude Include="expression.h" />
+    <ClInclude Include="glslang\Include\arrays.h" />
+    <ClInclude Include="glslang\Include\BaseTypes.h" />
+    <ClInclude Include="glslang\Include\Common.h" />
+    <ClInclude Include="glslang\Include\ConstantUnion.h" />
+    <ClInclude Include="glslang\Include\glslang_c_interface.h" />
+    <ClInclude Include="glslang\Include\glslang_c_shader_types.h" />
+    <ClInclude Include="glslang\Include\InfoSink.h" />
+    <ClInclude Include="glslang\Include\InitializeGlobals.h" />
+    <ClInclude Include="glslang\Include\intermediate.h" />
+    <ClInclude Include="glslang\Include\PoolAlloc.h" />
+    <ClInclude Include="glslang\Include\ResourceLimits.h" />
+    <ClInclude Include="glslang\Include\ShHandle.h" />
+    <ClInclude Include="glslang\Include\SpirvIntrinsics.h" />
+    <ClInclude Include="glslang\Include\Types.h" />
+    <ClInclude Include="glslang\Include\visibility.h" />
+    <ClInclude Include="glslang\MachineIndependent\attribute.h" />
+    <ClInclude Include="glslang\MachineIndependent\glslang_tab.cpp.h" />
+    <ClInclude Include="glslang\MachineIndependent\gl_types.h" />
+    <ClInclude Include="glslang\MachineIndependent\Initialize.h" />
+    <ClInclude Include="glslang\MachineIndependent\iomapper.h" />
+    <ClInclude Include="glslang\MachineIndependent\LiveTraverser.h" />
+    <ClInclude Include="glslang\MachineIndependent\localintermediate.h" />
+    <ClInclude Include="glslang\MachineIndependent\ParseHelper.h" />
+    <ClInclude Include="glslang\MachineIndependent\parseVersions.h" />
+    <ClInclude Include="glslang\MachineIndependent\pch.h" />
+    <ClInclude Include="glslang\MachineIndependent\preprocessor\PpContext.h" />
+    <ClInclude Include="glslang\MachineIndependent\preprocessor\PpTokens.h" />
+    <ClInclude Include="glslang\MachineIndependent\propagateNoContraction.h" />
+    <ClInclude Include="glslang\MachineIndependent\reflection.h" />
+    <ClInclude Include="glslang\MachineIndependent\RemoveTree.h" />
+    <ClInclude Include="glslang\MachineIndependent\Scan.h" />
+    <ClInclude Include="glslang\MachineIndependent\ScanContext.h" />
+    <ClInclude Include="glslang\MachineIndependent\SymbolTable.h" />
+    <ClInclude Include="glslang\MachineIndependent\Versions.h" />
+    <ClInclude Include="glslang\OSDependent\osinclude.h" />
+    <ClInclude Include="glslang\Public\ShaderLang.h" />
+    <ClInclude Include="gpu.h" />
+    <ClInclude Include="layer.h" />
+    <ClInclude Include="layer\absval.h" />
+    <ClInclude Include="layer\argmax.h" />
+    <ClInclude Include="layer\batchnorm.h" />
+    <ClInclude Include="layer\bias.h" />
+    <ClInclude Include="layer\binaryop.h" />
+    <ClInclude Include="layer\bnll.h" />
+    <ClInclude Include="layer\cast.h" />
+    <ClInclude Include="layer\celu.h" />
+    <ClInclude Include="layer\clip.h" />
+    <ClInclude Include="layer\concat.h" />
+    <ClInclude Include="layer\convolution.h" />
+    <ClInclude Include="layer\convolution1d.h" />
+    <ClInclude Include="layer\convolution3d.h" />
+    <ClInclude Include="layer\convolutiondepthwise.h" />
+    <ClInclude Include="layer\convolutiondepthwise1d.h" />
+    <ClInclude Include="layer\convolutiondepthwise3d.h" />
+    <ClInclude Include="layer\copyto.h" />
+    <ClInclude Include="layer\crop.h" />
+    <ClInclude Include="layer\cumulativesum.h" />
+    <ClInclude Include="layer\deconvolution.h" />
+    <ClInclude Include="layer\deconvolution1d.h" />
+    <ClInclude Include="layer\deconvolution3d.h" />
+    <ClInclude Include="layer\deconvolutiondepthwise.h" />
+    <ClInclude Include="layer\deconvolutiondepthwise1d.h" />
+    <ClInclude Include="layer\deconvolutiondepthwise3d.h" />
+    <ClInclude Include="layer\deepcopy.h" />
+    <ClInclude Include="layer\deformableconv2d.h" />
+    <ClInclude Include="layer\dequantize.h" />
+    <ClInclude Include="layer\detectionoutput.h" />
+    <ClInclude Include="layer\diag.h" />
+    <ClInclude Include="layer\dropout.h" />
+    <ClInclude Include="layer\einsum.h" />
+    <ClInclude Include="layer\eltwise.h" />
+    <ClInclude Include="layer\elu.h" />
+    <ClInclude Include="layer\embed.h" />
+    <ClInclude Include="layer\erf.h" />
+    <ClInclude Include="layer\exp.h" />
+    <ClInclude Include="layer\expanddims.h" />
+    <ClInclude Include="layer\flatten.h" />
+    <ClInclude Include="layer\flip.h" />
+    <ClInclude Include="layer\fold.h" />
+    <ClInclude Include="layer\fused_activation.h" />
+    <ClInclude Include="layer\gelu.h" />
+    <ClInclude Include="layer\gemm.h" />
+    <ClInclude Include="layer\glu.h" />
+    <ClInclude Include="layer\gridsample.h" />
+    <ClInclude Include="layer\groupnorm.h" />
+    <ClInclude Include="layer\gru.h" />
+    <ClInclude Include="layer\hardsigmoid.h" />
+    <ClInclude Include="layer\hardswish.h" />
+    <ClInclude Include="layer\innerproduct.h" />
+    <ClInclude Include="layer\input.h" />
+    <ClInclude Include="layer\instancenorm.h" />
+    <ClInclude Include="layer\interp.h" />
+    <ClInclude Include="layer\inversespectrogram.h" />
+    <ClInclude Include="layer\layernorm.h" />
+    <ClInclude Include="layer\log.h" />
+    <ClInclude Include="layer\lrn.h" />
+    <ClInclude Include="layer\lstm.h" />
+    <ClInclude Include="layer\matmul.h" />
+    <ClInclude Include="layer\memorydata.h" />
+    <ClInclude Include="layer\mish.h" />
+    <ClInclude Include="layer\multiheadattention.h" />
+    <ClInclude Include="layer\mvn.h" />
+    <ClInclude Include="layer\noop.h" />
+    <ClInclude Include="layer\normalize.h" />
+    <ClInclude Include="layer\packing.h" />
+    <ClInclude Include="layer\padding.h" />
+    <ClInclude Include="layer\permute.h" />
+    <ClInclude Include="layer\pixelshuffle.h" />
+    <ClInclude Include="layer\pooling.h" />
+    <ClInclude Include="layer\pooling1d.h" />
+    <ClInclude Include="layer\pooling3d.h" />
+    <ClInclude Include="layer\power.h" />
+    <ClInclude Include="layer\prelu.h" />
+    <ClInclude Include="layer\priorbox.h" />
+    <ClInclude Include="layer\proposal.h" />
+    <ClInclude Include="layer\psroipooling.h" />
+    <ClInclude Include="layer\quantize.h" />
+    <ClInclude Include="layer\reduction.h" />
+    <ClInclude Include="layer\relu.h" />
+    <ClInclude Include="layer\reorg.h" />
+    <ClInclude Include="layer\requantize.h" />
+    <ClInclude Include="layer\reshape.h" />
+    <ClInclude Include="layer\rmsnorm.h" />
+    <ClInclude Include="layer\rnn.h" />
+    <ClInclude Include="layer\roialign.h" />
+    <ClInclude Include="layer\roipooling.h" />
+    <ClInclude Include="layer\scale.h" />
+    <ClInclude Include="layer\selu.h" />
+    <ClInclude Include="layer\shrink.h" />
+    <ClInclude Include="layer\shufflechannel.h" />
+    <ClInclude Include="layer\sigmoid.h" />
+    <ClInclude Include="layer\slice.h" />
+    <ClInclude Include="layer\softmax.h" />
+    <ClInclude Include="layer\softplus.h" />
+    <ClInclude Include="layer\spectrogram.h" />
+    <ClInclude Include="layer\split.h" />
+    <ClInclude Include="layer\spp.h" />
+    <ClInclude Include="layer\squeeze.h" />
+    <ClInclude Include="layer\statisticspooling.h" />
+    <ClInclude Include="layer\swish.h" />
+    <ClInclude Include="layer\tanh.h" />
+    <ClInclude Include="layer\threshold.h" />
+    <ClInclude Include="layer\tile.h" />
+    <ClInclude Include="layer\unaryop.h" />
+    <ClInclude Include="layer\unfold.h" />
+    <ClInclude Include="layer\vulkan\absval_vulkan.h" />
+    <ClInclude Include="layer\vulkan\batchnorm_vulkan.h" />
+    <ClInclude Include="layer\vulkan\binaryop_vulkan.h" />
+    <ClInclude Include="layer\vulkan\cast_vulkan.h" />
+    <ClInclude Include="layer\vulkan\celu_vulkan.h" />
+    <ClInclude Include="layer\vulkan\clip_vulkan.h" />
+    <ClInclude Include="layer\vulkan\concat_vulkan.h" />
+    <ClInclude Include="layer\vulkan\convolution1d_vulkan.h" />
+    <ClInclude Include="layer\vulkan\convolutiondepthwise_vulkan.h" />
+    <ClInclude Include="layer\vulkan\convolution_vulkan.h" />
+    <ClInclude Include="layer\vulkan\crop_vulkan.h" />
+    <ClInclude Include="layer\vulkan\deconvolutiondepthwise_vulkan.h" />
+    <ClInclude Include="layer\vulkan\deconvolution_vulkan.h" />
+    <ClInclude Include="layer\vulkan\deepcopy_vulkan.h" />
+    <ClInclude Include="layer\vulkan\dequantize_vulkan.h" />
+    <ClInclude Include="layer\vulkan\dropout_vulkan.h" />
+    <ClInclude Include="layer\vulkan\eltwise_vulkan.h" />
+    <ClInclude Include="layer\vulkan\elu_vulkan.h" />
+    <ClInclude Include="layer\vulkan\erf_vulkan.h" />
+    <ClInclude Include="layer\vulkan\flatten_vulkan.h" />
+    <ClInclude Include="layer\vulkan\gelu_vulkan.h" />
+    <ClInclude Include="layer\vulkan\gemm_vulkan.h" />
+    <ClInclude Include="layer\vulkan\hardsigmoid_vulkan.h" />
+    <ClInclude Include="layer\vulkan\hardswish_vulkan.h" />
+    <ClInclude Include="layer\vulkan\innerproduct_vulkan.h" />
+    <ClInclude Include="layer\vulkan\instancenorm_vulkan.h" />
+    <ClInclude Include="layer\vulkan\interp_vulkan.h" />
+    <ClInclude Include="layer\vulkan\layernorm_vulkan.h" />
+    <ClInclude Include="layer\vulkan\lrn_vulkan.h" />
+    <ClInclude Include="layer\vulkan\memorydata_vulkan.h" />
+    <ClInclude Include="layer\vulkan\mish_vulkan.h" />
+    <ClInclude Include="layer\vulkan\multiheadattention_vulkan.h" />
+    <ClInclude Include="layer\vulkan\noop_vulkan.h" />
+    <ClInclude Include="layer\vulkan\normalize_vulkan.h" />
+    <ClInclude Include="layer\vulkan\packing_vulkan.h" />
+    <ClInclude Include="layer\vulkan\padding_vulkan.h" />
+    <ClInclude Include="layer\vulkan\permute_vulkan.h" />
+    <ClInclude Include="layer\vulkan\pixelshuffle_vulkan.h" />
+    <ClInclude Include="layer\vulkan\pooling_vulkan.h" />
+    <ClInclude Include="layer\vulkan\prelu_vulkan.h" />
+    <ClInclude Include="layer\vulkan\priorbox_vulkan.h" />
+    <ClInclude Include="layer\vulkan\quantize_vulkan.h" />
+    <ClInclude Include="layer\vulkan\relu_vulkan.h" />
+    <ClInclude Include="layer\vulkan\reorg_vulkan.h" />
+    <ClInclude Include="layer\vulkan\requantize_vulkan.h" />
+    <ClInclude Include="layer\vulkan\reshape_vulkan.h" />
+    <ClInclude Include="layer\vulkan\scale_vulkan.h" />
+    <ClInclude Include="layer\vulkan\shader\absval.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\batchnorm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\batchnorm_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\binaryop.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\binaryop_broadcast.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\binaryop_broadcast_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\binaryop_broadcast_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\binaryop_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\cast_fp16_to_fp32.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\cast_fp16_to_fp32_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\cast_fp32_to_fp16.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\cast_fp32_to_fp16_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\celu.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\clip.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\concat.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\concat_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\concat_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convert_ycbcr.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution1d.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution1d_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution1d_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution1d_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_group.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_group_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_group_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_group_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolutiondepthwise_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_1x1s1d1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_1x1s1d1_cm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd23_transform_input.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd23_transform_output.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd43_transform_input.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd43_transform_output.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_3x3s1d1_winograd_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_gemm_cm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack1to4_1x1s1d1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack1to4_3x3s1d1_winograd_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack1to4_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4to1_1x1s1d1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4to1_3x3s1d1_winograd_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4to1_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_1x1s1d1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd23_transform_input.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd23_transform_output.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd43_transform_input.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd43_transform_output.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_3x3s1d1_winograd_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_pack4_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\convolution_winograd_gemm_cm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\crop.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\crop_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\crop_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\crop_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_group.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_group_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_group_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_group_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolutiondepthwise_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_col2im.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_gemm_cm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack1to4_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4to1_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4_col2im.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deconvolution_pack4_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deepcopy.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\deepcopy_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\dequantize.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\dequantize_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\dropout.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\eltwise.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\eltwise_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\elu.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\erf.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\flatten.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\flatten_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\flatten_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\gelu.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\gemm_cm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\hardsigmoid.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\hardswish.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_gemm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_gemm_wp1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_gemm_wp4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_gemm_wp4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_reduce_sum8.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_reduce_sum8_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_sum8.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_sum8_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_sum8_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\innerproduct_sum8_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_coeffs.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_coeffs_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_norm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_norm_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_mean.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_mean_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_sum4_fp16_to_fp32.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_sum4_fp16_to_fp32_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_sum4_fp32.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_reduce_sum4_fp32_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_sub_mean_square.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\instancenorm_sub_mean_square_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\interp.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\interp_bicubic.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\interp_bicubic_coeffs.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\interp_bicubic_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\interp_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_coeffs.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_coeffs_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_norm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_norm_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_mean.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_mean_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_sum4_fp16_to_fp32.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_sum4_fp16_to_fp32_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_sum4_fp32.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_reduce_sum4_fp32_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_sub_mean_square.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\layernorm_sub_mean_square_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\lrn_norm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\lrn_norm_across_channel_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\lrn_norm_within_channel_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\lrn_square_pad.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\lrn_square_pad_across_channel_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\lrn_square_pad_within_channel_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\mish.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qkv_cross.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qkv_cross_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qkv_cross_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qkv_cross_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qk_cross.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qk_cross_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qk_cross_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\multiheadattention_qk_cross_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\normalize_coeffs.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\normalize_coeffs_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\normalize_norm.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\normalize_norm_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\normalize_reduce_sum4_fp16_to_fp32.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\normalize_reduce_sum4_fp16_to_fp32_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\normalize_reduce_sum4_fp32.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\normalize_reduce_sum4_fp32_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\packing.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\packing_int8.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\packing_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\packing_pack1to4_int8.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\packing_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\packing_pack4to1_int8.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\padding.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\padding_3d.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\padding_3d_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\padding_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\padding_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\padding_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\permute.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\permute_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\permute_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\permute_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pixelshuffle.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pixelshuffle_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pixelshuffle_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_adaptive.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_adaptive_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_first.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_first_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_last.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_last_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_max_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_first.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_first_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_last.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_last_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_global_reduce_sum_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\pooling_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\prelu.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\prelu_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\priorbox.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\priorbox_mxnet.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\quantize.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\quantize_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\relu.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\reorg.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\reorg_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\reorg_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\requantize.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\requantize_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\reshape.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\reshape_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\reshape_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\reshape_pack4to1.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\scale.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\scale_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\shufflechannel.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\shufflechannel_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\sigmoid.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\slice.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\slice_pack1to4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\slice_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\softmax_div_sum.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\softmax_div_sum_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\softmax_exp_sub_max.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\softmax_exp_sub_max_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\softmax_reduce_max.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\softmax_reduce_max_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\softmax_reduce_sum.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\softmax_reduce_sum_pack4.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\swish.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\tanh.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\unaryop.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shader\vulkan_activation.comp.hex.h" />
+    <ClInclude Include="layer\vulkan\shufflechannel_vulkan.h" />
+    <ClInclude Include="layer\vulkan\sigmoid_vulkan.h" />
+    <ClInclude Include="layer\vulkan\slice_vulkan.h" />
+    <ClInclude Include="layer\vulkan\softmax_vulkan.h" />
+    <ClInclude Include="layer\vulkan\split_vulkan.h" />
+    <ClInclude Include="layer\vulkan\swish_vulkan.h" />
+    <ClInclude Include="layer\vulkan\tanh_vulkan.h" />
+    <ClInclude Include="layer\vulkan\unaryop_vulkan.h" />
+    <ClInclude Include="layer\x86\avx512_mathfun.h" />
+    <ClInclude Include="layer\x86\avx_mathfun.h" />
+    <ClInclude Include="layer\x86\batchnorm_x86.h" />
+    <ClInclude Include="layer\x86\batchnorm_x86_avx.h" />
+    <ClInclude Include="layer\x86\batchnorm_x86_avx512.h" />
+    <ClInclude Include="layer\x86\batchnorm_x86_fma.h" />
+    <ClInclude Include="layer\x86\bias_x86.h" />
+    <ClInclude Include="layer\x86\bias_x86_avx.h" />
+    <ClInclude Include="layer\x86\bias_x86_avx512.h" />
+    <ClInclude Include="layer\x86\bias_x86_fma.h" />
+    <ClInclude Include="layer\x86\binaryop_x86.h" />
+    <ClInclude Include="layer\x86\binaryop_x86_avx.h" />
+    <ClInclude Include="layer\x86\binaryop_x86_avx512.h" />
+    <ClInclude Include="layer\x86\binaryop_x86_fma.h" />
+    <ClInclude Include="layer\x86\bnll_x86.h" />
+    <ClInclude Include="layer\x86\bnll_x86_avx.h" />
+    <ClInclude Include="layer\x86\bnll_x86_avx512.h" />
+    <ClInclude Include="layer\x86\bnll_x86_fma.h" />
+    <ClInclude Include="layer\x86\cast_bf16.h" />
+    <ClInclude Include="layer\x86\cast_fp16.h" />
+    <ClInclude Include="layer\x86\cast_x86.h" />
+    <ClInclude Include="layer\x86\cast_x86_avx.h" />
+    <ClInclude Include="layer\x86\cast_x86_avx512.h" />
+    <ClInclude Include="layer\x86\cast_x86_fma.h" />
+    <ClInclude Include="layer\x86\clip_x86.h" />
+    <ClInclude Include="layer\x86\clip_x86_avx.h" />
+    <ClInclude Include="layer\x86\clip_x86_avx512.h" />
+    <ClInclude Include="layer\x86\clip_x86_fma.h" />
+    <ClInclude Include="layer\x86\concat_x86.h" />
+    <ClInclude Include="layer\x86\concat_x86_avx.h" />
+    <ClInclude Include="layer\x86\concat_x86_avx512.h" />
+    <ClInclude Include="layer\x86\concat_x86_fma.h" />
+    <ClInclude Include="layer\x86\convolution1d_packed.h" />
+    <ClInclude Include="layer\x86\convolution1d_x86.h" />
+    <ClInclude Include="layer\x86\convolution1d_x86_avx.h" />
+    <ClInclude Include="layer\x86\convolution1d_x86_avx512.h" />
+    <ClInclude Include="layer\x86\convolution1d_x86_fma.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3_int8.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3_pack16.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3_pack4.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_3x3_pack8.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_5x5_pack16.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_5x5_pack4.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_5x5_pack8.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_x86.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_x86_avx.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_x86_avx512.h" />
+    <ClInclude Include="layer\x86\convolutiondepthwise_x86_fma.h" />
+    <ClInclude Include="layer\x86\convolution_1x1.h" />
+    <ClInclude Include="layer\x86\convolution_2x2_pack8.h" />
+    <ClInclude Include="layer\x86\convolution_3x3.h" />
+    <ClInclude Include="layer\x86\convolution_3x3_int8.h" />
+    <ClInclude Include="layer\x86\convolution_3x3_pack16to1.h" />
+    <ClInclude Include="layer\x86\convolution_3x3_pack1to4.h" />
+    <ClInclude Include="layer\x86\convolution_3x3_pack1to8.h" />
+    <ClInclude Include="layer\x86\convolution_3x3_pack8.h" />
+    <ClInclude Include="layer\x86\convolution_3x3_pack8to1.h" />
+    <ClInclude Include="layer\x86\convolution_3x3_winograd.h" />
+    <ClInclude Include="layer\x86\convolution_3x3_winograd_int8.h" />
+    <ClInclude Include="layer\x86\convolution_5x5.h" />
+    <ClInclude Include="layer\x86\convolution_im2col_gemm.h" />
+    <ClInclude Include="layer\x86\convolution_im2col_gemm_int8.h" />
+    <ClInclude Include="layer\x86\convolution_packed.h" />
+    <ClInclude Include="layer\x86\convolution_packed_int8.h" />
+    <ClInclude Include="layer\x86\convolution_x86.h" />
+    <ClInclude Include="layer\x86\convolution_x86_avx.h" />
+    <ClInclude Include="layer\x86\convolution_x86_avx512.h" />
+    <ClInclude Include="layer\x86\convolution_x86_fma.h" />
+    <ClInclude Include="layer\x86\crop_x86.h" />
+    <ClInclude Include="layer\x86\crop_x86_avx.h" />
+    <ClInclude Include="layer\x86\crop_x86_avx512.h" />
+    <ClInclude Include="layer\x86\crop_x86_fma.h" />
+    <ClInclude Include="layer\x86\deconvolutiondepthwise_x86.h" />
+    <ClInclude Include="layer\x86\deconvolutiondepthwise_x86_avx.h" />
+    <ClInclude Include="layer\x86\deconvolutiondepthwise_x86_avx512.h" />
+    <ClInclude Include="layer\x86\deconvolutiondepthwise_x86_fma.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack16.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack16to1.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack16to4.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack16to8.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack1to16.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack1to4.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack1to8.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack4.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack4to1.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack4to16.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack4to8.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack8.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack8to1.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack8to16.h" />
+    <ClInclude Include="layer\x86\deconvolution_pack8to4.h" />
+    <ClInclude Include="layer\x86\deconvolution_x86.h" />
+    <ClInclude Include="layer\x86\deconvolution_x86_avx.h" />
+    <ClInclude Include="layer\x86\deconvolution_x86_avx512.h" />
+    <ClInclude Include="layer\x86\deconvolution_x86_fma.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack16.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack16to1.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack16to4.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack16to8.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack1to16.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack1to4.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack1to8.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack4.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack4to1.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack4to16.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack4to8.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack8.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack8to1.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack8to16.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_pack8to4.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_x86.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_x86_avx.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_x86_avx512.h" />
+    <ClInclude Include="layer\x86\deformableconv2d_x86_fma.h" />
+    <ClInclude Include="layer\x86\dequantize_x86.h" />
+    <ClInclude Include="layer\x86\dequantize_x86_avx.h" />
+    <ClInclude Include="layer\x86\dequantize_x86_avx512.h" />
+    <ClInclude Include="layer\x86\dequantize_x86_fma.h" />
+    <ClInclude Include="layer\x86\dropout_x86.h" />
+    <ClInclude Include="layer\x86\dropout_x86_avx.h" />
+    <ClInclude Include="layer\x86\dropout_x86_avx512.h" />
+    <ClInclude Include="layer\x86\dropout_x86_fma.h" />
+    <ClInclude Include="layer\x86\eltwise_x86.h" />
+    <ClInclude Include="layer\x86\eltwise_x86_avx.h" />
+    <ClInclude Include="layer\x86\eltwise_x86_avx512.h" />
+    <ClInclude Include="layer\x86\eltwise_x86_fma.h" />
+    <ClInclude Include="layer\x86\elu_x86.h" />
+    <ClInclude Include="layer\x86\elu_x86_avx.h" />
+    <ClInclude Include="layer\x86\elu_x86_avx512.h" />
+    <ClInclude Include="layer\x86\elu_x86_fma.h" />
+    <ClInclude Include="layer\x86\flatten_x86.h" />
+    <ClInclude Include="layer\x86\flatten_x86_avx.h" />
+    <ClInclude Include="layer\x86\flatten_x86_avx512.h" />
+    <ClInclude Include="layer\x86\flatten_x86_fma.h" />
+    <ClInclude Include="layer\x86\gelu_x86.h" />
+    <ClInclude Include="layer\x86\gelu_x86_avx.h" />
+    <ClInclude Include="layer\x86\gelu_x86_avx512.h" />
+    <ClInclude Include="layer\x86\gelu_x86_fma.h" />
+    <ClInclude Include="layer\x86\gemm_int8.h" />
+    <ClInclude Include="layer\x86\gemm_x86.h" />
+    <ClInclude Include="layer\x86\gemm_x86_avx.h" />
+    <ClInclude Include="layer\x86\gemm_x86_avx512.h" />
+    <ClInclude Include="layer\x86\gemm_x86_fma.h" />
+    <ClInclude Include="layer\x86\gridsample_bicubic_apply_interpolation.h" />
+    <ClInclude Include="layer\x86\gridsample_bicubic_compute_blob.h" />
+    <ClInclude Include="layer\x86\gridsample_bilinear_apply_interpolation.h" />
+    <ClInclude Include="layer\x86\gridsample_bilinear_compute_blob.h" />
+    <ClInclude Include="layer\x86\gridsample_compute_blob.h" />
+    <ClInclude Include="layer\x86\gridsample_nearest_apply_interpolation.h" />
+    <ClInclude Include="layer\x86\gridsample_nearest_compute_blob.h" />
+    <ClInclude Include="layer\x86\gridsample_x86.h" />
+    <ClInclude Include="layer\x86\gridsample_x86_avx.h" />
+    <ClInclude Include="layer\x86\gridsample_x86_avx512.h" />
+    <ClInclude Include="layer\x86\gridsample_x86_fma.h" />
+    <ClInclude Include="layer\x86\groupnorm_x86.h" />
+    <ClInclude Include="layer\x86\groupnorm_x86_avx.h" />
+    <ClInclude Include="layer\x86\groupnorm_x86_avx512.h" />
+    <ClInclude Include="layer\x86\groupnorm_x86_fma.h" />
+    <ClInclude Include="layer\x86\hardsigmoid_x86.h" />
+    <ClInclude Include="layer\x86\hardsigmoid_x86_avx.h" />
+    <ClInclude Include="layer\x86\hardsigmoid_x86_avx512.h" />
+    <ClInclude Include="layer\x86\hardsigmoid_x86_fma.h" />
+    <ClInclude Include="layer\x86\hardswish_x86.h" />
+    <ClInclude Include="layer\x86\hardswish_x86_avx.h" />
+    <ClInclude Include="layer\x86\hardswish_x86_avx512.h" />
+    <ClInclude Include="layer\x86\hardswish_x86_fma.h" />
+    <ClInclude Include="layer\x86\innerproduct_fp.h" />
+    <ClInclude Include="layer\x86\innerproduct_gemm_fp.h" />
+    <ClInclude Include="layer\x86\innerproduct_x86.h" />
+    <ClInclude Include="layer\x86\innerproduct_x86_avx.h" />
+    <ClInclude Include="layer\x86\innerproduct_x86_avx512.h" />
+    <ClInclude Include="layer\x86\innerproduct_x86_fma.h" />
+    <ClInclude Include="layer\x86\instancenorm_x86.h" />
+    <ClInclude Include="layer\x86\instancenorm_x86_avx.h" />
+    <ClInclude Include="layer\x86\instancenorm_x86_avx512.h" />
+    <ClInclude Include="layer\x86\instancenorm_x86_fma.h" />
+    <ClInclude Include="layer\x86\interp_bicubic.h" />
+    <ClInclude Include="layer\x86\interp_bicubic_pack16.h" />
+    <ClInclude Include="layer\x86\interp_bicubic_pack4.h" />
+    <ClInclude Include="layer\x86\interp_bicubic_pack8.h" />
+    <ClInclude Include="layer\x86\interp_bilinear.h" />
+    <ClInclude Include="layer\x86\interp_bilinear_pack16.h" />
+    <ClInclude Include="layer\x86\interp_bilinear_pack4.h" />
+    <ClInclude Include="layer\x86\interp_bilinear_pack8.h" />
+    <ClInclude Include="layer\x86\interp_x86.h" />
+    <ClInclude Include="layer\x86\interp_x86_avx.h" />
+    <ClInclude Include="layer\x86\interp_x86_avx512.h" />
+    <ClInclude Include="layer\x86\interp_x86_fma.h" />
+    <ClInclude Include="layer\x86\layernorm_x86.h" />
+    <ClInclude Include="layer\x86\layernorm_x86_avx.h" />
+    <ClInclude Include="layer\x86\layernorm_x86_avx512.h" />
+    <ClInclude Include="layer\x86\layernorm_x86_fma.h" />
+    <ClInclude Include="layer\x86\lrn_x86.h" />
+    <ClInclude Include="layer\x86\lrn_x86_avx.h" />
+    <ClInclude Include="layer\x86\lrn_x86_avx512.h" />
+    <ClInclude Include="layer\x86\lrn_x86_fma.h" />
+    <ClInclude Include="layer\x86\lstm_int8.h" />
+    <ClInclude Include="layer\x86\lstm_x86.h" />
+    <ClInclude Include="layer\x86\lstm_x86_avx.h" />
+    <ClInclude Include="layer\x86\lstm_x86_avx512.h" />
+    <ClInclude Include="layer\x86\lstm_x86_fma.h" />
+    <ClInclude Include="layer\x86\matmul_x86.h" />
+    <ClInclude Include="layer\x86\matmul_x86_avx.h" />
+    <ClInclude Include="layer\x86\matmul_x86_avx512.h" />
+    <ClInclude Include="layer\x86\matmul_x86_fma.h" />
+    <ClInclude Include="layer\x86\mish_x86.h" />
+    <ClInclude Include="layer\x86\mish_x86_avx.h" />
+    <ClInclude Include="layer\x86\mish_x86_avx512.h" />
+    <ClInclude Include="layer\x86\mish_x86_fma.h" />
+    <ClInclude Include="layer\x86\multiheadattention_x86.h" />
+    <ClInclude Include="layer\x86\multiheadattention_x86_avx.h" />
+    <ClInclude Include="layer\x86\multiheadattention_x86_avx512.h" />
+    <ClInclude Include="layer\x86\multiheadattention_x86_fma.h" />
+    <ClInclude Include="layer\x86\packing_x86.h" />
+    <ClInclude Include="layer\x86\packing_x86_avx.h" />
+    <ClInclude Include="layer\x86\packing_x86_avx512.h" />
+    <ClInclude Include="layer\x86\packing_x86_fma.h" />
+    <ClInclude Include="layer\x86\padding_pack16.h" />
+    <ClInclude Include="layer\x86\padding_pack4.h" />
+    <ClInclude Include="layer\x86\padding_pack8.h" />
+    <ClInclude Include="layer\x86\padding_pack8_int8.h" />
+    <ClInclude Include="layer\x86\padding_x86.h" />
+    <ClInclude Include="layer\x86\padding_x86_avx.h" />
+    <ClInclude Include="layer\x86\padding_x86_avx512.h" />
+    <ClInclude Include="layer\x86\padding_x86_fma.h" />
+    <ClInclude Include="layer\x86\pooling_2x2.h" />
+    <ClInclude Include="layer\x86\pooling_2x2_pack16.h" />
+    <ClInclude Include="layer\x86\pooling_2x2_pack4.h" />
+    <ClInclude Include="layer\x86\pooling_2x2_pack8.h" />
+    <ClInclude Include="layer\x86\pooling_3x3_pack16.h" />
+    <ClInclude Include="layer\x86\pooling_3x3_pack4.h" />
+    <ClInclude Include="layer\x86\pooling_3x3_pack8.h" />
+    <ClInclude Include="layer\x86\pooling_x86.h" />
+    <ClInclude Include="layer\x86\pooling_x86_avx.h" />
+    <ClInclude Include="layer\x86\pooling_x86_avx512.h" />
+    <ClInclude Include="layer\x86\pooling_x86_fma.h" />
+    <ClInclude Include="layer\x86\prelu_x86.h" />
+    <ClInclude Include="layer\x86\prelu_x86_avx.h" />
+    <ClInclude Include="layer\x86\prelu_x86_avx512.h" />
+    <ClInclude Include="layer\x86\prelu_x86_fma.h" />
+    <ClInclude Include="layer\x86\quantize_x86.h" />
+    <ClInclude Include="layer\x86\quantize_x86_avx.h" />
+    <ClInclude Include="layer\x86\quantize_x86_avx512.h" />
+    <ClInclude Include="layer\x86\quantize_x86_fma.h" />
+    <ClInclude Include="layer\x86\relu_x86.h" />
+    <ClInclude Include="layer\x86\relu_x86_avx.h" />
+    <ClInclude Include="layer\x86\relu_x86_avx512.h" />
+    <ClInclude Include="layer\x86\relu_x86_fma.h" />
+    <ClInclude Include="layer\x86\requantize_x86.h" />
+    <ClInclude Include="layer\x86\requantize_x86_avx.h" />
+    <ClInclude Include="layer\x86\requantize_x86_avx512.h" />
+    <ClInclude Include="layer\x86\requantize_x86_fma.h" />
+    <ClInclude Include="layer\x86\reshape_x86.h" />
+    <ClInclude Include="layer\x86\reshape_x86_avx.h" />
+    <ClInclude Include="layer\x86\reshape_x86_avx512.h" />
+    <ClInclude Include="layer\x86\reshape_x86_fma.h" />
+    <ClInclude Include="layer\x86\rmsnorm_x86.h" />
+    <ClInclude Include="layer\x86\rmsnorm_x86_avx.h" />
+    <ClInclude Include="layer\x86\rmsnorm_x86_avx512.h" />
+    <ClInclude Include="layer\x86\rmsnorm_x86_fma.h" />
+    <ClInclude Include="layer\x86\roialign_x86.h" />
+    <ClInclude Include="layer\x86\roialign_x86_avx.h" />
+    <ClInclude Include="layer\x86\roialign_x86_avx512.h" />
+    <ClInclude Include="layer\x86\roialign_x86_fma.h" />
+    <ClInclude Include="layer\x86\scale_x86.h" />
+    <ClInclude Include="layer\x86\scale_x86_avx.h" />
+    <ClInclude Include="layer\x86\scale_x86_avx512.h" />
+    <ClInclude Include="layer\x86\scale_x86_fma.h" />
+    <ClInclude Include="layer\x86\selu_x86.h" />
+    <ClInclude Include="layer\x86\selu_x86_avx.h" />
+    <ClInclude Include="layer\x86\selu_x86_avx512.h" />
+    <ClInclude Include="layer\x86\selu_x86_fma.h" />
+    <ClInclude Include="layer\x86\shufflechannel_x86.h" />
+    <ClInclude Include="layer\x86\shufflechannel_x86_avx.h" />
+    <ClInclude Include="layer\x86\shufflechannel_x86_avx512.h" />
+    <ClInclude Include="layer\x86\shufflechannel_x86_fma.h" />
+    <ClInclude Include="layer\x86\sigmoid_x86.h" />
+    <ClInclude Include="layer\x86\sigmoid_x86_avx.h" />
+    <ClInclude Include="layer\x86\sigmoid_x86_avx512.h" />
+    <ClInclude Include="layer\x86\sigmoid_x86_fma.h" />
+    <ClInclude Include="layer\x86\slice_x86.h" />
+    <ClInclude Include="layer\x86\slice_x86_avx.h" />
+    <ClInclude Include="layer\x86\slice_x86_avx512.h" />
+    <ClInclude Include="layer\x86\slice_x86_fma.h" />
+    <ClInclude Include="layer\x86\softmax_x86.h" />
+    <ClInclude Include="layer\x86\softmax_x86_avx.h" />
+    <ClInclude Include="layer\x86\softmax_x86_avx512.h" />
+    <ClInclude Include="layer\x86\softmax_x86_fma.h" />
+    <ClInclude Include="layer\x86\sse_mathfun.h" />
+    <ClInclude Include="layer\x86\swish_x86.h" />
+    <ClInclude Include="layer\x86\swish_x86_avx.h" />
+    <ClInclude Include="layer\x86\swish_x86_avx512.h" />
+    <ClInclude Include="layer\x86\swish_x86_fma.h" />
+    <ClInclude Include="layer\x86\tanh_x86.h" />
+    <ClInclude Include="layer\x86\tanh_x86_avx.h" />
+    <ClInclude Include="layer\x86\tanh_x86_avx512.h" />
+    <ClInclude Include="layer\x86\tanh_x86_fma.h" />
+    <ClInclude Include="layer\x86\unaryop_x86.h" />
+    <ClInclude Include="layer\x86\unaryop_x86_avx.h" />
+    <ClInclude Include="layer\x86\unaryop_x86_avx512.h" />
+    <ClInclude Include="layer\x86\unaryop_x86_fma.h" />
+    <ClInclude Include="layer\x86\x86_activation.h" />
+    <ClInclude Include="layer\x86\x86_usability.h" />
+    <ClInclude Include="layer\x86\yolov3detectionoutput_x86.h" />
+    <ClInclude Include="layer\x86\yolov3detectionoutput_x86_avx.h" />
+    <ClInclude Include="layer\x86\yolov3detectionoutput_x86_avx512.h" />
+    <ClInclude Include="layer\x86\yolov3detectionoutput_x86_fma.h" />
+    <ClInclude Include="layer\yolodetectionoutput.h" />
+    <ClInclude Include="layer\yolov3detectionoutput.h" />
+    <ClInclude Include="layer_declaration.h" />
+    <ClInclude Include="layer_registry.h" />
+    <ClInclude Include="layer_shader_registry.h" />
+    <ClInclude Include="layer_shader_spv_data.h" />
+    <ClInclude Include="layer_shader_type.h" />
+    <ClInclude Include="layer_shader_type_enum.h" />
+    <ClInclude Include="layer_type.h" />
+    <ClInclude Include="layer_type_enum.h" />
+    <ClInclude Include="mat.h" />
+    <ClInclude Include="mat_pixel_drawing_font.h" />
+    <ClInclude Include="modelbin.h" />
+    <ClInclude Include="ncnn_export.h" />
+    <ClInclude Include="net.h" />
+    <ClInclude Include="option.h" />
+    <ClInclude Include="paramdict.h" />
+    <ClInclude Include="pipeline.h" />
+    <ClInclude Include="pipelinecache.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="ruapu.h" />
+    <ClInclude Include="simplemath.h" />
+    <ClInclude Include="simpleocv.h" />
+    <ClInclude Include="simpleomp.h" />
+    <ClInclude Include="simplestl.h" />
+    <ClInclude Include="simplevk.h" />
+    <ClInclude Include="SPIRV\bitutils.h" />
+    <ClInclude Include="SPIRV\disassemble.h" />
+    <ClInclude Include="SPIRV\doc.h" />
+    <ClInclude Include="SPIRV\GLSL.ext.AMD.h" />
+    <ClInclude Include="SPIRV\GLSL.ext.ARM.h" />
+    <ClInclude Include="SPIRV\GLSL.ext.EXT.h" />
+    <ClInclude Include="SPIRV\GLSL.ext.KHR.h" />
+    <ClInclude Include="SPIRV\GLSL.ext.NV.h" />
+    <ClInclude Include="SPIRV\GLSL.ext.QCOM.h" />
+    <ClInclude Include="SPIRV\GLSL.std.450.h" />
+    <ClInclude Include="SPIRV\GlslangToSpv.h" />
+    <ClInclude Include="SPIRV\hex_float.h" />
+    <ClInclude Include="SPIRV\Logger.h" />
+    <ClInclude Include="SPIRV\NonSemanticDebugPrintf.h" />
+    <ClInclude Include="SPIRV\NonSemanticShaderDebugInfo100.h" />
+    <ClInclude Include="SPIRV\SpvBuilder.h" />
+    <ClInclude Include="SPIRV\spvIR.h" />
+    <ClInclude Include="SPIRV\SPVRemapper.h" />
+    <ClInclude Include="SPIRV\SpvTools.h" />
+    <ClInclude Include="SPIRV\spvUtil.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="stb_image_write.h" />
+    <ClInclude Include="vulkan_header_fix.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="allocator.cpp" />
+    <ClCompile Include="benchmark.cpp" />
+    <ClCompile Include="blob.cpp" />
+    <ClCompile Include="command.cpp" />
+    <ClCompile Include="cpu.cpp" />
+    <ClCompile Include="c_api.cpp" />
+    <ClCompile Include="datareader.cpp" />
+    <ClCompile Include="expression.cpp" />
+    <ClCompile Include="glslang\CInterface\glslang_c_interface.cpp" />
+    <ClCompile Include="glslang\GenericCodeGen\CodeGen.cpp" />
+    <ClCompile Include="glslang\GenericCodeGen\Link.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\attribute.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\Constant.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\glslang_tab.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\InfoSink.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\Initialize.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\Intermediate.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\intermOut.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\IntermTraverse.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\iomapper.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\limits.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\linkValidate.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\parseConst.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\ParseContextBase.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\ParseHelper.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\PoolAlloc.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\Pp.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\PpAtom.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\PpContext.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\PpScanner.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\preprocessor\PpTokens.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\propagateNoContraction.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\reflection.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\RemoveTree.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\Scan.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\ShaderLang.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\SpirvIntrinsics.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\SymbolTable.cpp" />
+    <ClCompile Include="glslang\MachineIndependent\Versions.cpp" />
+    <ClCompile Include="glslang\OSDependent\Windows\ossource.cpp" />
+    <ClCompile Include="glslang\SPIRV-stub.cpp" />
+    <ClCompile Include="gpu.cpp" />
+    <ClCompile Include="layer.cpp" />
+    <ClCompile Include="layer\absval.cpp" />
+    <ClCompile Include="layer\argmax.cpp" />
+    <ClCompile Include="layer\batchnorm.cpp" />
+    <ClCompile Include="layer\bias.cpp" />
+    <ClCompile Include="layer\binaryop.cpp" />
+    <ClCompile Include="layer\bnll.cpp" />
+    <ClCompile Include="layer\cast.cpp" />
+    <ClCompile Include="layer\celu.cpp" />
+    <ClCompile Include="layer\clip.cpp" />
+    <ClCompile Include="layer\concat.cpp" />
+    <ClCompile Include="layer\convolution.cpp" />
+    <ClCompile Include="layer\convolution1d.cpp" />
+    <ClCompile Include="layer\convolution3d.cpp" />
+    <ClCompile Include="layer\convolutiondepthwise.cpp" />
+    <ClCompile Include="layer\convolutiondepthwise1d.cpp" />
+    <ClCompile Include="layer\convolutiondepthwise3d.cpp" />
+    <ClCompile Include="layer\copyto.cpp" />
+    <ClCompile Include="layer\crop.cpp" />
+    <ClCompile Include="layer\cumulativesum.cpp" />
+    <ClCompile Include="layer\deconvolution.cpp" />
+    <ClCompile Include="layer\deconvolution1d.cpp" />
+    <ClCompile Include="layer\deconvolution3d.cpp" />
+    <ClCompile Include="layer\deconvolutiondepthwise.cpp" />
+    <ClCompile Include="layer\deconvolutiondepthwise1d.cpp" />
+    <ClCompile Include="layer\deconvolutiondepthwise3d.cpp" />
+    <ClCompile Include="layer\deepcopy.cpp" />
+    <ClCompile Include="layer\deformableconv2d.cpp" />
+    <ClCompile Include="layer\dequantize.cpp" />
+    <ClCompile Include="layer\detectionoutput.cpp" />
+    <ClCompile Include="layer\diag.cpp" />
+    <ClCompile Include="layer\dropout.cpp" />
+    <ClCompile Include="layer\einsum.cpp" />
+    <ClCompile Include="layer\eltwise.cpp" />
+    <ClCompile Include="layer\elu.cpp" />
+    <ClCompile Include="layer\embed.cpp" />
+    <ClCompile Include="layer\erf.cpp" />
+    <ClCompile Include="layer\exp.cpp" />
+    <ClCompile Include="layer\expanddims.cpp" />
+    <ClCompile Include="layer\flatten.cpp" />
+    <ClCompile Include="layer\flip.cpp" />
+    <ClCompile Include="layer\fold.cpp" />
+    <ClCompile Include="layer\gelu.cpp" />
+    <ClCompile Include="layer\gemm.cpp" />
+    <ClCompile Include="layer\glu.cpp" />
+    <ClCompile Include="layer\gridsample.cpp" />
+    <ClCompile Include="layer\groupnorm.cpp" />
+    <ClCompile Include="layer\gru.cpp" />
+    <ClCompile Include="layer\hardsigmoid.cpp" />
+    <ClCompile Include="layer\hardswish.cpp" />
+    <ClCompile Include="layer\innerproduct.cpp" />
+    <ClCompile Include="layer\input.cpp" />
+    <ClCompile Include="layer\instancenorm.cpp" />
+    <ClCompile Include="layer\interp.cpp" />
+    <ClCompile Include="layer\inversespectrogram.cpp" />
+    <ClCompile Include="layer\layernorm.cpp" />
+    <ClCompile Include="layer\log.cpp" />
+    <ClCompile Include="layer\lrn.cpp" />
+    <ClCompile Include="layer\lstm.cpp" />
+    <ClCompile Include="layer\matmul.cpp" />
+    <ClCompile Include="layer\memorydata.cpp" />
+    <ClCompile Include="layer\mish.cpp" />
+    <ClCompile Include="layer\multiheadattention.cpp" />
+    <ClCompile Include="layer\mvn.cpp" />
+    <ClCompile Include="layer\noop.cpp" />
+    <ClCompile Include="layer\normalize.cpp" />
+    <ClCompile Include="layer\packing.cpp" />
+    <ClCompile Include="layer\padding.cpp" />
+    <ClCompile Include="layer\permute.cpp" />
+    <ClCompile Include="layer\pixelshuffle.cpp" />
+    <ClCompile Include="layer\pooling.cpp" />
+    <ClCompile Include="layer\pooling1d.cpp" />
+    <ClCompile Include="layer\pooling3d.cpp" />
+    <ClCompile Include="layer\power.cpp" />
+    <ClCompile Include="layer\prelu.cpp" />
+    <ClCompile Include="layer\priorbox.cpp" />
+    <ClCompile Include="layer\proposal.cpp" />
+    <ClCompile Include="layer\psroipooling.cpp" />
+    <ClCompile Include="layer\quantize.cpp" />
+    <ClCompile Include="layer\reduction.cpp" />
+    <ClCompile Include="layer\relu.cpp" />
+    <ClCompile Include="layer\reorg.cpp" />
+    <ClCompile Include="layer\requantize.cpp" />
+    <ClCompile Include="layer\reshape.cpp" />
+    <ClCompile Include="layer\rmsnorm.cpp" />
+    <ClCompile Include="layer\rnn.cpp" />
+    <ClCompile Include="layer\roialign.cpp" />
+    <ClCompile Include="layer\roipooling.cpp" />
+    <ClCompile Include="layer\scale.cpp" />
+    <ClCompile Include="layer\selu.cpp" />
+    <ClCompile Include="layer\shrink.cpp" />
+    <ClCompile Include="layer\shufflechannel.cpp" />
+    <ClCompile Include="layer\sigmoid.cpp" />
+    <ClCompile Include="layer\slice.cpp" />
+    <ClCompile Include="layer\softmax.cpp" />
+    <ClCompile Include="layer\softplus.cpp" />
+    <ClCompile Include="layer\spectrogram.cpp" />
+    <ClCompile Include="layer\split.cpp" />
+    <ClCompile Include="layer\spp.cpp" />
+    <ClCompile Include="layer\squeeze.cpp" />
+    <ClCompile Include="layer\statisticspooling.cpp" />
+    <ClCompile Include="layer\swish.cpp" />
+    <ClCompile Include="layer\tanh.cpp" />
+    <ClCompile Include="layer\threshold.cpp" />
+    <ClCompile Include="layer\tile.cpp" />
+    <ClCompile Include="layer\unaryop.cpp" />
+    <ClCompile Include="layer\unfold.cpp" />
+    <ClCompile Include="layer\vulkan\absval_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\batchnorm_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\binaryop_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\cast_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\celu_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\clip_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\concat_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\convolution1d_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\convolutiondepthwise_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\convolution_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\crop_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\deconvolutiondepthwise_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\deconvolution_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\deepcopy_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\dequantize_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\dropout_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\eltwise_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\elu_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\erf_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\flatten_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\gelu_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\gemm_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\hardsigmoid_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\hardswish_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\innerproduct_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\instancenorm_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\interp_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\layernorm_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\lrn_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\memorydata_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\mish_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\multiheadattention_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\noop_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\normalize_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\packing_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\padding_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\permute_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\pixelshuffle_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\pooling_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\prelu_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\priorbox_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\quantize_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\relu_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\reorg_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\requantize_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\reshape_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\scale_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\shufflechannel_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\sigmoid_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\slice_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\softmax_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\split_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\swish_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\tanh_vulkan.cpp" />
+    <ClCompile Include="layer\vulkan\unaryop_vulkan.cpp" />
+    <ClCompile Include="layer\x86\batchnorm_x86.cpp" />
+    <ClCompile Include="layer\x86\batchnorm_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\batchnorm_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\batchnorm_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\bias_x86.cpp" />
+    <ClCompile Include="layer\x86\bias_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\bias_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\bias_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\binaryop_x86.cpp" />
+    <ClCompile Include="layer\x86\binaryop_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\binaryop_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\binaryop_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\bnll_x86.cpp" />
+    <ClCompile Include="layer\x86\bnll_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\bnll_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\bnll_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\cast_x86.cpp" />
+    <ClCompile Include="layer\x86\cast_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\cast_x86_avx2.cpp" />
+    <ClCompile Include="layer\x86\cast_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\cast_x86_avx512bf16.cpp" />
+    <ClCompile Include="layer\x86\cast_x86_f16c.cpp" />
+    <ClCompile Include="layer\x86\cast_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\clip_x86.cpp" />
+    <ClCompile Include="layer\x86\clip_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\clip_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\clip_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\concat_x86.cpp" />
+    <ClCompile Include="layer\x86\concat_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\concat_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\concat_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\convolution1d_x86.cpp" />
+    <ClCompile Include="layer\x86\convolution1d_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\convolution1d_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\convolution1d_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\convolutiondepthwise_x86.cpp" />
+    <ClCompile Include="layer\x86\convolutiondepthwise_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\convolutiondepthwise_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\convolutiondepthwise_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86_avx2.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86_avx512vnni.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86_avxvnni.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86_avxvnniint8.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\convolution_x86_xop.cpp" />
+    <ClCompile Include="layer\x86\crop_x86.cpp" />
+    <ClCompile Include="layer\x86\crop_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\crop_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\crop_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\deconvolutiondepthwise_x86.cpp" />
+    <ClCompile Include="layer\x86\deconvolutiondepthwise_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\deconvolutiondepthwise_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\deconvolutiondepthwise_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\deconvolution_x86.cpp" />
+    <ClCompile Include="layer\x86\deconvolution_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\deconvolution_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\deconvolution_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\deformableconv2d_x86.cpp" />
+    <ClCompile Include="layer\x86\deformableconv2d_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\deformableconv2d_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\deformableconv2d_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\dequantize_x86.cpp" />
+    <ClCompile Include="layer\x86\dequantize_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\dequantize_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\dequantize_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\dropout_x86.cpp" />
+    <ClCompile Include="layer\x86\dropout_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\dropout_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\dropout_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\eltwise_x86.cpp" />
+    <ClCompile Include="layer\x86\eltwise_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\eltwise_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\eltwise_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\elu_x86.cpp" />
+    <ClCompile Include="layer\x86\elu_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\elu_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\elu_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\flatten_x86.cpp" />
+    <ClCompile Include="layer\x86\flatten_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\flatten_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\flatten_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\gelu_x86.cpp" />
+    <ClCompile Include="layer\x86\gelu_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\gelu_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\gelu_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86_avx2.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86_avx512vnni.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86_avxvnni.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86_avxvnniint8.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\gemm_x86_xop.cpp" />
+    <ClCompile Include="layer\x86\gridsample_x86.cpp" />
+    <ClCompile Include="layer\x86\gridsample_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\gridsample_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\gridsample_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\groupnorm_x86.cpp" />
+    <ClCompile Include="layer\x86\groupnorm_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\groupnorm_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\groupnorm_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\hardsigmoid_x86.cpp" />
+    <ClCompile Include="layer\x86\hardsigmoid_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\hardsigmoid_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\hardsigmoid_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\hardswish_x86.cpp" />
+    <ClCompile Include="layer\x86\hardswish_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\hardswish_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\hardswish_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\innerproduct_x86.cpp" />
+    <ClCompile Include="layer\x86\innerproduct_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\innerproduct_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\innerproduct_x86_f16c.cpp" />
+    <ClCompile Include="layer\x86\innerproduct_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\instancenorm_x86.cpp" />
+    <ClCompile Include="layer\x86\instancenorm_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\instancenorm_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\instancenorm_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\interp_x86.cpp" />
+    <ClCompile Include="layer\x86\interp_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\interp_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\interp_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\layernorm_x86.cpp" />
+    <ClCompile Include="layer\x86\layernorm_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\layernorm_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\layernorm_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\lrn_x86.cpp" />
+    <ClCompile Include="layer\x86\lrn_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\lrn_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\lrn_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\lstm_x86.cpp" />
+    <ClCompile Include="layer\x86\lstm_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\lstm_x86_avx2.cpp" />
+    <ClCompile Include="layer\x86\lstm_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\lstm_x86_avx512vnni.cpp" />
+    <ClCompile Include="layer\x86\lstm_x86_avxvnni.cpp" />
+    <ClCompile Include="layer\x86\lstm_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\lstm_x86_xop.cpp" />
+    <ClCompile Include="layer\x86\matmul_x86.cpp" />
+    <ClCompile Include="layer\x86\matmul_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\matmul_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\matmul_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\mish_x86.cpp" />
+    <ClCompile Include="layer\x86\mish_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\mish_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\mish_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\multiheadattention_x86.cpp" />
+    <ClCompile Include="layer\x86\multiheadattention_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\multiheadattention_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\multiheadattention_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\packing_x86.cpp" />
+    <ClCompile Include="layer\x86\packing_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\packing_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\packing_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\padding_x86.cpp" />
+    <ClCompile Include="layer\x86\padding_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\padding_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\padding_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\pooling_x86.cpp" />
+    <ClCompile Include="layer\x86\pooling_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\pooling_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\pooling_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\prelu_x86.cpp" />
+    <ClCompile Include="layer\x86\prelu_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\prelu_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\prelu_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\quantize_x86.cpp" />
+    <ClCompile Include="layer\x86\quantize_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\quantize_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\quantize_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\relu_x86.cpp" />
+    <ClCompile Include="layer\x86\relu_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\relu_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\relu_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\requantize_x86.cpp" />
+    <ClCompile Include="layer\x86\requantize_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\requantize_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\requantize_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\reshape_x86.cpp" />
+    <ClCompile Include="layer\x86\reshape_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\reshape_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\reshape_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\rmsnorm_x86.cpp" />
+    <ClCompile Include="layer\x86\rmsnorm_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\rmsnorm_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\rmsnorm_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\roialign_x86.cpp" />
+    <ClCompile Include="layer\x86\roialign_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\roialign_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\roialign_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\scale_x86.cpp" />
+    <ClCompile Include="layer\x86\scale_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\scale_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\scale_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\selu_x86.cpp" />
+    <ClCompile Include="layer\x86\selu_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\selu_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\selu_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\shufflechannel_x86.cpp" />
+    <ClCompile Include="layer\x86\shufflechannel_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\shufflechannel_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\shufflechannel_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\sigmoid_x86.cpp" />
+    <ClCompile Include="layer\x86\sigmoid_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\sigmoid_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\sigmoid_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\slice_x86.cpp" />
+    <ClCompile Include="layer\x86\slice_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\slice_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\slice_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\softmax_x86.cpp" />
+    <ClCompile Include="layer\x86\softmax_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\softmax_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\softmax_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\swish_x86.cpp" />
+    <ClCompile Include="layer\x86\swish_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\swish_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\swish_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\tanh_x86.cpp" />
+    <ClCompile Include="layer\x86\tanh_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\tanh_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\tanh_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\unaryop_x86.cpp" />
+    <ClCompile Include="layer\x86\unaryop_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\unaryop_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\unaryop_x86_fma.cpp" />
+    <ClCompile Include="layer\x86\yolov3detectionoutput_x86.cpp" />
+    <ClCompile Include="layer\x86\yolov3detectionoutput_x86_avx.cpp" />
+    <ClCompile Include="layer\x86\yolov3detectionoutput_x86_avx512.cpp" />
+    <ClCompile Include="layer\x86\yolov3detectionoutput_x86_fma.cpp" />
+    <ClCompile Include="layer\yolodetectionoutput.cpp" />
+    <ClCompile Include="layer\yolov3detectionoutput.cpp" />
+    <ClCompile Include="mat.cpp" />
+    <ClCompile Include="mat_pixel.cpp" />
+    <ClCompile Include="mat_pixel_affine.cpp" />
+    <ClCompile Include="mat_pixel_android.cpp" />
+    <ClCompile Include="mat_pixel_drawing.cpp" />
+    <ClCompile Include="mat_pixel_resize.cpp" />
+    <ClCompile Include="mat_pixel_rotate.cpp" />
+    <ClCompile Include="modelbin.cpp" />
+    <ClCompile Include="net.cpp" />
+    <ClCompile Include="option.cpp" />
+    <ClCompile Include="paramdict.cpp" />
+    <ClCompile Include="pipeline.cpp" />
+    <ClCompile Include="pipelinecache.cpp" />
+    <ClCompile Include="simplemath.cpp" />
+    <ClCompile Include="simpleocv.cpp" />
+    <ClCompile Include="simpleomp.cpp" />
+    <ClCompile Include="simplestl.cpp" />
+    <ClCompile Include="simplevk.cpp" />
+    <ClCompile Include="SPIRV\CInterface\spirv_c_interface.cpp" />
+    <ClCompile Include="SPIRV\disassemble.cpp" />
+    <ClCompile Include="SPIRV\doc.cpp" />
+    <ClCompile Include="SPIRV\GlslangToSpv.cpp" />
+    <ClCompile Include="SPIRV\InReadableOrder.cpp" />
+    <ClCompile Include="SPIRV\Logger.cpp" />
+    <ClCompile Include="SPIRV\SpvBuilder.cpp" />
+    <ClCompile Include="SPIRV\SpvPostProcess.cpp" />
+    <ClCompile Include="SPIRV\SPVRemapper.cpp" />
+    <ClCompile Include="SPIRV\SpvTools.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d2368dea-d86b-41c8-a593-fade5452efa9}</ProjectGuid>
+    <RootNamespace>libncnn</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>ncnn_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;_DEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./;./layer</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>ncnn_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;NDEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./;./layer</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>ncnn_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;_DEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./;./layer</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>ncnn_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;NDEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./;./layer</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

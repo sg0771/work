@@ -1,0 +1,1593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\yangaudiodev\YangAudioCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangaudiodev\YangAudioCaptureData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangaudiodev\YangAudioDeviceQuery.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangaudiodev\YangAudioPlay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangaudiodev\YangAudioPlayerSdl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangaudiodev\YangAudioRenderData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\audio\YangAudioMix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\audio\YangAudioUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\audio\YangMakeWave.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\audio\YangPreProcess.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\audio\YangResample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\audio\YangRtcAec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\audio\YangSwResample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangBmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangCMeta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangCNalu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangCYuvUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangMeta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangNalu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangPicConvert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangResize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangSpspps.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangVideoEncoderMeta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangYuvConvert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangavutil\video\YangYuvUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangcapture\YangCaptureFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangcapture\YangMultiVideoCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangcapture\YangScreenCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangcapture\YangScreenCaptureHandleI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangcapture\YangVideoCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangdecoder\YangAudioDecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangdecoder\YangAudioDecoderHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangdecoder\YangAudioDecoderHandles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangdecoder\YangDecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangdecoder\YangDecoderFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangdecoder\YangVideoDecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangdecoder\YangVideoDecoderHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangdecoder\YangVideoDecoderHandles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangAudioEncoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangAudioEncoderHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangAudioEncoderHandleCb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangAudioEncoderMeta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangEncoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangEncoderFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangGpuEncoderFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangVideoEncoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangencoder\YangVideoEncoderHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangjson\YangJson.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangplayer\YangPlayerBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangplayer\YangPlayerDecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangplayer\YangPlayerHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangplayer\YangPlayerPlay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangplayer\YangPlayFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangplayer\YangWinPlayFactroy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangpush\YangPushCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangpush\YangPushCommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangpush\YangPushFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangpush\YangPushHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangpush\YangPushPublish.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangpush\YangRtcPublish.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangpush\YangSendVideoI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangrtc\YangMetaConnection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangrtc\YangPeerConnection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangrtc\YangPeerConnection2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangssl\YangMbedtls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangssl\YangOpenssl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangssl\YangSsl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangstream\YangStream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangstream\YangStreamCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangstream\YangStreamHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangstream\YangStreamManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangstream\YangStreamType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangstream\YangSynBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangstream\YangSynBufferManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangAudioBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangAudioEncoderBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangAudioPlayBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangCBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangMediaBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangVideoBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangVideoDecoderBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer\YangVideoEncoderBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer2\YangMediaBuffer2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\buffer2\YangVideoEncoderBuffer2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangAmf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangBits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangCString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangCTime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangCTimer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangCUrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangEndian.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangHttp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangHttpSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangIni.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangLibHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangLoadLib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangSRtp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangSsrc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangSysMessageHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangSysMessageI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangThread2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangTime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangTimer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangUrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangVector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangWebsocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\sys\YangYuvGl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangautofree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangavctype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangavh265.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangavinfotype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangavtype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangerrorcode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangframebuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangmemory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangtype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yangutil\yangunistd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yang_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\android\YangAudioAndroid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\android\YangAudioCaptureAndroid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\android\YangAudioPlayAndroid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\linux\YangAudioAecLinux.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\linux\YangAudioCaptureLinux.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\linux\YangAudioPlayLinux.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangAudioApiCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangAudioCaptureWindows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangRecAudioCaptureHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApiAec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApiCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApiDevice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangWinAudioApiRender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangWinAudioCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangWinAudioCaptureHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\win\YangWinAudioDevice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\YangAudioCaptureHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangaudiodev\YangCaptureCallback.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\android\YangCameraAndroid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\android\YangVideoCaptureAndroid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\linux\YangVideoCaptureLinux.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\win\YangDXGIManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\win\YangVideoCaptureWindows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\win\YangVideoSrc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\win\YangWinVideoCaptureHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\YangScreenShare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangcapture\YangVideoCaptureHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\pc\YangAudioDecoderAac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\pc\YangAudioDecoderSpeex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\pc\YangHeaderParseFfmpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\pc\YangVideoDecoderFfmpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangAudioDecoderOpus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangDecoderH264.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangDecoderLibde265.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangDecoderMediacodec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangDecoderOpenh264.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangH264Dec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangH264DecoderSoft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangH264DecoderSoft2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangdecoder\YangH264DecoderSoftFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\lame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangAudioEncoderAac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangAudioEncoderMp3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangAudioEncoderOpus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangAudioEncoderSpeex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangEncoderMediacodec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangFfmpegEncoderMeta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangH264EncoderMeta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangH264EncoderSoft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangH265EncoderMeta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangH265EncoderSoft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangOpenH264Encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangencoder\YangVideoEncoderFfmpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangice\YangIce.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangice\YangRtcSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangice\YangRtcStun.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangice\YangTurnConnection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangjson\YangJsonImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangp2p\YangP2pConnection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangp2p\YangP2pConnection2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangBandwidth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangDatachannel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPlay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPlayStream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPlayTrack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPlayTrackAudio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPlayTrackH.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPlayTrackH264.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPlayTrackH265.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPlayTrackVideo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPush.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPushAudio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPushH.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPushH264.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPushH265.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPushStream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangPushStreamH.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangRtcConnection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangRtcContext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangRtcContextH.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangRtcRtcp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangRtcSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangRtcStats.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangRtcStream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangRtcTwcc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtc\YangStreamUrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangPublishNackBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangReceiveNackBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpBye.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpCommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpCompound.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpNack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpPli.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpPsfbCommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpRpsi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpRR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpSli.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpSR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpTWCC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtcpXr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpConstant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpFUAPayload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpFUAPayload2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpHeader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpPacket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpRawPayload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpRecvNack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangrtp\YangRtpSTAPPayload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangAnswerSdp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangAudioPayload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangCodecPayload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangMediaDesc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangMediaPayloadType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangRedPayload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangRtcSdp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangRtxPayloadDes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangSdp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangSdpHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangSdpType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsdp\YangSSRCInfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangsrs\YangSrsConnection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangssl\YangRtcDtls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangstream\YangStreamRtc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangutil\buffer2\YangSortBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangutil\sys\YangSctp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwhip\YangWhip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\NvCodec\encoder_info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\NvCodec\nvenc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\NvCodec\nvEncodeAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\NvCodec\NvEncoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\NvCodec\NvEncoderD3D11.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\linux_defs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_critical_section.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher_defs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher_log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_dxva2_device.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_exposed_functions_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_library_iterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_load_dll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_load_plugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_plugin_hive.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfx_win_reg_key.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxastructures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxaudio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxaudio_exposed_functions_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxaudio++.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxbrc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxcamera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxcommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxdefs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxenc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxjpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxla.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxmvc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxpak.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxplugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxplugin++.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxsession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxstructures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvideo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvideo++.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvp8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvp9.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\mfxvstructures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\Qsv\windows_defs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\common_directx9.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\common_directx11.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\common_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\QsvCodec\QsvEncoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\YangEncoderGpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\YangGpuEncoderFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangwincodec6\YangH264EncoderGpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="yangzlm\YangZlmConnection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\yang_qedit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="yangaudiodev\android\YangAudioAndroid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\android\YangAudioCaptureAndroid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\android\YangAudioPlayAndroid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\linux\YangAudioAecLinux.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\linux\YangAudioCaptureLinux.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\linux\YangAudioPlayLinux.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangAudioCaptureWindows.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangRecAudioCaptureHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApiAec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApiCapture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApiDevice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangWinAudioApiRender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangWinAudioCapture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\win\YangWinAudioCaptureHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\YangAudioCapture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\YangAudioCaptureData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\YangAudioCaptureHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\YangAudioPlay.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangaudiodev\YangAudioRenderData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangAudioMix.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangAudioUtil.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangConvert.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangMakeWave.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangMeta.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangNalu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangPreProcess.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangResample.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangRtcAec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangSpspps.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangVideoEncoderMeta.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangYuvConvert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangavutil\YangYuvUtil.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\android\YangCameraAndroid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\android\YangVideoCaptureAndroid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\linux\YangVideoCaptureLinux.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\win\YangDXGIManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\win\YangVideoCaptureWindows.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\win\YangVideoSrc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\win\YangWinVideoCaptureHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\YangCaptureFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\YangScreenShare.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\YangVideoCapture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangcapture\YangVideoCaptureHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\pc\YangAudioDecoderAac.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\pc\YangAudioDecoderSpeex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\pc\YangHeaderParseFfmpeg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\pc\YangVideoDecoderFfmpeg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangAudioDecoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangAudioDecoderHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangAudioDecoderHandles.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangAudioDecoderOpus.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangDecoderFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangDecoderH264.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangDecoderLibde265.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangDecoderMediacodec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangDecoderOpenh264.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangH264DecoderSoft.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangH264DecoderSoft2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangVideoDecoderHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangdecoder\YangVideoDecoderHandles.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangAudioEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangAudioEncoderAac.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangAudioEncoderHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangAudioEncoderHandleCb.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangAudioEncoderMeta.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangAudioEncoderMp3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangAudioEncoderOpus.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangAudioEncoderSpeex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangEncoderFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangEncoderMediacodec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangFfmpegEncoderMeta.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangH264EncoderMeta.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangH264EncoderSoft.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangH265EncoderMeta.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangH265EncoderSoft.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangOpenH264Encoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangVideoEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangVideoEncoderFfmpeg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangencoder\YangVideoEncoderHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangice\YangIce.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangice\YangRtcSocket.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangice\YangRtcStun.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangice\YangTurnConnection.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangjson\YangJson.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangjson\YangJsonImpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangp2p\YangP2pConnection.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangp2p\YangP2pConnection2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangAec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangBandwidth.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangDatachannel.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPeerConnection.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPeerConnection2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPlayStream.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPlayTrack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPlayTrackAudio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPlayTrackH264.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPlayTrackH265.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPlayTrackVideo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPush.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPushAudio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPushH264.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPushH265.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangPushStream.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangRtcConnection.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangRtcContext.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangRtcRtcp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangRtcStats.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangRtcTwcc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtc\YangStreamUrl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangPublishNackBuffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangReceiveNackBuffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpApp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpBye.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpCommon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpCompound.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpNack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpPli.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpPsfbCommon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpRpsi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpRR.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpSli.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpSR.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpTWCC.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtcpXr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtpBuffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtpFUAPayload.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtpFUAPayload2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtpHeader.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtpPacket.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtpRawPayload.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtpRecvNack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangrtp\YangRtpSTAPPayload.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangAnswerSdp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangAudioPayload.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangCodecPayload.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangMediaDesc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangMediaPayloadType.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangRedPayload.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangRtcSdp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangRtxPayloadDes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangSdp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangSdpHandle.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsdp\YangSSRCInfo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangsrs\YangSrsConnection.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangssl\YangDtlsMbedtls.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangssl\YangDtlsOpenssl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangssl\YangSslMbedtls.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangssl\YangSslOpenssl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangstream\YangStream.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangstream\YangStreamCapture.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangstream\YangStreamManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangstream\YangStreamRtc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangstream\YangSynBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangstream\YangSynBufferManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer\YangAudioBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer\YangAudioEncoderBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer\YangAudioPlayBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer\YangMediaBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer\YangVideoBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer\YangVideoDecoderBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer\YangVideoEncoderBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer2\YangMediaBuffer2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer2\YangSortBuffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\buffer2\YangVideoEncoderBuffer2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangAvtype.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangBuffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangCLog.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangCString.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangCTimer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangEndian.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangFile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangHttp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangIni.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangLibHandle.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangMath.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangSctp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangSocket.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangSocketIP.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangSRtp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangSsrc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangThread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangTime.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangUrl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangVector.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\sys\YangWebsocket.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\YangAvinfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\YangLoadLib.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\YangString.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\YangSysMessageHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\yangutil_YangThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangutil\YangTimer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwhip\YangWhip.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\NvCodec\nvenc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\NvCodec\NvEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\NvCodec\NvEncoderD3D11.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_critical_section.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_dispatcher_log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_dxva2_device.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_function_table.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_library_iterator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_load_dll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_load_plugin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_plugin_hive.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\mfx_win_reg_key.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\Qsv\qsv_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\common_directx9.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\common_directx11.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\common_utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\common_utils_windows.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\QsvCodec\QsvEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\YangEncoderGpu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\YangGpuEncoderFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangwincodec6\YangH264EncoderGpu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="yangzlm\YangZlmConnection.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

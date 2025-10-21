@@ -1,0 +1,2215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="资源文件\avs">
+      <UniqueIdentifier>{00cebe69-fe53-4018-b8d7-3391583a9270}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D3D_Filters\ML_ChromaKeyFilter.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_ColorAdjustFilter.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_D3DFilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_DeLogoFilter.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_EmptyFilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_ImageEnhanceFilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_lut.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_NoneFilter.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_Shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\cmdutils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ML_Convertcore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_D3DRender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_d3dUtility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_DirectRender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ffmpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ffplay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ML_stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_Texture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_AssEngine.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Filters\ML_AssSubtitle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\ffms.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaInfoDLL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\audio\audio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\audio\convertaudio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\audio\Gips.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\convert\convert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\convert\convert_planar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\convert\convert_rgb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\convert\convert_yuy2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\convert\convert_yv12.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avs\alignment.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avs\capi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avs\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avs\cpuid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avs\minmax.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avs\types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avs\win.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\parser\expression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\parser\script.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\parser\scriptparser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\parser\tokenizer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avisynth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\avisynth_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\cache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\Error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\core\softwire_helpers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\conditional\conditional.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\conditional\conditional_functions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\conditional\conditional_reader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\overlay\444convert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\overlay\blend_asm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\overlay\imghelpers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\overlay\overlay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\overlay\overlayfunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\color.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\combine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\convolution.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\debug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\edit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\field.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\focus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\fps.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\greyscale.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\layer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\levels.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\limiter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\merge.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\planeswap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\resample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\resample_functions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\StackBlur.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\transform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\turn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\filters\turnfunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\avisynth_stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\audiosource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\avs_vf_ffmpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\avssources.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\ff_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\filehandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\indexing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\track.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\videosource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\videoutils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffms2\zipfile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libFrei0r\frei0r.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libFrei0r\frei0r.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libFrei0r\frei0r_math.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\audio\pfc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftWire\SoftWire.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\AudioMixing.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\AudioProcess.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\FastDisco.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\FastDiscoRotate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\FastORing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\FastResizer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\getAudioCode.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\LineZ.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\MixAudio.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\Planar_2_5_or_2_6.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\TransAll_src\ResizeRotateP.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_AdaptHistEqExShaders.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_ChromakeyShaders.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_commonMotionShaders.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_CommonShaderContent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_ColorAdjustFilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\fre.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_GlFilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_GlLayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_GLTransition.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\LibDelogoAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\md5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_PushBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\opengl_SimpleGLFilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Transforms\Transforms.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\avisynth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="avisynth\avisynth_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaLibAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\Filters_OpenGLFilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\Filters_OpenGLFilterSegment.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\Filters_OpenglMotion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\ImageProcess_OpenGL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\ImageProcess_OpenGLFixed.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\ImageProcess_ShaderManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\ImageProcess_ShaderProgram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_App.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_Core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_IndexBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_Renderer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_Shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_texture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_VertexArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_VertexBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess\reflector_VertexBufferLayout.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\aec_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\aec_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\aec_core_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\aec_rdft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\aec_resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\agc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\agc_manager_direct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\aligned_array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\aligned_malloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\analog_agc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\apm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\arith_routines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\array_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\arraysize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\asm_defines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\audio_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\audio_converter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\audio_frame_operations.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\audio_processing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\audio_processing_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\audio_processing_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\audio_ring_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\audio_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\bandwidth_info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\basictypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\beamformer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\blocker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\channel_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\checks.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\codec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\common_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\compile_assert_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\complex_fft_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\complex_matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\constructormagic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\covariance_matrix_generator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\cpu_features_wrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\daubechies_8_wavelet_coeffs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\defines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\delay_estimator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\delay_estimator_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\delay_estimator_wrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\digital_agc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\dyadic_decimator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\echo_cancellation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\echo_cancellation_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\echo_cancellation_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\encode_lpc_swb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\entropy_coding.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\fft4g.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\filterbank_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\fir_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\fir_filter_neon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\fir_filter_sse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\fix_interlocked_exchange_pointer_win.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\gain_control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\gain_control_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\gain_map_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\gmm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\high_pass_filter_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\histogram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\intelligibility_enhancer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\intelligibility_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\isac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\lapped_transform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\level_estimator_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\lpc_analysis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\lpc_gain_swb_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\lpc_shape_swb12_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\lpc_shape_swb16_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\lpc_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\matrix_test_helpers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\maybe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\metrics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\module_common_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\moving_moments.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\noise_gmm_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\noise_suppression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\noise_suppression_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\noise_suppression_x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\nonlinear_beamformer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\ns_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\nsx_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\nsx_defines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\os_specific_inline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\pitch_based_vad.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\pitch_estimator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\pitch_gain_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\pitch_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\pitch_lag_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\pole_zero_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\processing_component.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\push_resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\push_sinc_resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\real_fft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\real_fourier.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\real_fourier_ooura.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\real_fourier_openmax.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\resample_by_2_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\ring_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\rms_level.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\safe_conversions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\safe_conversions_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\scoped_ptr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\scoped_vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\settings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\signal_processing_library.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\sinc_resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\sinusoidal_linear_chirp_source.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\sparse_fir_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\spectrum_ar_model_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\spl_inl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\spl_inl_armv7.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\spl_inl_mips.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\splitting_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\standalone_vad.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\static_instance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\stl_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\structs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\template_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\three_band_filter_bank.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\transient_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\transient_detector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\transient_suppressor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\typedefs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\utility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad_audio_proc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad_audio_proc_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad_circular_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad_filterbank.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad_gmm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\vad_sp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\voice_activity_detector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\voice_detection_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\voice_gmm_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\webrtc_agc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\webrtc_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\webrtc_ns.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\webrtc_vad.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\window_generator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\windows_private.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\wpd_node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm\wpd_tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\FfmpegIncludes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\LibInst.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\WXBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\WXLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw\glfw3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\glew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\wglew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\json.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\librnnoise.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\SoundTouch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaCpp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaDefines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WXMedia_SDK\include\libyuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\alpha.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\api_structs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\avif.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\bitstream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\box.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\chroma_sampling.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\colorconversion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\common_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\context.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\decoder_dav1d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\decoder_ffmpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\exif.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\file.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\hdr_sdr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\heif.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\heif_cxx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\heif_emscripten.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\heif_plugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\heif_properties.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\heif_regions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\heif_version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\hevc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\init.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\jpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\jpeg2000.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\logging.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\mask_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\metadata_compression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\monochrome.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\nclx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\pixelimage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\plugin_registry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\region.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\rgb2rgb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\rgb2yuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\rgb2yuv_sharp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\security_limits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\uncompressed_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\vvc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libheif\yuv2rgb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D3D_Filters\ML_D3DFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D_Filters\ML_lut.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D_Filters\ML_Shader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\cmdutils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D_Filters\ML_D3DRender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D_Filters\ML_d3dUtility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D_Filters\ML_DirectRender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ffmpeg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ffplay.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D_Filters\ML_Texture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ML_Timeline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\WXFfmpegImpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ffmpeg_opt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ffmpeg_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Toolkit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\audio\avisynth_audio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\audio\avs-soundtouch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\audio\convertaudio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\audio\Gips.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\convert\convert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\convert\convert_planar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\convert\convert_rgb.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\convert\convert_yuy2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\convert\convert_yv12.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\parser\parser_expression.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\parser\parser_script.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\parser\parser_scriptparser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\parser\parser_tokenizer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\core\My_avisynth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\core\avisynth_c.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\core\avisynth_cache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\core\softwire_helpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\conditional\conditional.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\conditional\conditional_functions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\conditional\conditional_reader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\444convert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\blend_asm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_add.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_blend.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_darken.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_difference.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_exclusion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_lighten.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_lumachroma.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_multiply.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_softhardlight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\OF_subtract.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\overlay\My_overlay.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_debug.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_edit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_field.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_focus.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_fps.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_greyscale.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_layer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_levels.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_merge.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_resample.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_transform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_Animate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_limiter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_planeswap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\resample_functions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\stackblur.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_turn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\core\cpuaccel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="avisynth\filters\avisynth_source.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\audiosource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\avisynth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\avs_vf_ffmpeg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\avssources.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\ff_filter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\ffms.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\filehandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\indexing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\md5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\track.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\videosource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ffms2\videoutils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r_G.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r_glow.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r_IIRblur.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r_nervous.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r_rgbnoise.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r_vertigo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r_vignette.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftWire\SoftWire.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\FastDisco.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\FastDiscoRotate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\FastORing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\FastResizer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\LineZ.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransAccord.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransBubbles.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransCentral.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransCrumple.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransDisco.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransDoor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransFlipPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransFlipTurn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransFunnel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\Transmarbles.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransPaint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransPeel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransPush.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransRipple.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransRipples.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransRoll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransScratch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransShuffle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSlantRollIn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSlantRollOut.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSlantWipe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSlide.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSlideIn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSlideOut.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSwing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransSwirl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransTwinDoors.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransVenetianBlinds.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransWeave.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\TransAll_src\TransWipe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\Rotate_Filter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\AssSubtitle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\Transforms.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\AlphaMask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\AudioFade.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\DeLogo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\FrameCache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\fre.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\fremixer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\frewrapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\ImageMask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\Transforms_interface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\LibDelogo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\LoopFrames.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\Transforms_md5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libFrei0r\libFrei0r_distort0r.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_adapthisteq.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_AdaptHistEqEx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_Chromakey.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_ChromakeyShell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_CommonMotion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_dynamicZoom.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_EdgeBlur.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_EdgeIncrease.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_FaceTransform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_GLColorAdjust.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_GlFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_GlLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_GlMotion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_GLTransition.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_lut.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_lut_2d.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_PushBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_SimpleGLFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_Transition.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\Filters_OpenGLFilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\ImageProcess_OpenGL.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\ImageProcess_OpenGLFixed.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\ImageProcess_OpenGLServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\ImageProcess_ShaderManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\ImageProcess_ShaderProgram.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\reflector_App.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\reflector_IndexBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\reflector_Renderer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\reflector_Shader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\reflector_texture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\reflector_VertexArray.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess\reflector_VertexBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_ColorAdjust.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_ChromakeyEx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transforms\opengl_DeLogo_gauss.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ff_avisynth_demuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DRender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\aec_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\aec_core_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\aec_core_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\aec_rdft.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\aec_rdft_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\aec_rdft_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\aec_resampler.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\agc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\agc_manager_direct.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\aligned_malloc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\analog_agc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\apm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\arith_routines.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\arith_routines_hist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\arith_routines_logist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\array_util.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\audio_buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\audio_converter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\audio_processing_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\audio_ring_buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\audio_util.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\auto_corr_to_refl_coef.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\auto_correlation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\blocker.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\channel_buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\checks.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\click_annotate.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\common_types.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\complex_bit_reverse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\complex_fft.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\copy_set_operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\covariance_matrix_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\cpu_features.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\cross_correlation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\cross_correlation_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\delay_estimator.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\delay_estimator_wrapper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\digital_agc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\division_operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\dot_product_with_scale.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\downsample_fast.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\downsample_fast_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\echo_cancellation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\echo_cancellation_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\encode_lpc_swb.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\energy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\entropy_coding.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\fft4g.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\filter_ar.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\filter_ar_fast_q12.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\filter_functions.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\filter_ma_fast_q12.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\filterbank_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\filterbanks.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\fir_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\fir_filter_neon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\fir_filter_sse.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\gain_control_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\get_hanning_window.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\get_scaling_square.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\gmm.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\high_pass_filter_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\histogram.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\ilbc_specific_functions.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\intelligibility_enhancer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\intelligibility_utils.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\intialize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\lapped_transform.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\level_estimator_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\levinson_durbin.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\lpc_analysis.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\lpc_gain_swb_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\lpc_shape_swb12_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\lpc_shape_swb16_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\lpc_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\lpc_to_refl_coef.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\metrics_default.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\min_max_operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\min_max_operations_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\moving_moments.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\noise_suppression.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\noise_suppression_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\noise_suppression_x.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\nonlinear_beamformer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\ns_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\nsx_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\nsx_core_c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\nsx_core_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\pitch_based_vad.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\pitch_estimator.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\pitch_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\pitch_gain_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\pitch_internal.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\pitch_lag_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\pole_zero_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\processing_component.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\push_resampler.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\push_sinc_resampler.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\randomization_functions.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\real_fft.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\real_fourier.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\real_fourier_ooura.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\refl_coef_to_lpc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\resample.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\resample_48khz.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\resample_by_2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\resample_by_2_internal.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\resample_fractional.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\resampler.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\ring_buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\rms_level.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\sinc_resampler.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\sinc_resampler_neon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\sinc_resampler_sse.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\sinusoidal_linear_chirp_source.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\sparse_fir_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\spectrum_ar_model_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\spl_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\spl_sqrt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\spl_sqrt_floor.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\splitting_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\splitting_filter_audio_process.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\sqrt_of_one_minus_x_squared.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\standalone_vad.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\three_band_filter_bank.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\transient_detector.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\transient_suppressor.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\utility.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\vad.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\vad_audio_proc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\vad_circular_buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\vad_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\vad_filterbank.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\vad_gmm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\vad_sp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\vector_scaling_operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\voice_activity_detector.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\voice_detection_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\webrtc_vad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\window_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\wpd_node.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm\wpd_tree.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WXMedia_SDK\include\WXLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw\glfw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="glew\glew.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WXMedia_SDK\include\libimagequant.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WXMedia_SDK\include\SoundTouch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WXMedia_SDK\include\libyuv.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_alpha.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_avif.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_bitstream.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_box.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_chroma_sampling.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_colorconversion.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_common_utils.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_context.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_decoder_dav1d.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_decoder_ffmpeg.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_error.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_exif.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_file.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_hdr_sdr.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_hevc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_init.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_jpeg.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_jpeg2000.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_mask_image.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_metadata_compression.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_monochrome.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_nclx.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_pixelimage.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_plugin.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_plugin_registry.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_properties.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_region.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_regions.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_rgb2rgb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_rgb2yuv.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_rgb2yuv_sharp.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_uncompressed_image.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_vvc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libheif\heif_yuv2rgb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\avs\Wipe_Right.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000003_Dissolve.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000008_Scratch_Merge.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000009_Dissolve_Black.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000010_Dissolve_White.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000013_Push_Left.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000014_Push_Right.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000015_Push_Down.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000016_Push_Up.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000017_Scratch_Dust.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\#000018_Central_In.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\Dias_Down.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\Dias_Up.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\Ripples_Center.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\Shuffle_Down.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\Slant_Wipe_NE.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\SlantRoll_Out.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\SlantRoll_Out_NE.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\Split_Horisontal.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\Split_Vertical.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="util.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+    <None Include="scripts\avs\Wipe_Left.avs">
+      <Filter>资源文件\avs</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MediaLib.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

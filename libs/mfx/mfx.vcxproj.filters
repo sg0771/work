@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="intel_api_factory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_critical_section.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_dispatcher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_dispatcher_defs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_dispatcher_log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_dxva2_device.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_exposed_functions_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_library_iterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_load_dll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_load_plugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_plugin_cfg_parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_plugin_hive.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_va_glue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfx_win_reg_key.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxadapter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxastructures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxaudio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxaudio_exposed_functions_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxaudio++.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxbrc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxcamera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxcommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxdefs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxdispatcherprefixedfunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxenc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxfei.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxfeihevc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxjpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxla.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxmvc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxpak.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxpcp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxplugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxplugin++.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxsc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxscd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxsession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxstructures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxvideo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxvideo++.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxvp8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxvp9.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mfxvstructures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_critical_section.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_dispatcher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_dispatcher_log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_dxva2_device.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_function_table.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_library_iterator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_load_dll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_load_plugin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_plugin_cfg_parser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_plugin_hive.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_va_glue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfx_win_reg_key.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

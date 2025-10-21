@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cdef_apply.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cdf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ctx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dequant_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\env.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fg_apply.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\film_grain.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\getbits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\intra_edge.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ipred.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ipred_prepare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\itx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\itx_1d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\levels.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lf_apply.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lf_mask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\loopfilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\looprestoration.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lr_apply.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\msac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\obu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\picture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\qm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\recon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ref.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\refmvs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\thread_task.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\warpmv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wedge.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dav1d\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dav1d\data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dav1d\dav1d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dav1d\headers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dav1d\picture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ff_stdatomic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\attributes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\bitdepth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\dump.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\frame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\intops.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\validate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dav1d\version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vcs_version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\x86\cpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\x86\msac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.asm.inc">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="x86inc.asm.inc">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\win32\thread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cdef_apply_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cdef_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cdf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cpu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dequant_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fg_apply_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\film_grain_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\getbits.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\intra_edge.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ipred_prepare_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ipred_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itx_1d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itx_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lf_apply_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lf_mask.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loopfilter_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\looprestoration_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lr_apply_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mc_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mem.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\msac.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\obu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\picture.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\recon_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\refmvs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scan.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread_task.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\warpmv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wedge.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\cdef_init_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\cdef_init_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\x86-cpu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\film_grain_init_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\film_grain_init_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\ipred_init_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\ipred_init_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\itx_init_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\itx_init_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\loopfilter_init_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\loopfilter_init_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\looprestoration_init_tmpl -16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\looprestoration_init_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\mc_init_tmpl -16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\mc_init_tmpl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\x86\msac_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cdef_apply_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cdef_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fg_apply_tmpl -16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\film_grain_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ipred_prepare_tmpl -16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ipred_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itx_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lf_apply_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loopfilter_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\looprestoration_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lr_apply_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mc_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\recon_tmpl - 16.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <NASM Include="src\x86\cdef_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\cdef_avx512.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\cdef_sse.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\cdef16_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\cdef16_sse.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\cpuid.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\film_grain_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\film_grain_sse.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\film_grain16_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\ipred_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\ipred_sse.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\ipred16_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\itx_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\itx_sse.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\itx16_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\loopfilter_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\loopfilter_sse.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\loopfilter16_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\looprestoration_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\looprestoration_sse.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\looprestoration16_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\mc_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\mc_avx512.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\mc_sse.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\mc16_avx2.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+    <NASM Include="src\x86\x86asm-msac.asm">
+      <Filter>源文件</Filter>
+    </NASM>
+  </ItemGroup>
+</Project>

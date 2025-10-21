@@ -1,0 +1,41 @@
+// offline-source-separation-model-config.h
+//
+// Copyright (c)  2025  Xiaomi Corporation
+
+#ifndef SHERPA_ONNX_CSRC_OFFLINE_SOURCE_SEPARATION_MODEL_CONFIG_H_
+#define SHERPA_ONNX_CSRC_OFFLINE_SOURCE_SEPARATION_MODEL_CONFIG_H_
+
+#include <string>
+
+#include "offline-source-separation-spleeter-model-config.h"
+#include "parse-options.h"
+
+namespace sherpa_onnx {
+
+struct OfflineSourceSeparationModelConfig {
+  OfflineSourceSeparationSpleeterModelConfig spleeter;
+
+  int32_t num_threads = std::thread::hardware_concurrency();
+  bool debug = false;
+  std::string provider = "cpu";
+
+  OfflineSourceSeparationModelConfig() = default;
+
+  OfflineSourceSeparationModelConfig(
+      const OfflineSourceSeparationSpleeterModelConfig &spleeter,
+      int32_t num_threads, bool debug, const std::string &provider)
+      : spleeter(spleeter),
+        num_threads(num_threads),
+        debug(debug),
+        provider(provider) {}
+
+  void Register(ParseOptions *po);
+
+  bool Validate() const;
+
+  std::string ToString() const;
+};
+
+}  // namespace sherpa_onnx
+
+#endif  // SHERPA_ONNX_CSRC_OFFLINE_SOURCE_SEPARATION_MODEL_CONFIG_H_

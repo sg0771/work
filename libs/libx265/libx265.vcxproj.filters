@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="x265cli.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\blockcopy8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\dct8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\intrapred.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\ipfilter8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\loopfilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\mc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\pixel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\pixel-util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\seaintegral.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\bitstream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\constants.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\contexts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cudata.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\deblock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\frame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\framedata.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\lowres.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\md5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\mv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\param.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\piclist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\picyuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\predict.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\primitives.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\quant.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\scaler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\scalinglist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\shortyuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\slice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\threading.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\threadpool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\wavefront.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\winxp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\yuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamicHDR10\json11\json11.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamicHDR10\BasicStructures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamicHDR10\hdr10plus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamicHDR10\JsonHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamicHDR10\metadataFromJson.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamicHDR10\SeiMetadataDictionary.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\analysis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\bitcost.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\dpb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\encoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\entropy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\frameencoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\framefilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\level.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\motion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\nal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\ratecontrol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\rdcost.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\reference.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\sao.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\search.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\sei.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\slicetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="x265.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="x265_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\vec\dct-sse3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vec\dct-sse41.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vec\dct-ssse3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vec\vec-primitives.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\x86\asm-primitives.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\bitstream.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_loopfilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\constants.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\cpu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\cudata.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\dct.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\deblock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\frame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\framedata.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\intrapred.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ipfilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lowpassdct.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\lowres.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\md5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\param.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\piclist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\picyuv.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\pixel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\predict.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\primitives.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\quant.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\scaler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\scalinglist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\shortyuv.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\slice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\threading.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\threadpool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\version.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\wavefront.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\winxp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\yuv.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamicHDR10\json11\json11.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamicHDR10\api.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamicHDR10\JsonHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamicHDR10\metadataFromJson.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamicHDR10\SeiMetadataDictionary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\analysis.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\bitcost.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\dpb.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder_api.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\entropy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\frameencoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\framefilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\level.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\motion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\nal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\ratecontrol.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\reference.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\sao.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\search.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\sei.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\slicetype.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\weightPrediction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="common\x86\asm_blockcopy8.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_const-a.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_cpu-a.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_dct8.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_h-ipfilter8.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_intrapred8.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_intrapred8_allangs.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_ipfilter8.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_loopfilter.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_mc-a.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_mc-a2.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_pixel-32.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_pixel-a.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_pixeladd8.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_pixel-util8.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_sad-a.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_seaintegral.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_ssd-a.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\asm_v4-ipfilter8.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\h4-ipfilter16.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\h-ipfilter16.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\intrapred16.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\ipfilter16.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\sad16-a.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\v4-ipfilter16.asm">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="common\x86\x86inc.inc">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="common\x86\x86util.inc">
+      <Filter>头文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
