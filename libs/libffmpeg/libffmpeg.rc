@@ -3,8 +3,8 @@
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2025,10,13,16
- PRODUCTVERSION 2025,10,13,16
+ FILEVERSION 2025,10,21,22
+ PRODUCTVERSION 2025,10,21,22
  FILEFLAGSMASK 0x3fL
  FILEFLAGS 0x0L
  FILEOS 0x40004L
@@ -22,7 +22,7 @@ BEGIN
             VALUE "LegalCopyright", "Copyright  ApowerSoft Ltd."
             VALUE "OriginalFilename", "libffmpeg.dll"
             VALUE "ProductName", "libffmpeg.dll"
-            VALUE "ProductVersion", "2025.10.13.16"
+            VALUE "ProductVersion", "2025.10.21.22"
             VALUE "SpecialBuild", "GCC 7.2.0 "
         END
     END

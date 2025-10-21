@@ -7,3 +7,5 @@
 *.aps
 /update_version/env
 /packages
+/WXMedia_SDK/Debug
+/WXMedia_SDK/Release
