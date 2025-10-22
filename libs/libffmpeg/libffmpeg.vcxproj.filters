@@ -2688,6 +2688,21 @@
     <ClInclude Include="ffmpeg-config.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="WXLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WXBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="unistd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LibInst.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="libavformat\adtsenc.s">
@@ -8866,6 +8881,9 @@
       <Filter>libswresample\x86</Filter>
     </ClCompile>
     <ClCompile Include="libffmpeg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WXLog.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

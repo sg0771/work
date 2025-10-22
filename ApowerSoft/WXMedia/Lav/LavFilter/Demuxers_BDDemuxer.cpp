@@ -19,7 +19,7 @@
 
 #include "Demuxers_DemuxersImpl.h"
 #include "Demuxers_BDDemuxer.h"
-#include "libbluray_mpls_parse.h"
+#include "libbluray/mpls_parse.h"
 
 extern "C" {
 #include "libavutil/avstring.h"

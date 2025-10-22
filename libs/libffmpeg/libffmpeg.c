@@ -50,9 +50,15 @@
 #pragma comment(lib, "strmiids.lib")
 #pragma comment(lib, "ole32.lib")
 
-
+#pragma comment(lib, "libyuv.lib")
+#pragma comment(lib, "WXIMage.lib")
+#pragma comment(lib, "libheif.lib")
+#pragma comment(lib, "lcsm2.lib")
+#pragma comment(lib, "librawlite.lib")
+#pragma comment(lib, "libtiff.lib")
 
 void  libffmpeg_wx(){
+I420ToARGB();
 AES_encrypt();
 AES_set_encrypt_key();
 ASN1_STRING_get0_data();

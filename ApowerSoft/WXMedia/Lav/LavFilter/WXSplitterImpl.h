@@ -13,7 +13,7 @@
 extern "C" {
 #define __STDC_CONSTANT_MACROS
 #include "libavformat/avformat.h"
-#include "libbluray.h"
+#include "libbluray/bluray.h"
 #include "libavutil/intreadwrite.h"
 }
 #pragma warning(pop)

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dirent.h" />
     <ClInclude Include="ffmpeg-config.h" />
     <ClInclude Include="ff_stdatomic.h" />
     <ClInclude Include="libavcodec\a64colors.h" />
@@ -877,6 +878,7 @@
     <ClInclude Include="libavutil\x86\timer.h" />
     <ClInclude Include="libavutil\xga_font_data.h" />
     <ClInclude Include="libavutil\xtea.h" />
+    <ClInclude Include="LibInst.hpp" />
     <ClInclude Include="libswresample\audioconvert.h" />
     <ClInclude Include="libswresample\dither_template.h" />
     <ClInclude Include="libswresample\noise_shaping_data.c.h" />
@@ -895,6 +897,9 @@
     <ClInclude Include="libswscale\x86\rgb2rgb_template.h" />
     <ClInclude Include="libswscale\x86\swscale_template.h" />
     <ClInclude Include="libswscale\x86\yuv2rgb_template.h" />
+    <ClInclude Include="unistd.h" />
+    <ClInclude Include="WXBase.h" />
+    <ClInclude Include="WXLog.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ffmpeg-config.inc" />
@@ -2959,6 +2964,7 @@
     <ClCompile Include="libswscale\x86\swscale.x86.c" />
     <ClCompile Include="libswscale\x86\yuv2rgb.x86.c" />
     <ClCompile Include="libswscale\yuv2rgb.c" />
+    <ClCompile Include="WXLog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <NASM Include="libavcodec\x86\aacencdsp.x86.asm" />

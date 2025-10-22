@@ -1,4 +1,4 @@
-﻿#ifndef __UTILS_HPP__
+#ifndef __UTILS_HPP__
 #define __UTILS_HPP__
 
 
@@ -51,7 +51,7 @@
 #include <cstddef>
 #include <xutility>
 #include <type_traits>
-#include <libyuv.h>
+#include <libyuv/libyuv.h>
 
 #include <libass/ass.h>
 #include <initializer_list>

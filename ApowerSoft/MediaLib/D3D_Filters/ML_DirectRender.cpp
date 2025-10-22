@@ -1,4 +1,4 @@
-﻿//
+//
 #include "ML_d3dUtility.h"
 
 #include <assert.h>
@@ -6,7 +6,7 @@
 #include <fstream>
 #include <ffms2/ffms.h>
 #include "ML_DirectRender.h"
-#include <libyuv.h>
+#include <libyuv/libyuv.h>
 #include "../ML_stdafx.h"
 
 

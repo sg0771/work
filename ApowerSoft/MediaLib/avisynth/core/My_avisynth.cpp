@@ -1,4 +1,4 @@
-﻿
+
 
 #include "avisynth/avisynth_stdafx.h"
 #pragma warning(disable:4146)
@@ -1661,7 +1661,7 @@ success:;
 bool ScriptEnvironment::FunctionExists(const char* name) {
   return function_table.Exists(name);
 }
-#include <libyuv.h>
+#include <libyuv/libyuv.h>
 void BitBlt(BYTE* dstp, int dst_pitch, const BYTE* srcp, int src_pitch, int row_size, int height) {
    
     if ((!dstp) || (!srcp)) return;

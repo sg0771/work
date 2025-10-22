@@ -35,8 +35,8 @@ extern "C" {
 #include "libavutil/pixdesc.h"
 #include "libavutil/opt.h"
 
-#include "libbluray.h"
-#include "libbluray_clpi_parse.h"
+#include "libbluray/bluray.h"
+#include "libbluray/clpi_parse.h"
 }
 #pragma warning(pop)
 
@@ -46,7 +46,7 @@ typedef struct AVCodecTag {
     unsigned int tag;
 } AVCodecTag;
 
-#include "libbluray_log_control.h"
+#include "libbluray/log_control.h"
 
 #include "DSUtilLite.h"
 #include <MMReg.h>

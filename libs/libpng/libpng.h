@@ -2,7 +2,7 @@
 #define PNG_H
 
 #include <stdint.h>
-#include <zlib/zlib.h>
+#include "../zlib/zlib.h"
 
 /* Version information for png.h - this should match the version in png.c */
 #define PNG_LIBPNG_VER_STRING "1.6.37"

@@ -1,10 +1,10 @@
-﻿#include <d3dx9/d3dx9.h>
+#include <d3dx9/d3dx9.h>
 #include <d3d9.h>
 #include <atlbase.h>
 #include <mutex>
-#include <libyuv.h>
+#include <libyuv/libyuv.h>
 
-//#pragma comment(lib,"libyuv.lib")
+#pragma comment(lib,"libyuv.lib")
 
 #define WXLocker     std::recursive_mutex
 #define WXAutoLock   std::lock_guard<WXLocker>

@@ -882,13 +882,7 @@
     <ClInclude Include="..\..\WXMedia_SDK\include\FfmpegIncludes.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\LibInst.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\WXMedia_SDK\include\WXBase.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXLog.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="glfw\glfw3.h">
@@ -919,132 +913,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaDefines.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\libyuv.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\alpha.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\api_structs.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\avif.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\bitstream.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\box.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\chroma_sampling.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\colorconversion.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\common_utils.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\context.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\decoder_dav1d.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\decoder_ffmpeg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\error.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\exif.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\file.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\hdr_sdr.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\heif.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\heif_cxx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\heif_emscripten.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\heif_plugin.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\heif_properties.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\heif_regions.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\heif_version.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\hevc.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\init.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\jpeg.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\jpeg2000.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\logging.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\mask_image.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\metadata_compression.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\monochrome.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\nclx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\pixelimage.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\plugin_registry.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\region.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\rgb2rgb.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\rgb2yuv.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\rgb2yuv_sharp.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\security_limits.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\uncompressed_image.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\vvc.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libheif\yuv2rgb.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -2015,9 +1883,6 @@
     <ClCompile Include="apm\wpd_tree.cc">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\WXMedia_SDK\include\WXLog.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="glfw\glfw.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -2028,114 +1893,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\..\WXMedia_SDK\include\SoundTouch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\WXMedia_SDK\include\libyuv.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_alpha.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_avif.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_bitstream.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_box.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_chroma_sampling.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_colorconversion.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_common_utils.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_context.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_decoder_dav1d.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_decoder_ffmpeg.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_error.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_exif.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_file.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_hdr_sdr.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_hevc.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_init.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_jpeg.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_jpeg2000.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_mask_image.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_metadata_compression.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_monochrome.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_nclx.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_pixelimage.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_plugin.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_plugin_registry.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_properties.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_region.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_regions.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_rgb2rgb.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_rgb2yuv.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_rgb2yuv_sharp.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_uncompressed_image.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_vvc.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="libheif\heif_yuv2rgb.cc">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

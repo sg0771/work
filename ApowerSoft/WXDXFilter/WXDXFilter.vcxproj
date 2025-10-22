@@ -22,11 +22,7 @@
     <ResourceCompile Include="WXDXFilter.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\WXMedia_SDK\include\libyuv.cc" />
     <ClCompile Include="WXDXFilter.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\WXMedia_SDK\include\libyuv.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

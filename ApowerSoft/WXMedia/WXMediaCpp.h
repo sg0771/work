@@ -1,4 +1,4 @@
-﻿/*
+/*
 内部编译使用的头文件
 */
 #ifndef  _WXMEDIA_CPP_H_
@@ -7,7 +7,7 @@
 #include <WXBase.h>
 #include <WXMedia.h>
 #include <FfmpegIncludes.h>      // ffmpeg 头文件
-#include <libyuv.h>
+#include <libyuv/libyuv.h>
 #include <WXLog.h>
 
 #define DBG_GET_REFCOUNT(spUnk)   (spUnk ? (spUnk.p->AddRef(), spUnk.p->Release() - 1) : 0)

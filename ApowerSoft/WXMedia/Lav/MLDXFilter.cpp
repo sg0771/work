@@ -1,12 +1,12 @@
 #include "WXMediaCpp.h"
 #include "libyuv/libyuv.h"
-//äÖÈ¾ YUV420P »òÕß RGB32 µÄ  AVFrame µ½HWNDÉÏÃæ
+//æ¸²æŸ“ YUV420P æˆ–è€… RGB32 çš„  AVFrame åˆ°HWNDä¸Šé¢
 
 class DXRender {
 public:
 	DXRender() {
 
-		//::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM ³õÊ¼»¯
+		//::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM åˆå§‹åŒ–
 	}
 	virtual ~DXRender() {
 		Close();
@@ -27,7 +27,7 @@ private:
 	CComPtr<IDirect3D9Ex>		m_pD3D = nullptr;
 	CComPtr<IDirect3DDevice9Ex>	m_pDev = nullptr;
 
-	//äÖÈ¾RGB32
+	//æ¸²æŸ“RGB32
 	CComPtr<IDirect3DSurface9>  m_pSurfRGB = nullptr;
 	CComPtr<IDirect3DSurface9>  m_pSurfYV12 = nullptr;
 
@@ -40,14 +40,14 @@ private:
 	int   m_dstW = 0;
 	int   m_dstH = 0;
 
-	RECT m_rcSrc;//ÔÚÄÚ´æÎÆÀíÉÏµÄÊµ¼ÊÇøÓò
+	RECT m_rcSrc;//åœ¨å†…å­˜çº¹ç†ä¸Šçš„å®é™…åŒºåŸŸ
 
 	D3DPRESENT_PARAMETERS m_d3dpp;
 
 	//------------------------------d3dx9  shader-------------------------------------------
 	bool  CreateD3D(int index) {
 		HRESULT hr = E_FAIL;
-		//ÏÔÊ¾Æ÷²ÎÊı
+		//æ˜¾ç¤ºå™¨å‚æ•°
 		D3DDISPLAYMODE d3ddm;
 		ZeroMemory(&d3ddm, sizeof(d3ddm));
 		hr = m_pD3D->GetAdapterDisplayMode(index, &d3ddm);
@@ -56,8 +56,8 @@ private:
 			return false;
 		}
 
-		//ÆÁÄ»´óĞ¡
-		m_iWidth  = d3ddm.Width;
+		//å±å¹•å¤§å°
+		m_iWidth = d3ddm.Width;
 		m_iHeight = d3ddm.Height;
 		D3DCAPS9 caps;
 		hr = m_pD3D->GetDeviceCaps(index, D3DDEVTYPE_HAL, &caps);
@@ -98,7 +98,7 @@ private:
 
 		// Create textures.
 		m_pSurfYV12 = nullptr;
-		hr = m_pDev->CreateOffscreenPlainSurface(m_iWidth, m_iHeight, 
+		hr = m_pDev->CreateOffscreenPlainSurface(m_iWidth, m_iHeight,
 			(D3DFORMAT)MAKEFOURCC('Y', 'V', '1', '2'), D3DPOOL_DEFAULT, &m_pSurfYV12, nullptr);
 		if (FAILED(hr)) {
 			WXLogA("m_pD3D->CreateOffscreenPlainSurface YV12 error");
@@ -110,7 +110,7 @@ private:
 	}
 
 public:
-	//´´½¨²¥·Å¶ÔÏó
+	//åˆ›å»ºæ’­æ”¾å¯¹è±¡
 	bool  Open(HWND hwnd) {
 		WXAutoLock al(m_mutex);
 
@@ -122,7 +122,7 @@ public:
 		}
 		m_hWnd = hwnd;// ? hwnd : GetDesktopWindow();
 		int nCount = m_pD3D->GetAdapterCount();
-		for (int index = 0; index < nCount; index++) { //¶àÏÔ¿¨´¦Àí
+		for (int index = 0; index < nCount; index++) { //å¤šæ˜¾å¡å¤„ç†
 			if (CreateD3D(index)) {//d3dx9 
 				m_bOpen = true;
 				break;
@@ -134,7 +134,7 @@ public:
 		return m_bOpen;
 	}
 
-	//¹Ø±Õ
+	//å…³é—­
 	void  Close() {
 		WXAutoLock al(m_mutex);
 		if (m_bOpen) {
@@ -163,9 +163,9 @@ public:
 			}
 			else {
 				//Scale
-				int dw = (m_iHeight * width / height) / 2 * 2;//Ëõ·Åµ½µ±Ç°¸ß¶È
-				int dh = (m_iWidth * height / width) / 2 * 2;//Ëõ·Åµ½µ±Ç°¿í¶È
-				if (dw > m_iWidth) { //³¬³öµ±Ç°¿í¶È
+				int dw = (m_iHeight * width / height) / 2 * 2;//ç¼©æ”¾åˆ°å½“å‰é«˜åº¦
+				int dh = (m_iWidth * height / width) / 2 * 2;//ç¼©æ”¾åˆ°å½“å‰å®½åº¦
+				if (dw > m_iWidth) { //è¶…å‡ºå½“å‰å®½åº¦
 					m_dstW = m_iWidth;
 					m_dstH = dh;
 				}
@@ -217,9 +217,9 @@ public:
 			}
 			else {
 				//Scale
-				int dw = (m_iHeight * width / height) / 2 * 2;//Ëõ·Åµ½µ±Ç°¸ß¶È
-				int dh = (m_iWidth * height / width) / 2 * 2;//Ëõ·Åµ½µ±Ç°¿í¶È
-				if (dw > m_iWidth) { //³¬³öµ±Ç°¿í¶È
+				int dw = (m_iHeight * width / height) / 2 * 2;//ç¼©æ”¾åˆ°å½“å‰é«˜åº¦
+				int dh = (m_iWidth * height / width) / 2 * 2;//ç¼©æ”¾åˆ°å½“å‰å®½åº¦
+				if (dw > m_iWidth) { //è¶…å‡ºå½“å‰å®½åº¦
 					m_dstW = m_iWidth;
 					m_dstH = dh;
 				}
@@ -250,7 +250,7 @@ public:
 		m_rcSrc.top = 0;
 		m_rcSrc.bottom = m_dstH;
 
-		//ĞèÒª¼ÆËãÒ»ÏÂ¾ÓÖĞ³ß´ç
+		//éœ€è¦è®¡ç®—ä¸€ä¸‹å±…ä¸­å°ºå¯¸
 
 		m_pDev->BeginScene();
 		CComPtr<IDirect3DSurface9> pBackBuffer = nullptr;
@@ -264,13 +264,13 @@ public:
 
 		int dx = 0;
 		int dy = 0;
-		GetXY(m_dstW, m_dstH, rcDst.right, rcDst.bottom,dx,dy);
+		GetXY(m_dstW, m_dstH, rcDst.right, rcDst.bottom, dx, dy);
 		rcDst.left += dx;
 		rcDst.right -= dx;
 		rcDst.top += dy;
 		rcDst.bottom -= dy;
 
-		hr = m_pDev->Present(&m_rcSrc, &rcDst, nullptr, nullptr);//äÖÈ¾µ½´°¿Ú
+		hr = m_pDev->Present(&m_rcSrc, &rcDst, nullptr, nullptr);//æ¸²æŸ“åˆ°çª—å£
 
 		if (hr == D3DERR_DEVICELOST) {
 			hr = m_pDev->TestCooperativeLevel();
@@ -281,7 +281,7 @@ public:
 		}
 	}
 
-	//AVFrame ½âÂëÍ¼ÏñÏÔÊ¾
+	//AVFrame è§£ç å›¾åƒæ˜¾ç¤º
 	void  Display(AVFrame* avframe) {
 		WXAutoLock al(m_mutex);
 		if (m_bOpen && avframe) {
@@ -290,10 +290,11 @@ public:
 			if (avframe->format == AV_PIX_FMT_YUV420P) {
 				pSurf = m_pSurfYV12;
 				hr = UpdataDataYV12(pSurf, avframe->width, avframe->height,
-					avframe->data[0],avframe->linesize[0],
+					avframe->data[0], avframe->linesize[0],
 					avframe->data[1], avframe->linesize[1],
 					avframe->data[2], avframe->linesize[2]);
-			}else 	if (avframe->format == AV_PIX_FMT_RGB32) {
+			}
+			else 	if (avframe->format == AV_PIX_FMT_RGB32) {
 				pSurf = m_pSurfRGB;
 				hr = UpdataDataRGB32(pSurf, avframe->width, avframe->height,
 					avframe->data[0], avframe->linesize[0]);
@@ -305,7 +306,7 @@ public:
 	}
 
 
-	//RGB32 YV12 ½ô´ÕÊı¾İÏÔÊ¾
+	//RGB32 YV12 ç´§å‡‘æ•°æ®æ˜¾ç¤º
 	void  Display(int bRGB32, int width, int height, uint8_t* buf, int pitch) {
 		WXAutoLock al(m_mutex);
 		HRESULT hr = E_FAIL;
@@ -321,12 +322,12 @@ public:
 			uint8_t* pY = buf;
 			int nPitchY = pitch;
 			uint8_t* pU = buf + size;
-			int nPitchU = pitch/2;	
-			uint8_t* pV = buf + size * 5/4;
-			int nPitchV = pitch/2;
+			int nPitchU = pitch / 2;
+			uint8_t* pV = buf + size * 5 / 4;
+			int nPitchV = pitch / 2;
 			hr = UpdataDataYV12(pSurf, width, height,
 				pY, nPitchY,
-				pU, nPitchU, 
+				pU, nPitchU,
 				pV, nPitchV);
 		}
 		if (SUCCEEDED(hr)) {
@@ -344,15 +345,15 @@ WXMEDIA_API void* MLVRenderCreate(HWND hwnd) {
 	return nullptr;
 }
 
-WXMEDIA_API void MLVRenderDisplayFrame(void* p,struct AVFrame* frame) {
+WXMEDIA_API void MLVRenderDisplayFrame(void* p, struct AVFrame* frame) {
 	DXRender* pObj = (DXRender*)p;
 	if (pObj) {
-		 pObj->Display(frame);
+		pObj->Display(frame);
 	}
 }
 
 
-//äÖÈ¾YV12/RGB32ÄÚ´æÊı¾İ
+//æ¸²æŸ“YV12/RGB32å†…å­˜æ•°æ®
 WXMEDIA_API void MLVRenderDisplayData(void* p, int bRGB32, int width, int height, uint8_t* buf, int pitch) {
 	DXRender* pObj = (DXRender*)p;
 	if (pObj) {

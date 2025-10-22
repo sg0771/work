@@ -39,7 +39,7 @@
 #include "resample_functions.h"
 #include "transform.h"
 #include "../core/softwire_helpers.h"
-#include <libyuv.h>
+#include <libyuv/libyuv.h>
 
 class FilteredResize
 {
