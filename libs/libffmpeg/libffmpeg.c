@@ -1,6 +1,5 @@
 #include "ffmpeg-config.h"
 #define DATA
-
 #pragma comment(lib,"libssl.lib")
 #pragma comment(lib,"libeay32.lib")
 #pragma comment(lib,"libzmq.lib")

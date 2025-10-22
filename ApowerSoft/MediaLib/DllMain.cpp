@@ -25,9 +25,9 @@ HRESULT capture_image(char* filename, float second, wchar_t* output, int height)
 #include "D3D_Filters/ML_D3DRender.h"
 #pragma comment(lib, "libffmpeg.lib")
 #pragma comment(lib, "gdiplus.lib")
-//#pragma comment(lib, "libyuv.lib")
-//#pragma comment(lib, "libheif.lib")
-
+#pragma comment(lib, "glew.lib")
+#pragma comment(lib, "glfw.lib")
+#pragma comment(lib, "opengl32.lib")
 #pragma comment(lib, "strmiids.lib") //DirectShow
 
 static bool s_bFfmpegExe = false;//是否可以调用ffmpeg.exe

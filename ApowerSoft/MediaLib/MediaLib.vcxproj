@@ -524,9 +524,6 @@
     <ClInclude Include="avisynth\filters\transform.h" />
     <ClInclude Include="avisynth\filters\turn.h" />
     <ClInclude Include="avisynth\filters\turnfunc.h" />
-    <ClInclude Include="glew\glew.h" />
-    <ClInclude Include="glew\wglew.h" />
-    <ClInclude Include="glfw\glfw3.h" />
     <ClInclude Include="ImageProcess\Filters_OpenGLFilter.h" />
     <ClInclude Include="ImageProcess\Filters_OpenGLFilterSegment.h" />
     <ClInclude Include="ImageProcess\Filters_OpenglMotion.h" />
@@ -822,8 +819,6 @@
     <ClCompile Include="ffms2\utils.cpp" />
     <ClCompile Include="ffms2\videosource.cpp" />
     <ClCompile Include="ffms2\videoutils.cpp" />
-    <ClCompile Include="glew\glew.cpp" />
-    <ClCompile Include="glfw\glfw.cpp" />
     <ClCompile Include="ImageProcess\Filters_OpenGLFilter.cpp" />
     <ClCompile Include="ImageProcess\ImageProcess_OpenGL.cpp" />
     <ClCompile Include="ImageProcess\ImageProcess_OpenGLFixed.cpp" />

@@ -2485,6 +2485,7 @@ __declspec(naked) void I422ToRGBARow_AVX2(
 }
 #endif  // HAS_I422TORGBAROW_AVX2
 
+
 #if defined(HAS_I422TOARGBROW_SSSE3)
 // TODO(fbarchard): Read that does half size on Y and treats 420 as 444.
 // Allows a conversion with half size scaling.

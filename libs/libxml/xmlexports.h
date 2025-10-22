@@ -57,12 +57,12 @@
   #undef XMLCALL
   #undef XMLCDECL
   #if defined(IN_LIBXML) && !defined(LIBXML_STATIC)
-    #define XMLPUBFUN __declspec(dllexport)
-    #define XMLPUBVAR __declspec(dllexport)
+    #define XMLPUBFUN
+    #define XMLPUBVAR 
   #else
     #define XMLPUBFUN
     #if !defined(LIBXML_STATIC)
-      #define XMLPUBVAR __declspec(dllimport) extern
+      #define XMLPUBVAR  extern
     #else
       #define XMLPUBVAR extern
     #endif
@@ -85,12 +85,12 @@
   #undef XMLCALL
   #undef XMLCDECL
   #if defined(IN_LIBXML) && !defined(LIBXML_STATIC)
-    #define XMLPUBFUN __declspec(dllexport)
-    #define XMLPUBVAR __declspec(dllexport) extern
+    #define XMLPUBFUN 
+    #define XMLPUBVAR  extern
   #else
     #define XMLPUBFUN
     #if !defined(LIBXML_STATIC)
-      #define XMLPUBVAR __declspec(dllimport) extern
+      #define XMLPUBVAR  extern
     #else
       #define XMLPUBVAR extern
     #endif
@@ -114,12 +114,12 @@
    * by also making that declaration when compiling client code.
    */
   #if defined(IN_LIBXML) && !defined(LIBXML_STATIC)
-    #define XMLPUBFUN __declspec(dllexport)
-    #define XMLPUBVAR __declspec(dllexport) extern
+    #define XMLPUBFUN 
+    #define XMLPUBVAR extern
   #else
     #define XMLPUBFUN
     #if !defined(LIBXML_STATIC)
-      #define XMLPUBVAR __declspec(dllimport) extern
+      #define XMLPUBVAR  extern
     #else
       #define XMLPUBVAR extern
     #endif
@@ -138,12 +138,12 @@
   #undef XMLCALL
   #undef XMLCDECL
   #if defined(IN_LIBXML) && !defined(LIBXML_STATIC)
-    #define XMLPUBFUN __declspec(dllexport)
-    #define XMLPUBVAR __declspec(dllexport)
+    #define XMLPUBFUN 
+    #define XMLPUBVAR 
   #else
     #define XMLPUBFUN
     #if !defined(LIBXML_STATIC)
-      #define XMLPUBVAR __declspec(dllimport) extern
+      #define XMLPUBVAR  extern
     #else
       #define XMLPUBVAR
     #endif
