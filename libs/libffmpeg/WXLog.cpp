@@ -213,6 +213,8 @@ public:
 
 	int Init(const wchar_t* strFileName) {
 		WXAutoLock al(s_lockLog);
+		if (s_bInitLog)
+			return 1;
 		int bRet = Open(strFileName);
 		s_bInitLog = bRet;
 		return bRet;
@@ -225,22 +227,14 @@ EXTERN_C int   WXLogInit(const wchar_t* strFileName) {
 }
 
 EXTERN_C void  WXLogAOnce(const char* format, ...) {
-	va_list args
-#ifdef _WIN32
-		= nullptr
-#endif
-		;
+	va_list args = nullptr;
 	va_start(args, format);
 	WXLogInstance::GetInst().WXLogVOnce(format, args);    // 调用内部处理函数
 	va_end(args);
 }
 
 EXTERN_C void  WXLogWOnce(const wchar_t* format, ...) {
-	va_list args
-#ifdef _WIN32
-		= nullptr
-#endif
-		;
+	va_list args = nullptr;
 	va_start(args, format);
 	WXLogInstance::GetInst().WXLogVOnce(format, args);    // 调用内部处理函数
 	va_end(args);
@@ -268,4 +262,61 @@ EXTERN_C void  WXLogW(const wchar_t* format, ...) {
 	va_end(args);
 }
 
+
+//-----------------------  全局参数设置 ----------------------------
+
+#ifdef _WIN32
+#include <string>
+//ini配置
+static std::wstring s_strIniPath = L"";
+//设置ini路径，只能设置一次
+EXTERN_C void WXSetGlobalPath(const wchar_t* wszPath) {
+	if (s_strIniPath.length() == 0) {
+		s_strIniPath = wszPath;
+	}
+}
+
+//配置ini的数值
+EXTERN_C void WXSetGlobalValue(const wchar_t* wszKey, int nValue) {
+	std::wstring strValue = std::to_wstring(nValue);
+	::WritePrivateProfileStringW(L"WXMedia", wszKey, strValue.c_str(), s_strIniPath.c_str());
+}
+
+//配置ini的字符串
+EXTERN_C void WXSetGlobalString(const wchar_t* wszKey, const wchar_t* strValue) {
+	::WritePrivateProfileStringW(L"WXMedia", wszKey, strValue, s_strIniPath.c_str());
+}
+
+//从ini获取数值,不存在则返回默认值
+EXTERN_C int WXGetGlobalValue(const wchar_t* wszKey, int nDefValue) {
+	return ::GetPrivateProfileIntW(L"WXMedia", wszKey, nDefValue, s_strIniPath.c_str());
+}
+
+//从ini获取字符串,不存在则返回默认值
+//strRetValue 返回值, 默认长度MAX_PATH
+//strDefValue 默认值
+EXTERN_C void WXGetGlobalString(const wchar_t* wszKey, wchar_t* strRetValue, wchar_t* strDefValue) {
+	::GetPrivateProfileStringW(L"WXMedia", wszKey, strDefValue, strRetValue, MAX_PATH, s_strIniPath.c_str());
+}
+
+HINSTANCE g_hInst = nullptr;
+BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
+	g_hInst = (HINSTANCE)hModule;
+	switch (ul_reason_for_call) {
+	case DLL_PROCESS_ATTACH:
+		timeBeginPeriod(1);
+		//其它初始化工作
+		break;
+	case DLL_PROCESS_DETACH:
+		timeEndPeriod(1);
+		break;
+	case DLL_THREAD_ATTACH:
+		break;
+	case DLL_THREAD_DETACH:
+		break;
+	}
+	return (TRUE);
+}
+
+#endif
 

@@ -170,7 +170,9 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 
 
 	//初始运行路径
-	std::wstring s_strRunPath = ML_GetString(L"runpath");
+	wchar_t wszRunPath[MAX_PATH] = { 0 };
+	WXGetGlobalString(L"runpath", wszRunPath, L""); //EXE路径
+	std::wstring s_strRunPath = wszRunPath;
 	fullpath = s_strRunPath + std::wstring(filename);
 	if (WXBase::Exists(fullpath)) { 
 		return fullpath;
@@ -189,7 +191,9 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 	}
 
 	//相对于 Medialib.dll 的路径
-	std::wstring s_strDllDir = ML_GetString(L"dlldir");
+	wchar_t wszDllPath[MAX_PATH] = { 0 };
+	WXGetGlobalString(L"dlldir", wszDllPath, L""); //EXE路径
+	std::wstring s_strDllDir = wszDllPath;
 	fullpath = s_strDllDir + std::wstring(filename);
 	if (WXBase::Exists(fullpath)) {
 		return fullpath;
@@ -208,7 +212,9 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 	}
 
 	//在ProgramData 的路径
-	std::wstring s_strProgData = ML_GetString(L"ProgramData");;
+	wchar_t wszProgData[MAX_PATH] = { 0 };
+	WXGetGlobalString(L"ProgramData", wszProgData, L""); //ProgramData 路径
+	std::wstring s_strProgData = wszProgData;
 	fullpath = s_strProgData + std::wstring(filename);
 	if (WXBase::Exists(fullpath)) {
 		return fullpath;
@@ -308,219 +314,13 @@ MEDIALIB_API INT64 GetAssDuration(char* utf8_path)
 }
 
 
-static bool MakeSureDirectoryPathExistsW(const std::wstring& path) {
-	size_t pos = 0;
-	std::wstring subdir;
-
-	// 循环遍历每个目录层级
-	while ((pos = path.find_first_of(L"/\\", pos + 1)) != std::wstring::npos) {
-		subdir = path.substr(0, pos);
-		int len = subdir.length();
-		const wchar_t* tt = subdir.c_str();
-		if (tt[len - 1] == L':') {
-			continue;
-		}
-		if (!CreateDirectoryW(subdir.c_str(), nullptr)) {
-			DWORD error = GetLastError();
-			if (error != ERROR_ALREADY_EXISTS) {
-				std::wcerr << L"无法创建目录：" << subdir << L"，错误代码：" << error << std::endl;
-				return false;
-			}
-		}
-	}
-
-	// 确保路径的最后一部分被创建
-	if (!CreateDirectoryW(path.c_str(), nullptr)) {
-		DWORD error = GetLastError();
-		if (error != ERROR_ALREADY_EXISTS) {
-			std::wcerr << L"无法创建目录：" << path << L"，错误代码：" << error << std::endl;
-			return false;
-		}
-	}
-
-	return true;
-}
-
-
-
-
-//ini配置
-static WXString g_strIniPath = L"";
-
-//从ini获取数值
-MEDIALIB_API int MLGetIniValue(WXCTSTR wszReg, WXCTSTR wszKey, int nDefaultValue) {
-#ifdef _WIN32
-	return ::GetPrivateProfileInt(wszReg, wszKey, nDefaultValue, g_strIniPath.str());
-#else
-	return nDefaultValue;
-#endif
-}
-
-MEDIALIB_API void MLGetStringValue(WXCTSTR wszReg, WXCTSTR wszKey,  wchar_t* strValue) {
-#ifdef _WIN32
-	::GetPrivateProfileStringW(wszReg, wszKey, L"nullptr", strValue, MAX_PATH, g_strIniPath.str());
-#endif
-}
-
-//配置ini的数值
-MEDIALIB_API void MLSetIniValue(WXCTSTR wszReg, WXCTSTR wszKey, int nValue) {
-#ifdef _WIN32
-	WXString wxstr;
-	wxstr.Format(L"%d", nValue);
-	::WritePrivateProfileString(wszReg, wszKey, wxstr.str(), g_strIniPath.str());
-#endif
-}
-
-//配置ini的字符串
-MEDIALIB_API void MLSetIniString(const wchar_t* wszReg, const wchar_t* wszKey, const wchar_t* strValue) {
-#ifdef _WIN32
-	::WritePrivateProfileString(wszReg, wszKey, strValue, g_strIniPath.str());
-#endif
-}
-
-#include <dxva2api.h>
-#include <initguid.h>
-DEFINE_GUID(ff_DXVA2_ModeH264_E, 0x1b81be68, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-
-DEFINE_GUID(ff_DXVA2_ModeH264_F, 0x1b81be69, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);
-
-DEFINE_GUID(ff_DXVADDI_Intel_ModeH264_E, 0x604F8E68, 0x4951, 0x4C54, 0x88, 0xFE, 0xAB, 0xD2, 0x5C, 0x15, 0xB3, 0xD6);
-
-DEFINE_GUID(ff_DXVA2_ModeHEVC_VLD_Main, 0x5b11d51b, 0x2f4c, 0x4452, 0xbc, 0xc3, 0x09, 0xf2, 0xa1, 0x16, 0x0c, 0xc0);
-
-DEFINE_GUID(ff_IID_IDirectXVideoDecoderService, 0xfc51a551, 0xd5e7, 0x11d9, 0xaf, 0x55, 0x00, 0x05, 0x4e, 0x43, 0xff, 0x02);
-
-//硬解码能力检测
-MEDIALIB_API  BOOL MLDetectDXVADecode() {
-
-	BEGIN_LOG_FUNC
-
-	//ini强制禁用硬解码
-	int bDxvaSupport = MLGetIniValue(L"WXMedia", L"DxvaSupport", -1);
-	if (bDxvaSupport == 0) // 不处理
-		return 0;
-
-	//D3D9
-	if (LibInst::GetInst().m_libD3D9 == nullptr ||
-		LibInst::GetInst().m_libDXVA2 == nullptr ||
-		LibInst::GetInst().mDirect3DCreate9 == nullptr) {
-		return 0;
-	}
-	//初始化检测
-	MLSetIniValue(L"VideoDecoder", L"H264_DXVA", 0);
-	MLSetIniValue(L"VideoDecoder", L"H265_DXVA", 0);
-
-	//初始化
-	HRESULT hr = S_OK;
-	CComPtr<IDirect3D9> pD3D = LibInst::GetInst().mDirect3DCreate9(D3D_SDK_VERSION);
-	if (pD3D == nullptr) {
-		WXLogA("%ws Direct3DCreate9 Error.",__FUNCTIONW__);
-		return FALSE;
-	}
-
-	// Get the adapter display mode
-	D3DDISPLAYMODE d3ddm;
-	if (FAILED(pD3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &d3ddm))) {
-		WXLogA("%ws GetAdapterDisplayMode Error.", __FUNCTIONW__);
-		return FALSE;
-	}
-
-	// Set up the presentation parameters
-	D3DPRESENT_PARAMETERS d3dpp = { 0 };
-	d3dpp.Windowed = TRUE;
-	d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
-	d3dpp.BackBufferFormat = d3ddm.Format;
-
-	// Create a Direct3D device
-	CComPtr < IDirect3DDevice9> pD3DDevice = nullptr;
-	if (FAILED(pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, GetDesktopWindow(),
-		D3DCREATE_SOFTWARE_VERTEXPROCESSING, &d3dpp, &pD3DDevice))) {
-		WXLogA("%ws D3D9 CreateDevice Error.", __FUNCTIONW__);
-		return FALSE;
-	}
-
-	UINT resetToken = 0;
-	CComPtr<IDirect3DDeviceManager9> pDeviceManager9;
-	hr = LibInst::GetInst().mDXVA2CreateDirect3DDeviceManager9(&resetToken, &pDeviceManager9);
-	if (FAILED(hr) || pDeviceManager9 == nullptr) {
-		WXLogA("%ws DXVA2CreateDirect3DDeviceManager9 Error.", __FUNCTIONW__);
-		return FALSE;
-	}
-
-	hr = pDeviceManager9->ResetDevice(pD3DDevice, resetToken);
-	if (FAILED(hr)) {
-		WXLogA("%ws IDirect3DDeviceManager9 ResetDevice Error.", __FUNCTIONW__);
-		return FALSE;
-	}
-
-	HANDLE pDeviceHandle = nullptr;
-	hr = pDeviceManager9->OpenDeviceHandle(&pDeviceHandle);
-	if (FAILED(hr)) {
-		WXLogA("%ws IDirect3DDeviceManager9 OpenDeviceHandle Error.", __FUNCTIONW__);
-		pDeviceManager9->CloseDeviceHandle(&pDeviceHandle);
-		pDeviceHandle = nullptr;
-		return FALSE;
-	}
-
-	// Create a DirectX Video Acceleration device manager
-	CComPtr < IDirectXVideoDecoderService> pDXVAService = nullptr;
-
-	hr = pDeviceManager9->GetVideoService(pDeviceHandle, ff_IID_IDirectXVideoDecoderService, (void**)&pDXVAService);
-	if (FAILED(hr)) {
-		WXLogA("%ws IDirect3DDeviceManager9 GetVideoService Error.", __FUNCTIONW__);
-		pDeviceManager9->CloseDeviceHandle(&pDeviceHandle);
-		pDeviceHandle = nullptr;
-		return FALSE;
-	}
-
-	// Check for H.264 decoder support
-	UINT numProfiles = 0;
-	GUID* pGuids = NULL;// = new GUID[numProfiles];
-	if (FAILED(pDXVAService->GetDecoderDeviceGuids(&numProfiles, &pGuids)) || pGuids == nullptr) {
-		WXLogA("%ws GetVideoService GetDecoderDeviceGuids Error.", __FUNCTIONW__);
-		pDeviceManager9->CloseDeviceHandle(&pDeviceHandle);
-		pDeviceHandle = nullptr;
-		return FALSE;
-	}
-
-	int isDxvaSupport = 0;
-	for (UINT i = 0; i < numProfiles; ++i) {
-		if (pGuids[i] == ff_DXVA2_ModeH264_E) {
-			MLSetIniValue(L"VideoDecoder", L"H264_DXVA", 1);
-			isDxvaSupport = 1;
-		}
-		if (pGuids[i] == ff_DXVA2_ModeH264_F) {
-			MLSetIniValue(L"VideoDecoder", L"H264_DXVA", 1);
-			isDxvaSupport = 1;
-		}
-		if (pGuids[i] == ff_DXVADDI_Intel_ModeH264_E) {
-			MLSetIniValue(L"VideoDecoder", L"H264_DXVA", 1);
-			isDxvaSupport = 1;
-		}
-		if (pGuids[i] == ff_DXVA2_ModeHEVC_VLD_Main) {
-			MLSetIniValue(L"VideoDecoder", L"H265_DXVA", 1);
-			isDxvaSupport = 1;
-		}
-	}
-
-	//delete[] pGuids;
-
-	pDeviceManager9->CloseDeviceHandle(&pDeviceHandle);
-	pDeviceHandle = nullptr;
-	MLGetIniValue(L"WXMedia", L"DxvaSupport", isDxvaSupport);
-	return isDxvaSupport;
-}
-
-//H264  H265 硬编码检测
-#define TWDITH   1920
-#define THEIGHT  1080
-#define TBITRATE 8000*1000
-#define STREAM_FRAME_RATE 25
-
-static WXString sStrH264Codec = L"libx264";
-static WXString sStrH265Codec = L"libx265";
-static int MLCheckQSV(BOOL bH264, WXCTSTR wszCodec, WXString& strHWCodec, int& qsv_flag) {
-	qsv_flag = 0;
+static int _CheckQSV(BOOL bH264, WXCTSTR wszCodec) {
+	//H264  H265 硬编码检测
+	const int TWDITH = 1920;
+	const int THEIGHT = 1080;
+	const int TBITRATE = 8000 * 1000;
+	const int STREAM_FRAME_RATE = 25;
+	int qsv_flag = 0;
 	WXString str;
 	str.Format(wszCodec);
 	AVCodec* codec = avcodec_find_encoder_by_name(str.c_str());
@@ -540,7 +340,6 @@ static int MLCheckQSV(BOOL bH264, WXCTSTR wszCodec, WXString& strHWCodec, int& q
 	int ret = avcodec_open2(ctx, codec, &opt);
 	if (ret >= 0) {
 		qsv_flag = 1;
-		strHWCodec.Format(wszCodec);
 		WXLogA("%s Support Hardware Codec =  %s OK ",__FUNCTION__, str.c_str());
 		avcodec_close(ctx);
 	}else {
@@ -549,32 +348,25 @@ static int MLCheckQSV(BOOL bH264, WXCTSTR wszCodec, WXString& strHWCodec, int& q
 	avcodec_free_context(&ctx);
 	return qsv_flag;
 }
-MEDIALIB_API const wchar_t* MLGetH265Codec() {
-	return sStrH265Codec.str();
-}
-MEDIALIB_API const wchar_t* MLGetH264Codec() {
-	return sStrH264Codec.str();
-}
+
 //是否支持H265硬编码
 static WXLocker s_lckQSV;
-static int MLSupportQSVCodec(BOOL bH264) {
+static int _SupportQSVCodec(BOOL bH264) {
 	WXAutoLock al(s_lckQSV);
-	int bCheckQSV = MLGetIniValue(_T("WXMedia"), _T("Support_QSV_Encoder"), -1);
+	int bCheckQSV = WXGetGlobalValue(_T("HWEncoder"), -1);//硬编码总开关
 	if (bCheckQSV == 0)
 		return 0;
 
-	const wchar_t *strHW = bH264 ? L"H264_HW" : L"H265_HW";
 	const wchar_t* strCodec = bH264 ? L"h264_qsv" : L"hevc_qsv";
-
-	int nHw = MLGetIniValue(L"WXMedia", strHW, -1);
-	if (nHw > 0) {
-		MLSetIniValue(_T("WXMedia"), _T("Support_QSV_Encoder"), 1);
-		bH264 ? sStrH264Codec = L"h264_qsv": sStrH265Codec = L"hevc_qsv";
+	int nHwCodec = WXGetGlobalValue(strCodec, -1);
+	if (nHwCodec > 0) { //支持
+		WXSetGlobalValue(_T("HWEncoder"), 1);
 		return 1;
-	}else if (nHw == 0) {
+	}
+	else if (nHwCodec == 0) { //不支持
 		return 0;
 	}
-	MLSetIniValue(L"WXMedia", strHW, 0);
+	WXSetGlobalValue(_T("HWEncoder"), 0);
 	if (LibInst::GetInst().m_libD3D9 == nullptr) {
 		//硬编码都需要D3D9 对应功能
 		return 0;
@@ -584,27 +376,27 @@ static int MLSupportQSVCodec(BOOL bH264) {
 	if (x * y <= 1366 * 768) { 
 		return 0;
 	}
-	int qsv_flag = 0;
-	MLCheckQSV(bH264, strCodec, bH264? sStrH264Codec: sStrH265Codec, qsv_flag);
-	if (qsv_flag) {
-		MLSetIniValue(_T("WXMedia"), _T("Support_QSV_Encoder"), 1);
-	}
-	WXLogA("%s qsv_flag=%d ", __FUNCTION__, qsv_flag);
-	MLSetIniValue(L"WXMedia", strHW, qsv_flag);
-	ML_SetValue(bH264?L"H264":L"H265", qsv_flag);
+	int qsv_flag = _CheckQSV(bH264, strCodec);
+	WXSetGlobalValue(strCodec, qsv_flag);;
 	return qsv_flag;
 }
 
 MEDIALIB_API int MLSupportH265Codec() {
 	WXAutoLock al(s_lckQSV);
-	BEGIN_LOG_FUNC
-	return MLSupportQSVCodec(TRUE);
+	return _SupportQSVCodec(TRUE);
 }
 
 MEDIALIB_API int MLSupportH264Codec() {
 	WXAutoLock al(s_lckQSV);
-	BEGIN_LOG_FUNC
-	return MLSupportQSVCodec(FALSE);
+	return _SupportQSVCodec(FALSE);
+}
+
+//--------------------
+static void WINAPI ML_LogW(const wchar_t* format, va_list args) {
+	wchar_t wszMsg[4096];
+	memset(wszMsg, 0, 4096 * 2);
+	vswprintf(wszMsg, format, args);
+	WXLogW(L"%ws", wszMsg);
 }
 
 MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool mode) {
@@ -614,33 +406,33 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 
 	BEGIN_LOG_FUNC
 	std::wstring s_strCompany = WXBase::UTF8ToUTF16(_company);
-	ML_SetString(L"company", s_strCompany.c_str());
+	WXSetGlobalString(L"company", s_strCompany.c_str());
 
 	std::wstring s_strProduct = WXBase::UTF8ToUTF16(_product);
-	ML_SetString(L"product", s_strProduct.c_str());
+	WXSetGlobalString(L"product", s_strProduct.c_str());
 
 	std::wstring s_strLogDir = WXBase::getEnvVarW(L"appdata") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\log\\";
-	ML_SetString(L"logdir", s_strLogDir.c_str());
+	WXSetGlobalString(L"logdir", s_strLogDir.c_str());
 
 	std::wstring s_strDump = s_strLogDir + L"crash.dmp";
-	ML_SetString(L"dump", s_strDump.c_str());
+	WXSetGlobalString(L"dump", s_strDump.c_str());
 
 	std::wstring s_strTempDir = WXBase::getEnvVarW(L"temp") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\";
-	ML_SetString(L"temp", s_strTempDir.c_str());
+	WXSetGlobalString(L"temp", s_strTempDir.c_str());
 
 	std::wstring s_strIndexDir = WXBase::getEnvVarW(L"temp") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\Index+1128\\";
-	ML_SetString(L"index", s_strIndexDir.c_str());
+	WXSetGlobalString(L"index", s_strIndexDir.c_str());
 
 	std::wstring  s_strProgData = WXBase::getEnvVarW(L"ProgramData") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\";
-	ML_SetString(L"ProgramData", s_strProgData.c_str());
+	WXSetGlobalString(L"ProgramData", s_strProgData.c_str());
 
 	// 获取当前运行目录
 	std::wstring s_strRunPath = WXBase::GetRunPath();//当前运行目录
-	ML_SetString(L"runpath", s_strRunPath.c_str());
+	WXSetGlobalString(L"runpath", s_strRunPath.c_str());
 
 	//Medialib.dll 所在目录
 	std::wstring s_strDllDir = WXBase::GetDllPath();
-	ML_SetString(L"dlldir", s_strDllDir.c_str());;
+	WXSetGlobalString(L"dlldir", s_strDllDir.c_str());;
 
 	if (WXBase::Exists(L"libffmpeg.dll")) {
 		std::wstring Libffmpeg_DllPath = std::filesystem::absolute(L"libfffmpeg.dll").wstring();
@@ -669,7 +461,7 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 	//如果路径不存在就弹窗警告,然后exit
 	if(LibInst::GetInst().m_libDbghelp)
 		LibInst::GetInst().mMakeSureDirectoryPathExists(WXBase::UTF16ToGB(s_strLogDir).c_str());
-	MakeSureDirectoryPathExistsW(s_strLogDir.c_str());//Log目录
+	WXBase::MakeSureDirectoryPathExistsW(s_strLogDir.c_str());//Log目录
 	if (!WXBase::Exists(s_strLogDir)) {
 		WXString strMsg;
 		strMsg.Format(L"Sorry ,The Log Dir[%ws] is not exist!", s_strLogDir.c_str());
@@ -679,7 +471,7 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 
 	if (LibInst::GetInst().m_libDbghelp)
 		LibInst::GetInst().mMakeSureDirectoryPathExists(WXBase::UTF16ToGB(s_strTempDir).c_str());
-	MakeSureDirectoryPathExistsW(s_strTempDir.c_str());//Temp目录 缩略图
+	WXBase::MakeSureDirectoryPathExistsW(s_strTempDir.c_str());//Temp目录 缩略图
 	if (!WXBase::Exists(s_strTempDir)) {
 		WXString strMsg;
 		strMsg.Format(L"Sorry ,The Temp Dir[%ws] is not exist!", s_strTempDir.c_str());
@@ -689,7 +481,7 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 
 	if (LibInst::GetInst().m_libDbghelp)
 		LibInst::GetInst().mMakeSureDirectoryPathExists(WXBase::UTF16ToGB(s_strIndexDir).c_str());
-	MakeSureDirectoryPathExistsW(s_strIndexDir);//Index目录
+	WXBase::MakeSureDirectoryPathExistsW(s_strIndexDir);//Index目录
 	if (!WXBase::Exists(s_strIndexDir)) {
 		WXString strMsg;
 		strMsg.Format(L"Sorry ,The Index Dir[%ws] is not exist!", s_strIndexDir.c_str());
@@ -699,9 +491,9 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 
 	//无法创建LOG文件就弹窗警告！然后exit
 	std::wstring strLog = s_strLogDir + L"\\avisynth_128.log";
-	g_strIniPath = s_strLogDir.c_str();
-	g_strIniPath += L"WXMedia.ini";//同目录下的ini文件
-
+	std::wstring strIniPath = s_strLogDir.c_str();
+	strIniPath += L"WXMedia.ini";//同目录下的ini文件
+	WXSetGlobalPath(strIniPath.c_str());
 	//EXE全名
 	std::wstring wstrName = WXBase::GetExeName();
 	if (wcsicmp(wstrName.c_str(),L"MediaLib_Test.exe") == 0) {
@@ -719,7 +511,7 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 		}
 	}
 	
-	LibInst::GetInst().LogMsg();
+	LibInst::GetInst().LogMsg(ML_LogW);
 	WXLogWOnce(L"MediaLib Initialize: %ws, %ws", s_strCompany.c_str(), s_strProduct.c_str());
 
 	GetFullPathW(L"medialib.dll");
@@ -731,27 +523,23 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 		Gdiplus::GdiplusStartupInput StartupInput;//GDI+初始化
 		Gdiplus::GdiplusStartup(&m_gdiplusToken, &StartupInput, NULL);
 	}
-	//if (!SDL_getenv("SDL_AUDIO_ALSA_SET_BUFFER_SIZE"))
-	//	SDL_setenv("SDL_AUDIO_ALSA_SET_BUFFER_SIZE", "1", 1);
-	//SetEnvironmentVariable(_T("SDL_AUDIODRIVER"), _T("directsound"));
-	//SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER);
 
 	//ffmpeg.exe 检测
 	std::thread thFfmpeg([] {
 
 		s_strFfmpegExe = GetFullPathW(L"ffmpeg.exe");
-		int getExe = MLGetIniValue(L"ffmpeg.exe", L"exist", -1);
+		int getExe = WXGetGlobalValue(L"ffmpeg_exist",  -1);
 		if (getExe == -1)
 		{
 			DWORD dwTimeOut = 10000;
 			DWORD result = ExecuteProcess(s_strFfmpegExe, dwTimeOut);
 			if (result == WAIT_OBJECT_0) {
 				s_bFfmpegExe = true;
-				MLSetIniValue(L"ffmpeg.exe", L"exist", 1);
+				WXSetGlobalValue(L"ffmpeg_exist", 1);
 				WXLogW(L"%ws is exist!", s_strFfmpegExe.c_str());
 			}
 			else {
-				MLSetIniValue(L"ffmpeg.exe", L"exist", 0);
+				WXSetGlobalValue(L"ffmpeg_exist", 0);
 				s_bFfmpegExe = false;
 				WXLogW(L"%ws is not exist!", s_strFfmpegExe.c_str());
 			}
@@ -761,11 +549,6 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 		}
 	});
 	thFfmpeg.detach();
-
-	std::thread thDXVA([] {
-		MLDetectDXVADecode();//硬解码检测
-	});
-	thDXVA.detach();
 
 	std::thread thH264([] {
 		MLSupportH264Codec();//硬解码检测
@@ -2212,7 +1995,7 @@ MEDIALIB_API HRESULT  SplitAudio(char* filename, char* output) {
 
 MEDIALIB_API HRESULT SetCrashReportPath(WCHAR* path)
 {
-	ML_SetString(L"CrashReportPath", path);
+	WXSetGlobalString(L"CrashReportPath", path);
 	return 0;
 }
 
@@ -2220,10 +2003,12 @@ EXTERN_C static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 {
 	if (LibInst::GetInst().m_libDbghelp == nullptr)
 		return -1;
-	std::wstring s_dumppath = ML_GetString(L"dump");
-	HANDLE hDumpFile = CreateFile(s_dumppath.c_str(), GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	wchar_t wszDumpPath[MAX_PATH] = { 0 };
+	WXGetGlobalString(L"dump", wszDumpPath,L"");
+	if (wcslen(wszDumpPath))return -1;
+	HANDLE hDumpFile = CreateFile(wszDumpPath, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hDumpFile == INVALID_HANDLE_VALUE) {
-	//	WXLogW(L"%ws CreateFile %ws Error",__FUNCTIONW__, s_dumppath.c_str());
+		WXLogW(L"%ws CreateFile %ws Error",__FUNCTIONW__, wszDumpPath);
 		return -1;
 	}
 	else {
@@ -2237,8 +2022,9 @@ EXTERN_C static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 		CloseHandle(hDumpFile);
 	}
 
-	std::wstring strCrashrReportPath = ML_GetString(L"CrashReportPath");
-	ExecuteProcess(strCrashrReportPath,20*1000);
+	wchar_t wszCrashrReportPath[MAX_PATH] = { 0 };
+	WXGetGlobalString(L"CrashReportPath", wszCrashrReportPath, L"");
+	ExecuteProcess(wszCrashrReportPath, 20*1000);
 	return EXCEPTION_EXECUTE_HANDLER;
 }
 
@@ -2246,7 +2032,7 @@ EXTERN_C static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 MEDIALIB_API int  InitExceptionFilter(const char* _dumppath)
 {
 	std::wstring strDump = WXBase::UTF8ToUTF16(_dumppath);
-	ML_SetString(L"dump", strDump.c_str());
+	WXSetGlobalString(L"dump", strDump.c_str());
 	SetUnhandledExceptionFilter((LPTOP_LEVEL_EXCEPTION_FILTER)ApplicationCrashHandler);
 	return 0;
 }
@@ -2259,207 +2045,11 @@ BOOL WINAPI DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved)
 }
 
 
-
-//全局参数设置读取
-//全局参数设置
-class WXMediaGlobalValue {
-public:
-	static std::map<std::wstring, int>& GetInt() {
-		static std::map<std::wstring, int>s_mapGlobalValue;
-		return s_mapGlobalValue;
-	}
-	static std::map<std::wstring, std::wstring>& GetString() {
-		static std::map<std::wstring, std::wstring>s_mapGlobalString;
-		return s_mapGlobalString;
-	}
-};
-MEDIALIB_API void           ML_SetString(const wchar_t* name, const wchar_t* value) {
-	std::wstring strName = name;
-	WXMediaGlobalValue::GetString()[strName] = value;
-}
-MEDIALIB_API const wchar_t* ML_GetString(const wchar_t* name) {
-	std::wstring strName = name;
-	if (WXMediaGlobalValue::GetString().count(strName)) {
-		return WXMediaGlobalValue::GetString()[strName].c_str();
-	}
-	return L"";
-}
-
-MEDIALIB_API void           ML_SetValue(const wchar_t* name, int value) {
-	std::wstring strName = name;
-	WXMediaGlobalValue::GetInt()[strName] = value;
-}
-MEDIALIB_API int ML_GetValue(const wchar_t* name) {
-	std::wstring strName = name;
-	if (WXMediaGlobalValue::GetInt().count(strName)) {
-		return WXMediaGlobalValue::GetInt()[strName];
-	}
-	return 0;
-}
-
-
-//快速合并同规格的多个TS/MP4文件
-MEDIALIB_API int ML_FastMerge(WXCTSTR outFilename, int inCount, WXCTSTR* arrInput) {
-	if (inCount < 1)return WX_ERROR_ERROR;
-	WXString strOutput;
-	strOutput.Format(outFilename);
-	int m_bInit = FALSE;
-	AVFormatContext* m_pOutputFmtCtx = NULL;
-	AVStream* m_pOutputVideoStream = nullptr;
-	AVCodecContext* m_pOutputVideoCtx = nullptr;
-	AVStream* m_pOutputAudioStream = nullptr;
-	AVCodecContext* m_pOutputAudioCtx = nullptr;
-
-	int64_t  ptsTime = 0;
-	int nAudioIndex = -1;//输出音频Track
-	int nVideoIndex = -1;//输出视频Track
-	//输入文件处理
-	for (int i = 0; i < inCount; i++) {
-		WXString strFileName;
-		strFileName.Format(arrInput[i]);
-
-		AVFormatContext* m_pInputFmtCtx = avformat_alloc_context(); //第一个文件解析
-		if (avformat_open_input(&m_pInputFmtCtx, strFileName.c_str(), NULL, NULL) < 0) { 
-			continue;
-		}
-
-		if (avformat_find_stream_info(m_pInputFmtCtx, NULL) < 0) {
-			avformat_close_input(&m_pInputFmtCtx);
-			avformat_free_context(m_pInputFmtCtx);
-			continue;
-		}
-		AVCodecContext* pVideoCtx = nullptr;
-		AVStream* pVideoStream = nullptr;
-		AVCodec* videoCodec = nullptr;
-		AVRational tbVideo{ 1,1000 }; //转ms
-		int video_index = -1;//输入视频Track
-
-		AVCodecContext* pAudioCtx = nullptr;
-		AVStream* pAudioStream = nullptr;
-		AVRational tbAudio{ 1,1000 }; //转ms
-		AVCodec* audioCodec = nullptr;
-		int audio_index = -1;//输入音频Track
-		for (int i = 0; i < m_pInputFmtCtx->nb_streams; i++) {
-			if (m_pInputFmtCtx->streams[i]->codec->codec_type == AVMEDIA_TYPE_VIDEO && pVideoCtx == nullptr) {
-				pVideoStream = m_pInputFmtCtx->streams[i];
-				pVideoCtx = pVideoStream->codec;
-				video_index = i;
-				tbVideo.den = pVideoStream->time_base.den;
-				tbVideo.num = pVideoStream->time_base.num;
-			}
-			if (m_pInputFmtCtx->streams[i]->codec->codec_type == AVMEDIA_TYPE_AUDIO && pAudioCtx == nullptr) {
-				pAudioStream = m_pInputFmtCtx->streams[i];
-				pAudioCtx = pAudioStream->codec;
-				audio_index = i;
-				tbAudio.den = pAudioStream->time_base.den;
-				tbAudio.num = pAudioStream->time_base.num;
-			}
-		}
-		if (pAudioCtx && pVideoCtx) { //输入文件有音视频数据
-			if (!m_bInit) {  //初始化输出文件
-				avformat_alloc_output_context2(&m_pOutputFmtCtx, NULL, NULL, strOutput.c_str());
-				if (m_pOutputFmtCtx == NULL)return -1;
-
-				m_pOutputVideoStream = avformat_new_stream(m_pOutputFmtCtx, videoCodec);
-				avcodec_copy_context(m_pOutputVideoStream->codec, pVideoCtx);
-				m_pOutputVideoStream->codec->codec_tag = 0;
-				nVideoIndex = m_pOutputVideoStream->index;
-				m_pOutputVideoCtx = m_pOutputVideoStream->codec;
-				if (m_pOutputFmtCtx->oformat->flags & AVFMT_GLOBALHEADER)
-					m_pOutputVideoStream->codec->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
-				m_pOutputVideoStream->time_base.den = pVideoStream->time_base.den;
-				m_pOutputVideoStream->time_base.num = pVideoStream->time_base.num;
-
-				m_pOutputAudioStream = avformat_new_stream(m_pOutputFmtCtx, audioCodec);
-				avcodec_copy_context(m_pOutputAudioStream->codec, pAudioCtx);
-				m_pOutputAudioCtx = m_pOutputAudioStream->codec;
-				m_pOutputAudioStream->codec->codec_tag = 0;
-				if (m_pOutputFmtCtx->oformat->flags & AVFMT_GLOBALHEADER)
-					m_pOutputAudioStream->codec->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
-				nAudioIndex = m_pOutputAudioStream->index;
-				m_pOutputAudioStream->time_base.den = pAudioStream->time_base.den;
-				m_pOutputAudioStream->time_base.num = pAudioStream->time_base.num;
-
-				av_dump_format(m_pOutputFmtCtx, 0, strOutput.c_str(), 1);
-				if (!(m_pOutputFmtCtx->oformat->flags & AVFMT_NOFILE)) {
-					if (avio_open(&m_pOutputFmtCtx->pb, strOutput.c_str(), AVIO_FLAG_WRITE) < 0) {
-						avformat_close_input(&m_pInputFmtCtx);
-						avformat_free_context(m_pInputFmtCtx);
-						return WX_ERROR_ERROR;
-					}
-				}
-				//Write file header
-				if (avformat_write_header(m_pOutputFmtCtx, NULL) < 0) {
-					avformat_close_input(&m_pInputFmtCtx);
-					avformat_free_context(m_pInputFmtCtx);
-					return WX_ERROR_ERROR;
-				}
-				m_bInit = TRUE; //输入初始化
-			}
-			if (m_bInit) { //从头开始处理文件并输出
-				int64_t ptsFileVideo = 0;
-				int64_t ptsFileAudio = 0;
-
-				AVPacket pkt;
-				while (av_read_frame(m_pInputFmtCtx, &pkt) != AVERROR_EOF) {
-					if (pkt.stream_index == video_index) {
-						float pkt_pts = (float)pkt.pts * 1000.0f * (float)pVideoStream->time_base.num / (float)pVideoStream->time_base.den;//时间戳转换为MS
-						float pkt_dts = (float)pkt.dts * 1000.0f * (float)pVideoStream->time_base.num / (float)pVideoStream->time_base.den;//时间戳转换为MS
-
-						pkt_dts = pkt_dts + ptsTime;
-						pkt_pts = pkt_pts + ptsTime;
-						ptsFileVideo = FFMAX(pkt_dts, ptsFileVideo);
-
-						pkt.stream_index = nVideoIndex;
-						pkt.pts = pkt_pts * (float)m_pOutputVideoStream->time_base.den / (1000.0f * (float)m_pOutputVideoStream->time_base.num);//时间戳转换为MS
-						pkt.dts = pkt_dts * (float)m_pOutputVideoStream->time_base.den / (1000.0f * (float)m_pOutputVideoStream->time_base.num);//时间戳转换为MS
-						av_interleaved_write_frame(m_pOutputFmtCtx, &pkt);
-					}
-					else if (pkt.stream_index == audio_index) {
-						float pkt_pts = (float)pkt.pts * 1000.0f * (float)pAudioStream->time_base.num / (float)pAudioStream->time_base.den;//时间戳转换为MS
-						float pkt_dts = (float)pkt.dts * 1000.0f * (float)pAudioStream->time_base.num / (float)pAudioStream->time_base.den;//时间戳转换为MS
-
-						pkt_dts = pkt_dts + ptsTime;
-						pkt_pts = pkt_pts + ptsTime;
-						ptsFileAudio = FFMAX(pkt_dts, ptsFileAudio);
-
-						pkt.stream_index = nAudioIndex;
-						pkt.pts = pkt_pts * (float)m_pOutputAudioStream->time_base.den / (1000.0f * (float)m_pOutputAudioStream->time_base.num);//时间戳转换为MS
-						pkt.dts = pkt_dts * (float)m_pOutputAudioStream->time_base.den / (1000.0f * (float)m_pOutputAudioStream->time_base.num);//时间戳转换为MS
-						av_interleaved_write_frame(m_pOutputFmtCtx, &pkt);
-					}
-					av_packet_unref(&pkt);
-				}
-
-				if (m_pInputFmtCtx->duration > 0) {
-					int64_t ptsFile = m_pInputFmtCtx->duration / 1000; //该文件总时间。ms
-					ptsTime += ptsFile;//当前总时间
-				}
-				else {
-					int64_t ptsFile = FFMAX(ptsFileAudio, ptsFileVideo); //该文件总时间。ms
-					ptsTime += ptsFile;//当前总时间
-				}
-			}
-		}
-		avformat_close_input(&m_pInputFmtCtx);
-		avformat_free_context(m_pInputFmtCtx);//关闭输入文件
-	}
-
-	if (m_bInit) { //关闭输出文件
-		av_write_trailer(m_pOutputFmtCtx);
-		if (!(m_pOutputFmtCtx->oformat->flags & AVFMT_NOFILE))
-			avio_closep(&m_pOutputFmtCtx->pb);
-		avformat_free_context(m_pOutputFmtCtx);
-		return WX_ERROR_SUCCESS;
-	}
-	return WX_ERROR_ERROR;
-}
-
 //--------------------- 基于DSound 的声音播放 ------------------------
 //一般情况下不用考虑默认设备插拔切换的问题
 #define MAX_AUDIO_BUF 5
 #define AUDIO_FRAME_SIZE   1920  //对应10ms  S16 数据量
-
+#include <initguid.h>
 DEFINE_GUID(IID_IDirectSoundNotify, 0xb0210783, 0x89cd, 0x11d0, 0xaf, 0x8, 0x0, 0xa0, 0xc9, 0x25, 0xcd, 0x16);
 DEFINE_GUID(IID_IDirectSoundBuffer8, 0x6825a449, 0x7524, 0x4d82, 0x92, 0x0f, 0x50, 0xe3, 0x6a, 0xb3, 0xab, 0x1e);
 

@@ -1184,7 +1184,7 @@ CDirectVobSubFilter::CDirectVobSubFilter(LPUNKNOWN punk, HRESULT* phr, const GUI
 		lf.lfHeight = -MulDiv(10, GetDeviceCaps(hdc, LOGPIXELSY), 72);
 		ReleaseDC(nullptr, hdc);
 		lf.lfWeight = FW_BOLD;
-		wcscpy_s(lf.lfFaceName, WXGetSubtitleFontName());
+		wcscpy_s(lf.lfFaceName, WXGetSubtitleFontName().c_str());
 		m_hfont = CreateFontIndirectW(&lf);
 	}
 

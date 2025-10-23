@@ -862,8 +862,9 @@ void  FfmpegMuxer::WriteAudioFrame(uint8_t *buf, int buf_size) {
 }
 
 FfmpegMuxer::FfmpegMuxer() {
-	m_iMachLevel = WXGetGlobalValue(L"MachLevel");//是否使用高性能采集
-	if (WXGetMemory() < 5 && m_iMachLevel == LEVEL_BEST) {
+	int nMemory = WXGetGlobalValue(L"Memory", -1);
+	m_iMachLevel = WXGetGlobalValue(L"MachLevel", LEVEL_BETTER);//是否使用高性能采集
+	if (nMemory < 5 && m_iMachLevel == LEVEL_BEST) {
 		m_iMachLevel = LEVEL_BETTER; 
 	}
 	m_audioFifo.Init(192000 * 5);
@@ -976,7 +977,7 @@ BOOL  FfmpegMuxer::OpenVideoEncoder(enum AVCodecID codec_id) {
 			WXLogW(L"Using GIF Encoder , must be VFR");
 			m_bCFR = 0;  //GIF时间戳单位是10ms，不支持CFR模式！
 
-			if (WXGetGlobalValue(L"HighQualityGif")) { //高画质GIF，普通画质GIF栅格化严重
+			if (WXGetGlobalValue(L"HighQualityGif",0)) { //高画质GIF，普通画质GIF栅格化严重
 				WXLogW(L"Using High Quality Gif Encoder");
 				m_bGif = TRUE;
 				if (m_row_pointers == nullptr) {
@@ -1021,7 +1022,7 @@ BOOL  FfmpegMuxer::OpenVideoEncoder(enum AVCodecID codec_id) {
 		m_pVideoCtx->rc_max_rate = m_iVideoBitrate;
 		m_pVideoCtx->rc_buffer_size = m_iVideoBitrate / 2;
 
-		m_pVideoCtx->thread_count = WXGetCpuNum();//多线程编码
+		m_pVideoCtx->thread_count = std::thread::hardware_concurrency();//多线程编码
 		m_pVideoCtx->gop_size = FFMIN(150, m_iFps * 5);
 
 		if (m_nFlags & AVFMT_GLOBALHEADER)
@@ -1056,7 +1057,7 @@ BOOL  FfmpegMuxer::OpenVideoEncoder(enum AVCodecID codec_id) {
 //H265 编码器
 void  FfmpegMuxer::OpenH265Encoder() {
 	if (m_bHardwareEncoder && WXSupportH265Codec()) { //HEVC_QSV
-		WXString strCodec = WXGetH265Codec();
+		WXString strCodec = L"hevc_qsv";
 		m_pVideoCodec = avcodec_find_encoder_by_name(strCodec.c_str());
 	}
 	if (m_pVideoCodec == nullptr) { //libx265
@@ -1127,8 +1128,7 @@ void  FfmpegMuxer::OpenH265Encoder() {
 //H264编码器
 void  FfmpegMuxer::OpenH264Encoder() {
 	if (m_bHardwareEncoder && WXSupportH264Codec()) { //硬编码配置
-		WXString codec_str;
-		codec_str.Format(WXGetH264Codec());
+		WXString codec_str = L"h264_qsv";
 		m_pVideoCodec = avcodec_find_encoder_by_name(codec_str.c_str());
 	}
 	if (m_pVideoCodec == nullptr) {
@@ -1205,11 +1205,11 @@ void  FfmpegMuxer::OpenH264Encoder() {
 				av_opt_set(m_pVideoCtx->priv_data, "preset", "ultrafast", 0);
 			}
 			else if (m_iMachLevel == LEVEL_BETTER) { //默认配置
-				m_pVideoCtx->thread_count = WXGetCpuNum() / 2;//多线程优化提高编码速度
+				m_pVideoCtx->thread_count = std::thread::hardware_concurrency() / 2;//多线程优化提高编码速度
 				av_opt_set(m_pVideoCtx->priv_data, "preset", "superfast", 0);
 			}
 			else {  //高性能编码
-				m_pVideoCtx->thread_count = WXGetCpuNum();//多线程优化提高编码速度
+				m_pVideoCtx->thread_count = std::thread::hardware_concurrency();//多线程优化提高编码速度
 				av_opt_set(m_pVideoCtx->priv_data, "preset", "faster", 0);
 			}
 		}
@@ -1276,7 +1276,7 @@ void  FfmpegMuxer::OpenVP8Encoder() {
 		m_pVideoCtx->rc_buffer_size = m_iVideoBitrate / 2;
 		WXLogA("%s Codec=[%s],  Bitrate=%lldkbps", __FUNCTION__, m_pVideoCodec->long_name, m_iVideoBitrate / 1000);
 	}
-	m_pVideoCtx->thread_count = WXGetCpuNum();//多线程编码
+	m_pVideoCtx->thread_count = std::thread::hardware_concurrency();//多线程编码
 	m_pVideoCtx->gop_size = FFMIN(150, m_iFps * 5);
 
 	av_opt_set_int(m_pVideoCtx->priv_data, "cpu-used", 3, 0);//libvpx vp9  [-16,16]
@@ -1326,7 +1326,7 @@ void  FfmpegMuxer::OpenVP9Encoder() {
 		m_pVideoCtx->rc_buffer_size = m_iVideoBitrate / 2;
 		WXLogA("%s Codec=[%s],  Bitrate=%lldkbps", __FUNCTION__, m_pVideoCodec->name, m_iVideoBitrate / 1000);
 	}
-	m_pVideoCtx->thread_count = WXGetCpuNum();//多线程编码
+	m_pVideoCtx->thread_count = std::thread::hardware_concurrency();//多线程编码
 	m_pVideoCtx->gop_size = FFMIN(150, m_iFps * 5);
 	av_opt_set_int(m_pVideoCtx->priv_data, "cpu-used", 8, 0);//libvpx vp9  [-16,16]
 }
@@ -1377,7 +1377,7 @@ void  FfmpegMuxer::OpenAV1Encoder() {
 		m_pVideoCtx->rc_buffer_size = m_iVideoBitrate / 2;
 		WXLogA("%s Codec=[%s],  Bitrate=%lldkbps", __FUNCTION__, m_pVideoCodec->name, m_iVideoBitrate / 1000);
 	}
-	m_pVideoCtx->thread_count = WXGetCpuNum();//多线程编码
+	m_pVideoCtx->thread_count = std::thread::hardware_concurrency();//多线程编码
 	av_opt_set(m_pVideoCtx->priv_data, "preset", "7", 0);//libvpx AV1 0-8
 }
 

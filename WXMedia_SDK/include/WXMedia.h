@@ -77,11 +77,6 @@ extern "C" {
 	WXMEDIA_API void WXDisableDXGI(int b);
 
 
-	//add by tam
-	//2022.04.08
-	WXMEDIA_API int WXGetMemory();//获取内存大小，单位G
-	WXMEDIA_API int WXGetCpuNum();//获取CPU数量，双核，4核，6核，
-	WXMEDIA_API int WXGetCpuSpeed();//获取cpu速度，MHz
 
 
 #define LEVEL_GOOD   0  //较差设备，双核或者内存小于6G，比较古老的Win7，画质还有再低一些
@@ -92,7 +87,7 @@ extern "C" {
 	//底层根据对应的level调整视频编码参数使得画质更好
 	WXMEDIA_API void WXSetMachineLevel(int level);
 
-	WXMEDIA_API WXCTSTR      WXGetPath(); //获取当前程序所在的目录
+
 
 	WXMEDIA_API WXCTSTR      WXFfmpegGetError(int code);//获取错误代码
 	//------------------- windows 设备枚举 ----------------------
@@ -993,13 +988,9 @@ extern "C" {
 	//H264硬编码能力检测
 #define WXSupportH264Codec WXSupportHarewareCodec
 	WXMEDIA_API int          WXSupportHarewareCodec();
-	//本机支持的H264硬编码器名字，不支持则返回"libx264"
-	WXMEDIA_API WXCTSTR      WXGetH264Codec();
 
 	//H265硬编码能力检测
 	WXMEDIA_API int          WXSupportH265Codec();
-	//本机支持的H265硬编码器名字，不支持则返回"libx265"
-	WXMEDIA_API WXCTSTR      WXGetH265Codec();
 
 
 	//视频编码
@@ -2208,33 +2199,6 @@ extern "C" {
 
 	//摄像头显示窗口宽度，0 表示禁用
 	//WXSetGlobalValue(L"Capture_CameraWindowWidth", nWndWidth);
-
-	//全局参数设置
-	//设置strType键的int数值
-	WXMEDIA_API void     WXSetGlobalValue(WXCTSTR strType, int nValue);
-
-	//获取strType键的int数值
-	WXMEDIA_API int      WXGetGlobalValue(WXCTSTR strType);
-
-	//设置strType键的字符串数值
-	WXMEDIA_API void     WXSetGlobalString(WXCTSTR strType, WXCTSTR strValue);
-
-	//获取strType键的字符串数值
-	WXMEDIA_API WXCTSTR  WXGetGlobalString(WXCTSTR strType);
-
-	//从ini获取键wszKey的数值， 不存在则返回 nDefaultValue
-	WXMEDIA_API int WXGetIniValue(WXCTSTR wszReg, WXCTSTR wszKey, int nDefaultValue);
-
-	//ini配置
-
-	//从ini获取键wszKey的字符串， 不存在则返回 nDefaultValue 
-	WXMEDIA_API void WXGetStringValue(WXCTSTR wszReg, WXCTSTR wszKey, WXCHAR* strValue);
-
-	//配置ini的wszKey键的数值
-	WXMEDIA_API void WXSetIniValue(WXCTSTR wszReg, WXCTSTR wszKey, int nValue);
-
-	//配置ini的wszKey键的字符串
-	WXMEDIA_API void WXSetIniString(WXCTSTR wszReg, WXCTSTR wszKey, WXCTSTR strValue);
 
 #ifdef __cplusplus
 }

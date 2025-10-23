@@ -134,16 +134,16 @@ void WXGameInit() {
 
 	if (s_bWXGameInit)return;
 
-	int bWriteGameBlackList = WXGetIniValue(L"GameBlackList", L"value", -1);
+	int bWriteGameBlackList = WXGetGlobalValue(L"GameBlackList",  -1);
 	if (bWriteGameBlackList) {
-		WXSetIniValue(L"GameBlackList", L"value", 1);
-		WXSetIniString(L"GameBlackList", L"Notify", L"\" Add BalckList As No=exeName \"");
+		WXSetGlobalValue(L"GameBlackList", 1);
+		WXSetGlobalString(L"GameBlackList-Notify", L"\" Add BalckList As No=exeName \"");
 		for (int i = 0; i < BLACK_LIST; i++) {
 			WXString strNum;
-			strNum.Format(L"%d", i);
+			strNum.Format(L"GameBlackList-%d", i);
 			WXString strValue;
 			strValue.Format(L"%ws", game_blacklisted_exes[i]);
-			WXSetIniString(L"GameBlackList", strNum.str(), strValue.str());
+			WXSetGlobalString(strNum.str(), strValue.str());
 		}
 	}
 
@@ -153,9 +153,9 @@ void WXGameInit() {
 		while (1) {
 			WXCHAR strValue[MAX_PATH];
 			WXString wxstr;
-			wxstr.Format(L"%d", index);
-			WXGetStringValue(L"GameBlackList", wxstr.str(), strValue);
-			if (WXStrcmp(strValue, _T("nullptr")) == 0) {
+			wxstr.Format(L"GameBlackList-%d", index);
+			WXGetGlobalString(wxstr.str(), strValue,L"");
+			if (wcslen(strValue) == 0) {
 				break;
 			}
 			WXString strExe = strValue;

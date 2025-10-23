@@ -358,7 +358,7 @@ static inline int get_xbits_le(GetBitContext *s, int n)
 
 static inline int get_sbits(GetBitContext *s, int n)
 {
-    register int tmp;
+    int tmp;
 #if CACHED_BITSTREAM_READER
     av_assert2(n>0 && n<=25);
     tmp = sign_extend(get_bits(s, n), n);

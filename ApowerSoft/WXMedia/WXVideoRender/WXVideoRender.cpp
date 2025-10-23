@@ -2175,15 +2175,10 @@ public:
 
 	VideoRenderer() {
 
-		m_bStill = WXGetGlobalValue(L"Still");
+		m_bStill = WXGetGlobalValue(L"Still",0);
 
-		m_bSupportD3DX = WXGetIniValue(_T("WXMedia"), L"SupportD3DX", 0);
-		m_bSupportD3D = WXGetIniValue(_T("WXMedia"), L"SupportD3D", 0);
-
-		//WXLogA("!!! %s m_bSupportD3DX=%d ", __FUNCTION__, m_bSupportD3DX);
-		//WXLogA("!!! %s m_bSupportD3D =%d", __FUNCTION__, m_bSupportD3D);
-
-		//WXLogA("%s m_nLutLevel=%d m_nYScale=%d m_nUVScale=%d", __FUNCTION__, s_nLut, s_nGray, s_nChrome);
+		m_bSupportD3DX = WXGetGlobalValue(L"SupportD3DX", 0);
+		m_bSupportD3D = WXGetGlobalValue(L"SupportD3D", 0);
 
 		m_fContrast = (s_nLut + 50.0f) / 50.0f;
 		m_fBrightness = (s_nGray + 50.0f) / 50.0f;

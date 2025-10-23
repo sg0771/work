@@ -311,12 +311,9 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\WXMedia_SDK\include\FfmpegIncludes.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\json.hpp" />
     <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\librnnoise.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\SoundTouch.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXBase.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaCpp.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaDefines.h" />

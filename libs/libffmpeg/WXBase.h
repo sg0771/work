@@ -43,6 +43,40 @@ EXTERN_C void  WXLogW(const wchar_t* format, ...);
 
 namespace WXBase {
 
+	static bool MakeSureDirectoryPathExistsW(const std::wstring& path) {
+		size_t pos = 0;
+		std::wstring subdir;
+
+		// 循环遍历每个目录层级
+		while ((pos = path.find_first_of(L"/\\", pos + 1)) != std::wstring::npos) {
+			subdir = path.substr(0, pos);
+			size_t len = subdir.length();
+			const wchar_t* tt = subdir.c_str();
+			if (tt[len - 1] == L':') {
+				continue;
+			}
+			if (!CreateDirectoryW(subdir.c_str(), nullptr)) {
+				DWORD error = GetLastError();
+				if (error != ERROR_ALREADY_EXISTS) {
+					//std::wcerr << L"无法创建目录：" << subdir << L"，错误代码：" << error << std::endl;
+					return false;
+				}
+			}
+		}
+
+		// 确保路径的最后一部分被创建
+		if (!::CreateDirectoryW(path.c_str(), nullptr)) {
+			DWORD error = GetLastError();
+			if (error != ERROR_ALREADY_EXISTS) {
+				//std::wcerr << L"无法创建目录：" << path << L"，错误代码：" << error << std::endl;
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+
 	//分割字符串
 	typedef std::vector<std::string>StringList;
 	static StringList string_splitstr(const char* str, const char* pattern)

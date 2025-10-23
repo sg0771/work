@@ -879,15 +879,6 @@
     <ClInclude Include="apm\wpd_tree.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\FfmpegIncludes.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXBase.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\json.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h">
       <Filter>头文件</Filter>
     </ClInclude>

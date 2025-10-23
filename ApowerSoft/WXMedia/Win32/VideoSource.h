@@ -123,7 +123,7 @@ public:
 			wcscpy(m_image2.m_wszFileName, wszName);
 		}
 
-		m_iMachLevel = WXGetGlobalValue(L"MachLevel");
+		m_iMachLevel = WXGetGlobalValue(L"MachLevel", LEVEL_BETTER);
 	}
 	virtual ~VideoSource() {
 #ifdef _WIN32

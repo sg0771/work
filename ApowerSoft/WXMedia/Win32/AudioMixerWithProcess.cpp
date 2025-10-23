@@ -16,7 +16,7 @@ void AudioMixerWithProcess::AddMic(WXFifo* obj, int nScale, int nLevel, int bNs,
 	m_micSoundTouch.setSampleRate(AUDIO_SAMPLE_RATE);//采样频率
 	m_micSoundTouch.setPitch(m_nMicScale / 100.0f);//变调不变速算法
 	
-	m_bAEC = WXGetGlobalValue(L"AEC");
+	m_bAEC = WXGetGlobalValue(L"AEC",0);
 
 	if (m_systemFifo == nullptr) {//没有扬声器输入，不需要AEC处理
 		m_bAEC = 0;

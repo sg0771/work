@@ -42,7 +42,7 @@ CMyFont::CMyFont(STSStyle& style)
 	lf.lfCharSet = DEFAULT_CHARSET;
 
 	if (!CreateFontIndirectW(&lf)) {
-		wcscpy_s(lf.lfFaceName, WXGetSubtitleFontName());
+		wcscpy_s(lf.lfFaceName, WXGetSubtitleFontName().c_str());
 		CreateFontIndirectW(&lf);
 	}
 

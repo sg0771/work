@@ -267,87 +267,90 @@ typedef void (WINAPI* PFNglTexParameterfv)(GLenum target, GLenum pname, const GL
 //com init
 typedef HRESULT(WINAPI* PFNCoInitializeEx)(LPVOID pvReserved, DWORD dwCoInit);
 
-//动态库加载
-class MyLib {
-public:
-    bool Enabled() const
-    {
-        return this->m_handle != nullptr;
-    }
-    MyLib(const wchar_t* filename)
-    {
-        this->m_handle = this->OpenLibrary(filename);
-    }
-
-    virtual ~MyLib()
-    {
-        if (this->m_handle != nullptr) {
-            this->CloseLibrary();
-        }
-    }
-
-    void* GetFunction(const std::string& symbol_name)
-    {
-        if (this->m_handle == nullptr)
-            return nullptr;
-        return this->GetSymbol(symbol_name);
-    }
-    HMODULE Ptr() const
-    {
-        return this->m_handle;
-    }
-
-    std::wstring GetName() {
-        return m_strName;
-    }
-private:
-    //因为32/64位的原因，第三方DLL可能只是跟当前DLL在同一目录下，而不是在Path路径或者EXE目录下面
-    HMODULE OpenLibrary(const wchar_t* filename)
-    {
-        m_handle = ::LoadLibraryW(filename);
-
-        if (m_handle == nullptr) {
-            //当前DLL所在目录
-            wchar_t dllPath[MAX_PATH];
-            GetModuleFileNameW(WXBase::wxGetSelfModuleHandle()/*NULL*/, dllPath, MAX_PATH); //DLL路径
-            std::wstring strDllPath = std::wstring(dllPath);
-            size_t found = strDllPath.find_last_of(L"/\\") + 1;
-            std::wstring strDllDir = strDllPath.substr(0, found);
-
-            std::wstring strDll = strDllDir + filename;
-            m_handle = LoadLibraryW(strDll.c_str());
-        }
-        if (m_handle)
-        {
-            WXLogW(L"LoadLibrary %ws OK", filename);
-            m_strName = filename;
-        }
-        else {
-            WXLogW(L"LoadLibrary %ws Error", filename);
-        }
-        return m_handle;
-    }
-
-    void  CloseLibrary() {
-        if (m_handle) {
-            ::FreeLibrary(m_handle);
-            m_handle = nullptr;
-        }
-    }
-
-    void* GetSymbol(const std::string& symbol_name)
-    {
-        void* p = reinterpret_cast<void*>(::GetProcAddress(m_handle, symbol_name.c_str()));
-        return p;
-    }
-    HMODULE m_handle = nullptr;
-    std::wstring m_strName = L"";
-
-};
+typedef void (WINAPI* cbLogA)(const char*, va_list);
+typedef void (WINAPI* cbLogW)(const wchar_t*, va_list);
 
 class LibInst {
+public:
+    //动态库加载
+    class MyLib {
+    public:
+        bool Enabled() const
+        {
+            return this->m_handle != nullptr;
+        }
+        MyLib(const wchar_t* filename)
+        {
+            this->m_handle = this->OpenLibrary(filename);
+        }
 
+        virtual ~MyLib()
+        {
+            if (this->m_handle != nullptr) {
+                this->CloseLibrary();
+            }
+        }
+
+        void* GetFunction(const std::string& symbol_name)
+        {
+            if (this->m_handle == nullptr)
+                return nullptr;
+            return this->GetSymbol(symbol_name);
+        }
+        HMODULE Ptr() const
+        {
+            return this->m_handle;
+        }
+
+        std::wstring GetNameW() {
+            return m_strName;
+        }
+        std::string GetNameU8() {
+			std::string strNameU8 = WXBase::UTF16ToUTF8(this->m_strName.c_str());
+            return strNameU8;
+        }
+    private:
+        //因为32/64位的原因，第三方DLL可能只是跟当前DLL在同一目录下，而不是在Path路径或者EXE目录下面
+        HMODULE OpenLibrary(const wchar_t* filename)
+        {
+            m_handle = ::LoadLibraryW(filename);
+
+            if (m_handle == nullptr) {
+                //当前DLL所在目录
+                wchar_t dllPath[MAX_PATH];
+                GetModuleFileNameW(WXBase::wxGetSelfModuleHandle()/*NULL*/, dllPath, MAX_PATH); //DLL路径
+                std::wstring strDllPath = std::wstring(dllPath);
+                size_t found = strDllPath.find_last_of(L"/\\") + 1;
+                std::wstring strDllDir = strDllPath.substr(0, found);
+
+                std::wstring strDll = strDllDir + filename;
+                m_handle = LoadLibraryW(strDll.c_str());
+            }
+            if (m_handle){
+                m_strName = filename;
+            }
+            return m_handle;
+        }
+
+        void  CloseLibrary() {
+            if (m_handle) {
+                ::FreeLibrary(m_handle);
+                m_handle = nullptr;
+            }
+        }
+
+        void* GetSymbol(const std::string& symbol_name)
+        {
+            void* p = reinterpret_cast<void*>(::GetProcAddress(m_handle, symbol_name.c_str()));
+            return p;
+        }
+        HMODULE m_handle = nullptr;
+        std::wstring m_strName = L"";
+
+    };
     std::vector<MyLib*>m_arrLibs;
+
+	cbLogW m_cbLogW = nullptr;
 public:
     std::shared_ptr<MyLib> m_libOLE32 = nullptr;//ole32.dll
     PFNCoInitializeEx m_CoInitializeEx = nullptr;
@@ -454,8 +457,7 @@ public:
             m_glTexParameterfv = (PFNglTexParameterfv)m_libOpengl32->GetFunction("glTexParameterfv");
 
         }
-        else
-        {
+        else{
             m_libOpengl32 = nullptr;
         }
     }
@@ -548,10 +550,22 @@ public:
         static LibInst s_inst;//静态成员
         return s_inst;
     }
-    void LogMsg() {
-        for (auto obj : m_arrLibs)
-        {
-            WXLogW(L"LoadLibrary %ws Init", obj->GetName().c_str());
+
+    void LogW(const wchar_t* fmt, ...) {
+        if (m_cbLogW == nullptr)return;
+        va_list vl;
+        va_start(vl, fmt);
+        m_cbLogW(fmt, vl);
+        va_end(vl);
+    }
+
+    void LogMsg(cbLogW cbLogW) {
+        if (cbLogW) {
+			m_cbLogW = cbLogW;
+            for (auto obj : m_arrLibs)
+            {
+                LogW(L"LoadLibrary %ws Init", obj->GetNameW().c_str());
+            }
         }
     }
     //各种库的加载

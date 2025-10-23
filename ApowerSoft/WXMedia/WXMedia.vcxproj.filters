@@ -705,16 +705,7 @@
     <ClInclude Include="Lav\VSFilter\XSUBSubtitle.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\FfmpegIncludes.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\json.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\WXMedia_SDK\include\librnnoise.h">
@@ -726,7 +717,7 @@
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaCpp.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaDefines.h">
+    <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1394,13 +1385,13 @@
     <ClCompile Include="Lav\VSFilter\VSFilter_XSUBSubtitle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\WXMedia_SDK\include\libimagequant.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\WXMedia_SDK\include\librnnoise.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\..\WXMedia_SDK\include\SoundTouch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WXMedia_SDK\include\libimagequant.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

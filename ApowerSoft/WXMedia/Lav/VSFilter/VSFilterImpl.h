@@ -54,7 +54,7 @@
 
 #include <WXBase.h>
 
-EXTERN_C const wchar_t* WXGetSubtitleFontName();
+std::wstring  WXGetSubtitleFontName();
 EXTERN_C int WXGetSubtitleFontSize();
 EXTERN_C int WXGetSubtitleFontColor();
 EXTERN_C int WXGetSubtitleFontPos();

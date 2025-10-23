@@ -505,12 +505,7 @@ BOOL CScreenCaptureDlg::OnInitDialog()
 
 	::RegisterHotKey(m_hWnd, 1001, MOD_CONTROL | MOD_SHIFT , VK_F9);
 
-	//int memory =  WXGetMemory();//获取内存大小，单位G
-	//int cpu_num = WXGetCpuNum();//获取CPU数量，双核，4核，6核，
-	//int cpu_speed = WXGetCpuSpeed();//获取cpu速度，MHz
-	//CString strr;
-	//strr.Format(L"Memory=%d G  CpuNum=%d CpuSpeed=%d",memory,cpu_num,cpu_speed);
-	//AfxMessageBox(strr);
+
 
 	int cx = ::GetSystemMetrics(SM_CXSCREEN);
 	int cy = ::GetSystemMetrics(SM_CYSCREEN);

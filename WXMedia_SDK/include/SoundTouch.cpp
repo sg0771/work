@@ -9,7 +9,7 @@
 #include "SoundTouch.h"
 
 using namespace soundtouch;
-    
+
 /// test if two floating point numbers are equal
 #define TEST_FLOAT_EQUAL(a, b)  (fabs(a - b) < 1e-10)
 
@@ -17,8 +17,8 @@ using namespace soundtouch;
 /// Print library version string for autoconf
 extern "C" void soundtouch_ac_test()
 {
-    printf("SoundTouch Version: %s\n",SOUNDTOUCH_VERSION);
-} 
+    printf("SoundTouch Version: %s\n", SOUNDTOUCH_VERSION);
+}
 
 
 SoundTouch::SoundTouch()
@@ -32,9 +32,9 @@ SoundTouch::SoundTouch()
 
     rate = tempo = 0;
 
-    virtualPitch = 
-    virtualRate = 
-    virtualTempo = 1.0;
+    virtualPitch =
+        virtualRate =
+        virtualTempo = 1.0;
 
     calcEffectiveRateAndTempo();
 
@@ -54,9 +54,9 @@ SoundTouch::~SoundTouch()
 
 
 /// Get SoundTouch library version string
-const char *SoundTouch::getVersionString()
+const char* SoundTouch::getVersionString()
 {
-    static const char *_version = SOUNDTOUCH_VERSION;
+    static const char* _version = SOUNDTOUCH_VERSION;
 
     return _version;
 }
@@ -158,15 +158,15 @@ void SoundTouch::calcEffectiveRateAndTempo()
     tempo = virtualTempo / virtualPitch;
     rate = virtualPitch * virtualRate;
 
-    if (!TEST_FLOAT_EQUAL(rate,oldRate)) pRateTransposer->setRate(rate);
+    if (!TEST_FLOAT_EQUAL(rate, oldRate)) pRateTransposer->setRate(rate);
     if (!TEST_FLOAT_EQUAL(tempo, oldTempo)) pTDStretch->setTempo(tempo);
 
 #ifndef SOUNDTOUCH_PREVENT_CLICK_AT_RATE_CROSSOVER
-    if (rate <= 1.0f) 
+    if (rate <= 1.0f)
     {
-        if (output != pTDStretch) 
+        if (output != pTDStretch)
         {
-            FIFOSamplePipe *tempoOut;
+            FIFOSamplePipe* tempoOut;
 
             assert(output == pRateTransposer);
             // move samples in the current output buffer to the output of pTDStretch
@@ -181,9 +181,9 @@ void SoundTouch::calcEffectiveRateAndTempo()
     else
 #endif
     {
-        if (output != pRateTransposer) 
+        if (output != pRateTransposer)
         {
-            FIFOSamplePipe *transOut;
+            FIFOSamplePipe* transOut;
 
             assert(output == pTDStretch);
             // move samples in the current output buffer to the output of pRateTransposer
@@ -194,7 +194,7 @@ void SoundTouch::calcEffectiveRateAndTempo()
 
             output = pRateTransposer;
         }
-    } 
+    }
 }
 
 
@@ -210,13 +210,13 @@ void SoundTouch::setSampleRate(uint srate)
 
 // Adds 'numSamples' pcs of samples from the 'samples' memory position into
 // the input of the object.
-void SoundTouch::putSamples(const SAMPLETYPE *samples, uint nSamples)
+void SoundTouch::putSamples(const SAMPLETYPE* samples, uint nSamples)
 {
-    if (bSrateSet == false) 
+    if (bSrateSet == false)
     {
         ST_THROW_RT_ERROR("SoundTouch : Sample rate not defined");
-    } 
-    else if (channels == 0) 
+    }
+    else if (channels == 0)
     {
         ST_THROW_RT_ERROR("SoundTouch : Number of channels not defined");
     }
@@ -226,14 +226,14 @@ void SoundTouch::putSamples(const SAMPLETYPE *samples, uint nSamples)
     samplesExpectedOut += (double)nSamples / ((double)rate * (double)tempo);
 
 #ifndef SOUNDTOUCH_PREVENT_CLICK_AT_RATE_CROSSOVER
-    if (rate <= 1.0f) 
+    if (rate <= 1.0f)
     {
         // transpose the rate down, output the transposed sound to tempo changer buffer
         assert(output == pTDStretch);
         pRateTransposer->putSamples(samples, nSamples);
         pTDStretch->moveSamples(*pRateTransposer);
-    } 
-    else 
+    }
+    else
 #endif
     {
         // evaluate the tempo changer, then transpose the rate up, 
@@ -255,7 +255,7 @@ void SoundTouch::flush()
 {
     int i;
     int numStillExpected;
-    SAMPLETYPE *buff = new SAMPLETYPE[128 * channels];
+    SAMPLETYPE* buff = new SAMPLETYPE[128 * channels];
 
     // how many samples are still expected to output
     numStillExpected = (int)((long)(samplesExpectedOut + 0.5) - samplesOutput);
@@ -266,7 +266,7 @@ void SoundTouch::flush()
     // feeding blank samples into the processing pipeline until new, 
     // processed samples appear in the output (not however, more than 
     // 24ksamples in any case)
-    for (i = 0; (numStillExpected > (int)numSamples()) && (i < 200); i ++)
+    for (i = 0; (numStillExpected > (int)numSamples()) && (i < 200); i++)
     {
         putSamples(buff, 128);
     }
@@ -291,40 +291,40 @@ bool SoundTouch::setSetting(int settingId, int value)
     // read current tdstretch routine parameters
     pTDStretch->getParameters(&sampleRate, &sequenceMs, &seekWindowMs, &overlapMs);
 
-    switch (settingId) 
+    switch (settingId)
     {
-        case SETTING_USE_AA_FILTER :
-            // enables / disabless anti-alias filter
-            pRateTransposer->enableAAFilter((value != 0) ? true : false);
-            return true;
+    case SETTING_USE_AA_FILTER:
+        // enables / disabless anti-alias filter
+        pRateTransposer->enableAAFilter((value != 0) ? true : false);
+        return true;
 
-        case SETTING_AA_FILTER_LENGTH :
-            // sets anti-alias filter length
-            pRateTransposer->getAAFilter()->setLength(value);
-            return true;
+    case SETTING_AA_FILTER_LENGTH:
+        // sets anti-alias filter length
+        pRateTransposer->getAAFilter()->setLength(value);
+        return true;
 
-        case SETTING_USE_QUICKSEEK :
-            // enables / disables tempo routine quick seeking algorithm
-            pTDStretch->enableQuickSeek((value != 0) ? true : false);
-            return true;
+    case SETTING_USE_QUICKSEEK:
+        // enables / disables tempo routine quick seeking algorithm
+        pTDStretch->enableQuickSeek((value != 0) ? true : false);
+        return true;
 
-        case SETTING_SEQUENCE_MS:
-            // change time-stretch sequence duration parameter
-            pTDStretch->setParameters(sampleRate, value, seekWindowMs, overlapMs);
-            return true;
+    case SETTING_SEQUENCE_MS:
+        // change time-stretch sequence duration parameter
+        pTDStretch->setParameters(sampleRate, value, seekWindowMs, overlapMs);
+        return true;
 
-        case SETTING_SEEKWINDOW_MS:
-            // change time-stretch seek window length parameter
-            pTDStretch->setParameters(sampleRate, sequenceMs, value, overlapMs);
-            return true;
+    case SETTING_SEEKWINDOW_MS:
+        // change time-stretch seek window length parameter
+        pTDStretch->setParameters(sampleRate, sequenceMs, value, overlapMs);
+        return true;
 
-        case SETTING_OVERLAP_MS:
-            // change time-stretch overlap length parameter
-            pTDStretch->setParameters(sampleRate, sequenceMs, seekWindowMs, value);
-            return true;
+    case SETTING_OVERLAP_MS:
+        // change time-stretch overlap length parameter
+        pTDStretch->setParameters(sampleRate, sequenceMs, seekWindowMs, value);
+        return true;
 
-        default :
-            return false;
+    default:
+        return false;
     }
 }
 
@@ -337,77 +337,77 @@ int SoundTouch::getSetting(int settingId) const
 {
     int temp;
 
-    switch (settingId) 
+    switch (settingId)
     {
-        case SETTING_USE_AA_FILTER :
-            return (uint)pRateTransposer->isAAFilterEnabled();
+    case SETTING_USE_AA_FILTER:
+        return (uint)pRateTransposer->isAAFilterEnabled();
 
-        case SETTING_AA_FILTER_LENGTH :
-            return pRateTransposer->getAAFilter()->getLength();
+    case SETTING_AA_FILTER_LENGTH:
+        return pRateTransposer->getAAFilter()->getLength();
 
-        case SETTING_USE_QUICKSEEK :
-            return (uint)pTDStretch->isQuickSeekEnabled();
+    case SETTING_USE_QUICKSEEK:
+        return (uint)pTDStretch->isQuickSeekEnabled();
 
-        case SETTING_SEQUENCE_MS:
-            pTDStretch->getParameters(NULL, &temp, NULL, NULL);
-            return temp;
+    case SETTING_SEQUENCE_MS:
+        pTDStretch->getParameters(NULL, &temp, NULL, NULL);
+        return temp;
 
-        case SETTING_SEEKWINDOW_MS:
-            pTDStretch->getParameters(NULL, NULL, &temp, NULL);
-            return temp;
+    case SETTING_SEEKWINDOW_MS:
+        pTDStretch->getParameters(NULL, NULL, &temp, NULL);
+        return temp;
 
-        case SETTING_OVERLAP_MS:
-            pTDStretch->getParameters(NULL, NULL, NULL, &temp);
-            return temp;
+    case SETTING_OVERLAP_MS:
+        pTDStretch->getParameters(NULL, NULL, NULL, &temp);
+        return temp;
 
-        case SETTING_NOMINAL_INPUT_SEQUENCE :
-        {
-            int size = pTDStretch->getInputSampleReq();
-
-#ifndef SOUNDTOUCH_PREVENT_CLICK_AT_RATE_CROSSOVER
-            if (rate <= 1.0)
-            {
-                // transposing done before timestretch, which impacts latency
-                return (int)(size * rate + 0.5);
-            }
-#endif
-            return size;
-        }
-
-        case SETTING_NOMINAL_OUTPUT_SEQUENCE :
-        {
-            int size = pTDStretch->getOutputBatchSize();
-
-            if (rate > 1.0)
-            {
-                // transposing done after timestretch, which impacts latency
-                return (int)(size / rate + 0.5);
-            }
-            return size;
-        }
-
-        case SETTING_INITIAL_LATENCY:
-        {
-            double latency = pTDStretch->getLatency();
-            int latency_tr = pRateTransposer->getLatency();
+    case SETTING_NOMINAL_INPUT_SEQUENCE:
+    {
+        int size = pTDStretch->getInputSampleReq();
 
 #ifndef SOUNDTOUCH_PREVENT_CLICK_AT_RATE_CROSSOVER
-            if (rate <= 1.0)
-            {
-                // transposing done before timestretch, which impacts latency
-                latency = (latency + latency_tr) * rate;
-            }
-            else
+        if (rate <= 1.0)
+        {
+            // transposing done before timestretch, which impacts latency
+            return (int)(size * rate + 0.5);
+        }
 #endif
-            {
-                latency += (double)latency_tr / rate;
-            }
+        return size;
+    }
 
-            return (int)(latency + 0.5);
+    case SETTING_NOMINAL_OUTPUT_SEQUENCE:
+    {
+        int size = pTDStretch->getOutputBatchSize();
+
+        if (rate > 1.0)
+        {
+            // transposing done after timestretch, which impacts latency
+            return (int)(size / rate + 0.5);
+        }
+        return size;
+    }
+
+    case SETTING_INITIAL_LATENCY:
+    {
+        double latency = pTDStretch->getLatency();
+        int latency_tr = pRateTransposer->getLatency();
+
+#ifndef SOUNDTOUCH_PREVENT_CLICK_AT_RATE_CROSSOVER
+        if (rate <= 1.0)
+        {
+            // transposing done before timestretch, which impacts latency
+            latency = (latency + latency_tr) * rate;
+        }
+        else
+#endif
+        {
+            latency += (double)latency_tr / rate;
         }
 
-        default :
-            return 0;
+        return (int)(latency + 0.5);
+    }
+
+    default:
+        return 0;
     }
 }
 
@@ -426,7 +426,7 @@ void SoundTouch::clear()
 /// Returns number of samples currently unprocessed.
 uint SoundTouch::numUnprocessedSamples() const
 {
-    FIFOSamplePipe * psp;
+    FIFOSamplePipe* psp;
     if (pTDStretch)
     {
         psp = pTDStretch->getInput();
@@ -444,7 +444,7 @@ uint SoundTouch::numUnprocessedSamples() const
 /// 'numsample' samples in the buffer, returns all that available.
 ///
 /// \return Number of samples returned.
-uint SoundTouch::receiveSamples(SAMPLETYPE *output, uint maxSamples)
+uint SoundTouch::receiveSamples(SAMPLETYPE* output, uint maxSamples)
 {
     uint ret = FIFOProcessor::receiveSamples(output, maxSamples);
     samplesOutput += (long)ret;
@@ -1237,7 +1237,7 @@ bool _dontcomplain_mmx_empty;
 #include <math.h>
 #include <float.h>
 
- // Table for the hierarchical mixing position seeking algorithm
+// Table for the hierarchical mixing position seeking algorithm
 const short _scanOffsets[5][24] = {
     { 124,  186,  248,  310,  372,  434,  496,  558,  620,  682,  744, 806,
       868,  930,  992, 1054, 1116, 1178, 1240, 1302, 1364, 1426, 1488,   0},
@@ -2586,7 +2586,7 @@ int PeakFinder::findTop(const float* data, int peakpos) const
 
     refvalue = data[peakpos];
 
-    // seek within ¡À10 points
+    // seek within Â±10 points
     start = peakpos - 10;
     if (start < minPos) start = minPos;
     end = peakpos + 10;
@@ -2786,7 +2786,7 @@ double PeakFinder::detectPeak(const float* data, int aminPos, int amaxPos)
 
         // accept harmonic peak if 
         // (a) it is found
-        // (b) is within ¡À4% of the expected harmonic interval
+        // (b) is within Â±4% of the expected harmonic interval
         // (c) has at least half x-corr value of the max. peak
 
         double diff = harmonic * peaktmp / highPeak;

@@ -1,5 +1,10 @@
 LIBRARY libffmpeg.dll
 EXPORTS
+WXSetGlobalPath
+WXSetGlobalValue
+WXSetGlobalString
+WXGetGlobalValue
+WXGetGlobalString
 heif_context_alloc
 heif_context_free
 heif_context_read_from_memory

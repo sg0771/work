@@ -209,7 +209,7 @@ LRESULT CLASS_NAME::OnInitDialog(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& 
 	assert(isKeyRegistered != FALSE);     //调试时用(当前热键已经被注册时会返回失败)
 
 
-	m_strDir = WXGetPath();
+	//m_strDir = WXGetPath();
 	m_strDir += L"Videos\\";
 	ProcDir(m_strDir);
 

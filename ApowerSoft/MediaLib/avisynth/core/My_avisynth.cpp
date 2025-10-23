@@ -1989,7 +1989,7 @@ EXTERN_C void* __stdcall CreateScriptEnvironment(int version/* = AVISYNTH_INTERF
 }
 
 //--------------------------------------------------------------------------------------------------------
-static int g_count_clip = 0;//clip ����
+static int g_count_clip = 0;//clip 
 
 IClip::IClip(const char* name) {
     std::string str = name;
@@ -2000,16 +2000,16 @@ IClip::IClip(const char* name) {
     else {
         m_strName = name;
     }
-    int uselog = ML_GetValue(L"uselog");
-    if (uselog) {
+    int uselog = WXGetGlobalValue(L"uselog",-1);
+    if (uselog > 0) {
         g_count_clip++;
         WXLogA("ICip Create [%s]  [count=%d]", m_strName.c_str(), g_count_clip);
     }
 }
 
 __stdcall IClip::~IClip() {
-    int uselog = ML_GetValue(L"uselog");
-    if (uselog) {
+    int uselog = WXGetGlobalValue(L"uselog", -1);
+    if (uselog > 0) {
         g_count_clip--;
         WXLogA("ICip Destroy [%s]  [count=%d]", m_strName.c_str(), g_count_clip);
         WXLogA("Malloc [%lld][%lld]", g_malloc, g_malloc_size);

@@ -96,7 +96,7 @@ private:
 		if (!bSupportHW) {
 			m_bHW = FALSE;
 			WXLogW(L"Ffmpeg Software H2645 Decoder");
-			m_pCtx->thread_count = std::min(WXGetCpuNum(), 4);		//多线程解码
+			m_pCtx->thread_count = std::thread::hardware_concurrency() / 2;//多线程解码
 		}
 		int ret = avcodec_open2(m_pCtx, codec, nullptr);
 		if (ret >= 0) {

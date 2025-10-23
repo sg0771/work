@@ -70,7 +70,7 @@ static void HandleSoundData(short* pDst, short* pSrc, int nSample) {
 }
 
 
-EXTERN_C const wchar_t* WXGetSubtitleFontName();
+std::wstring  WXGetSubtitleFontName();
 EXTERN_C int WXGetSubtitleFontSize();
 EXTERN_C int WXGetSubtitleFontColor();
 EXTERN_C int WXGetSubtitleFontPos();
@@ -2355,7 +2355,7 @@ public:
 
 
 		//字幕字体名字
-		m_strFontName = WXGetSubtitleFontName();
+		m_strFontName = WXGetSubtitleFontName().c_str();
 		//字幕字体大小
 		m_nFontSize = WXGetSubtitleFontSize();
 		//字幕文字颜色

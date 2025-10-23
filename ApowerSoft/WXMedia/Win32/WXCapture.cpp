@@ -243,7 +243,7 @@ int  WXCapture::Create(TWXCaptureConfig* inputConfig) {
 			info = WXScreenGetInfoByName(m_config.m_video.m_wszDevName);
 
 			//如果指定切黑边处理，需要获取当前显示器的区域和分辨率，并截图一张计算黑边
-			int bCutSizeMode = WXGetGlobalValue(L"CutSizeMode");
+			int bCutSizeMode = WXGetGlobalValue(L"CutSizeMode",0);
 			if (bCutSizeMode == 1) {
 				int width = info->width;
 				int height = info->height;
@@ -286,27 +286,6 @@ int  WXCapture::Create(TWXCaptureConfig* inputConfig) {
 					videoParam.m_rcScreen.top = info->top;
 					videoParam.m_rcScreen.bottom = info->top + height;
 				}
-				////Save As BMP 
-				//std::ofstream of(L"D:\\test.bmp", std::ios::binary);
-				//if (of.is_open()) {
-				//	BITMAPFILEHEADER bfh = { 0 };
-				//	bfh.bfOffBits = 54;
-				//	bfh.bfSize = 54 + width * height * 4;
-				//	bfh.bfType = 'MB';
-				//	BITMAPINFOHEADER bih = { 0 };
-				//	bih.biBitCount = 32;
-				//	bih.biPlanes = 1;
-				//	bih.biSize = 40;
-				//	bih.biWidth = width;
-				//	bih.biHeight = -height;
-				//	bih.biSizeImage = width * height * 4;
-
-				//	of.write((const char*)&bfh, 14);
-				//	of.write((const char*)&bih, 40);
-				//	of.write((const char*)pBits, width * height * 4);
-				//	of.close();
-				//}
-
 				SAFE_RELEASE_DC(nullptr, hDC)
 				SAFE_DELETE_OBJECT(hBitmap)
 				SAFE_DELETE_DC(hMemDC)

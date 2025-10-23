@@ -23,7 +23,7 @@ extern "C" {
 class LibMPV
 {
 public:
-	std::shared_ptr<MyLib> m_lib = nullptr;
+	std::shared_ptr<LibInst::MyLib> m_lib = nullptr;
 public:
 	my_mpv_create m_mpv_create = nullptr;
 	my_mpv_set_option m_mpv_set_option = nullptr;

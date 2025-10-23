@@ -272,9 +272,9 @@ WXMEDIA_API void WXTaskPost(int index, WXTask task) {
 }
 
 //获取总内存 GB
-WXMEDIA_API int WXGetMemory() {
+static int WXGetMemory() {
 	BEGIN_LOG_FUNC
-	int nMemory = WXGetIniValue(L"WXMedia", L"Memory", -1);
+	int nMemory = WXGetGlobalValue( L"Memory", -1);
 	if (nMemory < 0) {
 		nMemory = 2;
 		MEMORYSTATUSEX statusex;
@@ -283,30 +283,31 @@ WXMEDIA_API int WXGetMemory() {
 			nMemory = (int)(statusex.ullTotalPhys / 1024.0 / 1024.0 / 1024.0 + 0.5);
 		}
 		WXLogW(L"Memory = %d G ", nMemory);
-		WXSetIniValue(L"WXMedia", L"Memory", nMemory);
+		WXSetGlobalValue( L"Memory", nMemory);
 
 	}
 	WXSetGlobalValue(L"Memory", nMemory);
 	return nMemory;
 }
 
-WXMEDIA_API int WXGetCpuNum() {
+
+static int WXGetCpuNum() {
 	BEGIN_LOG_FUNC
-	int nCpu = WXGetIniValue(L"WXMedia",L"Cpu",-1);
+	int nCpu = WXGetGlobalValue(L"Cpu",-1);
 	if (nCpu < 0) {
 		SYSTEM_INFO sysinfo;
 		::GetSystemInfo(&sysinfo);
 		nCpu = (int)sysinfo.dwNumberOfProcessors;
 		WXLogW(L"Cpu Number = %d", nCpu);
-		WXSetIniValue(L"WXMedia", L"Cpu", nCpu);
+		WXSetGlobalValue( L"Cpu", nCpu);
 	}
 	WXSetGlobalValue(L"Cpu", nCpu);
 	return nCpu;
 }
 
-WXMEDIA_API int WXGetCpuSpeed() {
+static int WXGetCpuSpeed() {
 	BEGIN_LOG_FUNC
-	int nCpuSpeed = WXGetIniValue(L"WXMedia", L"CpuSpeed", -1);
+	int nCpuSpeed = WXGetGlobalValue( L"CpuSpeed", -1);
 	if (nCpuSpeed < 0) {
 		LONG result = 0;
 		HKEY hKey;
@@ -327,7 +328,7 @@ WXMEDIA_API int WXGetCpuSpeed() {
 		::RegCloseKey(hKey);//关闭注册表
 
 		WXLogW(L"Cpu Speed = %d MHz", nCpuSpeed);
-		WXSetIniValue(L"WXMedia", L"CpuSpeed", nCpuSpeed);
+		WXSetGlobalValue( L"CpuSpeed", nCpuSpeed);
 	}
 	WXSetGlobalValue(L"CpuSpeed", nCpuSpeed);
 	return nCpuSpeed;
@@ -342,38 +343,27 @@ WXMEDIA_API int WXIsFileExist(WXCTSTR wszFile)
 
 static void ParseIni() {
 
-	WXSetIniString(_T("WXMedia"), _T("Notify"), _T("\"WXMedia.dll Param Config\""));
+	WXSetGlobalString( _T("Notify"), _T("\"WXMedia.dll Param Config\""));
 
-	int bCheckDXGI = WXGetIniValue(_T("WXMedia"), L"SupportDXGI", -1);
+	int bCheckDXGI = WXGetGlobalValue( L"SupportDXGI", -1);
 	if (bCheckDXGI == -1) {
-		WXSetIniValue(_T("WXMedia"), _T("SupportDXGI"), WXGetSystemVersion() != 7);
+		WXSetGlobalValue(_T("SupportDXGI"), WXGetSystemVersion() != 7);
 	}
 
-	int bSupportD3DX = WXGetIniValue(_T("WXMedia"), L"SupportD3DX", -1);
+	int bSupportD3DX = WXGetGlobalValue( L"SupportD3DX", -1);
 	if (bSupportD3DX == -1) {
-		WXSetIniValue(_T("WXMedia"), _T("SupportD3DX"), 1);
+		WXSetGlobalValue(_T("SupportD3DX"), 1);
 	}
 
-	int bSupportD3D = WXGetIniValue(_T("WXMedia"), L"value", -1);
+	int bSupportD3D = WXGetGlobalValue(L"SupportD3D", -1);
 	if (bSupportD3D == -1) {
-		WXSetIniValue(_T("WXMedia"), _T("SupportD3D"), 1);
+		WXSetGlobalValue(_T("SupportD3D"), 1);
 	}
 
-	int nQSV = WXGetIniValue(_T("WXMedia"), L"Support_QSV_Encoder", -1);
+	int nQSV = WXGetGlobalValue( L"Support_QSV_Encoder", -1);
 	if (nQSV == -1) {
-		WXSetIniValue(_T("WXMedia"), _T("Support_QSV_Encoder"), 1);
+		WXSetGlobalValue( _T("Support_QSV_Encoder"), 1);
 	}
-
-	//int nAMF = WXGetIniValue(_T("WXMedia"), L"Support_AMF_Encoder", -1);
-	//if (nAMF == -1) {
-	//	WXSetIniValue(_T("WXMedia"), _T("Support_AMF_Encoder"), 0);
-	//}
-
-	//int nNVENC = WXGetIniValue(_T("WXMedia"), L"Support_NVENC_Encoder", -1);
-	//if (nNVENC == -1) {
-	//	WXSetIniValue(_T("WXMedia"), _T("Support_NVENC_Encoder"), 0);
-	//}
-
 }
 
 #endif
@@ -702,10 +692,7 @@ static BOOL VersionMsg(LPCTSTR strFile, WXString& strVersion)
 }
 #endif
 
-/*当前exe程序路径*/
-WXMEDIA_API WXCTSTR  WXGetPath() {
-	return 	WXGetGlobalString(L"ExePath");
-}
+
 
 WXMEDIA_API void WXSetCrashDumpFlag(int bEnable) {
 	WXSetGlobalValue(L"DumpUse", !!bEnable);
@@ -745,11 +732,14 @@ static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 {
 	if (LibInst::GetInst().m_libDbghelp == nullptr)
 		return 0;
-
-	if (WXGetGlobalString(L"DumpFile")) {// 是否创建Dump文件 
-		HANDLE hDumpFile = CreateFile(WXGetGlobalString(L"DumpFile"), GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	wchar_t wszDumpPath[MAX_PATH] = { 0 };
+	//创建Dump文件
+	WXGetGlobalString(L"DumpFile", wszDumpPath, L"");
+	std::wstring strDump = wszDumpPath;
+	if (strDump.length()) {// 是否创建Dump文件 
+		HANDLE hDumpFile = CreateFile(strDump.c_str(), GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 		if (hDumpFile) {
-			WXLogA("Create Dump File %s Create Dump File [%s]", __FUNCTION__, WXGetGlobalString(L"DumpFile"));
+			WXLogA("Create Dump File %s Create Dump File [%s]", __FUNCTION__, strDump.c_str());
 			// Dump信息 
 			MINIDUMP_EXCEPTION_INFORMATION dumpInfo;
 			dumpInfo.ExceptionPointers = pException;
@@ -764,23 +754,23 @@ static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 	}
 
 	//生成Dump后执行的外部EXE，BugReports
-	if (WXGetGlobalValue(L"DumpCallBack")) {
+	if (WXGetGlobalValue(L"DumpCallBack",0)) {
 
 		BOOL bHasParam = FALSE;
-		wchar_t wszParam[1024];
-		memset(wszParam, 0, 1024 * sizeof(wchar_t));
-		if (wcslen(WXGetGlobalString(L"DumpCallBackParam")) > 0) {
-			wcscpy(wszParam, WXGetGlobalString(L"DumpCallBackParam"));
-			 bHasParam = TRUE;
+		wchar_t wszDumpParam[MAX_PATH] = {0};
+		WXGetGlobalString(L"DumpCallBackParam", wszDumpParam, L"");
+
+		if (wcslen(wszDumpParam) > 0) {
+			bHasParam = TRUE;
 		}
 		PROCESS_INFORMATION pi = { 0 };
 		STARTUPINFO si = { 0 };
 		si.cb = sizeof(si);
-		BOOL ret = ::CreateProcessW(WXGetGlobalString(L"DumpCallBackExe") ,
-			bHasParam ? wszParam : NULL,
+		BOOL ret = ::CreateProcessW(strDump.c_str(),
+			bHasParam ? wszDumpParam : NULL,
 			NULL, NULL, false, 
 			CREATE_NEW_CONSOLE, NULL, NULL, &si, &pi);
-		WXLogW(L"++++ %ws __ \"%ws%ws\" = %d", __FUNCTIONW__,WXGetGlobalString(L"DumpCallBackExe"),bHasParam ? wszParam : L" nullptr", ret);
+		WXLogW(L"++++ %ws __ \"%ws%ws\" = %d", __FUNCTIONW__, strDump.c_str(), bHasParam ? wszDumpParam : L"NULL", ret);
 		if (ret) {
 			CloseHandle(pi.hThread);
 			CloseHandle(pi.hProcess);
@@ -863,12 +853,6 @@ void ListGpuName() {
 }
 
 
-//获取总内存 GB
-WXMEDIA_API int WXGetMachineMemory()
-{
-	return WXGetMemory();
-}
-
 WXMEDIA_API void WXUtilsInit(WXCTSTR logfile) {
 	return;
 }
@@ -889,7 +873,12 @@ static const AVOutputFormat* const out_lists[3] = {
 };
 
 
-
+static void WINAPI WX_LogW(const wchar_t* format, va_list args) {
+	wchar_t wszMsg[4096];
+	memset(wszMsg, 0, 4096 * 2);
+	vswprintf(wszMsg, format, args);
+	WXLogW(L"%ws", wszMsg);
+}
 WXString g_strJsonPath = L"WXCamera.json";//Camera.json
 
 WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
@@ -977,7 +966,7 @@ WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
 	WXLogInit(strLogFileName.c_str());
 
 	//WXLogA("%s Begin =================== ", __FUNCTION__);
-	LibInst::GetInst().LogMsg();
+	LibInst::GetInst().LogMsg(WX_LogW);
 	WXLogA("%s %d",__FUNCTION__,__LINE__);
 	//注册自定义WXM格式处理
 	avcodec_register_all();
@@ -1032,7 +1021,7 @@ WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
 	std::thread thBase([] {
 		//读取和检测常用数据
 		WXGetCpuNum();
-		WXGetMachineMemory();
+		WXGetMemory();
 		WXGetCpuSpeed();
 		ListGpuName();
 	});

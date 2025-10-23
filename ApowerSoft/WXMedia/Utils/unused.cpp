@@ -1,190 +1,46 @@
 #include <WXMediaCpp.h>
 
-//×ÖÄ» ×ÖÌåÃû×Ö¡¢´óĞ¡¡¢ÑÕÉ«ÉèÖÃ
-EXTERN_C WXCTSTR WXGetSubtitleFontName() {
-	return WXGetGlobalString(L"FontName");
+//å­—å¹• å­—ä½“åå­—ã€å¤§å°ã€é¢œè‰²è®¾ç½®
+std::wstring  WXGetSubtitleFontName() {
+	wchar_t wszFontName[MAX_PATH];
+	WXGetGlobalString(L"FontName", wszFontName, L"Arail");
+	std::wstring strFontName = wszFontName;
+	return strFontName;
 }
 
 EXTERN_C int WXGetSubtitleFontPos() {
-	return WXGetGlobalValue(L"FontPos");
+	return WXGetGlobalValue(L"FontPos", 0);
 }
 
 EXTERN_C int WXGetSubtitleFontSize() {
-	return WXGetGlobalValue(L"FontSize");
+	return WXGetGlobalValue(L"FontSize", 0);
 }
 
 EXTERN_C int WXGetSubtitleFontColor() {
-	return WXGetGlobalValue(L"FontColor");
+	return WXGetGlobalValue(L"FontColor", 0);
 }
 
 EXTERN_C int WXGetSubtitleFontBold() {
-	return WXGetGlobalValue(L"FontBold");
+	return WXGetGlobalValue(L"FontBold", 0);
 }
 EXTERN_C int WXGetSubtitleFontItalic() {
-	return WXGetGlobalValue(L"FontItalic");
+	return WXGetGlobalValue(L"FontItalic", 0);
 }
 EXTERN_C int WXGetSubtitleFontUnderLine() {
-	return WXGetGlobalValue(L"FontUnderLine");
+	return WXGetGlobalValue(L"FontUnderLine", 0);
 }
 EXTERN_C int WXGetSubtitleFontStrikeOut() {
-	return WXGetGlobalValue(L"FontStrikeOut");
-}
-
-//¹¦ÄÜ: ÉùµÀÉùÒô²¥·ÅÊ±ÇĞ»»ÉùµÀÄ£Ê½
-//²ÎÊı:
-//nMode: ²ÎÕÕºêSOUND_MODE_*
-
-//ÊÇ·ñÇ¿ÖÆÊ¹ÓÃLAV²¥·ÅÆ÷
-/*extern */int g_nForceLav = 0;
-
-//ÒôÆµË«ÉùµÀÄ£Ê½
-/*extern */int g_nSoundMode = SOUND_MODE_NONE;
-
-//È«¾Ö²ÎÊıÉèÖÃ
-class WXMediaGlobalValue {
-public:
-	static std::map<std::wstring, int>& GetInt() {
-		static std::map<std::wstring, int>s_mapGlobalValue;
-		return s_mapGlobalValue;
-	}
-	static std::map<std::wstring, std::wstring>& GetString() {
-		static std::map<std::wstring, std::wstring>s_mapGlobalString;
-		return s_mapGlobalString;
-	}
-};
-
-WXMEDIA_API void     WXSetGlobalValue(WXCTSTR strType, int nValue) {
-
-	//WXLogW(L"WXSetGlobalValue[%ws]=%d", strType, nValue);
-
-	if (wcsicmp(strType, L"MediaPlayer") == 0) {
-		if (nValue == MEDIAPLAYER_LAV) {
-			g_nForceLav = TRUE;
-			WXLogW(L"MediaPlayer Use LavFilter");
-		}
-		else {
-			g_nForceLav = FALSE;
-			WXLogW(L"MediaPlayer Use Ffplay");
-		}
-		return;
-	}
-
-	if (wcsicmp(strType, L"SoundMode") == 0) {
-		if (nValue == 0) {
-			WXLogW(L"Sound Mode Use Normal");
-			g_nSoundMode = SOUND_MODE_NONE;
-		}
-		else if (nValue == 1) {
-			WXLogW(L"Sound Mode Use Max");
-			g_nSoundMode = SOUND_MODE_MAX;
-		}
-		else if (nValue == 2) {
-			WXLogW(L"Sound Mode Use Avg");
-			g_nSoundMode = SOUND_MODE_AVG;
-		}
-		else if (nValue == 3) {
-			WXLogW(L"Sound Mode Use Left");
-			g_nSoundMode = SOUND_MODE_LEFT;
-		}
-		else if (nValue == 4) {
-			WXLogW(L"Sound Mode Use Right");
-			g_nSoundMode = SOUND_MODE_RIGHT;
-		}
-		else {
-			WXLogW(L"Sound Mode Use Normal");
-			g_nSoundMode = SOUND_MODE_NONE;
-		}
-		return;
-	}
-
-	std::wstring str = strType;
-	WXMediaGlobalValue::GetInt()[str] = nValue;
-}
-
-WXMEDIA_API int      WXGetGlobalValue(WXCTSTR strType) {
-	std::wstring str = strType;
-	if (WXMediaGlobalValue::GetInt().count(str) == 0) {
-		WXMediaGlobalValue::GetInt()[str] = 0;
-	}
-
-	if (wcsicmp(strType, L"CheckDir") == 0) {
-		WXCTSTR wszDir = WXGetGlobalString(L"Dir");
-		if (wcslen(wszDir) == 0) {
-			return 0;
-		}
-		else {
-			WXString strDir = wszDir;
-			strDir += L"\\test.dir.temp";
-			std::ofstream of(strDir.str()/*strFile.str()*/);
-			if (of.is_open()) {
-				of.close();
-				//REMOVE(strDir.str()/*strFile.str()*/);
-				WXLogW(L"%ws %ws can create file !!", __FUNCTIONW__, strDir.str());
-				return 1;
-			}
-			WXLogW(L"%ws %ws can not create file !!", __FUNCTIONW__, strDir.str());
-			return 0;
-		}
-	}
-
-	return WXMediaGlobalValue::GetInt()[str];
+	return WXGetGlobalValue(L"FontStrikeOut",0);
 }
 
 
-WXMEDIA_API void     WXSetGlobalString(WXCTSTR strType, WXCTSTR strValue) {
-	//WXLogW(L"WXSetGlobalValue[%ws]=%ws", strType, strValue);
-	if (wcsicmp(strType, L"MediaPlayer") == 0) {
-		if (wcsicmp(strValue, L"Lav") == 0) {
-			g_nForceLav = 1;
-		}
-		else if (wcsicmp(strValue, L"Ffplay") == 0) {
-			g_nForceLav = 0;
-		}
-		return;
-	}
 
-	if (wcsicmp(strType, L"SoundMode") == 0) {
-		if (wcsicmp(strValue, L"None") == 0) {
-			g_nSoundMode = SOUND_MODE_NONE;
-		}
-		else 	if (wcsicmp(strValue, L"Max") == 0) {
-			g_nSoundMode = SOUND_MODE_MAX;
-		}
-		else	if (wcsicmp(strValue, L"Avg") == 0) {
-			g_nSoundMode = SOUND_MODE_AVG;
-		}
-		else	if (wcsicmp(strValue, L"Left") == 0) {
-			g_nSoundMode = SOUND_MODE_LEFT;
-		}
-		else	if (wcsicmp(strValue, L"Right") == 0) {
-			g_nSoundMode = SOUND_MODE_RIGHT;
-		}
-		return;
-	}
-
-	std::wstring str = strType;
-	if (strValue) {
-		WXMediaGlobalValue::GetString()[str] = strValue;
-	}
-	else {
-		WXMediaGlobalValue::GetString()[str] = L"";
-	}
-}
-
-
-WXMEDIA_API WXCTSTR  WXGetGlobalString(WXCTSTR strType) {
-	std::wstring str = strType;
-	if (WXMediaGlobalValue::GetString().count(str) == 0) {
-		WXMediaGlobalValue::GetString()[str] = L"";
-	}
-	return WXMediaGlobalValue::GetString()[str].c_str();
-}
 
 
 //Patch For Airplay
 WXMEDIA_API void WXSetRegionCallBack(void* ctx, WXRegionResetCallBack cb1, WXRegionDrawCallBack cb2) {}
 
-//·ÏÆú½Ó¿Ú
+//åºŸå¼ƒæ¥å£
 WXMEDIA_API void WXCaptureSetRegion(int left, int top, int width, int height) {}
 
 WXMEDIA_API void WXSetSoundRenderJitterBuffer(int delay) {}
@@ -197,7 +53,7 @@ WXMEDIA_API void WXLogWriteNew(const char* format, ...) {}
 WXMEDIA_API void WXLogWriteNewW2(const wchar_t* format, ...) {}
 WXMEDIA_API void WXLogWriteNewW(const wchar_t* format, ...) {}
 
-//ÉèÖÃVAD²É¼¯£¬ĞÂ°æ¿ÉÒÔÆúÓÃ
+//è®¾ç½®VADé‡‡é›†ï¼Œæ–°ç‰ˆå¯ä»¥å¼ƒç”¨
 WXMEDIA_API  void WXCaptureSetVAD(int b) {}
 
 WXMEDIA_API void WXMediaSetTemp(int b) {}
@@ -213,7 +69,7 @@ WXMEDIA_API void WXSetSystemSoundType(int i) {}
 WXMEDIA_API void WXSetMicSoundType(int i) {}
 
 
-//ºÍÉÏÒ»Ö¡ÊÓÆµ±àÂëµÄÊ±¼ä¼ä¸ô
+//å’Œä¸Šä¸€å¸§è§†é¢‘ç¼–ç çš„æ—¶é—´é—´éš”
 WXMEDIA_API int64_t WXCaptureGetVideoTimeOut() {
 	return 0;
 }
@@ -225,27 +81,27 @@ WXMEDIA_API int64_t WXCaptureGetDuration() {
 //static int s_iLevel = LEVEL_BETTER;
 WXMEDIA_API void WXSetMachineLevel(int level) {
 
-	return;//Õë¶Ô»úÆ÷ĞÔÄÜ×Ô¶¯Ñ¡ÔñÊÊºÏµÄ±àÂë»­ÖÊ
-	//ÏÈÆÁ±ÎÕâ¸ö¹¦ÄÜ£¬Ê¹ÓÃÄ¬ÈÏÅäÖÃ
-	int nLevel = LEVEL_BETTER;
-	if (level < 0 || level > 3) { //Ä¬ÈÏÅäÖÃ
-		int memory = WXGetMemory();//»ñÈ¡ÄÚ´æ´óĞ¡£¬µ¥Î»G
-		int cpu_num = WXGetCpuNum();//»ñÈ¡CPUÊıÁ¿£¬Ë«ºË£¬4ºË£¬6ºË£¬
-		int cpu_speed = WXGetCpuSpeed();//»ñÈ¡cpuËÙ¶È£¬MHz
-		if (cpu_num <= 4) {
-			nLevel = LEVEL_GOOD;
-		}
-		else if (cpu_num < 6) {
-			nLevel = LEVEL_BETTER;
-		}
-		else {
-			nLevel = LEVEL_BEST;
-		}
-		WXLogW(L"%ws SetLevel [%d] To [%d]", level, nLevel);
-	}
-	else {
-		level = MIN(3, MAX(level, 1));//Ç¿ÖÆÉèÖÃ
-		WXLogW(L"%ws SetLevel [%d] To [%d]", level, nLevel);
-	}
-	WXSetGlobalValue(L"MachLevel", nLevel);//»úÆ÷ĞÔÄÜ
+	return;//é’ˆå¯¹æœºå™¨æ€§èƒ½è‡ªåŠ¨é€‰æ‹©é€‚åˆçš„ç¼–ç ç”»è´¨
+	////å…ˆå±è”½è¿™ä¸ªåŠŸèƒ½ï¼Œä½¿ç”¨é»˜è®¤é…ç½®
+	//int nLevel = LEVEL_BETTER;
+	//if (level < 0 || level > 3) { //é»˜è®¤é…ç½®
+	//	int memory = WXGetMemory();//è·å–å†…å­˜å¤§å°ï¼Œå•ä½G
+	//	int cpu_num = WXGetCpuNum();//è·å–CPUæ•°é‡ï¼ŒåŒæ ¸ï¼Œ4æ ¸ï¼Œ6æ ¸ï¼Œ
+	//	int cpu_speed = WXGetCpuSpeed();//è·å–cpué€Ÿåº¦ï¼ŒMHz
+	//	if (cpu_num <= 4) {
+	//		nLevel = LEVEL_GOOD;
+	//	}
+	//	else if (cpu_num < 6) {
+	//		nLevel = LEVEL_BETTER;
+	//	}
+	//	else {
+	//		nLevel = LEVEL_BEST;
+	//	}
+	//	WXLogW(L"%ws SetLevel [%d] To [%d]", level, nLevel);
+	//}
+	//else {
+	//	level = MIN(3, MAX(level, 1));//å¼ºåˆ¶è®¾ç½®
+	//	WXLogW(L"%ws SetLevel [%d] To [%d]", level, nLevel);
+	//}
+	//WXSetGlobalValue(L"MachLevel", nLevel);//æœºå™¨æ€§èƒ½
 }

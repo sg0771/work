@@ -20,15 +20,15 @@ struct Vertex
 };
 const DWORD Vertex::FVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1;
 
-ML_Texture*ID3DFilter::innerTexture[2];
+ML_Texture* ID3DFilter::innerTexture[2];
 int ID3DFilter::innerTextureIndex;
-ML_Texture*ID3DFilter::InputTexture[8];
-ML_Texture*ID3DFilter::lutTexture;
-ML_Texture*ID3DFilter::OutputTexture=0;
-ML_Texture*ID3DFilter::StagTexture=0;
-ML_Shader* ID3DFilter::CurrentFilterSegment=0;
+ML_Texture* ID3DFilter::InputTexture[8];
+ML_Texture* ID3DFilter::lutTexture;
+ML_Texture* ID3DFilter::OutputTexture = 0;
+ML_Texture* ID3DFilter::StagTexture = 0;
+ML_Shader* ID3DFilter::CurrentFilterSegment = 0;
 IDirect3DVertexBuffer9* ID3DFilter::Quad = 0;
-IDirect3DDevice9Ex* ID3DFilter::m_Device=0;
+IDirect3DDevice9Ex* ID3DFilter::m_Device = 0;
 
 
 const static uint8_t VertexShaderContent[164] = {
@@ -48,7 +48,7 @@ const static uint8_t VertexShaderContent[164] = {
 
 
 
-HRESULT IMulD3DFilter::SetParameter(void * param)
+HRESULT IMulD3DFilter::SetParameter(void* param)
 {
 	for (size_t i = 0; i < childFilters.size(); i++)
 	{
@@ -64,192 +64,192 @@ D3DFilter::~D3DFilter()
 	filters.clear();
 }
 
-//½«frameäÖÈ¾µ½Ä¿±êsurfaceÉÏ
-//outputtextureÂÖÁ÷äÖÈ¾
- void D3DFilter::Render(std::vector<FilterFrame> frames, int width, int height, unsigned char* output)
+//å°†frameæ¸²æŸ“åˆ°ç›®æ ‡surfaceä¸Š
+//outputtextureè½®æµæ¸²æŸ“
+void D3DFilter::Render(std::vector<FilterFrame> frames, int width, int height, unsigned char* output)
 {
-	 HRESULT hr;
+	HRESULT hr;
 
-	 for (size_t i = 0; i < frames.size(); i++)
-	 {
-		 if (frames[i].type == FRAME_3D)
-			 InputTexture[i]->setTextureType(ML_Texture::e_textureType::TEXTURE_3D);
-		 else
-			 InputTexture[i]->setTextureType(ML_Texture::e_textureType::TEXTURE_2D);// InputTexture is static !
+	for (size_t i = 0; i < frames.size(); i++)
+	{
+		if (frames[i].type == FRAME_3D)
+			InputTexture[i]->setTextureType(ML_Texture::e_textureType::TEXTURE_3D);
+		else
+			InputTexture[i]->setTextureType(ML_Texture::e_textureType::TEXTURE_2D);// InputTexture is static !
 
-		 InputTexture[i]->UpdateSize(frames[i].width, frames[i].height, frames[i].deep);
-		 InputTexture[i]->Upload(frames[i].data, frames[i].width, frames[i].height, frames[i].pitch, frames[i].deep);
-		 filters[0]->SetTexture(frames[i].texturename, InputTexture[i]->GetTexture());
-	 }
-	 
-
-	 OutputTexture->UpdateSize(width, height);
-	 innerTexture[0]->UpdateSize(width, height);
-
-	 //DXCall(m_Device->BeginScene());
-	 ML_Shader::CurrentFilterSegment = NULL;
-
-	 
-	 for (int i = 0; i < filters.size(); i++)
-	 {
-		 filters[i]->SetSize(width, height);
-
-		 if (ML_Shader::CurrentFilterSegment != filters[i])
-		 {
-			 ML_Shader::CurrentFilterSegment = filters[i];
-			 filters[i]->Bind();
-		 }
-
-		 DXCall(m_Device->SetRenderTarget(0, OutputTexture->GetSurface()));
-		 DXCall(m_Device->BeginScene());
-		 filters[i]->Render();
-		 DXCall(m_Device->EndScene());
-
-		 RECT rcsrc{ 0,0,width, height };
-		 DXCall(m_Device->StretchRect(OutputTexture->GetSurface(), &rcsrc, innerTexture[0]->GetSurface(), &rcsrc, D3DTEXF_LINEAR));
-		 filters[0]->SetTexture("inputtexture", innerTexture[0]->GetTexture());
+		InputTexture[i]->UpdateSize(frames[i].width, frames[i].height, frames[i].deep);
+		InputTexture[i]->Upload(frames[i].data, frames[i].width, frames[i].height, frames[i].pitch, frames[i].deep);
+		filters[0]->SetTexture(frames[i].texturename, InputTexture[i]->GetTexture());
+	}
 
 
-		 ////µ±äÖÈ¾µ½×îºóÒ»²½, »æÖÆµ½Êä³ö»­°å
-		 ////·ñÔò, »æÖÆµ½ÖĞ×ª»­°å, È»ºó½«ÖĞ×ª»­°å°ó¶¨µ½ inputtexture ²å²Û
-		 //if (i == filters.size()-1&& output ==  NULL)
-		 //{
-			// OutputTexture->UpdateSize(width, height);
-			// DXCall(m_Device->SetRenderTarget(0, OutputTexture->GetSurface()));
-			// filters[i]->Render();
-		 //}
-		 //else
-		 //{
-			// innerTexture[innerTextureIndex]->UpdateSize(width, height);
-			// DXCall(m_Device->SetRenderTarget(0, innerTexture[innerTextureIndex]->GetSurface()));
-			// filters[i]->Render();
-			// filters[i]->SetTexture("inputtexture", innerTexture[innerTextureIndex]->GetTexture());
-			// innerTextureIndex = (innerTextureIndex+1)%2;
+	OutputTexture->UpdateSize(width, height);
+	innerTexture[0]->UpdateSize(width, height);
+
+	//DXCall(m_Device->BeginScene());
+	ML_Shader::CurrentFilterSegment = NULL;
 
 
-			// //äÖÈ¾½á¹ûËÍÈë
-			// 
-			// //CopyResource()
-		 //}
-		 
-			
-	 }
-	 //DXCall(m_Device->EndScene());
-	 //äÖÈ¾ÖĞ¼ä×´Ì¬, ½«Êı¾İµ¼³öµ½cpu
-	 if (output)
-	 {
-		 StagTexture->UpdateSize(width, height);
-		 DXCall(m_Device->GetRenderTargetData(innerTexture[0]->GetSurface(), StagTexture->GetSurface()));
-		 StagTexture->Download(output);
-	 }
+	for (int i = 0; i < filters.size(); i++)
+	{
+		filters[i]->SetSize(width, height);
+
+		if (ML_Shader::CurrentFilterSegment != filters[i])
+		{
+			ML_Shader::CurrentFilterSegment = filters[i];
+			filters[i]->Bind();
+		}
+
+		DXCall(m_Device->SetRenderTarget(0, OutputTexture->GetSurface()));
+		DXCall(m_Device->BeginScene());
+		filters[i]->Render();
+		DXCall(m_Device->EndScene());
+
+		RECT rcsrc{ 0,0,width, height };
+		DXCall(m_Device->StretchRect(OutputTexture->GetSurface(), &rcsrc, innerTexture[0]->GetSurface(), &rcsrc, D3DTEXF_LINEAR));
+		filters[0]->SetTexture("inputtexture", innerTexture[0]->GetTexture());
+
+
+		////å½“æ¸²æŸ“åˆ°æœ€åä¸€æ­¥, ç»˜åˆ¶åˆ°è¾“å‡ºç”»æ¿
+		////å¦åˆ™, ç»˜åˆ¶åˆ°ä¸­è½¬ç”»æ¿, ç„¶åå°†ä¸­è½¬ç”»æ¿ç»‘å®šåˆ° inputtexture æ’æ§½
+		//if (i == filters.size()-1&& output ==  NULL)
+		//{
+		   // OutputTexture->UpdateSize(width, height);
+		   // DXCall(m_Device->SetRenderTarget(0, OutputTexture->GetSurface()));
+		   // filters[i]->Render();
+		//}
+		//else
+		//{
+		   // innerTexture[innerTextureIndex]->UpdateSize(width, height);
+		   // DXCall(m_Device->SetRenderTarget(0, innerTexture[innerTextureIndex]->GetSurface()));
+		   // filters[i]->Render();
+		   // filters[i]->SetTexture("inputtexture", innerTexture[innerTextureIndex]->GetTexture());
+		   // innerTextureIndex = (innerTextureIndex+1)%2;
+
+
+		   // //æ¸²æŸ“ç»“æœé€å…¥
+		   // 
+		   // //CopyResource()
+		//}
+
+
+	}
+	//DXCall(m_Device->EndScene());
+	//æ¸²æŸ“ä¸­é—´çŠ¶æ€, å°†æ•°æ®å¯¼å‡ºåˆ°cpu
+	if (output)
+	{
+		StagTexture->UpdateSize(width, height);
+		DXCall(m_Device->GetRenderTargetData(innerTexture[0]->GetSurface(), StagTexture->GetSurface()));
+		StagTexture->Download(output);
+	}
 }
 
- HRESULT ID3DFilter::Release()
- {
-	 return 0;
+HRESULT ID3DFilter::Release()
+{
+	return 0;
 }
- HRESULT  ID3DFilter::UnInit(IDirect3DDevice9Ex* device)
- {
-	 delete InputTexture[0];
-	 delete InputTexture[1];
-	 delete InputTexture[2];
-	 delete InputTexture[3];
-	 delete	innerTexture[0];
-	 delete innerTexture[1];
-	 delete	 OutputTexture;
-	 delete	 StagTexture;
-	 delete	 lutTexture;
+HRESULT  ID3DFilter::UnInit(IDirect3DDevice9Ex* device)
+{
+	delete InputTexture[0];
+	delete InputTexture[1];
+	delete InputTexture[2];
+	delete InputTexture[3];
+	delete	innerTexture[0];
+	delete innerTexture[1];
+	delete	 OutputTexture;
+	delete	 StagTexture;
+	delete	 lutTexture;
 
-	 Quad->Release();
+	Quad->Release();
 
-	 return S_OK;
- }
+	return S_OK;
+}
 
- HRESULT  ID3DFilter::Init(IDirect3DDevice9Ex* device)
- {
-	 m_Device = device;
-	 innerTextureIndex = 0;
-	 D3DVERTEXELEMENT9 decl[] = {
-		 {0, 0, D3DDECLTYPE_FLOAT3, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_POSITION, 0},
-		 {0, 12, D3DDECLTYPE_FLOAT3, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_POSITION, 1},
-		 {0, 24, D3DDECLTYPE_FLOAT2, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_TEXCOORD, 0},
-		 D3DDECL_END()
-	 };
+HRESULT  ID3DFilter::Init(IDirect3DDevice9Ex* device)
+{
+	m_Device = device;
+	innerTextureIndex = 0;
+	D3DVERTEXELEMENT9 decl[] = {
+		{0, 0, D3DDECLTYPE_FLOAT3, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_POSITION, 0},
+		{0, 12, D3DDECLTYPE_FLOAT3, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_POSITION, 1},
+		{0, 24, D3DDECLTYPE_FLOAT2, D3DDECLMETHOD_DEFAULT, D3DDECLUSAGE_TEXCOORD, 0},
+		D3DDECL_END()
+	};
 
-	 IDirect3DVertexDeclaration9* _decl = 0;
-	 m_Device->CreateVertexDeclaration(decl, &_decl);
-	 m_Device->SetVertexDeclaration(_decl);
+	IDirect3DVertexDeclaration9* _decl = 0;
+	m_Device->CreateVertexDeclaration(decl, &_decl);
+	m_Device->SetVertexDeclaration(_decl);
 
-	 HRESULT hr;
-	 DXCall(m_Device->CreateVertexBuffer(6 * sizeof(Vertex), D3DUSAGE_WRITEONLY, 0, D3DPOOL_DEFAULT, &Quad, 0));
+	HRESULT hr;
+	DXCall(m_Device->CreateVertexBuffer(6 * sizeof(Vertex), D3DUSAGE_WRITEONLY, 0, D3DPOOL_DEFAULT, &Quad, 0));
 
-	 Vertex* v;
-	 DXCall(Quad->Lock(0, 0, (void**)&v, 0));
-	 v[0] = Vertex(-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1);
-	 v[1] = Vertex(-1.0f, 1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
-	 v[2] = Vertex(1.0f, 1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 1, 0.0f);
+	Vertex* v;
+	DXCall(Quad->Lock(0, 0, (void**)&v, 0));
+	v[0] = Vertex(-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1);
+	v[1] = Vertex(-1.0f, 1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+	v[2] = Vertex(1.0f, 1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 1, 0.0f);
 
-	 v[3] = Vertex(-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1);
-	 v[4] = Vertex(1.0f, 1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 1, 0.0f);
-	 v[5] = Vertex(1.0f, -1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 1, 1);
+	v[3] = Vertex(-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1);
+	v[4] = Vertex(1.0f, 1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 1, 0.0f);
+	v[5] = Vertex(1.0f, -1.0f, 1.0f, 0.0f, 0.0f, -1.0f, 1, 1);
 
-	 DXCall(Quad->Unlock());
-	 m_Device->SetStreamSource(0, Quad, 0, 6 * sizeof(Vertex));
-	 DXCall(m_Device->SetRenderState(D3DRS_LIGHTING, false));
-	 m_Device->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
-	 m_Device->SetRenderState(D3DRS_LIGHTING, FALSE);
-	 m_Device->SetRenderState(D3DRS_ZENABLE, FALSE);
-	 m_Device->SetRenderState(D3DRS_STENCILENABLE, FALSE);
-	 m_Device->SetRenderState(D3DRS_ALPHABLENDENABLE, FALSE);
-	 m_Device->SetRenderState(D3DRS_ALPHATESTENABLE, FALSE);
-	 m_Device->SetRenderState(D3DRS_SCISSORTESTENABLE, FALSE);
-	 m_Device->SetRenderState(D3DRS_COLORWRITEENABLE, D3DCOLORWRITEENABLE_ALPHA | D3DCOLORWRITEENABLE_BLUE | D3DCOLORWRITEENABLE_GREEN | D3DCOLORWRITEENABLE_RED);
-	 m_Device->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_LINEAR);
-	 m_Device->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_LINEAR);
-	 m_Device->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_NONE);
-	 m_Device->SetSamplerState(0, D3DSAMP_ADDRESSU, D3DTADDRESS_CLAMP);
-	 m_Device->SetSamplerState(0, D3DSAMP_ADDRESSV, D3DTADDRESS_CLAMP);
+	DXCall(Quad->Unlock());
+	m_Device->SetStreamSource(0, Quad, 0, 6 * sizeof(Vertex));
+	DXCall(m_Device->SetRenderState(D3DRS_LIGHTING, false));
+	m_Device->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
+	m_Device->SetRenderState(D3DRS_LIGHTING, FALSE);
+	m_Device->SetRenderState(D3DRS_ZENABLE, FALSE);
+	m_Device->SetRenderState(D3DRS_STENCILENABLE, FALSE);
+	m_Device->SetRenderState(D3DRS_ALPHABLENDENABLE, FALSE);
+	m_Device->SetRenderState(D3DRS_ALPHATESTENABLE, FALSE);
+	m_Device->SetRenderState(D3DRS_SCISSORTESTENABLE, FALSE);
+	m_Device->SetRenderState(D3DRS_COLORWRITEENABLE, D3DCOLORWRITEENABLE_ALPHA | D3DCOLORWRITEENABLE_BLUE | D3DCOLORWRITEENABLE_GREEN | D3DCOLORWRITEENABLE_RED);
+	m_Device->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_LINEAR);
+	m_Device->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_LINEAR);
+	m_Device->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_NONE);
+	m_Device->SetSamplerState(0, D3DSAMP_ADDRESSU, D3DTADDRESS_CLAMP);
+	m_Device->SetSamplerState(0, D3DSAMP_ADDRESSV, D3DTADDRESS_CLAMP);
 
-	 DXCall(m_Device->SetStreamSource(0, Quad, 0, sizeof(Vertex)));
-	 DXCall(m_Device->SetFVF(Vertex::FVF));
-	 D3DXMATRIX proj;
-	 LibInst::GetInst().mD3DXMatrixPerspectiveFovLH(&proj, D3DX_PI * 0.5f, 1.0f, 1.0f, 100.0f);
-	 DXCall(m_Device->SetTransform(D3DTS_PROJECTION, &proj));
+	DXCall(m_Device->SetStreamSource(0, Quad, 0, sizeof(Vertex)));
+	DXCall(m_Device->SetFVF(Vertex::FVF));
+	D3DXMATRIX proj;
+	LibInst::GetInst().mD3DXMatrixPerspectiveFovLH(&proj, D3DX_PI * 0.5f, 1.0f, 1.0f, 100.0f);
+	DXCall(m_Device->SetTransform(D3DTS_PROJECTION, &proj));
 
-	 InputTexture[0] = new ML_Texture(m_Device, 1280, 720, D3DUSAGE_DYNAMIC);
-	 InputTexture[1] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_DYNAMIC);
-	 InputTexture[2] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_DYNAMIC);
-	 InputTexture[3] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_DYNAMIC);
-
-
-	 innerTexture[0] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_RENDERTARGET);
-	 innerTexture[1] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_RENDERTARGET);
-	 OutputTexture = new ML_Texture(m_Device, 1280, 720, D3DUSAGE_RENDERTARGET);
-	 StagTexture = new ML_Texture(m_Device, 640, 360, D3DUSAGE_DYNAMIC, D3DPOOL_SYSTEMMEM);
-	 lutTexture = new ML_Texture(m_Device, 256, 1, D3DUSAGE_DYNAMIC);
+	InputTexture[0] = new ML_Texture(m_Device, 1280, 720, D3DUSAGE_DYNAMIC);
+	InputTexture[1] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_DYNAMIC);
+	InputTexture[2] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_DYNAMIC);
+	InputTexture[3] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_DYNAMIC);
 
 
-	 IDirect3DVertexShader9* vertexshader = 0;
+	innerTexture[0] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_RENDERTARGET);
+	innerTexture[1] = new ML_Texture(m_Device, 640, 360, D3DUSAGE_RENDERTARGET);
+	OutputTexture = new ML_Texture(m_Device, 1280, 720, D3DUSAGE_RENDERTARGET);
+	StagTexture = new ML_Texture(m_Device, 640, 360, D3DUSAGE_DYNAMIC, D3DPOOL_SYSTEMMEM);
+	lutTexture = new ML_Texture(m_Device, 256, 1, D3DUSAGE_DYNAMIC);
 
-	 DXCall(m_Device->CreateVertexShader((DWORD*)VertexShaderContent, &vertexshader));
-	 DXCall(m_Device->SetVertexShader(vertexshader));
-	 return true;
-	 return S_OK;
- }
 
-//1 ¶Ôdevice¿ªÊ¼Ò»¸öscene
-//2 »ñÈ¡ Texture backbuffer 
-//3 ÉèÖÃÕâ¸öbackbuffer ×÷Îªrendertarget
-//4 Çå³ı backbufferÊı¾İ
-//Ğ´ÈëÊı¾İµ½texture
+	IDirect3DVertexShader9* vertexshader = 0;
+
+	DXCall(m_Device->CreateVertexShader((DWORD*)VertexShaderContent, &vertexshader));
+	DXCall(m_Device->SetVertexShader(vertexshader));
+	return true;
+	return S_OK;
+}
+
+//1 å¯¹deviceå¼€å§‹ä¸€ä¸ªscene
+//2 è·å– Texture backbuffer 
+//3 è®¾ç½®è¿™ä¸ªbackbuffer ä½œä¸ºrendertarget
+//4 æ¸…é™¤ backbufferæ•°æ®
+//å†™å…¥æ•°æ®åˆ°texture
 	//texture.lock
-	// copy buffer µ½texture (memcpy data to d3dlock_rect.pbits) Èı¸ötexture
-	//ÉèÖÃ¶¥µãÊı×é
-	//ÉèÖÃpixelshader SetPixelShader
-	//½«Ìî³äºÃÊı¾İµÄtextureÉèÖÃµ½directÖĞ, SetTexture(0/1/2, YTex)
-	//ÉèÖÃ¶¥µã¸ñÊ½ SetFVF
+	// copy buffer åˆ°texture (memcpy data to d3dlock_rect.pbits) ä¸‰ä¸ªtexture
+	//è®¾ç½®é¡¶ç‚¹æ•°ç»„
+	//è®¾ç½®pixelshader SetPixelShader
+	//å°†å¡«å……å¥½æ•°æ®çš„textureè®¾ç½®åˆ°directä¸­, SetTexture(0/1/2, YTex)
+	//è®¾ç½®é¡¶ç‚¹æ ¼å¼ SetFVF
 
-ID3DFilter::ID3DFilter(IDirect3DDevice9Ex *device)
+ID3DFilter::ID3DFilter(IDirect3DDevice9Ex* device)
 {
 	m_Device = device;
 
