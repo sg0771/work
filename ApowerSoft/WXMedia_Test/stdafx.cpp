@@ -33,6 +33,7 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
 
     AtlInitCommonControls(ICC_BAR_CLASSES);	// add flags to support other controls
 
+    Initialize("Apowersoft", "WXTest+++", 0);//库的初始化
 	WXDeviceInit(L"WXMedia_Test.log");//WXMedia初始化
 
     //GDI+ Init

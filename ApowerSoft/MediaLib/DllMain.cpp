@@ -170,9 +170,8 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 
 
 	//初始运行路径
-	wchar_t wszRunPath[MAX_PATH] = { 0 };
-	WXGetGlobalString(L"runpath", wszRunPath, L""); //EXE路径
-	std::wstring s_strRunPath = wszRunPath;
+	// 获取当前运行目录
+	std::wstring s_strRunPath = WXBase::GetRunPath();
 	fullpath = s_strRunPath + std::wstring(filename);
 	if (WXBase::Exists(fullpath)) { 
 		return fullpath;
@@ -190,10 +189,8 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 		return fullpath;
 	}
 
-	//相对于 Medialib.dll 的路径
-	wchar_t wszDllPath[MAX_PATH] = { 0 };
-	WXGetGlobalString(L"dlldir", wszDllPath, L""); //EXE路径
-	std::wstring s_strDllDir = wszDllPath;
+	//Medialib.dll/WXMedia.dll 所在目录
+	std::wstring s_strDllDir = WXBase::GetDllPath();
 	fullpath = s_strDllDir + std::wstring(filename);
 	if (WXBase::Exists(fullpath)) {
 		return fullpath;
@@ -271,35 +268,10 @@ MEDIALIB_API MediaInfomation* AnalyzeMedia(char* utf8_path) {
 	return pMi;
 }
 
-MEDIALIB_API MediaInfomation* AnalyzeMediaW(wchar_t* utf16_path) {
-	if (!s_bInit) {
-		MessageBoxW(NULL, L"Not init", L"Medialib", MB_OK);
-		return nullptr;
-	}
-	if (wcscmp(utf16_path, L"") == 0 || wcscmp(utf16_path, L"custom") == 0)
-		return nullptr;
-
-	if (!WXBase::Exists(utf16_path)) {
-		::MessageBoxW(NULL, utf16_path, L"File No Found!", MB_OK);
-		return nullptr;;
-	}
-
-	MediaInfomation* pMi = NULL;
-	int tt = -1;
-	std::string utf8_path = WXBase::UTF16ToUTF8(utf16_path);
-	FFMS_Index* pIndex = FFMS_ProcessIndex(utf8_path.c_str(), &tt);
-	if (pIndex != 0) {
-		pMi = FFMS_MediaInformation(pIndex);
-	}
-	return pMi;
-}
-
 MEDIALIB_API MediaInfomation* AnalyzeMedia2(char* utf8_path) {
 	return AnalyzeMedia(utf8_path);
 }
-MEDIALIB_API MediaInfomation* AnalyzeMediaW2(wchar_t* utf16_path) {
-	return AnalyzeMediaW(utf16_path);
-}
+
 
 MEDIALIB_API INT64 GetAssDuration(char* utf8_path)
 {
@@ -366,7 +338,6 @@ static int _SupportQSVCodec(BOOL bH264) {
 	else if (nHwCodec == 0) { //不支持
 		return 0;
 	}
-	WXSetGlobalValue(_T("HWEncoder"), 0);
 	if (LibInst::GetInst().m_libD3D9 == nullptr) {
 		//硬编码都需要D3D9 对应功能
 		return 0;
@@ -377,18 +348,23 @@ static int _SupportQSVCodec(BOOL bH264) {
 		return 0;
 	}
 	int qsv_flag = _CheckQSV(bH264, strCodec);
-	WXSetGlobalValue(strCodec, qsv_flag);;
+	WXSetGlobalValue(strCodec, qsv_flag);
+	if (qsv_flag) {
+		WXSetGlobalValue(_T("HWEncoder"), 1);
+	}
 	return qsv_flag;
 }
 
 MEDIALIB_API int MLSupportH265Codec() {
 	WXAutoLock al(s_lckQSV);
-	return _SupportQSVCodec(TRUE);
+	WXLogW(L"%ws Enter", __FUNCTIONW__);
+	return _SupportQSVCodec(FALSE);
 }
 
 MEDIALIB_API int MLSupportH264Codec() {
 	WXAutoLock al(s_lckQSV);
-	return _SupportQSVCodec(FALSE);
+	WXLogW(L"%ws Enter", __FUNCTIONW__);
+	return _SupportQSVCodec(TRUE);
 }
 
 //--------------------
@@ -399,6 +375,21 @@ static void WINAPI ML_LogW(const wchar_t* format, va_list args) {
 	WXLogW(L"%ws", wszMsg);
 }
 
+
+//如果路径不存在就弹窗警告,然后exit
+static void MLCheckDir(std::wstring wstrDir) {
+	if (LibInst::GetInst().m_libDbghelp) {
+		std::string gbDir = WXBase::UTF16ToGB(wstrDir);
+		LibInst::GetInst().mMakeSureDirectoryPathExists(gbDir.c_str());
+	}
+	WXBase::MakeSureDirectoryPathExistsW(wstrDir.c_str());//Log目录
+	if (!WXBase::Exists(wstrDir)) {
+		WXString strMsg;
+		strMsg.Format(L"Sorry ,The Dir[%ws] is not exist!", wstrDir.c_str());
+		MessageBoxW(NULL, strMsg.str(), L"Medialib.dll", MB_OK);
+		exit(-1);
+	}
+}
 MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool mode) {
 
 	if (s_bInit)
@@ -406,39 +397,18 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 
 	BEGIN_LOG_FUNC
 	std::wstring s_strCompany = WXBase::UTF8ToUTF16(_company);
-	WXSetGlobalString(L"company", s_strCompany.c_str());
-
 	std::wstring s_strProduct = WXBase::UTF8ToUTF16(_product);
-	WXSetGlobalString(L"product", s_strProduct.c_str());
-
 	std::wstring s_strLogDir = WXBase::getEnvVarW(L"appdata") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\log\\";
-	WXSetGlobalString(L"logdir", s_strLogDir.c_str());
-
 	std::wstring s_strDump = s_strLogDir + L"crash.dmp";
-	WXSetGlobalString(L"dump", s_strDump.c_str());
-
 	std::wstring s_strTempDir = WXBase::getEnvVarW(L"temp") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\";
-	WXSetGlobalString(L"temp", s_strTempDir.c_str());
-
 	std::wstring s_strIndexDir = WXBase::getEnvVarW(L"temp") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\Index+1128\\";
-	WXSetGlobalString(L"index", s_strIndexDir.c_str());
-
 	std::wstring  s_strProgData = WXBase::getEnvVarW(L"ProgramData") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\";
-	WXSetGlobalString(L"ProgramData", s_strProgData.c_str());
-
-	// 获取当前运行目录
-	std::wstring s_strRunPath = WXBase::GetRunPath();//当前运行目录
-	WXSetGlobalString(L"runpath", s_strRunPath.c_str());
-
-	//Medialib.dll 所在目录
-	std::wstring s_strDllDir = WXBase::GetDllPath();
-	WXSetGlobalString(L"dlldir", s_strDllDir.c_str());;
-
 	if (WXBase::Exists(L"libffmpeg.dll")) {
 		std::wstring Libffmpeg_DllPath = std::filesystem::absolute(L"libfffmpeg.dll").wstring();
 		WXLogW(L"Medialib.dll Path = %ws", Libffmpeg_DllPath.c_str());
 	}
 	else {
+		std::wstring s_strDllDir = WXBase::GetDllPath();
 		std::wstring Libffmpeg_DllPath = s_strDllDir + L"libffmpeg.dll";
 		if (WXBase::Exists(Libffmpeg_DllPath)) {
 			//libffmpeg.dll在同级目录
@@ -458,64 +428,44 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 		}
 	}
 
-	//如果路径不存在就弹窗警告,然后exit
-	if(LibInst::GetInst().m_libDbghelp)
-		LibInst::GetInst().mMakeSureDirectoryPathExists(WXBase::UTF16ToGB(s_strLogDir).c_str());
-	WXBase::MakeSureDirectoryPathExistsW(s_strLogDir.c_str());//Log目录
-	if (!WXBase::Exists(s_strLogDir)) {
-		WXString strMsg;
-		strMsg.Format(L"Sorry ,The Log Dir[%ws] is not exist!", s_strLogDir.c_str());
-		MessageBoxW(NULL, strMsg.str(), L"Medialib.dll", MB_OK);
-		exit(-1);
-	}
+	MLCheckDir(s_strLogDir);
+	MLCheckDir(s_strTempDir);
+	MLCheckDir(s_strIndexDir);
 
-	if (LibInst::GetInst().m_libDbghelp)
-		LibInst::GetInst().mMakeSureDirectoryPathExists(WXBase::UTF16ToGB(s_strTempDir).c_str());
-	WXBase::MakeSureDirectoryPathExistsW(s_strTempDir.c_str());//Temp目录 缩略图
-	if (!WXBase::Exists(s_strTempDir)) {
-		WXString strMsg;
-		strMsg.Format(L"Sorry ,The Temp Dir[%ws] is not exist!", s_strTempDir.c_str());
-		MessageBoxW(NULL, strMsg.str(), L"Medialib.dll", MB_OK);
-		exit(-1);
-	}
-
-	if (LibInst::GetInst().m_libDbghelp)
-		LibInst::GetInst().mMakeSureDirectoryPathExists(WXBase::UTF16ToGB(s_strIndexDir).c_str());
-	WXBase::MakeSureDirectoryPathExistsW(s_strIndexDir);//Index目录
-	if (!WXBase::Exists(s_strIndexDir)) {
-		WXString strMsg;
-		strMsg.Format(L"Sorry ,The Index Dir[%ws] is not exist!", s_strIndexDir.c_str());
-		MessageBoxW(NULL, strMsg.str(), L"Medialib.dll", MB_OK);
-		exit(-1);
-	}
-
-	//无法创建LOG文件就弹窗警告！然后exit
-	std::wstring strLog = s_strLogDir + L"\\avisynth_128.log";
+	//设置全局INI路径
 	std::wstring strIniPath = s_strLogDir.c_str();
 	strIniPath += L"WXMedia.ini";//同目录下的ini文件
 	WXSetGlobalPath(strIniPath.c_str());
-	//EXE全名
-	std::wstring wstrName = WXBase::GetExeName();
-	if (wcsicmp(wstrName.c_str(),L"MediaLib_Test.exe") == 0) {
-		strLog = s_strRunPath + L"debug.log";
-	}
+
+	WXSetGlobalString(L"company", s_strCompany.c_str()); //公司名字
+	WXSetGlobalString(L"product", s_strProduct.c_str()); //应用名字
+	WXSetGlobalString(L"ProgramData", s_strProgData.c_str()); //ProgramData 路径
+	WXSetGlobalString(L"LogDir", s_strLogDir.c_str()); //Log 路径
+	WXSetGlobalString(L"IndexDir", s_strIndexDir.c_str());//Index 路径
+	WXSetGlobalString(L"TempDir", s_strTempDir.c_str());//Temp 路径
+	WXSetGlobalString(L"DumpFilePath", s_strDump.c_str());//Dump 路径
+
+
+	//无法创建LOG文件就弹窗警告！然后exit
+	std::wstring strLog = s_strLogDir + L"\\avisynth_128.log";
 	bool bOpenLog = WXLogInit(strLog.c_str());
 	if (!bOpenLog) {
-		strLog = L"MyDebug.log";
+		WXString strMsg;
+		strMsg.Format(L"Sorry ,Create LogFile [%ws] Error!", strLog.c_str());
+		MessageBoxW(NULL, strMsg.str(), L"Medialib.dll", MB_OK);
 
+		strLog = L"MyDebug.log";
 	    bOpenLog = WXLogInit(strLog.c_str());
 		if (!bOpenLog) {
 			WXString strMsg;
 			strMsg.Format(L"Sorry ,Create LogFile[%ws] Error!", strLog.c_str());
 			MessageBoxW(NULL, strMsg.str(), L"Medialib.dll", MB_OK);
+			exit(-1);
 		}
 	}
 	
-	LibInst::GetInst().LogMsg(ML_LogW);
+	LibInst_LogMsg(ML_LogW);
 	WXLogWOnce(L"MediaLib Initialize: %ws, %ws", s_strCompany.c_str(), s_strProduct.c_str());
-
-	GetFullPathW(L"medialib.dll");
-	SetDllDirectoryW(s_strDllDir.c_str());
 
 	::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
 	static ULONG_PTR m_gdiplusToken = 0;
@@ -528,7 +478,7 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 	std::thread thFfmpeg([] {
 
 		s_strFfmpegExe = GetFullPathW(L"ffmpeg.exe");
-		int getExe = WXGetGlobalValue(L"ffmpeg_exist",  -1);
+		int getExe = WXGetGlobalValue(L"ffmpeg_exist", -1);
 		if (getExe == -1)
 		{
 			DWORD dwTimeOut = 10000;
@@ -536,10 +486,12 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 			if (result == WAIT_OBJECT_0) {
 				s_bFfmpegExe = true;
 				WXSetGlobalValue(L"ffmpeg_exist", 1);
+				WXSetGlobalString(L"ffmpeg_path", s_strFfmpegExe.c_str());
 				WXLogW(L"%ws is exist!", s_strFfmpegExe.c_str());
 			}
 			else {
 				WXSetGlobalValue(L"ffmpeg_exist", 0);
+				WXSetGlobalString(L"ffmpeg_path", L"");
 				s_bFfmpegExe = false;
 				WXLogW(L"%ws is not exist!", s_strFfmpegExe.c_str());
 			}
@@ -547,18 +499,14 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 		else {
 			s_bFfmpegExe = getExe;
 		}
-	});
+		});
 	thFfmpeg.detach();
 
-	std::thread thH264([] {
-		MLSupportH264Codec();//硬解码检测
+	std::thread thQSV([] {
+		MLSupportH264Codec();//硬编码检测
+		MLSupportH265Codec();//硬编码检测
 	});
-	thH264.detach();
-
-	std::thread thH265([] {
-		MLSupportH265Codec();//硬解码检测
-	});
-	thH265.detach();
+	thQSV.detach();
 
 	InitAvisynth();
 	InitMedia();
@@ -1222,12 +1170,6 @@ static  HRESULT  Capture_Image_Gdiplus(const WCHAR* filename, const WCHAR* outpu
 	return S_OK;
 }
 
-
-
-//视频转换操作线程
-
-
-
 MEDIALIB_API HRESULT  CaptureImage(char* utf8_path, float second, wchar_t* output, int height) {
 
 	if (height > 10000 || height < 0) {
@@ -1247,29 +1189,6 @@ MEDIALIB_API HRESULT  CaptureImage(char* utf8_path, float second, wchar_t* outpu
 	//WXAutoLock al(g_lckTool);
 	// filename 为 "custom" 为截取轨道图像， 比如调整缩放
 	capture_image((char*)strInput.c_str(), second, (wchar_t*)wstrOutput.c_str(), height);
-	return S_OK;
-}
-
-MEDIALIB_API HRESULT  CaptureImageW(wchar_t* utf16_path, float second, wchar_t* output, int height) {
-
-	if (height > 10000 || height < 0) {
-		height = 360;
-	}
-	//先根据文件判断输入是否图像
-
-	std::wstring wstrInput = utf16_path;// WXBase::UTF8ToUTF16(filename);
-	std::string utf8_path = WXBase::UTF16ToUTF8(utf16_path);
-	std::wstring wstrOutput = output;
-	const wchar_t* Left4 = wstrInput.c_str() + (wstrInput.length() - 4);
-	if (wcsicmp(Left4, L".png") == 0 ||
-		wcsicmp(Left4, L"jpeg") == 0 ||
-		wcsicmp(Left4, L".jpg") == 0) {
-		return Capture_Image_Gdiplus(wstrInput.c_str(), output, height);
-	}
-
-	//WXAutoLock al(g_lckTool);
-	// filename 为 "custom" 为截取轨道图像， 比如调整缩放
-	capture_image((char*)utf8_path.c_str(), second, (wchar_t*)wstrOutput.c_str(), height);
 	return S_OK;
 }
 
@@ -1787,153 +1706,7 @@ MEDIALIB_API HRESULT  CaptureImages(char* utf8_path, INT64* _seconds, int _size,
 	return S_OK;
 }
 
-//ffmpeg.exe 截取多种图片预览
-//在程序初始化是检测是否可以调用ffmpeg.exe
-//如果不能调用ffmpeg.exe 则使用ffmpeg.dll
-//判断是否TS后缀名，如果是，-ss 在 -i 之前 截图可能会模糊
-//优先使用DXVA硬解码，如果失败切换到软解码
-MEDIALIB_API HRESULT  CaptureImagesW(wchar_t* utf16_path, INT64* _seconds, int _size, wchar_t* _output) {
-	//WXAutoLock al(g_lckTool);
 
-	auto dst = AnalyzeMediaW2(utf16_path);
-	if (dst == NULL)
-		return E_FAIL;
-
-	//LOG_FUNC
-
-	s_PauseCapture = FALSE;//重置
-
-	std::wstring wstrInput = utf16_path;// WXBase::UTF8ToUTF16(_filename);
-	std::wstring wstrOutput = _output;
-	BOOL bTS = FALSE;
-	std::wstring Extend = getFileExtension(wstrInput);
-	if (Extend == L"ts" || Extend == L"TS") {
-		bTS = TRUE;
-	}
-
-	for (int index = 0; index < _size; index++) {
-		INT64 time = _seconds[index];
-		const wchar_t* wszInput = wstrInput.c_str();
-		WXString wxstrOutput;;//输出文件
-		wxstrOutput.Format(L"%ws_%lld.jpg", wstrOutput.c_str(), time);
-
-		if (s_bFfmpegExe)
-		{
-			WXString strCmd;
-			//默认使用硬解码
-			strCmd.Format(L" -hwaccel dxva2  -accurate_seek   -ss %f  -i \"%ws\"  -vf scale=-2:80 -vframes 1 -f image2 \"%ws\" -y",
-				(double)time / 1000000.0f,
-				wszInput,
-				wxstrOutput.str());
-			ExecuteFfmpegExe(strCmd.str());
-			int nExist = WXBase::Exists(wxstrOutput.c_str());
-			int nSize = WXBase::Filesize(wxstrOutput.str());
-			if (nExist == 0 || nSize == 0) {//切换到软解码
-				strCmd.Format(L" -accurate_seek   -ss %f  -i \"%ws\"  -vf scale=-2:80 -vframes 1 -f image2 \"%ws\" -y",
-					(double)time / 1000000.0f,
-					wszInput,
-					wxstrOutput.str());
-				ExecuteFfmpegExe(strCmd.str());
-				nExist = WXBase::Exists(wxstrOutput.c_str());
-				nSize = WXBase::Filesize(wxstrOutput.str());
-				if (nExist == 0 || nSize == 0) {
-					WXLogW(L"CaptureImages ffmpeg.exe Error");
-					return E_FAIL;
-				}
-			}
-		}
-		else {
-			std::vector<const char*> argv;
-			std::vector <WXString> arrStrArgv;
-			arrStrArgv.push_back(L"ffmpeg");
-			arrStrArgv.push_back(L"-ss");
-			WXString wxstrTime;
-			wxstrTime.Format(L"%f", (double)(time) / 1000000.0);
-			arrStrArgv.push_back(wxstrTime);//参数位毫秒
-			arrStrArgv.push_back(L"-i");
-			arrStrArgv.push_back(wszInput);//输入文件
-			arrStrArgv.push_back(L"-vf");
-			arrStrArgv.push_back(L"scale=-2:80");
-			arrStrArgv.push_back(L"-vframes");
-			arrStrArgv.push_back(L"1");
-			arrStrArgv.push_back(L"-f");
-			arrStrArgv.push_back(L"image2");
-			arrStrArgv.push_back(wxstrOutput);//输出文件
-
-			WXCtx* ctx = avffmpeg_create();
-			for (int argc = 0; argc < arrStrArgv.size(); argc++)
-				argv.push_back(arrStrArgv[argc].c_str());
-			int err = avffmpeg_convert(ctx, argv.size(), (char**)argv.data());
-			avffmpeg_destroy(ctx);
-
-			int nExist = WXBase::Exists(wxstrOutput.c_str());
-			int nSize = WXBase::Filesize(wxstrOutput.str());
-			if (nExist == 0 || nSize == 0) {
-				WXLogW(L"CaptureImages Impl Error");
-				return E_FAIL;
-			}
-		}
-	}
-
-	return S_OK;
-}
-
-MEDIALIB_API HRESULT SplitAudioW(wchar_t* utf16_in, wchar_t* utf16_out) {
-	HRESULT hr = 0;
-	//WXAutoLock al(g_lckTool);
-
-
-	if (s_bFfmpegExe) {
-		std::wstring wstrInput = utf16_in;
-		std::wstring wstrOutput = utf16_out;
-		WXString strCmd;
-		strCmd.Format(L" -i \"%ws\" -ar 8000 -ac 1 -c:a pcm_u8 -f wav \"%ws\" -y", wstrInput.c_str(), wstrOutput.c_str());
-		ExecuteFfmpegExe(strCmd.str());
-		if (!WXBase::Exists(wstrOutput.c_str())) {
-			WXLogW(L"SplitAudio Convert Error!!!------------ \"%ws\" %ws", s_strFfmpegExe.c_str(), strCmd.str());
-			return E_FAIL;
-		}
-		else {
-			if (!WXBase::Filesize(wstrOutput.c_str())) {
-				WXLogW(L"SplitAudio Convert Empty !!!------------ \"%ws\"  %ws", s_strFfmpegExe.c_str(), strCmd.str());
-				return E_FAIL;
-			}
-		}
-		return S_OK;
-	}
-	else { //SplitAudio
-		std::string strInput = WXBase::UTF16ToUTF8(utf16_in);
-		std::string strOutput = WXBase::UTF16ToUTF8(utf16_out);
-		std::vector<const char*> argv;
-		argv.push_back("ffmpeg");
-		argv.push_back("-i");
-		argv.push_back(strInput.c_str());//输入文件
-		argv.push_back("-ar");
-		argv.push_back("8000");
-		argv.push_back("-ac");
-		argv.push_back("1");
-		argv.push_back("-c:a");
-		argv.push_back("pcm_u8");
-		argv.push_back("-f");
-		argv.push_back("wav");
-		argv.push_back(strOutput.c_str());//输出文件
-
-		WXCtx* ctx = avffmpeg_create();
-		int err = avffmpeg_convert(ctx, argv.size(), (char**)argv.data());
-		avffmpeg_destroy(ctx);
-		if (!WXBase::Exists(utf16_out)) {
-			WXLogW(L"SplitAudio Convert Error!!!");
-			return E_FAIL;
-		}
-		else {
-			if (!WXBase::Filesize(utf16_out)) {
-				WXLogW(L"SplitAudio Convert Empty!!!");
-				return E_FAIL;
-			}
-		}
-	}
-	return hr;
-}
 MEDIALIB_API HRESULT  SplitAudio(char* filename, char* output) {
 	HRESULT hr = 0;
 
@@ -1990,9 +1763,6 @@ MEDIALIB_API HRESULT  SplitAudio(char* filename, char* output) {
 	return hr;
 }
 
-
-
-
 MEDIALIB_API HRESULT SetCrashReportPath(WCHAR* path)
 {
 	WXSetGlobalString(L"CrashReportPath", path);
@@ -2004,7 +1774,7 @@ EXTERN_C static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 	if (LibInst::GetInst().m_libDbghelp == nullptr)
 		return -1;
 	wchar_t wszDumpPath[MAX_PATH] = { 0 };
-	WXGetGlobalString(L"dump", wszDumpPath,L"");
+	WXGetGlobalString(L"DumpFilePath", wszDumpPath,L"");
 	if (wcslen(wszDumpPath))return -1;
 	HANDLE hDumpFile = CreateFile(wszDumpPath, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hDumpFile == INVALID_HANDLE_VALUE) {
@@ -2032,7 +1802,7 @@ EXTERN_C static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 MEDIALIB_API int  InitExceptionFilter(const char* _dumppath)
 {
 	std::wstring strDump = WXBase::UTF8ToUTF16(_dumppath);
-	WXSetGlobalString(L"dump", strDump.c_str());
+	WXSetGlobalString(L"DumpFilePath", strDump.c_str());
 	SetUnhandledExceptionFilter((LPTOP_LEVEL_EXCEPTION_FILTER)ApplicationCrashHandler);
 	return 0;
 }

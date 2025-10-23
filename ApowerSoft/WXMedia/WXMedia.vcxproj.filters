@@ -714,9 +714,6 @@
     <ClInclude Include="..\..\WXMedia_SDK\include\SoundTouch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaCpp.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h">
       <Filter>头文件</Filter>
     </ClInclude>

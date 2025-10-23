@@ -221,6 +221,10 @@ public:
 	}
 };
 
+
+#include "LibInst.hpp"
+std::shared_ptr<LibInst >s_LibInst = nullptr;
+
 //设置日志文件
 EXTERN_C int   WXLogInit(const wchar_t* strFileName) {
 	return WXLogInstance::GetInst().Init(strFileName);
@@ -299,6 +303,10 @@ EXTERN_C void WXGetGlobalString(const wchar_t* wszKey, wchar_t* strRetValue, wch
 	::GetPrivateProfileStringW(L"WXMedia", wszKey, strDefValue, strRetValue, MAX_PATH, s_strIniPath.c_str());
 }
 
+
+
+
+
 HINSTANCE g_hInst = nullptr;
 BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
 	g_hInst = (HINSTANCE)hModule;
@@ -318,5 +326,321 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
 	return (TRUE);
 }
 
+
+//LibInst 日志回调
+void LibInst::LogW(const wchar_t* fmt, ...) {
+	if (m_cbLogW == nullptr)return;
+	va_list vl;
+	va_start(vl, fmt);
+	m_cbLogW(fmt, vl);
+	va_end(vl);
+}
+
+void LibInst::LogMsg(cbLogW cbLogW) {
+	if (cbLogW && m_logmsg == 0) {
+		m_logmsg = 1;
+		m_cbLogW = cbLogW;
+		for (auto obj : m_arrLibs)
+		{
+			LogW(L"LoadLibrary %ws Init", obj->GetNameW().c_str());
+		}
+	}
+}
+//各种库的加载
+LibInst::LibInst() {
+	LoadOLE32();//COM 初始化
+
+	LoadOpenGLFunctions();//加载OpenGL库
+
+	m_libCombase = std::shared_ptr<MyLib>(new MyLib(L"combase.dll"));
+	if (m_libCombase->Enabled()) {
+		m_arrLibs.push_back(m_libCombase.get());
+		m_RoOriginateLanguageException = (PFNRoOriginateLanguageException)m_libCombase->GetFunction("RoOriginateLanguageException");
+		m_RoGetActivationFactory = (PFNRoGetActivationFactory)m_libCombase->GetFunction("RoGetActivationFactory");
+	}
+	else {
+		m_libCombase = nullptr;
+	}
+
+	//MNN Humanseg
+	m_libHumanseg = std::shared_ptr<MyLib>(new MyLib(L"Humanseg.dll"));
+	if (m_libHumanseg->Enabled()) {
+		m_arrLibs.push_back(m_libHumanseg.get());
+		mHumansegCreate = (funcHumansegCreate)m_libHumanseg->GetFunction("HumansegCreate");
+		mHumansegDetect = (funcHumansegDetect)m_libHumanseg->GetFunction("HumansegDetect");
+		mHumansegDestroy = (funcHumansegDestroy)m_libHumanseg->GetFunction("HumansegDestroy");
+		mWXSupportVulkan = (funcWXSupportVulkan)m_libHumanseg->GetFunction("WXSupportVulkan");
+	}
+	else {
+		m_libHumanseg = nullptr;
+	}
+
+	m_libD3D9 = std::shared_ptr<MyLib>(new MyLib(L"d3d9.dll"));
+	if (m_libD3D9->Enabled()) {
+		//D3D9.dll
+		mDirect3DCreate9 = (cbDirect3DCreate9)m_libD3D9->GetFunction("Direct3DCreate9");
+		mDirect3DCreate9Ex = (cbDirect3DCreate9Ex)m_libD3D9->GetFunction("Direct3DCreate9Ex");
+
+		//来源于WXDXFilter.dll 显卡检测
+		//如果 Direct3DCreate9Ex 无法正常返回
+		//硬编码硬解码以及DXGI功能可能都会有问题 
+		//需要升级显卡驱动
+		CComPtr<IDirect3D9Ex> pD3DEx = nullptr;
+		HRESULT hr = mDirect3DCreate9Ex(D3D_SDK_VERSION, &pD3DEx);
+		if (FAILED(hr)) {
+			mDirect3DCreate9 = nullptr;
+			mDirect3DCreate9Ex = nullptr;
+			m_libD3D9 = nullptr;
+		}
+		else {
+			m_arrLibs.push_back(m_libD3D9.get());
+		}
+	}
+
+	if (m_libD3D9) { //D3DX9 依赖于D3D9功能
+		m_libD3DX9 = std::shared_ptr<MyLib>(new MyLib(L"d3dx9_43.dll"));
+		//D3DX9.dll
+		if (m_libD3DX9->Enabled()) {
+			m_arrLibs.push_back(m_libD3DX9.get());
+			mD3DXCompileShader = (cbD3DXCompileShader)m_libD3DX9->GetFunction("D3DXCompileShader");
+			mD3DXCreateFontIndirectW = (cbD3DXCreateFontIndirectW)m_libD3DX9->GetFunction("D3DXCreateFontIndirectW");
+
+			mD3DXMatrixPerspectiveFovLH = (cbD3DXMatrixPerspectiveFovLH)m_libD3DX9->GetFunction("D3DXMatrixPerspectiveFovLH");
+			mD3DXGetShaderConstantTable = (cbD3DXGetShaderConstantTable)m_libD3DX9->GetFunction("D3DXGetShaderConstantTable");
+			mD3DXCreateTexture = (cbD3DXCreateTexture)m_libD3DX9->GetFunction("D3DXCreateTexture");
+			mD3DXCreateVolumeTexture = (cbD3DXCreateVolumeTexture)m_libD3DX9->GetFunction("D3DXCreateVolumeTexture");
+		}
+		else {
+			m_libD3DX9 = nullptr;
+		}
+		m_libD3D11 = std::shared_ptr<MyLib>(new MyLib(L"d3d11.dll"));
+		if (m_libD3D11->Enabled()) {
+			m_arrLibs.push_back(m_libD3D11.get());
+			mD3D11CreateDevice = (cbD3D11CreateDevice)m_libD3D11->GetFunction("D3D11CreateDevice");
+			mCreateDirect3D11DeviceFromDXGIDevice = (cbCreateDirect3D11DeviceFromDXGIDevice)m_libD3D11->GetFunction("CreateDirect3D11DeviceFromDXGIDevice");
+		}
+		else {
+			m_libD3D11 = nullptr;
+		}
+
+		m_libDXGI = std::shared_ptr<MyLib>(new MyLib(L"dxgi.dll"));
+		if (m_libDXGI->Enabled()) {
+			m_arrLibs.push_back(m_libDXGI.get());
+			mCreateDXGIFactory1 = (cbCreateDXGIFactory1)m_libDXGI->GetFunction("CreateDXGIFactory1");
+		}
+		else {
+			m_libDXGI = nullptr;
+		}
+	}
+	m_libDXVA2 = std::shared_ptr<MyLib>(new MyLib(L"dxva2.dll"));
+	if (m_libDXVA2->Enabled()) {
+		m_arrLibs.push_back(m_libDXVA2.get());
+		mDXVA2CreateDirect3DDeviceManager9 = (cbDXVA2CreateDirect3DDeviceManager9)m_libDXVA2->GetFunction("DXVA2CreateDirect3DDeviceManager9");
+	}
+	else {
+		m_libDXVA2 = nullptr;
+	}
+
+	//DDRAW ，好像没什么用
+	m_libDraw = std::shared_ptr<MyLib>(new MyLib(L"ddraw.dll"));
+	if (m_libDraw->Enabled()) {
+		m_arrLibs.push_back(m_libDraw.get());
+		mDirectDrawCreate = (cbDirectDrawCreate)m_libDraw->GetFunction("DirectDrawCreate");
+	}
+	else {
+		m_libDraw = nullptr;
+	}
+
+	//DSound 声音播放
+	m_libDSound = std::shared_ptr<MyLib>(new MyLib(L"dsound.dll"));
+	if (m_libDSound->Enabled()) {
+		mDirectSoundCreate8 = (cbDirectSoundCreate8)m_libDSound->GetFunction("DirectSoundCreate8");
+		CComPtr<IDirectSound8> pDS = NULL;
+		HRESULT hr = mDirectSoundCreate8(NULL, &pDS, NULL);
+		if (FAILED(hr)) { //不支持DSound，需要升级声卡驱动
+			mDirectSoundCreate8 = nullptr;
+			m_libDSound = nullptr;
+		}
+		else {
+
+			m_arrLibs.push_back(m_libDSound.get());
+		}
+	}
+	else {
+		m_libDSound = nullptr;
+	}
+
+	//version.dll
+	m_libVersion = std::shared_ptr<MyLib>(new MyLib(L"version.dll"));
+	if (m_libVersion->Enabled()) {
+		m_arrLibs.push_back(m_libVersion.get());
+		mGetFileVersionInfoSizeW = (cbGetFileVersionInfoSizeW)m_libVersion->GetFunction("GetFileVersionInfoSizeW");
+		mGetFileVersionInfoW = (cbGetFileVersionInfoW)m_libVersion->GetFunction("GetFileVersionInfoW");
+		mVerQueryValueW = (cbVerQueryValueW)m_libVersion->GetFunction("VerQueryValueW");
+	}
+	else {
+		m_libVersion = nullptr;
+	}
+
+	//DUMP
+	m_libDbghelp = std::shared_ptr<MyLib>(new MyLib(L"dbghelp.dll"));
+	if (m_libDbghelp->Enabled()) {
+		m_arrLibs.push_back(m_libDbghelp.get());
+		mMiniDumpWriteDump = (cbMiniDumpWriteDump)m_libDbghelp->GetFunction("MiniDumpWriteDump");
+
+		mMakeSureDirectoryPathExists = (cbMakeSureDirectoryPathExists)m_libDbghelp->GetFunction("MakeSureDirectoryPathExists");
+	}
+	else {
+		m_libDbghelp = nullptr;
+	}
+
+
+	m_libShcore = std::shared_ptr<MyLib>(new MyLib(L"shcore.dll"));//("shcore.dll");
+	if (m_libShcore->Enabled()) {
+		m_arrLibs.push_back(m_libShcore.get());
+		m_SetProcessDpiAwareness = (PFN_SetProcessDpiAwareness)m_libShcore->GetFunction("SetProcessDpiAwareness");
+		m_GetDpiForMonitor = (PFN_GetDpiForMonitor)m_libShcore->GetFunction("GetDpiForMonitor");
+	}
+	else {
+		m_libShcore = nullptr;
+	}
+
+
+	m_libUser32 = std::shared_ptr<MyLib>(new MyLib(L"user32.dll"));//("user32.dll");
+	if (m_libUser32->Enabled()) {
+		m_arrLibs.push_back(m_libUser32.get());
+		m_SetProcessDPIAware = (PFN_SetProcessDPIAware)m_libUser32->GetFunction("SetProcessDPIAware");
+		m_ChangeWindowMessageFilterEx = (PFN_ChangeWindowMessageFilterEx)m_libUser32->GetFunction("ChangeWindowMessageFilterEx");
+		m_EnableNonClientDpiScaling = (PFN_EnableNonClientDpiScaling)m_libUser32->GetFunction("EnableNonClientDpiScaling");
+		m_SetProcessDpiAwarenessContext = (PFN_SetProcessDpiAwarenessContext)m_libUser32->GetFunction("SetProcessDpiAwarenessContext");
+		m_GetDpiForWindow = (PFN_GetDpiForWindow)m_libUser32->GetFunction("GetDpiForWindow");
+		m_AdjustWindowRectExForDpi = (PFN_AdjustWindowRectExForDpi)m_libUser32->GetFunction("AdjustWindowRectExForDpi");
+		m_GetSystemMetricsForDpi = (PFN_GetSystemMetricsForDpi)m_libUser32->GetFunction("GetSystemMetricsForDpi");
+	}
+	else {
+		m_libUser32 = nullptr;
+	}
+
+
+	m_libDwmapi = std::shared_ptr<MyLib>(new MyLib(L"dwmapi.dll"));//("user32.dll");
+	if (m_libDwmapi->Enabled()) {
+		m_arrLibs.push_back(m_libDwmapi.get());
+		m_DwmIsCompositionEnabled = (PFN_DwmIsCompositionEnabled)m_libDwmapi->GetFunction("DwmIsCompositionEnabled");
+		m_DwmFlush = (PFN_DwmFlush)m_libDwmapi->GetFunction("DwmFlush");
+		m_DwmEnableBlurBehindWindow = (PFN_DwmEnableBlurBehindWindow)m_libDwmapi->GetFunction("DwmEnableBlurBehindWindow");
+		m_DwmGetColorizationColor = (PFN_DwmGetColorizationColor)m_libDwmapi->GetFunction("DwmGetColorizationColor");
+	}
+	else {
+		m_libDwmapi = nullptr;
+	}
+
+
+	//VC++ 
+	m_libNTDLL = std::shared_ptr<MyLib>(new MyLib(L"NTDLL.dll"));;//("NTDLL.dll");
+	if (m_libNTDLL->Enabled()) {
+		m_arrLibs.push_back(m_libNTDLL.get());
+		m_RtlGetVersion = (PFNRtlGetVersion)m_libNTDLL->GetFunction("RtlGetVersion");
+		m_RtlGetNtVersionNumbers = (PFNRtlGetNtVersionNumbers)m_libNTDLL->GetFunction("RtlGetNtVersionNumbers");
+		m_RtlVerifyVersionInfo = (PFNRtlVerifyVersionInfo)m_libNTDLL->GetFunction("RtlVerifyVersionInfo");
+	}
+	else {
+		m_libNTDLL = nullptr;
+	}
+	m_libVCRUNTIME140_CLR0400 = std::shared_ptr<MyLib>(new MyLib(L"VCRUNTIME140_CLR0400.dll"));
+	if (m_libVCRUNTIME140_CLR0400->Enabled()) {
+		m_arrLibs.push_back(m_libVCRUNTIME140_CLR0400.get());
+	}
+	m_libUCRTBASE_CLR0400 = std::shared_ptr<MyLib>(new MyLib(L"UCRTBASE_CLR0400.dll"));
+	if (m_libUCRTBASE_CLR0400->Enabled()) {
+		m_arrLibs.push_back(m_libUCRTBASE_CLR0400.get());
+	}
+	m_libMSVCP140_CLR0400 = std::shared_ptr<MyLib>(new MyLib(L"MSVCP140_CLR0400.dll"));
+	if (m_libMSVCP140_CLR0400->Enabled()) {
+		m_arrLibs.push_back(m_libMSVCP140_CLR0400.get());
+	}
+
+}
+
+//程序退出使用
+LibInst::~LibInst() {
+	exit(-1);
+}
+
+void LibInst::LoadOpenGLFunctions() {
+	m_libOpengl32 = std::shared_ptr<MyLib>(new MyLib(L"opengl32.dll"));
+	if (m_libOpengl32->Enabled()) {
+		m_arrLibs.push_back(m_libOpengl32.get());
+		m_glClear = (PFNGLCLEARPROC)m_libOpengl32->GetFunction("glClear");
+		m_glGetString = (PFNGLGETSTRINGPROC)m_libOpengl32->GetFunction("glGetString");
+		m_glGetIntegerv = (PFNGLGETINTEGERVPROC)m_libOpengl32->GetFunction("glGetIntegerv");
+		m_glGetStringi = (PFNGLGETSTRINGIPROC)m_libOpengl32->GetFunction("glGetStringi");
+
+		m_wglCreateContext = (PFN_wglCreateContext)m_libOpengl32->GetFunction("wglCreateContext");
+		m_wglDeleteContext = (PFN_wglDeleteContext)m_libOpengl32->GetFunction("wglDeleteContext");
+		m_wglGetProcAddress = (PFN_wglGetProcAddress)m_libOpengl32->GetFunction("wglGetProcAddress");
+		m_wglGetCurrentDC = (PFN_wglGetCurrentDC)m_libOpengl32->GetFunction("wglGetCurrentDC");
+		m_wglGetCurrentContext = (PFN_wglGetCurrentContext)m_libOpengl32->GetFunction("wglGetCurrentContext");
+		m_wglMakeCurrent = (PFN_wglMakeCurrent)m_libOpengl32->GetFunction("wglMakeCurrent");
+		m_wglShareLists = (PFN_wglShareLists)m_libOpengl32->GetFunction("wglShareLists");
+
+		m_wglSwapIntervalEXT = (PFNWGLSWAPINTERVALEXTPROC)m_libOpengl32->GetFunction("wglSwapIntervalEXT");
+		m_wglGetPixelFormatAttribivARB = (PFNWGLGETPIXELFORMATATTRIBIVARBPROC)m_libOpengl32->GetFunction("wglGetPixelFormatAttribivARB");
+		m_wglGetExtensionsStringEXT = (PFNWGLGETEXTENSIONSSTRINGEXTPROC)m_libOpengl32->GetFunction("wglGetExtensionsStringEXT");
+		m_wglGetExtensionsStringARB = (PFNWGLGETEXTENSIONSSTRINGARBPROC)m_libOpengl32->GetFunction("wglGetExtensionsStringARB");
+		m_wglCreateContextAttribsARB = (PFNWGLCREATECONTEXTATTRIBSARBPROC)m_libOpengl32->GetFunction("wglCreateContextAttribsARB");
+
+		m_glTexImage2D = (PFNglTexImage2D)m_libOpengl32->GetFunction("glTexImage2D");
+		m_glDrawBuffer = (PFNglDrawBuffer)m_libOpengl32->GetFunction("glDrawBuffer");
+		m_glDrawArrays = (PFNglDrawArrays)m_libOpengl32->GetFunction("glDrawArrays");
+		m_glDisable = (PFNglDisable)m_libOpengl32->GetFunction("glDisable");
+		m_glDrawElements = (PFNglDrawElements)m_libOpengl32->GetFunction("glDrawElements");
+		m_glFinish = (PFNglFinish)m_libOpengl32->GetFunction("glFinish");
+		m_glFlush = (PFNglFlush)m_libOpengl32->GetFunction("glFlush");
+		m_glReadBuffer = (PFNglReadBuffer)m_libOpengl32->GetFunction("glReadBuffer");
+		m_glReadPixels = (PFNglReadPixels)m_libOpengl32->GetFunction("glReadPixels");
+		m_glTexParameteri = (PFNglTexParameteri)m_libOpengl32->GetFunction("glTexParameteri");
+		m_glTexSubImage2D = (PFNglTexSubImage2D)m_libOpengl32->GetFunction("glTexSubImage2D");
+		m_glViewport = (PFNglViewport)m_libOpengl32->GetFunction("glViewport");
+		m_glBindTexture = (PFNglBindTexture)m_libOpengl32->GetFunction("glBindTexture");
+		m_glCopyTexSubImage2D = (PFNglCopyTexSubImage2D)m_libOpengl32->GetFunction("glCopyTexSubImage2D");
+		m_glGetError = (PFNglGetError)m_libOpengl32->GetFunction("glGetError");
+		m_glDeleteTextures = (PFNglDeleteTextures)m_libOpengl32->GetFunction("glDeleteTextures");
+		m_glGenTextures = (PFNglGenTextures)m_libOpengl32->GetFunction("glGenTextures");
+		m_glBlendFunc = (PFNglBlendFunc)m_libOpengl32->GetFunction("glBlendFunc");
+		m_glEnable = (PFNglEnable)m_libOpengl32->GetFunction("glEnable");
+		m_glClearColor = (PFNglClearColor)m_libOpengl32->GetFunction("glClearColor");
+		m_glGetFloatv = (PFNglGetFloatv)m_libOpengl32->GetFunction("glGetFloatv");
+		m_glTexParameterfv = (PFNglTexParameterfv)m_libOpengl32->GetFunction("glTexParameterfv");
+
+	}
+	else {
+		m_libOpengl32 = nullptr;
+	}
+}
+
+void LibInst::LoadOLE32() {
+	m_libOLE32 = std::shared_ptr<MyLib>(new MyLib(L"ole32.dll"));
+	if (m_libOLE32->Enabled()) {
+		m_arrLibs.push_back(m_libOLE32.get());
+		m_CoInitializeEx = (PFNCoInitializeEx)m_libOLE32->GetFunction("CoInitializeEx");
+		m_CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);
+	}
+	else {
+		m_libOLE32 = nullptr;
+	}
+}
+
+EXTERN_C LibInst* LibInst_GetInst() {
+	if (s_LibInst == nullptr) {
+		s_LibInst = std::make_shared<LibInst>();
+	}
+	return s_LibInst.get();
+}
+
+EXTERN_C void LibInst_LogMsg(cbLogW cbLogW) {
+	if (s_LibInst != nullptr) {
+		s_LibInst->LogMsg(cbLogW);
+	}
+}
 #endif
 

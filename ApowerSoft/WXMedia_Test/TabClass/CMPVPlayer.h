@@ -1,4 +1,4 @@
-﻿// MPV 播放器测试对话框
+// MPV 播放器测试对话框
 
 #if !defined(CMPVPlayer_H)
 #define CMPVPlayer_H
@@ -36,7 +36,7 @@ public:
 
 public:
 	LibMPV(const wchar_t* filename) {
-		m_lib = std::make_shared<MyLib>(filename);
+		m_lib = std::make_shared<LibInst::MyLib>(filename);
 		if (m_lib->Enabled()) {
 			m_mpv_create = (my_mpv_create)m_lib->GetFunction("mpv_create");
 			m_mpv_set_option = (my_mpv_set_option)m_lib->GetFunction("mpv_set_option");

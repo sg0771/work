@@ -316,7 +316,6 @@
     <ClInclude Include="..\..\WXMedia_SDK\include\SoundTouch.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaCpp.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaDefines.h" />
     <ClInclude Include="apm\aec_common.h" />
     <ClInclude Include="apm\aec_core.h" />
     <ClInclude Include="apm\aec_core_internal.h" />

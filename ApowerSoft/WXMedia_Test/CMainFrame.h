@@ -1,4 +1,4 @@
-﻿// MainFrm.h : interface of the CMainFrame class
+// MainFrm.h : interface of the CMainFrame class
 
 #if !defined(CMainFrame_H)
 #define CMainFrame_H
@@ -515,7 +515,7 @@ public:
 
         this->SetWindowText(L"My TabView");
 
-        WXDeviceInit(L"WXMedia.log");//WXMedia初始化
+        //WXDeviceInit(L"WXMedia.log");//WXMedia初始化
 
         return 0;
     }

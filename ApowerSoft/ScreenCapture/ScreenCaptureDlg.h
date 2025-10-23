@@ -1,5 +1,5 @@
 
-// ScreenCaptureDlg.h : Í·ÎÄ¼ş
+// ScreenCaptureDlg.h : å¤´æ–‡ä»¶
 //
 
 #pragma once
@@ -15,23 +15,24 @@
 #include <WXBase.h>
 
 #pragma comment(lib,"WXMedia.lib")
+#pragma comment(lib,"libffmpeg.lib")
 
-#define WX_CLOSE (WM_USER + 100)   //½áÊø»Øµ÷ÏûÏ¢
+#define WX_CLOSE (WM_USER + 100)   //ç»“æŸå›è°ƒæ¶ˆæ¯
 #define WX_GAME_MSG		(WM_USER + 1001)
 
-// CScreenCaptureDlg ¶Ô»°¿ò
+// CScreenCaptureDlg å¯¹è¯æ¡†
 class CScreenCaptureDlg : public CDialogEx
 {
 	BOOL m_bOK = FALSE;
 	CString m_strOK;
 public:
-	void onWXCaptureSucceed(CString strFilename); //Â¼ÖÆ³É¹¦ÏûÏ¢
-	void wxCallBack(UINT cbID, void* cbData);//Â¼ÆÁÏûÏ¢»Øµ÷
+	void onWXCaptureSucceed(CString strFilename); //å½•åˆ¶æˆåŠŸæ¶ˆæ¯
+	void wxCallBack(UINT cbID, void* cbData);//å½•å±æ¶ˆæ¯å›è°ƒ
 
-	void  *m_pMiracastPlay = nullptr;
+	void* m_pMiracastPlay = nullptr;
 
-    std::map<CString, CString>m_mapSystemDevice;
-    std::map<CString, CString>m_mapMicDevice;
+	std::map<CString, CString>m_mapSystemDevice;
+	std::map<CString, CString>m_mapMicDevice;
 
 	int m_iScreenW = 0;
 	int m_iScreenH = 0;
@@ -42,58 +43,58 @@ public:
 	WXLocker m_lock;
 	void StopImpl();
 	uint64_t m_ptsStart = 0;
-	const UINT_PTR time_id1 = 1001;//Â¼ÖÆ¿ªÆôºÍ½áÊø
-	const UINT_PTR time_id2 = 1002;	// Òô²¨Ìõ²âÊÔ
+	const UINT_PTR time_id1 = 1001;//å½•åˆ¶å¼€å¯å’Œç»“æŸ
+	const UINT_PTR time_id2 = 1002;	// éŸ³æ³¢æ¡æµ‹è¯•
 
 
 	BOOL m_bGameOpen = FALSE;
 	BOOL m_bGameWindowOpen = FALSE;
-	void *m_pVideoDevice = nullptr;//ÊÇ·ñÆô¶¯ÉãÏñÍ·
+	void* m_pVideoDevice = nullptr;//æ˜¯å¦å¯åŠ¨æ‘„åƒå¤´
 
 	CString m_strJPEG1 = _T("1.jpg");
 	CString m_strJPEG2 = _T("2.jpg");
-	
+
 public:
 
-	std::map<HWND,CString>m_mapWindow;//×ÀÃæµÄËùÓĞ´°¿Ú
+	std::map<HWND, CString>m_mapWindow;//æ¡Œé¢çš„æ‰€æœ‰çª—å£
 	std::map<int, HWND>m_mapData;
 	void AddHwnd(HWND hwnd);
 
 	CString m_strLog;
 
-	uint32_t m_colorLeft  = RGB(255, 0,   0);
-	uint32_t m_colorRight = RGB(0, 255,   0);
+	uint32_t m_colorLeft = RGB(255, 0, 0);
+	uint32_t m_colorRight = RGB(0, 255, 0);
 	uint32_t m_colorMouse = RGB(0, 0, 255);
 
 	CFont m_font;
 	HFONT  m_hfont = nullptr;
 
-	uint32_t m_colorText = RGB(255, 0, 0);//×ÖÌåÑÕÉ«
+	uint32_t m_colorText = RGB(255, 0, 0);//å­—ä½“é¢œè‰²
 	CString  m_strFontName = _T("Microsoft YaHei");
 	int      m_iFontSize = 72;
 
-	CString m_strImageName = L"";//Ë®Ó¡ÎÄ¼şÃû
+	CString m_strImageName = L"";//æ°´å°æ–‡ä»¶å
 
 	//int64_t m_pts = 0;
 	void LogTime();
 
 
-// ¹¹Ôì
+	// æ„é€ 
 public:
-	CScreenCaptureDlg(CWnd* pParent = NULL);	// ±ê×¼¹¹Ôìº¯Êı
+	CScreenCaptureDlg(CWnd* pParent = NULL);	// æ ‡å‡†æ„é€ å‡½æ•°
 
-// ¶Ô»°¿òÊı¾İ
+	// å¯¹è¯æ¡†æ•°æ®
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_SCREENCAPTURE_DIALOG };
 #endif
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV Ö§³Ö
+protected:
+	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV æ”¯æŒ
 
-// ÊµÏÖ
+	// å®ç°
 protected:
 	HICON m_hIcon;
 
-	// Éú³ÉµÄÏûÏ¢Ó³Éäº¯Êı
+	// ç”Ÿæˆçš„æ¶ˆæ¯æ˜ å°„å‡½æ•°
 	virtual BOOL OnInitDialog();
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
@@ -101,19 +102,19 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 
-    void ProcDir(const wchar_t * wszDir) {
-        int iSize;
-        //·µ»Ø½ÓÊÜ×Ö·û´®ËùĞè»º³åÇøµÄ´óĞ¡£¬ÒÑ¾­°üº¬×Ö·û½áÎ²·û'\0'
-        iSize = WideCharToMultiByte(CP_ACP, 0, wszDir, -1, NULL, 0, NULL, NULL); //iSize =wcslen(pwsUnicode)+1=6
-        char* szDir = (char*)malloc(iSize * sizeof(char)); //²»ĞèÒª pszMultiByte = (char*)malloc(iSize*sizeof(char)+1);
-        WideCharToMultiByte(CP_ACP, 0, wszDir, -1, szDir, iSize, NULL, NULL);
+	void ProcDir(const wchar_t* wszDir) {
+		int iSize;
+		//è¿”å›æ¥å—å­—ç¬¦ä¸²æ‰€éœ€ç¼“å†²åŒºçš„å¤§å°ï¼Œå·²ç»åŒ…å«å­—ç¬¦ç»“å°¾ç¬¦'\0'
+		iSize = WideCharToMultiByte(CP_ACP, 0, wszDir, -1, NULL, 0, NULL, NULL); //iSize =wcslen(pwsUnicode)+1=6
+		char* szDir = (char*)malloc(iSize * sizeof(char)); //ä¸éœ€è¦ pszMultiByte = (char*)malloc(iSize*sizeof(char)+1);
+		WideCharToMultiByte(CP_ACP, 0, wszDir, -1, szDir, iSize, NULL, NULL);
 
-        if (_access(szDir, 0) == -1)
-        {
-            _mkdir(szDir);
-        }
-        free(szDir);
-    }
+		if (_access(szDir, 0) == -1)
+		{
+			_mkdir(szDir);
+		}
+		free(szDir);
+	}
 
 	CComboBox m_cbAudioRenderDevice;
 	CComboBox m_cbAudioCaptureDevice;
@@ -124,8 +125,8 @@ public:
 	CComboBox m_cbBitrate;
 	CComboBox m_cbFps;
 
-    CString m_strDir;// Êä³öÎÄ¼ş¼Ğ
-	CString m_strFileName;//Êä³öÎÄ¼şÃû
+	CString m_strDir;// è¾“å‡ºæ–‡ä»¶å¤¹
+	CString m_strFileName;//è¾“å‡ºæ–‡ä»¶å
 
 	CComboBox m_cbFileType;
 	void ListScreean();
@@ -147,8 +148,8 @@ public:
 
 	afx_msg void OnCbnSelchangeCombo10();
 
-	afx_msg void OnNMCustomdrawSlider1(NMHDR *pNMHDR, LRESULT *pResult);
-	afx_msg void OnNMCustomdrawSlider2(NMHDR *pNMHDR, LRESULT *pResult);
+	afx_msg void OnNMCustomdrawSlider1(NMHDR* pNMHDR, LRESULT* pResult);
+	afx_msg void OnNMCustomdrawSlider2(NMHDR* pNMHDR, LRESULT* pResult);
 
 	BOOL m_bUseRect;
 	CString m_strWaterMark;
@@ -169,7 +170,7 @@ public:
 	BOOL m_bWaterMark;
 	afx_msg void OnBnClickedCheck2();
 	int m_iAplhaWaterMark;
-	afx_msg void OnNMCustomdrawSlider3(NMHDR *pNMHDR, LRESULT *pResult);
+	afx_msg void OnNMCustomdrawSlider3(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 	afx_msg void OnBnClickedLeft();
@@ -221,13 +222,13 @@ public:
 	void Log(CString str);
 	void LogHook(CString str);
 
-    CSliderCtrl m_slider1;
-    CSliderCtrl m_slider2;
-    CString m_strLog1;
-    CString m_strLog2;
-    CStatic m_pictureLeft;
-    CStatic m_pictureRight;
-    CStatic m_pictureHotdot;
+	CSliderCtrl m_slider1;
+	CSliderCtrl m_slider2;
+	CString m_strLog1;
+	CString m_strLog2;
+	CStatic m_pictureLeft;
+	CStatic m_pictureRight;
+	CStatic m_pictureHotdot;
 	afx_msg void OnDestroy();
 	BOOL m_bAEC;
 	BOOL m_bHighQualityGif;

@@ -29,20 +29,6 @@ WXMedia.dll 初始化操作
 
 /*extern*/ WXLocker s_lockGlobal;
 
-//全局参数设置读取
-static std::map<std::wstring, std::wstring>s_mapString;
-static void           ML_SetString(const wchar_t* name, const wchar_t* value) {
-	std::wstring strName = name;
-	s_mapString[strName] = value;
-}
-static const wchar_t* ML_GetString(const wchar_t* name) {
-	std::wstring strName = name;
-	if (s_mapString.count(strName)) {
-		return s_mapString[strName].c_str();
-	}
-	return L"";
-}
-
 std::wstring GetFullPathW(const wchar_t* filename) {
 	std::wstring fullpath = L"";
 	if (WXBase::Exists(filename)) { //相对路径
@@ -53,7 +39,8 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 
 
 	//初始运行路径
-	std::wstring s_strRunPath = ML_GetString(L"runpath");
+	// 获取当前运行目录
+	std::wstring s_strRunPath = WXBase::GetRunPath();
 	fullpath = s_strRunPath + std::wstring(filename);
 	if (WXBase::Exists(fullpath)) {
 		return fullpath;
@@ -71,8 +58,8 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 		return fullpath;
 	}
 
-	//相对于 Medialib.dll 的路径
-	std::wstring s_strDllDir = ML_GetString(L"dlldir");
+	//Medialib.dll/WXMedia.dll 所在目录
+	std::wstring s_strDllDir = WXBase::GetDllPath();
 	fullpath = s_strDllDir + std::wstring(filename);
 	if (WXBase::Exists(fullpath)) {
 		return fullpath;
@@ -91,7 +78,9 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 	}
 
 	//在ProgramData 的路径
-	std::wstring s_strProgData = ML_GetString(L"ProgramData");;
+	wchar_t wszProgData[MAX_PATH] = { 0 };
+	WXGetGlobalString(L"ProgramData", wszProgData, L""); //ProgramData 路径
+	std::wstring s_strProgData = wszProgData;
 	fullpath = s_strProgData + std::wstring(filename);
 	if (WXBase::Exists(fullpath)) {
 		return fullpath;
@@ -113,7 +102,7 @@ std::wstring GetFullPathW(const wchar_t* filename) {
 	return L"";
 }
 
-std::string GetFullPathA(const char* filename)
+std::string  GetFullPathA(const char* filename)
 {
 	std::wstring wstr = WXBase::UTF8ToUTF16(filename);
 	std::wstring fullpath = GetFullPathW(wstr.c_str());
@@ -369,40 +358,6 @@ static void ParseIni() {
 #endif
 
 
-//ini配置
-static WXString g_strIniPath = L"";
-
-//从ini获取数值
-WXMEDIA_API int WXGetIniValue(WXCTSTR wszReg, WXCTSTR wszKey, int nDefaultValue) {
-#ifdef _WIN32
-	return ::GetPrivateProfileInt(wszReg, wszKey, nDefaultValue, g_strIniPath.str());
-#else
-	return nDefaultValue;
-#endif
-}
-
-WXMEDIA_API void WXGetStringValue(WXCTSTR wszReg, WXCTSTR wszKey, WXCHAR* strValue) {
-#ifdef _WIN32
-	::GetPrivateProfileString(wszReg, wszKey, L"nullptr", strValue, MAX_PATH, g_strIniPath.str());
-#endif
-}
-
-//配置ini的数值
-WXMEDIA_API void WXSetIniValue(WXCTSTR wszReg, WXCTSTR wszKey, int nValue) {
-#ifdef _WIN32
-	WXString wxstr;
-	wxstr.Format(L"%d", nValue);
-	::WritePrivateProfileString(wszReg, wszKey, wxstr.str(), g_strIniPath.str());
-#endif
-}
-
-//配置ini的字符串
-WXMEDIA_API void WXSetIniString(WXCTSTR wszReg, WXCTSTR wszKey, WXCTSTR strValue) {
-#ifdef _WIN32
-	::WritePrivateProfileString(wszReg, wszKey, strValue, g_strIniPath.str());
-#endif
-}
-
 EXTERN_C  void  log_callback(void* ptr, int level, const char* fmt, va_list vl) {
 	//printf("AV Log\n");
 }
@@ -453,13 +408,13 @@ WXMEDIA_API int  WXGetSystemVersion() {
 	WXAutoLock al(s_lckDXGI);
 	BEGIN_LOG_FUNC
 
-	int nSystemVersion = WXGetIniValue(L"WXMedia", L"SystemVersion", -1);
+	int nSystemVersion = WXGetGlobalValue(L"SystemVersion", -1);
 	if (nSystemVersion > 0)
 		return nSystemVersion;
 
-	WXSetIniValue(L"WXMedia", L"SystemVersion", 0);//默认版本号
-	WXSetIniValue(L"WXMedia", L"1903", 0);//是否Win10 1903
-	WXSetIniValue(L"WXMedia", L"WGC", 0);//是否Win10 1903
+	WXSetGlobalValue(L"SystemVersion", 0);//默认版本号
+	WXSetGlobalValue(L"1903", 0);//是否Win10 1903
+	WXSetGlobalValue(L"WGC", 0);//是否Win10 1903
 
 	int s_system_version = 0;
 	int s_b1903 = 0;
@@ -472,6 +427,7 @@ WXMEDIA_API int  WXGetSystemVersion() {
 
 		if (LibInst::GetInst().m_RtlGetVersion) {
 			// 检查是否大于版本 1803
+			LibInst::GetInst().m_RtlGetVersion(&info);
 			if (info.dwMajorVersion > 10) {
 				s_b1903 = 1;
 				s_system_version = 10;
@@ -536,13 +492,11 @@ WXMEDIA_API int  WXGetSystemVersion() {
 		if (g_osInfo.dwMinorVersion >= 6)
 				s_system_version = 7;//Vista Win7 ...
 	}
-	WXSetIniValue(L"WXMedia", L"SystemVersion", s_system_version);//默认版本号
-	WXSetIniValue(L"WXMedia", L"1903", s_b1903);//是否Win10 1903
-	WXSetIniValue(L"WXMedia", L"WGC", s_bWGC);//是否支持WGC
+	WXSetGlobalValue(L"SystemVersion", s_system_version);//默认版本号
+	WXSetGlobalValue(L"1903", s_b1903);//是否Win10 1903
+	WXSetGlobalValue(L"WGC", s_bWGC);//是否支持WGC
 
-	WXSetGlobalValue(L"SystemVersion", s_system_version);
-	WXSetGlobalValue(L"1903", s_b1903);
-	WXSetGlobalValue(L"WGC", s_bWGC);
+
 
 	return s_system_version;
 }
@@ -553,7 +507,7 @@ WXMEDIA_API int  WXSupportDXGI() {
 	WXAutoLock al(s_lckDXGI);
 	BEGIN_LOG_FUNC
 
-	int nDXGI = WXGetIniValue(L"WXMedia", L"DXGI", -1);
+	int nDXGI = WXGetGlobalValue(L"DXGI", -1);
 	if (nDXGI > 0) {
 		return 1;
 	}
@@ -562,10 +516,10 @@ WXMEDIA_API int  WXSupportDXGI() {
 	}
 	//nDXGI==-1
 	WXSetGlobalValue(L"DXGI", 0);
-	WXSetIniValue(L"WXMedia", L"DXGI", 0);
+	WXSetGlobalValue(L"DXGI", 0);
 
 	//是否强制设置不采集DXGI
-	int g_bCheckDXGI = WXGetIniValue(_T("WXMedia"), L"SupportDXGI", 1);
+	int g_bCheckDXGI = WXGetGlobalValue(L"SupportDXGI", 1);
 	if (!g_bCheckDXGI) {
 		return 0;
 	}
@@ -651,7 +605,6 @@ WXMEDIA_API int  WXSupportDXGI() {
 
 	WXLogW(L"[%ws]Support DXGI Capture!!!!!",__FUNCTIONW__);
 	WXSetGlobalValue(L"DXGI", 1);
-	WXSetIniValue(L"WXMedia", L"DXGI", 1);
 	return 1;
 }
 
@@ -789,7 +742,7 @@ void ListGpuName() {
 	if (LibInst::GetInst().m_libDXGI == nullptr)
 		return;
 
-	int nGPU = WXGetIniValue(L"WXMedia", L"Gpu", -1);
+	int nGPU = WXGetGlobalValue( L"Gpu", -1);
 	if (nGPU > 0) {
 		//从Ini读取GPU数量和名字
 		for (int i = 0; i < nGPU; i++)
@@ -797,7 +750,7 @@ void ListGpuName() {
 			WXString strGpuName;
 			strGpuName.Format(L"Gpu-%d", i);
 			wchar_t buffer[MAX_PATH];
-			WXGetStringValue(L"WXMedia", strGpuName.str(), buffer);
+			WXGetGlobalString(strGpuName.str(), buffer,L"");
 			WXString str = buffer;
 			g_arrGpuName.push_back(str);
 		}
@@ -842,12 +795,12 @@ void ListGpuName() {
 		pAdapter = nullptr;
 	}
 	nGPU = g_arrGpuName.size();
-	WXSetIniValue(L"WXMedia", L"Gpu", nGPU);
+	WXSetGlobalValue(L"Gpu", nGPU);
 	for (int i = 0; i < nGPU; i++)
 	{ 
 		WXString strGpuName;
 		strGpuName.Format(L"Gpu-%d", i);
-		WXSetIniString(L"WXMedia", strGpuName.str(), g_arrGpuName[i].str());
+		WXSetGlobalString(strGpuName.str(), g_arrGpuName[i].str());
 	}
 	//WXLogW(L"%ws GPU = %d", __FUNCTIONW__, iAdapterNum);
 }
@@ -901,16 +854,23 @@ WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
 	SetDllDirectory(L"");
 	HRESULT hr = ::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
 
-	//WorkThread::Init();
-
-	// 获取当前运行目录
-	std::wstring s_strRunPath = WXBase::GetRunPath();//当前运行目录
-	ML_SetString(L"runpath", s_strRunPath.c_str());
-
-	//Medialib.dll 所在目录
-	std::wstring s_strDllDir = WXBase::GetDllPath();
-	ML_SetString(L"dlldir", s_strDllDir.c_str());;
-
+	std::wstring s_LogPath = L"";//log目录
+	//获取INI绝对路径
+	std::wstring s_strLog = logfile;//log路径
+	std::wstring s_strLogPath = L"";//log目录
+	size_t pos = s_strLog.find(L":");
+	std::wstring s_ExePath = WXBase::GetExePath();//EXE目录
+	if (pos == std::wstring::npos) { //不是全路径
+		s_strLog = s_ExePath.c_str();
+		s_LogPath = s_ExePath;
+	}
+	else { //全路径
+		std::filesystem::path path1(logfile);
+		s_LogPath = path1.parent_path().wstring() + L"\\";
+	}
+	std::wstring strIniPath = s_LogPath.c_str();
+	strIniPath += L"WXMedia.ini";//INI 路径
+	WXSetGlobalPath(strIniPath.c_str());
 
 	WXSetGlobalValue(L"MachLevel", LEVEL_BETTER);//默认机器类型一般
 
@@ -924,33 +884,15 @@ WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
 	std::wstring s_FullExeName = WXBase::GetFullExeName(); //当前EXE全路径
 	WXSetGlobalString(L"FullExeName", s_FullExeName.c_str());
 
-	std::wstring s_ExePath = WXBase::GetExePath();//EXE目录
+
 	WXSetGlobalString(L"ExePath", s_ExePath.c_str());
 
 	std::wstring s_ExeName = WXBase::GetExeName();//EXE名字
 	WXSetGlobalString(L"ExeName", s_ExeName.c_str());
 
-	std::wstring s_LogPath = L"";//log目录
-
-	//获取INI绝对路径
-
-	std::wstring s_strLog = logfile;//log路径
-	std::wstring s_strLogPath = L"";//log目录
-	size_t pos = s_strLog.find(L":");
-	if (pos == std::wstring::npos) { //不是全路径
-		s_strLog = s_ExePath.c_str();
-		s_LogPath = s_ExePath;
-	}
-	else { //全路径
-		std::filesystem::path path1(logfile);
-		s_LogPath = path1.parent_path().wstring() + L"\\";
-	}
-
-	g_strIniPath = s_LogPath.c_str();
-	g_strIniPath += L"WXMedia.ini";//INI 路径
 
 	g_strJsonPath = s_LogPath.c_str();
-	g_strJsonPath += L"WXCamera.json";//INI 路径
+	g_strJsonPath += L"WXCamera.json";//JSON 路径
 
 	std::wstring strLogFileName = s_strLog;
 	strLogFileName += s_ExeName.c_str();
@@ -966,7 +908,7 @@ WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
 	WXLogInit(strLogFileName.c_str());
 
 	//WXLogA("%s Begin =================== ", __FUNCTION__);
-	LibInst::GetInst().LogMsg(WX_LogW);
+	LibInst_LogMsg(WX_LogW);
 	WXLogA("%s %d",__FUNCTION__,__LINE__);
 	//注册自定义WXM格式处理
 	avcodec_register_all();
@@ -1033,15 +975,11 @@ WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
 	thDXGI.detach();
 
 
-	std::thread thH264Hw([] { //Patch for H264HW  OK
-		WXSupportH264Codec();
-	});
-	thH264Hw.detach();
-
-	std::thread thH265Hw([] { //Patch for H265HW  OK
-		WXSupportH265Codec();
-	});
-	thH265Hw.detach();
+	std::thread thQSV([] {
+		WXSupportH264Codec();//硬编码检测
+		WXSupportH265Codec();//硬编码检测
+		});
+	thQSV.detach();
 
 	std::thread thCamera([] {
 		WXCameraInit();//Patch for Camera Init  OK
@@ -1054,18 +992,20 @@ WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
 	std::thread thFfmpeg([] {
 
 		s_strFfmpegExe = GetFullPathW(L"ffmpeg.exe");
-		int getExe = WXGetIniValue(L"ffmpeg.exe", L"exist", -1);
+		int getExe = WXGetGlobalValue(L"ffmpeg_exist", -1);
 		if (getExe == -1)
 		{
 			DWORD dwTimeOut = 10000;
 			DWORD result = ExecuteProcess(s_strFfmpegExe, dwTimeOut);
 			if (result == WAIT_OBJECT_0) {
 				s_bFfmpegExe = true;
-				WXSetIniValue(L"ffmpeg.exe", L"exist", 1);
+				WXSetGlobalValue(L"ffmpeg_exist", 1);
+				WXSetGlobalString(L"ffmpeg_path", s_strFfmpegExe.c_str());
 				WXLogW(L"%ws is exist!", s_strFfmpegExe.c_str());
 			}
 			else {
-				WXSetIniValue(L"ffmpeg.exe", L"exist", 0);
+				WXSetGlobalValue(L"ffmpeg_exist", 0);
+				WXSetGlobalString(L"ffmpeg_path", L"");
 				s_bFfmpegExe = false;
 				WXLogW(L"%ws is not exist!", s_strFfmpegExe.c_str());
 			}

@@ -1,4 +1,4 @@
-﻿// 运行ffmpeg.exe 等其它exe
+// 运行ffmpeg.exe 等其它exe
 //并且将输出结果显示在界面上
 
 #include "stdafx.h"
@@ -39,7 +39,7 @@ LRESULT CLASS_NAME::OnInitDialog(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& 
 	m_s1.SetRange(0, 100);
 	m_s1.SetPos(100);
 
-	Initialize("Apowersoft", "WXTest+++", 0);//库的初始化
+
 	TimelineSetting(m_iFps, m_iWidth, m_iHeight, 44100, 2, 0xFFFFFF, "", false);
 
 	DoDataExchange(FALSE);
@@ -160,8 +160,8 @@ LRESULT CLASS_NAME::OnBnClickedPlayStartStop(WORD /*wNotifyCode*/, WORD /*wID*/,
 		DoDataExchange(TRUE);
 
 		//ML_SetValue(L"uselog", m_bUselog);//更多日志信息
-		ML_SetValue(L"HwVideoDecode", m_bHW_Dec);//H264 硬解码优化
-		ML_SetValue(L"HwVideoEncode", m_bHW_Enc);//QSV 硬编码优化
+		WXSetGlobalValue(L"HwVideoDecode", m_bHW_Dec);//H264 硬解码优化
+		WXSetGlobalValue(L"HwVideoEncode", m_bHW_Enc);//QSV 硬编码优化
 
 	
 		int count = m_listView.GetItemCount();
@@ -349,8 +349,8 @@ LRESULT CLASS_NAME::OnBnClickedExport(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /
 		return 0;
 	}
 	DoDataExchange(TRUE);
-	ML_SetValue(L"HwVideoDecode", m_bHW_Dec);//H264 硬解码优化
-	ML_SetValue(L"HwVideoEncode", m_bHW_Enc);//QSV 硬编码优化
+	WXSetGlobalValue(L"HwVideoDecode", m_bHW_Dec);//H264 硬解码优化
+	WXSetGlobalValue(L"HwVideoEncode", m_bHW_Enc);//QSV 硬编码优化
 	if (m_threadTask == nullptr) {
 		m_threadTask = new std::thread(&CLASS_NAME::funcConv, this);
 	}

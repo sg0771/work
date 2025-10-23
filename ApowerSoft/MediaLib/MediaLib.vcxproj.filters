@@ -894,9 +894,6 @@
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaCpp.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaDefines.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D3D_Filters\ML_D3DFilter.cpp">

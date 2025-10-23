@@ -60,9 +60,10 @@ extern CAppModule _Module;
 
 
 #include <WXMedia.h>
-#include <WXMediaCpp.h>
+//#include <WXMediaCpp.h>
 #include <WXBase.h>
 #include <FfmpegIncludes.h>
+#include <WXLog.h>
 
 enum { TIMER_ID = 1001 };
 

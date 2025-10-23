@@ -1,4 +1,4 @@
-﻿
+
 // PlayerTestDlg.h: 头文件
 //
 
@@ -11,6 +11,8 @@
 #include "WXMediaDefines.h"
 #include "FfmpegIncludes.h"
 #pragma comment(lib,"WXMedia.lib")	
+#pragma comment(lib,"libffmpeg.lib")	
+#include <WXLog.h>
 
 //轨道上的素材，主要是视频+音频
 

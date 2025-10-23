@@ -23,7 +23,6 @@
     <ClInclude Include="..\..\WXMedia_SDK\include\librnnoise.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\SoundTouch.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaCpp.h" />
     <ClInclude Include="GameCapture\WXGameCapture.h" />
     <ClInclude Include="GameCapture\wx_hook_helper.h" />
     <ClInclude Include="Lav\BaseClasses\amextra.h" />

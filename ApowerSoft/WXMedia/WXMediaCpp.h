@@ -25,6 +25,8 @@ WXMEDIA_API void WXTaskPost(int index, WXTask task);
 #ifdef _WIN32
 
 
+std::string  GetFullPathA(const char* filename);
+std::wstring GetFullPathW(const wchar_t* filename);
 
 //DXGI头文件
 #include <dxgi.h>

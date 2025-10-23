@@ -1,4 +1,4 @@
-﻿
+
 // ScreenCaptureDlg.cpp : 实现文件
 //
 /*
@@ -10,6 +10,8 @@
 #include "ScreenCapture.h"
 #include "ScreenCaptureDlg.h"
 #include "afxdialogex.h"
+
+#include <WXLog.h>
 
 
 #ifdef _DEBUG
@@ -260,7 +262,7 @@ BOOL CScreenCaptureDlg::OnInitDialog()
 
 	int version = WXGetSystemVersion();
 
-	m_strDir = WXGetGlobalString(L"ExePath");
+	m_strDir = WXBase::GetExePath().c_str();
     m_strDir += L"Videos\\";
     ProcDir(m_strDir);
 
@@ -526,8 +528,8 @@ BOOL CScreenCaptureDlg::OnInitDialog()
 	m_cbRec.InsertString(2, L"50%"); 
 	m_cbRec.SetCurSel(0);
 
-	int nMemory = WXGetGlobalValue(L"Memory");
-	int nCpu = WXGetGlobalValue(L"Cpu");
+	int nMemory = WXGetGlobalValue(L"Memory",-1);
+	int nCpu = WXGetGlobalValue(L"Cpu", -1);
 	if (nMemory >= 16 && nCpu >= 8) {
 		//内存大于等16G 且 Cpu数量大于等于8
 		//可以使用高性能录屏模式

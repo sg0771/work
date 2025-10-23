@@ -1,5 +1,7 @@
 LIBRARY libffmpeg.dll
 EXPORTS
+LibInst_GetInst
+LibInst_LogMsg
 WXSetGlobalPath
 WXSetGlobalValue
 WXSetGlobalString
