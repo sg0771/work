@@ -23,7 +23,7 @@ WPS 视频播放器
 #include "LavFilter/LAVAudio.h"
 #include "LavFilter/LAVVideo.h"
 #include "LavFilter/moreuuids.h"
-#include "SoundTouch.h"
+#include "SoundTouch/SoundTouch.h"
 
 #include <WXBase.h>
 #include "WXMediaCpp.h"

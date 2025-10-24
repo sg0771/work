@@ -7,14 +7,14 @@ by TamXie
 #define _AUDIO_MIXER_WITH_PROCESS_H_
 
 #include <WXMediaCpp.h>
-#include "SoundTouch.h"
+#include "SoundTouch/SoundTouch.h"
 
 #define USE_GIPS 0
 #if USE_GIPS
 #include "./gips/audio_processing.h"
 #include "./gips/module_common_types.h"
 #else
-#include "librnnoise.h"
+#include "librnnoise/librnnoise.h"
 #endif
 
 

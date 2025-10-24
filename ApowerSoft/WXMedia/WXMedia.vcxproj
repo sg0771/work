@@ -19,9 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\librnnoise.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\SoundTouch.h" />
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h" />
     <ClInclude Include="GameCapture\WXGameCapture.h" />
     <ClInclude Include="GameCapture\wx_hook_helper.h" />
@@ -255,9 +252,6 @@
     <ClInclude Include="WXVideoRender\MacRender.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\WXMedia_SDK\include\libimagequant.c" />
-    <ClCompile Include="..\..\WXMedia_SDK\include\librnnoise.c" />
-    <ClCompile Include="..\..\WXMedia_SDK\include\SoundTouch.cpp" />
     <ClCompile Include="GameCapture\WXGameCapture.cpp" />
     <ClCompile Include="Lav\BaseClasses\BaseClasses_amextra.cpp" />
     <ClCompile Include="Lav\BaseClasses\BaseClasses_amfilter.cpp" />
@@ -455,6 +449,7 @@
     <ClCompile Include="Win32\DShowCapture.cpp" />
     <ClCompile Include="Win32\FfmpegMuxer.cpp" />
     <ClCompile Include="Win32\H264Process.cpp" />
+    <ClCompile Include="Win32\libimagequant.c" />
     <ClCompile Include="Win32\MediaEdit.cpp" />
     <ClCompile Include="Win32\MixerCapture.cpp" />
     <ClCompile Include="Win32\VideoDevice.cpp" />
@@ -560,7 +555,7 @@
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\d3dx9;$(SolutionDir)libs\libffmpeg;$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\</IncludePath>
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\d3dx9;$(SolutionDir)libs\libffmpeg;$(SolutionDir)WXMedia_SDK\include</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -568,7 +563,7 @@
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\d3dx9;$(SolutionDir)libs\libffmpeg;$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\</IncludePath>
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\d3dx9;$(SolutionDir)libs\libffmpeg;$(SolutionDir)WXMedia_SDK\include</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -576,7 +571,7 @@
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\d3dx9;$(SolutionDir)libs\libffmpeg;$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\</IncludePath>
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\d3dx9;$(SolutionDir)libs\libffmpeg;$(SolutionDir)WXMedia_SDK\include</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -584,7 +579,7 @@
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\d3dx9;$(SolutionDir)libs\libffmpeg;$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\</IncludePath>
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\d3dx9;$(SolutionDir)libs\libffmpeg;$(SolutionDir)WXMedia_SDK\include</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

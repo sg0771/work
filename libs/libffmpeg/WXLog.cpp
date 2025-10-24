@@ -271,6 +271,7 @@ EXTERN_C void  WXLogW(const wchar_t* format, ...) {
 
 #ifdef _WIN32
 #include <string>
+#define WXTAG L"libffmpeg"
 //ini配置
 static std::wstring s_strIniPath = L"";
 //设置ini路径，只能设置一次
@@ -283,29 +284,30 @@ EXTERN_C void WXSetGlobalPath(const wchar_t* wszPath) {
 //配置ini的数值
 EXTERN_C void WXSetGlobalValue(const wchar_t* wszKey, int nValue) {
 	std::wstring strValue = std::to_wstring(nValue);
-	::WritePrivateProfileStringW(L"WXMedia", wszKey, strValue.c_str(), s_strIniPath.c_str());
+	::WritePrivateProfileStringW(WXTAG, wszKey, strValue.c_str(), s_strIniPath.c_str());
 }
 
 //配置ini的字符串
 EXTERN_C void WXSetGlobalString(const wchar_t* wszKey, const wchar_t* strValue) {
-	::WritePrivateProfileStringW(L"WXMedia", wszKey, strValue, s_strIniPath.c_str());
+	::WritePrivateProfileStringW(WXTAG, wszKey, strValue, s_strIniPath.c_str());
 }
 
 //从ini获取数值,不存在则返回默认值
 EXTERN_C int WXGetGlobalValue(const wchar_t* wszKey, int nDefValue) {
-	return ::GetPrivateProfileIntW(L"WXMedia", wszKey, nDefValue, s_strIniPath.c_str());
+	return ::GetPrivateProfileIntW(WXTAG, wszKey, nDefValue, s_strIniPath.c_str());
 }
 
 //从ini获取字符串,不存在则返回默认值
 //strRetValue 返回值, 默认长度MAX_PATH
 //strDefValue 默认值
 EXTERN_C void WXGetGlobalString(const wchar_t* wszKey, wchar_t* strRetValue, wchar_t* strDefValue) {
-	::GetPrivateProfileStringW(L"WXMedia", wszKey, strDefValue, strRetValue, MAX_PATH, s_strIniPath.c_str());
+	::GetPrivateProfileStringW(WXTAG, wszKey, strDefValue, strRetValue, MAX_PATH, s_strIniPath.c_str());
 }
 
 
 
-
+#include <windows.h>
+#include <gdiplus.h>
 
 HINSTANCE g_hInst = nullptr;
 BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
@@ -313,7 +315,12 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
 	switch (ul_reason_for_call) {
 	case DLL_PROCESS_ATTACH:
 		timeBeginPeriod(1);
-		//其它初始化工作
+		::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
+		static ULONG_PTR m_gdiplusToken = 0;
+		if (m_gdiplusToken == 0) {
+			Gdiplus::GdiplusStartupInput StartupInput;//GDI+初始化
+			Gdiplus::GdiplusStartup(&m_gdiplusToken, &StartupInput, NULL);
+		}
 		break;
 	case DLL_PROCESS_DETACH:
 		timeEndPeriod(1);
@@ -327,22 +334,13 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
 }
 
 
-//LibInst 日志回调
-void LibInst::LogW(const wchar_t* fmt, ...) {
-	if (m_cbLogW == nullptr)return;
-	va_list vl;
-	va_start(vl, fmt);
-	m_cbLogW(fmt, vl);
-	va_end(vl);
-}
 
-void LibInst::LogMsg(cbLogW cbLogW) {
-	if (cbLogW && m_logmsg == 0) {
+void LibInst::LogMsg() {
+	if (m_logmsg == 0) {
 		m_logmsg = 1;
-		m_cbLogW = cbLogW;
 		for (auto obj : m_arrLibs)
 		{
-			LogW(L"LoadLibrary %ws Init", obj->GetNameW().c_str());
+			WXLogWOnce(L"LoadLibrary %ws Init", obj->GetNameW().c_str());
 		}
 	}
 }
@@ -637,9 +635,9 @@ EXTERN_C LibInst* LibInst_GetInst() {
 	return s_LibInst.get();
 }
 
-EXTERN_C void LibInst_LogMsg(cbLogW cbLogW) {
+EXTERN_C void LibInst_LogMsg() {
 	if (s_LibInst != nullptr) {
-		s_LibInst->LogMsg(cbLogW);
+		s_LibInst->LogMsg();
 	}
 }
 #endif

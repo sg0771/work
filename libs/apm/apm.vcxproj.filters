@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aec_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aec_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aec_core_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aec_rdft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aec_resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="agc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="agc_manager_direct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aligned_array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aligned_malloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="analog_agc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arith_routines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="array_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arraysize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="asm_defines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_converter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_frame_operations.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_processing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_processing_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_processing_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_ring_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bandwidth_info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="basictypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="beamformer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="blocker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="channel_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="checks.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="compile_assert_c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="complex_fft_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="complex_matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="constructormagic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="covariance_matrix_generator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu_features_wrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="daubechies_8_wavelet_coeffs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="delay_estimator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="delay_estimator_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="delay_estimator_wrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="digital_agc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dyadic_decimator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="echo_cancellation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="echo_cancellation_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="echo_cancellation_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="encode_lpc_swb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="entropy_coding.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fft4g.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filterbank_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fir_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fir_filter_neon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fir_filter_sse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fix_interlocked_exchange_pointer_win.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gain_control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gain_control_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gain_map_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gmm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="high_pass_filter_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="histogram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="intelligibility_enhancer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="intelligibility_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="isac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lapped_transform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="level_estimator_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lpc_analysis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lpc_gain_swb_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lpc_shape_swb12_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lpc_shape_swb16_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lpc_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix_test_helpers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="maybe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="metrics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="module_common_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="moving_moments.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="noise_gmm_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="noise_suppression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="noise_suppression_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="noise_suppression_x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nonlinear_beamformer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ns_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nsx_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nsx_defines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="os_specific_inline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pitch_based_vad.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pitch_estimator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pitch_gain_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pitch_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pitch_lag_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pole_zero_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="processing_component.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="push_resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="push_sinc_resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="real_fft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="real_fourier.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="real_fourier_ooura.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="real_fourier_openmax.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resample_by_2_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ring_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rms_level.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="safe_conversions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="safe_conversions_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="scoped_ptr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="scoped_vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="signal_processing_library.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sinc_resampler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sinusoidal_linear_chirp_source.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sparse_fir_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="spectrum_ar_model_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="spl_inl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="spl_inl_armv7.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="spl_inl_mips.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="standalone_vad.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="static_instance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stl_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="structs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="template_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="three_band_filter_bank.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="transient_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="transient_detector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="transient_suppressor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="typedefs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad_audio_proc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad_audio_proc_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad_circular_buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad_filterbank.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad_gmm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vad_sp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="voice_activity_detector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="voice_detection_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="voice_gmm_tables.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="webrtc_agc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="webrtc_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="webrtc_ns.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="webrtc_vad.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="window_generator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="windows_private.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wpd_node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wpd_tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aec_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aec_core_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aec_core_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aec_rdft.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aec_rdft_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aec_rdft_sse2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aec_resampler.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="agc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="agc_manager_direct.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aligned_malloc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="analog_agc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arith_routines.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arith_routines_hist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arith_routines_logist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="array_util.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_converter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_processing_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_ring_buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_util.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="auto_corr_to_refl_coef.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="auto_correlation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="blocker.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="channel_buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="checks.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="click_annotate.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common_types.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="complex_bit_reverse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="complex_fft.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="copy_set_operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="covariance_matrix_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu_features.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cross_correlation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cross_correlation_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="delay_estimator.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="delay_estimator_wrapper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="digital_agc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="division_operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dot_product_with_scale.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="downsample_fast.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="downsample_fast_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="echo_cancellation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="echo_cancellation_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encode_lpc_swb.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="energy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="entropy_coding.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fft4g.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filter_ar.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filter_ar_fast_q12.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filter_functions.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filter_ma_fast_q12.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filterbank_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filterbanks.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fir_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fir_filter_neon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fir_filter_sse.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gain_control_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="get_hanning_window.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="get_scaling_square.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gmm.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="high_pass_filter_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="histogram.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ilbc_specific_functions.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="intelligibility_enhancer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="intelligibility_utils.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="intialize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lapped_transform.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="level_estimator_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="levinson_durbin.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc_analysis.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc_gain_swb_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc_shape_swb12_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc_shape_swb16_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lpc_to_refl_coef.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="metrics_default.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="min_max_operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="min_max_operations_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="moving_moments.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="noise_suppression.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="noise_suppression_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="noise_suppression_x.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="nonlinear_beamformer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ns_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="nsx_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="nsx_core_c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="nsx_core_neon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pitch_based_vad.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pitch_estimator.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pitch_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pitch_gain_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pitch_internal.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pitch_lag_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pole_zero_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="processing_component.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="push_resampler.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="push_sinc_resampler.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="randomization_functions.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="real_fft.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="real_fourier.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="real_fourier_ooura.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="refl_coef_to_lpc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resample.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resample_48khz.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resample_by_2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resample_by_2_internal.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resample_fractional.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resampler.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ring_buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rms_level.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sinc_resampler.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sinc_resampler_neon.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sinc_resampler_sse.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sinusoidal_linear_chirp_source.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sparse_fir_filter.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="spectrum_ar_model_tables.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="spl_init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="spl_sqrt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="spl_sqrt_floor.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="splitting_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="splitting_filter_audio_process.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sqrt_of_one_minus_x_squared.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="standalone_vad.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="three_band_filter_bank.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="transient_detector.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="transient_suppressor.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utility.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vad.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vad_audio_proc.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vad_circular_buffer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vad_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vad_filterbank.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vad_gmm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vad_sp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vector_scaling_operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="voice_activity_detector.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="voice_detection_impl.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="webrtc_vad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="window_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wpd_node.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wpd_tree.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="filter_ar_fast_q12_armv7.S" />
+    <None Include="spl_sqrt_floor_arm.S" />
+  </ItemGroup>
+</Project>

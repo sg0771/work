@@ -25,6 +25,8 @@ HRESULT capture_image(char* filename, float second, wchar_t* output, int height)
 #include "D3D_Filters/ML_D3DRender.h"
 #pragma comment(lib, "libffmpeg.lib")
 #pragma comment(lib, "gdiplus.lib")
+#pragma comment(lib, "apm.lib")
+#pragma comment(lib, "soundtouch.lib")
 #pragma comment(lib, "glew.lib")
 #pragma comment(lib, "glfw.lib")
 #pragma comment(lib, "opengl32.lib")
@@ -367,14 +369,6 @@ MEDIALIB_API int MLSupportH264Codec() {
 	return _SupportQSVCodec(TRUE);
 }
 
-//--------------------
-static void WINAPI ML_LogW(const wchar_t* format, va_list args) {
-	wchar_t wszMsg[4096];
-	memset(wszMsg, 0, 4096 * 2);
-	vswprintf(wszMsg, format, args);
-	WXLogW(L"%ws", wszMsg);
-}
-
 
 //如果路径不存在就弹窗警告,然后exit
 static void MLCheckDir(std::wstring wstrDir) {
@@ -390,6 +384,43 @@ static void MLCheckDir(std::wstring wstrDir) {
 		exit(-1);
 	}
 }
+
+/*
+获得DLL 版本号
+也就是文件详细信息里面 1.0.0.xxx 里面xxx
+*/
+static BOOL VersionMsg(LPCTSTR strFile, WXString& strVersion)
+{
+	if (LibInst::GetInst().m_libVersion == nullptr) {
+		strVersion.Format("0.0.0.0");
+		return FALSE;
+	}
+
+	TCHAR szVersionBuffer[1000] = _T("");
+	DWORD dwVerSize;
+	DWORD dwHandle;
+
+	dwVerSize = LibInst::GetInst().mGetFileVersionInfoSizeW(strFile, &dwHandle);
+	if (dwVerSize == 0)
+		return FALSE;
+
+	if (LibInst::GetInst().mGetFileVersionInfoW(strFile, 0, dwVerSize, szVersionBuffer))
+	{
+		VS_FIXEDFILEINFO* pInfo;
+		unsigned int nInfoLen;
+
+		if (LibInst::GetInst().mVerQueryValueW(szVersionBuffer, _T("\\"), (void**)&pInfo, &nInfoLen))
+		{
+			strVersion.Format(("%d.%d.%d.%d"),
+				HIWORD(pInfo->dwFileVersionMS), LOWORD(pInfo->dwFileVersionMS),
+				HIWORD(pInfo->dwFileVersionLS), LOWORD(pInfo->dwFileVersionLS));
+			return TRUE;
+		}
+	}
+
+	return TRUE;
+}
+
 MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool mode) {
 
 	if (s_bInit)
@@ -399,7 +430,7 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 	std::wstring s_strCompany = WXBase::UTF8ToUTF16(_company);
 	std::wstring s_strProduct = WXBase::UTF8ToUTF16(_product);
 	std::wstring s_strLogDir = WXBase::getEnvVarW(L"appdata") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\log\\";
-	std::wstring s_strDump = s_strLogDir + L"crash.dmp";
+
 	std::wstring s_strTempDir = WXBase::getEnvVarW(L"temp") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\";
 	std::wstring s_strIndexDir = WXBase::getEnvVarW(L"temp") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\Index+1128\\";
 	std::wstring  s_strProgData = WXBase::getEnvVarW(L"ProgramData") + L"\\" + s_strCompany.c_str() + L"\\" + s_strProduct.c_str() + L"\\";
@@ -432,10 +463,27 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 	MLCheckDir(s_strTempDir);
 	MLCheckDir(s_strIndexDir);
 
+
+
 	//设置全局INI路径
 	std::wstring strIniPath = s_strLogDir.c_str();
 	strIniPath += L"WXMedia.ini";//同目录下的ini文件
 	WXSetGlobalPath(strIniPath.c_str());
+
+	WXString strDllVersion;
+	VersionMsg(L"Medialib.dll", strDllVersion);
+	WXSetGlobalString(L"Medialib.Version", strDllVersion.str());
+
+	std::wstring s_RunPath = WXBase::GetRunPath();  //当前运行目录
+	std::wstring s_FullExeName = WXBase::GetFullExeName(); //当前EXE全路径	
+	std::wstring s_ExeName = WXBase::GetExeName();//EXE名字
+	WXSetGlobalString(L"FullExeName", s_FullExeName.c_str());
+
+	std::wstring s_strDump = s_strLogDir;
+	s_strDump += s_ExeName.c_str(); //EXE名字
+	s_strDump += L".";   //log文件
+	s_strDump += strDllVersion.str();//版本号
+	s_strDump += L".crash.dmp";   //log文件
 
 	WXSetGlobalString(L"company", s_strCompany.c_str()); //公司名字
 	WXSetGlobalString(L"product", s_strProduct.c_str()); //应用名字
@@ -446,33 +494,23 @@ MEDIALIB_API  int  Initialize(const char* _company, const char* _product, bool m
 	WXSetGlobalString(L"DumpFilePath", s_strDump.c_str());//Dump 路径
 
 
+
 	//无法创建LOG文件就弹窗警告！然后exit
-	std::wstring strLog = s_strLogDir + L"\\avisynth_128.log";
-	bool bOpenLog = WXLogInit(strLog.c_str());
+	std::wstring s_strLogFile = s_strLogDir;
+	s_strLogFile += s_ExeName.c_str(); //EXE名字
+	s_strLogFile += L".";   //log文件
+	s_strLogFile += strDllVersion.str();//版本号
+	s_strLogFile += L".wxmedia.log";   //log文件
+	bool bOpenLog = WXLogInit(s_strLogFile.c_str());
 	if (!bOpenLog) {
 		WXString strMsg;
-		strMsg.Format(L"Sorry ,Create LogFile [%ws] Error!", strLog.c_str());
+		strMsg.Format(L"Sorry ,Create LogFile[%ws] Error!", s_strLogFile.c_str());
 		MessageBoxW(NULL, strMsg.str(), L"Medialib.dll", MB_OK);
-
-		strLog = L"MyDebug.log";
-	    bOpenLog = WXLogInit(strLog.c_str());
-		if (!bOpenLog) {
-			WXString strMsg;
-			strMsg.Format(L"Sorry ,Create LogFile[%ws] Error!", strLog.c_str());
-			MessageBoxW(NULL, strMsg.str(), L"Medialib.dll", MB_OK);
-			exit(-1);
-		}
+		exit(-1);
 	}
-	
-	LibInst_LogMsg(ML_LogW);
+	LibInst_LogMsg();
+
 	WXLogWOnce(L"MediaLib Initialize: %ws, %ws", s_strCompany.c_str(), s_strProduct.c_str());
-
-	::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
-	static ULONG_PTR m_gdiplusToken = 0;
-	if (m_gdiplusToken == 0) {
-		Gdiplus::GdiplusStartupInput StartupInput;//GDI+初始化
-		Gdiplus::GdiplusStartup(&m_gdiplusToken, &StartupInput, NULL);
-	}
 
 	//ffmpeg.exe 检测
 	std::thread thFfmpeg([] {

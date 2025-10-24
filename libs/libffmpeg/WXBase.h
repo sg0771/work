@@ -284,7 +284,8 @@ namespace WXBase {
 	static std::wstring GetExeName() {
 		std::wstring s_FullExeName = WXBase::GetFullExeName(); //当前EXE全路径
 		std::filesystem::path path(s_FullExeName);
-		std::wstring s_ExeName = path.filename().wstring();//EXE名字
+		//std::wstring s_ExeName = path.filename().wstring();//EXE名字
+		std::wstring s_ExeName = path.stem().wstring();//EXE名字
 		return s_ExeName;
 	}
 

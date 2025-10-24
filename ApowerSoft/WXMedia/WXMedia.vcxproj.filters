@@ -708,15 +708,6 @@
     <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\librnnoise.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\SoundTouch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameCapture\WXGameCapture.cpp">
@@ -1382,13 +1373,7 @@
     <ClCompile Include="Lav\VSFilter\VSFilter_XSUBSubtitle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\WXMedia_SDK\include\librnnoise.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\WXMedia_SDK\include\SoundTouch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\WXMedia_SDK\include\libimagequant.c">
+    <ClCompile Include="Win32\libimagequant.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

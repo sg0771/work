@@ -272,7 +272,7 @@ typedef void (WINAPI* cbLogW)(const wchar_t*, va_list);
 
 class LibInst;
 EXTERN_C LibInst* LibInst_GetInst();//单例模式
-EXTERN_C void LibInst_LogMsg(cbLogW cbLogW);//日志 
+EXTERN_C void LibInst_LogMsg();//日志 
 class LibInst {
 public:
     //动态库加载
@@ -353,7 +353,7 @@ public:
     };
     std::vector<MyLib*>m_arrLibs;
 
-	cbLogW m_cbLogW = nullptr;
+	int m_logmsg = 0;
 public:
     std::shared_ptr<MyLib> m_libOLE32 = nullptr;//ole32.dll
     PFNCoInitializeEx m_CoInitializeEx = nullptr;
@@ -489,15 +489,12 @@ public:
     std::shared_ptr<MyLib> m_libDraw = nullptr;//("ddraw.dll");
     cbDirectDrawCreate mDirectDrawCreate = nullptr;
 
-    int m_logmsg = 0;
+ 
 public:
     static LibInst& GetInst() {
 		return *LibInst_GetInst();
     }
-
-    void LogW(const wchar_t* fmt, ...);
-
-    void LogMsg(cbLogW cbLogW);
+    void LogMsg();
 
     //各种库的加载
     LibInst();

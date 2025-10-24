@@ -48,6 +48,7 @@
 //#pragma comment(lib, "mfuuid.lib")
 #pragma comment(lib, "strmiids.lib")
 #pragma comment(lib, "ole32.lib")
+#pragma comment(lib, "gdiplus.lib")
 
 #pragma comment(lib, "libyuv.lib")
 #pragma comment(lib, "WXIMage.lib")

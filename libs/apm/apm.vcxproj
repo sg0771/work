@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aec_common.h" />
+    <ClInclude Include="aec_core.h" />
+    <ClInclude Include="aec_core_internal.h" />
+    <ClInclude Include="aec_rdft.h" />
+    <ClInclude Include="aec_resampler.h" />
+    <ClInclude Include="agc.h" />
+    <ClInclude Include="agc_manager_direct.h" />
+    <ClInclude Include="aligned_array.h" />
+    <ClInclude Include="aligned_malloc.h" />
+    <ClInclude Include="analog_agc.h" />
+    <ClInclude Include="apm.h" />
+    <ClInclude Include="arith_routines.h" />
+    <ClInclude Include="arraysize.h" />
+    <ClInclude Include="array_util.h" />
+    <ClInclude Include="asm_defines.h" />
+    <ClInclude Include="audio_buffer.h" />
+    <ClInclude Include="audio_converter.h" />
+    <ClInclude Include="audio_frame_operations.h" />
+    <ClInclude Include="audio_processing.h" />
+    <ClInclude Include="audio_processing_common.h" />
+    <ClInclude Include="audio_processing_impl.h" />
+    <ClInclude Include="audio_ring_buffer.h" />
+    <ClInclude Include="audio_util.h" />
+    <ClInclude Include="bandwidth_info.h" />
+    <ClInclude Include="basictypes.h" />
+    <ClInclude Include="beamformer.h" />
+    <ClInclude Include="blocker.h" />
+    <ClInclude Include="channel_buffer.h" />
+    <ClInclude Include="checks.h" />
+    <ClInclude Include="codec.h" />
+    <ClInclude Include="common_types.h" />
+    <ClInclude Include="compile_assert_c.h" />
+    <ClInclude Include="complex_fft_tables.h" />
+    <ClInclude Include="complex_matrix.h" />
+    <ClInclude Include="constructormagic.h" />
+    <ClInclude Include="covariance_matrix_generator.h" />
+    <ClInclude Include="cpu_features_wrapper.h" />
+    <ClInclude Include="daubechies_8_wavelet_coeffs.h" />
+    <ClInclude Include="defines.h" />
+    <ClInclude Include="delay_estimator.h" />
+    <ClInclude Include="delay_estimator_internal.h" />
+    <ClInclude Include="delay_estimator_wrapper.h" />
+    <ClInclude Include="digital_agc.h" />
+    <ClInclude Include="dyadic_decimator.h" />
+    <ClInclude Include="echo_cancellation.h" />
+    <ClInclude Include="echo_cancellation_impl.h" />
+    <ClInclude Include="echo_cancellation_internal.h" />
+    <ClInclude Include="encode_lpc_swb.h" />
+    <ClInclude Include="entropy_coding.h" />
+    <ClInclude Include="fft4g.h" />
+    <ClInclude Include="filterbank_tables.h" />
+    <ClInclude Include="fir_filter.h" />
+    <ClInclude Include="fir_filter_neon.h" />
+    <ClInclude Include="fir_filter_sse.h" />
+    <ClInclude Include="fix_interlocked_exchange_pointer_win.h" />
+    <ClInclude Include="gain_control.h" />
+    <ClInclude Include="gain_control_impl.h" />
+    <ClInclude Include="gain_map_internal.h" />
+    <ClInclude Include="gmm.h" />
+    <ClInclude Include="high_pass_filter_impl.h" />
+    <ClInclude Include="histogram.h" />
+    <ClInclude Include="intelligibility_enhancer.h" />
+    <ClInclude Include="intelligibility_utils.h" />
+    <ClInclude Include="isac.h" />
+    <ClInclude Include="lapped_transform.h" />
+    <ClInclude Include="level_estimator_impl.h" />
+    <ClInclude Include="lpc_analysis.h" />
+    <ClInclude Include="lpc_gain_swb_tables.h" />
+    <ClInclude Include="lpc_shape_swb12_tables.h" />
+    <ClInclude Include="lpc_shape_swb16_tables.h" />
+    <ClInclude Include="lpc_tables.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="matrix_test_helpers.h" />
+    <ClInclude Include="maybe.h" />
+    <ClInclude Include="metrics.h" />
+    <ClInclude Include="module_common_types.h" />
+    <ClInclude Include="moving_moments.h" />
+    <ClInclude Include="noise_gmm_tables.h" />
+    <ClInclude Include="noise_suppression.h" />
+    <ClInclude Include="noise_suppression_impl.h" />
+    <ClInclude Include="noise_suppression_x.h" />
+    <ClInclude Include="nonlinear_beamformer.h" />
+    <ClInclude Include="nsx_core.h" />
+    <ClInclude Include="nsx_defines.h" />
+    <ClInclude Include="ns_core.h" />
+    <ClInclude Include="os_specific_inline.h" />
+    <ClInclude Include="pitch_based_vad.h" />
+    <ClInclude Include="pitch_estimator.h" />
+    <ClInclude Include="pitch_gain_tables.h" />
+    <ClInclude Include="pitch_internal.h" />
+    <ClInclude Include="pitch_lag_tables.h" />
+    <ClInclude Include="pole_zero_filter.h" />
+    <ClInclude Include="processing_component.h" />
+    <ClInclude Include="push_resampler.h" />
+    <ClInclude Include="push_sinc_resampler.h" />
+    <ClInclude Include="real_fft.h" />
+    <ClInclude Include="real_fourier.h" />
+    <ClInclude Include="real_fourier_ooura.h" />
+    <ClInclude Include="real_fourier_openmax.h" />
+    <ClInclude Include="resampler.h" />
+    <ClInclude Include="resample_by_2_internal.h" />
+    <ClInclude Include="ring_buffer.h" />
+    <ClInclude Include="rms_level.h" />
+    <ClInclude Include="safe_conversions.h" />
+    <ClInclude Include="safe_conversions_impl.h" />
+    <ClInclude Include="scoped_ptr.h" />
+    <ClInclude Include="scoped_vector.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="signal_processing_library.h" />
+    <ClInclude Include="sinc_resampler.h" />
+    <ClInclude Include="sinusoidal_linear_chirp_source.h" />
+    <ClInclude Include="sparse_fir_filter.h" />
+    <ClInclude Include="spectrum_ar_model_tables.h" />
+    <ClInclude Include="splitting_filter.h" />
+    <ClInclude Include="spl_inl.h" />
+    <ClInclude Include="spl_inl_armv7.h" />
+    <ClInclude Include="spl_inl_mips.h" />
+    <ClInclude Include="standalone_vad.h" />
+    <ClInclude Include="static_instance.h" />
+    <ClInclude Include="stl_util.h" />
+    <ClInclude Include="structs.h" />
+    <ClInclude Include="template_util.h" />
+    <ClInclude Include="three_band_filter_bank.h" />
+    <ClInclude Include="transient_common.h" />
+    <ClInclude Include="transient_detector.h" />
+    <ClInclude Include="transient_suppressor.h" />
+    <ClInclude Include="typedefs.h" />
+    <ClInclude Include="utility.h" />
+    <ClInclude Include="vad.h" />
+    <ClInclude Include="vad_audio_proc.h" />
+    <ClInclude Include="vad_audio_proc_internal.h" />
+    <ClInclude Include="vad_circular_buffer.h" />
+    <ClInclude Include="vad_common.h" />
+    <ClInclude Include="vad_core.h" />
+    <ClInclude Include="vad_filterbank.h" />
+    <ClInclude Include="vad_gmm.h" />
+    <ClInclude Include="vad_sp.h" />
+    <ClInclude Include="voice_activity_detector.h" />
+    <ClInclude Include="voice_detection_impl.h" />
+    <ClInclude Include="voice_gmm_tables.h" />
+    <ClInclude Include="webrtc_agc.h" />
+    <ClInclude Include="webrtc_common.h" />
+    <ClInclude Include="webrtc_ns.h" />
+    <ClInclude Include="webrtc_vad.h" />
+    <ClInclude Include="windows_private.h" />
+    <ClInclude Include="window_generator.h" />
+    <ClInclude Include="wpd_node.h" />
+    <ClInclude Include="wpd_tree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aec_core.c" />
+    <ClCompile Include="aec_core_neon.c" />
+    <ClCompile Include="aec_core_sse2.c" />
+    <ClCompile Include="aec_rdft.c" />
+    <ClCompile Include="aec_rdft_neon.c" />
+    <ClCompile Include="aec_rdft_sse2.c" />
+    <ClCompile Include="aec_resampler.c" />
+    <ClCompile Include="agc.cc" />
+    <ClCompile Include="agc_manager_direct.cc" />
+    <ClCompile Include="aligned_malloc.cc" />
+    <ClCompile Include="analog_agc.c" />
+    <ClCompile Include="apm.cpp" />
+    <ClCompile Include="arith_routines.c" />
+    <ClCompile Include="arith_routines_hist.c" />
+    <ClCompile Include="arith_routines_logist.c" />
+    <ClCompile Include="array_util.cc" />
+    <ClCompile Include="audio_buffer.cc" />
+    <ClCompile Include="audio_converter.cc" />
+    <ClCompile Include="audio_processing_impl.cc" />
+    <ClCompile Include="audio_ring_buffer.cc" />
+    <ClCompile Include="audio_util.cc" />
+    <ClCompile Include="auto_correlation.c" />
+    <ClCompile Include="auto_corr_to_refl_coef.c" />
+    <ClCompile Include="blocker.cc" />
+    <ClCompile Include="channel_buffer.cc" />
+    <ClCompile Include="checks.cc" />
+    <ClCompile Include="click_annotate.cc" />
+    <ClCompile Include="common_types.cc" />
+    <ClCompile Include="complex_bit_reverse.c" />
+    <ClCompile Include="complex_fft.c" />
+    <ClCompile Include="copy_set_operations.c" />
+    <ClCompile Include="covariance_matrix_generator.cc" />
+    <ClCompile Include="cpu_features.cc" />
+    <ClCompile Include="cross_correlation.c" />
+    <ClCompile Include="cross_correlation_neon.c" />
+    <ClCompile Include="delay_estimator.c" />
+    <ClCompile Include="delay_estimator_wrapper.c" />
+    <ClCompile Include="digital_agc.c" />
+    <ClCompile Include="division_operations.c" />
+    <ClCompile Include="dot_product_with_scale.c" />
+    <ClCompile Include="downsample_fast.c" />
+    <ClCompile Include="downsample_fast_neon.c" />
+    <ClCompile Include="echo_cancellation.c" />
+    <ClCompile Include="echo_cancellation_impl.cc" />
+    <ClCompile Include="encode_lpc_swb.c" />
+    <ClCompile Include="energy.c" />
+    <ClCompile Include="entropy_coding.c" />
+    <ClCompile Include="fft4g.c" />
+    <ClCompile Include="filterbanks.c" />
+    <ClCompile Include="filterbank_tables.c" />
+    <ClCompile Include="filter_ar.c" />
+    <ClCompile Include="filter_ar_fast_q12.c" />
+    <ClCompile Include="filter_functions.c" />
+    <ClCompile Include="filter_ma_fast_q12.c" />
+    <ClCompile Include="fir_filter.cc" />
+    <ClCompile Include="fir_filter_neon.cc" />
+    <ClCompile Include="fir_filter_sse.cc" />
+    <ClCompile Include="gain_control_impl.cc" />
+    <ClCompile Include="get_hanning_window.c" />
+    <ClCompile Include="get_scaling_square.c" />
+    <ClCompile Include="gmm.cc" />
+    <ClCompile Include="high_pass_filter_impl.cc" />
+    <ClCompile Include="histogram.cc" />
+    <ClCompile Include="ilbc_specific_functions.c" />
+    <ClCompile Include="intelligibility_enhancer.cc" />
+    <ClCompile Include="intelligibility_utils.cc" />
+    <ClCompile Include="intialize.c" />
+    <ClCompile Include="lapped_transform.cc" />
+    <ClCompile Include="level_estimator_impl.cc" />
+    <ClCompile Include="levinson_durbin.c" />
+    <ClCompile Include="lpc_analysis.c" />
+    <ClCompile Include="lpc_gain_swb_tables.c" />
+    <ClCompile Include="lpc_shape_swb12_tables.c" />
+    <ClCompile Include="lpc_shape_swb16_tables.c" />
+    <ClCompile Include="lpc_tables.c" />
+    <ClCompile Include="lpc_to_refl_coef.c" />
+    <ClCompile Include="metrics_default.cc" />
+    <ClCompile Include="min_max_operations.c" />
+    <ClCompile Include="min_max_operations_neon.c" />
+    <ClCompile Include="moving_moments.cc" />
+    <ClCompile Include="noise_suppression.c" />
+    <ClCompile Include="noise_suppression_impl.cc" />
+    <ClCompile Include="noise_suppression_x.c" />
+    <ClCompile Include="nonlinear_beamformer.cc" />
+    <ClCompile Include="nsx_core.c" />
+    <ClCompile Include="nsx_core_c.c" />
+    <ClCompile Include="nsx_core_neon.c" />
+    <ClCompile Include="ns_core.c" />
+    <ClCompile Include="pitch_based_vad.cc" />
+    <ClCompile Include="pitch_estimator.c" />
+    <ClCompile Include="pitch_filter.c" />
+    <ClCompile Include="pitch_gain_tables.c" />
+    <ClCompile Include="pitch_internal.cc" />
+    <ClCompile Include="pitch_lag_tables.c" />
+    <ClCompile Include="pole_zero_filter.cc" />
+    <ClCompile Include="processing_component.cc" />
+    <ClCompile Include="push_resampler.cc" />
+    <ClCompile Include="push_sinc_resampler.cc" />
+    <ClCompile Include="randomization_functions.c" />
+    <ClCompile Include="real_fft.c" />
+    <ClCompile Include="real_fourier.cc" />
+    <ClCompile Include="real_fourier_ooura.cc" />
+    <ClCompile Include="refl_coef_to_lpc.c" />
+    <ClCompile Include="resample.c" />
+    <ClCompile Include="resampler.cc" />
+    <ClCompile Include="resample_48khz.c" />
+    <ClCompile Include="resample_by_2.c" />
+    <ClCompile Include="resample_by_2_internal.c" />
+    <ClCompile Include="resample_fractional.c" />
+    <ClCompile Include="ring_buffer.c" />
+    <ClCompile Include="rms_level.cc" />
+    <ClCompile Include="sinc_resampler.cc" />
+    <ClCompile Include="sinc_resampler_neon.cc" />
+    <ClCompile Include="sinc_resampler_sse.cc" />
+    <ClCompile Include="sinusoidal_linear_chirp_source.cc" />
+    <ClCompile Include="sparse_fir_filter.cc" />
+    <ClCompile Include="spectrum_ar_model_tables.c" />
+    <ClCompile Include="splitting_filter.c" />
+    <ClCompile Include="splitting_filter_audio_process.cc" />
+    <ClCompile Include="spl_init.c" />
+    <ClCompile Include="spl_sqrt.c" />
+    <ClCompile Include="spl_sqrt_floor.c" />
+    <ClCompile Include="sqrt_of_one_minus_x_squared.c" />
+    <ClCompile Include="standalone_vad.cc" />
+    <ClCompile Include="three_band_filter_bank.cc" />
+    <ClCompile Include="transient_detector.cc" />
+    <ClCompile Include="transient_suppressor.cc" />
+    <ClCompile Include="utility.cc" />
+    <ClCompile Include="vad.cc" />
+    <ClCompile Include="vad_audio_proc.cc" />
+    <ClCompile Include="vad_circular_buffer.cc" />
+    <ClCompile Include="vad_core.c" />
+    <ClCompile Include="vad_filterbank.c" />
+    <ClCompile Include="vad_gmm.c" />
+    <ClCompile Include="vad_sp.c" />
+    <ClCompile Include="vector_scaling_operations.c" />
+    <ClCompile Include="voice_activity_detector.cc" />
+    <ClCompile Include="voice_detection_impl.cc" />
+    <ClCompile Include="webrtc_vad.c" />
+    <ClCompile Include="window_generator.cc" />
+    <ClCompile Include="wpd_node.cc" />
+    <ClCompile Include="wpd_tree.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="filter_ar_fast_q12_armv7.S" />
+    <None Include="spl_sqrt_floor_arm.S" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{687b5fea-33bf-41f7-a110-a40646ccc2d8}</ProjectGuid>
+    <RootNamespace>apm</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild />
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild />
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild />
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild />
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

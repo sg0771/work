@@ -17,8 +17,9 @@ WXMedia.dll 初始化操作
 #pragma comment(lib, "strmiids.lib") //DirectShow
 
 //#pragma comment(lib, "libyuv.lib")
-#pragma comment(lib, "libjpeg.lib")
-
+//#pragma comment(lib, "libjpeg.lib")
+#pragma comment(lib, "soundTouch.lib")
+#pragma comment(lib, "librnnoise.lib")
 
 #include <mfapi.h>    // Media Foundation API
 #include <mfidl.h>    // MF interfaces
@@ -331,9 +332,6 @@ WXMEDIA_API int WXIsFileExist(WXCTSTR wszFile)
 }
 
 static void ParseIni() {
-
-	WXSetGlobalString( _T("Notify"), _T("\"WXMedia.dll Param Config\""));
-
 	int bCheckDXGI = WXGetGlobalValue( L"SupportDXGI", -1);
 	if (bCheckDXGI == -1) {
 		WXSetGlobalValue(_T("SupportDXGI"), WXGetSystemVersion() != 7);
@@ -363,9 +361,7 @@ EXTERN_C  void  log_callback(void* ptr, int level, const char* fmt, va_list vl) 
 }
 
 extern void WXGameInit();//游戏录制
-WXString g_strLog;
 static int s_bDeviceInit = 0;
-
 
 WXMEDIA_API void WXDeviceInitMirror(WXCTSTR logfile) {
 	WXDeviceInit(logfile);
@@ -495,9 +491,6 @@ WXMEDIA_API int  WXGetSystemVersion() {
 	WXSetGlobalValue(L"SystemVersion", s_system_version);//默认版本号
 	WXSetGlobalValue(L"1903", s_b1903);//是否Win10 1903
 	WXSetGlobalValue(L"WGC", s_bWGC);//是否支持WGC
-
-
-
 	return s_system_version;
 }
 
@@ -609,7 +602,7 @@ WXMEDIA_API int  WXSupportDXGI() {
 }
 
 /*
-获得WXMedia.dll 版本号
+获得DLL 版本号
 也就是文件详细信息里面 1.0.0.xxx 里面xxx
 */
 static BOOL VersionMsg(LPCTSTR strFile, WXString& strVersion)
@@ -654,11 +647,11 @@ WXMEDIA_API void WXSetCrashDumpFlag(int bEnable) {
 WXMEDIA_API void WXSetCrashDumpFile(WXCTSTR strFile) {
 	if (nullptr != strFile) {
 		WXSetCrashDumpFlag(TRUE);
-		WXSetGlobalString(L"DumpFile", strFile);
+		WXSetGlobalString(L"DumpFilePath", strFile);
 	}
 	else {
 		WXSetCrashDumpFlag(TRUE);
-		WXSetGlobalString(L"DumpFile", L"");
+		WXSetGlobalString(L"DumpFilePath", L"");
 	}
 }
 
@@ -687,7 +680,7 @@ static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 		return 0;
 	wchar_t wszDumpPath[MAX_PATH] = { 0 };
 	//创建Dump文件
-	WXGetGlobalString(L"DumpFile", wszDumpPath, L"");
+	WXGetGlobalString(L"DumpFilePath", wszDumpPath, L"");
 	std::wstring strDump = wszDumpPath;
 	if (strDump.length()) {// 是否创建Dump文件 
 		HANDLE hDumpFile = CreateFile(strDump.c_str(), GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
@@ -832,102 +825,86 @@ static void WINAPI WX_LogW(const wchar_t* format, va_list args) {
 	vswprintf(wszMsg, format, args);
 	WXLogW(L"%ws", wszMsg);
 }
-WXString g_strJsonPath = L"WXCamera.json";//Camera.json
 
-WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
+//Camera json路径
+void SetCameraJsonPath(WXCTSTR path);
+
+WXMEDIA_API void WXDeviceInit(WXCTSTR _logfile) {
 
 	WXAutoLock al(s_lockGlobal);
-	BEGIN_LOG_FUNC  //WXDeviceInit
-
-	if (logfile == nullptr)
-		return;
-
 	if (s_bDeviceInit == 1) {
 		return;//只能初始化一次
 	}
 	s_bDeviceInit = 1;
 
-	g_strLog = logfile;
-
-	//ibInst:LInit();
 	timeBeginPeriod(1); //设置Sleep的精度为1ms
 	SetDllDirectory(L"");
 	HRESULT hr = ::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
 
-	std::wstring s_LogPath = L"";//log目录
-	//获取INI绝对路径
-	std::wstring s_strLog = logfile;//log路径
-	std::wstring s_strLogPath = L"";//log目录
-	size_t pos = s_strLog.find(L":");
-	std::wstring s_ExePath = WXBase::GetExePath();//EXE目录
-	if (pos == std::wstring::npos) { //不是全路径
-		s_strLog = s_ExePath.c_str();
-		s_LogPath = s_ExePath;
-	}
-	else { //全路径
-		std::filesystem::path path1(logfile);
-		s_LogPath = path1.parent_path().wstring() + L"\\";
-	}
-	std::wstring strIniPath = s_LogPath.c_str();
-	strIniPath += L"WXMedia.ini";//INI 路径
-	WXSetGlobalPath(strIniPath.c_str());
+	std::wstring s_strLogDir = L"";//log目录
 
-	WXSetGlobalValue(L"MachLevel", LEVEL_BETTER);//默认机器类型一般
+	wchar_t wszLogDir[MAX_PATH] = { 0 };
+	WXGetGlobalString(L"LogDir", wszLogDir, L"");
+	if (wcslen(wszLogDir) > 0) {
+		//已经在 Medialib.dll 配置Log目录
+		s_strLogDir = wszLogDir;
+	}else {
+		std::wstring s_strLog = _logfile;//log路径
+		size_t pos = s_strLog.find(L":");
+		std::wstring s_ExePath = WXBase::GetExePath();//EXE目录
+		if (pos == std::wstring::npos) { //不是全路径
+			s_strLog = s_ExePath.c_str(); //放在EXE目录
+			s_strLogDir = s_ExePath;
+		}
+		else { //全路径
+			std::filesystem::path path1(_logfile);
+			s_strLogDir = path1.parent_path().wstring() + L"\\";
+		}
+	}
 
 	WXString strDllVersion;
 	VersionMsg(L"WXMedia.dll", strDllVersion);
-	WXSetGlobalString(L"DllVersion", strDllVersion.str());
+	WXSetGlobalString(L"WXMedia.Version", strDllVersion.str());
+
+	std::wstring strIniPath = s_strLogDir + L"WXMedia.ini";//INI 路径
+	WXSetGlobalPath(strIniPath.c_str());//全局INI
+
+	std::wstring strJsonPath = s_strLogDir + L"camera.json";//JSON 路径
+	SetCameraJsonPath(strJsonPath.c_str());
+
+	WXSetGlobalValue(L"MachLevel", LEVEL_BETTER);//默认机器类型一般
 
 	std::wstring s_RunPath = WXBase::GetRunPath();  //当前运行目录
-	WXSetGlobalString(L"RunPath", s_RunPath.c_str());
-
-	std::wstring s_FullExeName = WXBase::GetFullExeName(); //当前EXE全路径
+	std::wstring s_FullExeName = WXBase::GetFullExeName(); //当前EXE全路径	
+	std::wstring s_ExeName = WXBase::GetExeName();//EXE名字
 	WXSetGlobalString(L"FullExeName", s_FullExeName.c_str());
 
 
-	WXSetGlobalString(L"ExePath", s_ExePath.c_str());
+	//无法创建LOG文件就弹窗警告！然后exit
+	std::wstring s_strLogFile = s_strLogDir;
+	s_strLogFile += s_ExeName.c_str(); //EXE名字
+	s_strLogFile += strDllVersion.str();//版本号
+	s_strLogFile += L".wxmedia.log";   //log文件
 
-	std::wstring s_ExeName = WXBase::GetExeName();//EXE名字
-	WXSetGlobalString(L"ExeName", s_ExeName.c_str());
+	bool bOpenLog = WXLogInit(s_strLogFile.c_str());
+	if (!bOpenLog) {
+		WXString strMsg;
+		strMsg.Format(L"Sorry ,Create LogFile[%ws] Error!", s_strLogFile.c_str());
+		MessageBoxW(NULL, strMsg.str(), L"WXMedia.dll", MB_OK);
+		exit(-1);
+	}
+	LibInst_LogMsg();
 
 
-	g_strJsonPath = s_LogPath.c_str();
-	g_strJsonPath += L"WXCamera.json";//JSON 路径
-
-	std::wstring strLogFileName = s_strLog;
-	strLogFileName += s_ExeName.c_str();
-
-	std::wstring strDumpFile = strLogFileName.c_str();
-	strDumpFile += strDllVersion.str();
-	strDumpFile += L".dmp";  //DUMP文件
-
-	strLogFileName += L".WXMedia.";//WXMedia.dll
-	strLogFileName += strDllVersion.str();//版本号
-	strLogFileName += L".log";   //log文件
-
-	WXLogInit(strLogFileName.c_str());
-
-	//WXLogA("%s Begin =================== ", __FUNCTION__);
-	LibInst_LogMsg(WX_LogW);
-	WXLogA("%s %d",__FUNCTION__,__LINE__);
-	//注册自定义WXM格式处理
 	avcodec_register_all();
 	avfilter_register_all();
 	av_register_all();
 	avformat_network_init();
 	av_log_set_callback(log_callback);
 	av_register_input_format(&ff_wxm_demuxer);
-	//av_register_output_format(&ff_wxm_muxer);
 	avpriv_register_devices(out_lists, in_lists);
 
-	//播放器使用
-	//SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER);
-
-	//WXLogA("%s %d", __FUNCTION__, __LINE__);
-
 	ParseIni();//解析INI文件
-
-	WXLogA("%s %d", __FUNCTION__, __LINE__);
 
 	//WXMedia 创建窗口
 	WNDCLASS wc = { 0 };
@@ -938,19 +915,15 @@ WXMEDIA_API void WXDeviceInit(WXCTSTR logfile) {
 	ATOM at = ::RegisterClass(&wc);
 
 
-	WXLogA("%s %d", __FUNCTION__, __LINE__);
+	std::wstring s_strDump = s_strLogDir;
+	s_strDump += s_ExeName.c_str(); //EXE名字
+	s_strDump += L".";   //log文件
+	s_strDump += strDllVersion.str();//版本号
+	s_strDump += L".crash.dmp";   //log文件
 
-	// 设置处理Unhandled Exception的回调函数 
-	WXLogW(L"--- Start DUMP s_strDumpFile=%ws", strDumpFile.c_str());
 	SetUnhandledExceptionFilter((LPTOP_LEVEL_EXCEPTION_FILTER)ApplicationCrashHandler);
-	WXSetGlobalString(L"DumpFile", strDumpFile.c_str());//默认DMP文件名
+	WXSetGlobalString(L"DumpFilePath", s_strDump.c_str());//默认DMP文件名
 
-	//GDI+初始化
-	static ULONG_PTR m_gdiplusToken = 0;
-	if (m_gdiplusToken == 0) {
-		Gdiplus::GdiplusStartupInput StartupInput;
-		Gdiplus::GdiplusStartup(&m_gdiplusToken, &StartupInput, NULL);
-	}
 
 	//音频设备初始化
 	WXWasapiNotifyInit();
