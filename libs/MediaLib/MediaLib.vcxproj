@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a718d4e4-b299-466a-af82-7ff95d158d02}</ProjectGuid>
+    <RootNamespace>MediaLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
+    <PreBuildEventUseInBuild>
+    </PreBuildEventUseInBuild>
+    <GenerateManifest>false</GenerateManifest>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>
+    </LinkIncremental>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
+    <PreBuildEventUseInBuild>
+    </PreBuildEventUseInBuild>
+    <GenerateManifest>false</GenerateManifest>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild>
+    </PreBuildEventUseInBuild>
+    <GenerateManifest>false</GenerateManifest>
+    <ExcludePath>$(CommonExcludePath);$(CommonExcludePath);$(VC_ExecutablePath_x64);$(VC_LibraryPath_x64)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>
+    </LinkIncremental>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild>
+    </PreBuildEventUseInBuild>
+    <GenerateManifest>false</GenerateManifest>
+    <ExcludePath>$(CommonExcludePath);$(CommonExcludePath);$(VC_ExecutablePath_x64);$(VC_LibraryPath_x64)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <VcpkgManifestInstall />
+    <VcpkgAutoLink />
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <VcpkgConfiguration />
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <VcpkgConfiguration />
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgConfiguration />
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgConfiguration />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;MEDIALIB_EXPORTS;NOMINMAX;WIN32_LEAN_AND_MEAN;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;__STDC_CONSTANT_MACROS=1;CustomTimeLine=1;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/Zc:strictStrings-  %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101;4005;4554</DisableSpecificWarnings>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <DelayLoadDLLs>libffmpeg.dll</DelayLoadDLLs>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc.pdb</ProgramDatabaseFile>
+      <EnableUAC>false</EnableUAC>
+      <AllowIsolation>true</AllowIsolation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;MEDIALIB_EXPORTS;NOMINMAX;WIN32_LEAN_AND_MEAN;NOMINMAX;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;__STDC_CONSTANT_MACROS=1;CustomTimeLine=1;_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101;4005;4554</DisableSpecificWarnings>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalOptions>/Zc:strictStrings-  %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <DelayLoadDLLs>libffmpeg.dll</DelayLoadDLLs>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc.pdb</ProgramDatabaseFile>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <EnableUAC>false</EnableUAC>
+      <AllowIsolation>true</AllowIsolation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;MEDIALIB_EXPORTS;NOMINMAX;__STDC_CONSTANT_MACROS=1;WIN32_LEAN_AND_MEAN;CustomTimeLine=1;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101;4005;4554</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <EnableFiberSafeOptimizations />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:strictStrings-  %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <DelayLoadDLLs>libffmpeg.dll</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc.pdb</ProgramDatabaseFile>
+      <EnableUAC>false</EnableUAC>
+      <AllowIsolation>true</AllowIsolation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;MEDIALIB_EXPORTS;NOMINMAX;__STDC_CONSTANT_MACROS=1;WIN32_LEAN_AND_MEAN;CustomTimeLine=1;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101;4005;4554</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <EnableFiberSafeOptimizations />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalOptions>/Zc:strictStrings-  %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <DelayLoadDLLs>libffmpeg.dll</DelayLoadDLLs>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc.pdb</ProgramDatabaseFile>
+      <EnableUAC>false</EnableUAC>
+      <AllowIsolation>true</AllowIsolation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h" />
+    <ClInclude Include="avisynth\audio\audio.h" />
+    <ClInclude Include="avisynth\audio\convertaudio.h" />
+    <ClInclude Include="avisynth\audio\Gips.h" />
+    <ClInclude Include="avisynth\avisynth.h" />
+    <ClInclude Include="avisynth\avisynth_c.h" />
+    <ClInclude Include="avisynth\avisynth_stdafx.h" />
+    <ClInclude Include="avisynth\convert\convert.h" />
+    <ClInclude Include="avisynth\convert\convert_planar.h" />
+    <ClInclude Include="avisynth\convert\convert_rgb.h" />
+    <ClInclude Include="avisynth\convert\convert_yuy2.h" />
+    <ClInclude Include="avisynth\convert\convert_yv12.h" />
+    <ClInclude Include="avisynth\core\avisynth.h" />
+    <ClInclude Include="avisynth\core\avisynth_c.h" />
+    <ClInclude Include="avisynth\core\avs\alignment.h" />
+    <ClInclude Include="avisynth\core\avs\capi.h" />
+    <ClInclude Include="avisynth\core\avs\config.h" />
+    <ClInclude Include="avisynth\core\avs\cpuid.h" />
+    <ClInclude Include="avisynth\core\avs\minmax.h" />
+    <ClInclude Include="avisynth\core\avs\types.h" />
+    <ClInclude Include="avisynth\core\avs\win.h" />
+    <ClInclude Include="avisynth\core\cache.h" />
+    <ClInclude Include="avisynth\core\Error.h" />
+    <ClInclude Include="avisynth\core\info.h" />
+    <ClInclude Include="avisynth\parser\expression.h" />
+    <ClInclude Include="avisynth\parser\script.h" />
+    <ClInclude Include="avisynth\parser\scriptparser.h" />
+    <ClInclude Include="avisynth\parser\tokenizer.h" />
+    <ClInclude Include="avisynth\core\softwire_helpers.h" />
+    <ClInclude Include="avisynth\filters\color.h" />
+    <ClInclude Include="avisynth\filters\combine.h" />
+    <ClInclude Include="avisynth\conditional\conditional.h" />
+    <ClInclude Include="avisynth\conditional\conditional_functions.h" />
+    <ClInclude Include="avisynth\conditional\conditional_reader.h" />
+    <ClInclude Include="avisynth\filters\convolution.h" />
+    <ClInclude Include="avisynth\filters\debug.h" />
+    <ClInclude Include="avisynth\filters\edit.h" />
+    <ClInclude Include="avisynth\filters\field.h" />
+    <ClInclude Include="avisynth\filters\focus.h" />
+    <ClInclude Include="avisynth\filters\fps.h" />
+    <ClInclude Include="avisynth\filters\greyscale.h" />
+    <ClInclude Include="avisynth\filters\layer.h" />
+    <ClInclude Include="avisynth\filters\levels.h" />
+    <ClInclude Include="avisynth\filters\limiter.h" />
+    <ClInclude Include="avisynth\filters\merge.h" />
+    <ClInclude Include="avisynth\overlay\444convert.h" />
+    <ClInclude Include="avisynth\overlay\blend_asm.h" />
+    <ClInclude Include="avisynth\overlay\imghelpers.h" />
+    <ClInclude Include="avisynth\overlay\overlay.h" />
+    <ClInclude Include="avisynth\overlay\overlayfunctions.h" />
+    <ClInclude Include="avisynth\filters\planeswap.h" />
+    <ClInclude Include="avisynth\filters\resample.h" />
+    <ClInclude Include="avisynth\filters\resample_functions.h" />
+    <ClInclude Include="avisynth\filters\StackBlur.h" />
+    <ClInclude Include="avisynth\filters\transform.h" />
+    <ClInclude Include="avisynth\filters\turn.h" />
+    <ClInclude Include="avisynth\filters\turnfunc.h" />
+    <ClInclude Include="ImageProcess\Filters_OpenGLFilter.h" />
+    <ClInclude Include="ImageProcess\Filters_OpenGLFilterSegment.h" />
+    <ClInclude Include="ImageProcess\Filters_OpenglMotion.h" />
+    <ClInclude Include="ImageProcess\ImageProcess_OpenGL.h" />
+    <ClInclude Include="ImageProcess\ImageProcess_OpenGLFixed.h" />
+    <ClInclude Include="ImageProcess\ImageProcess_ShaderManager.h" />
+    <ClInclude Include="ImageProcess\ImageProcess_ShaderProgram.h" />
+    <ClInclude Include="ImageProcess\reflector_App.h" />
+    <ClInclude Include="ImageProcess\reflector_Core.h" />
+    <ClInclude Include="ImageProcess\reflector_IndexBuffer.h" />
+    <ClInclude Include="ImageProcess\reflector_Renderer.h" />
+    <ClInclude Include="ImageProcess\reflector_Shader.h" />
+    <ClInclude Include="ImageProcess\reflector_texture.h" />
+    <ClInclude Include="ImageProcess\reflector_VertexArray.h" />
+    <ClInclude Include="ImageProcess\reflector_VertexBuffer.h" />
+    <ClInclude Include="ImageProcess\reflector_VertexBufferLayout.h" />
+    <ClInclude Include="MediaLibAPI.h" />
+    <ClInclude Include="D3D_Filters\ML_AssEngine.hpp" />
+    <ClInclude Include="D3D_Filters\ML_AssSubtitle.h" />
+    <ClInclude Include="ffms2\ffms.h" />
+    <ClInclude Include="ffms2\audiosource.h" />
+    <ClInclude Include="ffms2\avssources.h" />
+    <ClInclude Include="ffms2\avs_vf_ffmpeg.h" />
+    <ClInclude Include="ffms2\ff_filter.h" />
+    <ClInclude Include="ffms2\filehandle.h" />
+    <ClInclude Include="ffms2\indexing.h" />
+    <ClInclude Include="ffms2\track.h" />
+    <ClInclude Include="ffms2\utils.h" />
+    <ClInclude Include="ffms2\videosource.h" />
+    <ClInclude Include="ffms2\videoutils.h" />
+    <ClInclude Include="ffms2\zipfile.h" />
+    <ClInclude Include="libFrei0r\frei0r.h" />
+    <ClInclude Include="libFrei0r\frei0r.hpp" />
+    <ClInclude Include="libFrei0r\frei0r_math.h" />
+    <ClInclude Include="MediaInfoDLL.h" />
+    <ClInclude Include="avisynth\audio\pfc.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SoftWire\SoftWire.hpp" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Transforms\opengl_AdaptHistEqExShaders.h" />
+    <ClInclude Include="Transforms\opengl_ChromakeyShaders.h" />
+    <ClInclude Include="Transforms\opengl_commonMotionShaders.h" />
+    <ClInclude Include="Transforms\opengl_CommonShaderContent.h" />
+    <ClInclude Include="Transforms\opengl_ColorAdjustFilter.h" />
+    <ClInclude Include="Transforms\fre.h" />
+    <ClInclude Include="Transforms\opengl_GlFilter.h" />
+    <ClInclude Include="Transforms\opengl_GlLayer.h" />
+    <ClInclude Include="Transforms\opengl_GLTransition.h" />
+    <ClInclude Include="Transforms\LibDelogoAPI.h" />
+    <ClInclude Include="Transforms\md5.h" />
+    <ClInclude Include="Transforms\opengl_PushBase.h" />
+    <ClInclude Include="Transforms\opengl_SimpleGLFilter.h" />
+    <ClInclude Include="Transforms\TransAll_src\AudioMixing.hpp" />
+    <ClInclude Include="Transforms\TransAll_src\AudioProcess.hpp" />
+    <ClInclude Include="Transforms\TransAll_src\FastDisco.h" />
+    <ClInclude Include="Transforms\TransAll_src\FastDiscoRotate.h" />
+    <ClInclude Include="Transforms\TransAll_src\FastORing.h" />
+    <ClInclude Include="Transforms\TransAll_src\FastResizer.h" />
+    <ClInclude Include="Transforms\TransAll_src\getAudioCode.hpp" />
+    <ClInclude Include="Transforms\TransAll_src\LineZ.h" />
+    <ClInclude Include="Transforms\TransAll_src\MixAudio.hpp" />
+    <ClInclude Include="Transforms\TransAll_src\Planar_2_5_or_2_6.hpp" />
+    <ClInclude Include="Transforms\TransAll_src\ResizeRotateP.hpp" />
+    <ClInclude Include="Transforms\Transforms.h" />
+    <ClInclude Include="Utils.hpp" />
+    <ClInclude Include="utils\cmdutils.h" />
+    <ClInclude Include="ML_Convertcore.h" />
+    <ClInclude Include="D3D_Filters\ML_D3DRender.h" />
+    <ClInclude Include="D3D_Filters\ML_d3dUtility.h" />
+    <ClInclude Include="D3D_Filters\ML_DirectRender.h" />
+    <ClInclude Include="utils\ffmpeg.h" />
+    <ClInclude Include="utils\ffplay.h" />
+    <ClInclude Include="D3D_Filters\ML_ChromaKeyFilter.hpp" />
+    <ClInclude Include="D3D_Filters\ML_ColorAdjustFilter.hpp" />
+    <ClInclude Include="D3D_Filters\ML_D3DFilter.h" />
+    <ClInclude Include="D3D_Filters\ML_DeLogoFilter.hpp" />
+    <ClInclude Include="D3D_Filters\ML_EmptyFilter.h" />
+    <ClInclude Include="D3D_Filters\ML_ImageEnhanceFilter.h" />
+    <ClInclude Include="D3D_Filters\ML_lut.h" />
+    <ClInclude Include="D3D_Filters\ML_NoneFilter.hpp" />
+    <ClInclude Include="D3D_Filters\ML_Shader.h" />
+    <ClInclude Include="ML_stdafx.h" />
+    <ClInclude Include="D3D_Filters\ML_Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="avisynth\audio\avisynth_audio.cpp" />
+    <ClCompile Include="avisynth\audio\avs-soundtouch.cpp" />
+    <ClCompile Include="avisynth\audio\convertaudio.cpp" />
+    <ClCompile Include="avisynth\audio\Gips.cpp" />
+    <ClCompile Include="avisynth\convert\convert.cpp" />
+    <ClCompile Include="avisynth\convert\convert_planar.cpp" />
+    <ClCompile Include="avisynth\convert\convert_rgb.cpp" />
+    <ClCompile Include="avisynth\convert\convert_yuy2.cpp" />
+    <ClCompile Include="avisynth\convert\convert_yv12.cpp" />
+    <ClCompile Include="avisynth\core\My_avisynth.cpp" />
+    <ClCompile Include="avisynth\core\avisynth_c.cpp" />
+    <ClCompile Include="avisynth\core\avisynth_cache.cpp" />
+    <ClCompile Include="avisynth\parser\parser_expression.cpp" />
+    <ClCompile Include="avisynth\parser\parser_script.cpp" />
+    <ClCompile Include="avisynth\parser\parser_scriptparser.cpp" />
+    <ClCompile Include="avisynth\parser\parser_tokenizer.cpp" />
+    <ClCompile Include="avisynth\core\softwire_helpers.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_debug.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_edit.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_field.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_focus.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_fps.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_greyscale.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_layer.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_levels.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_merge.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_resample.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_transform.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_Animate.cpp" />
+    <ClCompile Include="avisynth\conditional\conditional.cpp" />
+    <ClCompile Include="avisynth\conditional\conditional_functions.cpp" />
+    <ClCompile Include="avisynth\conditional\conditional_reader.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_limiter.cpp" />
+    <ClCompile Include="avisynth\overlay\444convert.cpp" />
+    <ClCompile Include="avisynth\overlay\blend_asm.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_add.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_blend.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_darken.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_difference.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_exclusion.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_lighten.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_lumachroma.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_multiply.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_softhardlight.cpp" />
+    <ClCompile Include="avisynth\overlay\OF_subtract.cpp" />
+    <ClCompile Include="avisynth\overlay\My_overlay.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_planeswap.cpp" />
+    <ClCompile Include="avisynth\filters\resample_functions.cpp" />
+    <ClCompile Include="avisynth\filters\stackblur.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_turn.cpp" />
+    <ClCompile Include="avisynth\core\cpuaccel.cpp" />
+    <ClCompile Include="avisynth\filters\avisynth_source.cpp" />
+    <ClCompile Include="D3DRender.cpp" />
+    <ClCompile Include="ffms2\audiosource.cpp" />
+    <ClCompile Include="ffms2\avisynth.cpp" />
+    <ClCompile Include="ffms2\avssources.cpp" />
+    <ClCompile Include="ffms2\avs_vf_ffmpeg.cpp" />
+    <ClCompile Include="ffms2\ffms.cpp" />
+    <ClCompile Include="ffms2\ff_filter.cpp" />
+    <ClCompile Include="ffms2\filehandle.cpp" />
+    <ClCompile Include="ffms2\indexing.cpp" />
+    <ClCompile Include="ffms2\md5.c" />
+    <ClCompile Include="ffms2\track.cpp" />
+    <ClCompile Include="ffms2\utils.cpp" />
+    <ClCompile Include="ffms2\videosource.cpp" />
+    <ClCompile Include="ffms2\videoutils.cpp" />
+    <ClCompile Include="ImageProcess\Filters_OpenGLFilter.cpp" />
+    <ClCompile Include="ImageProcess\ImageProcess_OpenGL.cpp" />
+    <ClCompile Include="ImageProcess\ImageProcess_OpenGLFixed.cpp" />
+    <ClCompile Include="ImageProcess\ImageProcess_OpenGLServer.cpp" />
+    <ClCompile Include="ImageProcess\ImageProcess_ShaderManager.cpp" />
+    <ClCompile Include="ImageProcess\ImageProcess_ShaderProgram.cpp" />
+    <ClCompile Include="ImageProcess\reflector_App.cpp" />
+    <ClCompile Include="ImageProcess\reflector_IndexBuffer.cpp" />
+    <ClCompile Include="ImageProcess\reflector_Renderer.cpp" />
+    <ClCompile Include="ImageProcess\reflector_Shader.cpp" />
+    <ClCompile Include="ImageProcess\reflector_texture.cpp" />
+    <ClCompile Include="ImageProcess\reflector_VertexArray.cpp" />
+    <ClCompile Include="ImageProcess\reflector_VertexBuffer.cpp" />
+    <ClCompile Include="libFrei0r\libFrei0r_distort0r.c" />
+    <ClCompile Include="libFrei0r\libFrei0r_G.c" />
+    <ClCompile Include="libFrei0r\libFrei0r_glow.c" />
+    <ClCompile Include="libFrei0r\libFrei0r_IIRblur.c" />
+    <ClCompile Include="libFrei0r\libFrei0r.cpp" />
+    <ClCompile Include="libFrei0r\libFrei0r_nervous.cpp" />
+    <ClCompile Include="libFrei0r\libFrei0r_rgbnoise.c" />
+    <ClCompile Include="libFrei0r\libFrei0r_vertigo.c" />
+    <ClCompile Include="libFrei0r\libFrei0r_vignette.cpp" />
+    <ClCompile Include="SoftWire\SoftWire.cpp" />
+    <ClCompile Include="stb_image.cpp" />
+    <ClCompile Include="Transforms\opengl_adapthisteq.cpp" />
+    <ClCompile Include="Transforms\opengl_AdaptHistEqEx.cpp" />
+    <ClCompile Include="Transforms\opengl_Chromakey.cpp" />
+    <ClCompile Include="Transforms\opengl_ChromakeyEx.cpp" />
+    <ClCompile Include="Transforms\opengl_ChromakeyShell.cpp" />
+    <ClCompile Include="Transforms\opengl_ColorAdjust.cpp" />
+    <ClCompile Include="Transforms\opengl_CommonMotion.cpp" />
+    <ClCompile Include="Transforms\opengl_DeLogo_gauss.cpp" />
+    <ClCompile Include="Transforms\opengl_dynamicZoom.cpp" />
+    <ClCompile Include="Transforms\opengl_EdgeBlur.cpp" />
+    <ClCompile Include="Transforms\opengl_EdgeIncrease.cpp" />
+    <ClCompile Include="Transforms\opengl_FaceTransform.cpp" />
+    <ClCompile Include="Transforms\opengl_GLColorAdjust.cpp" />
+    <ClCompile Include="Transforms\opengl_GlFilter.cpp" />
+    <ClCompile Include="Transforms\opengl_GlLayer.cpp" />
+    <ClCompile Include="Transforms\opengl_GlMotion.cpp" />
+    <ClCompile Include="Transforms\opengl_GLTransition.cpp" />
+    <ClCompile Include="Transforms\opengl_lut.cpp" />
+    <ClCompile Include="Transforms\opengl_lut_2d.cpp" />
+    <ClCompile Include="Transforms\opengl_PushBase.cpp" />
+    <ClCompile Include="Transforms\opengl_SimpleGLFilter.cpp" />
+    <ClCompile Include="Transforms\opengl_Transition.cpp" />
+    <ClCompile Include="Transforms\Rotate_Filter.cpp" />
+    <ClCompile Include="Transforms\AssSubtitle.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\FastDisco.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\FastDiscoRotate.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\FastORing.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\FastResizer.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\LineZ.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransAccord.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransBubbles.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransCentral.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransCrumple.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransDisco.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransDoor.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransFlipPage.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransFlipTurn.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransFunnel.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\Transmarbles.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransPaint.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransPeel.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransPush.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransRipple.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransRipples.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransRoll.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransScratch.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransShuffle.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSlantRollIn.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSlantRollOut.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSlantWipe.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSlide.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSlideIn.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSlideOut.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSprite.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSwing.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransSwirl.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransTwinDoors.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransVenetianBlinds.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransWeave.cpp" />
+    <ClCompile Include="Transforms\TransAll_src\TransWipe.cpp" />
+    <ClCompile Include="Transforms\Transforms.cpp" />
+    <ClCompile Include="Transforms\AlphaMask.cpp" />
+    <ClCompile Include="Transforms\AudioFade.cpp" />
+    <ClCompile Include="Transforms\DeLogo.cpp" />
+    <ClCompile Include="Transforms\FrameCache.cpp" />
+    <ClCompile Include="Transforms\fre.c" />
+    <ClCompile Include="Transforms\fremixer.cpp" />
+    <ClCompile Include="Transforms\frewrapper.cpp" />
+    <ClCompile Include="Transforms\ImageMask.cpp" />
+    <ClCompile Include="Transforms\Transforms_interface.cpp" />
+    <ClCompile Include="Transforms\LibDelogo.cpp" />
+    <ClCompile Include="Transforms\LoopFrames.cpp" />
+    <ClCompile Include="Transforms\Transforms_md5.cpp" />
+    <ClCompile Include="utils\ffmpeg_filter.c" />
+    <ClCompile Include="utils\ffmpeg_opt.c" />
+    <ClCompile Include="utils\ff_avisynth_demuxer.cpp" />
+    <ClCompile Include="utils\cmdutils.c" />
+    <ClCompile Include="D3D_Filters\ML_D3DRender.cpp" />
+    <ClCompile Include="D3D_Filters\ML_d3dUtility.cpp" />
+    <ClCompile Include="D3D_Filters\ML_DirectRender.cpp" />
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="utils\ffmpeg.c" />
+    <ClCompile Include="utils\ffplay.c" />
+    <ClCompile Include="D3D_Filters\ML_D3DFilter.cpp" />
+    <ClCompile Include="D3D_Filters\ML_lut.cpp" />
+    <ClCompile Include="D3D_Filters\ML_Shader.cpp" />
+    <ClCompile Include="D3D_Filters\ML_Texture.cpp" />
+    <ClCompile Include="ML_Timeline.cpp" />
+    <ClCompile Include="utils\Toolkit.c" />
+    <ClCompile Include="utils\WXFfmpegImpl.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\avs\#000003_Dissolve.avs" />
+    <None Include="scripts\avs\#000008_Scratch_Merge.avs" />
+    <None Include="scripts\avs\#000009_Dissolve_Black.avs" />
+    <None Include="scripts\avs\#000010_Dissolve_White.avs" />
+    <None Include="scripts\avs\#000013_Push_Left.avs" />
+    <None Include="scripts\avs\#000014_Push_Right.avs" />
+    <None Include="scripts\avs\#000015_Push_Down.avs" />
+    <None Include="scripts\avs\#000016_Push_Up.avs" />
+    <None Include="scripts\avs\#000017_Scratch_Dust.avs" />
+    <None Include="scripts\avs\#000018_Central_In.avs" />
+    <None Include="scripts\avs\Dias_Down.avs" />
+    <None Include="scripts\avs\Dias_Up.avs" />
+    <None Include="scripts\avs\Ripples_Center.avs" />
+    <None Include="scripts\avs\Shuffle_Down.avs" />
+    <None Include="scripts\avs\SlantRoll_Out.avs" />
+    <None Include="scripts\avs\SlantRoll_Out_NE.avs" />
+    <None Include="scripts\avs\Slant_Wipe_NE.avs" />
+    <None Include="scripts\avs\Split_Horisontal.avs" />
+    <None Include="scripts\avs\Split_Vertical.avs" />
+    <None Include="scripts\avs\Wipe_Left.avs" />
+    <None Include="scripts\avs\Wipe_Right.avs" />
+    <None Include="util.avs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MediaLib.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

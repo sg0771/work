@@ -7,7 +7,7 @@
 #include "pch.h"
 
 #include <thread>
-#include "WXMedia.h"
+#include "WXMedia/WXMedia.h"
 #include "WXMediaDefines.h"
 #include "FfmpegIncludes.h"
 #pragma comment(lib,"WXMedia.lib")	

@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameCapture\WXGameCapture.h" />
+    <ClInclude Include="GameCapture\wx_hook_helper.h" />
+    <ClInclude Include="Lav\BaseClasses\amextra.h" />
+    <ClInclude Include="Lav\BaseClasses\amfilter.h" />
+    <ClInclude Include="Lav\BaseClasses\cache.h" />
+    <ClInclude Include="Lav\BaseClasses\checkbmi.h" />
+    <ClInclude Include="Lav\BaseClasses\combase.h" />
+    <ClInclude Include="Lav\BaseClasses\cprop.h" />
+    <ClInclude Include="Lav\BaseClasses\ctlutil.h" />
+    <ClInclude Include="Lav\BaseClasses\ddmm.h" />
+    <ClInclude Include="Lav\BaseClasses\dllsetup.h" />
+    <ClInclude Include="Lav\BaseClasses\dxmperf.h" />
+    <ClInclude Include="Lav\BaseClasses\fourcc.h" />
+    <ClInclude Include="Lav\BaseClasses\measure.h" />
+    <ClInclude Include="Lav\BaseClasses\msgthrd.h" />
+    <ClInclude Include="Lav\BaseClasses\mtype.h" />
+    <ClInclude Include="Lav\BaseClasses\outputq.h" />
+    <ClInclude Include="Lav\BaseClasses\perflog.h" />
+    <ClInclude Include="Lav\BaseClasses\perfstruct.h" />
+    <ClInclude Include="Lav\BaseClasses\pstream.h" />
+    <ClInclude Include="Lav\BaseClasses\pullpin.h" />
+    <ClInclude Include="Lav\BaseClasses\refclock.h" />
+    <ClInclude Include="Lav\BaseClasses\reftime.h" />
+    <ClInclude Include="Lav\BaseClasses\renbase.h" />
+    <ClInclude Include="Lav\BaseClasses\schedule.h" />
+    <ClInclude Include="Lav\BaseClasses\seekpt.h" />
+    <ClInclude Include="Lav\BaseClasses\source.h" />
+    <ClInclude Include="Lav\BaseClasses\streams.h" />
+    <ClInclude Include="Lav\BaseClasses\strmctl.h" />
+    <ClInclude Include="Lav\BaseClasses\sysclock.h" />
+    <ClInclude Include="Lav\BaseClasses\transfrm.h" />
+    <ClInclude Include="Lav\BaseClasses\transip.h" />
+    <ClInclude Include="Lav\BaseClasses\videoctl.h" />
+    <ClInclude Include="Lav\BaseClasses\vtrans.h" />
+    <ClInclude Include="Lav\BaseClasses\winctrl.h" />
+    <ClInclude Include="Lav\BaseClasses\winutil.h" />
+    <ClInclude Include="Lav\BaseClasses\wxdebug.h" />
+    <ClInclude Include="Lav\BaseClasses\wxlist.h" />
+    <ClInclude Include="Lav\BaseClasses\wxutil.h" />
+    <ClInclude Include="Lav\LavFilter\common_defines.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_BaseDemuxer.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_BDDemuxer.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_DemuxersImpl.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_ExtradataParser.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_LAVFAudioHelper.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_LAVFStreamInfo.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_LAVFUtils.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_LAVFVideoHelper.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_Packet.h" />
+    <ClInclude Include="Lav\LavFilter\Demuxers_StreamInfo.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_ByteParser.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_CSSauth.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_CSSscramble.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_CueSheet.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_DeCSSInputPin.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_DSMResourceBag.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_DSUtilLiteImpl.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_FloatingAverage.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_FontInstaller.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_gpu_memcpy_sse4.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_growarray.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_H264Nalu.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_MediaSampleSideData.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_rand_sse.h" />
+    <ClInclude Include="Lav\LavFilter\DSUtilLite_registry.h" />
+    <ClInclude Include="Lav\LavFilter\dxva_common.h" />
+    <ClInclude Include="Lav\LavFilter\dxva_dec.h" />
+    <ClInclude Include="Lav\LavFilter\dxva_SurfaceAllocator.h" />
+    <ClInclude Include="Lav\LavFilter\ID3DVideoMemoryConfiguration.h" />
+    <ClInclude Include="Lav\LavFilter\LAVAudio.h" />
+    <ClInclude Include="Lav\LavFilter\LAVFDemuxer.h" />
+    <ClInclude Include="Lav\LavFilter\LAVVideo.h" />
+    <ClInclude Include="Lav\LavFilter\moreuuids.h" />
+    <ClInclude Include="Lav\LavFilter\WXAudioImpl.h" />
+    <ClInclude Include="Lav\LavFilter\WXAudio_BitstreamParser.h" />
+    <ClInclude Include="Lav\LavFilter\WXAudio_dts.h" />
+    <ClInclude Include="Lav\LavFilter\WXAudio_LAVAudioSettings.h" />
+    <ClInclude Include="Lav\LavFilter\WXAudio_Media.h" />
+    <ClInclude Include="Lav\LavFilter\WXAudio_PostProcessor.h" />
+    <ClInclude Include="Lav\LavFilter\WXSplitter.h" />
+    <ClInclude Include="Lav\LavFilter\WXSplitterImpl.h" />
+    <ClInclude Include="Lav\LavFilter\WXSplitter_InputPin.h" />
+    <ClInclude Include="Lav\LavFilter\WXSplitter_OutputPin.h" />
+    <ClInclude Include="Lav\LavFilter\WXSplitter_PacketAllocator.h" />
+    <ClInclude Include="Lav\LavFilter\WXSplitter_PacketQueue.h" />
+    <ClInclude Include="Lav\LavFilter\WXSplitter_StreamParser.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideoImpl.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_AnnexBConverter.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_avcodec.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_D3D11SurfaceAllocator.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_d3d11va.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_DecBase.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_DecodeManager.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_H264SequenceParser.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_HEVCSequenceParser.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_ILAVDecoder.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_LAVPixFmtConverter.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_LAVSubtitleConsumer.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_LAVSubtitleFrame.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_LAVSubtitleProvider.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_LAVVideoSettings.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_LAVVideoSubtitleInputPin.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_Media.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_MPEG2HeaderParser.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_pixconv_internal.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_pixconv_sse2_templates.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_SubRenderOptionsImpl.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_VC1HeaderParser.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_VideoInputPin.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_VideoOutputPin.h" />
+    <ClInclude Include="Lav\LavFilter\WXVideo_wmv9mft.h" />
+    <ClInclude Include="Lav\VSFilter\BaseSub.h" />
+    <ClInclude Include="Lav\VSFilter\BaseVideoFilter.h" />
+    <ClInclude Include="Lav\VSFilter\CCDecoder.h" />
+    <ClInclude Include="Lav\VSFilter\ColorConvert.h" />
+    <ClInclude Include="Lav\VSFilter\CompositionObject.h" />
+    <ClInclude Include="Lav\VSFilter\CoordGeom.h" />
+    <ClInclude Include="Lav\VSFilter\CPUInfo.h" />
+    <ClInclude Include="Lav\VSFilter\DVBSub.h" />
+    <ClInclude Include="Lav\VSFilter\Ellipse.h" />
+    <ClInclude Include="Lav\VSFilter\FileHandle.h" />
+    <ClInclude Include="Lav\VSFilter\GolombBuffer.h" />
+    <ClInclude Include="Lav\VSFilter\HdmvSub.h" />
+    <ClInclude Include="Lav\VSFilter\HTTPAsync.h" />
+    <ClInclude Include="Lav\VSFilter\IDirectVobSub.h" />
+    <ClInclude Include="Lav\VSFilter\IFilterVersion.h" />
+    <ClInclude Include="Lav\VSFilter\ISubPic.h" />
+    <ClInclude Include="Lav\VSFilter\ISubRender.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_bitutils.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_blitter.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_blt_setup.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_blt_spanutils.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_blt_spanutils_x86.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_pixel.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_pixmap.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_pixmapops.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_pixmaputils.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_region.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_resample.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_resample_kernels.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_resample_stages.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_resample_stages_reference.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_resample_stages_x64.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_resample_stages_x86.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_tables.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_triblt.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_16f.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_base.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_fill.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_gen.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_input.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_interlace.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_pal.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_resample.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_resample_special.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_resample_special_x86.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_rgb.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_rgb_x86.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_swizzle.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_swizzle_x86.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_v210.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_ycbcr.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_ycbcr_generic.h" />
+    <ClInclude Include="Lav\VSFilter\kasumi_uberblit_ycbcr_x86.h" />
+    <ClInclude Include="Lav\VSFilter\libdivide.h" />
+    <ClInclude Include="Lav\VSFilter\MemSubPic.h" />
+    <ClInclude Include="Lav\VSFilter\MemSubPicEx.h" />
+    <ClInclude Include="Lav\VSFilter\Rasterizer.h" />
+    <ClInclude Include="Lav\VSFilter\RealTextParser.h" />
+    <ClInclude Include="Lav\VSFilter\RenderedHdmvSubtitle.h" />
+    <ClInclude Include="Lav\VSFilter\RenderingCache.h" />
+    <ClInclude Include="Lav\VSFilter\ResampleRGB32.h" />
+    <ClInclude Include="Lav\VSFilter\RTS.h" />
+    <ClInclude Include="Lav\VSFilter\STS.h" />
+    <ClInclude Include="Lav\VSFilter\STS2.h" />
+    <ClInclude Include="Lav\VSFilter\SubPicImpl.h" />
+    <ClInclude Include="Lav\VSFilter\SubPicProviderImpl.h" />
+    <ClInclude Include="Lav\VSFilter\SubPicQueueImpl.h" />
+    <ClInclude Include="Lav\VSFilter\SubRenderIntf.h" />
+    <ClInclude Include="Lav\VSFilter\SubtitleHelpers.h" />
+    <ClInclude Include="Lav\VSFilter\SubtitleInputPin.h" />
+    <ClInclude Include="Lav\VSFilter\system.h" />
+    <ClInclude Include="Lav\VSFilter\system_atomic.h" />
+    <ClInclude Include="Lav\VSFilter\system_cpuaccel.h" />
+    <ClInclude Include="Lav\VSFilter\system_halffloat.h" />
+    <ClInclude Include="Lav\VSFilter\system_math.h" />
+    <ClInclude Include="Lav\VSFilter\system_memory.h" />
+    <ClInclude Include="Lav\VSFilter\system_vdstl.h" />
+    <ClInclude Include="Lav\VSFilter\system_vdtypes.h" />
+    <ClInclude Include="Lav\VSFilter\system_vectors.h" />
+    <ClInclude Include="Lav\VSFilter\text.h" />
+    <ClInclude Include="Lav\VSFilter\TextFile.h" />
+    <ClInclude Include="Lav\VSFilter\unrar.h" />
+    <ClInclude Include="Lav\VSFilter\UrlParser.h" />
+    <ClInclude Include="Lav\VSFilter\USFSubtitles.h" />
+    <ClInclude Include="Lav\VSFilter\Utf8.h" />
+    <ClInclude Include="Lav\VSFilter\vd.h" />
+    <ClInclude Include="Lav\VSFilter\Version.h" />
+    <ClInclude Include="Lav\VSFilter\VobSubFile.h" />
+    <ClInclude Include="Lav\VSFilter\VobSubImage.h" />
+    <ClInclude Include="Lav\VSFilter\VSFilter.h" />
+    <ClInclude Include="Lav\VSFilter\VSFilterImpl.h" />
+    <ClInclude Include="Lav\VSFilter\XSUBSubtitle.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Win32\AudioDataSound.hpp" />
+    <ClInclude Include="Win32\AudioMixer.h" />
+    <ClInclude Include="Win32\AudioMixerWithProcess.h" />
+    <ClInclude Include="Win32\DataSource.h" />
+    <ClInclude Include="Win32\FfmpegMuxer.h" />
+    <ClInclude Include="Win32\libimagequant.h" />
+    <ClInclude Include="Win32\MixerCapture.h" />
+    <ClInclude Include="Win32\VideoSource.h" />
+    <ClInclude Include="Win32\WasapiDevice.h" />
+    <ClInclude Include="Win32\WasapiListenDevice.h" />
+    <ClInclude Include="Win32\WgcCapture.h" />
+    <ClInclude Include="Win32\WindowCapture.h" />
+    <ClInclude Include="Win32\WindowsGDICapture.h" />
+    <ClInclude Include="Win32\WXCapture.h" />
+    <ClInclude Include="Win32\WXCaptureVideo.h" />
+    <ClInclude Include="Win32\WXCursorCapture.h" />
+    <ClInclude Include="Win32\WXImageWaterMark.h" />
+    <ClInclude Include="WXffmpeg\FfmpegExe.h" />
+    <ClInclude Include="WXffmpeg\parseCmd.hpp" />
+    <ClInclude Include="WXMediaCpp.h" />
+    <ClInclude Include="WXVideoRender\MacImageRender.h" />
+    <ClInclude Include="WXVideoRender\MacOpenGLViewRender.h" />
+    <ClInclude Include="WXVideoRender\MacRender.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameCapture\WXGameCapture.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_amextra.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_amfilter.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_amvideo.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_arithutil.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_combase.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_cprop.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_ctlutil.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_ddmm.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_mtype.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_outputq.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_perflog.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_pstream.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_pullpin.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_refclock.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_renbase.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_schedule.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_seekpt.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_source.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_strmctl.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_sysclock.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_transfrm.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_transip.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_videoctl.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_vtrans.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_winctrl.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_winutil.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_wxdebug.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_wxlist.cpp" />
+    <ClCompile Include="Lav\BaseClasses\BaseClasses_wxutil.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_BaseDemuxer.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_BDDemuxer.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_ExtradataParser.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_LAVFAudioHelper.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_LAVFDemuxer.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_LAVFInputFormats.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_LAVFStreamInfo.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_LAVFUtils.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_LAVFVideoHelper.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_Packet.cpp" />
+    <ClCompile Include="Lav\LavFilter\Demuxers_StreamInfo.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_ByteParser.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_CSSauth.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_CSSscramble.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_CueSheet.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_DeCSSInputPin.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_DShowUtil.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_DSMResourceBag.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_filterreg.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_FontInstaller.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_H264Nalu.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_locale.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_MediaSampleSideData.cpp" />
+    <ClCompile Include="Lav\LavFilter\DSUtilLite_registry.cpp" />
+    <ClCompile Include="Lav\LavFilter\dxva_common.cpp" />
+    <ClCompile Include="Lav\LavFilter\dxva_dec.cpp" />
+    <ClCompile Include="Lav\LavFilter\dxva_SurfaceAllocator.cpp" />
+    <ClCompile Include="Lav\LavFilter\subtitles_blend_generic.cpp" />
+    <ClCompile Include="Lav\LavFilter\subtitles_LAVSubtitleConsumer.cpp" />
+    <ClCompile Include="Lav\LavFilter\subtitles_LAVSubtitleFrame.cpp" />
+    <ClCompile Include="Lav\LavFilter\subtitles_LAVSubtitleProvider.cpp" />
+    <ClCompile Include="Lav\LavFilter\subtitles_LAVVideoSubtitleInputPin.cpp" />
+    <ClCompile Include="Lav\LavFilter\subtitles_SubRenderOptionsImpl.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXAudio_Bitstream.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXAudio_BitstreamParser.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXAudio_dts.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXAudio_DTSDecoder.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXAudio_LAVAudio.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXAudio_Media.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXSplitter_InputPin.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXSplitter_OutputPin.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXSplitter_PacketAllocator.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXSplitter_PacketQueue.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXSplitter_StreamParser.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXSplitter_WXSplitter.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_D3D11SurfaceAllocator.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_d3d11va.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_DecodeManager.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_decoder_avcodec.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_decoder_pixfmt.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_decoder_wmv9mft.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_Filtering.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_LAVPixFmtConverter.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_LAVVideo.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_Media.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_parsers_AnnexBConverter.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_parsers_H264SequenceParser.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_parsers_HEVCSequenceParser.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_parsers_MPEG2HeaderParser.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_parsers_VC1HeaderParser.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv_convert_direct.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv_convert_generic.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv_interleave.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv_rgb2rgb_unscaled.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv_yuv2rgb.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv_yuv2yuv_unscaled.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv_yuv420_yuy2.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_pixconv_yuv444_ayuv.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_VideoInputPin.cpp" />
+    <ClCompile Include="Lav\LavFilter\WXVideo_VideoOutputPin.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_alphablt.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blitter.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_reference.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_reference_pal.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_reference_rgb.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_reference_yuv.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_reference_yuv2yuv.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_reference_yuvrev.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_setup.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_spanutils.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_blt_uberblit.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_pixel.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_pixmaputils.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_region.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_resample.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_resample_kernels.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_resample_stages.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_resample_stages_reference.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_resample_stages_x64.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_resample_stages_x86.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_stretchblt_reference.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_tables.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_triblt.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_16f.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_gen.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_resample.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_resample_special.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_swizzle.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_swizzle_x86.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_v210.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_ycbcr_generic.cpp" />
+    <ClCompile Include="Lav\VSFilter\kasumi_uberblit_ycbcr_x86.cpp" />
+    <ClCompile Include="Lav\VSFilter\SubPic_CoordGeom.cpp" />
+    <ClCompile Include="Lav\VSFilter\SubPic_MemSubPic.cpp" />
+    <ClCompile Include="Lav\VSFilter\SubPic_MemSubPicEx.cpp" />
+    <ClCompile Include="Lav\VSFilter\SubPic_SubPicImpl.cpp" />
+    <ClCompile Include="Lav\VSFilter\SubPic_SubPicProviderImpl.cpp" />
+    <ClCompile Include="Lav\VSFilter\SubPic_SubPicQueueImpl.cpp" />
+    <ClCompile Include="Lav\VSFilter\system_cpuaccel.cpp" />
+    <ClCompile Include="Lav\VSFilter\system_halffloat.cpp" />
+    <ClCompile Include="Lav\VSFilter\system_math.cpp" />
+    <ClCompile Include="Lav\VSFilter\system_memory.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_BaseSub.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_BaseVideoFilter.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_CCDecoder.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_ColorConvert.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_CompositionObject.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_CPUInfo.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_DSUtil.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_DSUtil_FileHandle.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_DSUtil_text.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_DSUtil_Utils.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_DVBSub.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_Ellipse.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_GolombBuffer.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_HdmvSub.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_HTTPAsync.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_Rasterizer.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_RealTextParser.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_RenderedHdmvSubtitle.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_RenderingCache.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_ResampleRGB32.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_RTS.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_STS.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_SubtitleHelpers.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_SubtitleInputPin.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_TextFile.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_UrlParser.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_USFSubtitles.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_vd.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_VobSubFile.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_VobSubImage.cpp" />
+    <ClCompile Include="Lav\VSFilter\VSFilter_XSUBSubtitle.cpp" />
+    <ClCompile Include="Lav\WXPlayer.cpp" />
+    <ClCompile Include="Utils\AudioPlayer.cpp" />
+    <ClCompile Include="Utils\DSoundRender.cpp" />
+    <ClCompile Include="Utils\VideoDecoder.cpp" />
+    <ClCompile Include="Utils\VideoEncoder.cpp" />
+    <ClCompile Include="Utils\MiracastPlayer.cpp" />
+    <ClCompile Include="Utils\TSDemux.cpp" />
+    <ClCompile Include="Utils\TSMuxer.cpp" />
+    <ClCompile Include="Utils\unused.cpp" />
+    <ClCompile Include="Utils\WXDisplayManager.cpp" />
+    <ClCompile Include="Utils\WXHud.cpp" />
+    <ClCompile Include="Utils\WXMediaUtils.cpp" />
+    <ClCompile Include="Utils\WXSocket.cpp" />
+    <ClCompile Include="Win32\AudioDataSound.cpp" />
+    <ClCompile Include="Win32\AudioMixer.cpp" />
+    <ClCompile Include="Win32\AudioMixerWithProcess.cpp" />
+    <ClCompile Include="Win32\DataSource.cpp" />
+    <ClCompile Include="Win32\DShowCapture.cpp" />
+    <ClCompile Include="Win32\FfmpegMuxer.cpp" />
+    <ClCompile Include="Win32\H264Process.cpp" />
+    <ClCompile Include="Win32\libimagequant.c" />
+    <ClCompile Include="Win32\MediaEdit.cpp" />
+    <ClCompile Include="Win32\MixerCapture.cpp" />
+    <ClCompile Include="Win32\VideoDevice.cpp" />
+    <ClCompile Include="Win32\WasapiDevice.cpp" />
+    <ClCompile Include="Win32\WasapiDeviceManager.cpp" />
+    <ClCompile Include="Win32\WasapiListenDevice.cpp" />
+    <ClCompile Include="Win32\WgcCapture.cpp" />
+    <ClCompile Include="Win32\WindowCapture.cpp" />
+    <ClCompile Include="Win32\WindowsGDICapture.cpp" />
+    <ClCompile Include="Win32\WXAudioTest.cpp" />
+    <ClCompile Include="Win32\WXCapture.cpp" />
+    <ClCompile Include="Win32\WXCaptureAPI.cpp" />
+    <ClCompile Include="Win32\WXCaptureAudio.cpp" />
+    <ClCompile Include="Win32\WXCaptureVideo.cpp" />
+    <ClCompile Include="Win32\WXMedia.cpp" />
+    <ClCompile Include="Win32\WXMediaCompress.cpp" />
+    <ClCompile Include="WXffmpeg\FfmpegExe.cpp" />
+    <ClCompile Include="WXffmpeg\WXFfmpegImpl.c" />
+    <ClCompile Include="WXffmpeg\WXFfplay.cpp" />
+    <ClCompile Include="WXffmpeg\WXMediaConvert.cpp" />
+    <ClCompile Include="WXffmpeg\WXMediaInfo.cpp" />
+    <ClCompile Include="WXffmpeg\wxm_demuxer.c" />
+    <ClCompile Include="WXffmpeg\wxm_muxer.c" />
+    <ClCompile Include="WXVideoRender\WXVideoRender.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dpi.Mainfest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <YASM Include="Lav\VSFilter\x64asm_fraction.asm" />
+    <YASM Include="Lav\VSFilter\x64asm_resample.asm" />
+    <YASM Include="Lav\VSFilter\x64asm_thunk.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_bltrgb.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_bltrgb2yuv_mmx.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_bltrgb_mmx.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_bltyuv2rgb_sse2.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_memory.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_resample_mmx.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_resample_sse41.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_spanutils_isse.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_stretchrgb_mmx.asm" />
+    <YASM Include="Lav\VSFilter\x86asm_stretchrgb_point.asm" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{530a6cc9-56a4-4df2-8e99-568c6be7e4e8}</ProjectGuid>
+    <RootNamespace>WXMedia</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(SolutionDir)tools\yasm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
+    <GenerateManifest>false</GenerateManifest>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
+    <GenerateManifest>false</GenerateManifest>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
+    <GenerateManifest>false</GenerateManifest>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(CommonExcludePath);$(CommonExcludePath);$(VC_ExecutablePath_x64);$(VC_LibraryPath_x64)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
+    <GenerateManifest>false</GenerateManifest>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(CommonExcludePath);$(CommonExcludePath);$(VC_ExecutablePath_x64);$(VC_LibraryPath_x64)</ExcludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4703;4018;4244;4996;4305;4116;4146;4005</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile />
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;../;./libyuv;./libyuv/jpeg_src</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc.pdb</ProgramDatabaseFile>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4703;4018;4244;4996;4305;4116;4146;4005</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile />
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;../;./libyuv;./libyuv/jpeg_src</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc.pdb</ProgramDatabaseFile>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4703;4018;4244;4996;4305;4116;4146;4005</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile />
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;../;./libyuv;./libyuv/jpeg_src</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc.pdb</ProgramDatabaseFile>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4703;4018;4244;4996;4305;4116;4146;4005</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile />
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;../;./libyuv;./libyuv/jpeg_src</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/Zc:strictStrings- %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib\</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc.pdb</ProgramDatabaseFile>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(SolutionDir)tools\yasm.targets" />
+  </ImportGroup>
+</Project>

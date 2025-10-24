@@ -59,7 +59,7 @@ extern CAppModule _Module;
 #pragma warning(disable: 4838)
 
 
-#include <WXMedia.h>
+#include <WXMedia/WXMedia.h>
 //#include <WXMediaCpp.h>
 #include <WXBase.h>
 #include <FfmpegIncludes.h>

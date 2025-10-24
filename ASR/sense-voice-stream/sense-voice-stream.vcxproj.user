@@ -4,22 +4,22 @@
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>-m   D:\SV.cpp\sense-voice-small-q4_k.gguf -c 0</LocalDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>-m   D:\SV.cpp\sense-voice-small-q4_k.gguf -c 0</LocalDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>-m   D:\SV.cpp\sense-voice-small-q4_k.gguf -c 0</LocalDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>-m   D:\SV.cpp\sense-voice-small-q4_k.gguf -c 0</LocalDebuggerCommandArguments>
   </PropertyGroup>

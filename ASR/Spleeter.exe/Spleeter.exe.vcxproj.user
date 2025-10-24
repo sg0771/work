@@ -3,22 +3,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommandArguments>-i \"D:\44k.wav\" -v \"D:\vocals.fp16.onnx\" -a \"D:\accompaniment.fp16.onnx\"  -o \"D:\44k-spleeter-vocal.wav\"  -oa \"D:\44k-spleeter-accp.wav\"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LocalDebuggerCommandArguments>-i \"D:\44k.wav\" -v \"D:\vocals.fp16.onnx\" -a \"D:\accompaniment.fp16.onnx\"  -o \"D:\44k-spleeter-vocal.wav\"  -oa \"D:\44k-spleeter-accp.wav\"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LocalDebuggerCommandArguments>-i \"D:\44k.wav\" -v \"D:\vocals.fp16.onnx\" -a \"D:\accompaniment.fp16.onnx\"  -o \"D:\44k-spleeter-vocal.wav\"  -oa \"D:\44k-spleeter-accp.wav\"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LocalDebuggerCommandArguments>-i \"D:\44k.wav\" -v \"D:\vocals.fp16.onnx\" -a \"D:\accompaniment.fp16.onnx\"  -o \"D:\44k-spleeter-vocal.wav\"  -oa \"D:\44k-spleeter-accp.wav\"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup>
     <ShowAllFiles>true</ShowAllFiles>

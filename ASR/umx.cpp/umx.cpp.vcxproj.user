@@ -6,21 +6,21 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommandArguments>-i  "D:\vip.wav" -m  "D:\ggml-model-umxl-u8.bin" -v "D:\【张艺兴】《百分之九十九和百分之一》音乐话剧《受到召唤•敦煌》-vocal.wav" -a "D:\【张艺兴】《百分之九十九和百分之一》音乐话剧《受到召唤•敦煌》-accp.wav"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LocalDebuggerCommandArguments>-i  "D:\vip.wav" -m  "D:\ggml-model-umxl-u8.bin" -v "D:\【张艺兴】《百分之九十九和百分之一》音乐话剧《受到召唤•敦煌》-vocal.wav" -a "D:\【张艺兴】《百分之九十九和百分之一》音乐话剧《受到召唤•敦煌》-accp.wav"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LocalDebuggerCommandArguments>-i  "D:\vip.wav" -m  "D:\ggml-model-umxl-u8.bin" -v "D:\【张艺兴】《百分之九十九和百分之一》音乐话剧《受到召唤•敦煌》-vocal.wav" -a "D:\【张艺兴】《百分之九十九和百分之一》音乐话剧《受到召唤•敦煌》-accp.wav"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LocalDebuggerCommandArguments>-i  "D:\vip.wav" -m  "D:\ggml-model-umxl-u8.bin" -v "D:\【张艺兴】《百分之九十九和百分之一》音乐话剧《受到召唤•敦煌》-vocal.wav" -a "D:\【张艺兴】《百分之九十九和百分之一》音乐话剧《受到召唤•敦煌》-accp.wav"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
 </Project>

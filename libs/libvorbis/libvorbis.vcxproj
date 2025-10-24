@@ -150,34 +150,62 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</ExternalIncludePath>
+    <IncludePath>$(LLVMInstallDir)\lib\clang\$(LLVMIncludeVersion)\include;$(IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+    <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</ExternalIncludePath>
+    <IncludePath>$(LLVMInstallDir)\lib\clang\$(LLVMIncludeVersion)\include;$(IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+    <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</ExternalIncludePath>
+    <IncludePath>$(LLVMInstallDir)\lib\clang\$(LLVMIncludeVersion)\include;$(IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+    <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x64);$(VC_LibraryPath_x64)</ExcludePath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <ReferencePath>$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg\</ExternalIncludePath>
+    <IncludePath>$(LLVMInstallDir)\lib\clang\$(LLVMIncludeVersion)\include;$(IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+    <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x64);$(VC_LibraryPath_x64)</ExcludePath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <ReferencePath>$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

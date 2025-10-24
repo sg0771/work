@@ -95,33 +95,33 @@
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <GenerateManifest>false</GenerateManifest>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform);$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <GenerateManifest>false</GenerateManifest>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform);$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <GenerateManifest>false</GenerateManifest>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform);$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <GenerateManifest>false</GenerateManifest>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform);$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs\</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -131,7 +131,7 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4819;4703;4996;4244;4305;4118;4018</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>./;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)ffmpeg_sdk</AdditionalIncludeDirectories>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <BufferSecurityCheck>true</BufferSecurityCheck>
@@ -163,7 +163,7 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DisableSpecificWarnings>4819;4703;4996;4244;4305;4118;4018</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>./;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)ffmpeg_sdk</AdditionalIncludeDirectories>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -193,7 +193,7 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4819;4703;4996;4244;4305;4118;4018</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>./;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)ffmpeg_sdk</AdditionalIncludeDirectories>
       <OmitFramePointers>false</OmitFramePointers>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -226,7 +226,7 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DisableSpecificWarnings>4819;4703;4996;4244;4305;4118;4018</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>./;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)ffmpeg_sdk</AdditionalIncludeDirectories>
       <OmitFramePointers>false</OmitFramePointers>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <WholeProgramOptimization>true</WholeProgramOptimization>

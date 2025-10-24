@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mpv-config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mpv_talloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ta\ta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ta\ta_talloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\av_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\av_log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\codecs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\encode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\encode_lavc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\msg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\msg_control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\playlist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\recorder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\stats.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\tags.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\filter\af_scaletempo2_internals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\out\ao.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\out\ao_wasapi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\out\internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\aframe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\chmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\chmap_avchannel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\chmap_sel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\fmt-conversion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\format.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="semaphore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pthread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\atomic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\compiler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\endian.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\getpid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\io.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\main-fn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\path.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\polldev.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\semaphore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\strnlen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\subprocess.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\terminal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\threads.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\w32_keyboard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="osdep\windows_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="generated\ebml_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="generated\version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_async_queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_auto_filters.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_autoconvert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_decoder_wrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_demux_in.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_hwtransfer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_lavfi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_output_chain.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_swresample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_swscale.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\f_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\filter_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\frame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filters\user_filters.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\cache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\codec_tags.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\cue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\demux.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\ebml.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\matroska.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\packet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\stheader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="demux\timeline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="input\cmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="input\event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="input\input.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="input\keycodes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libmpv\client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libmpv\render.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libmpv\render_gl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libmpv\stream_cb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\bstr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\charset_conv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\ctype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\dispatch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\json.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\linked_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\natural_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\rendezvous.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\thread_pool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\thread_tools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\m_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\m_config_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\m_config_frontend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\m_option.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\m_property.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\options.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\parse_commandline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\parse_configfile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="options\path.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="player\client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="player\command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="player\core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="player\external_files.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="player\screenshot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="strings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stream\cookies.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stream\dvb_tune.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stream\dvbin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stream\stream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sub\ass_mp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sub\dec_sub.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sub\draw_bmp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sub\img_convert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sub\osd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sub\osd_state.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sub\sd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\filter\refqueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\win32\displayconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\win32\droptarget.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\aspect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\bitmap_packer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\dither.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\dr_helper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\filter_kernels.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\libmpv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\present_sync.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\vo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\w32_common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\out\win_state.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\csputils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\d3d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\fmt-conversion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\hwdec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\image_loader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\image_writer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\img_format.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\mp_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\mp_image_pool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\repack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="video\sws_utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stream_cb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="render_gl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="render.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ta\ta.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ta\ta_talloc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ta\ta_utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\av_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_av_log.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_codecs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_encode_lavc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_msg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_playlist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_recorder.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_stats.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_tags.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_version.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\decode\ad_lavc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\decode\ad_spdif.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\filter\af_drop.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\filter\af_format.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\filter\af_lavcac3enc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\filter\af_scaletempo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\filter\af_scaletempo2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\filter\af_scaletempo2_internals.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\out\ao.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\out\ao_lavc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\out\ao_null.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\out\ao_pcm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\out\ao_wasapi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\out\ao_wasapi_changenotify.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\out\ao_wasapi_utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\out\buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_aframe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_chmap.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_chmap_avchannel.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_chmap_sel.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_fmt-conversion.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\audio_format.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pthread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\glob-win.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\io.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\main-fn-win.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\path-win.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\polldev.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\subprocess.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\subprocess-win.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\terminal-win.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\threads.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\timer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\timer-win2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\w32_keyboard.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\win32-console-wrapper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="osdep\windows_utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_async_queue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_auto_filters.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_autoconvert.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_decoder_wrapper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_demux_in.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_filter.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_frame.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_hwtransfer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_lavfi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_output_chain.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_swresample.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_swscale.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_user_filters.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\f_utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_cache.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_codec_tags.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_cue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_cue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_disc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_edl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_lavf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_libarchive.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_mf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_mkv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_mkv_timeline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_null.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_playlist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_raw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_demux_timeline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_ebml.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_packet.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="demux\mpv_demux_timeline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="input\input_cmd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="input\input_event.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="input\input_input.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="input\input_ipc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="input\input_ipc-win.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="input\input_keycodes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_bstr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_charset_conv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_dispatch.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_json.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_natural_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_node.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_rendezvous.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_thread_pool.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\misc_thread_tools.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="options\m_config_core.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="options\m_config_frontend.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="options\m_option.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="options\m_property.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="options\mpv_options.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="options\mpv_parse_commandline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="options\mpv_parse_configfile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="options\mpv_path.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_audio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_client.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_command.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_configfiles.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_external_files.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_loadfile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_loop.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_misc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_osd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_screenshot.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_scripting.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_sub.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player_video.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_avdevice.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_cb.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_concat.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_cookies.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_edl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_lavf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_memory.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_mf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_null.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stream\stream_slice.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\sd_ass.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\sd_lavc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\sub_ass_mp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\sub_dec_sub.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\sub_img_convert.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\sub_lavc_conv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\sub_osd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\sub_osd_libass.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\subdraw_bmp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sub\subfilter_sdh.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\decode\vd_lavc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\filter\vf_format.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\filter\vf_refqueue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\filter\vf_sub.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\win32\displayconfig.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\win32\droptarget.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_aspect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_bitmap_packer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_dither.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_dr_helper.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_filter_kernels.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_libmpv_sw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_present_sync.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_direct3d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_image.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_lavc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_libmpv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_null.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_tct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_w32_common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\out\vo_win_state.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_csputils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_d3d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_fmt-conversion.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_hwdec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_image_loader.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_image_writer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_img_format.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_mp_image.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_mp_image_pool.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_repack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="video\video_sws_utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

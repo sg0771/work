@@ -73,34 +73,38 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
     <PreBuildEventUseInBuild />
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
     <PreBuildEventUseInBuild />
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
     <PreBuildEventUseInBuild />
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs/openssl-1.1.1k/include</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</ExternalIncludePath>
     <PreBuildEventUseInBuild />
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnabled>false</VcpkgEnabled>

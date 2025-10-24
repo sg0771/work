@@ -1,4 +1,4 @@
-﻿
+
 // MFC-FFPLAYDlg.cpp : 实现文件
 //
 
@@ -6,7 +6,7 @@
 #include "MFC-FFPLAY.h"
 #include "MFC-FFPLAYDlg.h"
 #include "afxdialogex.h"
-#include <WXMedia.h>
+#include <WXMedia/WXMedia.h>
 #include "FfmpegIncludes.h"
 
 //#include <libyuv.h>

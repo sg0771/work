@@ -6,21 +6,21 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommandArguments>-m   D:\SV.cpp\sense-voice-small-q4_k.gguf -f   D:\SV.cpp\asr_example_zh.wav  </LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LocalDebuggerCommandArguments>-m   D:\SV.cpp\sense-voice-small-q4_k.gguf -f   D:\SV.cpp\asr_example_zh.wav  </LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LocalDebuggerCommandArguments>-m   D:\SV.cpp\sense-voice-small-q4_k.gguf -f   D:\SV.cpp\asr_example_zh.wav  </LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LocalDebuggerCommandArguments>-m   D:\SV.cpp\sense-voice-small-q4_k.gguf -f   D:\SV.cpp\asr_example_zh.wav  </LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>path=$(OutDir);$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>path=$(SolutionDir)ffmpeg_sdk\bin\$(Platform)\;%path%</LocalDebuggerEnvironment>
   </PropertyGroup>
 </Project>

@@ -10,6 +10,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <PropertyGroup>
-    <ReferencePath>$(SolutionDir)\WXMedia_SDK\ffmpeg_sdk\CS\</ReferencePath>
+    <ReferencePath>$(SolutionDir)\ffmpeg_sdk\CS\</ReferencePath>
   </PropertyGroup>
 </Project>
