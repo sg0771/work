@@ -1,4 +1,4 @@
-﻿/*
+/*
 * Copyright (c) 2003 Fabrice Bellard
 *
 * This file is part of FFmpeg.
@@ -1494,13 +1494,11 @@ static int configure_audio_filters(VideoState *is, const char *afilters, int for
 	{
 		char* asetratearg = calloc(256, 1);
 		sprintf(asetratearg, "%f", is->audio_st->codec->sample_rate* is->speed);
-			//input_streams[audio_index]->dec_ctx->sample_rate*speed);
 		INSERT_FILT("asetrate", asetratearg);
 	}
 	if (is->adelay!=0) {
 		char* asetptsarg = calloc(256, 1);
 		sprintf(asetptsarg, "PTS - %f / TB", -is->adelay);
-		//input_streams[audio_index]->dec_ctx->sample_rate*speed);
 		INSERT_FILT("asetpts", asetptsarg);
 	}
 

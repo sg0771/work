@@ -36,18 +36,20 @@
 #define __Softwire_Helpers_H__
 
 #include "avisynth/avisynth_stdafx.h"
+
+#ifndef __clang__
 #include "softwire/softwire.hpp"
 
-using namespace SoftWire; 
 
-class DynamicAssembledCode {
+
+class SoftWire::DynamicAssembledCode {
 
   BYTE* ret = NULL;                //automatic deletion with ownership transfer (I assume new has been used to memory allocation)    
   void (__cdecl *entry)(void);        
    
 public:
   DynamicAssembledCode() {ret = 0;};
-  DynamicAssembledCode(Assembler &x86, IScriptEnvironment* env, const char * err_msg = "");
+  DynamicAssembledCode(Assembler & SoftWire::x86, IScriptEnvironment* env, const char * err_msg = "");
 
 // No Args
   void Call() const;
@@ -59,5 +61,7 @@ public:
 
   bool operator!() const { return !ret; }
 };
+
+#endif //__clang__
 
 #endif //__Softwire_Helpers_H__

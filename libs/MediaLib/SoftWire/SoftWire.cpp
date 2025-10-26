@@ -1,13 +1,9 @@
+#ifndef __clang__
 #include "SoftWire.hpp"
-
 #include <time.h>
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
-
-#include "SoftWire.hpp"
-
-#include <string.h>
 
 #ifdef WIN32
 #include <windows.h>
@@ -795,7 +791,6 @@ namespace SoftWire
 		return OPERAND_UNKNOWN;
 	}
 }
-
 
 namespace SoftWire
 {
@@ -11962,5 +11957,4 @@ namespace SoftWire
 	}
 }
 
-
-
+#endif

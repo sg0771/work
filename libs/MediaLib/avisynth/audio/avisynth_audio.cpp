@@ -945,7 +945,7 @@ void __stdcall MixAudio::GetAudio(void* buf, __int64 start, __int64 count, IScri
     unsigned channels = vi.AudioChannels();
 
     if (vi.SampleType() & SAMPLE_INT16) {
-#ifdef _M_X64
+#if  defined(_M_X64)||defined(__clang__)
         short* samples = (short*)buf;
         short* clip_samples = (short*)tempbuffer;
         for (unsigned i = 0; i < unsigned(count) * channels; ++i) {
@@ -1155,7 +1155,7 @@ void __stdcall ResampleAudio::GetAudio(void* buf, __int64 start, __int64 count, 
         short* dst = (short*)buf;
 
         short* dst_end = &dst[count * ch];
-#ifdef _M_IX86
+#if  defined(_M_IX86)&&!defined(__clang__)
         if (env->GetCPUFlags() & CPUF_MMX) {
             static const int r_Na = 1 << (Na - 1);
             static const int r_Nhxn = 1 << (Nhxn - 1);

@@ -3092,7 +3092,7 @@ int ffmpeg_parse_options(int argc, char **argv)
                     input_streams[i]->discard = 1;
                 }
             }
-            //╚ч╣√├╗╙╨╤б╘ё╥Ї╞╡, ─м╚╧╠э╝╙╛▓╥Ї, ╟╥╡╝│Ў╡─╕ё╩╜├╗╙╨╜√╓╣╥Ї╞╡
+            //я┐╜я┐╜я┐╜├╗я┐╜я┐╜╤бя┐╜я┐╜я┐╜я┐╜╞╡, ─мя┐╜я┐╜я┐╜я┐╜я┐╜╙╛я┐╜я┐╜я┐╜, я┐╜╥╡я┐╜я┐╜я┐╜я┐╜─╕я┐╜╩╜├╗я┐╜╨╜я┐╜╓╣я┐╜я┐╜╞╡
             if (!audio_disable) {
 
                 char muteaudio[256];
@@ -3112,7 +3112,7 @@ int ffmpeg_parse_options(int argc, char **argv)
             }
         }
         else {
-            //╚ч╣√╓╕╢и┴╦═т╣╥╥Ї╞╡
+            //я┐╜я┐╜я┐╜╓╕я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╞╡
             if (g_strAudio) {
 
 
@@ -3124,7 +3124,7 @@ int ffmpeg_parse_options(int argc, char **argv)
 
 
 
-                //╜√╙├│¤═т╣╥╥Ї╞╡═т╞ф╦√╥Ї╞╡┴ў
+                //я┐╜я┐╜я┐╜├│я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╞╡я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╞╡я┐╜я┐╜
                 for (int i = 0; i < nb_input_streams; i++) {
                     if (input_streams[i]->dec_ctx->codec_type == AVMEDIA_TYPE_AUDIO) {
                         input_streams[i]->discard = 1;
@@ -3134,7 +3134,7 @@ int ffmpeg_parse_options(int argc, char **argv)
                 input_streams[audio_index]->discard = 0;
             }
             else {
-                //╜√╙├│¤╤б╓╨╡─╥Ї╞╡┴ў╥╘═т╡─╞ф╦√╥Ї╞╡┴ў
+                //я┐╜я┐╜я┐╜├│я┐╜╤бя┐╜╨╡я┐╜я┐╜я┐╜╞╡я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╞╡я┐╜я┐╜
                 for (int i = 0; i < nb_input_streams; i++) {
                     int streamcount = nb_input_streams / (g_concatinfocount ? g_concatinfocount : 1);
                     if (input_streams[i]->dec_ctx->codec_type == AVMEDIA_TYPE_AUDIO) {

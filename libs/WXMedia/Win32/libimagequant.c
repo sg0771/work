@@ -10,6 +10,10 @@
 #include "libimagequant.h"
 //#include "mimalloc.h"
 
+
+void av_free(void* ptr);
+void* av_malloc(size_t size);
+
 #ifdef _OPENMP
     #include <omp.h>
 #else

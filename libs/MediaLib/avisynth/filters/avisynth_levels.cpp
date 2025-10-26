@@ -51,7 +51,9 @@ extern const AVSFunction Levels_filters[] = {
   { "RGBAdjust", "c[r]f[g]f[b]f[a]f[rb]f[gb]f[bb]f[ab]f[rg]f[gg]f[bg]f[ag]f[analyze]b[dither]b", RGBAdjust::Create },
   { "Tweak", "c[hue]f[sat]f[bright]f[cont]f[coring]b[sse]b[startHue]f[endHue]f[maxSat]f[minSat]f[interp]f[dither]b", Tweak::Create },
   { "MaskHS", "c[startHue]f[endHue]f[maxSat]f[minSat]f[coring]b", MaskHS::Create },
+#ifndef __clang__
   { "Limiter", "c[min_luma]i[max_luma]i[min_chroma]i[max_chroma]i[show]s", Limiter::Create },
+#endif
   { 0 }
 };
 
@@ -905,10 +907,11 @@ AVSValue __cdecl Tweak::Create(AVSValue args, void* user_data, IScriptEnvironmen
 
 #ifdef _M_IX86
 // Integer SSE optimization by "Dividee".
+static const __int64 norm1 = 0x0080001000800010i64;
+
 void __declspec(naked) asm_tweak_ISSE_YUY2( BYTE *srcp, int w, int h, int modulo, __int64 hue,
                                        __int64 satcont, __int64 bright )
 {
-	static const __int64 norm = 0x0080001000800010i64;
 
 	__asm {
 		push		ebp
@@ -917,7 +920,7 @@ void __declspec(naked) asm_tweak_ISSE_YUY2( BYTE *srcp, int w, int h, int modulo
 		push		ebx
 
 		pxor		mm0, mm0
-		movq		mm1, norm				// 128 16 128 16
+		movq		mm1, norm1				// 128 16 128 16
 		movq		mm2, [esp+16+20]		// Cos -Sin Sin Cos (fix12)
 		movq		mm3, [esp+16+28]		// Sat Cont Sat Cont (fix9)
 		movq		mm4, mm1

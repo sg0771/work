@@ -1714,7 +1714,7 @@ bool CVobSubFile::SaveWinSubMux(CString fn)
 
 		BITMAPFILEHEADER fhdr = {
 			0x4d42,
-			sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD) + pitch*h,
+			(DWORD)(sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD) + pitch*h),
 			0, 0,
 			sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD)
 		};
@@ -1817,7 +1817,7 @@ bool CVobSubFile::SaveScenarist(CString fn)
 
 	BITMAPFILEHEADER fhdr = {
 		0x4d42,
-		sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD) + 360*(m_size.cy-2),
+		(DWORD)(sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD) + 360*(m_size.cy-2)),
 		0, 0,
 		sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD)
 	};
@@ -2052,7 +2052,7 @@ bool CVobSubFile::SaveMaestro(CString fn)
 
 	BITMAPFILEHEADER fhdr = {
 		0x4d42,
-		sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD) + 360*(m_size.cy-2),
+		(DWORD)(sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD) + 360*(m_size.cy-2)),
 		0, 0,
 		sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER) + 16*sizeof(RGBQUAD)
 	};

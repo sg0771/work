@@ -59,7 +59,7 @@ private:
 
 
 
- AVSValue __cdecl Create_AdaptHistEqEx(AVSValue args, void* user_data, IScriptEnvironment* env) {
+AVSValue __cdecl Create_AdaptHistEqEx(AVSValue args, void* user_data, IScriptEnvironment* env) {
 	//WX//WXLogA("------------- OPENGL File Create [%s]", __FUNCTION__);
 	return new AdaptHistEqEx(args[0].AsClip(), args[1].AsInt(0), args[2].AsInt(200000000),
 		args[3].AsInt(0), args[4].AsInt(0), args[5].AsInt(0), args[6].AsFloat(0.0f), env);
@@ -88,22 +88,22 @@ PVideoFrame __stdcall AdaptHistEqEx::GetFrame(int n, IScriptEnvironment* env)
 
 	const void* data = child->GetFrame(n, env)->GetReadPtr();
 
-	// ¼ÆËãÖ±·½Í¼£¬»ñµÃ¾ùºâºóµÄÍ¼Ïñ
+	// è®¡ç®—ç›´æ–¹å›¾ï¼ŒèŽ·å¾—å‡è¡¡åŽçš„å›¾åƒ
 	BYTE* tempImage = new BYTE[vi.width * vi.height * 4];
 	memcpy(tempImage, data, vi.width * vi.height * 4);
 
-	BYTE LUT[256] = {0};
+	BYTE LUT[256] = { 0 };
 	process(tempImage, vi.width * vi.height, LUT);
-	
+
 	auto dst = env->NewVideoFrame(vi);
 
 	if (dst == nullptr || dst.m_ptr == nullptr) {
 		return nullptr;
 	}
 	void* post_data = (void*)dst->GetWritePtr();
-	
+
 	utils::MutexQueueImp::OpenglInstance()->sync([&] {
-		std::vector<FilterFrame> frames;	
+		std::vector<FilterFrame> frames;
 		frames.push_back({ (unsigned char*)data, vi.width , vi.height });
 		frames.push_back({ (unsigned char*)LUT, 256, 1 });
 		processor->Render(frames, vi.width, vi.height, post_data);
@@ -117,11 +117,11 @@ void AdaptHistEqEx::process(BYTE* imageA, long imagesize, BYTE* lut) {
 	UINT hist[256] = { 0 };
 	for (BYTE* p = imageA; p <= imageA + imagesize * 4; p += 4)
 	{
-		++* (hist + *p);
-		++* (hist + p[1]);
-		++* (hist + p[2]);
+		++*(hist + *p);
+		++*(hist + p[1]);
+		++*(hist + p[2]);
 	}
-	//²Ã¼ô²Ù×÷ 
+	//è£å‰ªæ“ä½œ 
 	int average = imagesize * 3 / 255;
 	int LIMIT = _threshold * average;
 	int steal = 0;
@@ -153,7 +153,7 @@ void AdaptHistEqEx::process(BYTE* imageA, long imagesize, BYTE* lut) {
 }
 
 
-void AdaptHistEqEx::histogramEqulize_simple(BYTE* pimg, int biSizeImage, BYTE * LUT)
+void AdaptHistEqEx::histogramEqulize_simple(BYTE* pimg, int biSizeImage, BYTE* LUT)
 {
 
 	//float LUTf[256];
@@ -164,9 +164,9 @@ void AdaptHistEqEx::histogramEqulize_simple(BYTE* pimg, int biSizeImage, BYTE * 
 		hist[(int)*pcur]++;
 	}
 
-	//²Ã¼ô²Ù×÷  
+	//è£å‰ªæ“ä½œ  
 	int average = biSizeImage / 256;
-	int LIMIT =  _threshold * average;
+	int LIMIT = _threshold * average;
 	int steal = 0;
 	for (int k = 0; k < 256; k++) {
 		if (hist[k] > LIMIT) {

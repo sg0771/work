@@ -466,7 +466,7 @@ private:
 		{
 			double dShear = dst1_width_delta / 2 + ((int)u - ((int)dst1.height - 1) / 2.0) * dTan / dAspect; // Fizick
 			int iShear = (int)floor(dShear);
-			HorizSkew(src, dst1, u, iShear, unsigned __int8(255 * (dShear - double(iShear)) + 1), clrBack);
+			HorizSkew(src, dst1, u, iShear, uint8_t(255 * (dShear - double(iShear)) + 1), clrBack);
 			// Report progress
 			if (cb && !((*cb) (
 				bMidImage ? 50.0 + (50.0 / 3) * u / dst1.height :
@@ -497,7 +497,7 @@ private:
 		for (unsigned u = 0; u < dst2.width; u++, dOffset -= (dSinE * dAspect))
 		{
 			int iShear = int(floor(dOffset));
-			VertSkew(dst1, dst2, u, iShear, unsigned __int8(255 * (dOffset - double(iShear)) + 1), clrBack);
+			VertSkew(dst1, dst2, u, iShear, uint8_t(255 * (dOffset - double(iShear)) + 1), clrBack);
 			// Report progress
 			if (cb && !((*cb) (
 				bMidImage ? 66.0 + (50.0 / 3) * u / dst2.height :
@@ -524,7 +524,7 @@ private:
 		for (unsigned u = 0; u < dst3.height; u++, dOffset += (dTan / dAspect))
 		{
 			int iShear = int(floor(dOffset));
-			HorizSkew(dst2, dst3, u, iShear, unsigned __int8(255 * (dOffset - double(iShear)) + 1), clrBack);
+			HorizSkew(dst2, dst3, u, iShear, uint8_t(255 * (dOffset - double(iShear)) + 1), clrBack);
 			if (cb && !((*cb) (
 				bMidImage ? 83.0 + (50.0 / 3) * u / dst3.height :
 				66.0 + (100.0 / 3) * u / dst3.height
@@ -574,7 +574,7 @@ private:
 		{
 			double dShear = dst1_width_delta / 2 + ((int)u - ((int)dst1.height - 1) / 2.0) * dTan / dAspect;
 			int iShear = (int)floor(dShear);
-			HorizSkew(src, dst1, u, iShear, unsigned __int8(255 * (dShear - double(iShear)) + 1), clrBack);
+			HorizSkew(src, dst1, u, iShear, uint8_t(255 * (dShear - double(iShear)) + 1), clrBack);
 			// Report progress
 			if (cb && !((*cb) (
 				bMidImage ? 50.0 + (50.0 / 3) * u / dst1.height :
@@ -626,7 +626,7 @@ private:
 		for (int u = 0; u < (int)dst2.width; u++, dOffset -= (dTan * dAspect))
 		{
 			int iShear = int(floor(dOffset));
-			VertSkew(src, dst2, u, iShear, unsigned __int8(255 * (dOffset - double(iShear)) + 1), clrBack);
+			VertSkew(src, dst2, u, iShear, uint8_t(255 * (dOffset - double(iShear)) + 1), clrBack);
 			// Report progress
 			if (cb && !((*cb) (
 				bMidImage ? 66.0 + (50.0 / 3) * u / dst2.height :

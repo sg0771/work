@@ -254,6 +254,7 @@ private:
   __int64 FilterUD(short  *Xp, short Ph, short Inc);
   SFLOAT  FilterUD(SFLOAT *Xp, short Ph, short Inc);
 
+public:
   const double factor;
   int Xoff, dtb, dhb;
   unsigned dtbe;

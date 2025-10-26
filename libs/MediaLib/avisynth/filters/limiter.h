@@ -5,6 +5,7 @@
 #include "avisynth/avisynth_stdafx.h"
 #include "../core/softwire_helpers.h"
 
+#ifndef __clang__
 class Limiter : public GenericVideoFilter, public  CodeGenerator
 {
 public:
@@ -31,7 +32,7 @@ private:
   int emu_cmax;
   int modulo;
 };
-
+#endif
 
 #endif  // __Limiter_H__
 

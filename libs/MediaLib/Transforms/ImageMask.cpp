@@ -51,8 +51,8 @@ ImageMask::ImageMask(const PClip &_child, const char *mask,
         const auto mask_path = WXBase::UTF16ToUTF8(_mask_path);
         const std::initializer_list<AVSValue> mask_source_args = {
             mask_path.c_str(),
-            lround(_w * vi.width),
-            lround(_h * vi.height),
+            (int)lround(_w * vi.width),
+            (int)lround(_h * vi.height),
             0,
             frames,
             fps,
@@ -68,8 +68,8 @@ ImageMask::ImageMask(const PClip &_child, const char *mask,
         const std::initializer_list<AVSValue> mask_clip_args = {
             mask_base,
             mask_source,
-            lround(_x * vi.width),
-            lround(_y * vi.height)
+            (int)lround(_x * vi.width),
+            (int)lround(_y * vi.height)
         };
         const auto mask_clip = env->Invoke("Layer", AVSValueArray { mask_clip_args }, layer_arg_names).AsClip();
 

@@ -262,9 +262,9 @@ static inline __m128i libdivide__u64_to_m128(uint64_t x) {
 #elif defined(__ICC)
     uint64_t __attribute__((aligned(16))) temp[2] = {x,x};
     return _mm_load_si128((const __m128i*)temp);
-#elif __clang__
-    // clang does not provide this intrinsic either
-    return (__m128i){x, x};
+//#elif __clang__
+//    // clang does not provide this intrinsic either
+//    return (__m128i){x, x};
 #else
     // everyone else gets it right
     return _mm_set1_epi64x(x);

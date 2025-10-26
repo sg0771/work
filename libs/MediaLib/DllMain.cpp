@@ -1807,7 +1807,9 @@ MEDIALIB_API HRESULT SetCrashReportPath(WCHAR* path)
 	return 0;
 }
 
-EXTERN_C static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
+EXTERN_C 
+{
+	static LONG ApplicationCrashHandler(EXCEPTION_POINTERS * pException)
 {
 	if (LibInst::GetInst().m_libDbghelp == nullptr)
 		return -1;
@@ -1832,10 +1834,10 @@ EXTERN_C static LONG ApplicationCrashHandler(EXCEPTION_POINTERS* pException)
 
 	wchar_t wszCrashrReportPath[MAX_PATH] = { 0 };
 	WXGetGlobalString(L"CrashReportPath", wszCrashrReportPath, L"");
-	ExecuteProcess(wszCrashrReportPath, 20*1000);
+	ExecuteProcess(wszCrashrReportPath, 20 * 1000);
 	return EXCEPTION_EXECUTE_HANDLER;
 }
-
+}
 //dump 
 MEDIALIB_API int  InitExceptionFilter(const char* _dumppath)
 {

@@ -1,9 +1,5 @@
-// Avisynth v2.5.  Copyright 2002 Ben Rudiak-Gould et al.
-// http://www.avisynth.org
 
-// This program is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-
+#ifndef __clang__
 
 #include "avisynth/avisynth_stdafx.h"
 
@@ -570,3 +566,4 @@ AVSValue __cdecl Limiter::Create(AVSValue args, void* user_data, IScriptEnvironm
 
 	return new Limiter(args[0].AsClip(), args[1].AsInt(16), args[2].AsInt(235), args[3].AsInt(16), args[4].AsInt(240), show, env);
 }
+#endif

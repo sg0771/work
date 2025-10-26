@@ -68,21 +68,18 @@ typedef struct triminfo {
 	char* trimarg;
 }triminfo;
 
-char* watermark;
-int g_concatinfocount;
-char** g_concatinfostr;
+extern char* watermark;
+extern int g_concatinfocount;
+extern char** g_concatinfostr;
 
-char* g_strVdieo;
-char* g_strAudio;
-float speed ;
-float adelay;
-char* g_subtitles;
-int audio_index;
-int subtitle_index;
-float fileduration;
-
-
-
+extern char* g_strVdieo;
+extern char* g_strAudio;
+extern float speed ;
+extern float adelay;
+extern char* g_subtitles;
+extern int audio_index;
+extern int subtitle_index;
+extern float fileduration;
 
 /* select an input stream for an output stream */
 typedef struct StreamMap {
