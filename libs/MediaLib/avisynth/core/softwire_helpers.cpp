@@ -38,66 +38,68 @@ static void ReportException(EXCEPTION_POINTERS* ei, BYTE* ret) {
 
 }
 
+namespace SoftWire
+{
+    DynamicAssembledCode::DynamicAssembledCode(Assembler& _x86, IScriptEnvironment* env, const char* err_msg) {
+        entry = 0;
+        const char* soft_err = "";
 
-DynamicAssembledCode::DynamicAssembledCode(Assembler &x86, IScriptEnvironment* env, const char * err_msg) {
-  entry = 0;
-  const char* soft_err = "";
+        try {
+            entry = (void(*)())_x86.callable();
+        }
+        catch (Error _err) { soft_err = _err.getString(); }
 
-  try {
-    entry = (void(*)())x86.callable();
-  } catch (Error _err) { soft_err = _err.getString(); }
+        if (!entry)
+        {
+            _RPT1(0, "SoftWire Compilation error: %s\n", soft_err);
+            env->ThrowError(err_msg);
+        }
 
-  if(!entry)
-  {
-    _RPT1(0,"SoftWire Compilation error: %s\n", soft_err);
-    env->ThrowError(err_msg);
-  }
-
-  ret = (BYTE*)x86.acquire();
-}
-
-// No Args Call
-void DynamicAssembledCode::Call() const {
-  EXCEPTION_POINTERS* ei = 0;
-
-  if (ret) {
-    __try {
-      entry();
+        ret = (BYTE*)_x86.acquire();
     }
-    __except ( ei = GetExceptionInformation(),
-               (GetExceptionCode() >> 28) == 0xC )
-               //  0=EXCEPTION_CONTINUE_SEARCH
-               //  1=EXCEPTION_EXECUTE_HANDLER
-               // -1=EXCEPTION_CONTINUE_EXECUTION
-    {
-      ReportException(ei, ret);
-    }
-  }
-}
-  
-// Call with Args, optionally returning an int
-int DynamicAssembledCode::Call(const void* arg1, ...) const {
-  EXCEPTION_POINTERS* ei = 0;
 
-  if (ret) {
-    __try { 
-      return ((int (__cdecl*)(const void* *))entry)(&arg1);
-    }
-    __except ( ei = GetExceptionInformation(),
-               (GetExceptionCode() >> 28) == 0xC )
-             //  0=EXCEPTION_CONTINUE_SEARCH
-             //  1=EXCEPTION_EXECUTE_HANDLER
-             // -1=EXCEPTION_CONTINUE_EXECUTION
-    {
-      ReportException(ei, ret);
-    }
-  }
-  return 0;
-}
-  
-void DynamicAssembledCode::Free() {
-  if (ret) free(ret);
-}
+    // No Args Call
+    void DynamicAssembledCode::Call() const {
+        EXCEPTION_POINTERS* ei = 0;
 
+        if (ret) {
+            __try {
+                entry();
+            }
+            __except (ei = GetExceptionInformation(),
+                (GetExceptionCode() >> 28) == 0xC)
+                //  0=EXCEPTION_CONTINUE_SEARCH
+                //  1=EXCEPTION_EXECUTE_HANDLER
+                // -1=EXCEPTION_CONTINUE_EXECUTION
+            {
+                ReportException(ei, ret);
+            }
+        }
+    }
 
+    // Call with Args, optionally returning an int
+    int DynamicAssembledCode::Call(const void* arg1, ...) const {
+        EXCEPTION_POINTERS* ei = 0;
+
+        if (ret) {
+            __try {
+                return ((int(__cdecl*)(const void**))entry)(&arg1);
+            }
+            __except (ei = GetExceptionInformation(),
+                (GetExceptionCode() >> 28) == 0xC)
+                //  0=EXCEPTION_CONTINUE_SEARCH
+                //  1=EXCEPTION_EXECUTE_HANDLER
+                // -1=EXCEPTION_CONTINUE_EXECUTION
+            {
+                ReportException(ei, ret);
+            }
+        }
+        return 0;
+    }
+
+    void DynamicAssembledCode::Free() {
+        if (ret) free(ret);
+    }
+
+}
 #endif

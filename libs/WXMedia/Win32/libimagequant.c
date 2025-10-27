@@ -571,7 +571,7 @@ LIQ_EXPORT liq_attr* liq_attr_create(int width, int height)
 
 //更新RGBA数据
 LIQ_EXPORT void liq_attr_process(liq_attr* attr, uint8_t* src, uint8_t** dst1, uint8_t* pal) {
-    rgba_pixel* pixels = src;
+    rgba_pixel* pixels = (rgba_pixel * )src;
     for (int i = 0; i < attr->height; i++) {
         attr->m_image->rows[i] = pixels + attr->width * i;
     }

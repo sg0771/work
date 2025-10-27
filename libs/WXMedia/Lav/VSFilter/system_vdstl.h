@@ -741,7 +741,7 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 
-#if defined(_DEBUG) && defined(_MSC_VER)
+#if defined(_DEBUG) && defined(_MSC_VER)&& !defined(__clang__)
 	#define VD_ACCELERATE_TEMPLATES
 #endif
 

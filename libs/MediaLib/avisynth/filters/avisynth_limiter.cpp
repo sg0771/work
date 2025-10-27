@@ -440,7 +440,7 @@ Limiter::~Limiter() {
  * Dynamicly assembled code - runs at approx 14000 fps at 480x480 on a 1.8Ghz Athlon. 5-6x faster than C code
  ***/
 
-DynamicAssembledCode Limiter::create_emulator(int row_size, int height, IScriptEnvironment* env) {
+SoftWire::DynamicAssembledCode Limiter::create_emulator(int row_size, int height, IScriptEnvironment* env) {
 
   int mod32_w = row_size/32;
   int remain_4 = (row_size-(mod32_w*32))/4;
@@ -542,7 +542,7 @@ DynamicAssembledCode Limiter::create_emulator(int row_size, int height, IScriptE
 
     x86.ret();
   }
-  return DynamicAssembledCode(x86, env, "Limiter: ISSE code could not be compiled.");
+  return SoftWire::DynamicAssembledCode(x86, env, "Limiter: ISSE code could not be compiled.");
 }
 
 
