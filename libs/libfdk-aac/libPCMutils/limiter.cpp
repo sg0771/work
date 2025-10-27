@@ -1,4 +1,3 @@
-#ifndef __clang__
 
 #include "limiter.h"
 
@@ -411,5 +410,3 @@ TDLIMITER_ERROR setLimiterThreshold(TDLimiterPtr limiter, INT_PCM threshold)
     return TDLIMIT_OK;
 }
 
-
-#endif

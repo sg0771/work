@@ -178,6 +178,7 @@ static time_t filetime_to_unix_time(int64_t wintime)
     return wintime / hns_per_second - win_to_unix_epoch;
 }
 
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 static bool get_file_ids_win8(HANDLE h, dev_t *dev, ino_t *ino)
 {
     FILE_ID_INFO ii;
@@ -192,6 +193,7 @@ static bool get_file_ids_win8(HANDLE h, dev_t *dev, ino_t *ino)
     memcpy(ino, &ii.FileId, sizeof(*ino));
     return true;
 }
+#endif
 
 #if HAVE_UWP
 static bool get_file_ids(HANDLE h, dev_t *dev, ino_t *ino)
@@ -261,6 +263,7 @@ static int hstat(HANDLE h, struct mp_stat *buf)
         st.st_size = si.EndOfFile.QuadPart;
     }
 
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
     if (!get_file_ids_win8(h, &st.st_dev, &st.st_ino)) {
         // Fall back to the Windows 7 method (also used for FAT in Win8)
         if (!get_file_ids(h, &st.st_dev, &st.st_ino)) {
@@ -268,6 +271,7 @@ static int hstat(HANDLE h, struct mp_stat *buf)
             return -1;
         }
     }
+#endif
 
     *buf = st;
     return 0;

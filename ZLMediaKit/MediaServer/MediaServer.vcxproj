@@ -109,7 +109,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;ENABLE_SRT;ENABLE_WEBRTC;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;ENABLE_SCTP;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;ENABLE_SRT;ENABLE_WEBRTC;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;ENABLE_SCTP;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)libs/openssl-1.1.1k/include;../ZLMediaKit;../ZLToolKit;$(SolutionDir)libs/openssl/include;../libsrtp/include;../libmov;../libflv;../libmpeg;../jsoncpp;../usrsctplib</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -141,7 +141,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;ENABLE_SRT;ENABLE_WEBRTC;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;ENABLE_SCTP;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;ENABLE_SRT;ENABLE_WEBRTC;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;ENABLE_SCTP;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)libs/openssl-1.1.1k/include;../ZLMediaKit;../ZLToolKit;$(SolutionDir)libs/openssl/include;../libsrtp/include;../libmov;../libflv;../libmpeg;../jsoncpp;../usrsctplib</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -173,7 +173,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;ENABLE_SRT;ENABLE_WEBRTC;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;ENABLE_SCTP;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;ENABLE_SRT;ENABLE_WEBRTC;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;ENABLE_SCTP;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)libs/openssl-1.1.1k/include;../ZLMediaKit;../ZLToolKit;$(SolutionDir)libs/openssl/include;../libsrtp/include;../libmov;../libflv;../libmpeg;../jsoncpp;../usrsctplib</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -205,7 +205,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;ENABLE_SRT;ENABLE_WEBRTC;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;ENABLE_SCTP;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;WIN32;_WINDOWS;ENABLE_VERSION;ENABLE_OPENSSL;ENABLE_MP4;ENABLE_HLS_FMP4;ENABLE_RTPPROXY;ENABLE_HLS;ENABLE_SRT;ENABLE_WEBRTC;DBUG_OFF;WIN32_LEAN_AND_MEAN;MP4V2_NO_STDINT_DEFS;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;ENABLE_SCTP;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)libs/openssl-1.1.1k/include;../ZLMediaKit;../ZLToolKit;$(SolutionDir)libs/openssl/include;../libsrtp/include;../libmov;../libflv;../libmpeg;../jsoncpp;../usrsctplib</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>

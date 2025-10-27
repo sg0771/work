@@ -590,7 +590,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
@@ -622,7 +622,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
@@ -655,7 +655,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
@@ -687,7 +687,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
