@@ -27,7 +27,9 @@
 #include "avdevice.h"
 
 #define COBJMACROS
+#ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
+#endif
 #include <windows.h>
 #define NO_DSHOW_STRSAFE
 #include <dshow.h>

@@ -225,6 +225,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmpv", "libs\libmpv\libmp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ffplay", "libs\ffplay\ffplay.vcxproj", "{11B6FF99-E552-42EF-9339-2938A0DCBEB4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vulkan", "vulkan", "{1263B4F3-F00F-4577-93CB-CD15D56A0E11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
