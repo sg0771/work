@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aoce\Aoce.cpp" />
+    <ClCompile Include="aoce\AoceCore.cpp" />
+    <ClCompile Include="aoce\AoceManager.cpp" />
+    <ClCompile Include="aoce\audiodevice\AudioDevice.cpp" />
+    <ClCompile Include="aoce\audiodevice\AudioHelper.cpp" />
+    <ClCompile Include="aoce\fixgraph\VideoView.cpp" />
+    <ClCompile Include="aoce\layer\BaseLayer.cpp" />
+    <ClCompile Include="aoce\layer\InputLayer.cpp" />
+    <ClCompile Include="aoce\layer\OutputLayer.cpp" />
+    <ClCompile Include="aoce\layer\PipeGraph.cpp" />
+    <ClCompile Include="aoce\layer\PipeNode.cpp" />
+    <ClCompile Include="aoce\live\LiveRoom.cpp" />
+    <ClCompile Include="aoce\math\AMath.cpp" />
+    <ClCompile Include="aoce\math\WrapMat.cpp" />
+    <ClCompile Include="aoce\media\AudioEncoder.cpp" />
+    <ClCompile Include="aoce\media\MediaHelper.cpp" />
+    <ClCompile Include="aoce\media\MediaMuxer.cpp" />
+    <ClCompile Include="aoce\media\MediaPlayer.cpp" />
+    <ClCompile Include="aoce\media\VideoEncoder.cpp" />
+    <ClCompile Include="aoce\metadata\LayerMetadata.cpp" />
+    <ClCompile Include="aoce\module\FrameCount.cpp" />
+    <ClCompile Include="aoce\module\IModule.cpp" />
+    <ClCompile Include="aoce\module\ModuleManager.cpp" />
+    <ClCompile Include="aoce\videodevice\VideoDevice.cpp" />
+    <ClCompile Include="aoce\videodevice\VideoManager.cpp" />
+    <ClCompile Include="aoce_ffmpeg\AoceFFmpeg.cpp" />
+    <ClCompile Include="aoce_ffmpeg\FFmpegModule.cpp" />
+    <ClCompile Include="aoce_ffmpeg\FMediaFactory.cpp" />
+    <ClCompile Include="aoce_ffmpeg\media\FAACEncoder.cpp" />
+    <ClCompile Include="aoce_ffmpeg\media\FH264Encoder.cpp" />
+    <ClCompile Include="aoce_ffmpeg\media\FMediaMuxer.cpp" />
+    <ClCompile Include="aoce_ffmpeg\media\FMediaPlayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkBlendLayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkHelper.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkInputLayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkLayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkOperateLayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkOutputLayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkPipeGraph.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkResizeLayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkRGBA2YUVLayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkTransposeLayer.cpp" />
+    <ClCompile Include="aoce_vulkan\layer\VkYUV2RGBALayer.cpp" />
+    <ClCompile Include="aoce_vulkan\VkCommand.cpp" />
+    <ClCompile Include="aoce_vulkan\VkLayerFactory.cpp" />
+    <ClCompile Include="aoce_vulkan\VulkanModule.cpp" />
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanBuffer.cpp" />
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanContext.cpp" />
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanHelper.cpp" />
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanManager.cpp" />
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanPipeline.cpp" />
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanShader.cpp" />
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanTexture.cpp" />
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanWindow.cpp" />
+    <ClCompile Include="vulkan\vulkan_wrapper.cpp" />
+    <ClCompile Include="aoce_vulkan\win32\VkWinImage.cpp" />
+    <ClCompile Include="aoce_vulkan\win32\Win32Window.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkAdaptiveThresholdLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkAlphaShowLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkBilateralLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkBlendingModeLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkBlurBlendBaseLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkBulgeDistortionLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkCannyEdgeDetectionLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkColorAdjustmentLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkColorMatrixLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkColourFASTFeatureDetector.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkConvertImageLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkCropLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkDrawLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkEdgeDetectionLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkGuidedLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkHarrisCornerDetectionLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkHistogramLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkImageProcessing.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkIOSBlurLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLaplacianLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLinearFilterLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLookupLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLowPassLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLuminanceLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkMedianLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkMorphLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkMotionBlurLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkPerlinNoiseLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkPixellateLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkPoissonBlendLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkReduceLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkSeparableLinearLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkSphereLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkToonLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkVisualEffectLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\layer\VkVoronoiLayer.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\VkExtraExport.cpp" />
+    <ClCompile Include="aoce_vulkan_extra\VkExtraModule.cpp" />
+    <ClCompile Include="aoce_winrt\RTCaptureWindow.cpp" />
+    <ClCompile Include="aoce_winrt\WinRTModule.cpp" />
+    <ClCompile Include="aoce_win\BCaptureWindow.cpp" />
+    <ClCompile Include="aoce_win\dx11\Dx11Helper.cpp" />
+    <ClCompile Include="aoce_win\dx11\Dx11Resource.cpp" />
+    <ClCompile Include="aoce_win\dx11\Dx11Window.cpp" />
+    <ClCompile Include="aoce_win\window\MCaptureWindow.cpp" />
+    <ClCompile Include="aoce_win\window\MWindow.cpp" />
+    <ClCompile Include="aoce_win\window\MWindowManager.cpp" />
+    <ClCompile Include="aoce_win\WinHelp.cpp" />
+    <ClCompile Include="aoce_win\WinModule.cpp" />
+    <ClCompile Include="aoce_win_mf\MfModule.cpp" />
+    <ClCompile Include="aoce_win_mf\videodevice\FormatReader.cpp" />
+    <ClCompile Include="aoce_win_mf\videodevice\MediaStruct.cpp" />
+    <ClCompile Include="aoce_win_mf\videodevice\MFVideoDevice.cpp" />
+    <ClCompile Include="aoce_win_mf\videodevice\MFVideoManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aoce\Aoce.h" />
+    <ClInclude Include="aoce\Aoce.hpp" />
+    <ClInclude Include="aoce\AoceAudioDevice.h" />
+    <ClInclude Include="aoce\AoceBuildSettingsWin.h" />
+    <ClInclude Include="aoce\AoceCore.h" />
+    <ClInclude Include="aoce\AoceDefine.h" />
+    <ClInclude Include="aoce\AoceLayer.h" />
+    <ClInclude Include="aoce\AoceLive.h" />
+    <ClInclude Include="aoce\AoceManager.hpp" />
+    <ClInclude Include="aoce\AoceMath.h" />
+    <ClInclude Include="aoce\AoceMedia.h" />
+    <ClInclude Include="aoce\AoceMetadata.h" />
+    <ClInclude Include="aoce\AoceVideoDevice.h" />
+    <ClInclude Include="aoce\AoceWindow.h" />
+    <ClInclude Include="aoce\audiodevice\AudioDevice.hpp" />
+    <ClInclude Include="aoce\fixgraph\VideoView.hpp" />
+    <ClInclude Include="aoce\layer\BaseLayer.hpp" />
+    <ClInclude Include="aoce\layer\InputLayer.hpp" />
+    <ClInclude Include="aoce\layer\OutputLayer.hpp" />
+    <ClInclude Include="aoce\layer\PipeGraph.hpp" />
+    <ClInclude Include="aoce\layer\PipeNode.hpp" />
+    <ClInclude Include="aoce\live\LiveRoom.hpp" />
+    <ClInclude Include="aoce\math\WrapMat.hpp" />
+    <ClInclude Include="aoce\media\AudioEncoder.hpp" />
+    <ClInclude Include="aoce\media\MediaHelper.hpp" />
+    <ClInclude Include="aoce\media\MediaMuxer.hpp" />
+    <ClInclude Include="aoce\media\MediaPlayer.hpp" />
+    <ClInclude Include="aoce\media\VideoEncoder.hpp" />
+    <ClInclude Include="aoce\metadata\LayerMetadata.hpp" />
+    <ClInclude Include="aoce\module\FrameCount.hpp" />
+    <ClInclude Include="aoce\module\IModule.hpp" />
+    <ClInclude Include="aoce\module\ModuleManager.hpp" />
+    <ClInclude Include="aoce\videodevice\VideoDevice.hpp" />
+    <ClInclude Include="aoce\videodevice\VideoManager.hpp" />
+    <ClInclude Include="aoce_ffmpeg\AoceFFmpeg.hpp" />
+    <ClInclude Include="aoce_ffmpeg\FFmpegModule.hpp" />
+    <ClInclude Include="aoce_ffmpeg\FMediaFactory.hpp" />
+    <ClInclude Include="aoce_ffmpeg\media\FAACEncoder.hpp" />
+    <ClInclude Include="aoce_ffmpeg\media\FH264Encoder.hpp" />
+    <ClInclude Include="aoce_ffmpeg\media\FMediaMuxer.hpp" />
+    <ClInclude Include="aoce_ffmpeg\media\FMediaPlayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkBlendLayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkHelper.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkInputLayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkLayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkOperateLayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkOutputLayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkPipeGraph.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkResizeLayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkRGBA2YUVLayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkTransposeLayer.hpp" />
+    <ClInclude Include="aoce_vulkan\layer\VkYUV2RGBALayer.hpp" />
+    <ClInclude Include="aoce_vulkan\VkCommand.hpp" />
+    <ClInclude Include="aoce_vulkan\VkLayerFactory.hpp" />
+    <ClInclude Include="aoce_vulkan\VulkanModule.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanBuffer.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanCommon.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanContext.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanHelper.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanManager.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanPipeline.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanShader.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanTexture.hpp" />
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanWindow.hpp" />
+    <ClInclude Include="vulkan\vulkan_wrapper.h" />
+    <ClInclude Include="aoce_vulkan\win32\VkWinImage.hpp" />
+    <ClInclude Include="aoce_vulkan\win32\Win32Window.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\AoceVkExtra.h" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkAdaptiveThresholdLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkAlphaShowLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkBilateralLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkBlendingModeLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkBlurBlendBaseLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkBulgeDistortionLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkCannyEdgeDetectionLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkColorAdjustmentLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkColorMatrixLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkColourFASTFeatureDetector.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkConvertImageLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkCropLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkDrawLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkEdgeDetectionLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkGuidedLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkHarrisCornerDetectionLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkHistogramLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkImageProcessing.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkIOSBlurLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLaplacianLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLinearFilterLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLookupLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLowPassLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLuminanceLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkMedianLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkMorphLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkMotionBlurLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkPerlinNoiseLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkPixellateLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkPoissonBlendLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkReduceLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkSeparableLinearLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkSphereLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkToonLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkVisualEffectLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\layer\VkVoronoiLayer.hpp" />
+    <ClInclude Include="aoce_vulkan_extra\VkExtraExport.h" />
+    <ClInclude Include="aoce_vulkan_extra\VkExtraModule.hpp" />
+    <ClInclude Include="aoce_winrt\RTCaptureWindow.hpp" />
+    <ClInclude Include="aoce_winrt\WinRTModule.hpp" />
+    <ClInclude Include="aoce_win\BCaptureWindow.hpp" />
+    <ClInclude Include="aoce_win\dx11\Dx11Helper.hpp" />
+    <ClInclude Include="aoce_win\dx11\Dx11Resource.hpp" />
+    <ClInclude Include="aoce_win\dx11\Dx11Window.hpp" />
+    <ClInclude Include="aoce_win\window\MCaptureWindow.hpp" />
+    <ClInclude Include="aoce_win\window\MWindow.hpp" />
+    <ClInclude Include="aoce_win\window\MWindowManager.hpp" />
+    <ClInclude Include="aoce_win\WinHelp.hpp" />
+    <ClInclude Include="aoce_win\WinModule.hpp" />
+    <ClInclude Include="aoce_win_mf\MfModule.hpp" />
+    <ClInclude Include="aoce_win_mf\videodevice\FormatReader.hpp" />
+    <ClInclude Include="aoce_win_mf\videodevice\MediaStruct.hpp" />
+    <ClInclude Include="aoce_win_mf\videodevice\MFVideoDevice.hpp" />
+    <ClInclude Include="aoce_win_mf\videodevice\MFVideoManager.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{bd3782e4-3775-4af7-bb02-28c6de217a01}</ProjectGuid>
+    <RootNamespace>aoce</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;./;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;./;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;./;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(SolutionDir)\deps\include\;$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;./;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>aoce_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4003</DisableSpecificWarnings>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./;../include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>aoce_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4003</DisableSpecificWarnings>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./;../include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>aoce_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4003</DisableSpecificWarnings>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./;../include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>aoce_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4003</DisableSpecificWarnings>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./;../include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aoce\audiodevice\AudioDevice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\audiodevice\AudioHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\fixgraph\VideoView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\layer\BaseLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\layer\InputLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\layer\OutputLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\layer\PipeGraph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\layer\PipeNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\live\LiveRoom.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\math\AMath.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\math\WrapMat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\media\AudioEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\media\MediaHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\media\MediaMuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\media\MediaPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\media\VideoEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\metadata\LayerMetadata.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\module\FrameCount.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\module\IModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\module\ModuleManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\videodevice\VideoDevice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\videodevice\VideoManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\Aoce.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\AoceCore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce\AoceManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_winrt\RTCaptureWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_winrt\WinRTModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\dx11\Dx11Helper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\dx11\Dx11Resource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\dx11\Dx11Window.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\window\MCaptureWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\window\MWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\window\MWindowManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\BCaptureWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\WinHelp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win\WinModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win_mf\videodevice\FormatReader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win_mf\videodevice\MediaStruct.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win_mf\videodevice\MFVideoDevice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win_mf\videodevice\MFVideoManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_win_mf\MfModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_ffmpeg\media\FAACEncoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_ffmpeg\media\FH264Encoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_ffmpeg\media\FMediaMuxer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_ffmpeg\media\FMediaPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_ffmpeg\AoceFFmpeg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_ffmpeg\FFmpegModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_ffmpeg\FMediaFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkBlendLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkInputLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkOperateLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkOutputLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkPipeGraph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkResizeLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkRGBA2YUVLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkTransposeLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\layer\VkYUV2RGBALayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanContext.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanHelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanPipeline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanShader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanTexture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\vulkan\VulkanWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\win32\VkWinImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\win32\Win32Window.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\VkCommand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\VkLayerFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan\VulkanModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkAdaptiveThresholdLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkAlphaShowLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkBilateralLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkBlendingModeLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkBlurBlendBaseLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkBulgeDistortionLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkCannyEdgeDetectionLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkColorAdjustmentLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkColorMatrixLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkColourFASTFeatureDetector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkConvertImageLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkCropLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkDrawLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkEdgeDetectionLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkGuidedLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkHarrisCornerDetectionLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkHistogramLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkImageProcessing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkIOSBlurLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLaplacianLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLinearFilterLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLookupLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLowPassLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkLuminanceLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkMedianLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkMorphLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkMotionBlurLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkPerlinNoiseLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkPixellateLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkPoissonBlendLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkReduceLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkSeparableLinearLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkSphereLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkToonLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkVisualEffectLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\layer\VkVoronoiLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\VkExtraExport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="aoce_vulkan_extra\VkExtraModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vulkan\vulkan_wrapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aoce\audiodevice\AudioDevice.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\fixgraph\VideoView.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\layer\BaseLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\layer\InputLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\layer\OutputLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\layer\PipeGraph.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\layer\PipeNode.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\live\LiveRoom.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\math\WrapMat.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\media\AudioEncoder.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\media\MediaHelper.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\media\MediaMuxer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\media\MediaPlayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\media\VideoEncoder.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\metadata\LayerMetadata.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\module\FrameCount.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\module\IModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\module\ModuleManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\videodevice\VideoDevice.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\videodevice\VideoManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\Aoce.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\Aoce.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceAudioDevice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceBuildSettingsWin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceCore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceDefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceLayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceLive.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceMedia.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceMetadata.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceVideoDevice.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce\AoceWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_winrt\RTCaptureWindow.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_winrt\WinRTModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\dx11\Dx11Helper.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\dx11\Dx11Resource.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\dx11\Dx11Window.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\window\MCaptureWindow.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\window\MWindow.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\window\MWindowManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\BCaptureWindow.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\WinHelp.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win\WinModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win_mf\videodevice\FormatReader.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win_mf\videodevice\MediaStruct.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win_mf\videodevice\MFVideoDevice.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win_mf\videodevice\MFVideoManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_win_mf\MfModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_ffmpeg\media\FAACEncoder.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_ffmpeg\media\FH264Encoder.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_ffmpeg\media\FMediaMuxer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_ffmpeg\media\FMediaPlayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_ffmpeg\AoceFFmpeg.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_ffmpeg\FFmpegModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_ffmpeg\FMediaFactory.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkBlendLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkHelper.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkInputLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkOperateLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkOutputLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkPipeGraph.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkResizeLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkRGBA2YUVLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkTransposeLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\layer\VkYUV2RGBALayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanBuffer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanCommon.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanContext.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanHelper.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanPipeline.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanShader.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanTexture.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\vulkan\VulkanWindow.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\win32\VkWinImage.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\win32\Win32Window.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\VkCommand.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\VkLayerFactory.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan\VulkanModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkAdaptiveThresholdLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkAlphaShowLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkBilateralLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkBlendingModeLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkBlurBlendBaseLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkBulgeDistortionLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkCannyEdgeDetectionLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkColorAdjustmentLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkColorMatrixLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkColourFASTFeatureDetector.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkConvertImageLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkCropLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkDrawLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkEdgeDetectionLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkGuidedLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkHarrisCornerDetectionLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkHistogramLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkImageProcessing.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkIOSBlurLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLaplacianLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLinearFilterLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLookupLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLowPassLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkLuminanceLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkMedianLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkMorphLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkMotionBlurLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkPerlinNoiseLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkPixellateLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkPoissonBlendLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkReduceLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkSeparableLinearLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkSphereLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkToonLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkVisualEffectLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\layer\VkVoronoiLayer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\AoceVkExtra.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\VkExtraExport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aoce_vulkan_extra\VkExtraModule.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan\vulkan_wrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
