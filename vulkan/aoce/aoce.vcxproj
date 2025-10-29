@@ -196,6 +196,10 @@
     <ClInclude Include="aoce_vulkan\vulkan\VulkanShader.hpp" />
     <ClInclude Include="aoce_vulkan\vulkan\VulkanTexture.hpp" />
     <ClInclude Include="aoce_vulkan\vulkan\VulkanWindow.hpp" />
+    <ClInclude Include="vulkan\vk_platform.h" />
+    <ClInclude Include="vulkan\vulkan.h" />
+    <ClInclude Include="vulkan\vulkan_core.h" />
+    <ClInclude Include="vulkan\vulkan_win32.h" />
     <ClInclude Include="vulkan\vulkan_wrapper.h" />
     <ClInclude Include="aoce_vulkan\win32\VkWinImage.hpp" />
     <ClInclude Include="aoce_vulkan\win32\Win32Window.hpp" />

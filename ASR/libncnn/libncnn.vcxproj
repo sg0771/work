@@ -1285,6 +1285,9 @@
     <ClCompile Include="SPIRV\SPVRemapper.cpp" />
     <ClCompile Include="SPIRV\SpvTools.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SPIRV\spirv.hpp11" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

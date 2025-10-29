@@ -10,7 +10,7 @@
 #include "Aoce.hpp"
 #include "metadata/LayerMetadata.hpp"
 #include "module/ModuleManager.hpp"
-#if WIN32
+#if _WIN32
 #include <Shlwapi.h>
 #include <Windows.h>
 
@@ -85,7 +85,7 @@ void logMessage(LogLevel level, const char* message) {
     if (logHandle != nullptr) {
         logHandle((int32_t)level, message);
     } else if (message) {
-#if WIN32
+#if _WIN32
         auto now = std::chrono::system_clock::to_time_t(
             std::chrono::system_clock::now());
         struct tm t;
@@ -204,7 +204,7 @@ std::wstring utf8TWstring(const std::string& str) {
     if (str.empty()) {
         return std::wstring();
     }
-#if WIN32
+#if _WIN32
     size_t len = str.length() + 1;
     std::wstring ret = std::wstring(len, 0);
     int size = MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS, &str[0],
@@ -246,7 +246,7 @@ std::string utf8TString(const std::wstring& wstr) {
     if (wstr.empty()) {
         return std::string();
     }
-#if WIN32
+#if _WIN32
     int size = WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, &wstr[0],
                                    wstr.size(), NULL, 0, NULL, NULL);
     std::string ret = std::string(size, 0);
@@ -541,7 +541,7 @@ void createVideoFrame(aoce::VideoFrame& frame, uint8_t* data, int32_t width,
 }
 
 std::string getAocePath() {
-#if WIN32
+#if _WIN32
     char sz[512] = {0};
     HMODULE ihdll = GetModuleHandleA("aoce.dll");
     ::GetModuleFileNameA(ihdll, sz, 512);
@@ -554,7 +554,7 @@ std::string getAocePath() {
 #endif
 }
 
-#if WIN32
+#if _WIN32
 bool existsFile(const wchar_t* filePath) { return fs::exists(filePath); }
 
 bool loadFileBinary(const wchar_t* filePath, std::vector<uint8_t>& data) {
@@ -624,7 +624,7 @@ void loadAoce() {
     logMessage(LogLevel::info, "aoce 32bit run model");
 #endif
 // 加载基于特定平台的实现
-#if WIN32
+#if _WIN32
     ModuleManager::Get().regAndLoad("aoce_win");
     ModuleManager::Get().regAndLoad("aoce_winrt");
     ModuleManager::Get().regAndLoad("aoce_win_mf");
@@ -642,13 +642,13 @@ void loadAoce() {
 #if defined(AOCE_INSTALL_AGORA)
     ModuleManager::Get().regAndLoad("aoce_agora");
 // win32优先加载特定版本
-#if WIN32
+#if _WIN32
     ModuleManager::Get().regAndLoad("aoce_talkto_cuda");
     // 如果cuda版本加载不上,就加载只有vulkan版本的
     if (!checkLoadModel("aoce_talkto_cuda")) {
 #endif
         ModuleManager::Get().regAndLoad("aoce_talkto");
-#if WIN32
+#if _WIN32
     }
 #endif
 #endif
@@ -664,7 +664,7 @@ void unloadAoce() {
     bLoad = false;
     ModuleManager::Get().unloadModule("aoce_vulkan");
     ModuleManager::Get().unloadModule("aoce_vulkan_extra");
-#if WIN32
+#if _WIN32
     ModuleManager::Get().unloadModule("aoce_win");
     ModuleManager::Get().unloadModule("aoce_winrt");
     ModuleManager::Get().unloadModule("aoce_win_mf");

@@ -48,66 +48,67 @@ static double get_rotation(AVStream* st)
 
 
 //SHA-160
-void FFMS_Index::CalculateFileSignature(const char *Filename, int64_t *Filesize, uint8_t Digest[20]) {
-    FileHandle file(Filename, "rb", FFMS_ERROR_INDEX, FFMS_ERROR_FILE_READ);
+void FFMS_Index::CalculateFileSignature(const char* Filename, int64_t* Filesize, uint8_t Digest[20]) {
+	FileHandle file(Filename, "rb", FFMS_ERROR_INDEX, FFMS_ERROR_FILE_READ);
 
-    std::unique_ptr<AVSHA, decltype(&av_free)> ctx{ av_sha_alloc(), av_free };
-    av_sha_init(ctx.get(), 160);
+	std::unique_ptr<AVSHA, decltype(&av_free)> ctx{ av_sha_alloc(), av_free };
+	av_sha_init(ctx.get(), 160);
 
-    try {
-        *Filesize = file.Size();
-        std::vector<char> FileBuffer(static_cast<size_t>(std::min<int64_t>(1024 * 1024, *Filesize)));
-        size_t BytesRead = file.Read(FileBuffer.data(), FileBuffer.size());
-        av_sha_update(ctx.get(), reinterpret_cast<const uint8_t*>(FileBuffer.data()), BytesRead);
+	try {
+		*Filesize = file.Size();
+		std::vector<char> FileBuffer(static_cast<size_t>(std::min<int64_t>(1024 * 1024, *Filesize)));
+		size_t BytesRead = file.Read(FileBuffer.data(), FileBuffer.size());
+		av_sha_update(ctx.get(), reinterpret_cast<const uint8_t*>(FileBuffer.data()), BytesRead);
 
-        if (*Filesize > static_cast<int64_t>(FileBuffer.size())) {
-            file.Seek(*Filesize - static_cast<int64_t>(FileBuffer.size()), SEEK_SET);
-            BytesRead = file.Read(FileBuffer.data(), FileBuffer.size());
-            av_sha_update(ctx.get(), reinterpret_cast<const uint8_t*>(FileBuffer.data()), BytesRead);
-        }
-    } catch (...) {
-        av_sha_final(ctx.get(), Digest);
-        throw;
-    }
-    av_sha_final(ctx.get(), Digest);
+		if (*Filesize > static_cast<int64_t>(FileBuffer.size())) {
+			file.Seek(*Filesize - static_cast<int64_t>(FileBuffer.size()), SEEK_SET);
+			BytesRead = file.Read(FileBuffer.data(), FileBuffer.size());
+			av_sha_update(ctx.get(), reinterpret_cast<const uint8_t*>(FileBuffer.data()), BytesRead);
+		}
+	}
+	catch (...) {
+		av_sha_final(ctx.get(), Digest);
+		throw;
+	}
+	av_sha_final(ctx.get(), Digest);
 }
 
 void FFMS_Index::Finalize(std::vector<SharedAVContext> const& video_contexts) {
-    for (size_t i = 0, end = size(); i != end; ++i) {
-        FFMS_Track& track = (*this)[i];
-        // H.264 PAFF needs to have some frames hidden
-        if (video_contexts[i].m_pCtx && video_contexts[i].m_pCtx->codec_id == AV_CODEC_ID_H264)
-            track.MaybeHideFrames();
-        track.FinalizeTrack();
+	for (size_t i = 0, end = size(); i != end; ++i) {
+		FFMS_Track& track = (*this)[i];
+		// H.264 PAFF needs to have some frames hidden
+		if (video_contexts[i].m_pCtx && video_contexts[i].m_pCtx->codec_id == AV_CODEC_ID_H264)
+			track.MaybeHideFrames();
+		track.FinalizeTrack();
 
-        if (track.TT != FFMS_TYPE_VIDEO) continue;
+		if (track.TT != FFMS_TYPE_VIDEO) continue;
 
-        if (video_contexts[i].m_pCtx && video_contexts[i].m_pCtx->has_b_frames) {
-            track.MaxBFrames = video_contexts[i].m_pCtx->has_b_frames;
-            continue;
-        }
+		if (video_contexts[i].m_pCtx && video_contexts[i].m_pCtx->has_b_frames) {
+			track.MaxBFrames = video_contexts[i].m_pCtx->has_b_frames;
+			continue;
+		}
 
-        // Whether or not has_b_frames gets set during indexing seems
-        // to vary based on version of FFmpeg/Libav, so do an extra
-        // check for b-frames if it's 0.
-        for (size_t f = 0; f < track.size(); ++f) {
-            if (track[f].FrameType == AV_PICTURE_TYPE_B) {
-                track.MaxBFrames = 1;
-                break;
-            }
-        }
-    }
+		// Whether or not has_b_frames gets set during indexing seems
+		// to vary based on version of FFmpeg/Libav, so do an extra
+		// check for b-frames if it's 0.
+		for (size_t f = 0; f < track.size(); ++f) {
+			if (track[f].FrameType == AV_PICTURE_TYPE_B) {
+				track.MaxBFrames = 1;
+				break;
+			}
+		}
+	}
 }
 
-bool FFMS_Index::CompareFileSignature(const char *Filename) {
-    int64_t CFilesize;
-    uint8_t CDigest[20];
-    CalculateFileSignature(Filename, &CFilesize, CDigest);
-    return (CFilesize == m_Filesize && !memcmp(CDigest, m_Digest, sizeof(m_Digest)));
+bool FFMS_Index::CompareFileSignature(const char* Filename) {
+	int64_t CFilesize;
+	uint8_t CDigest[20];
+	CalculateFileSignature(Filename, &CFilesize, CDigest);
+	return (CFilesize == m_Filesize && !memcmp(CDigest, m_Digest, sizeof(m_Digest)));
 }
 
 uint8_t* FFMS_Index::WriteIndexBuffer(size_t* Size) {
-	utils::ML_FileHandle zf; //–¥»ÎIndexFileƒ⁄¥Ê
+	utils::ML_FileHandle zf; //ÂÜôÂÖ•IndexFileÂÜÖÂ≠ò
 	WriteIndex(zf);
 	*Size = zf.size();
 	return zf.ptr<uint8_t>();
@@ -135,10 +136,10 @@ void FFMS_Index::WriteIndex(utils::ML_FileHandle& zf) {
 }
 
 void FFMS_Index::WriteIndexFile(const char* IndexFile) {
-//	WXLogA("IndexFile %s begin", IndexFile);
-	utils::ML_FileHandle zf(IndexFile, "wb"); //–¥»ÎŒƒº˛
+	//	WXLogA("IndexFile %s begin", IndexFile);
+	utils::ML_FileHandle zf(IndexFile, "wb"); //ÂÜôÂÖ•Êñá‰ª∂
 	WriteIndex(zf);
-//	WXLogA("IndexFile %s end", IndexFile);
+	//	WXLogA("IndexFile %s end", IndexFile);
 }
 
 void FFMS_Index::ReadIndex(utils::ML_FileHandle& zf, const char* IndexFile) {
@@ -167,7 +168,7 @@ void FFMS_Index::ReadIndex(utils::ML_FileHandle& zf, const char* IndexFile) {
 	m_Filesize = zf.Read<int64_t>();
 	zf.Read(m_Digest, sizeof(m_Digest));
 	//WXLogA("read MI");
-	zf.Read(& m_MediaInfo, sizeof(MediaInfomation));
+	zf.Read(&m_MediaInfo, sizeof(MediaInfomation));
 	reserve(Tracks);
 	try {
 		for (size_t i = 0; i < Tracks; ++i)
@@ -183,16 +184,16 @@ void FFMS_Index::ReadIndex(utils::ML_FileHandle& zf, const char* IndexFile) {
 }
 
 
-FFMS_Index::FFMS_Index(const char *IndexFile) {
+FFMS_Index::FFMS_Index(const char* IndexFile) {
 	utils::ML_FileHandle zf(IndexFile, "rb");//from File
 	// Read the index file header
 	ReadIndex(zf, IndexFile);
 }
 
 FFMS_Index::FFMS_Index(int64_t Filesize, uint8_t Digest[20], int ErrorHandling)
-    : m_ErrorHandling(ErrorHandling)
-    , m_Filesize(Filesize) {
-    memcpy(this->m_Digest, Digest, sizeof(this->m_Digest));
+	: m_ErrorHandling(ErrorHandling)
+	, m_Filesize(Filesize) {
+	memcpy(this->m_Digest, Digest, sizeof(this->m_Digest));
 }
 
 FFMS_Index::FFMS_Index(const uint8_t* Buffer, size_t Size) {
@@ -203,53 +204,53 @@ FFMS_Index::FFMS_Index(const uint8_t* Buffer, size_t Size) {
 
 //------------------------------------------------------------------------------------------------------------------W
 void FFMS_Indexer::SetIndexTrack(int Track, bool Index) {
-    if (Track < 0 || Track >= GetNumberOfTracks())
-        return;
-    if (Index)
-        m_IndexMask.insert(Track);
-    else
-        m_IndexMask.erase(Track);
+	if (Track < 0 || Track >= GetNumberOfTracks())
+		return;
+	if (Index)
+		m_IndexMask.insert(Track);
+	else
+		m_IndexMask.erase(Track);
 };
 
 void FFMS_Indexer::SetIndexTrackType(int TrackType, bool Index) {
-    for (int i = 0; i < GetNumberOfTracks(); i++) {
-        if (GetTrackType(i) == TrackType) {
-            if (Index)
-                m_IndexMask.insert(i);
-            else
-                m_IndexMask.erase(i);
-        }
-    }
+	for (int i = 0; i < GetNumberOfTracks(); i++) {
+		if (GetTrackType(i) == TrackType) {
+			if (Index)
+				m_IndexMask.insert(i);
+			else
+				m_IndexMask.erase(i);
+		}
+	}
 }
 
 void FFMS_Indexer::SetErrorHandling(int ErrorHandling_) {
-    if (ErrorHandling_ != FFMS_IEH_ABORT && ErrorHandling_ != FFMS_IEH_CLEAR_TRACK &&
-        ErrorHandling_ != FFMS_IEH_STOP_TRACK && ErrorHandling_ != FFMS_IEH_IGNORE)
-        throw FFMS_Exception(FFMS_ERROR_INDEXING, FFMS_ERROR_INVALID_ARGUMENT,
-            "Invalid error handling mode specified");
-    ErrorHandling = ErrorHandling_;
+	if (ErrorHandling_ != FFMS_IEH_ABORT && ErrorHandling_ != FFMS_IEH_CLEAR_TRACK &&
+		ErrorHandling_ != FFMS_IEH_STOP_TRACK && ErrorHandling_ != FFMS_IEH_IGNORE)
+		throw FFMS_Exception(FFMS_ERROR_INDEXING, FFMS_ERROR_INVALID_ARGUMENT,
+			"Invalid error handling mode specified");
+	ErrorHandling = ErrorHandling_;
 }
 
-FFMS_Indexer *CreateIndexer(const char *Filename) {
-    return new FFMS_Indexer(Filename);
+FFMS_Indexer* CreateIndexer(const char* Filename) {
+	return new FFMS_Indexer(Filename);
 }
 
-//¥Úø™Œƒº˛
-FFMS_Indexer::FFMS_Indexer(const char *Filename){
+//ÊâìÂºÄÊñá‰ª∂
+FFMS_Indexer::FFMS_Indexer(const char* Filename) {
 	m_wstrSourceFile = WXBase::UTF8ToUTF16(Filename);
-    try {
+	try {
 		//WXLogA(" %s avformat_open_input",__FUNCTION__);
-        if (avformat_open_input(&m_pFormatContext, Filename, nullptr, nullptr) != 0) //¥Úø™Œƒº˛
-            throw FFMS_Exception(FFMS_ERROR_PARSER, FFMS_ERROR_FILE_READ,
-                std::string("Can't open '") + Filename + "'");
-	
+		if (avformat_open_input(&m_pFormatContext, Filename, nullptr, nullptr) != 0) //ÊâìÂºÄÊñá‰ª∂
+			throw FFMS_Exception(FFMS_ERROR_PARSER, FFMS_ERROR_FILE_READ,
+				std::string("Can't open '") + Filename + "'");
+
 
 		//WXLogA(" %s avformat_find_stream_info", __FUNCTION__);
-        if (avformat_find_stream_info(m_pFormatContext, nullptr) < 0) { //≤È’“Œƒº˛–≈œ¢
-            avformat_close_input(&m_pFormatContext);
-            throw FFMS_Exception(FFMS_ERROR_PARSER, FFMS_ERROR_FILE_READ,
-                "Couldn't find stream information");
-        }
+		if (avformat_find_stream_info(m_pFormatContext, nullptr) < 0) { //Êü•ÊâæÊñá‰ª∂‰ø°ÊÅØ
+			avformat_close_input(&m_pFormatContext);
+			throw FFMS_Exception(FFMS_ERROR_PARSER, FFMS_ERROR_FILE_READ,
+				"Couldn't find stream information");
+		}
 
 		m_nAudioIndex = av_find_best_stream(m_pFormatContext, AVMEDIA_TYPE_AUDIO, -1, -1, NULL, 0);
 		m_nVideoIndex = av_find_best_stream(m_pFormatContext, AVMEDIA_TYPE_VIDEO, -1, -1, NULL, 0);
@@ -272,13 +273,14 @@ FFMS_Indexer::FFMS_Indexer(const char *Filename){
 			if ((m_pVCtx->codec_id != AV_CODEC_ID_GIF) &&
 				m_pVStream->disposition & AV_DISPOSITION_ATTACHED_PIC) {
 				m_nVideoIndex = -1;
-			}else {
+			}
+			else {
 				m_tbVideo = m_pVStream->time_base;
 			}
 		}
 
 		if (m_nAudioIndex >= 0) {
-			if (m_pFormatContext->streams[m_nAudioIndex]->codec->codec_id == AV_CODEC_ID_NONE) { //∆ªπ˚ ÷ª˙¬ºœÒ ”∆µµƒAPAC“Ù∆µ‘⁄µ±«∞ffmpegŒﬁ∑®’˝≥£Ω‚¬Î£¨µ´ «¿Ô√Ê∆‰À¸πÏµ¿µƒAAC“Ù∆µø…“‘Ω‚¬Î£¨ø…“‘≥¢ ‘≤È’“ 
+			if (m_pFormatContext->streams[m_nAudioIndex]->codec->codec_id == AV_CODEC_ID_NONE) { //ËãπÊûúÊâãÊú∫ÂΩïÂÉèËßÜÈ¢ëÁöÑAPACÈü≥È¢ëÂú®ÂΩìÂâçffmpegÊó†Ê≥ïÊ≠£Â∏∏Ëß£Á†ÅÔºå‰ΩÜÊòØÈáåÈù¢ÂÖ∂ÂÆÉËΩ®ÈÅìÁöÑAACÈü≥È¢ëÂèØ‰ª•Ëß£Á†ÅÔºåÂèØ‰ª•Â∞ùËØïÊü•Êâæ 
 				int sIndex = m_nAudioIndex;
 				m_nAudioIndex = -1;
 				for (size_t i = 0; i < m_pFormatContext->nb_streams; i++)
@@ -303,7 +305,7 @@ FFMS_Indexer::FFMS_Indexer(const char *Filename){
 
 		m_pInfo = new MediaInfomation();
 
-		m_pInfo->duration = m_pFormatContext->duration;//HE-AAC ≤ø∑÷AAC≤ª◊º
+		m_pInfo->duration = m_pFormatContext->duration;//HE-AAC ÈÉ®ÂàÜAAC‰∏çÂáÜ
 
 		if (m_pInfo->duration == AV_NOPTS_VALUE) {
 			m_pInfo->duration = 0;
@@ -314,51 +316,51 @@ FFMS_Indexer::FFMS_Indexer(const char *Filename){
 			m_bReadImage = TRUE;
 		}
 
-		strcpy(m_pInfo->format, m_pFormatContext->iformat->name); //Œƒº˛∏Ò Ω
+		strcpy(m_pInfo->format, m_pFormatContext->iformat->name); //Êñá‰ª∂Ê†ºÂºè
 
-		if (m_nAudioIndex >= 0) { //“Ù∆µ Ù–‘
+		if (m_nAudioIndex >= 0) { //Èü≥È¢ëÂ±ûÊÄß
 			//WXLogA(" %s Get Audio Info 222", __FUNCTION__);
 
 			m_pInfo->audiocount = 1;
-			m_pInfo->abitrate = m_pACtx->bit_rate; //“Ù∆µ¬Î¬ 
-			m_pInfo->samplerate = m_pACtx->sample_rate;//≤≈”–∆µ¬ 
-			m_pInfo->nb_channels = m_pACtx->channels;//…˘µ¿
+			m_pInfo->abitrate = m_pACtx->bit_rate; //Èü≥È¢ëÁ†ÅÁéá
+			m_pInfo->samplerate = m_pACtx->sample_rate;//ÊâçÊúâÈ¢ëÁéá
+			m_pInfo->nb_channels = m_pACtx->channels;//Â£∞ÈÅì
 			av_get_channel_layout_string(m_pInfo->channel_layout, sizeof(m_pInfo->channel_layout),
-				m_pACtx->channels, m_pACtx->channel_layout);//…˘µ¿—˘ Ω
-			strcpy(m_pInfo->acname, avcodec_get_name(m_pACtx->codec_id));//“Ù∆µ±‡¬Î
+				m_pACtx->channels, m_pACtx->channel_layout);//Â£∞ÈÅìÊ†∑Âºè
+			strcpy(m_pInfo->acname, avcodec_get_name(m_pACtx->codec_id));//Èü≥È¢ëÁºñÁ†Å
 		}
 
-		if (m_nVideoIndex >= 0) { // ”∆µ Ù–‘
+		if (m_nVideoIndex >= 0) { //ËßÜÈ¢ëÂ±ûÊÄß
 			//WXLogA(" %s Get Video Info 222", __FUNCTION__);
 
 			if ((m_pVCtx->codec_id != AV_CODEC_ID_GIF) &&
 				m_pVStream->disposition & AV_DISPOSITION_ATTACHED_PIC)
-				m_pInfo->videocount = 0; //“Ù∆µŒƒº˛∑‚√Ê£¨≤ª « ”∆µ
+				m_pInfo->videocount = 0; //Èü≥È¢ëÊñá‰ª∂Â∞ÅÈù¢Ôºå‰∏çÊòØËßÜÈ¢ë
 			else
 				m_pInfo->videocount = 1;
 			if (m_pInfo->videocount) {
-				m_pInfo->rotate = get_rotation(m_pVStream); //–˝◊™
-				m_pInfo->width = m_pVCtx->width; //øÌ∂»
-				m_pInfo->vbitrate = m_pVCtx->bit_rate; // ”∆µ¬Î¬ 
+				m_pInfo->rotate = get_rotation(m_pVStream); //ÊóãËΩ¨
+				m_pInfo->width = m_pVCtx->width; //ÂÆΩÂ∫¶
+				m_pInfo->vbitrate = m_pVCtx->bit_rate; //ËßÜÈ¢ëÁ†ÅÁéá
 				if (m_pInfo->vbitrate == 0) {
 					m_pInfo->vbitrate = m_pFormatContext->bit_rate;
-					//◊‹¬Î¬ ºı»•“Ù∆µ¬Î¬ 
+					//ÊÄªÁ†ÅÁéáÂáèÂéªÈü≥È¢ëÁ†ÅÁéá
 					m_pInfo->vbitrate -= m_pInfo->abitrate;
 				}
-				m_pInfo->framerate = av_q2d(av_guess_frame_rate(m_pFormatContext, m_pVStream, NULL));//÷°¬ 
-				strcpy(m_pInfo->fname, avcodec_get_name(m_pVCtx->codec_id));//“Ù∆µ±‡¬Î
-				double ratio = av_q2d(m_pVCtx->sample_aspect_ratio); //Àı∑≈±»¿˝
-				if (ratio > 1.0) { //Àı∑≈¥¶¿Ì
+				m_pInfo->framerate = av_q2d(av_guess_frame_rate(m_pFormatContext, m_pVStream, NULL));//Â∏ßÁéá
+				strcpy(m_pInfo->fname, avcodec_get_name(m_pVCtx->codec_id));//Èü≥È¢ëÁºñÁ†Å
+				double ratio = av_q2d(m_pVCtx->sample_aspect_ratio); //Áº©ÊîæÊØî‰æã
+				if (ratio > 1.0) { //Áº©ÊîæÂ§ÑÁêÜ
 					m_pInfo->width *= ratio;
 				}
-				//¥¶¿Ì∑÷±Ê¬ Œ™2µƒ±∂ ˝
+				//Â§ÑÁêÜÂàÜËæ®Áéá‰∏∫2ÁöÑÂÄçÊï∞
 				m_pInfo->width = m_pInfo->width / 2 * 2;
 				m_pInfo->height = m_pVCtx->height / 2 * 2;
 			}
 		}
-		
+
 		//JPEG EXIF
-		if (m_bReadImage) { 
+		if (m_bReadImage) {
 			Gdiplus::Bitmap bitmap(m_wstrSourceFile.c_str());
 			int width = bitmap.GetWidth();
 			int height = bitmap.GetHeight();
@@ -404,7 +406,7 @@ FFMS_Indexer::FFMS_Indexer(const char *Filename){
 					m_pInfo->rotate = 270;
 					break;
 				default:
-					// ’˝≥££¨≤ª–Ë“™–˝◊™
+					// Ê≠£Â∏∏Ôºå‰∏çÈúÄË¶ÅÊóãËΩ¨
 					break;
 				}
 			}
@@ -426,14 +428,14 @@ FFMS_Indexer::FFMS_Indexer(const char *Filename){
 			MediaInfoDLL::String frameratemode = MI.Get(MediaInfoDLL::Stream_Video, 0, L"FrameRate_Mode");
 			MediaInfoDLL::String scantype = MI.Get(MediaInfoDLL::Stream_Video, 0, L"ScanType");
 
-			if (m_pFormatContext->duration == 0) { // π”√Mediainfo ªÒµ√ ±º‰
+			if (m_pFormatContext->duration == 0) { //‰ΩøÁî®Mediainfo Ëé∑ÂæóÊó∂Èó¥
 				MediaInfoDLL::String Duration = MI.Get(MediaInfoDLL::Stream_General, 0, L"Duration");
 				int iduration = _wtoi(Duration.c_str());
 				m_pInfo->duration = 1000 * (int64_t)iduration;
 			}
 
-			(m_pInfo)->vfr = wcscmp(frameratemode.c_str(), L"VFR") == 0; // «∑ÒVFR
-			(m_pInfo)->interlaced = wcscmp(scantype.c_str(), L"Interlaced") == 0;// «∑ÒΩª¥Ì
+			(m_pInfo)->vfr = wcscmp(frameratemode.c_str(), L"VFR") == 0; //ÊòØÂê¶VFR
+			(m_pInfo)->interlaced = wcscmp(scantype.c_str(), L"Interlaced") == 0;//ÊòØÂê¶‰∫§Èîô
 			//Log_info("(info)->vfr:%d", (info)->vfr);
 
 			MI.Close();
@@ -441,7 +443,7 @@ FFMS_Indexer::FFMS_Indexer(const char *Filename){
 
 
 		//WXLogA(" %s CalculateFileSignature", __FUNCTION__);
-		FFMS_Index::CalculateFileSignature(Filename, &Filesize, Digest);//º∆À„Œƒº˛≥§∂»∫ÕSHA÷µ
+		FFMS_Index::CalculateFileSignature(Filename, &Filesize, Digest);//ËÆ°ÁÆóÊñá‰ª∂ÈïøÂ∫¶ÂíåSHAÂÄº
 
 		if (m_nAudioIndex >= 0) {
 			m_pDecodeAudioFrame = av_frame_alloc();
@@ -455,34 +457,37 @@ FFMS_Indexer::FFMS_Indexer(const char *Filename){
 
 
 		//WXLogA(" %s OK", __FUNCTION__);
-    } catch (...) {
-        Free();
-        throw;
-    }
+	}
+	catch (...) {
+		Free();
+		throw;
+	}
 }
 
-uint32_t FFMS_Indexer::IndexAudioPacket(int Track, AVPacket *Packet, SharedAVContext &Context, FFMS_Index &TrackIndices) {
-    AVCodecContext *CodecContext = Context.m_pCtx;
-    int64_t StartSample = Context.m_nCurrentSample;
-    int Ret = avcodec_send_packet(CodecContext, Packet);
-    if (Ret != 0) {
-        if (ErrorHandling == FFMS_IEH_ABORT) {
-            throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_DECODING, "Audio decoding error");
-        } else if (ErrorHandling == FFMS_IEH_CLEAR_TRACK) {
-            //TrackIndices[Track].clear();
-            //justinyin ƒ≥–©mp3Œƒº˛µƒÕ∑º∏∏ˆpacket µ˜”√avcodec_send_packet ª· ß∞‹,
+uint32_t FFMS_Indexer::IndexAudioPacket(int Track, AVPacket* Packet, SharedAVContext& Context, FFMS_Index& TrackIndices) {
+	AVCodecContext* CodecContext = Context.m_pCtx;
+	int64_t StartSample = Context.m_nCurrentSample;
+	int Ret = avcodec_send_packet(CodecContext, Packet);
+	if (Ret != 0) {
+		if (ErrorHandling == FFMS_IEH_ABORT) {
+			throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_DECODING, "Audio decoding error");
+		}
+		else if (ErrorHandling == FFMS_IEH_CLEAR_TRACK) {
+			//TrackIndices[Track].clear();
+			//justinyin Êüê‰∫õmp3Êñá‰ª∂ÁöÑÂ§¥Âá†‰∏™packet Ë∞ÉÁî®avcodec_send_packet ‰ºöÂ§±Ë¥•,
 			//m_IndexMask.erase(Track);
 			//Log_info("ErrorHandling: pts:%d, size:%d",Packet->pts, Packet->size);
-        } else if (ErrorHandling == FFMS_IEH_STOP_TRACK) {
-            m_IndexMask.erase(Track);
-        }
-    }
+		}
+		else if (ErrorHandling == FFMS_IEH_STOP_TRACK) {
+			m_IndexMask.erase(Track);
+		}
+	}
 
-    while (true) {
-        av_frame_unref(m_pDecodeAudioFrame);
-        Ret = avcodec_receive_frame(CodecContext, m_pDecodeAudioFrame);
-        if (Ret == 0) {
-			m_bDecodeAudio = true;//Ω‚¬ÎΩ‚¬Î±Íº«
+	while (true) {
+		av_frame_unref(m_pDecodeAudioFrame);
+		Ret = avcodec_receive_frame(CodecContext, m_pDecodeAudioFrame);
+		if (Ret == 0) {
+			m_bDecodeAudio = true;//Ëß£Á†ÅËß£Á†ÅÊ†áËÆ∞
 
 			try
 			{
@@ -493,126 +498,133 @@ uint32_t FFMS_Indexer::IndexAudioPacket(int Track, AVPacket *Packet, SharedAVCon
 			{
 				break;
 			}
-            
-        } else if (Ret == AVERROR_EOF || Ret == AVERROR(EAGAIN)) {
-            break;
-        } else {
-            if (ErrorHandling == FFMS_IEH_ABORT) {
-                throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_DECODING, "Audio decoding error");
-            } else if (ErrorHandling == FFMS_IEH_CLEAR_TRACK) {
-                //TrackIndices[Track].clear();
-                //m_IndexMask.erase(Track);
-            } else if (ErrorHandling == FFMS_IEH_STOP_TRACK) {
-                m_IndexMask.erase(Track);
-            }
-        }
-    }
 
-    return static_cast<uint32_t>(Context.m_nCurrentSample - StartSample);
+		}
+		else if (Ret == AVERROR_EOF || Ret == AVERROR(EAGAIN)) {
+			break;
+		}
+		else {
+			if (ErrorHandling == FFMS_IEH_ABORT) {
+				throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_DECODING, "Audio decoding error");
+			}
+			else if (ErrorHandling == FFMS_IEH_CLEAR_TRACK) {
+				//TrackIndices[Track].clear();
+				//m_IndexMask.erase(Track);
+			}
+			else if (ErrorHandling == FFMS_IEH_STOP_TRACK) {
+				m_IndexMask.erase(Track);
+			}
+		}
+	}
+
+	return static_cast<uint32_t>(Context.m_nCurrentSample - StartSample);
 }
 
-void FFMS_Indexer::CheckAudioProperties(int Track, AVCodecContext *Context) {
-    auto it = LastAudioProperties.find(Track);
-    if (it == LastAudioProperties.end()) {
-        FFMS_AudioProperties &AP = LastAudioProperties[Track];
-        AP.SampleRate = Context->sample_rate;
-        AP.SampleFormat = Context->sample_fmt;
-        AP.Channels = Context->channels;
-    } else if (it->second.SampleRate != Context->sample_rate ||
-        it->second.SampleFormat != Context->sample_fmt ||
-        it->second.Channels != Context->channels) {
-        std::ostringstream buf;
-        buf <<
-            "Audio format change detected. This is currently unsupported."
-            << " Channels: " << it->second.Channels << " -> " << Context->channels << ";"
-            << " Sample rate: " << it->second.SampleRate << " -> " << Context->sample_rate << ";"
-            << " Sample format: " << av_get_sample_fmt_name((AVSampleFormat)it->second.SampleFormat) << " -> "
-            << av_get_sample_fmt_name(Context->sample_fmt);
-        throw FFMS_Exception(FFMS_ERROR_UNSUPPORTED, FFMS_ERROR_DECODING, buf.str());
-    }
+void FFMS_Indexer::CheckAudioProperties(int Track, AVCodecContext* Context) {
+	auto it = LastAudioProperties.find(Track);
+	if (it == LastAudioProperties.end()) {
+		FFMS_AudioProperties& AP = LastAudioProperties[Track];
+		AP.SampleRate = Context->sample_rate;
+		AP.SampleFormat = Context->sample_fmt;
+		AP.Channels = Context->channels;
+	}
+	else if (it->second.SampleRate != Context->sample_rate ||
+		it->second.SampleFormat != Context->sample_fmt ||
+		it->second.Channels != Context->channels) {
+		std::ostringstream buf;
+		buf <<
+			"Audio format change detected. This is currently unsupported."
+			<< " Channels: " << it->second.Channels << " -> " << Context->channels << ";"
+			<< " Sample rate: " << it->second.SampleRate << " -> " << Context->sample_rate << ";"
+			<< " Sample format: " << av_get_sample_fmt_name((AVSampleFormat)it->second.SampleFormat) << " -> "
+			<< av_get_sample_fmt_name(Context->sample_fmt);
+		throw FFMS_Exception(FFMS_ERROR_UNSUPPORTED, FFMS_ERROR_DECODING, buf.str());
+	}
 }
 
-void FFMS_Indexer::ParseVideoPacket(SharedAVContext &VideoContext, AVPacket &pkt, int *RepeatPict,
-                                    int *FrameType, bool *Invisible, enum AVPictureStructure *LastPicStruct) {
-    if (VideoContext.m_Parser) {
-        uint8_t *OB;
-        int OBSize;
-        bool IncompleteFrame = false;
+void FFMS_Indexer::ParseVideoPacket(SharedAVContext& VideoContext, AVPacket& pkt, int* RepeatPict,
+	int* FrameType, bool* Invisible, enum AVPictureStructure* LastPicStruct) {
+	if (VideoContext.m_Parser) {
+		uint8_t* OB;
+		int OBSize;
+		bool IncompleteFrame = false;
 
-        av_parser_parse2(VideoContext.m_Parser,
-            VideoContext.m_pCtx,
-            &OB, &OBSize,
-            pkt.data, pkt.size,
-            pkt.pts, pkt.dts, pkt.pos);
+		av_parser_parse2(VideoContext.m_Parser,
+			VideoContext.m_pCtx,
+			&OB, &OBSize,
+			pkt.data, pkt.size,
+			pkt.pts, pkt.dts, pkt.pos);
 
-        // H.264 (PAFF) and HEVC may have one field per packet, so we need to track
-        // when we have a full or half frame available, and mark one of them as
-        // hidden, so we do not get duplicate frames.
-        if (VideoContext.m_pCtx->codec_id == AV_CODEC_ID_H264 ||
-            VideoContext.m_pCtx->codec_id == AV_CODEC_ID_HEVC) {
-            if ((VideoContext.m_Parser->picture_structure == AV_PICTURE_STRUCTURE_TOP_FIELD &&
-                 *LastPicStruct == AV_PICTURE_STRUCTURE_BOTTOM_FIELD) ||
-                (VideoContext.m_Parser->picture_structure == AV_PICTURE_STRUCTURE_BOTTOM_FIELD &&
-                 *LastPicStruct == AV_PICTURE_STRUCTURE_TOP_FIELD)) {
-                IncompleteFrame = true;
-                *LastPicStruct = AV_PICTURE_STRUCTURE_UNKNOWN;
-            } else {
-                *LastPicStruct = VideoContext.m_Parser->picture_structure;
-            }
-        }
+		// H.264 (PAFF) and HEVC may have one field per packet, so we need to track
+		// when we have a full or half frame available, and mark one of them as
+		// hidden, so we do not get duplicate frames.
+		if (VideoContext.m_pCtx->codec_id == AV_CODEC_ID_H264 ||
+			VideoContext.m_pCtx->codec_id == AV_CODEC_ID_HEVC) {
+			if ((VideoContext.m_Parser->picture_structure == AV_PICTURE_STRUCTURE_TOP_FIELD &&
+				*LastPicStruct == AV_PICTURE_STRUCTURE_BOTTOM_FIELD) ||
+				(VideoContext.m_Parser->picture_structure == AV_PICTURE_STRUCTURE_BOTTOM_FIELD &&
+					*LastPicStruct == AV_PICTURE_STRUCTURE_TOP_FIELD)) {
+				IncompleteFrame = true;
+				*LastPicStruct = AV_PICTURE_STRUCTURE_UNKNOWN;
+			}
+			else {
+				*LastPicStruct = VideoContext.m_Parser->picture_structure;
+			}
+		}
 
-        *RepeatPict = VideoContext.m_Parser->repeat_pict;
-        *FrameType = VideoContext.m_Parser->pict_type;
-        *Invisible = (IncompleteFrame || VideoContext.m_Parser->repeat_pict < 0 || (pkt.flags & AV_PKT_FLAG_DISCARD));
-    } else {
-        *Invisible = !!(pkt.flags & AV_PKT_FLAG_DISCARD);
-    }
+		*RepeatPict = VideoContext.m_Parser->repeat_pict;
+		*FrameType = VideoContext.m_Parser->pict_type;
+		*Invisible = (IncompleteFrame || VideoContext.m_Parser->repeat_pict < 0 || (pkt.flags & AV_PKT_FLAG_DISCARD));
+	}
+	else {
+		*Invisible = !!(pkt.flags & AV_PKT_FLAG_DISCARD);
+	}
 
-    if (VideoContext.m_pCtx->codec_id == AV_CODEC_ID_VP8)
-        ParseVP8(pkt.data[0], Invisible, FrameType);
-    else if (VideoContext.m_pCtx->codec_id == AV_CODEC_ID_VP9)
-        ParseVP9(pkt.data[0], Invisible, FrameType);
+	if (VideoContext.m_pCtx->codec_id == AV_CODEC_ID_VP8)
+		ParseVP8(pkt.data[0], Invisible, FrameType);
+	else if (VideoContext.m_pCtx->codec_id == AV_CODEC_ID_VP9)
+		ParseVP9(pkt.data[0], Invisible, FrameType);
 }
 
 void FFMS_Indexer::Free() {
-    av_frame_free(&m_pDecodeAudioFrame);
+	av_frame_free(&m_pDecodeAudioFrame);
 	av_frame_free(&m_pDecodeVideoFrame);
-    avformat_close_input(&m_pFormatContext);
+	avformat_close_input(&m_pFormatContext);
 }
 
 FFMS_Indexer::~FFMS_Indexer() {
-    Free();
+	Free();
 }
 
 int FFMS_Indexer::GetNumberOfTracks() {
-    return m_pFormatContext->nb_streams;
+	return m_pFormatContext->nb_streams;
 }
 
 FFMS_TrackType FFMS_Indexer::GetTrackType(int Track) {
-    return static_cast<FFMS_TrackType>(m_pFormatContext->streams[Track]->codecpar->codec_type);
+	return static_cast<FFMS_TrackType>(m_pFormatContext->streams[Track]->codecpar->codec_type);
 }
 
-FFMS_Index *FFMS_Indexer::DoIndexing() {
-    SharedAVContext* pVCtx = nullptr; //“ïÓlΩ‚¥a
-	SharedAVContext* pACtx = nullptr; //“ÙÓlΩ‚¥a
+FFMS_Index* FFMS_Indexer::DoIndexing() {
+	SharedAVContext* pVCtx = nullptr; //Ë¶ñÈ†ªËß£Á¢º
+	SharedAVContext* pACtx = nullptr; //Èü≥È†ªËß£Á¢º
 
-    auto TrackIndices = make_unique<FFMS_Index>(Filesize, Digest, ErrorHandling);
-    bool UseDTS = !strcmp(m_pFormatContext->iformat->name, "mpeg") || !strcmp(m_pFormatContext->iformat->name, "mpegts") || !strcmp(m_pFormatContext->iformat->name, "mpegtsraw") || !strcmp(m_pFormatContext->iformat->name, "nuv");
+	auto TrackIndices = make_unique<FFMS_Index>(Filesize, Digest, ErrorHandling);
+	bool UseDTS = !strcmp(m_pFormatContext->iformat->name, "mpeg") || !strcmp(m_pFormatContext->iformat->name, "mpegts") || !strcmp(m_pFormatContext->iformat->name, "mpegtsraw") || !strcmp(m_pFormatContext->iformat->name, "nuv");
 
 
 	std::vector<SharedAVContext> AVContexts(m_pFormatContext->nb_streams);
 
-    for (unsigned int i = 0; i < m_pFormatContext->nb_streams; i++) {
-        TrackIndices->emplace_back((int64_t)m_pFormatContext->streams[i]->time_base.num * 1000,
+	for (unsigned int i = 0; i < m_pFormatContext->nb_streams; i++) {
+		TrackIndices->emplace_back((int64_t)m_pFormatContext->streams[i]->time_base.num * 1000,
 			m_pFormatContext->streams[i]->time_base.den,
-            static_cast<FFMS_TrackType>(m_pFormatContext->streams[i]->codecpar->codec_type),
-            !!(m_pFormatContext->iformat->flags & AVFMT_TS_DISCONT),
-            UseDTS);
+			static_cast<FFMS_TrackType>(m_pFormatContext->streams[i]->codecpar->codec_type),
+			!!(m_pFormatContext->iformat->flags & AVFMT_TS_DISCONT),
+			UseDTS);
 
 		if (m_IndexMask.count(i)) {
 			if (i == m_nVideoIndex) {
 				AVCodec* VideoCodec = nullptr;
-				
+
 				if (m_pVCtx && m_pVCtx->codec_id == AV_CODEC_ID_VP8) {
 					VideoCodec = avcodec_find_decoder_by_name("libvpx");
 				}
@@ -624,14 +636,14 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 					VideoCodec = avcodec_find_decoder(m_pVCtx->codec_id);
 				}
 
-				if (!VideoCodec) { //√ª”–∫œ  µƒΩ‚¬Î∆˜
+				if (!VideoCodec) { //Ê≤°ÊúâÂêàÈÄÇÁöÑËß£Á†ÅÂô®
 					throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_ALLOCATION_FAILED,
 						"Could not find video codec context");
 				}
 
 				pVCtx = &AVContexts[m_nVideoIndex];
 				pVCtx->m_pCtx = avcodec_alloc_context3(VideoCodec);
-				if (pVCtx->m_pCtx == nullptr) //¥¥Ω®Ω‚¬Î∆˜ ß∞‹
+				if (pVCtx->m_pCtx == nullptr) //ÂàõÂª∫Ëß£Á†ÅÂô®Â§±Ë¥•
 					throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_ALLOCATION_FAILED,
 						"Could not allocate video codec context");
 
@@ -650,17 +662,17 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 				//AVContexts.push_back(&pVCtx);
 			}
 			else if (i == m_nAudioIndex) {
-				AVCodec* AudioCodec = avcodec_find_decoder(m_pACtx->codec_id); //“Ù∆µΩ‚¬Î∆˜
+				AVCodec* AudioCodec = avcodec_find_decoder(m_pACtx->codec_id); //Èü≥È¢ëËß£Á†ÅÂô®
 				if (AudioCodec == nullptr)
 					throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_UNSUPPORTED,
 						"Audio codec not found");
 				pACtx = &AVContexts[m_nAudioIndex];
-				pACtx->m_pCtx = avcodec_alloc_context3(AudioCodec);  //¥¥Ω®“Ù∆µΩ‚¬Î∆˜ ß∞‹
+				pACtx->m_pCtx = avcodec_alloc_context3(AudioCodec);  //ÂàõÂª∫Èü≥È¢ëËß£Á†ÅÂô®Â§±Ë¥•
 				if (pACtx->m_pCtx == nullptr)
 					throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_ALLOCATION_FAILED,
 						"Could not allocate audio codec context");
 
-				if (avcodec_parameters_to_context(pACtx->m_pCtx, m_pAStream->codecpar) < 0) //≥ı ºªØ“Ù∆µΩ‚¬Î∆˜
+				if (avcodec_parameters_to_context(pACtx->m_pCtx, m_pAStream->codecpar) < 0) //ÂàùÂßãÂåñÈü≥È¢ëËß£Á†ÅÂô®
 					throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_DECODING,
 						"Could not copy audio codec parameters");
 
@@ -679,13 +691,13 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 
 		//FFMS_Track &TrackInfo = (*TrackIndices)[i];
 		(*TrackIndices)[i].FPSDenominator = m_pFormatContext->streams[i]->time_base.num;
-		(*TrackIndices)[i].FPSNumerator   = m_pFormatContext->streams[i]->time_base.den;
-    }
-		
-    std::vector<int64_t> LastValidTS(m_pFormatContext->nb_streams, AV_NOPTS_VALUE);
+		(*TrackIndices)[i].FPSNumerator = m_pFormatContext->streams[i]->time_base.den;
+	}
 
-    int64_t filesize = avio_size(m_pFormatContext->pb);
-    enum AVPictureStructure LastPicStruct = AV_PICTURE_STRUCTURE_UNKNOWN;
+	std::vector<int64_t> LastValidTS(m_pFormatContext->nb_streams, AV_NOPTS_VALUE);
+
+	int64_t filesize = avio_size(m_pFormatContext->pb);
+	enum AVPictureStructure LastPicStruct = AV_PICTURE_STRUCTURE_UNKNOWN;
 
 	uint32_t SampleCount = 0;
 
@@ -694,88 +706,90 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 
 	AVPacket Packet;
 
-	//∂¡»°√ø“ª÷°
-    while (m_bReadFile) {
-		
+	//ËØªÂèñÊØè‰∏ÄÂ∏ß
+	while (m_bReadFile) {
+
 		InitNullPacket(Packet);
 		int err = av_read_frame(m_pFormatContext, &Packet); //DoIndexing
 		if (err < 0) {
 			break;
 		}
 
-        if (!m_IndexMask.count(Packet.stream_index)) {  //≤ª–Ë“™Ω‚Œˆµƒ“Ù ”∆µ∞¸
-            av_packet_unref(&Packet);
-            continue;
-        }
+		if (!m_IndexMask.count(Packet.stream_index)) {  //‰∏çÈúÄË¶ÅËß£ÊûêÁöÑÈü≥ËßÜÈ¢ëÂåÖ
+			av_packet_unref(&Packet);
+			continue;
+		}
 
-        int Track = Packet.stream_index;
-	   
-       // FFMS_Track &TrackInfo = (*TrackIndices)[Track];
-        bool KeyFrame = !!(Packet.flags & AV_PKT_FLAG_KEY);// «∑Òπÿº¸÷°
-        ReadTS(Packet, LastValidTS[Track], (*TrackIndices)[Track].UseDTS);
+		int Track = Packet.stream_index;
+
+		// FFMS_Track &TrackInfo = (*TrackIndices)[Track];
+		bool KeyFrame = !!(Packet.flags & AV_PKT_FLAG_KEY);//ÊòØÂê¶ÂÖ≥ÈîÆÂ∏ß
+		ReadTS(Packet, LastValidTS[Track], (*TrackIndices)[Track].UseDTS);
 		int64_t PTS = (*TrackIndices)[Track].UseDTS ? Packet.dts : Packet.pts;
 
-        if (Track == m_nVideoIndex) {
-  
-			m_tsVideoMax = FFMAX(PTS, m_tsVideoMax);//º∆À„ ”∆µ≥§∂»
+		if (Track == m_nVideoIndex) {
 
-            if (PTS == AV_NOPTS_VALUE) {
-                bool HasAltRefs = (m_pFormatContext->streams[Track]->codecpar->codec_id == AV_CODEC_ID_VP8 ||
-                                   m_pFormatContext->streams[Track]->codecpar->codec_id == AV_CODEC_ID_VP9);
+			m_tsVideoMax = FFMAX(PTS, m_tsVideoMax);//ËÆ°ÁÆóËßÜÈ¢ëÈïøÂ∫¶
+
+			if (PTS == AV_NOPTS_VALUE) {
+				bool HasAltRefs = (m_pFormatContext->streams[Track]->codecpar->codec_id == AV_CODEC_ID_VP8 ||
+					m_pFormatContext->streams[Track]->codecpar->codec_id == AV_CODEC_ID_VP9);
 				if (Packet.duration == 0 && !HasAltRefs)
 				{
 					continue;
 				}
 
-                if ((*TrackIndices)[Track].empty())
-                    PTS = 0;
-                else
-                    PTS = (*TrackIndices)[Track].back().PTS + (*TrackIndices)[Track].LastDuration;
+				if ((*TrackIndices)[Track].empty())
+					PTS = 0;
+				else
+					PTS = (*TrackIndices)[Track].back().PTS + (*TrackIndices)[Track].LastDuration;
 
 				(*TrackIndices)[Track].HasTS = false;
-            }
+			}
 
-            int RepeatPict = -1;
-            int FrameType = 0;
-            bool Invisible = false;
-            ParseVideoPacket(*pVCtx, Packet, &RepeatPict, &FrameType, &Invisible, &LastPicStruct);
+			int RepeatPict = -1;
+			int FrameType = 0;
+			bool Invisible = false;
+			ParseVideoPacket(*pVCtx, Packet, &RepeatPict, &FrameType, &Invisible, &LastPicStruct);
 
 			(*TrackIndices)[Track].AddVideoFrame(PTS, RepeatPict, KeyFrame, FrameType, Packet.pos, Invisible);
 
 			if (!m_bDecodeVideo && m_nVideoCount < 100) {
-				m_nVideoCount++;//100÷° ”∆µΩ‚¬Î≤‚ ‘
+				m_nVideoCount++;//100Â∏ßËßÜÈ¢ëËß£Á†ÅÊµãËØï
 				int ret = avcodec_send_packet(pVCtx->m_pCtx, &Packet);
 				if (ret >= 0) {
 					ret = avcodec_receive_frame(pVCtx->m_pCtx, m_pDecodeVideoFrame);
 					if (ret >= 0) {
-						// Ω‚¬Î≥…π¶
+						// Ëß£Á†ÅÊàêÂäü
 						m_bDecodeVideo = true;
 					}
-				}else {
-					//Ω‚¬Î ß∞‹£°£°
+				}
+				else {
+					//Ëß£Á†ÅÂ§±Ë¥•ÔºÅÔºÅ
 					throw FFMS_Exception(FFMS_ERROR_CODEC, FFMS_ERROR_DECODING,
 						"DoIndexing avcodec_send_packet error");
 				}
 			}
-	      } else if (Track ==m_nAudioIndex ) {
-			  m_tsAudioMax = FFMAX(PTS, m_tsAudioMax); //º∆À„“Ù∆µ≥§∂»
+		}
+		else if (Track == m_nAudioIndex) {
+			m_tsAudioMax = FFMAX(PTS, m_tsAudioMax); //ËÆ°ÁÆóÈü≥È¢ëÈïøÂ∫¶
 
-            if (LastValidTS[Track] != AV_NOPTS_VALUE)
+			if (LastValidTS[Track] != AV_NOPTS_VALUE)
 				(*TrackIndices)[Track].HasTS = true;
 
-            int64_t StartSample = pACtx->m_nCurrentSample;
+			int64_t StartSample = pACtx->m_nCurrentSample;
 			SampleCount = IndexAudioPacket(Track, &Packet, *pACtx, *TrackIndices);
 			pACtx->m_nCurrentSample += SampleCount;
-			
+
 			(*TrackIndices)[Track].SampleRate = pACtx->m_pCtx->sample_rate;
-		
+
 			(*TrackIndices)[Track].AddAudioFrame(LastValidTS[Track], StartSample, SampleCount, KeyFrame, Packet.pos, Packet.flags & AV_PKT_FLAG_DISCARD);
-        }
+		}
 
 		(*TrackIndices)[Track].LastDuration = Packet.duration;
 
-        av_packet_unref(&Packet);
-    }
+		av_packet_unref(&Packet);
+	}
 
 	if (m_pInfo->videocount > 0 && !m_bDecodeVideo) {
 		m_pInfo->videocount = 0;
@@ -796,14 +810,14 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 	int64_t tsMax = FFMAX(m_tsVideoMax, m_tsAudioMax);
 	int64_t tsDelay = abs(m_pInfo->duration - tsMax);
 	if (tsDelay > 5 * 1000000 && tsMax > 0) {
-		//¥”Œƒº˛Õ∑∂¡»°µƒ ±º‰≥§∂»∫Õ¥”Ω‚¬Îπ˝≥Ã÷–∂¡»°µƒ÷µ≤ª“ª—˘
+		//‰ªéÊñá‰ª∂Â§¥ËØªÂèñÁöÑÊó∂Èó¥ÈïøÂ∫¶Âíå‰ªéËß£Á†ÅËøáÁ®ã‰∏≠ËØªÂèñÁöÑÂÄº‰∏ç‰∏ÄÊ†∑
 		WXLogA("Error duration[m_pInfo->duration=%lld Audio=%lld Video=%lld]",
 			m_pInfo->duration, m_tsAudioMax, m_tsVideoMax);
 		m_pInfo->duration = tsMax;
 	}
 
 	FFMS_AudioProperties AP = {};
-	int videoTrack=-1;
+	int videoTrack = -1;
 
 	for (unsigned int Track = 0; Track < m_pFormatContext->nb_streams; Track++) {
 		if (m_pFormatContext->streams[Track]->codec->codec_type == AVMEDIA_TYPE_VIDEO && !(m_pVStream->disposition & AV_DISPOSITION_ATTACHED_PIC))
@@ -812,12 +826,12 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 
 			int TotalFrames = 0;
 			FFMS_Track Frames = (*TrackIndices)[Track];
-			int64_t mindts=-1, maxdts=-1;
+			int64_t mindts = -1, maxdts = -1;
 
 			for (size_t i = 0; i < Frames.size(); i++)
 				if (!Frames[i].Hidden)
 				{
-					if (mindts==-1|| mindts> Frames[i].PTS)
+					if (mindts == -1 || mindts > Frames[i].PTS)
 					{
 						mindts = Frames[i].PTS;
 					}
@@ -827,21 +841,21 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 					}
 					TotalFrames++;
 				}
-			
+
 			if (TotalFrames >= 2) {
 				//double PTSDiff = (double)((*TrackIndices)[Track].back().PTS - (*TrackIndices)[Track].front().PTS);
 				double PTSDiff = (double)(maxdts - mindts);
 				double TD = (double)((*TrackIndices)[Track].TB.Den);
 				double TN = (double)((*TrackIndices)[Track].TB.Num);
-				den= (unsigned int)(PTSDiff * TN / TD * 1000.0 / (TotalFrames - 1));
-				num= 1000000;
+				den = (unsigned int)(PTSDiff * TN / TD * 1000.0 / (TotalFrames - 1));
+				num = 1000000;
 			}
-			CorrectRationalFramerate( &num, &den);
+			CorrectRationalFramerate(&num, &den);
 
 			(*TrackIndices)[Track].FPSDenominator = den;
 			(*TrackIndices)[Track].FPSNumerator = num;
 			AVRational r_frame_rate = av_guess_frame_rate(m_pFormatContext, m_pFormatContext->streams[Track], NULL);
-			if (r_frame_rate.num>0&& r_frame_rate.den>0&& den==0)
+			if (r_frame_rate.num > 0 && r_frame_rate.den > 0 && den == 0)
 			{
 				(*TrackIndices)[Track].FPSDenominator = r_frame_rate.den;
 				(*TrackIndices)[Track].FPSNumerator = r_frame_rate.num;
@@ -851,7 +865,7 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 
 			(*TrackIndices)[Track].Width = m_pFormatContext->streams[Track]->codec->width;
 			(*TrackIndices)[Track].Height = m_pFormatContext->streams[Track]->codec->height;
-			
+
 			(*TrackIndices)[Track].Pix_Fmt = m_pDecodeVideoFrame->format;// m_pFormatContext->streams[Track]->codec->pix_fmt;
 
 			(*TrackIndices)[Track].SARNum = m_pFormatContext->streams[Track]->codec->sample_aspect_ratio.num;
@@ -861,18 +875,18 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 		}
 		else if (m_pFormatContext->streams[Track]->codec->codec_type == AVMEDIA_TYPE_AUDIO)
 		{
-			if (m_nAudioIndex <0)
+			if (m_nAudioIndex < 0)
 			{
 				m_nAudioIndex = Track;
 			}
-			
+
 		}
-		
+
 	}
-	
+
 	if (m_nAudioIndex >= 0)
 	{
-		AVCodec *Codec = avcodec_find_decoder(m_pFormatContext->streams[m_nAudioIndex]->codecpar->codec_id);
+		AVCodec* Codec = avcodec_find_decoder(m_pFormatContext->streams[m_nAudioIndex]->codecpar->codec_id);
 		if (avcodec_open2(m_pFormatContext->streams[m_nAudioIndex]->codec, Codec, nullptr) >= 0) { //indexing
 			FillAP(AP, m_pFormatContext->streams[m_nAudioIndex]->codec, (*TrackIndices)[m_nAudioIndex]);
 
@@ -899,23 +913,23 @@ FFMS_Index *FFMS_Indexer::DoIndexing() {
 		}
 	}
 
-    TrackIndices->Finalize(AVContexts);
+	TrackIndices->Finalize(AVContexts);
 
 	//WXLogA("memcpy MI");
-	memcpy(&(*TrackIndices).m_MediaInfo ,m_pInfo, sizeof(MediaInfomation));
-	
-	if (AP.SampleRate==0|| AP.BitsPerSample==0 ||(m_nAudioIndex >= 0&& (*TrackIndices)[m_nAudioIndex].size()<1)  )
+	memcpy(&(*TrackIndices).m_MediaInfo, m_pInfo, sizeof(MediaInfomation));
+
+	if (AP.SampleRate == 0 || AP.BitsPerSample == 0 || (m_nAudioIndex >= 0 && (*TrackIndices)[m_nAudioIndex].size() < 1))
 	{
 		(*TrackIndices).m_MediaInfo.audiocount = 0;
 	}
-    return TrackIndices.release();
+	return TrackIndices.release();
 }
 
-void FFMS_Indexer::ReadTS(const AVPacket &Packet, int64_t &TS, bool &UseDTS) {
-    if (!UseDTS && Packet.pts != AV_NOPTS_VALUE)
-        TS = Packet.pts;
-    if (TS == AV_NOPTS_VALUE)
-        UseDTS = true;
-    if (UseDTS && Packet.dts != AV_NOPTS_VALUE)
-        TS = Packet.dts;
+void FFMS_Indexer::ReadTS(const AVPacket& Packet, int64_t& TS, bool& UseDTS) {
+	if (!UseDTS && Packet.pts != AV_NOPTS_VALUE)
+		TS = Packet.pts;
+	if (TS == AV_NOPTS_VALUE)
+		UseDTS = true;
+	if (UseDTS && Packet.dts != AV_NOPTS_VALUE)
+		TS = Packet.dts;
 }

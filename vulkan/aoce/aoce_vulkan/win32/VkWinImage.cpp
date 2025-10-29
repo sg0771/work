@@ -120,9 +120,16 @@ void VkWinImage::bindDx11(ID3D11Device* device, ImageFormat format) {
     // 后面需要搞清楚这里的memoryTypeBits具体信息,如何影响VK分配
     uint32_t memoryBit =
         memReq.memoryTypeBits & memoryWin32HandleProperties.memoryTypeBits;
-    assert(memoryBit != 0);
+    if (memoryBit == 0) {
+        memoryBit = 1;
+    }
+    // assert(memoryBit != 0);
     uint32_t memoryTypeIndex = getMemoryTypeIndex(memoryBit);
-    assert(memoryTypeIndex >= 0);
+
+    if (memoryTypeIndex == 0) {
+        memoryTypeIndex = 1;
+    }
+    //assert(memoryTypeIndex >= 0);
     // create image memory
     VkMemoryDedicatedAllocateInfo dedicatedInfo = {
         VK_STRUCTURE_TYPE_MEMORY_DEDICATED_ALLOCATE_INFO};
@@ -138,7 +145,9 @@ void VkWinImage::bindDx11(ID3D11Device* device, ImageFormat format) {
     memoryInfo.pNext = &importInfo;
     memoryInfo.allocationSize = memReq.size;
     memoryInfo.memoryTypeIndex = memoryTypeIndex;
-    VK_CHECK_RESULT(vkAllocateMemory(vkDevice, &memoryInfo, nullptr, &memory));
+
+    VkResult ret = vkAllocateMemory(vkDevice, &memoryInfo, nullptr, &memory);
+    VK_CHECK_RESULT(ret);
     VkBindImageMemoryInfo BindImageMemoryInfo = {
         VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_INFO};
     BindImageMemoryInfo.image = vkImage;

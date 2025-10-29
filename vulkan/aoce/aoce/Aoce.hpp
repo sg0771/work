@@ -33,7 +33,7 @@ void removeItem(std::vector<T>& vect, const T& t) {
 };
 
 // UE4 std::find_if not find
-#if WIN32
+#if _WIN32
 template <typename T>
 void removeItem(std::vector<T>& vect, std::function<bool(T t)> pred) {
     if (vect.empty()) {
@@ -117,7 +117,7 @@ ACOE_EXPORT std::string getAocePath();
 ACOE_EXPORT void getWavHeader(std::vector<uint8_t>& header, uint32_t dataSize,
                               const AudioFormat& audioDesc);
 
-#if WIN32
+#if _WIN32
 ACOE_EXPORT bool existsFile(const wchar_t* filePath);
 
 ACOE_EXPORT bool loadFileBinary(const wchar_t* filePath,

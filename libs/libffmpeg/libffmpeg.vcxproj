@@ -902,7 +902,6 @@
     <ClInclude Include="MediaInfoDLL.h" />
     <ClInclude Include="unistd.h" />
     <ClInclude Include="WXBase.h" />
-    <ClInclude Include="WXLog.h" />
     <ClInclude Include="WXMediaDefines.h" />
   </ItemGroup>
   <ItemGroup>
@@ -2968,7 +2967,6 @@
     <ClCompile Include="libswscale\x86\swscale.x86.c" />
     <ClCompile Include="libswscale\x86\yuv2rgb.x86.c" />
     <ClCompile Include="libswscale\yuv2rgb.c" />
-    <ClCompile Include="WXLog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <NASM Include="libavcodec\x86\aacencdsp.x86.asm" />

@@ -14,7 +14,7 @@ struct android_app;
 
 namespace aoce {
 // struct android_app;
-// #if WIN32
+// #if _WIN32
 #define AOCE_MANAGER_OBJ(OBJTYPE, OBJCLASS)                        \
     typedef std::unique_ptr<OBJCLASS> OBJCLASS##Ptr;               \
                                                                    \

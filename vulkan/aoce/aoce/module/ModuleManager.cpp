@@ -2,7 +2,7 @@
 
 #include "../AoceManager.hpp"
 
-#if WIN32
+#if _WIN32
 #include <Shlwapi.h>
 #include <Windows.h>
 #include <dbghelp.h>
@@ -53,7 +53,7 @@ void ModuleManager::loadModule(const char* name) {
         moduleInfo->module = moduleInfo->onLoadEvent();
     } else {
         loadModuleAction loadAction = nullptr;
-#if WIN32
+#if _WIN32
         char temp[512] = {0};
         GetDllDirectoryA(512, temp);
         char sz[512] = {0};
@@ -126,7 +126,7 @@ void ModuleManager::unloadModule(const char* name) {
         moduleInfo->module = nullptr;
     }
     if (moduleInfo->handle) {
-#if WIN32
+#if _WIN32
         FreeLibrary((HMODULE)moduleInfo->handle);
 #elif __ANDROID__
         dlclose(moduleInfo->handle);
@@ -149,7 +149,7 @@ bool ModuleManager::checkLoadModel(const char* name) {
 
 }  // namespace aoce
 
-#if WIN32
+#if _WIN32
 
 LONG WINAPI unhandledFilter(struct _EXCEPTION_POINTERS* lpExceptionInfo) {
     LONG ret = EXCEPTION_EXECUTE_HANDLER;

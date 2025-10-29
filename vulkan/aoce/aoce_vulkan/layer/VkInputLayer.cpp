@@ -6,7 +6,7 @@
 #include "../android/vulkan_wrapper.h"
 #endif
 
-#if WIN32
+#if _WIN32
 using namespace aoce::win;
 #endif
 namespace aoce {
@@ -23,7 +23,7 @@ VkInputLayer::~VkInputLayer() {}
 void VkInputLayer::onDataReady() { bDateUpdate = true; }
 
 void VkInputLayer::onInitGraph() {
-#if WIN32
+#if _WIN32
     winImage = std::make_unique<VkWinImage>();
 #elif __ANDROID_API__ >= 26
     if (VulkanManager::Get().bInterpGLES) {
@@ -81,7 +81,7 @@ void VkInputLayer::onInitVkBuffer() {
     inBuffer = std::make_unique<VulkanBuffer>();
     inBuffer->initResoure(BufferUsage::store, size,
                           VK_BUFFER_USAGE_TRANSFER_SRC_BIT, frameData);
-#if WIN32
+#if _WIN32
     if (paramet.bGpu) {
         winImage->bindDx11(vkPipeGraph->getD3D11Device(), inFormats[0]);
     }
@@ -115,7 +115,7 @@ void VkInputLayer::onCommand() {
             context->bufferToImage(cmd, inBuffer.get(), outTexs[0].get());
         }
         if (paramet.bGpu) {
-#if WIN32
+#if _WIN32
             VulkanManager::copyImage(cmd, winImage->getImage(),
                                      outTexs[0]->image, outFormats[0].width,
                                      outFormats[0].height);
@@ -129,7 +129,7 @@ void VkInputLayer::onCommand() {
                             &copyRegion);
         }
         if (paramet.bGpu) {
-#if WIN32
+#if _WIN32
             context->imageToBuffer(cmd, winImage->getImage(), inBufferX->buffer,
                                    outFormats[0].width, outFormats[0].height);
 #endif
@@ -147,7 +147,7 @@ void VkInputLayer::onCommand() {
 }
 
 void VkInputLayer::onPreFrame() {
-#if WIN32
+#if _WIN32
     if (!paramet.bGpu) {
         return;
     }
@@ -173,7 +173,7 @@ void VkInputLayer::onUnInit() {
 }
 
 void VkInputLayer::inputGpuData(void* device, void* tex) {
-#if WIN32
+#if _WIN32
     if (!paramet.bGpu || !pipeGraph) {
         return;
     }

@@ -40,7 +40,7 @@ LRESULT CLASS_NAME::OnSize(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, 
 	::GetClientRect(m_hWnd, &rc);
 	GetDlgItem(IDC_FILE_MI).MoveWindow(7, 7, 100, 45);
 	GetDlgItem(IDC_SAVE_MI).MoveWindow(120, 7, 150, 45);
-
+	GetDlgItem(IDC_WX_MI).MoveWindow(280, 7, 150, 45);
 	GetDlgItem(IDC_MSG_MI).MoveWindow(7, 60, rc.right - 14, rc.bottom - 70);
 
 
@@ -113,4 +113,23 @@ void CLASS_NAME::Handle() {
 
 	DoDataExchange(FALSE);
 
+}
+LRESULT CLASS_NAME::OnBnClickedWxMi(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
+{
+	// TODO: 在此添加控件通知处理程序代码
+		// TODO: 在此添加控件通知处理程序代码
+	CFileDialog dlg(TRUE);
+	if (IDOK == dlg.DoModal()) {
+		m_strInput = dlg.m_ofn.lpstrFile;
+		int err = 0;
+		void* pMI = WXMediaInfoCreateFast(m_strInput, &err);
+		if (pMI) {
+			int64_t time = WXMediaInfoGetFileDuration(pMI);
+			int64_t vb   = WXMediaInfoGetVideoBitrate(pMI);
+			m_strMsg.Format(L"%ws\r\nTime=%lld\r\nVB=%lld\r\n", m_strInput, time,vb);
+			WXMediaInfoDestroy(pMI);
+			DoDataExchange(FALSE);
+		}
+	}
+	return 0;
 }

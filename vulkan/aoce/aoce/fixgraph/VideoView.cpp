@@ -6,7 +6,7 @@ namespace aoce {
 
 VideoView::VideoView(GpuType gpuType) {
     this->gpuType = gpuType;
-#if WIN32
+#if _WIN32
     if (gpuType == GpuType::other) {
         this->gpuType = GpuType::cuda;
     }

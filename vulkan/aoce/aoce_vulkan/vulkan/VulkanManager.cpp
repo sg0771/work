@@ -103,7 +103,7 @@ void VulkanManager::onDeviceComplete() {
     cmdPoolInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
     VK_CHECK_RESULT(
         vkCreateCommandPool(device, &cmdPoolInfo, nullptr, &cmdPool));
-#if WIN32
+#if _WIN32
     // 检测是否支持dx11交互
     VkPhysicalDeviceExternalImageFormatInfo
         PhysicalDeviceExternalImageFormatInfo = {
@@ -278,7 +278,7 @@ bool VulkanManager::createDevice(bool bAloneCompute) {
     deviceCreateInfo.pEnabledFeatures = nullptr;
     std::vector<const char*> deviceExtensions;
     deviceExtensions.push_back(VK_KHR_SWAPCHAIN_EXTENSION_NAME);
-#if WIN32
+#if _WIN32
     deviceExtensions.push_back(VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME);
     deviceExtensions.push_back(VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME);
     deviceExtensions.push_back(VK_KHR_EXTERNAL_MEMORY_EXTENSION_NAME);

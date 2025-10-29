@@ -3807,4 +3807,7 @@
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SPIRV\spirv.hpp11" />
+  </ItemGroup>
 </Project>

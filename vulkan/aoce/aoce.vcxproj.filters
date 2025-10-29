@@ -716,5 +716,17 @@
     <ClInclude Include="vulkan\vulkan_wrapper.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="vulkan\vulkan_win32.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan\vk_platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan\vulkan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan\vulkan_core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

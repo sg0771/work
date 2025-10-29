@@ -1,144 +1,5 @@
 LIBRARY libffmpeg.dll
 EXPORTS
-LibInst_GetInst
-LibInst_LogMsg
-WXSetGlobalPath
-WXSetGlobalValue
-WXSetGlobalString
-WXGetGlobalValue
-WXGetGlobalString
-heif_context_alloc
-heif_context_free
-heif_context_read_from_memory
-heif_context_get_number_of_top_level_images
-heif_context_get_list_of_top_level_image_IDs
-heif_context_get_image_handle
-heif_image_handle_release
-heif_image_handle_has_alpha_channel
-heif_image_handle_get_luma_bits_per_pixel
-heif_decoding_options_alloc
-heif_decoding_options_free
-heif_decode_image
-heif_image_get_width
-heif_image_get_height
-heif_image_get_plane_readonly
-heif_image_release
-WXLogInit
-WXLogA
-WXLogW
-WXLogAOnce
-WXLogWOnce
-bd_open
-bd_close
-bd_get_titles
-bd_get_title_info
-bd_free_title_info
-bd_select_title
-bd_find_seek_point
-bd_read
-bd_seek
-bd_get_current_chapter
-bd_get_title_size
-bd_tell
-bd_get_event
-bd_get_clpi
-bd_free_clpi
-bd_get_clip_infos
-bd_get_title_mpls
-bd_set_debug_mask
-bd_read_clpi
-I420ToARGB
-I444ToARGB
-ARGB1555ToARGB
-I420ToRGB24
-ARGBToJ420
-I420Mirror
-ARGBCopyYToAlpha
-ARGBAdd
-I420ToNV12
-ARGBToNV12
-ARGBToI444
-ARGBMirror
-J420ToARGB
-MJPGToI420
-ARGBAttenuate
-I422ToARGB
-RGBScale
-I444Scale
-ARGBToI420
-CopyPlane
-RGB24ToI420
-RGB565ToARGB
-I420Copy
-ARGBCopy
-ARGBBlend
-ARGBScale
-ARGBScale
-I420ToI444
-I444ToI420
-YUY2ToARGB
-RGB24ToARGB
-NV12ToARGB
-YUY2ToI420
-NV12ToI420
-ARGBCopy
-ARGBRotate
-I420Rotate
-I420Scale
-CompressQualityU_FileToFile
-CompressQuality_FileToFile
-WXImage_InitLibrary
-FreeImage_Initialise
-UseIccParser
-WXImage_SetLog
-HandlerCreate
-HandlerGetSize
-HandlerGetData
-HandlerDestroy
-SetQuality
-CompressQuality_BufferToBuffer
-CompressQuality_FileToFile
-CompressQuality_FileToBuffer
-CompressQuality_BufferToFile
-CompressSize_BufferToBuffer
-CompressSize_FileToFile
-CompressSize_BufferToFile
-CompressSize_FileToBuffer
-CompressQualityU_FileToFile
-CompressQualityU_FileToBuffer
-CompressQualityU_BufferToFile
-CompressSizeU_FileToFile
-CompressSizeU_BufferToFile
-CompressSizeU_FileToBuffer
-Image_Encode
-Image_Encode2
-RGBtoPNG
-RGBtoJPG
-ReadICC
-WXImage_WriteFileU
-WXImage_WriteFileU
-WXImage_SaveU
-WXImage_WriteFile
-WXImage_Save
-WXImage_GetIccSize
-WXImage_GetIccData
-WXImage_GetInfo
-WXImage_Load
-WXImage_Encode
-WXImage_GetEncData
-WXImage_LoadFromFileU
-WXImage_LoadFromFile
-WXImage_Unload
-WXImage_GetWidth
-WXImage_GetHeight
-WXImage_GetChannel
-WXImage_GetPitch
-WXImage_GetBits
-WXImage_GetImageType
-WXImage_GetDotsPerMeterX
-WXImage_GetDotsPerMeterY
-WXImage_SetDotsPerMeterX
-WXImage_SetDotsPerMeterY
 SDL_memset
 SDL_GetNumAudioDevices
 SDL_GetAudioDeviceName
@@ -1443,7 +1304,7 @@ avpicture_layout
 avpriv_codec_get_cap_skip_frame_fill_param
 avpriv_dca_convert_bitstream
 avpriv_dca_parse_core_frame_header
-avpriv_dca_sample_rates DATA
+avpriv_dca_sample_rates
 avpriv_dict_set_timestamp
 avpriv_find_start_code
 avpriv_h264_has_num_reorder_frames
@@ -1527,7 +1388,7 @@ ff_copy_whiteblacklists
 ff_crc04C11DB7_update
 ff_crcA001_update
 ff_crcEDB88320_update
-ff_crop_tab DATA
+ff_crop_tab
 ff_data_to_hex
 ff_dca_parse_core_frame_header
 ff_decode_frame_props
@@ -1561,7 +1422,7 @@ ff_int_from_list_or_default
 ff_interleave_add_packet
 ff_interleave_packet_per_dts
 ff_interleaved_peek
-ff_inverse DATA
+ff_inverse
 ff_is_http_proto
 ff_is_intra_only
 ff_isom_write_avcc
@@ -1600,96 +1461,96 @@ ff_seek_frame_binary
 ff_set_dimensions
 ff_set_sar
 ff_side_data_update_matrix_encoding
-ff_sipr_subpk_size DATA
-ff_sqrt_tab DATA
+ff_sipr_subpk_size
+ff_sqrt_tab
 ff_standardize_creation_time
 ff_stream_add_bitstream_filter
 ff_stream_encode_params_copy
 ff_thread_can_start_frame
 ff_unlock_avformat
 ff_update_cur_dts
-ff_vc1_1ref_mvdata_bits DATA
-ff_vc1_1ref_mvdata_codes DATA
-ff_vc1_1ref_mvdata_vlc DATA
-ff_vc1_2mv_block_pattern_bits DATA
-ff_vc1_2mv_block_pattern_codes DATA
-ff_vc1_2mv_block_pattern_vlc DATA
-ff_vc1_2ref_mvdata_bits DATA
-ff_vc1_2ref_mvdata_codes DATA
-ff_vc1_2ref_mvdata_vlc DATA
-ff_vc1_4mv_block_pattern_bits DATA
-ff_vc1_4mv_block_pattern_codes DATA
-ff_vc1_4mv_block_pattern_vlc DATA
-ff_vc1_ac_coeff_table DATA
-ff_vc1_ac_sizes DATA
-ff_vc1_adv_interlaced_4x4_zz DATA
-ff_vc1_adv_interlaced_4x8_zz DATA
-ff_vc1_adv_interlaced_8x4_zz DATA
-ff_vc1_adv_interlaced_8x8_zz DATA
-ff_vc1_adv_progressive_4x8_zz DATA
-ff_vc1_adv_progressive_8x4_zz DATA
-ff_vc1_b_field_mvpred_scales DATA
-ff_vc1_bfraction_bits DATA
-ff_vc1_bfraction_codes DATA
-ff_vc1_bfraction_lut DATA
-ff_vc1_bfraction_vlc DATA
-ff_vc1_cbpcy_p_bits DATA
-ff_vc1_cbpcy_p_codes DATA
-ff_vc1_cbpcy_p_vlc DATA
-ff_vc1_dqscale DATA
-ff_vc1_field_mvpred_scales DATA
-ff_vc1_fps_dr DATA
-ff_vc1_fps_nr DATA
-ff_vc1_icbpcy_p_bits DATA
-ff_vc1_icbpcy_p_codes DATA
-ff_vc1_icbpcy_vlc DATA
-ff_vc1_if_1mv_mbmode_bits DATA
-ff_vc1_if_1mv_mbmode_codes DATA
-ff_vc1_if_1mv_mbmode_vlc DATA
-ff_vc1_if_mmv_mbmode_bits DATA
-ff_vc1_if_mmv_mbmode_codes DATA
-ff_vc1_if_mmv_mbmode_vlc DATA
-ff_vc1_imode_bits DATA
-ff_vc1_imode_codes DATA
-ff_vc1_imode_vlc DATA
-ff_vc1_intfr_4mv_mbmode_bits DATA
-ff_vc1_intfr_4mv_mbmode_codes DATA
-ff_vc1_intfr_4mv_mbmode_vlc DATA
-ff_vc1_intfr_non4mv_mbmode_bits DATA
-ff_vc1_intfr_non4mv_mbmode_codes DATA
-ff_vc1_intfr_non4mv_mbmode_vlc DATA
-ff_vc1_mbmode_intfrp DATA
-ff_vc1_mv_diff_bits DATA
-ff_vc1_mv_diff_codes DATA
-ff_vc1_mv_diff_vlc DATA
-ff_vc1_mv_pmode_table DATA
-ff_vc1_mv_pmode_table2 DATA
-ff_vc1_norm2_bits DATA
-ff_vc1_norm2_codes DATA
-ff_vc1_norm2_vlc DATA
-ff_vc1_norm6_bits DATA
-ff_vc1_norm6_codes DATA
-ff_vc1_norm6_vlc DATA
-ff_vc1_pixel_aspect DATA
-ff_vc1_pquant_table DATA
-ff_vc1_simple_progressive_4x4_zz DATA
-ff_vc1_subblkpat_bits DATA
-ff_vc1_subblkpat_codes DATA
-ff_vc1_subblkpat_vlc DATA
-ff_vc1_ttblk_bits DATA
-ff_vc1_ttblk_codes DATA
-ff_vc1_ttblk_to_tt DATA
-ff_vc1_ttblk_vlc DATA
-ff_vc1_ttfrm_to_tt DATA
-ff_vc1_ttmb_bits DATA
-ff_vc1_ttmb_codes DATA
-ff_vc1_ttmb_vlc DATA
+ff_vc1_1ref_mvdata_bits
+ff_vc1_1ref_mvdata_codes
+ff_vc1_1ref_mvdata_vlc
+ff_vc1_2mv_block_pattern_bits
+ff_vc1_2mv_block_pattern_codes
+ff_vc1_2mv_block_pattern_vlc
+ff_vc1_2ref_mvdata_bits
+ff_vc1_2ref_mvdata_codes
+ff_vc1_2ref_mvdata_vlc
+ff_vc1_4mv_block_pattern_bits
+ff_vc1_4mv_block_pattern_codes
+ff_vc1_4mv_block_pattern_vlc
+ff_vc1_ac_coeff_table
+ff_vc1_ac_sizes
+ff_vc1_adv_interlaced_4x4_zz
+ff_vc1_adv_interlaced_4x8_zz
+ff_vc1_adv_interlaced_8x4_zz
+ff_vc1_adv_interlaced_8x8_zz
+ff_vc1_adv_progressive_4x8_zz
+ff_vc1_adv_progressive_8x4_zz
+ff_vc1_b_field_mvpred_scales
+ff_vc1_bfraction_bits
+ff_vc1_bfraction_codes
+ff_vc1_bfraction_lut
+ff_vc1_bfraction_vlc
+ff_vc1_cbpcy_p_bits
+ff_vc1_cbpcy_p_codes
+ff_vc1_cbpcy_p_vlc
+ff_vc1_dqscale
+ff_vc1_field_mvpred_scales
+ff_vc1_fps_dr
+ff_vc1_fps_nr
+ff_vc1_icbpcy_p_bits
+ff_vc1_icbpcy_p_codes
+ff_vc1_icbpcy_vlc
+ff_vc1_if_1mv_mbmode_bits
+ff_vc1_if_1mv_mbmode_codes
+ff_vc1_if_1mv_mbmode_vlc
+ff_vc1_if_mmv_mbmode_bits
+ff_vc1_if_mmv_mbmode_codes
+ff_vc1_if_mmv_mbmode_vlc
+ff_vc1_imode_bits
+ff_vc1_imode_codes
+ff_vc1_imode_vlc
+ff_vc1_intfr_4mv_mbmode_bits
+ff_vc1_intfr_4mv_mbmode_codes
+ff_vc1_intfr_4mv_mbmode_vlc
+ff_vc1_intfr_non4mv_mbmode_bits
+ff_vc1_intfr_non4mv_mbmode_codes
+ff_vc1_intfr_non4mv_mbmode_vlc
+ff_vc1_mbmode_intfrp
+ff_vc1_mv_diff_bits
+ff_vc1_mv_diff_codes
+ff_vc1_mv_diff_vlc
+ff_vc1_mv_pmode_table
+ff_vc1_mv_pmode_table2
+ff_vc1_norm2_bits
+ff_vc1_norm2_codes
+ff_vc1_norm2_vlc
+ff_vc1_norm6_bits
+ff_vc1_norm6_codes
+ff_vc1_norm6_vlc
+ff_vc1_pixel_aspect
+ff_vc1_pquant_table
+ff_vc1_simple_progressive_4x4_zz
+ff_vc1_subblkpat_bits
+ff_vc1_subblkpat_codes
+ff_vc1_subblkpat_vlc
+ff_vc1_ttblk_bits
+ff_vc1_ttblk_codes
+ff_vc1_ttblk_to_tt
+ff_vc1_ttblk_vlc
+ff_vc1_ttfrm_to_tt
+ff_vc1_ttmb_bits
+ff_vc1_ttmb_codes
+ff_vc1_ttmb_vlc
 ff_vorbis_comment
 ff_vorbis_stream_comment
-ff_wmv3_dc_scale_table DATA
+ff_wmv3_dc_scale_table
 ff_write_chained
-ff_zigzag_direct DATA
-ff_zigzag_scan DATA
+ff_zigzag_direct
+ff_zigzag_scan
 ffio_close_null_buf
 ffio_ensure_seekback
 ffio_fdopen
@@ -1713,9 +1574,9 @@ ffio_set_buf_size
 i2a_ASN1_OBJECT
 i2d_X509_PUBKEY
 i2t_ASN1_OBJECT
-iconv
-iconv_close
-iconv_open
+libiconv
+libiconv_close
+libiconv_open
 swr_alloc
 swr_alloc_set_opts
 swr_build_matrix

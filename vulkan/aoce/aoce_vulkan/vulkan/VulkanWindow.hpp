@@ -6,7 +6,7 @@
 #include "VulkanCommon.hpp"
 #include "VulkanTexture.hpp"
 
-#if WIN32
+#if _WIN32
 #include "../win32/Win32Window.hpp"
 #elif __ANDROID__
 #include <android/native_activity.h>
@@ -18,7 +18,7 @@
 namespace aoce {
 namespace vulkan {
 
-// #if WIN32
+// #if _WIN32
 // template class AOCE_VULKAN_EXPORT std::unique_ptr<VulkanTexture>;
 // template class AOCE_VULKAN_EXPORT std::vector<VkImage>;
 // template class AOCE_VULKAN_EXPORT std::vector<VkImageView>;
@@ -42,7 +42,7 @@ class AOCE_VULKAN_EXPORT VulkanWindow {
     std::vector<VkImageView> views;
     VkCommandPool cmdPool;
     std::vector<VkFramebuffer> frameBuffers;
-#if WIN32
+#if _WIN32
     std::unique_ptr<Win32Window> window;
 #elif __ANDROID__
     // std::mutex winMtx;

@@ -74,10 +74,10 @@ void android_main(struct android_app *app)
 #if __ANDROID__
     AoceManager::Get().initAndroid(app);
 #endif
-    loadAoce();
+    loadAoce();//初始化框架
 #if TEST_VIDEO_SHOW
     auto &deviceList =
-        AoceManager::Get().getVideoManager(CameraType::win_mf)->getDeviceList();
+        AoceManager::Get().getVideoManager(CameraType::win_mf)->getDeviceList();//获取摄像头
     std::cout << "deivce count:" << deviceList.size() << std::endl;
     TestCameraObserver cameraObserver = {};
     VideoDevicePtr video = deviceList[index];

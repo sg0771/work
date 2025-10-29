@@ -2688,9 +2688,6 @@
     <ClInclude Include="ffmpeg-config.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="WXLog.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="WXBase.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -8893,9 +8890,6 @@
       <Filter>libswresample\x86</Filter>
     </ClCompile>
     <ClCompile Include="libffmpeg.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="WXLog.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

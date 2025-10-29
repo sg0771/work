@@ -2,7 +2,7 @@
 
 #include "../vulkan/VulkanManager.hpp"
 #include "VkPipeGraph.hpp"
-#if WIN32
+#if _WIN32
 using namespace aoce::win;
 #endif
 
@@ -15,7 +15,7 @@ VkOutputLayer::VkOutputLayer(/* args */) { bOutput = true; }
 VkOutputLayer::~VkOutputLayer() {}
 
 void VkOutputLayer::onInitGraph() {
-#if WIN32
+#if _WIN32
     winImage = std::make_unique<VkWinImage>();
     bWinInterop = false;
 #elif __ANDROID_API__ >= 26
@@ -43,7 +43,7 @@ void VkOutputLayer::onInitVkBuffer() {
     if (outFormat.height == 0 || outFormat.width == 0) {
         outFormat = inFormats[0];
     }
-#if WIN32
+#if _WIN32
     if (paramet.bGpu && bWinInterop) {
         winImage->bindDx11(vkPipeGraph->getD3D11Device(), outFormats[0]);
     }
@@ -61,7 +61,7 @@ bool VkOutputLayer::onFrame() {
         onImageProcessHandle(outBuffer->getCpuData(), inFormats[0], 0);
     }
     if (paramet.bGpu) {
-#if WIN32
+#if _WIN32
         winImage->vkCopyTemp(vkPipeGraph->getD3D11Device());
 #endif
     }
@@ -79,7 +79,7 @@ void VkOutputLayer::onCommand() {
     if (paramet.bGpu) {
         VkImage destImage = VK_NULL_HANDLE;
         bool bInterop = false;
-#if WIN32
+#if _WIN32
         bInterop = bWinInterop && winImage->getInit();
         destImage = winImage->getImage();
 #endif
@@ -98,7 +98,7 @@ void VkOutputLayer::onCommand() {
                          VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT,
                          VK_PIPELINE_STAGE_TRANSFER_BIT,
                          VK_IMAGE_ASPECT_COLOR_BIT);
-#if WIN32
+#if _WIN32
             VulkanManager::copyImage(cmd, inTexs[0].get(),
                                      winImage->getImage());
 #endif
@@ -188,7 +188,7 @@ void VkOutputLayer::outGLGpuTex(const GLOutGpuTex& outTex, uint32_t texType,
 }
 #endif
 
-#if WIN32
+#if _WIN32
 void VkOutputLayer::outDx11GpuTex(void* device, void* tex) {
     if (!pipeGraph) {
         return;

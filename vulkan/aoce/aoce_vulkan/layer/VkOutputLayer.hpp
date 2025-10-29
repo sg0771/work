@@ -1,6 +1,6 @@
 #pragma once
 #include <aoce/layer/OutputLayer.hpp>
-#if WIN32
+#if _WIN32
 #include "../win32/VkWinImage.hpp"
 #elif __ANDROID__
 #include "../android/HardwareImage.hpp"
@@ -19,7 +19,7 @@ class AOCE_VULKAN_EXPORT VkOutputLayer : public OutputLayer, public VkLayer {
     std::vector<uint8_t> cpuData;
     VkOutGpuTex outTex = {};
     std::unique_ptr<VulkanTexture> swapTex = nullptr;
-#if WIN32
+#if _WIN32
     std::unique_ptr<VkWinImage> winImage = nullptr;
     bool bWinInterop = false;
 #elif __ANDROID__
@@ -49,7 +49,7 @@ class AOCE_VULKAN_EXPORT VkOutputLayer : public OutputLayer, public VkLayer {
     virtual void outGLGpuTex(const GLOutGpuTex& outTex, uint32_t texType = 0,
                              int32_t outIndex = 0) override;
 #endif
-#if WIN32
+#if _WIN32
     virtual void outDx11GpuTex(void* device, void* tex) override;
 #endif
 };

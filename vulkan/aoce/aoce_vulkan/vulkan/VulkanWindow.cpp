@@ -48,7 +48,7 @@ VulkanWindow::~VulkanWindow() {
     }
 }
 
-#if WIN32
+#if _WIN32
 void VulkanWindow::initWindow(HINSTANCE inst, uint32_t _width, uint32_t _height,
                               const char* appName) {
     this->width = _width;

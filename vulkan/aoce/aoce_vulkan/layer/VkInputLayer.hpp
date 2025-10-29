@@ -1,6 +1,6 @@
 #pragma once
 #include <aoce/layer/InputLayer.hpp>
-#if WIN32
+#if _WIN32
 #include "../win32/VkWinImage.hpp"
 #elif __ANDROID__
 #include "../android/HardwareImage.hpp"
@@ -22,7 +22,7 @@ class AOCE_VULKAN_EXPORT VkInputLayer : public InputLayer, public VkLayer {
     // 是否需要GPU计算
     bool bUsePipe = false;
     bool bDateUpdate = false;
-#if WIN32
+#if _WIN32
     std::unique_ptr<VkWinImage> winImage = nullptr;
 #elif __ANDROID__
     std::unique_ptr<HardwareImage> hardwareImage = nullptr;

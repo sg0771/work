@@ -28,7 +28,7 @@ VkPipeGraph::VkPipeGraph(/* args */) {
     eventInfo.flags = 0;
     vkCreateEvent(context->device, &eventInfo, nullptr, &outEvent);
     stageFlags = VK_PIPELINE_STAGE_TRANSFER_BIT;
-#if WIN32
+#if _WIN32
     win::createDevice11(&device, &ctx);
 #endif
     gpu = GpuType::vulkan;
@@ -45,7 +45,7 @@ VkPipeGraph::~VkPipeGraph() {
     }
 }
 
-#if WIN32
+#if _WIN32
 ID3D11Device* VkPipeGraph::getD3D11Device() { return device; }
 #endif
 
@@ -161,7 +161,7 @@ bool VkPipeGraph::onRun() {
 }  // namespace aoce
 
 // win dx11/vulkan keymutex
-//#if WIN32
+//#if _WIN32
 // if (outMemorys.size() > 0) {
 //     uint64_t write = AOCE_DX11_MUTEX_WRITE;
 //     uint64_t read = AOCE_DX11_MUTEX_READ;

@@ -41,6 +41,7 @@ public:
         COMMAND_HANDLER(IDC_FILE_MI, BN_CLICKED, OnBnClickedFile)
         MESSAGE_HANDLER(WM_DROPFILES, OnDropFiles)    // 处理文件拖拽释放
         COMMAND_HANDLER(IDC_SAVE_MI, BN_CLICKED, OnBnClickedSaveMi)
+        COMMAND_HANDLER(IDC_WX_MI, BN_CLICKED, OnBnClickedWxMi)
     END_MSG_MAP()
 
     LRESULT OnSize(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/);
@@ -49,6 +50,7 @@ public:
     LRESULT OnBnClickedSaveMi(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
     LRESULT OnDropFiles(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/);
 
+    LRESULT OnBnClickedWxMi(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 };
 
 

@@ -6,7 +6,7 @@
 #include "../vulkan/VulkanContext.hpp"
 #include "VkLayer.hpp"
 
-#if WIN32
+#if _WIN32
 #include "../win32/VkWinImage.hpp"
 #include "aoce_win/dx11/Dx11Helper.hpp"
 #endif
@@ -32,7 +32,7 @@ class AOCE_VULKAN_EXPORT VkPipeGraph : public PipeGraph {
     // 确定是否在重置生成资源与commandbuffer中
     VkEvent outEvent = VK_NULL_HANDLE;
     VkPipelineStageFlags stageFlags = VK_PIPELINE_STAGE_ALL_COMMANDS_BIT;
-#if WIN32
+#if _WIN32
     CComPtr<ID3D11Device> device = nullptr;
     CComPtr<ID3D11DeviceContext> ctx = nullptr;
     // std::vector<VkDeviceMemory> outMemorys;
@@ -49,7 +49,7 @@ class AOCE_VULKAN_EXPORT VkPipeGraph : public PipeGraph {
     bool bOutLayer(int32_t node);
     bool resourceReady();
 
-#if WIN32
+#if _WIN32
     ID3D11Device* getD3D11Device();
 #endif
     bool executeOut();
