@@ -8,7 +8,7 @@
 #include <yangutil/buffer/YangVideoEncoderBuffer.h>
 
 #include <yangutil/sys/YangLoadLib.h>
-#include <x264/x264.h>
+#include <libx264/x264.h>
 
 #ifdef __ANDROID__
 #define Yang_X264_So 0

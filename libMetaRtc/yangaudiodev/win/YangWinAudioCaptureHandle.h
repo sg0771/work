@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef ___YangWinAudioCaptureHandlee__
@@ -34,7 +34,7 @@ public:
 
 public:
     YangPreProcess *m_preProcess;
-    void setInAudioBuffer(vector<YangAudioPlayBuffer*> *pal);
+    void setInAudioBuffer(std::vector<YangAudioPlayBuffer*> *pal);
     void setAec(YangRtcAec *aec);
     void startRender();
     void stopRender();

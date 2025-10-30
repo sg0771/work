@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifdef _MSC_VER
@@ -11,7 +11,7 @@
 #include <Wincodec.h>
 #include <vector>
 
-using namespace std;
+//using namespace std;
 
 class YangDXGIPointerInfo;
 
@@ -78,11 +78,11 @@ public:
 private:
 	HRESULT Init();
 	int GetMonitorCount();
-	vector<YangDXGIOutputDuplication> GetOutputDuplication();
+	std::vector<YangDXGIOutputDuplication> GetOutputDuplication();
 	void DrawMousePointer(BYTE* pDesktopBits, RECT rcDesktop, RECT rcDest);
 private:
 	CComPtr<IDXGIFactory1> m_spDXGIFactory1;
-	vector<YangDXGIOutputDuplication> m_vOutputs;
+	std::vector<YangDXGIOutputDuplication> m_vOutputs;
 	bool m_bInitialized;
 	YangCaptureSource m_CaptureSource;
 	RECT m_rcCurrentOutput;

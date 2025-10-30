@@ -11,7 +11,7 @@
 #include <yangencoder/YangAudioEncoder.h>
 #include <vector>
 
-using namespace std;
+////using namespace std;
 class YangAudioEncoderHandleCb:public YangThread
 {
 public:

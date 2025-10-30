@@ -11,7 +11,7 @@
 #include <yangutil/yangavinfotype.h>
 #include <vector>
 
-using namespace std;
+////using namespace std;
 class YangVideoDecoderHandle:public YangThread,public YangDecoderCallback
 {
 public:

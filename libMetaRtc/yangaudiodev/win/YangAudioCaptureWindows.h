@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef Yang_YangAudioCaptureWindows_H1
@@ -24,7 +24,7 @@ public:
     YangRecAudioCaptureHandle *m_ahandle;
 
     int32_t init();
-	void setInAudioBuffer(vector<YangAudioPlayBuffer*> *pal);
+	void setInAudioBuffer(std::vector<YangAudioPlayBuffer*> *pal);
 	void setPreProcess(YangPreProcess *pp);
 	void setCatureStart();
 	void setCatureStop();

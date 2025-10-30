@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 
@@ -12,7 +12,7 @@ YangAudioDecoderHandles::YangAudioDecoderHandles(YangContext *pcontext) {
 	m_isStart = 0;
 	m_isConvert = 1;
 	m_in_audioBuffer = NULL;
-	m_decs = new vector<YangAudioDecoder*>();
+	m_decs = new std::vector<YangAudioDecoder*>();
 	m_out_audioBuffer = NULL;
 	m_context = pcontext;
 	m_frameSize=1024;
@@ -66,7 +66,7 @@ void YangAudioDecoderHandles::run() {
 
 void YangAudioDecoderHandles::setRemoteParam(int32_t puid,YangAudioParam* para){
 
-	map<int, YangAudioParam*>::iterator iter;
+	std::map<int, YangAudioParam*>::iterator iter;
 		iter=m_paramMap.find(puid);
 		YangAudioParam* t_param=NULL;
 		if(iter == m_paramMap.end()){
@@ -119,7 +119,7 @@ void YangAudioDecoderHandles::removeAllStream() {
 		m_out_audioBuffer->clear();
 	}
 
-    for (map<int,YangAudioParam*>::iterator it = m_paramMap.begin(); it != m_paramMap.end();it++) {
+    for (std::map<int,YangAudioParam*>::iterator it = m_paramMap.begin(); it != m_paramMap.end();it++) {
         yang_delete(it->second);
     }
     m_paramMap.clear();
@@ -163,7 +163,7 @@ void YangAudioDecoderHandles::removeAudioStream(int32_t puid) {
 		}
 
 	}
-	map<int,YangAudioParam*>::iterator it = m_paramMap.find(puid);
+	std::map<int,YangAudioParam*>::iterator it = m_paramMap.find(puid);
 	if(it!=m_paramMap.end()){
 		yang_delete(it->second);
 	}
@@ -197,7 +197,7 @@ void YangAudioDecoderHandles::init() {
 void YangAudioDecoderHandles::setInAudioBuffer(YangAudioEncoderBuffer *pbuf) {
 	m_in_audioBuffer = pbuf;
 }
-void YangAudioDecoderHandles::setOutAudioBuffer(vector<YangAudioPlayBuffer*> *pbuf) {
+void YangAudioDecoderHandles::setOutAudioBuffer(std::vector<YangAudioPlayBuffer*> *pbuf) {
 	m_out_audioBuffer = pbuf;
 }
 
@@ -250,7 +250,7 @@ void YangAudioDecoderHandles::startLoop() {
 		t_decoder = getDecoder(audioFrame.uid);
 
 		if (!t_decoder) {
-			map<int, YangAudioParam*>::iterator iter;
+			std::map<int, YangAudioParam*>::iterator iter;
 			iter=m_paramMap.find(audioFrame.uid);
 			if(iter != m_paramMap.end()){
 				m_decs->push_back(ydf.createAudioDecoder(iter->second));

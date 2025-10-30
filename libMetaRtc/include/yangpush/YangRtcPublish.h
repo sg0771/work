@@ -11,7 +11,7 @@
 #include <yangutil/buffer/YangAudioEncoderBuffer.h>
 #include <yangutil/buffer/YangVideoEncoderBuffer.h>
 #include <vector>
-using namespace std;
+////using namespace std;
 class YangRtcPublish: public YangThread {
 public:
 	YangRtcPublish(YangContext *pcontext);

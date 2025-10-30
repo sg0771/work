@@ -11,7 +11,7 @@
 #include <vector>
 #include <map>
 
-using namespace std;
+////using namespace std;
 class YangAudioDecoderHandles:public YangThread,public YangDecoderCallback
 {
 public:
@@ -28,7 +28,7 @@ public:
 	void init();
 	void stop();
 	void setInAudioBuffer(YangAudioEncoderBuffer *pbuf);
-	void setOutAudioBuffer(vector<YangAudioPlayBuffer*>* pbuf);
+	void setOutAudioBuffer(std::vector<YangAudioPlayBuffer*>* pbuf);
 	void removeAudioStream(int32_t puid);
 	void removeAllStream();
 	int32_t m_isStart;
@@ -45,8 +45,8 @@ void saveFile(char *fileName, uint8_t *pBuffer, long BufferLen);
 
 private:
 	std::map<int,YangAudioParam*> m_paramMap;
-	vector<YangAudioPlayBuffer*> *m_out_audioBuffer;
-	vector<YangAudioDecoder*> *m_decs;
+	std::vector<YangAudioPlayBuffer*> *m_out_audioBuffer;
+	std::vector<YangAudioDecoder*> *m_decs;
 	int32_t m_isConvert;
 	YangAudioEncoderBuffer *m_in_audioBuffer;
 	YangContext *m_context;

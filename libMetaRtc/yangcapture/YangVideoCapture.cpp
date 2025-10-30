@@ -24,7 +24,7 @@ void YangVideoCapture::stop() {
 }
 
 void yang_get_camera_indexs(std::vector<int> *pvs,std::string pcamindex){
-	vector<string> res=yang_split(pcamindex,',');
+	std::vector<std::string> res=yang_split(pcamindex,',');
 	for(size_t i=0;i<res.size();i++){
 		pvs->push_back(atoi(res[i].c_str()));
 	}

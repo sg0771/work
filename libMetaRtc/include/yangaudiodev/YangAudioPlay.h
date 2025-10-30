@@ -1,4 +1,4 @@
-﻿
+
 //
 // Copyright (c) 2019-2023 yanggaofeng
 //
@@ -16,7 +16,7 @@
 #include<algorithm>
 #include <vector>
 
-using namespace std;
+////using namespace std;
 
 class YangAudioPlay:public YangThread
 {
@@ -27,7 +27,7 @@ class YangAudioPlay:public YangThread
 
         int32_t aIndex;
         virtual int init()=0;
-        void setAudioBuffers(vector<YangAudioPlayBuffer*> *paudioList);
+        void setAudioBuffers(std::vector<YangAudioPlayBuffer*> *paudioList);
         void setAudioBuffer(YangAudioPlayBuffer *paudioList);
         void setAecBase(YangRtcAec* pace);
         int32_t m_aecInit=0;

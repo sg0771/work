@@ -5,7 +5,7 @@
 #include <yangaudiodev/YangAudioRenderData.h>
 #include <yangavutil/audio/YangAudioUtil.h>
 #include <yangutil/sys/YangLog.h>
-using namespace std;
+//using namespace std;
 #define Yang_Mix_BUF_Len 4096
 YangAudioRenderData::YangAudioRenderData() {
 	m_syns = NULL;

@@ -11,7 +11,7 @@
 
 #include <vector>
 
-using namespace std;
+////using namespace std;
 class YangAudioDecoderHandle:public YangThread,public YangDecoderCallback,public YangMediaConfigCallback
 {
 public:

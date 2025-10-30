@@ -10,7 +10,7 @@
 
 #ifndef _WIN32
 #include <alsa/asoundlib.h>
-using namespace std;
+//using namespace std;
 
 class YangAudioCaptureLinux: public YangAudioCapture {
 public:

@@ -162,7 +162,7 @@ void YangVideoCaptureWindows::initstamp() {
 	m_vhandle->initstamp();
 }
 int32_t YangVideoCaptureWindows::init() {
-	::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
+	CoInitialize(NULL);
 
 	ICreateDevEnum *devEnum = NULL;
 	HRESULT hr = CoCreateInstance(CLSID_SystemDeviceEnum, NULL,

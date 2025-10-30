@@ -8,7 +8,7 @@
 #include <yangdecoder/YangVideoDecoderHandle.h>
 #include <vector>
 
-using namespace std;
+////using namespace std;
 class YangPlayerDecoder {
 public:
 	YangPlayerDecoder(YangContext* pcontext);

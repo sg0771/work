@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #include <yangutil/sys/YangLog.h>
@@ -79,7 +79,7 @@ HRESULT STDMETHODCALLTYPE YangWinAudioCaptureHandle::SampleCB(double Time, IMedi
 
     return E_NOTIMPL;
 }
-void YangWinAudioCaptureHandle::setInAudioBuffer(vector<YangAudioPlayBuffer*> *pal) {
+void YangWinAudioCaptureHandle::setInAudioBuffer(std::vector<YangAudioPlayBuffer*> *pal) {
 
 }
 

@@ -1,4 +1,4 @@
-//
+﻿//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef INCLUDE_YANGUTIL_SYS_YANGSTRING_H_
@@ -9,10 +9,10 @@
 #include <yangutil/yangtype.h>
 #include <string>
 #include <vector>
-using namespace std;
+//using namespace std;
 
-vector<string> yang_split(string s, char ch);
-vector<string> yang_split_first(string s, char ch);
+std::vector<std::string> yang_split(std::string s, char ch);
+std::vector<std::string> yang_split_first(std::string s, char ch);
 std::vector<std::string> yang_splits(const std::string& str, const std::string& delim);
 std::string yang_int2str(int64_t value);
 std::string yang_random_str(int32_t len);

@@ -12,7 +12,7 @@
 #include "yangutil/buffer/YangAudioBuffer.h"
 #include <vector>
 #include "yangutil/sys/YangLog.h"
-using namespace std;
+////using namespace std;
 
 class YangAudioCapture:public YangThread
 {
@@ -29,7 +29,7 @@ class YangAudioCapture:public YangThread
         virtual void setOutAudioBuffer(YangAudioBuffer *pbuffer)=0;
         virtual void setPlayAudoBuffer(YangAudioBuffer *pbuffer)=0;
         virtual void setAec(YangRtcAec *paec)=0;
-        virtual void setInAudioBuffer(vector<YangAudioPlayBuffer*> *pbuffer)=0;
+        virtual void setInAudioBuffer(std::vector<YangAudioPlayBuffer*> *pbuffer)=0;
         virtual void setPreProcess(YangPreProcess *pp)=0;
 
         void stop();

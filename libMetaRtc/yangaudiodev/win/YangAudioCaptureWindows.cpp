@@ -1,11 +1,11 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #include <yangaudiodev/win/YangAudioCaptureWindows.h>
 #ifdef _WIN32
 #include <uuids.h>
 
-using namespace std;
+//using namespace std;
 
 #define SAFE_RELEASE(x) { if (x) x->Release(); x = NULL; }
 YangAudioCaptureWindows::YangAudioCaptureWindows(YangAVInfo *avinfo) {
@@ -82,7 +82,7 @@ void YangAudioCaptureWindows::setPreProcess(YangPreProcess *pp) {
 
 }
 
-void YangAudioCaptureWindows::setInAudioBuffer(vector<YangAudioPlayBuffer*> *pal) {
+void YangAudioCaptureWindows::setInAudioBuffer(std::vector<YangAudioPlayBuffer*> *pal) {
 
 }
 void YangAudioCaptureWindows::stopLoop() {
@@ -175,7 +175,7 @@ int32_t YangAudioCaptureWindows::init() {
 	if (m_isInit)
         return Yang_Ok;
 
-	::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
+	CoInitialize(NULL);
 
 	ULONG cFetched;
 	ICreateDevEnum *devEnum = NULL;

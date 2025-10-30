@@ -10,7 +10,7 @@
 #include <vector>
 
 
-using namespace std;
+////using namespace std;
 class YangAudioEncoderHandle:public YangThread,public YangEncoderCallback
 {
 public:

@@ -12,7 +12,7 @@
 
 
 
-using namespace std;
+////using namespace std;
 class YangVideoEncoderHandle:public YangThread,public YangEncoderCallback
 {
 public:

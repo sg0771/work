@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef __YangVideoDecoderHandles__
@@ -11,7 +11,7 @@
 #include <vector>
 
 
-using namespace std;
+////using namespace std;
 class YangVideoDecoderHandles:public YangThread,public YangDecoderCallback
 {
 public:
@@ -33,7 +33,7 @@ public:
 	void init();
 	void stop();
 	void setInVideoBuffer(YangVideoDecoderBuffer *pbuf);
-	void setOutVideoBuffer(vector<YangVideoBuffer*>* pbuf);
+	void setOutVideoBuffer(std::vector<YangVideoBuffer*>* pbuf);
 
 	void onAudioData(YangFrame* pframe);
 	void onVideoData(YangFrame* pframe);
@@ -51,9 +51,9 @@ void saveFile(char *fileName, uint8_t *pBuffer, long BufferLen);
 
 private:
 	YangVideoDecoderBuffer *m_in_videoBuffer;
-	vector<YangVideoBuffer*> *m_out_videoBuffer;
-	vector<YangVideoDecoder*> *m_decs;
-	vector<int> m_removeList;
+	std::vector<YangVideoBuffer*> *m_out_videoBuffer;
+	std::vector<YangVideoDecoder*> *m_decs;
+	std::vector<int> m_removeList;
 	int32_t m_isConvert;
 
 	YangContext *m_context;

@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 
@@ -10,7 +10,7 @@
 #include <yangutil/buffer/YangVideoBuffer.h>
 #include <yangutil/buffer/YangVideoEncoderBuffer.h>
 #include <yangutil/sys/YangLoadLib.h>
-#include <x265/x265.h>
+#include <libx265/x265.h>
 
 
 

@@ -11,7 +11,7 @@
 #include "yangutil/buffer/YangAudioPlayBuffer.h"
 #include "yangutil/buffer/YangVideoDecoderBuffer.h"
 
-using namespace std;
+////using namespace std;
 class YangPlayerBase
 {
     public:

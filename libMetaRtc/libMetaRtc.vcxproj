@@ -601,38 +601,42 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
-    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
-    <PreBuildEventUseInBuild />
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
-    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
-    <PreBuildEventUseInBuild />
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
-    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
-    <PreBuildEventUseInBuild />
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
-    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)ffmpeg_sdk\include;$(SolutionDir)ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
-    <PreBuildEventUseInBuild />
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -644,29 +648,20 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <TreatSpecificWarningsAsErrors>4996</TreatSpecificWarningsAsErrors>
-      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/libaom;$(SolutionDir)libs/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
-      <LanguageStandard>Default</LanguageStandard>
+      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl-1.1.1k/include;$(SolutionDir)libs/libaom;$(SolutionDir)image/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;libssl.lib;libeay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>
-      </Message>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -680,13 +675,12 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <TreatSpecificWarningsAsErrors>4996</TreatSpecificWarningsAsErrors>
-      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/libaom;$(SolutionDir)libs/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
-      <LanguageStandard>Default</LanguageStandard>
+      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl-1.1.1k/include;$(SolutionDir)libs/libaom;$(SolutionDir)image/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -694,17 +688,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;libssl.lib;libeay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>
-      </Message>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -716,29 +702,20 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <TreatSpecificWarningsAsErrors>4996</TreatSpecificWarningsAsErrors>
-      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/libaom;$(SolutionDir)libs/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
-      <LanguageStandard>Default</LanguageStandard>
+      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl-1.1.1k/include;$(SolutionDir)libs/libaom;$(SolutionDir)image/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;libssl.lib;libeay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>
-      </Message>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -752,13 +729,12 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <TreatSpecificWarningsAsErrors>4996</TreatSpecificWarningsAsErrors>
-      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/libaom;$(SolutionDir)libs/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
-      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
-      <LanguageStandard>Default</LanguageStandard>
+      <AdditionalIncludeDirectories>./include;./;$(SolutionDir)libs/;$(SolutionDir)libs/freetype;$(SolutionDir)libs/openssl-1.1.1k/include;$(SolutionDir)libs/libaom;$(SolutionDir)image/libyuv/;$(SolutionDir)libs/libffmpeg;$(SolutionDir)ZLMediaKit\libsrtp\include\;$(SolutionDir)libs/speexdsp;$(SolutionDir)ZLMediaKit\usrsctplib;$(SolutionDir)libs/libwebsockets</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -766,17 +742,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxgi.lib;dxva2.lib;d3d11.lib;winmm.lib;dxguid.lib;libopus.lib;libyuv.lib;libffmpeg.lib;libssl.lib;libeay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>
-      </Message>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

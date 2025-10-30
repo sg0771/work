@@ -11,7 +11,7 @@
 #include <libfaad/faad.h>
 #include <vector>
 
-using namespace std;
+//using namespace std;
 class YangAudioDecoderAac :public YangAudioDecoder
 {
 public:

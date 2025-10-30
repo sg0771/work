@@ -17,7 +17,7 @@
 
 
 
- void yang_write_string(YangBuffer* buf,string value)
+ void yang_write_string(YangBuffer* buf,std::string value)
  {
      //srs_assert(require((int)value.length()));
 	 if(buf==NULL) return;
@@ -25,7 +25,7 @@
      buf->head += value.length();
  }
 
- string yang_read_string(YangBuffer* buf,int32_t len)
+ std::string yang_read_string(YangBuffer* buf,int32_t len)
  {
      ////srs_assert(require(len));
 
@@ -44,9 +44,9 @@
     }
 }
 
- vector<string> yang_split_first(string s, char ch) {
+ std::vector<std::string> yang_split_first(std::string s, char ch) {
  	int32_t len = 0;
- 	vector<string> ret;
+    std::vector<std::string> ret;
  	for (size_t i = 0; i < s.length(); i++) {
  		if (s[i] == ch) {
  			ret.push_back(s.substr(0, i));
@@ -61,10 +61,10 @@
  	return ret;
  }
 
-vector<string> yang_split(string s, char ch) {
+ std::vector<std::string> yang_split(std::string s, char ch) {
 	size_t start = 0;
 	int32_t len = 0;
-	vector<string> ret;
+    std::vector<std::string> ret;
 	for (size_t i = 0; i < s.length(); i++) {
 		if (s[i] == ch) {
 			ret.push_back(s.substr(start, len));
@@ -101,11 +101,11 @@ std::string yang_int2str(int64_t value) {
 
 	char tmp[22];
     snprintf(tmp, 22, "%" PRId64, value);
-	return string(tmp);
+	return std::string(tmp);
 }
 std::string yang_random_str(int32_t len) {
-	static string random_table ="01234567890123456789012345678901234567890123456789abcdefghijklmnopqrstuvwxyz";
-	string ret;
+	static std::string random_table ="01234567890123456789012345678901234567890123456789abcdefghijklmnopqrstuvwxyz";
+    std::string ret;
 	ret.reserve(len);
 	for (int32_t i = 0; i < len; ++i) {
 		ret.append(1, random_table[yang_random() % random_table.size()]);

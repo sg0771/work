@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 
@@ -10,7 +10,7 @@
 	#include <libyuv.h>
 #else
 extern "C"{
-	#include <libyuv.h>
+	#include <libyuv/libyuv.h>
 }
 #endif
 using namespace libyuv;

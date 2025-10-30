@@ -1,4 +1,4 @@
-﻿
+
 //
 // Copyright (c) 2019-2022 yanggaofeng
 //
@@ -9,7 +9,7 @@
 #include <vector>
 
 
-using namespace std;
+//using namespace std;
 
 class YangSysMessageHandle :public YangThread{
 public:
@@ -30,7 +30,7 @@ protected:
 	void stopLoop();
 
 private:
-	vector<YangSysMessage*> m_sysMessages;
+	std::vector<YangSysMessage*> m_sysMessages;
 	yang_thread_mutex_t m_mutex;
 	yang_thread_mutex_t m_lock;
 	yang_thread_cond_t m_cond_mess;

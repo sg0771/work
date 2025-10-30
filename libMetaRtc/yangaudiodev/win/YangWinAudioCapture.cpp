@@ -1,11 +1,11 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #include <yangaudiodev/win/YangWinAudioCapture.h>
 #ifdef _WIN32
 #include <uuids.h>
 
-using namespace std;
+//using namespace std;
 #define SAFE_RELEASE(x) { if (x) x->Release(); x = NULL; }
 YangWinAudioCapture::YangWinAudioCapture(YangContext *pcontext){ // @suppress("Class members should be properly initialized")
     //m_context = pcontext;
@@ -85,7 +85,7 @@ void YangWinAudioCapture::setPreProcess(YangPreProcess *pp) {
 	}
 }
 
-void YangWinAudioCapture::setInAudioBuffer(vector<YangAudioPlayBuffer*> *pal) {
+void YangWinAudioCapture::setInAudioBuffer(std::vector<YangAudioPlayBuffer*> *pal) {
     m_ahandle->setInAudioBuffer(pal);
 }
 void YangWinAudioCapture::stopLoop() {
@@ -176,7 +176,7 @@ int32_t YangWinAudioCapture::init() {
 	if (m_isInit)
         return Yang_Ok;
 
-	::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
+	CoInitialize(NULL);
 
 	ULONG cFetched;
 	ICreateDevEnum *devEnum = NULL;

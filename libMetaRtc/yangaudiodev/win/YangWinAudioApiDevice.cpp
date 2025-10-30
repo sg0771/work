@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #include <yangaudiodev/win/YangWinAudioApiDevice.h>
@@ -74,7 +74,7 @@ if(!m_usingBuiltinAec&&m_player)	m_player->m_audioData.m_preProcess = pp;
 }
 
 void YangWinAudioApiDevice::setInAudioBuffer(
-		vector<YangAudioPlayBuffer*> *pal) {
+	std::vector<YangAudioPlayBuffer*> *pal) {
 
 }
 void YangWinAudioApiDevice::caputureAudioData(YangFrame *audioFrame) {

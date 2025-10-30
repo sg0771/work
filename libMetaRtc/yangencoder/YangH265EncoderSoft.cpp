@@ -103,7 +103,7 @@ void YangH265EncoderSoft::setVideoMetaData(YangVideoMeta *pvmd) {
 }
 void YangH265EncoderSoft::initX265Param(YangVideoInfo *pvp,YangVideoEncInfo *penc,x265_param *param){
 
-	param->internalBitDepth =pvp->bitDepth;
+	param->sourceBitDepth=pvp->bitDepth;
 
 	param->sourceWidth = pvp->outWidth;   //set frame width
 	param->sourceHeight = pvp->outHeight;  //set frame height
@@ -159,7 +159,7 @@ int32_t YangH265EncoderSoft::init(YangContext* pcontext,YangVideoInfo* videoInfo
 
 	m_265Pic=yang_x265_picture_alloc();
 	yang_x265_picture_init(param,m_265Pic);
-	int32_t bitLen = param->internalBitDepth == 8 ? 1 : 2;
+	int32_t bitLen=param->sourceBitDepth==8?1:2;
 	int32_t fileLen=bitLen*param->sourceWidth*param->sourceHeight*3/2;
 	int32_t allLen=bitLen*param->sourceWidth*param->sourceHeight;
 	m_buffer=(uint8_t*)malloc(fileLen);

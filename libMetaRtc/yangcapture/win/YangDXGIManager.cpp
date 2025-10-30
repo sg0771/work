@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifdef _MSC_VER
@@ -239,7 +239,7 @@ HRESULT YangDXGIManager::Init()
 	}
 
 	// Getting all adapters
-	vector<CComPtr<IDXGIAdapter1>> vAdapters;
+	std::vector<CComPtr<IDXGIAdapter1>> vAdapters;
 
 	CComPtr<IDXGIAdapter1> spAdapter;
 	for(int i=0; m_spDXGIFactory1->EnumAdapters1(i, &spAdapter) != DXGI_ERROR_NOT_FOUND; i++)
@@ -249,11 +249,11 @@ HRESULT YangDXGIManager::Init()
 	}
 
 	// Iterating over all adapters to get all outputs
-	for(vector<CComPtr<IDXGIAdapter1>>::iterator AdapterIter = vAdapters.begin();
+	for(std::vector<CComPtr<IDXGIAdapter1>>::iterator AdapterIter = vAdapters.begin();
 		AdapterIter != vAdapters.end();
 		AdapterIter++)
 	{
-		vector<CComPtr<IDXGIOutput>> vOutputs;
+		std::vector<CComPtr<IDXGIOutput>> vOutputs;
 
 		CComPtr<IDXGIOutput> spDXGIOutput;
 		for(int i=0; (*AdapterIter)->EnumOutputs(i, &spDXGIOutput) != DXGI_ERROR_NOT_FOUND; i++)
@@ -348,12 +348,12 @@ HRESULT YangDXGIManager::GetOutputRect(RECT& rc)
 	if(hr != S_OK)
 		return hr;
 
-	vector<YangDXGIOutputDuplication> vOutputs = GetOutputDuplication();
+	std::vector<YangDXGIOutputDuplication> vOutputs = GetOutputDuplication();
 
 	RECT rcShare;
 	SetRect(&rcShare, 0, 0, 0, 0);
 
-	for(vector<YangDXGIOutputDuplication>::iterator iter = vOutputs.begin();
+	for(std::vector<YangDXGIOutputDuplication>::iterator iter = vOutputs.begin();
 		iter != vOutputs.end();
 		iter++)
 	{
@@ -415,9 +415,9 @@ HRESULT YangDXGIManager::GetOutputBits(BYTE* pBits, RECT& rcDest)
 		dwOutputHeight = dwDestHeight;
 	}
 
-	vector<YangDXGIOutputDuplication> vOutputs = GetOutputDuplication();
+	std::vector<YangDXGIOutputDuplication> vOutputs = GetOutputDuplication();
 
-	for(vector<YangDXGIOutputDuplication>::iterator iter = vOutputs.begin();
+	for(std::vector<YangDXGIOutputDuplication>::iterator iter = vOutputs.begin();
 		iter != vOutputs.end();
 		iter++)
 	{
@@ -659,15 +659,15 @@ void YangDXGIManager::DrawMousePointer(BYTE* pDesktopBits, RECT rcDesktop, RECT 
 	}
 }
 
-vector<YangDXGIOutputDuplication> YangDXGIManager::GetOutputDuplication()
+std::vector<YangDXGIOutputDuplication> YangDXGIManager::GetOutputDuplication()
 {
-	vector<YangDXGIOutputDuplication> outputs;
+	std::vector<YangDXGIOutputDuplication> outputs;
 	switch(m_CaptureSource)
 	{
 		case CSMonitor1:
 		{
 			// Return the one with IsPrimary
-			for(vector<YangDXGIOutputDuplication>::iterator iter = m_vOutputs.begin();
+			for(std::vector<YangDXGIOutputDuplication>::iterator iter = m_vOutputs.begin();
 				iter != m_vOutputs.end();
 				iter++)
 			{
@@ -684,7 +684,7 @@ vector<YangDXGIOutputDuplication> YangDXGIManager::GetOutputDuplication()
 		case CSMonitor2:
 		{
 			// Return the first with !IsPrimary
-			for(vector<YangDXGIOutputDuplication>::iterator iter = m_vOutputs.begin();
+			for(std::vector<YangDXGIOutputDuplication>::iterator iter = m_vOutputs.begin();
 				iter != m_vOutputs.end();
 				iter++)
 			{
@@ -701,7 +701,7 @@ vector<YangDXGIOutputDuplication> YangDXGIManager::GetOutputDuplication()
 		case CSDesktop:
 		{
 			// Return all outputs
-			for(vector<YangDXGIOutputDuplication>::iterator iter = m_vOutputs.begin();
+			for(std::vector<YangDXGIOutputDuplication>::iterator iter = m_vOutputs.begin();
 				iter != m_vOutputs.end();
 				iter++)
 			{

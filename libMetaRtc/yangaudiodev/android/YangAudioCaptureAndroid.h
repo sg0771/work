@@ -11,7 +11,7 @@
 #ifdef __ANDROID__
 #include <yangaudiodev/android/YangAudioAndroid.h>
 
-using namespace std;
+//using namespace std;
 
 class YangAudioCaptureAndroid: public YangAudioCapture {
 public:

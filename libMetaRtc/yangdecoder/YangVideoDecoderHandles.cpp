@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #include <yangdecoder/YangVideoDecoderHandles.h>
@@ -14,7 +14,7 @@ YangVideoDecoderHandles::YangVideoDecoderHandles(YangContext *pcontext) {
 	m_isStart = 0;
 	m_isConvert = 1;
 	m_in_videoBuffer = NULL;
-	m_decs = new vector<YangVideoDecoder*>();
+	m_decs = new std::vector<YangVideoDecoder*>();
 	m_out_videoBuffer = NULL;
 	m_context = pcontext;
 
@@ -165,7 +165,7 @@ void YangVideoDecoderHandles::init() {
 void YangVideoDecoderHandles::setInVideoBuffer(YangVideoDecoderBuffer *pbuf) {
 	m_in_videoBuffer = pbuf;
 }
-void YangVideoDecoderHandles::setOutVideoBuffer(vector<YangVideoBuffer*> *pbuf) {
+void YangVideoDecoderHandles::setOutVideoBuffer(std::vector<YangVideoBuffer*> *pbuf) {
 	m_out_videoBuffer = pbuf;
 }
 void YangVideoDecoderHandles::onAudioData(YangFrame* pframe){

@@ -22,7 +22,7 @@
 YangWinAudioApi::YangWinAudioApi()
 {
     m_enum=NULL;
-    ::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);//COM 初始化
+    CoInitialize(NULL); //初始化COM库
     CoCreateInstance(__uuidof(MMDeviceEnumerator), NULL, CLSCTX_ALL,
                      __uuidof(IMMDeviceEnumerator),
                      reinterpret_cast<void**>(&m_enum));

@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 
@@ -34,7 +34,7 @@ void YangAudioPlay::run() {
 void YangAudioPlay::stop() {
 	stopLoop();
 }
-void YangAudioPlay::setAudioBuffers(vector<YangAudioPlayBuffer*> *pal) {
+void YangAudioPlay::setAudioBuffers(std::vector<YangAudioPlayBuffer*> *pal) {
 
 }
 void YangAudioPlay::setAudioBuffer(YangAudioPlayBuffer* pal) {
