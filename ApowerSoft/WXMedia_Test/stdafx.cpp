@@ -25,36 +25,14 @@ int Run(LPTSTR /*lpstrCmdLine*/ = NULL, int nCmdShow = SW_SHOWDEFAULT)
     return nRet;
 }
 
-
-
-
-static BOOL _IsHaveInstance()
-{
-    #define  AppSingletonMutex _T("{5676532A-0000-460D-A1F0-81D6E68F046A}")
-
-    // 单实例运行
-    HANDLE hMutex = ::CreateMutex(NULL, TRUE, AppSingletonMutex);
-    if (hMutex != NULL && GetLastError() == ERROR_ALREADY_EXISTS)
-    {
-        MessageBox(0, _T("上次程序运行还没完全退出，请稍后再启动！"), _T("WXMedia"), MB_OK);
-		exit(0);
-        return TRUE;
-    }
-    return FALSE;
-}
-
 int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lpstrCmdLine, int nCmdShow)
 {
-
-    _IsHaveInstance();
-
     //Com Init
     HRESULT hRes = ::CoInitializeEx(NULL, COINIT_MULTITHREADED | COINIT_SPEED_OVER_MEMORY);
     ATLASSERT(SUCCEEDED(hRes));
 
     AtlInitCommonControls(ICC_BAR_CLASSES);	// add flags to support other controls
 
-    Initialize("Apowersoft", "WXTest+++", 0);//库的初始化
 	WXDeviceInit(L"WXMedia_Test.log");//WXMedia初始化
 
     //GDI+ Init

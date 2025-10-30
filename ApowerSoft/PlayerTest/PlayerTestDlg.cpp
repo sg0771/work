@@ -8,7 +8,6 @@
 #include "PlayerTestDlg.h"
 #include "afxdialogex.h"
 #include <timeapi.h>
-#include <WXLog.h>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

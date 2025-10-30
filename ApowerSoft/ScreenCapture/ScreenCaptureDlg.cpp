@@ -528,8 +528,8 @@ BOOL CScreenCaptureDlg::OnInitDialog()
 	m_cbRec.InsertString(2, L"50%"); 
 	m_cbRec.SetCurSel(0);
 
-	int nMemory = WXGetGlobalValue(L"Memory",-1);
-	int nCpu = WXGetGlobalValue(L"Cpu", -1);
+	int nMemory = WXGetGlobalValue(L"Memory");
+	int nCpu = WXGetGlobalValue(L"Cpu");
 	if (nMemory >= 16 && nCpu >= 8) {
 		//内存大于等16G 且 Cpu数量大于等于8
 		//可以使用高性能录屏模式

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="audio\aframe.h" />
+    <ClInclude Include="audio\chmap.h" />
+    <ClInclude Include="audio\chmap_avchannel.h" />
+    <ClInclude Include="audio\chmap_sel.h" />
+    <ClInclude Include="audio\filter\af_scaletempo2_internals.h" />
+    <ClInclude Include="audio\fmt-conversion.h" />
+    <ClInclude Include="audio\format.h" />
+    <ClInclude Include="audio\out\ao.h" />
+    <ClInclude Include="audio\out\ao_wasapi.h" />
+    <ClInclude Include="audio\out\internal.h" />
+    <ClInclude Include="libmpv.h" />
+    <ClInclude Include="common\av_common.h" />
+    <ClInclude Include="common\av_log.h" />
+    <ClInclude Include="common\codecs.h" />
+    <ClInclude Include="common\common.h" />
+    <ClInclude Include="common\encode.h" />
+    <ClInclude Include="common\encode_lavc.h" />
+    <ClInclude Include="common\global.h" />
+    <ClInclude Include="common\msg.h" />
+    <ClInclude Include="common\msg_control.h" />
+    <ClInclude Include="common\playlist.h" />
+    <ClInclude Include="common\recorder.h" />
+    <ClInclude Include="common\stats.h" />
+    <ClInclude Include="common\tags.h" />
+    <ClInclude Include="common\mpv-config.h" />
+    <ClInclude Include="demux\cache.h" />
+    <ClInclude Include="demux\codec_tags.h" />
+    <ClInclude Include="demux\cue.h" />
+    <ClInclude Include="demux\demux.h" />
+    <ClInclude Include="demux\ebml.h" />
+    <ClInclude Include="demux\matroska.h" />
+    <ClInclude Include="demux\packet.h" />
+    <ClInclude Include="demux\stheader.h" />
+    <ClInclude Include="demux\timeline.h" />
+    <ClInclude Include="filters\filter.h" />
+    <ClInclude Include="filters\filter_internal.h" />
+    <ClInclude Include="filters\frame.h" />
+    <ClInclude Include="filters\f_async_queue.h" />
+    <ClInclude Include="filters\f_autoconvert.h" />
+    <ClInclude Include="filters\f_auto_filters.h" />
+    <ClInclude Include="filters\f_decoder_wrapper.h" />
+    <ClInclude Include="filters\f_demux_in.h" />
+    <ClInclude Include="filters\f_hwtransfer.h" />
+    <ClInclude Include="filters\f_lavfi.h" />
+    <ClInclude Include="filters\f_output_chain.h" />
+    <ClInclude Include="filters\f_swresample.h" />
+    <ClInclude Include="filters\f_swscale.h" />
+    <ClInclude Include="filters\f_utils.h" />
+    <ClInclude Include="filters\user_filters.h" />
+    <ClInclude Include="generated\ebml_types.h" />
+    <ClInclude Include="generated\version.h" />
+    <ClInclude Include="input\cmd.h" />
+    <ClInclude Include="input\event.h" />
+    <ClInclude Include="input\input.h" />
+    <ClInclude Include="input\keycodes.h" />
+    <ClInclude Include="libmpv\client.h" />
+    <ClInclude Include="libmpv\render.h" />
+    <ClInclude Include="libmpv\render_gl.h" />
+    <ClInclude Include="libmpv\stream_cb.h" />
+    <ClInclude Include="misc\bstr.h" />
+    <ClInclude Include="misc\charset_conv.h" />
+    <ClInclude Include="misc\ctype.h" />
+    <ClInclude Include="misc\dispatch.h" />
+    <ClInclude Include="misc\json.h" />
+    <ClInclude Include="misc\linked_list.h" />
+    <ClInclude Include="misc\natural_sort.h" />
+    <ClInclude Include="misc\node.h" />
+    <ClInclude Include="misc\rendezvous.h" />
+    <ClInclude Include="misc\thread_pool.h" />
+    <ClInclude Include="misc\thread_tools.h" />
+    <ClInclude Include="common\mpv_talloc.h" />
+    <ClInclude Include="options\m_config.h" />
+    <ClInclude Include="options\m_config_core.h" />
+    <ClInclude Include="options\m_config_frontend.h" />
+    <ClInclude Include="options\m_option.h" />
+    <ClInclude Include="options\m_property.h" />
+    <ClInclude Include="options\options.h" />
+    <ClInclude Include="options\parse_commandline.h" />
+    <ClInclude Include="options\parse_configfile.h" />
+    <ClInclude Include="options\path.h" />
+    <ClInclude Include="osdep\atomic.h" />
+    <ClInclude Include="osdep\compiler.h" />
+    <ClInclude Include="osdep\endian.h" />
+    <ClInclude Include="osdep\getpid.h" />
+    <ClInclude Include="osdep\io.h" />
+    <ClInclude Include="osdep\main-fn.h" />
+    <ClInclude Include="osdep\path.h" />
+    <ClInclude Include="osdep\polldev.h" />
+    <ClInclude Include="osdep\semaphore.h" />
+    <ClInclude Include="osdep\strnlen.h" />
+    <ClInclude Include="osdep\subprocess.h" />
+    <ClInclude Include="osdep\terminal.h" />
+    <ClInclude Include="osdep\threads.h" />
+    <ClInclude Include="osdep\timer.h" />
+    <ClInclude Include="osdep\w32_keyboard.h" />
+    <ClInclude Include="osdep\windows_utils.h" />
+    <ClInclude Include="player\client.h" />
+    <ClInclude Include="player\command.h" />
+    <ClInclude Include="player\core.h" />
+    <ClInclude Include="player\external_files.h" />
+    <ClInclude Include="player\screenshot.h" />
+    <ClInclude Include="common\pthread.h" />
+    <ClInclude Include="common\semaphore.h" />
+    <ClInclude Include="stream\cookies.h" />
+    <ClInclude Include="stream\dvbin.h" />
+    <ClInclude Include="stream\dvb_tune.h" />
+    <ClInclude Include="stream\stream.h" />
+    <ClInclude Include="strings.h" />
+    <ClInclude Include="sub\ass_mp.h" />
+    <ClInclude Include="sub\dec_sub.h" />
+    <ClInclude Include="sub\draw_bmp.h" />
+    <ClInclude Include="sub\img_convert.h" />
+    <ClInclude Include="sub\osd.h" />
+    <ClInclude Include="sub\osd_state.h" />
+    <ClInclude Include="sub\sd.h" />
+    <ClInclude Include="ta\ta.h" />
+    <ClInclude Include="ta\ta_talloc.h" />
+    <ClInclude Include="video\csputils.h" />
+    <ClInclude Include="video\d3d.h" />
+    <ClInclude Include="video\filter\refqueue.h" />
+    <ClInclude Include="video\fmt-conversion.h" />
+    <ClInclude Include="video\hwdec.h" />
+    <ClInclude Include="video\image_loader.h" />
+    <ClInclude Include="video\image_writer.h" />
+    <ClInclude Include="video\img_format.h" />
+    <ClInclude Include="video\mp_image.h" />
+    <ClInclude Include="video\mp_image_pool.h" />
+    <ClInclude Include="video\out\aspect.h" />
+    <ClInclude Include="video\out\bitmap_packer.h" />
+    <ClInclude Include="video\out\dither.h" />
+    <ClInclude Include="video\out\dr_helper.h" />
+    <ClInclude Include="video\out\filter_kernels.h" />
+    <ClInclude Include="video\out\video_out_libmpv.h" />
+    <ClInclude Include="video\out\present_sync.h" />
+    <ClInclude Include="video\out\vo.h" />
+    <ClInclude Include="video\out\w32_common.h" />
+    <ClInclude Include="video\out\win32\displayconfig.h" />
+    <ClInclude Include="video\out\win32\droptarget.h" />
+    <ClInclude Include="video\out\win_state.h" />
+    <ClInclude Include="video\repack.h" />
+    <ClInclude Include="video\sws_utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="audio\audio_aframe.c" />
+    <ClCompile Include="audio\audio_chmap.c" />
+    <ClCompile Include="audio\audio_chmap_avchannel.c" />
+    <ClCompile Include="audio\audio_chmap_sel.c" />
+    <ClCompile Include="audio\audio_fmt-conversion.c" />
+    <ClCompile Include="audio\audio_format.c" />
+    <ClCompile Include="audio\decode\ad_lavc.c" />
+    <ClCompile Include="audio\decode\ad_spdif.c" />
+    <ClCompile Include="audio\filter\af_drop.c" />
+    <ClCompile Include="audio\filter\af_format.c" />
+    <ClCompile Include="audio\filter\af_lavcac3enc.c" />
+    <ClCompile Include="audio\filter\af_scaletempo.c" />
+    <ClCompile Include="audio\filter\af_scaletempo2.c" />
+    <ClCompile Include="audio\filter\af_scaletempo2_internals.c" />
+    <ClCompile Include="audio\out\ao.c" />
+    <ClCompile Include="audio\out\ao_lavc.c" />
+    <ClCompile Include="audio\out\ao_null.c" />
+    <ClCompile Include="audio\out\ao_pcm.c" />
+    <ClCompile Include="audio\out\ao_wasapi.c" />
+    <ClCompile Include="audio\out\ao_wasapi_changenotify.c" />
+    <ClCompile Include="audio\out\ao_wasapi_utils.c" />
+    <ClCompile Include="audio\out\buffer.c" />
+    <ClCompile Include="common\av_common.c" />
+    <ClCompile Include="common\common_av_log.c" />
+    <ClCompile Include="common\common_codecs.c" />
+    <ClCompile Include="common\common_common.c" />
+    <ClCompile Include="common\common_encode_lavc.c" />
+    <ClCompile Include="common\common_msg.c" />
+    <ClCompile Include="common\common_playlist.c" />
+    <ClCompile Include="common\common_recorder.c" />
+    <ClCompile Include="common\common_stats.c" />
+    <ClCompile Include="common\common_tags.c" />
+    <ClCompile Include="common\common_version.c" />
+    <ClCompile Include="demux\mpv_demux_cache.c" />
+    <ClCompile Include="demux\mpv_demux_codec_tags.c" />
+    <ClCompile Include="demux\mpv_demux_cue.c" />
+    <ClCompile Include="demux\mpv_demux_demux.c" />
+    <ClCompile Include="demux\mpv_demux_demux_cue.c" />
+    <ClCompile Include="demux\mpv_demux_demux_disc.c" />
+    <ClCompile Include="demux\mpv_demux_demux_edl.c" />
+    <ClCompile Include="demux\mpv_demux_demux_lavf.c" />
+    <ClCompile Include="demux\mpv_demux_demux_libarchive.c" />
+    <ClCompile Include="demux\mpv_demux_demux_mf.c" />
+    <ClCompile Include="demux\mpv_demux_demux_mkv.c" />
+    <ClCompile Include="demux\mpv_demux_demux_mkv_timeline.c" />
+    <ClCompile Include="demux\mpv_demux_demux_null.c" />
+    <ClCompile Include="demux\mpv_demux_demux_playlist.c" />
+    <ClCompile Include="demux\mpv_demux_demux_raw.c" />
+    <ClCompile Include="demux\mpv_demux_demux_timeline.c" />
+    <ClCompile Include="demux\mpv_demux_ebml.c" />
+    <ClCompile Include="demux\mpv_demux_packet.c" />
+    <ClCompile Include="demux\mpv_demux_timeline.c" />
+    <ClCompile Include="filters\f_async_queue.c" />
+    <ClCompile Include="filters\f_autoconvert.c" />
+    <ClCompile Include="filters\f_auto_filters.c" />
+    <ClCompile Include="filters\f_decoder_wrapper.c" />
+    <ClCompile Include="filters\f_demux_in.c" />
+    <ClCompile Include="filters\f_filter.c" />
+    <ClCompile Include="filters\f_frame.c" />
+    <ClCompile Include="filters\f_hwtransfer.c" />
+    <ClCompile Include="filters\f_lavfi.c" />
+    <ClCompile Include="filters\f_output_chain.c" />
+    <ClCompile Include="filters\f_swresample.c" />
+    <ClCompile Include="filters\f_swscale.c" />
+    <ClCompile Include="filters\f_user_filters.c" />
+    <ClCompile Include="filters\f_utils.c" />
+    <ClCompile Include="input\input_cmd.c" />
+    <ClCompile Include="input\input_event.c" />
+    <ClCompile Include="input\input_input.c" />
+    <ClCompile Include="input\input_ipc-win.c" />
+    <ClCompile Include="input\input_ipc.c" />
+    <ClCompile Include="input\input_keycodes.c" />
+    <ClCompile Include="misc\misc_bstr.c" />
+    <ClCompile Include="misc\misc_charset_conv.c" />
+    <ClCompile Include="misc\misc_dispatch.c" />
+    <ClCompile Include="misc\misc_json.c" />
+    <ClCompile Include="misc\misc_natural_sort.c" />
+    <ClCompile Include="misc\misc_node.c" />
+    <ClCompile Include="misc\misc_rendezvous.c" />
+    <ClCompile Include="misc\misc_thread_pool.c" />
+    <ClCompile Include="misc\misc_thread_tools.c" />
+    <ClCompile Include="options\mpv_options.c" />
+    <ClCompile Include="options\mpv_parse_commandline.c" />
+    <ClCompile Include="options\mpv_parse_configfile.c" />
+    <ClCompile Include="options\mpv_path.c" />
+    <ClCompile Include="options\m_config_core.c" />
+    <ClCompile Include="options\m_config_frontend.c" />
+    <ClCompile Include="options\m_option.c" />
+    <ClCompile Include="options\m_property.c" />
+    <ClCompile Include="osdep\glob-win.c" />
+    <ClCompile Include="osdep\io.c" />
+    <ClCompile Include="osdep\main-fn-win.c" />
+    <ClCompile Include="osdep\path-win.c" />
+    <ClCompile Include="osdep\polldev.c" />
+    <ClCompile Include="osdep\subprocess-win.c" />
+    <ClCompile Include="osdep\subprocess.c" />
+    <ClCompile Include="osdep\terminal-win.c" />
+    <ClCompile Include="osdep\threads.c" />
+    <ClCompile Include="osdep\timer-win2.c" />
+    <ClCompile Include="osdep\timer.c" />
+    <ClCompile Include="osdep\w32_keyboard.c" />
+    <ClCompile Include="osdep\win32-console-wrapper.c" />
+    <ClCompile Include="osdep\windows_utils.c" />
+    <ClCompile Include="player\player_audio.c" />
+    <ClCompile Include="player\player_client.c" />
+    <ClCompile Include="player\player_command.c" />
+    <ClCompile Include="player\player_configfiles.c" />
+    <ClCompile Include="player\player_external_files.c" />
+    <ClCompile Include="player\player_loadfile.c" />
+    <ClCompile Include="player\player_loop.c" />
+    <ClCompile Include="player\player_main.c" />
+    <ClCompile Include="player\player_misc.c" />
+    <ClCompile Include="player\player_osd.c" />
+    <ClCompile Include="player\player_screenshot.c" />
+    <ClCompile Include="player\player_scripting.c" />
+    <ClCompile Include="player\player_sub.c" />
+    <ClCompile Include="player\player_video.c" />
+    <ClCompile Include="common\pthread.c" />
+    <ClCompile Include="stream\stream.c" />
+    <ClCompile Include="stream\stream_avdevice.c" />
+    <ClCompile Include="stream\stream_cb.c" />
+    <ClCompile Include="stream\stream_concat.c" />
+    <ClCompile Include="stream\stream_cookies.c" />
+    <ClCompile Include="stream\stream_edl.c" />
+    <ClCompile Include="stream\stream_file.c" />
+    <ClCompile Include="stream\stream_lavf.c" />
+    <ClCompile Include="stream\stream_memory.c" />
+    <ClCompile Include="stream\stream_mf.c" />
+    <ClCompile Include="stream\stream_null.c" />
+    <ClCompile Include="stream\stream_slice.c" />
+    <ClCompile Include="sub\sd_ass.c" />
+    <ClCompile Include="sub\sd_lavc.c" />
+    <ClCompile Include="sub\subdraw_bmp.c" />
+    <ClCompile Include="sub\subfilter_sdh.c" />
+    <ClCompile Include="sub\sub_ass_mp.c" />
+    <ClCompile Include="sub\sub_dec_sub.c" />
+    <ClCompile Include="sub\sub_img_convert.c" />
+    <ClCompile Include="sub\sub_lavc_conv.c" />
+    <ClCompile Include="sub\sub_osd.c" />
+    <ClCompile Include="sub\sub_osd_libass.c" />
+    <ClCompile Include="ta\ta.c" />
+    <ClCompile Include="ta\ta_talloc.c" />
+    <ClCompile Include="ta\ta_utils.c" />
+    <ClCompile Include="video\decode\vd_lavc.c" />
+    <ClCompile Include="video\filter\vf_format.c" />
+    <ClCompile Include="video\filter\vf_refqueue.c" />
+    <ClCompile Include="video\filter\vf_sub.c" />
+    <ClCompile Include="video\out\vo_aspect.c" />
+    <ClCompile Include="video\out\vo_bitmap_packer.c" />
+    <ClCompile Include="video\out\vo_dither.c" />
+    <ClCompile Include="video\out\vo_dr_helper.c" />
+    <ClCompile Include="video\out\vo_filter_kernels.c" />
+    <ClCompile Include="video\out\vo_libmpv_sw.c" />
+    <ClCompile Include="video\out\vo_present_sync.c" />
+    <ClCompile Include="video\out\vo.c" />
+    <ClCompile Include="video\out\vo_direct3d.c" />
+    <ClCompile Include="video\out\vo_image.c" />
+    <ClCompile Include="video\out\vo_lavc.c" />
+    <ClCompile Include="video\out\vo_libmpv.c" />
+    <ClCompile Include="video\out\vo_null.c" />
+    <ClCompile Include="video\out\vo_tct.c" />
+    <ClCompile Include="video\out\vo_w32_common.c" />
+    <ClCompile Include="video\out\win32\displayconfig.c" />
+    <ClCompile Include="video\out\win32\droptarget.c" />
+    <ClCompile Include="video\out\vo_win_state.c" />
+    <ClCompile Include="video\video_csputils.c" />
+    <ClCompile Include="video\video_d3d.c" />
+    <ClCompile Include="video\video_fmt-conversion.c" />
+    <ClCompile Include="video\video_hwdec.c" />
+    <ClCompile Include="video\video_image_loader.c" />
+    <ClCompile Include="video\video_image_writer.c" />
+    <ClCompile Include="video\video_img_format.c" />
+    <ClCompile Include="video\video_mp_image.c" />
+    <ClCompile Include="video\video_mp_image_pool.c" />
+    <ClCompile Include="video\video_repack.c" />
+    <ClCompile Include="video\video_sws_utils.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8a5254bf-0fd0-43a8-9cdc-c9082c0abe52}</ProjectGuid>
+    <RootNamespace>libmpv</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <ReferencePath>$(VC_ReferencesPath_x64);</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>MPV_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;SQLITE_CORE;restrict=__restrict;WIN32;_DEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003;4996</DisableSpecificWarnings>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>MPV_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;SQLITE_CORE;restrict=__restrict;WIN32;NDEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003;4996</DisableSpecificWarnings>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>MPV_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;SQLITE_CORE;restrict=__restrict;_DEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003;4996</DisableSpecificWarnings>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>MPV_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;SQLITE_CORE;restrict=__restrict;NDEBUG;LIBFFMPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DisableSpecificWarnings>4018;4996;4003;4996</DisableSpecificWarnings>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

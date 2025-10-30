@@ -21,9 +21,7 @@
   <ItemGroup>
     <ClInclude Include="dirent.h" />
     <ClInclude Include="ffmpeg-config.h" />
-    <ClInclude Include="FfmpegIncludes.h" />
     <ClInclude Include="ff_stdatomic.h" />
-    <ClInclude Include="json.hpp" />
     <ClInclude Include="libavcodec\a64colors.h" />
     <ClInclude Include="libavcodec\a64tables.h" />
     <ClInclude Include="libavcodec\aac.h" />
@@ -880,7 +878,6 @@
     <ClInclude Include="libavutil\x86\timer.h" />
     <ClInclude Include="libavutil\xga_font_data.h" />
     <ClInclude Include="libavutil\xtea.h" />
-    <ClInclude Include="LibInst.hpp" />
     <ClInclude Include="libswresample\audioconvert.h" />
     <ClInclude Include="libswresample\dither_template.h" />
     <ClInclude Include="libswresample\noise_shaping_data.c.h" />
@@ -899,10 +896,7 @@
     <ClInclude Include="libswscale\x86\rgb2rgb_template.h" />
     <ClInclude Include="libswscale\x86\swscale_template.h" />
     <ClInclude Include="libswscale\x86\yuv2rgb_template.h" />
-    <ClInclude Include="MediaInfoDLL.h" />
     <ClInclude Include="unistd.h" />
-    <ClInclude Include="WXBase.h" />
-    <ClInclude Include="WXMediaDefines.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ffmpeg-config.inc" />
@@ -3250,7 +3244,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <SupportJustMyCode>false</SupportJustMyCode>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <AdditionalOptions>-mssse3 -msse4.1  -Wno-implicit-function-declaration %(AdditionalOptions)</AdditionalOptions>
@@ -3285,7 +3279,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <Optimization>MaxSpeed</Optimization>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
@@ -3321,7 +3315,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <SupportJustMyCode>false</SupportJustMyCode>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <AdditionalOptions>-mssse3 -msse4.1  -Wno-implicit-function-declaration %(AdditionalOptions)</AdditionalOptions>
@@ -3356,7 +3350,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <AdditionalOptions>-mssse3 -msse4.1  -Wno-implicit-function-declaration %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>

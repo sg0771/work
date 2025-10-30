@@ -50,15 +50,15 @@
 #pragma comment(lib, "ole32.lib")
 #pragma comment(lib, "gdiplus.lib")
 
-#pragma comment(lib, "libyuv.lib")
-#pragma comment(lib, "WXIMage.lib")
-#pragma comment(lib, "libheif.lib")
-#pragma comment(lib, "lcsm2.lib")
+//#pragma comment(lib, "libyuv.lib")
+//#pragma comment(lib, "WXIMage.lib")
+//#pragma comment(lib, "libheif.lib")
+//#pragma comment(lib, "lcsm2.lib")
 #pragma comment(lib, "librawlite.lib")
 #pragma comment(lib, "libtiff.lib")
 
 void  libffmpeg_wx(){
-I420ToARGB();
+//I420ToARGB();
 AES_encrypt();
 AES_set_encrypt_key();
 ASN1_STRING_get0_data();
@@ -1576,9 +1576,9 @@ ffio_set_buf_size();
 i2a_ASN1_OBJECT();
 i2d_X509_PUBKEY();
 i2t_ASN1_OBJECT();
-iconv();
-iconv_close();
-iconv_open();
+libiconv();
+libiconv_close();
+libiconv_open();
 swr_alloc();
 swr_alloc_set_opts();
 swr_build_matrix();

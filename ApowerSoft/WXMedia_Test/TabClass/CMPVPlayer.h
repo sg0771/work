@@ -1,4 +1,4 @@
-// MPV 播放器测试对话框
+﻿// MPV 播放器测试对话框
 
 #if !defined(CMPVPlayer_H)
 #define CMPVPlayer_H
@@ -6,7 +6,7 @@
 #include "stdafx.h"
 #include "resource.h"
 
-#include  <libmpv/client.h>
+#include  "../libmpv/libmpv.h"
 #include  <LibInst.hpp>
 
 extern "C" {
@@ -23,7 +23,7 @@ extern "C" {
 class LibMPV
 {
 public:
-	std::shared_ptr<LibInst::MyLib> m_lib = nullptr;
+	std::shared_ptr<MyLib> m_lib = nullptr;
 public:
 	my_mpv_create m_mpv_create = nullptr;
 	my_mpv_set_option m_mpv_set_option = nullptr;
@@ -36,7 +36,7 @@ public:
 
 public:
 	LibMPV(const wchar_t* filename) {
-		m_lib = std::make_shared<LibInst::MyLib>(filename);
+		m_lib = std::make_shared<MyLib>(filename);
 		if (m_lib->Enabled()) {
 			m_mpv_create = (my_mpv_create)m_lib->GetFunction("mpv_create");
 			m_mpv_set_option = (my_mpv_set_option)m_lib->GetFunction("mpv_set_option");

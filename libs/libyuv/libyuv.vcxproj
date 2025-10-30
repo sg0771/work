@@ -18,68 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="libyuv.h" />
-    <ClInclude Include="libyuv\basic_types.h" />
-    <ClInclude Include="libyuv\compare.h" />
-    <ClInclude Include="libyuv\compare_row.h" />
-    <ClInclude Include="libyuv\convert.h" />
-    <ClInclude Include="libyuv\convert_argb.h" />
-    <ClInclude Include="libyuv\convert_from.h" />
-    <ClInclude Include="libyuv\convert_from_argb.h" />
-    <ClInclude Include="libyuv\cpu_id.h" />
-    <ClInclude Include="libyuv\cpu_support.h" />
-    <ClInclude Include="libyuv\loongson_intrinsics.h" />
-    <ClInclude Include="libyuv\mjpeg_decoder.h" />
-    <ClInclude Include="libyuv\planar_functions.h" />
-    <ClInclude Include="libyuv\rotate.h" />
-    <ClInclude Include="libyuv\rotate_argb.h" />
-    <ClInclude Include="libyuv\rotate_row.h" />
-    <ClInclude Include="libyuv\row.h" />
-    <ClInclude Include="libyuv\scale.h" />
-    <ClInclude Include="libyuv\scale_argb.h" />
-    <ClInclude Include="libyuv\scale_rgb.h" />
-    <ClInclude Include="libyuv\scale_row.h" />
-    <ClInclude Include="libyuv\scale_uv.h" />
-    <ClInclude Include="libyuv\version.h" />
-    <ClInclude Include="libyuv\video_common.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="libyuv\compare.cc" />
-    <ClCompile Include="libyuv\compare_common.cc" />
-    <ClCompile Include="libyuv\compare_win.cc" />
-    <ClCompile Include="libyuv\convert.cc" />
-    <ClCompile Include="libyuv\convert_argb.cc" />
-    <ClCompile Include="libyuv\convert_from.cc" />
-    <ClCompile Include="libyuv\convert_from_argb.cc" />
-    <ClCompile Include="libyuv\convert_jpeg.cc" />
-    <ClCompile Include="libyuv\convert_to_argb.cc" />
-    <ClCompile Include="libyuv\convert_to_i420.cc" />
-    <ClCompile Include="libyuv\cpu_id.cc" />
-    <ClCompile Include="libyuv\mjpeg_decoder.cc" />
-    <ClCompile Include="libyuv\mjpeg_validate.cc" />
-    <ClCompile Include="libyuv\planar_functions.cc" />
-    <ClCompile Include="libyuv\rotate.cc" />
-    <ClCompile Include="libyuv\rotate_any.cc" />
-    <ClCompile Include="libyuv\rotate_argb.cc" />
-    <ClCompile Include="libyuv\rotate_common.cc" />
-    <ClCompile Include="libyuv\rotate_win.cc" />
-    <ClCompile Include="libyuv\row_any.cc" />
-    <ClCompile Include="libyuv\row_common.cc" />
-    <ClCompile Include="libyuv\row_win.cc" />
-    <ClCompile Include="libyuv\scale.cc" />
-    <ClCompile Include="libyuv\scale_any.cc" />
-    <ClCompile Include="libyuv\scale_argb.cc" />
-    <ClCompile Include="libyuv\scale_common.cc" />
-    <ClCompile Include="libyuv\scale_rgb.cc" />
-    <ClCompile Include="libyuv\scale_uv.cc" />
-    <ClCompile Include="libyuv\scale_win.cc" />
-    <ClCompile Include="libyuv\video_common.cc" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5c328a64-7f46-47a9-ba53-40e4f5d034fa}</ProjectGuid>
+    <ProjectGuid>{e5ea4a46-d49a-4953-bfcc-5f91624161ab}</ProjectGuid>
     <RootNamespace>libyuv</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -87,31 +29,32 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(SolutionDir)tools\nasm.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -130,81 +73,43 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
-    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
-    <PreBuildEventUseInBuild />
-    <IncludePath>$(LLVMInstallDir)\lib\clang\$(LLVMIncludeVersion)\include;$(IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\lib\</OutDir>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
-    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
-    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
-    <PreBuildEventUseInBuild />
-    <IncludePath>$(LLVMInstallDir)\lib\clang\$(LLVMIncludeVersion)\include;$(IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\lib\</OutDir>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
-    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <ReferencePath>$(VC_ReferencesPath_x64);</ReferencePath>
-    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
-    <PreBuildEventUseInBuild />
-    <IncludePath>$(LLVMInstallDir)\lib\clang\$(LLVMIncludeVersion)\include;$(IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
-    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <ReferencePath>$(VC_ReferencesPath_x64);</ReferencePath>
-    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
-    <PreBuildEventUseInBuild />
-    <IncludePath>$(LLVMInstallDir)\lib\clang\$(LLVMIncludeVersion)\include;$(IncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
-    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\lib\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;HAVE_JPEG;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)/libs;$(SolutionDir)/libs/freetype;$(SolutionDir)/libs/openssl-1.1.1k/include;$(SolutionDir)/libs/libffmpeg</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>
-      </StringPooling>
-      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
-      <AdditionalOptions>-mssse3 -msse4.1  -Wno-implicit-function-declaration %(AdditionalOptions)</AdditionalOptions>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <SubSystem>
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>
-      </Message>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -212,74 +117,47 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;HAVE_JPEG;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)/libs;$(SolutionDir)/libs/freetype;$(SolutionDir)/libs/openssl-1.1.1k/include;$(SolutionDir)/libs/libffmpeg</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
-      <StringPooling>
-      </StringPooling>
-      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
-      <AdditionalOptions>-mssse3 -msse4.1  -Wno-implicit-function-declaration %(AdditionalOptions)</AdditionalOptions>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <SubSystem>
       </SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>
-      </Message>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;HAVE_JPEG;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)/libs;$(SolutionDir)/libs/freetype;$(SolutionDir)/libs/openssl-1.1.1k/include;$(SolutionDir)/libs/libffmpeg</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>
-      </StringPooling>
-      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
-      <AdditionalOptions>-mssse3 -msse4.1  -Wno-implicit-function-declaration %(AdditionalOptions)</AdditionalOptions>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <SubSystem>
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>
-      </Message>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -287,40 +165,28 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;WINVER=0x0601;NTDDI_VERSION=NTDDI_WIN7;HAVE_JPEG;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)/libs;$(SolutionDir)/libs/freetype;$(SolutionDir)/libs/openssl-1.1.1k/include;$(SolutionDir)/libs/libffmpeg</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
-      <StringPooling>
-      </StringPooling>
-      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
-      <AdditionalOptions>-mssse3 -msse4.1  -Wno-implicit-function-declaration %(AdditionalOptions)</AdditionalOptions>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <SubSystem>
       </SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>
-      </Message>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(SolutionDir)tools\nasm.targets" />
   </ImportGroup>
 </Project>

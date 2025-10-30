@@ -6,7 +6,7 @@
 
 #include "afxwin.h"
 #define USE_HUD 0
-#include <WXMedia/WXMedia.h>
+#include <WXMedia.h>
 #include <map>
 #include <direct.h>
 #include <io.h>

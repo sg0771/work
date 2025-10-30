@@ -1,8 +1,0 @@
-#include "Transforms.h"
-
-Transforms::Transforms(const PClip &_child, IScriptEnvironment *env): base{ _child,__FUNCTION__ } {}
-Transforms::~Transforms() {}
-
-PVideoFrame Transforms::GetFrame(int n, IScriptEnvironment *env) {
-    return base::GetFrame(n, env);
-}

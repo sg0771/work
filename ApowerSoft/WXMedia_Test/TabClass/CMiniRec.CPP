@@ -5,12 +5,7 @@
 #include "CMiniRec.h"
 #include <shellapi.h>
 #include <timeapi.h>
-
-#include <WXLog.h>
-
-#pragma comment(lib,"winmm.lib")
-#pragma comment(lib,"libffmpeg.lib")
-
+#pragma comment(lib,"winmm")
 //判断目录是否存在，不存在则创建
 void CLASS_NAME::ProcDir(const wchar_t* wszDir) {
 
@@ -214,6 +209,10 @@ LRESULT CLASS_NAME::OnInitDialog(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& 
 	assert(isKeyRegistered != FALSE);     //调试时用(当前热键已经被注册时会返回失败)
 
 
+	m_strDir = WXGetPath();
+	m_strDir += L"Videos\\";
+	ProcDir(m_strDir);
+
 	m_cbSystem.InsertString(0, L"默认设备");
 	m_cbSystem.InsertString(1, L"所有设备");
 	m_cbSystem.InsertString(2, L"不录制");
@@ -312,12 +311,6 @@ LRESULT CLASS_NAME::OnInitDialog(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& 
 		GetDlgItem(IDC_CHECK_DXGI).EnableWindow(FALSE);
 	}
 	SetTimer(TIMER_ID, 100, NULL);
-
-	wchar_t wszExePath[MAX_PATH] = { 0 };
-	WXGetGlobalString(L"ExePath", wszExePath, L"");
-	m_strDir = wszExePath;
-	m_strDir += L"Videos\\";
-	ProcDir(m_strDir);
 	DoDataExchange(FALSE);
 	return 0;
 }

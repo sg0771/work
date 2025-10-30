@@ -85,8 +85,6 @@
 #define IDC_SLIDER1                     914
 #define IDC_LOG_TIME                    915
 #define IDC_PIC_MEDIALIB                1037
-#define IDC_SAVE_MI                     1038
-#define IDC_WX_MI                       1039
 #define ID_DEMO_ADDTAB                  32772
 #define ID_DEMO_ADDTAB2                 32773
 #define ID_DEMO_REMOVETAB               32774
@@ -100,7 +98,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        218
 #define _APS_NEXT_COMMAND_VALUE         32772
-#define _APS_NEXT_CONTROL_VALUE         1040
+#define _APS_NEXT_CONTROL_VALUE         1038
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

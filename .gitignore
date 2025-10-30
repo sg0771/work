@@ -1,12 +1,10 @@
 .vs
 .git
-/WXMedia_SDK/Win32
-/WXMedia_SDK/x64
 */obj
 */.vs
 *.aps
+*.log
 /update_version/env
 /packages
-/WXMedia_SDK/Debug
-/WXMedia_SDK/Release
-*.MP4
+*.mp4
+/WXMedia_SDK

@@ -1,10 +1,10 @@
-
+﻿
 // WXRepairDlg.h: 头文件
 //
 
 #pragma once
 
-#include <WXMedia/WXMedia.h>
+#include <WXMedia.h>
 
 #pragma comment(lib,"WXMedia.lib")
 

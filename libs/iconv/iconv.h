@@ -69,6 +69,12 @@ typedef void* iconv_t;
 #endif
 
 
+#ifdef _MSC_VER
+#define iconv       libiconv
+#define iconv_open  libiconv_open
+#define iconv_close libiconv_close
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif

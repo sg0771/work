@@ -2688,28 +2688,10 @@
     <ClInclude Include="ffmpeg-config.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="WXBase.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="unistd.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="LibInst.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="dirent.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FfmpegIncludes.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="json.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MediaInfoDLL.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="WXMediaDefines.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

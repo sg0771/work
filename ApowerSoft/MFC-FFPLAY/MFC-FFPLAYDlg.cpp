@@ -6,7 +6,7 @@
 #include "MFC-FFPLAY.h"
 #include "MFC-FFPLAYDlg.h"
 #include "afxdialogex.h"
-#include <WXMedia/WXMedia.h>
+#include <WXMedia.h>
 #include "FfmpegIncludes.h"
 
 //#include <libyuv.h>
