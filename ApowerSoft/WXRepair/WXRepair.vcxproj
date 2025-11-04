@@ -82,11 +82,12 @@
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -95,11 +96,12 @@
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -108,11 +110,12 @@
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>
@@ -122,11 +125,12 @@
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

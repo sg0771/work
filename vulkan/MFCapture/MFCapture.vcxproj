@@ -76,42 +76,46 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -121,6 +125,8 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>./;../aoce</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -137,6 +143,8 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AdditionalIncludeDirectories>./;../aoce</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -151,6 +159,8 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>./;../aoce</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -167,6 +177,8 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AdditionalIncludeDirectories>./;../aoce</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

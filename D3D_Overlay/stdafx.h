@@ -32,7 +32,7 @@ extern CAppModule _Module;
 #include <atldlgs.h>
 
 #include <gdiplus.h>
-using namespace Gdiplus;
+
 #pragma comment(lib, "gdiplus.lib")
 
 #include <LibInst.hpp>

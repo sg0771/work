@@ -13,9 +13,9 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR /*
 {
 
 	// 初始化GDI+
-	GdiplusStartupInput gdiplusInput;
+	Gdiplus::GdiplusStartupInput gdiplusInput;
 	ULONG_PTR m_gdiplusToken = 0;
-	GdiplusStartup(&m_gdiplusToken, &gdiplusInput, nullptr);
+	Gdiplus::GdiplusStartup(&m_gdiplusToken, &gdiplusInput, nullptr);
 
 	// 加载并解码资源中的JPG
 

@@ -82,11 +82,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -94,11 +95,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -106,11 +108,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -118,11 +121,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -135,7 +139,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -171,7 +175,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -206,7 +210,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -242,7 +246,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>

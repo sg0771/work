@@ -104,11 +104,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -116,11 +117,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -128,11 +130,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -140,11 +143,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild />
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

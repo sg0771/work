@@ -150,14 +150,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ReferencePath>$(ReferencePath)</ReferencePath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
@@ -165,14 +165,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ReferencePath>$(ReferencePath)</ReferencePath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
@@ -180,30 +180,30 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <TargetName>$(ProjectName)</TargetName>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>

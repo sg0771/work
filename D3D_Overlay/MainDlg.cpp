@@ -36,9 +36,9 @@ void CMainDlg::LoadJpgFromResource() {
     pStream->Seek(liPos, STREAM_SEEK_SET, nullptr); // 重置流指针
 
     // 3. GDI+加载图像
-    std::shared_ptr<Image> pImage = std::shared_ptr<  Image>(Image::FromStream(pStream));
+    std::shared_ptr<Gdiplus::Image> pImage = std::shared_ptr<Gdiplus::Image>(Gdiplus::Image::FromStream(pStream));
     pStream->Release(); // 释放流
-    if (!pImage || pImage->GetLastStatus() != Ok) return;
+    if (!pImage || pImage->GetLastStatus() != Gdiplus::Ok) return;
 
     // 4. 转换为24位RGB格式（无alpha通道）
     UINT width = pImage->GetWidth();

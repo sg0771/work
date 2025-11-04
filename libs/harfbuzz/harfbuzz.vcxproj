@@ -270,12 +270,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)</TargetName>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
@@ -285,12 +285,12 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)</TargetName>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
@@ -300,14 +300,14 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)</TargetName>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
@@ -315,14 +315,14 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)</TargetName>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <AllProjectIncludesArePublic>false</AllProjectIncludesArePublic>
     <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <ExcludePath>$(ExcludePath)</ExcludePath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

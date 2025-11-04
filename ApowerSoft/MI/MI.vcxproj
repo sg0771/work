@@ -68,7 +68,7 @@
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
@@ -79,7 +79,7 @@
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
@@ -90,7 +90,7 @@
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
@@ -101,7 +101,7 @@
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
-    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>

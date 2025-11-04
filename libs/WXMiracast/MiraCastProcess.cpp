@@ -5,7 +5,7 @@
 #include <process.h> 
 #include "WXMedia.h"
 #include <Tlhelp32.h>
-#include "WXFfplayAPI.h"
+#include "WXMedia.h"
 
 #pragma comment(lib,"ws2_32.lib")
 static int s_decodeMode = 1;
@@ -33,7 +33,7 @@ unsigned long long g_uniqueid = 0;
 std::map<unsigned long long, HandleStreamMiraCast*>g_MapMirror;
 void* m_play = NULL;
 unsigned __stdcall  PlayFun(void* param);
-extern "C" void MyCallBack(void *param, uint8_t *data, size_t size);
+extern "C" void MyCallBack(void* param, uint8_t* data, size_t size);
 std::string strPipe = "miracastc2s";
 std::wstring get_upper_dir(const wchar_t* dir_path)
 {
@@ -46,7 +46,7 @@ std::wstring get_upper_dir(const wchar_t* dir_path)
 	wchar_t last_char = dir[dir.size() - 1];
 	if (last_char == '\\' || last_char == '/')
 	{
-		// Ä©Î²¾ÍÊÇ '\\'£¬´¦ÀíÖ®Ç°ÏÈÈ¥µôÄ©Î²µÄ '\\'
+		// æœ«å°¾å°±æ˜¯ '\\'ï¼Œå¤„ç†ä¹‹å‰å…ˆåŽ»æŽ‰æœ«å°¾çš„ '\\'
 		dir.resize(dir.size() - 1);
 	}
 	std::wstring::size_type pos1 = dir.rfind('\\');
@@ -73,7 +73,7 @@ std::wstring get_upper_dir(const wchar_t* dir_path)
 std::wstring get_current_exe_path()
 {
 	wchar_t modulePath[MAX_PATH];
-	if (GetModuleFileNameW(NULL, modulePath, MAX_PATH)) // »ñÈ¡ËùÔÚEXEÃû³Æ
+	if (GetModuleFileNameW(NULL, modulePath, MAX_PATH)) // èŽ·å–æ‰€åœ¨EXEåç§°
 	{
 		return modulePath;
 	}
@@ -129,7 +129,7 @@ BOOL FindAndKillProcessByName(LPCTSTR strProcessName)
 	CloseHandle(handle32Snapshot);
 	return FALSE;
 }
-int MiraCastManager::Start(const std::wstring & strAppName, const std::wstring & strLogName)
+int MiraCastManager::Start(const std::wstring& strAppName, const std::wstring& strLogName)
 {
 	FindAndKillProcessByName(L"WXMCast.exe");
 	//system("taskkill /f /im 'TSVNCache.exe'");
@@ -164,7 +164,7 @@ int MiraCastManager::Start(const std::wstring & strAppName, const std::wstring &
 		bPipeInit = ipc_pipe_client_open(&pipe, strPipe.c_str());
 	}
 	else
-	{		
+	{
 		return ErrorCode_StartMiracastServerFail;
 	}
 	return 0;
@@ -186,12 +186,12 @@ void MiraCastManager::Stop(bool bWait)
 	}
 }
 
-void MiraCastManager::SetCallBackFuns(const WXMiraCastManagerStruct *stMiraCast)
-{	
-	if (stMiraCast->m_arcAppName !=L"")
+void MiraCastManager::SetCallBackFuns(const WXMiraCastManagerStruct* stMiraCast)
+{
+	if (stMiraCast->m_arcAppName != L"")
 	{
 		m_stMiraCast.m_arcAppName = stMiraCast->m_arcAppName;
-	}	
+	}
 	else
 	{
 		m_stMiraCast.m_arcAppName = L"WXMiracast";
@@ -200,7 +200,7 @@ void MiraCastManager::SetCallBackFuns(const WXMiraCastManagerStruct *stMiraCast)
 	if (stMiraCast->m_arcLogName != L"")
 	{
 		m_stMiraCast.m_arcLogName = stMiraCast->m_arcLogName;
-	}	
+	}
 	else
 	{
 		m_stMiraCast.m_arcLogName = L"WXMiracast.log";
@@ -234,12 +234,12 @@ void MiraCastManager::SetCallBackFuns(const WXMiraCastManagerStruct *stMiraCast)
 		if (stMiraCast->m_WXMirrorCastIsSupport != NULL)
 		{
 			m_stMiraCast.m_WXMirrorCastIsSupport = stMiraCast->m_WXMirrorCastIsSupport;
-		}	
+		}
 	}
 }
 
 
-BOOL StringToWString(const std::string &str, std::wstring &wstr)
+BOOL StringToWString(const std::string& str, std::wstring& wstr)
 {
 	int nLen = (int)str.length();
 	wstr.resize(nLen, L' ');
@@ -254,7 +254,7 @@ BOOL StringToWString(const std::string &str, std::wstring &wstr)
 	return TRUE;
 }
 
-extern "C" void MyCallBack(void *param, uint8_t *data, size_t size)
+extern "C" void MyCallBack(void* param, uint8_t* data, size_t size)
 {
 	const char* str = (const char*)data;
 	if (size == 0)
@@ -269,19 +269,19 @@ extern "C" void MyCallBack(void *param, uint8_t *data, size_t size)
 		}
 	}
 	if (_strnicmp(str, "connect", strlen("connect")) == 0)
-	{						
-			char* pszIp = new char[20];
-			memset(pszIp, 0, 20);
-			memcpy(pszIp, str + strlen("connect-"), size - strlen("connect-"));
-			if (MiraCastManager::Get().m_stMiraCast.m_flag == 1)
-			{
-				MiraCastManager::Get().m_stMiraCast.m_WXMirrorCastDataR(pszIp, size - strlen("connect-"));
-			}
-			else
-			{
-				HANDLE hRecordThread = (HANDLE)_beginthreadex(NULL, 0, (_beginthreadex_proc_type)PlayFun, pszIp, 0, NULL);
-				CloseHandle(hRecordThread);
-			}						
+	{
+		char* pszIp = new char[20];
+		memset(pszIp, 0, 20);
+		memcpy(pszIp, str + strlen("connect-"), size - strlen("connect-"));
+		if (MiraCastManager::Get().m_stMiraCast.m_flag == 1)
+		{
+			MiraCastManager::Get().m_stMiraCast.m_WXMirrorCastDataR(pszIp, size - strlen("connect-"));
+		}
+		else
+		{
+			HANDLE hRecordThread = (HANDLE)_beginthreadex(NULL, 0, (_beginthreadex_proc_type)PlayFun, pszIp, 0, NULL);
+			CloseHandle(hRecordThread);
+		}
 	}
 	else if (_strnicmp(str, "disconnect", strlen("disconnect")) == 0)
 	{
@@ -294,7 +294,7 @@ extern "C" void MyCallBack(void *param, uint8_t *data, size_t size)
 		std::wstring szBuffer = L"";
 		StringToWString(pszIp, szBuffer);
 		stConnect.connectip = (wchar_t*)szBuffer.c_str();
-		
+
 
 		if (MiraCastManager::Get().m_stMiraCast.M_WXMiraCastCallBackConnectInfo != NULL)
 		{
@@ -304,7 +304,7 @@ extern "C" void MyCallBack(void *param, uint8_t *data, size_t size)
 			/*WXFfplayStop(m_play);
 			WXFfplayDestroy(m_play);
 			m_play = nullptr;*/
-			StreamPlayerStop(m_play);
+			//StreamPlayerStop(m_play);
 			m_play = nullptr;
 		}
 	}
@@ -312,16 +312,16 @@ extern "C" void MyCallBack(void *param, uint8_t *data, size_t size)
 void MyFfplayOnSize(void* cbSink, int bRotate, int width, int height)
 {
 	unsigned long long uniqueid = g_uniqueid;// (unsigned long long)cbSink;
-	HandleStreamMiraCast *obj = new HandleStreamMiraCast;
+	HandleStreamMiraCast* obj = new HandleStreamMiraCast;
 	g_MapMirror[uniqueid] = obj;
 	g_MapMirror[uniqueid]->m_iWidth = WXGetNetStreamWidth();
 	g_MapMirror[uniqueid]->m_iHeight = WXGetNetStreamHeight();
 	//
 	WINDOWSHOWSTATUS eWindowsStatus = WSS_PORTRAIT;// LANDSCAPE;
-											   //if (bRotate == 1) 
-											   //{
-											   //	eWindowsStatus = PORTRAIT;
-											   //}
+	//if (bRotate == 1) 
+	//{
+	//	eWindowsStatus = PORTRAIT;
+	//}
 	WindowShowStruct stWindowShow;
 	stWindowShow.eWindowStatus = eWindowsStatus;
 	stWindowShow.iScreenW = WXGetNetStreamWidth();
@@ -331,7 +331,7 @@ void MyFfplayOnSize(void* cbSink, int bRotate, int width, int height)
 	}
 }
 void MiraCastManager::DisconnectMiraCastMirror(const UINT64 uniqueid)
-{	
+{
 	if (bPipeInit)
 	{
 		//disconnect-
@@ -352,26 +352,26 @@ void MiraCastManager::DisconnectMiraCastMirror(const UINT64 uniqueid)
 		if (MiraCastManager::Get().m_stMiraCast.M_WXMiraCastCallBackConnectInfo != NULL)
 		{
 			MiraCastManager::Get().m_stMiraCast.M_WXMiraCastCallBackConnectInfo(stConnect, id);
-		}	
+		}
 		if (m_play) {
-			StreamPlayerStop(m_play);
+			//StreamPlayerStop(m_play);
 			m_play = nullptr;
 		}
-	 }
+	}
 }
 void  cbSize(void* cbSink, int bRotate, int width, int height) {
 	printf("printf cbSize  begin");
 	unsigned long long uniqueid = g_uniqueid;// (unsigned long long)cbSink;
-	HandleStreamMiraCast *obj = new HandleStreamMiraCast;
+	HandleStreamMiraCast* obj = new HandleStreamMiraCast;
 	g_MapMirror[uniqueid] = obj;
 	g_MapMirror[uniqueid]->m_iWidth = width;
 	g_MapMirror[uniqueid]->m_iHeight = height;
 	//
 	WINDOWSHOWSTATUS eWindowsStatus = WSS_LANDSCAPE;// LANDSCAPE;
-											   //if (bRotate == 1) 
-											   //{
-											   //	eWindowsStatus = PORTRAIT;
-											   //}
+	//if (bRotate == 1) 
+	//{
+	//	eWindowsStatus = PORTRAIT;
+	//}
 	WindowShowStruct stWindowShow;
 	stWindowShow.eWindowStatus = eWindowsStatus;
 	stWindowShow.iScreenW = width;
@@ -399,7 +399,7 @@ unsigned __stdcall  PlayFun(void* param)
 	}
 	HWND hwnd = (HWND)MiraCastManager::Get().m_stMiraCast.M_WXMiraCastCallBackGetParentWindow(g_uniqueid);
 	if (m_play == nullptr) {
-		m_play = StreamPlayerStart(L"rtp://127.0.0.1:62853", hwnd, s_decodeMode, nullptr, cbSize);
+		m_play = 0;//StreamPlayerStart(L"rtp://127.0.0.1:62853", hwnd, s_decodeMode, nullptr, cbSize);
 	}
 	/*m_play = WXFfplayCreate(L"FFPLAY", L"rtp://127.0.0.1:62853", 100, 0);
 	WXFfplaySetView(m_play, hwnd);
@@ -407,7 +407,7 @@ unsigned __stdcall  PlayFun(void* param)
 	WXFfplaySetEventOwner(m_play, (void*)g_uniqueid);
 	WXFfplayStart(m_play);*/
 
-	if(pszIp!=nullptr)
+	if (pszIp != nullptr)
 	{
 		delete pszIp;
 		pszIp = nullptr;

@@ -2726,6 +2726,7 @@
     <None Include="libffmpeg.def">
       <Filter>源文件</Filter>
     </None>
+    <None Include="libffmpeg.v" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="libffmpeg.rc">
