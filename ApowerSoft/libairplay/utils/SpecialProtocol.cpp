@@ -29,9 +29,9 @@
 #include "../utils/StringUtils.h"
 #endif
 
-////using namespace std;
+using namespace std;
 
-std::map<std::string, std::string> CSpecialProtocol::m_pathMap;
+map<std::string, std::string> CSpecialProtocol::m_pathMap;
 
 void CSpecialProtocol::SetProfilePath(const std::string &dir)
 {
@@ -160,7 +160,7 @@ void CSpecialProtocol::SetPath(const std::string &key, const std::string &path)
 
 std::string CSpecialProtocol::GetPath(const std::string &key)
 {
-    std::map<std::string, std::string>::iterator it = m_pathMap.find(key);
+  map<std::string, std::string>::iterator it = m_pathMap.find(key);
   if (it != m_pathMap.end())
     return it->second;
   assert(false);

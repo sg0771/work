@@ -1,4 +1,4 @@
-/*
+ï»¿/*
  *      Copyright (C) 2005-2013 Team XBMC
  *      http://xbmc.org
  *
@@ -32,7 +32,7 @@
 #include "../utils/DllLibCurl.h"
 #include <list>
 
-////using namespace std;
+using namespace std;
 
 #ifdef HAS_UPNP
 using namespace UPNP;
@@ -384,11 +384,10 @@ int CNetworkServices::Start(const std::wstring &strAppName, const std::wstring &
 	WXDeviceInitMirror(ss.c_str());
 	
 	AirplayMDNSInit();
-	
 
 	WStringToString(strAppName, m_strAppName);
 
-	WXLogWriteNew(m_strAppName.c_str());
+	////WXLogWriteNew(m_strAppName.c_str());
 	WStringToString(strPcVersion, m_strPcVersion);
 
 	g_network = new CNetworkWin32();
@@ -422,7 +421,7 @@ int CNetworkServices::Start(const std::wstring &strAppName, const std::wstring &
 
   if (airplay_start(g_airplay, &CNetworkServices::m_iDataPort, &CNetworkServices::m_iMirrorPort, "", 0, "") != 1)
   {
-	  WXLogWriteNew("airplay_start fail");
+	  ////WXLogWriteNew("airplay_start fail");
 	  return ErrorCode_StartMirrorServerFail;
   }
   //CNetworkServices::m_iDataPort = dataport;
@@ -441,7 +440,7 @@ void CNetworkServices::Stop(bool bWait)
 	airplay_stop(g_airplay);
 	return;
   }
-  WXLogWriteNew("CNetworkServices::Stop begin");
+  ////WXLogWriteNew("CNetworkServices::Stop begin");
  
   StopAirPlayServer(bWait);
   StopAirTunesServer(bWait);
@@ -458,7 +457,7 @@ void CNetworkServices::Stop(bool bWait)
 	  }
 	  SDL_Quit();
   }
-  WXLogWriteNew("CNetworkServices::Stop success");
+  //WXLogWriteNew("CNetworkServices::Stop success");
 }
 
 
@@ -501,10 +500,10 @@ std::string MyGetHostMac(void)
 {
 	IPAddr ip = inet_addr(MyGetHostIp());
 	PVOID *pMac = NULL;
-	ULONG MacAddr[2] = { 0 };    // MacµØÖ·³¤¶È6×Ö½Ú
+	ULONG MacAddr[2] = { 0 };    // Macåœ°å€é•¿åº¦6å­—èŠ‚
 	ULONG uMacSize = 6;
 
-	// Í¨¹ıARP±¨ÎÄÏìÓ¦»ñÈ¡MACµØÖ·
+	// é€šè¿‡ARPæŠ¥æ–‡å“åº”è·å–MACåœ°å€
 	DWORD dwRet = SendARP(ip, 0, &MacAddr, &uMacSize);
 	if (dwRet == NO_ERROR)
 	{
@@ -524,12 +523,12 @@ std::string MyGetHostMac(void)
 		}
 		else
 		{
-			printf("MacµØÖ·»ñÈ¡Ê§°Ü£¡\n");
+			printf("Macåœ°å€è·å–å¤±è´¥ï¼\n");
 		}
 	}
 	else
 	{
-		printf("ARP±¨ÎÄ·¢ËÍÊ§°Ü:%d\n", dwRet);
+		printf("ARPæŠ¥æ–‡å‘é€å¤±è´¥:%d\n", dwRet);
 	}
 	return "";
 }
@@ -540,7 +539,7 @@ bool CNetworkServices::StartAirPlayServer(int port)
 		iPort = port;
 	}
 
-	WXLogWriteNew("start airplay server");
+	////WXLogWriteNew("start airplay server");
 #ifdef HAS_AIRPLAY
 	//if (!g_network->IsAvailable())
 	//{
@@ -550,13 +549,13 @@ bool CNetworkServices::StartAirPlayServer(int port)
 
 	if (IsAirPlayServerRunning())
 	{
-		WXLogWriteNew("airplay server already start");
+		////WXLogWriteNew("airplay server already start");
 		return true;
 	}
   
 	if (!CAirPlayServer::StartServer(&iPort, true))
 	{
-		WXLogWriteNew("start airplay server fail");
+		/////WXLogWriteNew("start airplay server fail");
 		return false;
 	}
   
@@ -581,21 +580,21 @@ bool CNetworkServices::StartAirPlayServer(int port)
 		  address = CNetworkServices::m_strVMNetMac;
 	  }
   }
-  txt.push_back(std::make_pair("deviceid", address != "" ? address : "FF:FF:FF:FF:FF:F2"));
+  txt.push_back(make_pair("deviceid", address != "" ? address : "FF:FF:FF:FF:FF:F2"));
 
 
-  txt.push_back(std::make_pair("model", "AppleTV3,2"));//Xbmc,1 AppleTV3,2
-  txt.push_back(std::make_pair("srcvers", "220.68"));//101.28 200.54
+  txt.push_back(make_pair("model", "AppleTV3,2"));//Xbmc,1 AppleTV3,2
+  txt.push_back(make_pair("srcvers", "220.68"));//101.28 200.54
 
-  txt.push_back(std::make_pair("rmodel", "PC1.0"));
+  txt.push_back(make_pair("rmodel", "PC1.0"));
 
-  txt.push_back(std::make_pair("rrv", "1.01"));
-  txt.push_back(std::make_pair("rsv", "1.00"));
+  txt.push_back(make_pair("rrv", "1.01"));
+  txt.push_back(make_pair("rsv", "1.00"));
 
   //ios 9
-  txt.push_back(std::make_pair("vv", "2"));
-  txt.push_back(std::make_pair("flags", "0x4"));
-  txt.push_back(std::make_pair("pk", "f3769a660475d27b4f6040381d784645e13e21c53e6d2da6a8c3d757086fc336"));
+  txt.push_back(make_pair("vv", "2"));
+  txt.push_back(make_pair("flags", "0x4"));
+  txt.push_back(make_pair("pk", "f3769a660475d27b4f6040381d784645e13e21c53e6d2da6a8c3d757086fc336"));
   std::string ip = "";
   if (iface != NULL)
   {
@@ -605,13 +604,13 @@ bool CNetworkServices::StartAirPlayServer(int port)
   {
 	  ip = CNetworkServices::m_strVMNetIP;
   }
-	txt.push_back(std::make_pair("vncip", ip.c_str()));
-	WXLogWriteNew("vncip:");
-	WXLogWriteNew(ip.c_str());
-	txt.push_back(std::make_pair("vncport", "5900"));
-	txt.push_back(std::make_pair("vncpwd", "1234"));
-	txt.push_back(std::make_pair("airplayname", m_strAppName.c_str()));
-	txt.push_back(std::make_pair("pcversion", m_strPcVersion.c_str()));
+	txt.push_back(make_pair("vncip", ip.c_str()));
+	////WXLogWriteNew("vncip:");
+	//WXLogWriteNew(ip.c_str());
+	txt.push_back(make_pair("vncport", "5900"));
+	txt.push_back(make_pair("vncpwd", "1234"));
+	txt.push_back(make_pair("airplayname", m_strAppName.c_str()));
+	txt.push_back(make_pair("pcversion", m_strPcVersion.c_str()));
 
   if (true/*CSettings::Get().GetBool("services.airplayios8compat")*/)
   {
@@ -619,14 +618,14 @@ bool CNetworkServices::StartAirPlayServer(int port)
     // else we won't get video urls anymore.
     // We also announce photo caching support (as it seems faster and
     // we have implemented it anyways). 
-    //txt.push_back(std::make_pair("features", "0x20F7"));
-	  txt.push_back(std::make_pair("features", "0x5A7FFFE4,0x1E"));
-	 //txt.push_back(std::make_pair("features", "0x0A7FFFF7"));
-	 //txt.push_back(std::make_pair("features", "0x0A7FFFF7"));
+    //txt.push_back(make_pair("features", "0x20F7"));
+	  txt.push_back(make_pair("features", "0x5A7FFFE4,0x1E"));
+	 //txt.push_back(make_pair("features", "0x0A7FFFF7"));
+	 //txt.push_back(make_pair("features", "0x0A7FFFF7"));
   }
   else
   {
-    txt.push_back(std::make_pair("features", "0x77"));
+    txt.push_back(make_pair("features", "0x77"));
   }
 
   if (!CNetworkServices::m_dnssd)
@@ -669,14 +668,14 @@ bool CNetworkServices::StopAirPlayServer(bool bWait)
 
 bool CNetworkServices::StartAirTunesServer(int port)
 {
-	WXLogWriteNew("start airtunes server");
+	////WXLogWriteNew("start airtunes server");
 #ifdef HAS_AIRTUNES
 	if (!g_network->IsAvailable())
 	{
-		std::string macAddress = MyGetHostMac();//Èç¹ûÓÃµÄÊÇĞéÄâÍø¿¨£¬ĞèÒª»ñÈ¡ĞéÄâÍø¿¨µÄMACµØÖ·
+		std::string macAddress = MyGetHostMac();//å¦‚æœç”¨çš„æ˜¯è™šæ‹Ÿç½‘å¡ï¼Œéœ€è¦è·å–è™šæ‹Ÿç½‘å¡çš„MACåœ°å€
 		if (macAddress == "")
 		{
-			WXLogWriteNew("start airplay server");
+			//WXLogWriteNew("start airplay server");
 			return false;
 		}
 		CNetworkServices::m_strVMNetMac = macAddress;
@@ -684,7 +683,7 @@ bool CNetworkServices::StartAirTunesServer(int port)
 
 	if (IsAirTunesServerRunning())
 	{
-		WXLogWriteNew("airtunes server already start");
+		//WXLogWriteNew("airtunes server already start");
 		return true;
 	}
 
@@ -699,7 +698,7 @@ bool CNetworkServices::StartAirTunesServer(int port)
                                     "", m_strAppName))
   {
    // CLog::Log(LOGERROR, "Failed to start AirTunes Server");
-	  WXLogWriteNew("start airtunes server fail");
+	  //WXLogWriteNew("start airtunes server fail");
     return false;
   }
 

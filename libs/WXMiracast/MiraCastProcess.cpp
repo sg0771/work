@@ -8,6 +8,7 @@
 #include "WXMedia.h"
 
 #pragma comment(lib,"ws2_32.lib")
+#pragma comment(lib,"WXmedia.lib")
 static int s_decodeMode = 1;
 MiraCastManager::MiraCastManager()
 {

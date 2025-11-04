@@ -96,7 +96,7 @@ typedef struct _SCSI_PASS_THROUGH_DIRECT_AND_SENSE_BUFFER {
 
 extern HWND g_hWnd;
 
-////using namespace std;
+using namespace std;
 
 std::string CWIN32Util::ConvertPathToWin32Form(const std::string& pathUtf8)
 {
@@ -700,7 +700,7 @@ int64_t CurrentHostFrequency(void)
 #include "../utils/URIUtils.h"
 #include "URL.h"
 
-/////using namespace std;
+using namespace std;
 using namespace XFILE;
 
 

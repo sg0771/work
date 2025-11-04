@@ -1,4 +1,4 @@
-
+﻿
 #include <WinSock2.h>
 #include <Windows.h>
 #include <stdlib.h>
@@ -125,7 +125,7 @@ static void httpd_add_connection(httpd_t *httpd, int fd,
 	}
 	if (i == httpd->max_connections) {
 		/* This code should never be reached, we do not select server_fds when full */
-		WXLogWriteNew( "Max connections reached");
+		////WXLogWriteNew( "Max connections reached");
 		shutdown(fd, SHUT_RDWR);
 		closesocket(fd);
 		return;
@@ -355,7 +355,7 @@ httpd_thread(void *arg)
 			continue;
 		} else if (ret == -1) {
 			/* FIXME: Error happened */
-			WXLogWriteNew( "Error in select");
+			////WXLogWriteNew( "Error in select");
 			break;
 		}
 
@@ -463,7 +463,7 @@ httpd_thread(void *arg)
 							pts = ntptopts(payloadntp) - pts_base;
 						}
 					}
-					pts = WXGetTimeMs();
+					//pts = WXGetTimeMS();
 					
 					//
 					if (payloadsize > 0 && payloadsize < 0x500000)
@@ -493,9 +493,9 @@ httpd_thread(void *arg)
 
 			//ret = recv(connection->socket_fd, buffer, sizeof(buffer), 0);
 
-			////WXLogWriteNew("Receiving on socket %d, %d bytes, connection->ip: %s", connection->socket_fd, ret, connection->ip);
+			//////WXLogWriteNew("Receiving on socket %d, %d bytes, connection->ip: %s", connection->socket_fd, ret, connection->ip);
 			//if (ret == 0) {
-			//	WXLogWriteNew( "Connection closed for socket %d", connection->socket_fd);
+			//	//WXLogWriteNew( "Connection closed for socket %d", connection->socket_fd);
 			//	httpd_remove_connection(httpd, connection);
 			//	continue;
 			//}
@@ -510,7 +510,7 @@ httpd_thread(void *arg)
 				/* Parse HTTP request from data read from connection */
 				http_request_add_data(connection->request, buffer, ret);
 				if (http_request_has_error(connection->request)) {
-					//WXLogWriteNew( "Error in parsing: %s", http_request_get_error_name(connection->request));
+					////WXLogWriteNew( "Error in parsing: %s", http_request_get_error_name(connection->request));
 					printf("Error in parsing: %s", http_request_get_error_name(connection->request));
 					httpd_remove_connection(httpd, connection);
 					continue;
@@ -538,25 +538,25 @@ httpd_thread(void *arg)
 							ret = send(connection->socket_fd, data + written, datalen - written, 0);
 							if (ret == -1) {
 								/* FIXME: Error happened */
-								WXLogWriteNew( "Error in sending data");
+								//WXLogWriteNew( "Error in sending data");
 								break;
 							}
 							written += ret;
 						}
 
 						if (http_response_get_disconnect(response)) {
-							WXLogWriteNew( "Disconnecting on software request");
+							//WXLogWriteNew( "Disconnecting on software request");
 							httpd_remove_connection(httpd, connection);
 						}
 					}
 					else {
-						WXLogWriteNew("Didn't get response");
+						//WXLogWriteNew("Didn't get response");
 						//httpd_remove_connection(httpd, connection);
 					}
 					http_response_destroy(response);
 				}
 				else {
-					WXLogWriteNew("Request not complete, waiting for more data...");
+					//WXLogWriteNew("Request not complete, waiting for more data...");
 				}
 			}
 
@@ -570,7 +570,7 @@ httpd_thread(void *arg)
 		if (!connection->connected) {
 			continue;
 		}
-		WXLogWriteNew( "Removing connection for socket %d", connection->socket_fd);
+		//WXLogWriteNew( "Removing connection for socket %d", connection->socket_fd);
 		httpd_remove_connection(httpd, connection);
 	}
 
@@ -584,7 +584,7 @@ httpd_thread(void *arg)
 		httpd->server_fd6 = -1;
 	}
 	free(payload_in);
-	WXLogWriteNew( "Exiting HTTP thread");
+	//WXLogWriteNew( "Exiting HTTP thread");
 
 	return 0;
 }
@@ -612,7 +612,7 @@ httpd_start(httpd_t *httpd, unsigned short *port, int iMirrorPort)
 	httpd->server_fd4 = netutils_init_socket(port, 0, 0);
 	if (httpd->server_fd4 == -1) {
 		int iError = SOCKET_GET_ERROR();
-		WXLogWriteNew("Error initialising socket %d", iError);
+		//WXLogWriteNew("Error initialising socket %d", iError);
 		MUTEX_UNLOCK(httpd->run_mutex);
 		if (iError == 10048 || iError == 10013)
 		{
@@ -634,7 +634,7 @@ httpd_start(httpd_t *httpd, unsigned short *port, int iMirrorPort)
 #endif
 
 	if (httpd->server_fd4 != -1 && listen(httpd->server_fd4, backlog) == -1) {
-		WXLogWriteNew("Error listening to IPv4 socket");
+		//WXLogWriteNew("Error listening to IPv4 socket");
 		closesocket(httpd->server_fd4);
 		closesocket(httpd->server_fd6);
 		MUTEX_UNLOCK(httpd->run_mutex);
@@ -649,7 +649,7 @@ httpd_start(httpd_t *httpd, unsigned short *port, int iMirrorPort)
 		return -2;
 	}
 #endif
-	WXLogWriteNew( "Initialized server socket(s)");
+	//WXLogWriteNew( "Initialized server socket(s)");
 
 	/* Set values correctly and create new thread */
 	httpd->running = 1;

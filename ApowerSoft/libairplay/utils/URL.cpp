@@ -28,7 +28,7 @@
 #include <sys\stat.h>
 #endif
 
-////using namespace std;
+using namespace std;
 //using namespace ADDON;
 
 CURL::CURL(const std::string& strURL1)

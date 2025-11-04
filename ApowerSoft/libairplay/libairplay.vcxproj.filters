@@ -243,6 +243,12 @@
     <ClInclude Include="Network\libSetting.h">
       <Filter>源文件\network</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\libs\WXBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WXLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Network\AirPlayServer.cpp">
@@ -436,6 +442,9 @@
     </ClCompile>
     <ClCompile Include="utils\Win32File.cpp">
       <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\WXLog.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

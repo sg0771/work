@@ -1,4 +1,4 @@
-﻿
+
 //mirror
 #include <stdlib.h>
 #include <stdio.h>
@@ -104,15 +104,11 @@ extern "C" {
 #pragma comment(lib, "libcurl.lib")
 #pragma comment(lib, "Crypt32.lib")
 
-#pragma comment(lib, "libeay32.lib")
-#pragma comment(lib, "libssl.lib")
-
 #pragma comment(lib, "WXMedia.lib")
-#pragma  comment(lib,"dnssd.lib")
+#pragma  comment(lib,"mdns.lib")
 
 #pragma  comment(lib,"winmm.lib")
 #pragma  comment(lib,"ws2_32.lib")
-
 
 #pragma comment(lib, "libffmpeg.lib")
 #pragma comment(lib, "Wldap32.lib")
@@ -124,10 +120,6 @@ extern "C" {
 
 EXTERN_C int netutils_init();
 EXTERN_C void netutils_cleanup();
-
-
-#include "WXMedia.h"
-
 
 /* Actually 345 bytes for 2048-bit key */
 #define MAX_SIGNATURE_LEN 512
@@ -479,11 +471,11 @@ void WXAirplayVideoRenderDisplay(uint64_t uniqueid, AVFrame *frame) {
 	if (g_MapVideoRender.count(uniqueid) == 0) { //对象不存在
 		HWND hwnd = (HWND)CNetworkServices::Get().m_stAirplay.m_CallBackGetParentWindow(uniqueid);
 		if (s_nBroadcastWidth && s_nBroadcastHeight) {
-			WXLogWriteNew("%s WXVideoRenderCreateEx %lld [%dx%d]", __FUNCTION__, uniqueid, s_nBroadcastWidth, s_nBroadcastHeight);
+			//WXLogWriteNew("%s WXVideoRenderCreateEx %lld [%dx%d]", __FUNCTION__, uniqueid, s_nBroadcastWidth, s_nBroadcastHeight);
 			g_MapVideoRender[uniqueid] = WXVideoRenderCreateEx(hwnd, s_nBroadcastWidth, s_nBroadcastHeight);
 		}
 		else if (frame) {
-			WXLogWriteNew("%s WXVideoRenderCreate %lld [%dx%d]", __FUNCTION__, uniqueid, frame->width, frame->height);
+			//WXLogWriteNew("%s WXVideoRenderCreate %lld [%dx%d]", __FUNCTION__, uniqueid, frame->width, frame->height);
 			g_MapVideoRender[uniqueid] = WXVideoRenderCreate(hwnd, frame->width, frame->height);
 		}
 	}
@@ -497,7 +489,7 @@ void WXAirplayVideoRenderDisplay(uint64_t uniqueid, AVFrame *frame) {
 void WXAirplayVideoRenderDestroy(uint64_t uniqueid) {
 	WXAutoLock al(s_mapLockVideoRender[uniqueid]);
 	if (g_MapVideoRender.count(uniqueid)) { //对象存在
-		WXLogWriteNew("WXAirplayVideoRenderDestroy %lld AAAAAAAAAA ", uniqueid);
+		//WXLogWriteNew("WXAirplayVideoRenderDestroy %lld AAAAAAAAAA ", uniqueid);
 		WXVideoRenderDestroy(g_MapVideoRender[uniqueid]);
 		g_MapVideoRender[uniqueid] = NULL;
 		g_MapVideoRender.erase(uniqueid);
@@ -505,7 +497,7 @@ void WXAirplayVideoRenderDestroy(uint64_t uniqueid) {
 		s_MapWidth.erase(uniqueid);
 		s_MapHeight[uniqueid] = 0;
 		s_MapHeight.erase(uniqueid);
-		WXLogWriteNew("WXVideoRenderDestroy %lld BBBBBBBBBB", uniqueid);
+		//WXLogWriteNew("WXVideoRenderDestroy %lld BBBBBBBBBB", uniqueid);
 	}
 }
 
@@ -556,7 +548,7 @@ static int get_fairplay_socket() {
 	hostname = gethostbyname(keyserver);
 	if (hostname == NULL)
 	{
-		WXLogWriteNew("gethostbyname fail");
+		//WXLogWriteNew("gethostbyname fail");
 		return 0;
 	}
 	ser_addr.sin_addr.s_addr = *(unsigned long *)hostname->h_addr;
@@ -577,7 +569,7 @@ static int get_fairplay_socket() {
 		hostname = gethostbyname(keyserver2);
 		if (hostname == NULL)
 		{
-			WXLogWriteNew("gethostbyname fail");
+			//WXLogWriteNew("gethostbyname fail");
 			return 0;
 		}
 		ser_addr.sin_addr.s_addr = *(unsigned long *)hostname->h_addr;
@@ -604,31 +596,32 @@ class HandleMirroringStream
 {
 	WXLocker m_lockMirrorData;
 	std::queue<WXDataBuffer*> m_queueMirrorData;
-	WXVideoFrame m_I420Frame;
+	HWND m_hwnd = nullptr;
 	void *m_pDecoder = NULL;
 public:
 
-	void MirrorDataPush(uint8_t *data, int len, INT64 pts) {
+	void MirrorDataPush(uint8_t *data, int len, int64_t pts) {
 		WXDataBuffer*obj = new WXDataBuffer;
 		obj->Init(data, len, pts);
 		WXAutoLock al(m_lockMirrorData);		
 		m_queueMirrorData.push(obj);
 	}
+
 	WXDataBuffer*  MirrorDataPop() {
 		WXAutoLock al(m_lockMirrorData);
-
-		if (m_queueMirrorData.empty())
-		{
+		if (m_queueMirrorData.empty()){
 			return nullptr;
 		}
 		WXDataBuffer* obj = m_queueMirrorData.front();
 		m_queueMirrorData.pop();
 		return obj;
 	}
+
 	int MirrorDataSize() {
 		WXAutoLock al(m_lockMirrorData);
 		return m_queueMirrorData.size();
 	}
+
 	void MirrorDataClean() {
 		WXAutoLock al(m_lockMirrorData);
 		while (!m_queueMirrorData.empty()) {
@@ -653,96 +646,46 @@ public:
 	}
 public:
 
-	void DrawBlack() {
-		if (m_pDecoder != NULL) {
-			AVFrame * pVideoFrame = WXH264DecGetFrame(m_pDecoder, TYPE_BLACK_FRAME);
-			WXAirplayVideoRenderDisplay(m_uniqueid, pVideoFrame);
-		}
-	}
-
-#define VICKY_DEBUG_TEST 0
-	int drapframecount=1;
-	int drawframecount=1;
-	INT64 delay=0;
-	int highdelay=0;
-
-
-#if VICKY_DEBUG_TEST 
-	//勿删 vicky调试信息
-	int frame_count = 0;
-	int frame_count_empty = 0;
-	int frame_count_min = 0;
-	int frame_count_max = 0;
-	int frame_count_size = 0;
-	int frame_count_size1 = 0;
-	int64_t lasttime_sec = 0;
-#endif
-	int64_t currentTime = 0;
-	int64_t lasttime = 0;
-
-	int64_t currentrenderTime = 0;
-	int64_t lastrendertime = 0;
-	int64_t avggpurendertime;
-	int drop_count = 0;
+	//void DrawBlack() {
+	//	if (m_pDecoder != NULL) {
+	//		AVFrame * pVideoFrame = WXH264DecGetFrame(m_pDecoder, TYPE_BLACK_FRAME);
+	//		WXAirplayVideoRenderDisplay(m_uniqueid, pVideoFrame);
+	//	}
+	//}
 
 	//解码函数
-	void DecodeVideoFrame(uint8_t *outbuf, int size, INT64 pts)
+	void DecodeVideoFrame(uint8_t *outbuf, int size, int64_t pts)
 	{
-
-		currentTime = WXGetTimeMs();
-#if VICKY_DEBUG_TEST 
-		//勿删 vicky调试信息
-		if (currentTime - lasttime_sec > 1000)
-		{
-			WXLogWriteNew("fpss  %d\n  empty=%d  min=%d max=%d size=%d size1=%d",
-				frame_count, frame_count_empty, frame_count_min, frame_count_max,
-				frame_count_size, frame_count_size1);
-			lasttime_sec = currentTime;
-			frame_count = 0;
-			frame_count_empty = 0;
-			frame_count_min = 0;
-			frame_count_max = 0;
-			frame_count_size = 0;
-			frame_count_size1 = 0;
-		}
-		{
-			WXAutoLock al(m_lockMirrorData);
-			WXLogWriteNew("fpssnew  size=%d",
-				m_queueMirrorData.size());
-		}
-#endif
-
-		int bRet = WXH264DecSendPacket(m_pDecoder, (uint8_t*)outbuf, size, pts);
+		int bRet = WXVideoDecoderSendPacket(m_pDecoder, (uint8_t*)outbuf, size, pts);
 
 		if (bRet) {  //解码正常
-			int Dw = WXH264DecGetWidth(m_pDecoder);
-			int Dh = WXH264DecGetHeight(m_pDecoder);
+			int Dw = WXVideoDecoderGetWidth(m_pDecoder);
+			int Dh = WXVideoDecoderGetHeight(m_pDecoder);
 			if (Dw == 0 || Dh == 0) {
 				return;
 			}
 
 			if ((m_iWidth != Dw || m_iHeight != Dh)) {
-				WXLogWriteNew("H264 DecodeFrame Change Render Size Old=%dx%d New=%dx%d ", m_iWidth, m_iHeight, Dw, Dh);
+				//WXLogWriteNew("H264 DecodeFrame Change Render Size Old=%dx%d New=%dx%d ", m_iWidth, m_iHeight, Dw, Dh);
 				m_iWidth = Dw;
 				m_iHeight = Dh;
 				ConnectStatusStruct stConnect;
 				stConnect.eConnectStatus = CONNECTED;
 				stConnect.iConnectType = 1;
-				if (CNetworkServices::Get().m_stAirplay.m_CallBackConnectInfo != NULL)
-				{
+				if (CNetworkServices::Get().m_stAirplay.m_CallBackConnectInfo != NULL){
 					//not allow connect
-					if (CNetworkServices::Get().m_stAirplay.m_CallBackConnectInfo(stConnect, m_uniqueid) == 0)
-					{
+					if (CNetworkServices::Get().m_stAirplay.m_CallBackConnectInfo(stConnect, m_uniqueid) == 0){
 						set_mirror_status(m_uniqueid, 1);
 						CNetworkServices::Get().DisconnectMirrorNew(m_uniqueid);
-						WXLogWriteNew("connect pool is full");
+						//WXLogWriteNew("connect pool is full");
 						return;
 					}
 				}
 			}
-			//解码数据其实都是J420 .。。 
-			AVFrame* pFrameDecode = WXH264DecGetFrame(m_pDecoder, TYPE_CURR_FRAME);//J420 ?
-			
+
+			//WXH264DecDisplay(m_pDecoder);
+			////解码数据其实都是J420 .。。 
+			AVFrame* pFrameDecode = WXVideoDecoderGetFrame(m_pDecoder,0);//J420 ?
 			if (pFrameDecode) {
 				pFrameDecode->format = AV_PIX_FMT_YUVJ420P;
 				WXAirplayVideoRenderDisplay(m_uniqueid, pFrameDecode);
@@ -769,7 +712,7 @@ public:
 
 		char ecount_buf[AES_BLOCK_SIZE] = { 0 };
 		unsigned int m_num = 0;
-		int64_t m_nTime1 = WXGetTimeMs();
+		//int64_t m_nTime1 = WXGetTimeMs();
 		int64_t m_nTime2 = 0;
 
 		std::string strPayLoadLast = "";
@@ -779,7 +722,7 @@ public:
 			//stop mirroring stream
 			if (get_mirror_status(m_uniqueid) != 0)
 			{
-				WXLogWriteNew("begin disconnect mirror");
+				//WXLogWriteNew("begin disconnect mirror");
 				CAirPlayServer::SetMirroring(0);
 				//force exit
 				if (get_mirror_status(m_uniqueid) != 2)
@@ -794,7 +737,7 @@ public:
 					SetWindowFinalize(m_strRemoteIp.c_str());
 				}
 				MirrorDataClean();
-				WXLogWriteNew("disconnect mirror success");
+				//WXLogWriteNew("disconnect mirror success");
 				break;
 			}
 
@@ -802,41 +745,9 @@ public:
 			if (obj) {
 				unsigned int size = 0;
 				unsigned short type = 0;
-
-				//get current time
-				//m_nTime1 = WXGetTimeMs();//刷新时间
-
-				//int iCurrVideoSize = obj->m_iBufSize;
-				////handle h264 stream
-				//if (iNeedSize + iCurrVideoSize >= iBufferLen)
-				//{
-				//	printf("error happening 1\n");
-				//	WXLogWriteNew("THREAD_JOIN----iNeedSize:%d + iCurVideoSize:%d >= iBufferLen:%d",
-				//		iNeedSize, iCurrVideoSize, iBufferLen);
-				//	delete obj;
-				//	break;
-				//}
-
-				//memcpy(parcNeedData.m_pBuf + iNeedSize, obj->m_pBuf, iCurrVideoSize);
-				//delete obj;
-				//iNeedSize += iCurrVideoSize;
-
 				const char *data = (const char*)obj->GetBuffer();// (const char*)parcNeedData.m_pBuf;
 				size = *(unsigned int*)data;
-				////stream size
-				//if ((size + 128) > iNeedSize)
-				//{
-				//	continue;
-				//}
 				type = *(unsigned short*)(data + 4);
-				//type1 = *(unsigned short*)(data + 6);
-				//timestamp = *(uint64_t*)(data + 8);
-				//std::string strPayLoad = "";
-				//if (size != 0)
-				//{
-				//	strPayLoad.assign(data + 128, size);
-				//}
-				//video data
 				if ((type == 0 || type == 0x1000) && size &&  m_pDecoder != NULL)
 				{
 					avcData.m_pts = obj->m_pts;
@@ -895,18 +806,19 @@ public:
 										//
 										set_mirror_status(m_uniqueid, 1);
 										CNetworkServices::Get().DisconnectMirrorNew(uniqueid);
-										WXLogWriteNew("connect pool is full");
+										//WXLogWriteNew("connect pool is full");
 										continue;
 									}
 								}
 
-								HWND hwnd = (HWND)CNetworkServices::Get().m_stAirplay.m_CallBackGetParentWindow(uniqueid);
+								m_hwnd = (HWND)CNetworkServices::Get().m_stAirplay.m_CallBackGetParentWindow(uniqueid);
 
-								WXLogWriteNew("dxva init end");
+								//WXLogWriteNew("dxva init end");
 
 								int Sw = 0;
 								int Sh = 0;
-								H264GetSize(pExtraData, iExtraSize, &Sw, &Sh);
+								int Profile = 0;
+								VideoDecoderGetSize(TRUE, pExtraData, iExtraSize, &Sw, &Sh,&Profile);
 
 								if (CNetworkServices::Get().m_stAirplay.m_CallBackWindowStatus != NULL)
 								{
@@ -925,8 +837,8 @@ public:
 									stWindowShow.iOsVersion = AirplayGetOsVersionType(strOsVersion);//记得加上iphone系统信息 多次回调信息少了 会影响上层调用东西
 									CNetworkServices::Get().m_stAirplay.m_CallBackWindowStatus(stWindowShow, uniqueid);
 								}
-								//WXH264DecSetHw(FALSE);
-								m_pDecoder = WXH264DecCreate(pExtraData, iExtraSize);
+	
+								m_pDecoder = WXVideoDecoderCreate(TRUE, TRUE, pExtraData, iExtraSize);
 								if (m_pDecoder == NULL) {
 									return;
 								}
@@ -934,9 +846,9 @@ public:
 							}
 						}
 					}
-					else {
-						DrawBlack();
-					}
+					//else {
+					//	DrawBlack();
+					//}
 				}
 				//heartbeat
 				else if (type == 2)
@@ -960,7 +872,7 @@ public:
 				//{
 				//	set_mirror_status(m_uniqueid, 1);
 				//	CNetworkServices::Get().DisconnectMirrorNew(m_uniqueid);//通知底层中断
-				//	WXLogWriteNew("network error, we can't get more mirror data, so disconnect the connection");
+				//	//WXLogWriteNew("network error, we can't get more mirror data, so disconnect the connection");
 				//}
 				WXSleepMs(1);//空队列
 				continue;
@@ -968,11 +880,11 @@ public:
 		}
 
 
-		WXLogWriteNew("MirrorDataFunc Stop!!!!");
+		//WXLogWriteNew("MirrorDataFunc Stop!!!!");
 
 		//线程退出的清理
 		if (m_pDecoder) {
-			WXH264DecDestroy(m_pDecoder);
+			WXVideoDecoderDestroy(m_pDecoder);
 			m_pDecoder = NULL;
 		}
 
@@ -1029,27 +941,25 @@ static void * conn_init(void *opaque, uint8_t *local, int locallen, uint8_t *rem
 	conn->airplay = (airplay_t *)opaque;
 
 	if (locallen == 4) {
-		WXLogWriteNew(
-			"Local: %d.%d.%d.%d",
-			local[0], local[1], local[2], local[3]);
+		//WXLogWriteNew(\"Local: %d.%d.%d.%d",\local[0], local[1], local[2], local[3]);
 	}
 	else if (locallen == 16) {
-		WXLogWriteNew(
-			"Local: %02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x",
-			local[0], local[1], local[2], local[3], local[4], local[5], local[6], local[7],
-			local[8], local[9], local[10], local[11], local[12], local[13], local[14], local[15]);
+		//WXLogWriteNew(
+		//	"Local: %02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x",
+		//	local[0], local[1], local[2], local[3], local[4], local[5], local[6], local[7],
+		//	local[8], local[9], local[10], local[11], local[12], local[13], local[14], local[15]);
 	}
 	if (remotelen == 4) {
 
-		WXLogWriteNew(
-			"Remote: %d.%d.%d.%d",
-			remote[0], remote[1], remote[2], remote[3]);
+		//WXLogWriteNew(
+		//	"Remote: %d.%d.%d.%d",
+		//	remote[0], remote[1], remote[2], remote[3]);
 	}
 	else if (remotelen == 16) {
-		WXLogWriteNew(
-			"Remote: %02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x",
-			remote[0], remote[1], remote[2], remote[3], remote[4], remote[5], remote[6], remote[7],
-			remote[8], remote[9], remote[10], remote[11], remote[12], remote[13], remote[14], remote[15]);
+		//WXLogWriteNew(
+		//	"Remote: %02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x",
+		//	remote[0], remote[1], remote[2], remote[3], remote[4], remote[5], remote[6], remote[7],
+		//	remote[8], remote[9], remote[10], remote[11], remote[12], remote[13], remote[14], remote[15]);
 	}
 
 	conn->local = (uint8_t *)malloc(locallen);
@@ -1100,13 +1010,13 @@ static void conn_request(void *ptr, http_request_t *request, http_response_t **r
 		return;
 	}
 
-	WXLogWriteNew("%s uri=%s\n", method, uri);
+	//WXLogWriteNew("%s uri=%s\n", method, uri);
 
 	{
 		const char *data;
 		int len;
 		data = http_request_get_data(request, &len);
-		WXLogWriteNew("data len %d:%s\n", len, data);
+		//WXLogWriteNew("data len %d:%s\n", len, data);
 	}
 
 	// This is the socket which will be used for reverse HTTP
@@ -1169,7 +1079,7 @@ static void conn_request(void *ptr, http_request_t *request, http_response_t **r
 
 	else if (strcmp(uri, "/stream.xml") == 0)
 	{
-		WXLogWriteNew("AIRPLAY: got request %s", uri);
+		//WXLogWriteNew("AIRPLAY: got request %s", uri);
 		sprintf(responseBody, "%s", STREAM_INFO);
 		sprintf(responseHeader, "Content-Type: text/x-apple-plist+xml\r\n");
 
@@ -1247,13 +1157,13 @@ static void conn_request(void *ptr, http_request_t *request, http_response_t **r
 		}
 		else
 		{
-			WXLogWriteNew("AIRPLAY: Invalid bplist");
+			//WXLogWriteNew("AIRPLAY: Invalid bplist");
 			status = AIRPLAY_STATUS_NOT_FOUND;
 		}
 	}
 	else if (strcmp(uri, "/server-info") == 0)
 	{
-		WXLogWriteNew("AIRPLAY: got request %s", uri);
+		//WXLogWriteNew("AIRPLAY: got request %s", uri);
 		sprintf(responseBody, "%s\r\n", conn->airplay->hwaddr);
 		sprintf(responseHeader, "Content-Type: text/x-apple-plist+xml\r\n");
 	}
@@ -1407,7 +1317,7 @@ static void conn_request(void *ptr, http_request_t *request, http_response_t **r
 	}
 	else
 	{
-		WXLogWriteNew("AIRPLAY Server: unhandled request [%s]\n", uri);
+		//WXLogWriteNew("AIRPLAY Server: unhandled request [%s]\n", uri);
 		status = AIRPLAY_STATUS_NOT_IMPLEMENTED;
 	}
 
@@ -1469,7 +1379,7 @@ static void conn_request(void *ptr, http_request_t *request, http_response_t **r
 
 		res = http_response_init1(resbuf, headerLength + responseLength);
 
-		WXLogWriteNew("AIRPLAY Handled request %s with response %s", method, http_response_get_data(res, &responseLength));
+		//WXLogWriteNew("AIRPLAY Handled request %s with response %s", method, http_response_get_data(res, &responseLength));
 		*response = res;
 	}
 }
@@ -1624,7 +1534,7 @@ int airplay_is_running(airplay_t *airplay)
 
 int airplay_start(airplay_t *airplay, unsigned short *port, unsigned short *mirror_port, const char *hwaddr, int hwaddrlen, const char *password)
 {
-	WXLogWriteNew("airplay_start");
+	//WXLogWriteNew("airplay_start");
 	int ret;
 	//unsigned short mirror_port;
 
@@ -1658,7 +1568,7 @@ int airplay_start(airplay_t *airplay, unsigned short *port, unsigned short *mirr
 	{
 		if (iCount++ > 3)
 		{
-			WXLogWriteNew("airplay_start fail for 3 times");
+			//WXLogWriteNew("airplay_start fail for 3 times");
 			break;
 		}
 
@@ -1679,7 +1589,7 @@ int airplay_start(airplay_t *airplay, unsigned short *port, unsigned short *mirr
 	{
 		if (iCount++ > 3)
 		{
-			WXLogWriteNew("airplay_start mirror fail for 3 times");
+			//WXLogWriteNew("airplay_start mirror fail for 3 times");
 			break;
 		}
 
@@ -1699,7 +1609,7 @@ int airplay_start(airplay_t *airplay, unsigned short *port, unsigned short *mirr
 
 void airplay_stop(airplay_t *airplay)
 {
-	WXLogWriteNew("airplay_stop");
+	//WXLogWriteNew("airplay_stop");
 	if (airplay != NULL)
 	{
 		httpd_stop(airplay->mirror_server);
@@ -1724,7 +1634,7 @@ void mirror_disconnect(airplay_t *airplay, uint64_t uniqueid)
 
 void mirror_exit()
 {
-	WXLogWriteNew("mirror_exit");
+	//WXLogWriteNew("mirror_exit");
 	set_mirror_status(NULL, 2);
 }
 
@@ -1784,12 +1694,6 @@ AIRPLAY_API void  SetDisplayRotate(int rotate) {
 		if (rotate > 3)new_rotate = RENDER_ROTATE_NONE;
 		if (new_rotate != obj.second) { //角度改变
 			s_MapVideoRotateFilp[uid] = new_rotate;
-
-			/** 强制刷新
-			 *  投照片时，后续没有新的数据过来，不会触发旋转效果，需要强制刷新一下当前帧
-			 *  modify by morgan
-			 *  2022/03/16
-			 */
 			WXVideoRenderDisplay(g_MapVideoRender[uid], NULL, g_bFixed, s_MapVideoRotateFilp[uid]);
 		}
 	}
@@ -1810,7 +1714,7 @@ AIRPLAY_API void WXAirplaySetShowJ420(int bJ420) {
 }
 
 AIRPLAY_API void SetH264DecodeHwMode(int mode) {
-	WXH264DecSetHw(mode);
+	//WXH264DecSetHw(mode);
 }
 
 AIRPLAY_API void WXAirplaySetVideoRenderFixed(int fixed) {
@@ -1843,27 +1747,20 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
 	
 	plist_init((HINSTANCE)hModule, ul_reason_for_call, lpReserved);
 	
-	std::wstring strPath = L"";
-
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
-
 		InitDeviceList();
-		WXH264DecSetHw(FALSE);
+		//WXH264DecSetHw(FALSE);
 		break;
 
 	case DLL_THREAD_ATTACH:
-		//pthread_win32_thread_attach_np();
 		break;
 
 	case DLL_THREAD_DETACH:
-		//pthread_win32_thread_detach_np();
 		break;
 
 	case DLL_PROCESS_DETACH:
-		//pthread_win32_thread_detach_np();
-		//pthread_win32_process_detach_np();
 		break;
 	}
 	return (TRUE);

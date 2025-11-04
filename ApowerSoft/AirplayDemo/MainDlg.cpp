@@ -36,7 +36,7 @@ void ReportBmpData(const unsigned char* data, int iLen)
 
 WindowPixel GetPixel()
 {
-	return TYPE_1080P;
+	return TYPE_2K;
 	//return TYPE_720P;
 }
 
@@ -217,9 +217,9 @@ LRESULT CMainDlg::OnHotKey(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandl
 			int refreshRate = GetDeviceCaps(windowHDC, VREFRESH);
 			::ReleaseDC(hwndDesktop, windowHDC);
 
-			DEVMODE fullscreenSettings;
-			bool isChangeSuccessful;
-			RECT windowBoundary;
+			DEVMODE fullscreenSettings = { 0 };
+			bool isChangeSuccessful = false;
+			//RECT windowBoundary;
 
 			EnumDisplaySettings(NULL, 0, &fullscreenSettings);
 			fullscreenSettings.dmPelsWidth = fullscreenWidth;

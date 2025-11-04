@@ -33,7 +33,7 @@
 
 
 using namespace XFILE;
-////using namespace std;
+using namespace std;
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -118,7 +118,7 @@ bool CFile::Open(const CURL& file, const unsigned int flags)
       SAFE_DELETE(m_pFile);
       if (pRedirectEx && pRedirectEx->m_pNewFileImp)
       {
-          std::unique_ptr<CURL> pNewUrl(pRedirectEx->m_pNewUrl);
+        unique_ptr<CURL> pNewUrl(pRedirectEx->m_pNewUrl);
         m_pFile = pRedirectEx->m_pNewFileImp;
         delete pRedirectEx;
         
@@ -210,7 +210,7 @@ bool CFile::Exists(const CURL& file, bool bUseCache /* = true */)
 
   try
   {
-      std::unique_ptr<IFile> pFile(CFileFactory::CreateLoader(url));
+    unique_ptr<IFile> pFile(CFileFactory::CreateLoader(url));
     if (!pFile.get())
       return false;
 
@@ -224,8 +224,8 @@ bool CFile::Exists(const CURL& file, bool bUseCache /* = true */)
     ;// CLog::Log(LOGDEBUG,"File::Exists - redirecting implementation for %s", file.GetRedacted().c_str());
     if (pRedirectEx && pRedirectEx->m_pNewFileImp)
     {
-        std::unique_ptr<IFile> pImp(pRedirectEx->m_pNewFileImp);
-        std::unique_ptr<CURL> pNewUrl(pRedirectEx->m_pNewUrl);
+      unique_ptr<IFile> pImp(pRedirectEx->m_pNewFileImp);
+      unique_ptr<CURL> pNewUrl(pRedirectEx->m_pNewUrl);
       delete pRedirectEx;
 
       if (pImp.get())
@@ -284,7 +284,7 @@ int CFile::Stat(const CURL& file, struct __stat64* buffer)
 
   try
   {
-      std::unique_ptr<IFile> pFile(CFileFactory::CreateLoader(url));
+    unique_ptr<IFile> pFile(CFileFactory::CreateLoader(url));
     if (!pFile.get())
       return -1;
     return pFile->Stat(url, buffer);
@@ -297,8 +297,8 @@ int CFile::Stat(const CURL& file, struct __stat64* buffer)
     ;// CLog::Log(LOGDEBUG,"File::Stat - redirecting implementation for %s", file.GetRedacted().c_str());
     if (pRedirectEx && pRedirectEx->m_pNewFileImp)
     {
-        std::unique_ptr<IFile> pImp(pRedirectEx->m_pNewFileImp);
-        std::unique_ptr<CURL> pNewUrl(pRedirectEx->m_pNewUrl);
+      unique_ptr<IFile> pImp(pRedirectEx->m_pNewFileImp);
+      unique_ptr<CURL> pNewUrl(pRedirectEx->m_pNewUrl);
       delete pRedirectEx;
         
       if (pNewUrl.get())
@@ -445,11 +445,11 @@ int64_t CFile::Seek(int64_t iFilePosition, int iWhence)
   if (m_pBuffer)
   {
     if(iWhence == SEEK_CUR)
-      return m_pBuffer->pubseekoff(iFilePosition, std::ios_base::cur);
+      return m_pBuffer->pubseekoff(iFilePosition,ios_base::cur);
     else if(iWhence == SEEK_END)
-      return m_pBuffer->pubseekoff(iFilePosition, std::ios_base::end);
+      return m_pBuffer->pubseekoff(iFilePosition,ios_base::end);
     else if(iWhence == SEEK_SET)
-      return m_pBuffer->pubseekoff(iFilePosition, std::ios_base::beg);
+      return m_pBuffer->pubseekoff(iFilePosition,ios_base::beg);
   }
 
   try
@@ -923,19 +923,19 @@ CFileStreamBuffer::pos_type CFileStreamBuffer::seekoff(
 
 CFileStreamBuffer::pos_type CFileStreamBuffer::seekpos(
   pos_type pos,
-    std::ios_base::openmode mode)
+  ios_base::openmode mode)
 {
-  return seekoff(pos, std::ios_base::beg, mode);
+  return seekoff(pos, ios_base::beg, mode);
 }
 
-std::streamsize CFileStreamBuffer::showmanyc()
+streamsize CFileStreamBuffer::showmanyc()
 {
   underflow();
   return egptr() - gptr();
 }
 
 CFileStream::CFileStream(int backsize /*= 0*/) :
-    std::istream(&m_buffer),
+    istream(&m_buffer),
     m_buffer(backsize),
     m_file(NULL)
 {

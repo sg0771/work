@@ -1,9 +1,9 @@
-#include "mycommon.h"
+﻿#include "mycommon.h"
 #include "NetworkServices.h"
 #include "../utils/CurlFile.h"
 
 
-#include <SDL_Image/SDL_image.h>
+#include <SDL2/SDL_image.h>
 #include <WXBase.h>
 
 static WXLocker s_renderer;
@@ -16,12 +16,12 @@ std::map<uint64_t, SDL_Renderer*> g_mapIpToRender;
 
 extern "C" void WriteLog(const char *arcLog)
 {
-	WXLogWriteNew(arcLog);
+	//WXLogWriteNew(arcLog);
 }
 
 extern "C" void WriteErrorLog(const char *arcLog)
 {
-	WXLogWriteNew(arcLog);
+	//WXLogWriteNew(arcLog);
 }
 
 
@@ -143,7 +143,7 @@ extern "C" bool GetMirrorPicture(const char *arcPath)
 	int dwMinSize = 0;
 	SDL_Surface* saveSurface = NULL;
 	bool bRet = true;
-	WXLogWriteNew("GetMirrorPicture begin");
+	//WXLogWriteNew("GetMirrorPicture begin");
 	//get current surface
 	SDL_Surface *tmpSur = SDL_GetWindowSurface(GetParentWindow());
 	if (tmpSur->w % 2 != 0)
@@ -158,7 +158,7 @@ extern "C" bool GetMirrorPicture(const char *arcPath)
 	int iRet = SDL_RenderReadPixels(GetMirrorRender(), &tmpSur->clip_rect, tmpSur->format->format, pixels, tmpSur->w * tmpSur->format->BytesPerPixel);
 	if (iRet != 0)
 	{
-		WXLogWriteNew("read pixels fail");
+		//WXLogWriteNew("read pixels fail");
 		bRet = false;
 		goto endproc;
 	}
@@ -171,7 +171,7 @@ extern "C" bool GetMirrorPicture(const char *arcPath)
 		tmpSur->format->Amask);
 	if (saveSurface == NULL)
 	{
-		WXLogWriteNew("create saveSurface fail");
+		///WXLogWriteNew("create saveSurface fail");
 		bRet = false;
 		goto endproc;
 	}
@@ -188,7 +188,7 @@ extern "C" bool GetMirrorPicture(const char *arcPath)
 	{
 		if (SDL_SaveBMP(saveSurface, arcRealPath) != 0)
 		{
-			WXLogWriteNew("SDL_SaveBMP fail");
+			//WXLogWriteNew("SDL_SaveBMP fail");
 			bRet = false;
 		}
 	}
@@ -196,7 +196,7 @@ extern "C" bool GetMirrorPicture(const char *arcPath)
 	{
 		if (IMG_SavePNG(saveSurface, arcRealPath) != 0)
 		{
-			WXLogWriteNew("IMG_SavePNG fail");
+			//WXLogWriteNew("IMG_SavePNG fail");
 			bRet = false;
 		}
 	}
@@ -215,7 +215,7 @@ endproc:
 		SDL_FreeSurface(saveSurface);
 	}
 	delete[] pixels;
-	WXLogWriteNew("GetMirrorPicture end");
+	//WXLogWriteNew("GetMirrorPicture end");
 	return bRet;
 }
 //

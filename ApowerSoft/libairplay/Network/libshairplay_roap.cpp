@@ -1,4 +1,4 @@
-#ifdef _WIN32
+﻿#ifdef _WIN32
 #include <WinSock2.h>
 #include <Windows.h>
 #endif
@@ -8,16 +8,11 @@
 #include <string.h>
 #include <stdint.h>
 #include <math.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <assert.h>
-#include <string.h>
 #include <openssl/rand.h>
 #include <openssl/sha.h>
 #include <openssl/md5.h>
 #include <openssl/aes.h>
-#include <openssl/rand.h>
-
 #include "openssl/modes.h"
 #include "../utils/utils.h"
 #include <stdlib.h>
@@ -16926,7 +16921,7 @@ http_response_get_data(http_response_t * response, int* datalen)
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <fdk-aac/aacdecoder_lib.h>
+#include <libfdk-aac/aacdecoder_lib.h>
 
  /* ASC config binary data */
 unsigned char eld_conf1[] = { 0xF8, 0xE8, 0x50, 0x00 };

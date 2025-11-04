@@ -24,7 +24,7 @@
 #include "../utils/StringUtils.h"
 #include "../utils/URL.h"
 
-////using namespace std;
+using namespace std;
 namespace XFILE
 {
   CStackDirectory::CStackDirectory()
@@ -55,7 +55,7 @@ namespace XFILE
 	return "";
   }
 
-  bool CStackDirectory::GetPaths(const std::string& strPath, std::vector<std::string>& vecPaths)
+  bool CStackDirectory::GetPaths(const std::string& strPath, vector<std::string>& vecPaths)
   {
     std::string path = strPath;
     path = path.substr(8);
@@ -65,13 +65,13 @@ namespace XFILE
       return false;
 
     // because " , " is used as a seperator any "," in the real paths are double escaped
-    for (std::vector<std::string>::iterator itPath = vecPaths.begin(); itPath != vecPaths.end(); ++itPath)
+    for (vector<std::string>::iterator itPath = vecPaths.begin(); itPath != vecPaths.end(); ++itPath)
       StringUtils::Replace(*itPath, ",,", ",");
 
     return true;
   }
 
-  bool CStackDirectory::ConstructStackPath(const std::vector<std::string> &paths, std::string& stackedPath)
+  bool CStackDirectory::ConstructStackPath(const vector<std::string> &paths, std::string& stackedPath)
   {
     if (paths.size() < 2)
       return false;

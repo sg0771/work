@@ -6,7 +6,7 @@
 #include "stdafx.h"
 #include <WXMedia.h>
 #include <WXBase.h>
-#include <WXAirPlayAPI.h>
+#include "../libairplay/WXAirPlayAPI.h"
 #include "resource.h"
 
 #pragma comment(lib,"libairplay.lib")

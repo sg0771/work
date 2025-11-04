@@ -156,8 +156,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,5
- PRODUCTVERSION 1,0,0,5
+ FILEVERSION 2025,9,3,9
+ PRODUCTVERSION 2025,9,3,9
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -173,12 +173,12 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "FileDescription", "AirplayDemo Module"
-            VALUE "FileVersion", "1.0.0.5"
+            VALUE "FileVersion", "2025.9.3.9"
             VALUE "InternalName", "AirplayDemo"
             VALUE "LegalCopyright", "Copyright 2018"
             VALUE "OriginalFilename", "AirplayDemo.exe"
             VALUE "ProductName", "AirplayDemo Module"
-            VALUE "ProductVersion", "1.0.0.5"
+            VALUE "ProductVersion", "2025.9.3.9"
         END
     END
     BLOCK "VarFileInfo"

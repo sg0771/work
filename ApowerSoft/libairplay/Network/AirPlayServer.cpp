@@ -1,4 +1,4 @@
-/*
+Ôªø/*
  * Many concepts and protocol specification in this code are taken
  * from Airplayer. https://github.com/PascalW/Airplayer
  *
@@ -61,7 +61,7 @@
 #include "mycommon.h"
 
 #include <SDL2/SDL.h>
-#include <SDL_Image/SDL_image.h>
+#include <SDL2/SDL_image.h>
 
 #include <Shlobj.h>
 
@@ -70,9 +70,6 @@
 
 #include "dnssd.h"
 
-#include <WXBase.h>
-#include <WXMedia.h>
-#include <WXFfplayAPI.h>
 
 extern void WXAirplayVideoRenderDisplay(uint64_t uid, AVFrame *frame);
 extern void WXAirplayVideoRenderDestroy(uint64_t uid);
@@ -83,13 +80,6 @@ extern void WXAirplayVideoRenderDestroy(uint64_t uid);
 extern "C"
 {
 #pragma once
-	//
-	//  Configuration.h
-	//  Workbench
-	//
-	//  Created by Wai Man Chan on 10/27/14.
-	//
-	//
 
 #define HomeKitLog 1
 #define HomeKitReplyHeaderLog 1
@@ -153,7 +143,7 @@ static WXLocker s_mutexvideo;
 std::string CAirPlayServer::m_strTmpDir = "";
 
 using namespace ANNOUNCEMENT;
-////using namespace std;
+using namespace std;
 
 #ifdef _WIN32
 #define close closesocket
@@ -477,21 +467,21 @@ int CreatDir(char *pszDir)
 	int i = 0;
 	int iRet;
 	int iLen = strlen(pszDir);
-	//‘⁄ƒ©Œ≤º”/
+	//Âú®Êú´Â∞æÂä†/
 	if (pszDir[iLen - 1] != '\\' && pszDir[iLen - 1] != '/')
 	{
 		pszDir[iLen] = '/';
 		pszDir[iLen + 1] = '\0';
 	}
 
-	// ¥¥Ω®ƒø¬º
+	// ÂàõÂª∫ÁõÆÂΩï
 	for (i = 0; i < iLen; i++)
 	{
 		if (pszDir[i] == '\\' || pszDir[i] == '/')
 		{
 			pszDir[i] = '\0';
 
-			//»Áπ˚≤ª¥Ê‘⁄,¥¥Ω®
+			//Â¶ÇÊûú‰∏çÂ≠òÂú®,ÂàõÂª∫
 			iRet = ACCESS(pszDir, 0);
 			if (iRet != 0)
 			{
@@ -501,7 +491,7 @@ int CreatDir(char *pszDir)
 					return -1;
 				}
 			}
-			//÷ß≥÷linux,Ω´À˘”–\ªª≥…/
+			//ÊîØÊåÅlinux,Â∞ÜÊâÄÊúâ\Êç¢Êàê/
 			pszDir[i] = '/';
 		}
 	}
@@ -523,10 +513,10 @@ bool CAirPlayServer::StartServer(int *port, bool nonlocal)
 	//dir not exists
 	if ((_access(m_strTmpDir.c_str(), 0)) == -1)
 	{
-		std::string strTmp = m_strTmpDir;
+		string strTmp = m_strTmpDir;
 		if (CreatDir((char*)strTmp.c_str()) != 0)
 		{
-			WXLogWriteNew("create temp dir fail.");
+			//WXLogWriteNew("create temp dir fail.");
 		}
 	}
 	CSpecialProtocol::SetTempPath(m_strTmpDir);
@@ -703,39 +693,39 @@ void handleZeroconfAnnouncement(int port = 36666)
 		}
 
 		/*
-		 *  Ω´∂‘”¶µƒmacµÿ÷∑∏ƒ≥…Œ®“ª±Í÷æ£¨±‹√‚¥ÆÕ∂
+		 *  Â∞ÜÂØπÂ∫îÁöÑmacÂú∞ÂùÄÊîπÊàêÂîØ‰∏ÄÊ†áÂøóÔºåÈÅøÂÖç‰∏≤Êäï
 		 */
 		std::string uid = CNetworkServices::Get().GetUID();
 		{
 			std::vector<std::pair<std::string, std::string> > txt;
-			txt.push_back(std::make_pair("deviceid", iface != NULL ? uid : "FF:FF:FF:FF:FF:F2"));
-			txt.push_back(std::make_pair("model", "AppleTV3,2C"));//Xbmc,1 AppleTV3,2
-			txt.push_back(std::make_pair("srcvers", "220.68"));//101.28 200.54
+			txt.push_back(make_pair("deviceid", iface != NULL ? uid : "FF:FF:FF:FF:FF:F2"));
+			txt.push_back(make_pair("model", "AppleTV3,2C"));//Xbmc,1 AppleTV3,2
+			txt.push_back(make_pair("srcvers", "220.68"));//101.28 200.54
 
-			txt.push_back(std::make_pair("rmodel", "PC1.0"));
+			txt.push_back(make_pair("rmodel", "PC1.0"));
 
-			txt.push_back(std::make_pair("rrv", "1.01"));
-			txt.push_back(std::make_pair("rsv", "1.00"));
+			txt.push_back(make_pair("rrv", "1.01"));
+			txt.push_back(make_pair("rsv", "1.00"));
 
 			//ios 9
-			txt.push_back(std::make_pair("vv", "2"));
-			txt.push_back(std::make_pair("flags", "0x44"));
-			txt.push_back(std::make_pair("pk", "f3769a660475d27b4f6040381d784645e13e21c53e6d2da6a8c3d757086fc336"));
+			txt.push_back(make_pair("vv", "2"));
+			txt.push_back(make_pair("flags", "0x44"));
+			txt.push_back(make_pair("pk", "f3769a660475d27b4f6040381d784645e13e21c53e6d2da6a8c3d757086fc336"));
 			if (iface != NULL)
 			{
-				txt.push_back(std::make_pair("vncip", iface->GetCurrentIPAddress().c_str()));
-				//WXLogWriteNew(iface->GetCurrentIPAddress().c_str());
-				txt.push_back(std::make_pair("vncport", "5900"));
-				txt.push_back(std::make_pair("vncpwd", "1234"));
-				txt.push_back(std::make_pair("airplayname", strAppName.c_str()));
-				txt.push_back(std::make_pair("pcversion", CNetworkServices::Get().m_strPcVersion.c_str()));
+				txt.push_back(make_pair("vncip", iface->GetCurrentIPAddress().c_str()));
+				////WXLogWriteNew(iface->GetCurrentIPAddress().c_str());
+				txt.push_back(make_pair("vncport", "5900"));
+				txt.push_back(make_pair("vncpwd", "1234"));
+				txt.push_back(make_pair("airplayname", strAppName.c_str()));
+				txt.push_back(make_pair("pcversion", CNetworkServices::Get().m_strPcVersion.c_str()));
 			}
-			txt.push_back(std::make_pair("features", "0x5A7FFFF7,0x1E"));
+			txt.push_back(make_pair("features", "0x5A7FFFF7,0x1E"));
 
 			if (boddnum)
-				txt.push_back(std::make_pair("xbmcdummy", "evendummy"));
+				txt.push_back(make_pair("xbmcdummy", "evendummy"));
 			else
-				txt.push_back(std::make_pair("xbmcdummy", "odddummy"));
+				txt.push_back(make_pair("xbmcdummy", "odddummy"));
 
 			if (!CNetworkServices::m_dnssd)
 			{
@@ -767,7 +757,7 @@ void handleZeroconfAnnouncement(int port = 36666)
 			}
 
 			/*
-			 *  Ω´∂‘”¶µƒmacµÿ÷∑∏ƒ≥…Œ®“ª±Í÷æ£¨±‹√‚¥ÆÕ∂
+			 *  Â∞ÜÂØπÂ∫îÁöÑmacÂú∞ÂùÄÊîπÊàêÂîØ‰∏ÄÊ†áÂøóÔºåÈÅøÂÖç‰∏≤Êäï
 			 */
 			std::string appName = StringUtils::Format("%s@%s",
 				uid.c_str(),
@@ -797,9 +787,9 @@ void handleZeroconfAnnouncement(int port = 36666)
 			txt.push_back(std::make_pair("pk", "f3769a660475d27b4f6040381d784645e13e21c53e6d2da6a8c3d757086fc336"));
 
 			if (boddnum)
-				txt.push_back(std::make_pair("xbmcdummy", "evendummy"));
+				txt.push_back(make_pair("xbmcdummy", "evendummy"));
 			else
-				txt.push_back(std::make_pair("xbmcdummy", "odddummy"));
+				txt.push_back(make_pair("xbmcdummy", "odddummy"));
 
 
 
@@ -952,7 +942,7 @@ bool CAirPlayServer::Initialize()
   {
 	  if (iCount++ > 3)
 	  {
-		  WXLogWriteNew("CreateTCPServerSocket fail for 3 times");
+		  //WXLogWriteNew("CreateTCPServerSocket fail for 3 times");
 		  break;
 	  }
 
@@ -1226,12 +1216,12 @@ std::string calcResponse(const std::string& username,
 //from a string field1="value1", field2="value2" it parses the value to a field
 std::string getFieldFromString(const std::string &str, const char* field)
 {
-  std::vector<std::string> tmpAr1 = StringUtils::Split(str, ",");
-  for(std::vector<std::string>::const_iterator i = tmpAr1.begin(); i != tmpAr1.end(); ++i)
+  vector<string> tmpAr1 = StringUtils::Split(str, ",");
+  for(vector<string>::const_iterator i = tmpAr1.begin(); i != tmpAr1.end(); ++i)
   {
     if (i->find(field) != std::string::npos)
     {
-		std::vector<std::string> tmpAr2 = StringUtils::Split(*i, "=");
+      vector<string> tmpAr2 = StringUtils::Split(*i, "=");
       if (tmpAr2.size() == 2)
       {
         StringUtils::Replace(tmpAr2[1], "\"", "");//remove quotes
@@ -1878,7 +1868,7 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 					CNetworkServices::Get().m_stAirplay.m_CallBackConnectInfo(stConnect, uniqueid);
 				}
 
-				WXLogWriteNew("airplay start");
+				//WXLogWriteNew("airplay start");
 
 				if (location.find("mlhls:") != -1) 
 				{
@@ -1977,7 +1967,7 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 	// Sent when media playback should be stopped
 	else if (uri == "/stop")
 	{
-		WXLogWriteNew("airplay url stop");
+		//WXLogWriteNew("airplay url stop");
 
 		;//;//CLog::Log(LOGDEBUG, "AIRPLAY: got request %s", uri.c_str());
 		if (needAuth && !checkAuthorization(authorization, method, uri))
@@ -1998,7 +1988,7 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 			////if (IsPlaying()) //only stop player if we started him
 			//if (CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_isplaying(this, uniqueid) != 0)
 			{
-				WXLogWriteNew("airplay stop");
+				//WXLogWriteNew("airplay stop");
 				CVariant data;
 				CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_stop(this, uniqueid);
 				
@@ -2014,14 +2004,14 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 		}
 		//ClearPhotoAssetCache();
 	}
-	// ÷∂Ø∂œø™æµœÒ¡¨Ω”
+	//ÊâãÂä®Êñ≠ÂºÄÈïúÂÉèËøûÊé•
 	else if (uri == "/stop2")
 	{
-		WXLogWriteNew("airplay url stop2 AAA");
+		//WXLogWriteNew("airplay url stop2 AAA");
 		;//;//CLog::Log(LOGDEBUG, "AIRPLAY: got request %s", uri.c_str());
 		if (needAuth && !checkAuthorization(authorization, method, uri))
 		{
-			WXLogWriteNew("airplay url stop2 checkAuthorization BBBB");
+			//WXLogWriteNew("airplay url stop2 checkAuthorization BBBB");
 			status = AIRPLAY_STATUS_NEED_AUTH;
 		}
 		else
@@ -2035,12 +2025,12 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 			{
 				CNetworkServices::Get().m_stAirplay.m_CallBackConnectInfo(stConnect, uniqueid);
 			}
-			WXLogWriteNew("airplay url stop2 m_CallBackConnectInfo BBBB");
+			//WXLogWriteNew("airplay url stop2 m_CallBackConnectInfo BBBB");
 			CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_stop(this, uniqueid);
-			WXLogWriteNew("airplay url stop2 airplay_stop CCC");
+			//WXLogWriteNew("airplay url stop2 airplay_stop CCC");
 		}
 		//ClearPhotoAssetCache();
-		WXLogWriteNew("airplay url stop2 airplay_stop DDD");
+		//WXLogWriteNew("airplay url stop2 airplay_stop DDD");
 	}
 	// RAW JPEG data is contained in the request body
 	else if (uri == "/photo")
@@ -2062,8 +2052,6 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 			else if (photoAction == "displayCached")
 			{
 				receivePhoto = false;
-				if (photoCacheId.length())
-					;//;//CLog::Log(LOGDEBUG, "AIRPLAY: Trying to show from cache asset: %s", photoCacheId.c_str());
 			}
 
 			if (photoCacheId.length())
@@ -2091,8 +2079,6 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 					writtenBytes = m_tmpFile.Write(body.c_str(), contentlength);
 					m_tmpFile.Close();
 				}
-				if (photoCacheId.length())
-					;//;//CLog::Log(LOGDEBUG, "AIRPLAY: Cached asset: %s", photoCacheId.c_str());
 			}
 
 			if (showPhoto)
@@ -2127,7 +2113,7 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 						iScreenH = bH;
 						SDL_SetWindowSize(window, iScreenW, iScreenH);
 						//report 
-						int eWindowsStatus = 0;//default  ˙∆¡
+						int eWindowsStatus = 0;//default Á´ñÂ±è
 						if (iScreenW > iScreenH)
 						{
 							eWindowsStatus = 1;
@@ -2179,7 +2165,7 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 			CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_setlastpostion(this, curPos, uniqueid);
 			if (isEndReached && curPos > 0 && lastPos > 0 && curPos == lastPos)
 			{
-				WXLogWriteNew("Playing got same last posion, consider as stopped");
+				//WXLogWriteNew("Playing got same last posion, consider as stopped");
 				ConnectStatusStruct stConnect;
 				stConnect.eConnectStatus = DISCONNECT;
 				stConnect.iConnectType = 0;
@@ -2192,7 +2178,7 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 				//if (IsPlaying()) //only stop player if we started him
 				if (CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_isplaying(this, uniqueid) != 0)
 				{
-					WXLogWriteNew("airplay stop");
+					//WXLogWriteNew("airplay stop");
 					CVariant data;
 					CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_stop(this, uniqueid);
 					ServerInstance->AnnounceToClients(EVENT_STOPPED, m_sessionId);
@@ -2200,7 +2186,7 @@ int CAirPlayServer::CTCPClient::ProcessRequestNew(std::string& responseHeader,
 				}
 				else //if we are not playing and get the stop request - we just wanna stop picture streaming
 				{
-					WXLogWriteNew("airplay photo stop");
+					//WXLogWriteNew("airplay photo stop");
 					ServerInstance->AnnounceToClients(EVENT_STOPPED, m_sessionId);
 				}
 			}
@@ -2301,7 +2287,7 @@ int CAirPlayServer::CTCPClient::ProcessRequest( std::string& responseHeader,
 
 #include <WXBase.h>
 
-EXTERN_C static void WINAPI CBAVFrame(void* ctx, struct AVFrame* frame) {
+EXTERN_C static void CBAVFrame(void* ctx, struct AVFrame* frame) {
 	uint64_t uniqueid = (uint64_t)ctx;
 	WXAirplayVideoRenderDisplay(uniqueid, frame);
 }
@@ -2324,15 +2310,21 @@ void CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_open(void *cls,
 		s_mapPlayer.erase(uniqueid);
 	}
 
-	void* pPlay = WXPlayerCreate(L"Lav", strURL.str(), 100, 0);
-	if (pPlay && strURL2.length() > 0) {
-		WXPlayerAttachAudio(pPlay, strURL2.str(), 0);
+	void* pPlay = NULL;
+	
+	if (strURL2.length() > 0) {//ÈôÑÂä†Èü≥È¢ë
+		pPlay = WXPlayerCreate2(strURL.str(), strURL2.str(), nullptr, CBAVFrame);
+	}
+	else {
+		pPlay = WXPlayerCreate2(strURL.str(), nullptr, nullptr, CBAVFrame);
 	}
 	long totalTime = (long)WXPlayerGetTotalTime(pPlay)/* * 1000*/;
 	if (totalTime == 0) {
 		WXPlayerDestroy(pPlay);
 	}
 	s_mapPlayer[uniqueid] = pPlay;
+
+
 	WXPlayerStart(pPlay);
 	WXPlayerSeek(pPlay, (int)(fPosition * totalTime));
 }
@@ -2360,9 +2352,9 @@ void CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_stop(void *cls,
 		WXPlayerStop(s_mapPlayer[uniqueid]);
 		WXPlayerDestroy(s_mapPlayer[uniqueid]);
 		s_mapPlayer.erase(uniqueid);
-		WXLogWriteNew("Airplay Stop WXAirplayVideoRenderDestroy Start !!!!!!!!!!!  ");
-		WXAirplayVideoRenderDestroy(uniqueid);//œ˙ªŸ ”∆µœ‘ æ∂‘œÛ
-		WXLogWriteNew("Airplay Stop WXAirplayVideoRenderDestroy Stop !!!!!!!!!!!  ");
+		//WXLogWriteNew("Airplay Stop WXAirplayVideoRenderDestroy Start !!!!!!!!!!!  ");
+		WXAirplayVideoRenderDestroy(uniqueid);//ÈîÄÊØÅËßÜÈ¢ëÊòæÁ§∫ÂØπË±°
+		//WXLogWriteNew("Airplay Stop WXAirplayVideoRenderDestroy Stop !!!!!!!!!!!  ");
 	}
 }
 //
@@ -2387,7 +2379,7 @@ long CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_getduration(voi
 	if (s_mapPlayer.find(uniqueid) != s_mapPlayer.end()) {
 		int64_t time1 = WXPlayerGetTotalTime(s_mapPlayer[uniqueid]);
 
-		int64_t time2 = WXPlayerGetTotalTime(s_mapPlayer[uniqueid]);//“Ù∆µ ±≥§
+		int64_t time2 = WXPlayerGetTotalTime(s_mapPlayer[uniqueid]);//Èü≥È¢ëÊó∂Èïø
 		return time1 > 0 ? (long)time1 : (long)time2;
 	}
 	return 0;
@@ -2398,7 +2390,7 @@ long CAirPlayServer::CTCPClient::AirPlayOutputFunctions::airplay_getpostion(void
 	WXAutoLock lock(s_mapLockPlayer[uniqueid]);
 	if (s_mapPlayer.find(uniqueid) != s_mapPlayer.end()) {
 		long ltime = 0L;
-		ltime = (long)WXPlayerGetCurrTime(s_mapPlayer[uniqueid]);//∏ƒsŒ™µ•Œª¡À
+		ltime = (long)WXPlayerGetCurrTime(s_mapPlayer[uniqueid]);//Êîπs‰∏∫Âçï‰Ωç‰∫Ü
 		ltime = ltime;
 		return ltime;
 	}
