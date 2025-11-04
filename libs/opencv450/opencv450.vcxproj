@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8B6C6C2E-8AEA-430D-9F19-748619994C14}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>opencv450</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CV_CPU_COMPILE_SSE3=1;CV_CPU_COMPILE_SSSE3=1;CV_CPU_COMPILE_SSE4_1=1;CV_CPU_COMPILE_POPCNT=1;CV_CPU_COMPILE_SSE4_2=1;CV_CPU_COMPILE_AVX=1;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;__OPENCV_BUILD=1;OPENCV_DISABLE_ALLOCATOR_STATS=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;./core/include;./world;./imgproc/include;./world/include</AdditionalIncludeDirectories>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CV_CPU_COMPILE_SSE3=1;CV_CPU_COMPILE_SSSE3=1;CV_CPU_COMPILE_SSE4_1=1;CV_CPU_COMPILE_POPCNT=1;CV_CPU_COMPILE_SSE4_2=1;CV_CPU_COMPILE_AVX=1;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;__OPENCV_BUILD=1;OPENCV_DISABLE_ALLOCATOR_STATS=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;./core/include;./world;./imgproc/include;./world/include</AdditionalIncludeDirectories>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CV_CPU_COMPILE_SSE3=1;CV_CPU_COMPILE_SSSE3=1;CV_CPU_COMPILE_SSE4_1=1;CV_CPU_COMPILE_POPCNT=1;CV_CPU_COMPILE_SSE4_2=1;CV_CPU_COMPILE_AVX=1;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;__OPENCV_BUILD=1;OPENCV_DISABLE_ALLOCATOR_STATS=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;./core/include;./world;./imgproc/include;./world/include</AdditionalIncludeDirectories>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CV_CPU_COMPILE_SSE3=1;CV_CPU_COMPILE_SSSE3=1;CV_CPU_COMPILE_SSE4_1=1;CV_CPU_COMPILE_POPCNT=1;CV_CPU_COMPILE_SSE4_2=1;CV_CPU_COMPILE_AVX=1;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;__OPENCV_BUILD=1;OPENCV_DISABLE_ALLOCATOR_STATS=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;./core/include;./world;./imgproc/include;./world/include</AdditionalIncludeDirectories>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\include\opencv2\core.hpp" />
+    <ClInclude Include="core\include\opencv2\core\affine.hpp" />
+    <ClInclude Include="core\include\opencv2\core\async.hpp" />
+    <ClInclude Include="core\include\opencv2\core\base.hpp" />
+    <ClInclude Include="core\include\opencv2\core\bindings_utils.hpp" />
+    <ClInclude Include="core\include\opencv2\core\bufferpool.hpp" />
+    <ClInclude Include="core\include\opencv2\core\check.hpp" />
+    <ClInclude Include="core\include\opencv2\core\core.hpp" />
+    <ClInclude Include="core\include\opencv2\core\core_c.h" />
+    <ClInclude Include="core\include\opencv2\core\cuda.hpp" />
+    <ClInclude Include="core\include\opencv2\core\cuda.inl.hpp" />
+    <ClInclude Include="core\include\opencv2\core\cuda_stream_accessor.hpp" />
+    <ClInclude Include="core\include\opencv2\core\cuda_types.hpp" />
+    <ClInclude Include="core\include\opencv2\core\cvdef.h" />
+    <ClInclude Include="core\include\opencv2\core\cvstd.hpp" />
+    <ClInclude Include="core\include\opencv2\core\cvstd.inl.hpp" />
+    <ClInclude Include="core\include\opencv2\core\cvstd_wrapper.hpp" />
+    <ClInclude Include="core\include\opencv2\core\cv_cpu_dispatch.h" />
+    <ClInclude Include="core\include\opencv2\core\cv_cpu_helper.h" />
+    <ClInclude Include="core\include\opencv2\core\directx.hpp" />
+    <ClInclude Include="core\include\opencv2\core\eigen.hpp" />
+    <ClInclude Include="core\include\opencv2\core\fast_math.hpp" />
+    <ClInclude Include="core\include\opencv2\core\mat.hpp" />
+    <ClInclude Include="core\include\opencv2\core\mat.inl.hpp" />
+    <ClInclude Include="core\include\opencv2\core\matx.hpp" />
+    <ClInclude Include="core\include\opencv2\core\neon_utils.hpp" />
+    <ClInclude Include="core\include\opencv2\core\ocl.hpp" />
+    <ClInclude Include="core\include\opencv2\core\ocl_genbase.hpp" />
+    <ClInclude Include="core\include\opencv2\core\opengl.hpp" />
+    <ClInclude Include="core\include\opencv2\core\operations.hpp" />
+    <ClInclude Include="core\include\opencv2\core\optim.hpp" />
+    <ClInclude Include="core\include\opencv2\core\ovx.hpp" />
+    <ClInclude Include="core\include\opencv2\core\persistence.hpp" />
+    <ClInclude Include="core\include\opencv2\core\private.cuda.hpp" />
+    <ClInclude Include="core\include\opencv2\core\private.hpp" />
+    <ClInclude Include="core\include\opencv2\core\saturate.hpp" />
+    <ClInclude Include="core\include\opencv2\core\simd_intrinsics.hpp" />
+    <ClInclude Include="core\include\opencv2\core\softfloat.hpp" />
+    <ClInclude Include="core\include\opencv2\core\sse_utils.hpp" />
+    <ClInclude Include="core\include\opencv2\core\traits.hpp" />
+    <ClInclude Include="core\include\opencv2\core\types.hpp" />
+    <ClInclude Include="core\include\opencv2\core\types_c.h" />
+    <ClInclude Include="core\include\opencv2\core\utility.hpp" />
+    <ClInclude Include="core\include\opencv2\core\va_intel.hpp" />
+    <ClInclude Include="core\include\opencv2\core\version.hpp" />
+    <ClInclude Include="core\include\opencv2\core\vsx_utils.hpp" />
+    <ClInclude Include="core\src\arithm.simd.hpp" />
+    <ClInclude Include="core\src\arithm.simd_declarations.hpp" />
+    <ClInclude Include="core\src\arithm_ipp.hpp" />
+    <ClInclude Include="core\src\bufferpool.impl.hpp" />
+    <ClInclude Include="core\src\convert.hpp" />
+    <ClInclude Include="core\src\convert.simd.hpp" />
+    <ClInclude Include="core\src\convert.simd_declarations.hpp" />
+    <ClInclude Include="core\src\convert_scale.simd.hpp" />
+    <ClInclude Include="core\src\convert_scale.simd_declarations.hpp" />
+    <ClInclude Include="core\src\count_non_zero.simd.hpp" />
+    <ClInclude Include="core\src\count_non_zero.simd_declarations.hpp" />
+    <ClInclude Include="core\src\directx.inc.hpp" />
+    <ClInclude Include="core\src\gl_core_3_1.hpp" />
+    <ClInclude Include="core\src\hal_internal.hpp" />
+    <ClInclude Include="core\src\hal_replacement.hpp" />
+    <ClInclude Include="core\src\intel_gpu_gemm.inl.hpp" />
+    <ClInclude Include="core\src\mathfuncs.hpp" />
+    <ClInclude Include="core\src\mathfuncs_core.simd.hpp" />
+    <ClInclude Include="core\src\mathfuncs_core.simd_declarations.hpp" />
+    <ClInclude Include="core\src\matmul.simd.hpp" />
+    <ClInclude Include="core\src\matmul.simd_declarations.hpp" />
+    <ClInclude Include="core\src\mean.simd.hpp" />
+    <ClInclude Include="core\src\mean.simd_declarations.hpp" />
+    <ClInclude Include="core\src\merge.simd.hpp" />
+    <ClInclude Include="core\src\merge.simd_declarations.hpp" />
+    <ClInclude Include="core\src\ocl_disabled.impl.hpp" />
+    <ClInclude Include="core\src\parallel_impl.hpp" />
+    <ClInclude Include="core\src\persistence.hpp" />
+    <ClInclude Include="core\src\precomp.hpp" />
+    <ClInclude Include="core\src\split.simd.hpp" />
+    <ClInclude Include="core\src\split.simd_declarations.hpp" />
+    <ClInclude Include="core\src\stat.hpp" />
+    <ClInclude Include="core\src\stat.simd.hpp" />
+    <ClInclude Include="core\src\stat.simd_declarations.hpp" />
+    <ClInclude Include="core\src\sum.simd.hpp" />
+    <ClInclude Include="core\src\sum.simd_declarations.hpp" />
+    <ClInclude Include="core\src\umatrix.hpp" />
+    <ClInclude Include="core\src\utils\logtagconfig.hpp" />
+    <ClInclude Include="core\src\utils\logtagconfigparser.hpp" />
+    <ClInclude Include="core\src\utils\logtagmanager.hpp" />
+    <ClInclude Include="custom_hal.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="cv_cpu_config.h" />
+    <ClInclude Include="imgproc\include\opencv2\imgproc.hpp" />
+    <ClInclude Include="imgproc\include\opencv2\imgproc\detail\gcgraph.hpp" />
+    <ClInclude Include="imgproc\include\opencv2\imgproc\hal\hal.hpp" />
+    <ClInclude Include="imgproc\include\opencv2\imgproc\hal\interface.h" />
+    <ClInclude Include="imgproc\include\opencv2\imgproc\imgproc.hpp" />
+    <ClInclude Include="imgproc\include\opencv2\imgproc\imgproc_c.h" />
+    <ClInclude Include="imgproc\include\opencv2\imgproc\types_c.h" />
+    <ClInclude Include="imgproc\src\accum.simd.hpp" />
+    <ClInclude Include="imgproc\src\bilateral_filter.simd.hpp" />
+    <ClInclude Include="imgproc\src\box_filter.simd.hpp" />
+    <ClInclude Include="imgproc\src\color.hpp" />
+    <ClInclude Include="imgproc\src\color.simd_helpers.hpp" />
+    <ClInclude Include="imgproc\src\color_hsv.simd.hpp" />
+    <ClInclude Include="imgproc\src\color_rgb.simd.hpp" />
+    <ClInclude Include="imgproc\src\color_yuv.simd.hpp" />
+    <ClInclude Include="imgproc\src\corner.hpp" />
+    <ClInclude Include="imgproc\src\filter.hpp" />
+    <ClInclude Include="imgproc\src\filter.simd.hpp" />
+    <ClInclude Include="imgproc\src\filterengine.hpp" />
+    <ClInclude Include="imgproc\src\fixedpoint.inl.hpp" />
+    <ClInclude Include="imgproc\src\hal_replacement.hpp" />
+    <ClInclude Include="imgproc\src\imgwarp.hpp" />
+    <ClInclude Include="imgproc\src\median_blur.simd.hpp" />
+    <ClInclude Include="imgproc\src\morph.simd.hpp" />
+    <ClInclude Include="imgproc\src\precomp.hpp" />
+    <ClInclude Include="imgproc\src\resize.hpp" />
+    <ClInclude Include="imgproc\src\smooth.simd.hpp" />
+    <ClInclude Include="imgproc\src\sumpixels.avx512_skx.hpp" />
+    <ClInclude Include="imgproc\src\sumpixels.simd.hpp" />
+    <ClInclude Include="imgproc\src\_geom.h" />
+    <ClInclude Include="opencv2\cvconfig.h" />
+    <ClInclude Include="opencv2\opencv_modules.hpp" />
+    <ClInclude Include="opencv_data_config.hpp" />
+    <ClInclude Include="opencv_tests_config.hpp" />
+    <ClInclude Include="world\accum.simd_declarations.hpp" />
+    <ClInclude Include="world\arithm.simd_declarations.hpp" />
+    <ClInclude Include="world\bilateral_filter.simd_declarations.hpp" />
+    <ClInclude Include="world\box_filter.simd_declarations.hpp" />
+    <ClInclude Include="world\color_hsv.simd_declarations.hpp" />
+    <ClInclude Include="world\color_rgb.simd_declarations.hpp" />
+    <ClInclude Include="world\color_yuv.simd_declarations.hpp" />
+    <ClInclude Include="world\convert.simd_declarations.hpp" />
+    <ClInclude Include="world\convert_scale.simd_declarations.hpp" />
+    <ClInclude Include="world\count_non_zero.simd_declarations.hpp" />
+    <ClInclude Include="world\filter.simd_declarations.hpp" />
+    <ClInclude Include="world\include\opencv2\world.hpp" />
+    <ClInclude Include="world\mathfuncs_core.simd_declarations.hpp" />
+    <ClInclude Include="world\matmul.simd_declarations.hpp" />
+    <ClInclude Include="world\mean.simd_declarations.hpp" />
+    <ClInclude Include="world\median_blur.simd_declarations.hpp" />
+    <ClInclude Include="world\merge.simd_declarations.hpp" />
+    <ClInclude Include="world\morph.simd_declarations.hpp" />
+    <ClInclude Include="world\opencl_kernels_core.hpp" />
+    <ClInclude Include="world\opencl_kernels_imgproc.hpp" />
+    <ClInclude Include="world\smooth.simd_declarations.hpp" />
+    <ClInclude Include="world\split.simd_declarations.hpp" />
+    <ClInclude Include="world\src\precomp.hpp" />
+    <ClInclude Include="world\stat.simd_declarations.hpp" />
+    <ClInclude Include="world\sum.simd_declarations.hpp" />
+    <ClInclude Include="world\sumpixels.simd_declarations.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\src\algorithm.cpp" />
+    <ClCompile Include="core\src\alloc.cpp" />
+    <ClCompile Include="core\src\arithm.cpp" />
+    <ClCompile Include="core\src\arithm.dispatch.cpp" />
+    <ClCompile Include="core\src\array.cpp" />
+    <ClCompile Include="core\src\async.cpp" />
+    <ClCompile Include="core\src\batch_distance.cpp" />
+    <ClCompile Include="core\src\bindings_utils.cpp" />
+    <ClCompile Include="core\src\buffer_area.cpp" />
+    <ClCompile Include="core\src\channels.cpp" />
+    <ClCompile Include="core\src\check.cpp" />
+    <ClCompile Include="core\src\command_line_parser.cpp" />
+    <ClCompile Include="core\src\conjugate_gradient.cpp" />
+    <ClCompile Include="core\src\convert.dispatch.cpp" />
+    <ClCompile Include="core\src\convert_c.cpp" />
+    <ClCompile Include="core\src\convert_scale.dispatch.cpp" />
+    <ClCompile Include="core\src\copy.cpp" />
+    <ClCompile Include="core\src\count_non_zero.dispatch.cpp" />
+    <ClCompile Include="core\src\cuda_gpu_mat.cpp" />
+    <ClCompile Include="core\src\cuda_host_mem.cpp" />
+    <ClCompile Include="core\src\cuda_info.cpp" />
+    <ClCompile Include="core\src\cuda_stream.cpp" />
+    <ClCompile Include="core\src\datastructs.cpp" />
+    <ClCompile Include="core\src\directx.cpp" />
+    <ClCompile Include="core\src\downhill_simplex.cpp" />
+    <ClCompile Include="core\src\dxt.cpp" />
+    <ClCompile Include="core\src\glob.cpp" />
+    <ClCompile Include="core\src\gl_core_3_1.cpp" />
+    <ClCompile Include="core\src\hal_internal.cpp" />
+    <ClCompile Include="core\src\kmeans.cpp" />
+    <ClCompile Include="core\src\lapack.cpp" />
+    <ClCompile Include="core\src\lda.cpp" />
+    <ClCompile Include="core\src\logger.cpp" />
+    <ClCompile Include="core\src\lpsolver.cpp" />
+    <ClCompile Include="core\src\lut.cpp" />
+    <ClCompile Include="core\src\mathfuncs.cpp" />
+    <ClCompile Include="core\src\mathfuncs_core.dispatch.cpp" />
+    <ClCompile Include="core\src\matmul.dispatch.cpp" />
+    <ClCompile Include="core\src\matrix.cpp" />
+    <ClCompile Include="core\src\matrix_c.cpp" />
+    <ClCompile Include="core\src\matrix_decomp.cpp" />
+    <ClCompile Include="core\src\matrix_expressions.cpp" />
+    <ClCompile Include="core\src\matrix_iterator.cpp" />
+    <ClCompile Include="core\src\matrix_operations.cpp" />
+    <ClCompile Include="core\src\matrix_sparse.cpp" />
+    <ClCompile Include="core\src\matrix_wrap.cpp" />
+    <ClCompile Include="core\src\mean.dispatch.cpp" />
+    <ClCompile Include="core\src\merge.dispatch.cpp" />
+    <ClCompile Include="core\src\minmax.cpp" />
+    <ClCompile Include="core\src\norm.cpp" />
+    <ClCompile Include="core\src\ocl.cpp" />
+    <ClCompile Include="core\src\opengl.cpp" />
+    <ClCompile Include="core\src\out.cpp" />
+    <ClCompile Include="core\src\ovx.cpp" />
+    <ClCompile Include="core\src\parallel.cpp" />
+    <ClCompile Include="core\src\parallel_impl.cpp" />
+    <ClCompile Include="core\src\pca.cpp" />
+    <ClCompile Include="core\src\persistence.cpp" />
+    <ClCompile Include="core\src\persistence_json.cpp" />
+    <ClCompile Include="core\src\persistence_types.cpp" />
+    <ClCompile Include="core\src\persistence_xml.cpp" />
+    <ClCompile Include="core\src\persistence_yml.cpp" />
+    <ClCompile Include="core\src\rand.cpp" />
+    <ClCompile Include="core\src\softfloat.cpp" />
+    <ClCompile Include="core\src\split.dispatch.cpp" />
+    <ClCompile Include="core\src\stat.dispatch.cpp" />
+    <ClCompile Include="core\src\stat_c.cpp" />
+    <ClCompile Include="core\src\stl.cpp" />
+    <ClCompile Include="core\src\sum.dispatch.cpp" />
+    <ClCompile Include="core\src\system.cpp" />
+    <ClCompile Include="core\src\core_tables.cpp" />
+    <ClCompile Include="core\src\trace.cpp" />
+    <ClCompile Include="core\src\types.cpp" />
+    <ClCompile Include="core\src\umatrix.cpp" />
+    <ClCompile Include="core\src\utils\datafile.cpp" />
+    <ClCompile Include="core\src\utils\filesystem.cpp" />
+    <ClCompile Include="core\src\utils\logtagconfigparser.cpp" />
+    <ClCompile Include="core\src\utils\logtagmanager.cpp" />
+    <ClCompile Include="core\src\utils\samples.cpp" />
+    <ClCompile Include="core\src\va_intel.cpp" />
+    <ClCompile Include="imgproc\src\accum.cpp" />
+    <ClCompile Include="imgproc\src\accum.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\approx.cpp" />
+    <ClCompile Include="imgproc\src\bilateral_filter.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\blend.cpp" />
+    <ClCompile Include="imgproc\src\box_filter.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\canny.cpp" />
+    <ClCompile Include="imgproc\src\clahe.cpp" />
+    <ClCompile Include="imgproc\src\color.cpp" />
+    <ClCompile Include="imgproc\src\colormap.cpp" />
+    <ClCompile Include="imgproc\src\color_hsv.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\color_lab.cpp" />
+    <ClCompile Include="imgproc\src\color_rgb.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\color_yuv.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\connectedcomponents.cpp" />
+    <ClCompile Include="imgproc\src\contours.cpp" />
+    <ClCompile Include="imgproc\src\convhull.cpp" />
+    <ClCompile Include="imgproc\src\corner.avx.cpp" />
+    <ClCompile Include="imgproc\src\corner.cpp" />
+    <ClCompile Include="imgproc\src\cornersubpix.cpp" />
+    <ClCompile Include="imgproc\src\demosaicing.cpp" />
+    <ClCompile Include="imgproc\src\deriv.cpp" />
+    <ClCompile Include="imgproc\src\distransform.cpp" />
+    <ClCompile Include="imgproc\src\drawing.cpp" />
+    <ClCompile Include="imgproc\src\emd.cpp" />
+    <ClCompile Include="imgproc\src\featureselect.cpp" />
+    <ClCompile Include="imgproc\src\filter.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\floodfill.cpp" />
+    <ClCompile Include="imgproc\src\gabor.cpp" />
+    <ClCompile Include="imgproc\src\generalized_hough.cpp" />
+    <ClCompile Include="imgproc\src\geometry.cpp" />
+    <ClCompile Include="imgproc\src\grabcut.cpp" />
+    <ClCompile Include="imgproc\src\hershey_fonts.cpp" />
+    <ClCompile Include="imgproc\src\histogram.cpp" />
+    <ClCompile Include="imgproc\src\hough.cpp" />
+    <ClCompile Include="imgproc\src\imgwarp.avx2.cpp" />
+    <ClCompile Include="imgproc\src\imgwarp.cpp" />
+    <ClCompile Include="imgproc\src\imgwarp.sse4_1.cpp" />
+    <ClCompile Include="imgproc\src\intersection.cpp" />
+    <ClCompile Include="imgproc\src\linefit.cpp" />
+    <ClCompile Include="imgproc\src\lsd.cpp" />
+    <ClCompile Include="imgproc\src\main.cpp" />
+    <ClCompile Include="imgproc\src\matchcontours.cpp" />
+    <ClCompile Include="imgproc\src\median_blur.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\min_enclosing_triangle.cpp" />
+    <ClCompile Include="imgproc\src\moments.cpp" />
+    <ClCompile Include="imgproc\src\morph.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\phasecorr.cpp" />
+    <ClCompile Include="imgproc\src\pyramids.cpp" />
+    <ClCompile Include="imgproc\src\resize.avx2.cpp" />
+    <ClCompile Include="imgproc\src\resize.cpp" />
+    <ClCompile Include="imgproc\src\resize.sse4_1.cpp" />
+    <ClCompile Include="imgproc\src\rotcalipers.cpp" />
+    <ClCompile Include="imgproc\src\samplers.cpp" />
+    <ClCompile Include="imgproc\src\segmentation.cpp" />
+    <ClCompile Include="imgproc\src\shapedescr.cpp" />
+    <ClCompile Include="imgproc\src\smooth.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\spatialgradient.cpp" />
+    <ClCompile Include="imgproc\src\subdivision2d.cpp" />
+    <ClCompile Include="imgproc\src\sumpixels.dispatch.cpp" />
+    <ClCompile Include="imgproc\src\tables.cpp" />
+    <ClCompile Include="imgproc\src\templmatch.cpp" />
+    <ClCompile Include="imgproc\src\thresh.cpp" />
+    <ClCompile Include="imgproc\src\utils.cpp" />
+    <ClCompile Include="world\src\world_init.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,957 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\opencv2">
+      <UniqueIdentifier>{7733795c-28cb-4edf-89a4-242afee12b28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\core">
+      <UniqueIdentifier>{6c6e4136-4bf8-4eb1-8b9d-e5e71edb90a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\core\include">
+      <UniqueIdentifier>{8c5654e9-65b2-4dd1-9d79-282c95d52d8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\core\include\opencv2">
+      <UniqueIdentifier>{99f49acd-8bf8-47e1-a9e8-23eee8a58ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\core\include\opencv2\core">
+      <UniqueIdentifier>{85afc465-5efc-4c77-bd89-80accce11227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\core\src">
+      <UniqueIdentifier>{49443d1d-c92c-4d60-911f-e2bda62df443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\core\src\utils">
+      <UniqueIdentifier>{4820001e-ba13-4c93-a9ef-7c92e6eb50a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\world">
+      <UniqueIdentifier>{a1c9e3df-5bd2-46fc-aa72-4c4dfa3c2cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\imgproc">
+      <UniqueIdentifier>{0e07168c-a59d-476f-80b6-891cce51204c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\imgproc\inc">
+      <UniqueIdentifier>{d8cc1ba1-efbf-44fa-928c-50dde786a813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\imgproc\src">
+      <UniqueIdentifier>{ee1a7fab-e2a9-48eb-8969-991fc60221c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\world\inc">
+      <UniqueIdentifier>{50559879-08e5-43a3-a2b2-66cadef06aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\world\src">
+      <UniqueIdentifier>{2466e55c-bff3-4013-9dc5-db861e9b9c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\imgproc\inc\opencv2">
+      <UniqueIdentifier>{62d6ebcb-0dd3-4716-b89a-ea44e32a4e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\imgproc\inc\opencv2\imgproc">
+      <UniqueIdentifier>{fb44c0a4-339b-4945-9603-5a96cc1ed2e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\imgproc\inc\opencv2\imgproc\detail">
+      <UniqueIdentifier>{434f00cd-47a6-4c6b-b143-49c5466605f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\imgproc\inc\opencv2\imgproc\hal">
+      <UniqueIdentifier>{2da2e24a-0e1e-45ba-a8b4-2f27e239cf23}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="custom_hal.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cv_cpu_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cvconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv_data_config.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv_tests_config.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv2\cvconfig.h">
+      <Filter>头文件\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv2\opencv_modules.hpp">
+      <Filter>头文件\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core.hpp">
+      <Filter>源文件\core\include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\affine.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\async.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\base.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\bindings_utils.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\bufferpool.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\check.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\core.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\core_c.h">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cuda.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cuda.inl.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cuda_stream_accessor.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cuda_types.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cv_cpu_dispatch.h">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cv_cpu_helper.h">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cvdef.h">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cvstd.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cvstd.inl.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\cvstd_wrapper.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\directx.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\eigen.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\fast_math.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\mat.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\mat.inl.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\matx.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\neon_utils.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\ocl.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\ocl_genbase.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\opengl.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\operations.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\optim.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\ovx.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\persistence.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\private.cuda.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\private.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\saturate.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\simd_intrinsics.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\softfloat.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\sse_utils.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\traits.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\types.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\types_c.h">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\utility.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\va_intel.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\version.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\include\opencv2\core\vsx_utils.hpp">
+      <Filter>源文件\core\include\opencv2\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\arithm.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\arithm_ipp.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\bufferpool.impl.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\convert.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\convert.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\convert_scale.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\count_non_zero.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\directx.inc.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\gl_core_3_1.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\hal_internal.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\hal_replacement.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\intel_gpu_gemm.inl.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\mathfuncs.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\mathfuncs_core.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\matmul.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\mean.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\merge.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\ocl_disabled.impl.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\parallel_impl.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\persistence.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\precomp.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\split.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\stat.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\stat.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\sum.simd.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\umatrix.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\utils\logtagconfig.hpp">
+      <Filter>源文件\core\src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\utils\logtagconfigparser.hpp">
+      <Filter>源文件\core\src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\utils\logtagmanager.hpp">
+      <Filter>源文件\core\src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\include\opencv2\imgproc.hpp">
+      <Filter>源文件\imgproc\inc\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\include\opencv2\imgproc\imgproc.hpp">
+      <Filter>源文件\imgproc\inc\opencv2\imgproc</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\include\opencv2\imgproc\imgproc_c.h">
+      <Filter>源文件\imgproc\inc\opencv2\imgproc</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\include\opencv2\imgproc\types_c.h">
+      <Filter>源文件\imgproc\inc\opencv2\imgproc</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\include\opencv2\imgproc\detail\gcgraph.hpp">
+      <Filter>源文件\imgproc\inc\opencv2\imgproc\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\include\opencv2\imgproc\hal\hal.hpp">
+      <Filter>源文件\imgproc\inc\opencv2\imgproc\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\include\opencv2\imgproc\hal\interface.h">
+      <Filter>源文件\imgproc\inc\opencv2\imgproc\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\_geom.h">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\accum.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\bilateral_filter.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\box_filter.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\color.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\color.simd_helpers.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\color_hsv.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\color_rgb.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\color_yuv.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\corner.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\filter.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\filter.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\filterengine.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\fixedpoint.inl.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\hal_replacement.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\imgwarp.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\median_blur.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\morph.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\precomp.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\resize.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\smooth.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\sumpixels.avx512_skx.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="imgproc\src\sumpixels.simd.hpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClInclude>
+    <ClInclude Include="world\include\opencv2\world.hpp">
+      <Filter>源文件\world\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="world\src\precomp.hpp">
+      <Filter>源文件\world\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\arithm.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\convert.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\convert_scale.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\count_non_zero.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\mathfuncs_core.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\matmul.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\mean.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\merge.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\split.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\stat.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\sum.simd_declarations.hpp">
+      <Filter>源文件\core\src</Filter>
+    </ClInclude>
+    <ClInclude Include="world\accum.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\arithm.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\bilateral_filter.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\box_filter.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\color_hsv.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\color_rgb.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\color_yuv.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\convert.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\convert_scale.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\count_non_zero.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\filter.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\mathfuncs_core.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\matmul.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\mean.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\median_blur.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\merge.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\morph.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\opencl_kernels_core.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\opencl_kernels_imgproc.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\smooth.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\split.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\stat.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\sum.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+    <ClInclude Include="world\sumpixels.simd_declarations.hpp">
+      <Filter>源文件\world</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\src\algorithm.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\alloc.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\arithm.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\arithm.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\array.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\async.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\batch_distance.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\bindings_utils.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\buffer_area.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\channels.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\check.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\command_line_parser.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\conjugate_gradient.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\convert.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\convert_c.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\convert_scale.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\copy.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\count_non_zero.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\cuda_gpu_mat.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\cuda_host_mem.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\cuda_info.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\cuda_stream.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\datastructs.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\directx.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\downhill_simplex.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\dxt.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\gl_core_3_1.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\glob.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\hal_internal.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\kmeans.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\lapack.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\lda.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\logger.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\lpsolver.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\lut.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\mathfuncs.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\mathfuncs_core.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matmul.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matrix.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matrix_c.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matrix_decomp.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matrix_expressions.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matrix_iterator.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matrix_operations.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matrix_sparse.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\matrix_wrap.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\mean.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\merge.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\minmax.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\norm.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\ocl.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\opengl.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\out.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\ovx.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\parallel.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\parallel_impl.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\pca.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\persistence.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\persistence_json.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\persistence_types.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\persistence_xml.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\persistence_yml.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\rand.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\softfloat.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\split.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\stat.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\stat_c.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\stl.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\sum.dispatch.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\system.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\trace.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\types.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\umatrix.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\va_intel.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\utils\datafile.cpp">
+      <Filter>源文件\core\src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\utils\filesystem.cpp">
+      <Filter>源文件\core\src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\utils\logtagconfigparser.cpp">
+      <Filter>源文件\core\src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\utils\logtagmanager.cpp">
+      <Filter>源文件\core\src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\utils\samples.cpp">
+      <Filter>源文件\core\src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\accum.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\accum.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\approx.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\bilateral_filter.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\blend.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\box_filter.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\canny.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\clahe.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\color.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\color_hsv.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\color_lab.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\color_rgb.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\color_yuv.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\colormap.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\connectedcomponents.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\contours.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\convhull.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\corner.avx.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\corner.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\cornersubpix.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\demosaicing.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\deriv.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\distransform.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\drawing.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\emd.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\featureselect.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\filter.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\floodfill.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\gabor.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\generalized_hough.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\geometry.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\grabcut.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\hershey_fonts.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\histogram.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\hough.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\imgwarp.avx2.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\imgwarp.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\imgwarp.sse4_1.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\intersection.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\linefit.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\lsd.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\main.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\matchcontours.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\median_blur.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\min_enclosing_triangle.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\moments.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\morph.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\phasecorr.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\pyramids.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\resize.avx2.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\resize.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\resize.sse4_1.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\rotcalipers.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\samplers.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\segmentation.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\shapedescr.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\smooth.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\spatialgradient.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\subdivision2d.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\sumpixels.dispatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\tables.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\templmatch.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\thresh.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="imgproc\src\utils.cpp">
+      <Filter>源文件\imgproc\src</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\core_tables.cpp">
+      <Filter>源文件\core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="world\src\world_init.cpp">
+      <Filter>源文件\world\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

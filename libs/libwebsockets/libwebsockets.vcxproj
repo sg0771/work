@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core-net\private-lib-core-net.h" />
+    <ClInclude Include="core\private-lib-core.h" />
+    <ClInclude Include="cose\private-lib-cose.h" />
+    <ClInclude Include="drivers\led\private-lib-drivers-led.h" />
+    <ClInclude Include="event-libs\glib\private-lib-event-libs-glib.h" />
+    <ClInclude Include="event-libs\libevent\private-lib-event-libs-libevent.h" />
+    <ClInclude Include="event-libs\libev\private-lib-event-libs-libev.h" />
+    <ClInclude Include="event-libs\libuv\private-lib-event-libs-libuv.h" />
+    <ClInclude Include="event-libs\poll\private-lib-event-libs-poll.h" />
+    <ClInclude Include="event-libs\private-lib-event-libs.h" />
+    <ClInclude Include="event-libs\sdevent\private-lib-event-libs-sdevent.h" />
+    <ClInclude Include="event-libs\uloop\private-lib-event-libs-uloop.h" />
+    <ClInclude Include="jose\jwe\private-lib-jose-jwe.h" />
+    <ClInclude Include="jose\jws\private-lib-jose-jws.h" />
+    <ClInclude Include="jose\private-lib-jose.h" />
+    <ClInclude Include="libwebsockets.h" />
+    <ClInclude Include="libwebsockets.hxx" />
+    <ClInclude Include="libwebsockets\lws-adopt.h" />
+    <ClInclude Include="libwebsockets\lws-async-dns.h" />
+    <ClInclude Include="libwebsockets\lws-backtrace.h" />
+    <ClInclude Include="libwebsockets\lws-bb-i2c.h" />
+    <ClInclude Include="libwebsockets\lws-bb-spi.h" />
+    <ClInclude Include="libwebsockets\lws-button.h" />
+    <ClInclude Include="libwebsockets\lws-cache-ttl.h" />
+    <ClInclude Include="libwebsockets\lws-callbacks.h" />
+    <ClInclude Include="libwebsockets\lws-cgi.h" />
+    <ClInclude Include="libwebsockets\lws-client.h" />
+    <ClInclude Include="libwebsockets\lws-conmon.h" />
+    <ClInclude Include="libwebsockets\lws-context-vhost.h" />
+    <ClInclude Include="libwebsockets\lws-cose.h" />
+    <ClInclude Include="libwebsockets\lws-dbus.h" />
+    <ClInclude Include="libwebsockets\lws-diskcache.h" />
+    <ClInclude Include="libwebsockets\lws-display.h" />
+    <ClInclude Include="libwebsockets\lws-dll2.h" />
+    <ClInclude Include="libwebsockets\lws-dlo.h" />
+    <ClInclude Include="libwebsockets\lws-dsh.h" />
+    <ClInclude Include="libwebsockets\lws-esp32-spi.h" />
+    <ClInclude Include="libwebsockets\lws-eventlib-exports.h" />
+    <ClInclude Include="libwebsockets\lws-fault-injection.h" />
+    <ClInclude Include="libwebsockets\lws-freertos.h" />
+    <ClInclude Include="libwebsockets\lws-fts.h" />
+    <ClInclude Include="libwebsockets\lws-genaes.h" />
+    <ClInclude Include="libwebsockets\lws-gencrypto.h" />
+    <ClInclude Include="libwebsockets\lws-genec.h" />
+    <ClInclude Include="libwebsockets\lws-genhash.h" />
+    <ClInclude Include="libwebsockets\lws-genrsa.h" />
+    <ClInclude Include="libwebsockets\lws-gpio.h" />
+    <ClInclude Include="libwebsockets\lws-html.h" />
+    <ClInclude Include="libwebsockets\lws-http.h" />
+    <ClInclude Include="libwebsockets\lws-i2c.h" />
+    <ClInclude Include="libwebsockets\lws-ili9341-spi.h" />
+    <ClInclude Include="libwebsockets\lws-jose.h" />
+    <ClInclude Include="libwebsockets\lws-jpeg.h" />
+    <ClInclude Include="libwebsockets\lws-jrpc.h" />
+    <ClInclude Include="libwebsockets\lws-jwe.h" />
+    <ClInclude Include="libwebsockets\lws-jwk.h" />
+    <ClInclude Include="libwebsockets\lws-jws.h" />
+    <ClInclude Include="libwebsockets\lws-lecp.h" />
+    <ClInclude Include="libwebsockets\lws-led.h" />
+    <ClInclude Include="libwebsockets\lws-lejp.h" />
+    <ClInclude Include="libwebsockets\lws-logs.h" />
+    <ClInclude Include="libwebsockets\lws-lwsac.h" />
+    <ClInclude Include="libwebsockets\lws-map.h" />
+    <ClInclude Include="libwebsockets\lws-metrics.h" />
+    <ClInclude Include="libwebsockets\lws-misc.h" />
+    <ClInclude Include="libwebsockets\lws-mqtt.h" />
+    <ClInclude Include="libwebsockets\lws-netdev.h" />
+    <ClInclude Include="libwebsockets\lws-network-helper.h" />
+    <ClInclude Include="libwebsockets\lws-optee.h" />
+    <ClInclude Include="libwebsockets\lws-ota.h" />
+    <ClInclude Include="libwebsockets\lws-protocols-plugins.h" />
+    <ClInclude Include="libwebsockets\lws-purify.h" />
+    <ClInclude Include="libwebsockets\lws-pwm.h" />
+    <ClInclude Include="libwebsockets\lws-retry.h" />
+    <ClInclude Include="libwebsockets\lws-ring.h" />
+    <ClInclude Include="libwebsockets\lws-secure-streams-client.h" />
+    <ClInclude Include="libwebsockets\lws-secure-streams-policy.h" />
+    <ClInclude Include="libwebsockets\lws-secure-streams-serialization.h" />
+    <ClInclude Include="libwebsockets\lws-secure-streams-transport-proxy.h" />
+    <ClInclude Include="libwebsockets\lws-secure-streams.h" />
+    <ClInclude Include="libwebsockets\lws-service.h" />
+    <ClInclude Include="libwebsockets\lws-settings.h" />
+    <ClInclude Include="libwebsockets\lws-sha1-base64.h" />
+    <ClInclude Include="libwebsockets\lws-smd.h" />
+    <ClInclude Include="libwebsockets\lws-spa.h" />
+    <ClInclude Include="libwebsockets\lws-spd1656-spi.h" />
+    <ClInclude Include="libwebsockets\lws-spi.h" />
+    <ClInclude Include="libwebsockets\lws-ssd1306-i2c.h" />
+    <ClInclude Include="libwebsockets\lws-ssd1675b-spi.h" />
+    <ClInclude Include="libwebsockets\lws-state.h" />
+    <ClInclude Include="libwebsockets\lws-struct.h" />
+    <ClInclude Include="libwebsockets\lws-system.h" />
+    <ClInclude Include="libwebsockets\lws-test-sequencer.h" />
+    <ClInclude Include="libwebsockets\lws-threadpool.h" />
+    <ClInclude Include="libwebsockets\lws-timeout-timer.h" />
+    <ClInclude Include="libwebsockets\lws-tls-sessions.h" />
+    <ClInclude Include="libwebsockets\lws-tokenize.h" />
+    <ClInclude Include="libwebsockets\lws-uc8176-spi.h" />
+    <ClInclude Include="libwebsockets\lws-upng.h" />
+    <ClInclude Include="libwebsockets\lws-vfs.h" />
+    <ClInclude Include="libwebsockets\lws-write.h" />
+    <ClInclude Include="libwebsockets\lws-writeable.h" />
+    <ClInclude Include="libwebsockets\lws-ws-close.h" />
+    <ClInclude Include="libwebsockets\lws-ws-ext.h" />
+    <ClInclude Include="libwebsockets\lws-ws-state.h" />
+    <ClInclude Include="libwebsockets\lws-x509.h" />
+    <ClInclude Include="lws_config.h" />
+    <ClInclude Include="lws_config_private.h" />
+    <ClInclude Include="misc\cache-ttl\private-lib-misc-cache-ttl.h" />
+    <ClInclude Include="misc\css-lextable.h" />
+    <ClInclude Include="misc\css-propconst-lextable.h" />
+    <ClInclude Include="misc\dlo\private-lib-drivers-display-dlo.h" />
+    <ClInclude Include="misc\fts\private-lib-misc-fts.h" />
+    <ClInclude Include="misc\getifaddrs.h" />
+    <ClInclude Include="misc\jrpc\private-lib-misc-jrpc.h" />
+    <ClInclude Include="misc\lwsac\private-lib-misc-lwsac.h" />
+    <ClInclude Include="misc\romfs.h" />
+    <ClInclude Include="plat\windows\private-lib-plat-windows.h" />
+    <ClInclude Include="roles\cgi\private-lib-roles-cgi.h" />
+    <ClInclude Include="roles\dbus\private-lib-roles-dbus.h" />
+    <ClInclude Include="roles\h1\private-lib-roles-h1.h" />
+    <ClInclude Include="roles\h2\huftable.h" />
+    <ClInclude Include="roles\h2\private-lib-roles-h2.h" />
+    <ClInclude Include="roles\http\compression\private-lib-roles-http-compression.h" />
+    <ClInclude Include="roles\http\lextable-strings.h" />
+    <ClInclude Include="roles\http\lextable.h" />
+    <ClInclude Include="roles\http\private-lib-roles-http.h" />
+    <ClInclude Include="roles\mqtt\private-lib-roles-mqtt.h" />
+    <ClInclude Include="roles\private-lib-roles.h" />
+    <ClInclude Include="roles\raw-proxy\private-lib-roles-raw-proxy.h" />
+    <ClInclude Include="roles\ws\ext\extension-permessage-deflate.h" />
+    <ClInclude Include="roles\ws\private-lib-roles-ws.h" />
+    <ClInclude Include="secure-streams\private-lib-secure-streams.h" />
+    <ClInclude Include="system\async-dns\private-lib-async-dns.h" />
+    <ClInclude Include="system\dhcpclient\private-lib-system-dhcpclient.h" />
+    <ClInclude Include="system\fault-injection\private-lib-system-fault-injection.h" />
+    <ClInclude Include="system\metrics\private-lib-system-metrics.h" />
+    <ClInclude Include="system\smd\private-lib-system-smd.h" />
+    <ClInclude Include="tls\openssl\private-lib-tls-openssl.h" />
+    <ClInclude Include="tls\private-jit-trust.h" />
+    <ClInclude Include="tls\private-lib-tls.h" />
+    <ClInclude Include="tls\private-network.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core-net\adopt.c" />
+    <ClCompile Include="core-net\client\client.c" />
+    <ClCompile Include="core-net\client\conmon.c" />
+    <ClCompile Include="core-net\client\connect.c" />
+    <ClCompile Include="core-net\client\connect2.c" />
+    <ClCompile Include="core-net\client\connect3.c" />
+    <ClCompile Include="core-net\client\connect4.c" />
+    <ClCompile Include="core-net\client\sort-dns.c" />
+    <ClCompile Include="core-net\close.c" />
+    <ClCompile Include="core-net\dummy-callback.c" />
+    <ClCompile Include="core-net\lws-dsh.c" />
+    <ClCompile Include="core-net\network.c" />
+    <ClCompile Include="core-net\output.c" />
+    <ClCompile Include="core-net\pollfd.c" />
+    <ClCompile Include="core-net\route.c" />
+    <ClCompile Include="core-net\service.c" />
+    <ClCompile Include="core-net\socks5-client.c" />
+    <ClCompile Include="core-net\sorted-usec-list.c" />
+    <ClCompile Include="core-net\state.c" />
+    <ClCompile Include="core-net\transport-mux-client.c" />
+    <ClCompile Include="core-net\transport-mux-common.c" />
+    <ClCompile Include="core-net\transport-mux-proxy.c" />
+    <ClCompile Include="core-net\vhost.c" />
+    <ClCompile Include="core-net\wsi-timeout.c" />
+    <ClCompile Include="core-net\wsi.c" />
+    <ClCompile Include="core\alloc.c" />
+    <ClCompile Include="core\buflist.c" />
+    <ClCompile Include="core\context.c" />
+    <ClCompile Include="core\libwebsockets.c" />
+    <ClCompile Include="core\logs.c" />
+    <ClCompile Include="core\lws_dll2.c" />
+    <ClCompile Include="core\lws_map.c" />
+    <ClCompile Include="core\vfs.c" />
+    <ClCompile Include="cose\cose_key.c" />
+    <ClCompile Include="cose\cose_sign.c" />
+    <ClCompile Include="cose\cose_sign_alg.c" />
+    <ClCompile Include="cose\cose_validate.c" />
+    <ClCompile Include="cose\cose_validate_alg.c" />
+    <ClCompile Include="drivers\button\lws-button.c" />
+    <ClCompile Include="drivers\display\ili9341-spi.c" />
+    <ClCompile Include="drivers\display\lws-display.c" />
+    <ClCompile Include="drivers\display\spd1656-spi.c" />
+    <ClCompile Include="drivers\display\ssd1306-i2c.c" />
+    <ClCompile Include="drivers\display\ssd1675b-spi.c" />
+    <ClCompile Include="drivers\display\uc8176-spi.c" />
+    <ClCompile Include="drivers\i2c\bitbang\lws-bb-i2c.c" />
+    <ClCompile Include="drivers\i2c\lws-i2c.c" />
+    <ClCompile Include="drivers\led\led-gpio.c" />
+    <ClCompile Include="drivers\led\led-seq.c" />
+    <ClCompile Include="drivers\netdev\netdev.c" />
+    <ClCompile Include="drivers\netdev\wifi.c" />
+    <ClCompile Include="drivers\pwm\pwm.c" />
+    <ClCompile Include="drivers\settings\settings.c" />
+    <ClCompile Include="drivers\spi\bitbang\lws-bb-spi.c" />
+    <ClCompile Include="drivers\spi\lws-spi.c" />
+    <ClCompile Include="event-libs\glib\glib.c" />
+    <ClCompile Include="event-libs\libevent\libevent.c" />
+    <ClCompile Include="event-libs\libev\libev.c" />
+    <ClCompile Include="event-libs\libuv\libuv.c" />
+    <ClCompile Include="event-libs\poll\poll.c" />
+    <ClCompile Include="event-libs\sdevent\sdevent.c" />
+    <ClCompile Include="event-libs\uloop\uloop.c" />
+    <ClCompile Include="jose\jwe\enc\aescbc.c" />
+    <ClCompile Include="jose\jwe\enc\aesgcm.c" />
+    <ClCompile Include="jose\jwe\enc\aeskw.c" />
+    <ClCompile Include="jose\jwe\jwe-ecdh-es-aeskw.c" />
+    <ClCompile Include="jose\jwe\jwe-rsa-aescbc.c" />
+    <ClCompile Include="jose\jwe\jwe-rsa-aesgcm.c" />
+    <ClCompile Include="jose\jwe\jwe.c" />
+    <ClCompile Include="jose\jwk\jose_key.c" />
+    <ClCompile Include="jose\jwk\jwk.c" />
+    <ClCompile Include="jose\jws\jose.c" />
+    <ClCompile Include="jose\jws\jws.c" />
+    <ClCompile Include="misc\backtrace.c" />
+    <ClCompile Include="misc\base64-decode.c" />
+    <ClCompile Include="misc\cache-ttl\file.c" />
+    <ClCompile Include="misc\cache-ttl\heap.c" />
+    <ClCompile Include="misc\cache-ttl\lws-cache-ttl.c" />
+    <ClCompile Include="misc\daemonize.c" />
+    <ClCompile Include="misc\dir.c" />
+    <ClCompile Include="misc\diskcache.c" />
+    <ClCompile Include="misc\dlo\dlo-font-mcufont.c" />
+    <ClCompile Include="misc\dlo\dlo-jpeg.c" />
+    <ClCompile Include="misc\dlo\dlo-lhp.c" />
+    <ClCompile Include="misc\dlo\dlo-png.c" />
+    <ClCompile Include="misc\dlo\dlo-rect.c" />
+    <ClCompile Include="misc\dlo\dlo-ss.c" />
+    <ClCompile Include="misc\dlo\dlo-text.c" />
+    <ClCompile Include="misc\dlo\dlo.c" />
+    <ClCompile Include="misc\fsmount.c" />
+    <ClCompile Include="misc\fts\trie-fd.c" />
+    <ClCompile Include="misc\fts\trie.c" />
+    <ClCompile Include="misc\getifaddrs.c" />
+    <ClCompile Include="misc\ieeehalfprecision.c" />
+    <ClCompile Include="misc\jpeg.c" />
+    <ClCompile Include="misc\jrpc\jrpc.c" />
+    <ClCompile Include="misc\lecp.c" />
+    <ClCompile Include="misc\lejp.c" />
+    <ClCompile Include="misc\lhp-ss.c" />
+    <ClCompile Include="misc\lhp.c" />
+    <ClCompile Include="misc\lws-ring.c" />
+    <ClCompile Include="misc\lws-struct-lejp.c" />
+    <ClCompile Include="misc\lws-struct-sqlite.c" />
+    <ClCompile Include="misc\lwsac\cached-file.c" />
+    <ClCompile Include="misc\lwsac\lwsac.c" />
+    <ClCompile Include="misc\lwsac\lwsac_cpp.cxx" />
+    <ClCompile Include="misc\minilex.c" />
+    <ClCompile Include="misc\peer-limits.c" />
+    <ClCompile Include="misc\prng.c" />
+    <ClCompile Include="misc\romfs.c" />
+    <ClCompile Include="misc\sha-1.c" />
+    <ClCompile Include="misc\threadpool\threadpool.c" />
+    <ClCompile Include="misc\upng-gzip.c" />
+    <ClCompile Include="misc\upng.c" />
+    <ClCompile Include="plat\windows\windows-fds.c" />
+    <ClCompile Include="plat\windows\windows-file.c" />
+    <ClCompile Include="plat\windows\windows-init.c" />
+    <ClCompile Include="plat\windows\windows-misc.c" />
+    <ClCompile Include="plat\windows\windows-pipe.c" />
+    <ClCompile Include="plat\windows\windows-plugins.c" />
+    <ClCompile Include="plat\windows\windows-resolv.c" />
+    <ClCompile Include="plat\windows\windows-service.c" />
+    <ClCompile Include="plat\windows\windows-sockets.c" />
+    <ClCompile Include="plat\windows\windows-spawn.c" />
+    <ClCompile Include="roles\cgi\cgi-server.c" />
+    <ClCompile Include="roles\cgi\ops-cgi.c" />
+    <ClCompile Include="roles\dbus\dbus.c" />
+    <ClCompile Include="roles\h1\ops-h1.c" />
+    <ClCompile Include="roles\h2\hpack.c" />
+    <ClCompile Include="roles\h2\http2.c" />
+    <ClCompile Include="roles\h2\minihuf.c" />
+    <ClCompile Include="roles\h2\ops-h2.c" />
+    <ClCompile Include="roles\http\client\client-http.c" />
+    <ClCompile Include="roles\http\compression\brotli\brotli.c" />
+    <ClCompile Include="roles\http\compression\deflate\deflate.c" />
+    <ClCompile Include="roles\http\compression\stream.c" />
+    <ClCompile Include="roles\http\cookie.c" />
+    <ClCompile Include="roles\http\date.c" />
+    <ClCompile Include="roles\http\header.c" />
+    <ClCompile Include="roles\http\http_minilex.c" />
+    <ClCompile Include="roles\http\parsers.c" />
+    <ClCompile Include="roles\http\server\access-log.c" />
+    <ClCompile Include="roles\http\server\fops-zip.c" />
+    <ClCompile Include="roles\http\server\lejp-conf.c" />
+    <ClCompile Include="roles\http\server\lws-spa.c" />
+    <ClCompile Include="roles\http\server\ranges.c" />
+    <ClCompile Include="roles\http\server\rewrite.c" />
+    <ClCompile Include="roles\http\server\server.c" />
+    <ClCompile Include="roles\listen\ops-listen.c" />
+    <ClCompile Include="roles\mqtt\client\client-mqtt-handshake.c" />
+    <ClCompile Include="roles\mqtt\client\client-mqtt.c" />
+    <ClCompile Include="roles\mqtt\mqtt.c" />
+    <ClCompile Include="roles\mqtt\ops-mqtt.c" />
+    <ClCompile Include="roles\mqtt\primitives.c" />
+    <ClCompile Include="roles\netlink\ops-netlink.c" />
+    <ClCompile Include="roles\pipe\ops-pipe.c" />
+    <ClCompile Include="roles\raw-file\ops-raw-file.c" />
+    <ClCompile Include="roles\raw-proxy\ops-raw-proxy.c" />
+    <ClCompile Include="roles\raw-skt\ops-raw-skt.c" />
+    <ClCompile Include="roles\ws\client-parser-ws.c" />
+    <ClCompile Include="roles\ws\client-ws.c" />
+    <ClCompile Include="roles\ws\ext\extension-permessage-deflate.c" />
+    <ClCompile Include="roles\ws\ext\extension.c" />
+    <ClCompile Include="roles\ws\ops-ws.c" />
+    <ClCompile Include="roles\ws\server-ws.c" />
+    <ClCompile Include="secure-streams\cpp\lss.cxx" />
+    <ClCompile Include="secure-streams\cpp\lssFile.cxx" />
+    <ClCompile Include="secure-streams\cpp\lssMsg.cxx" />
+    <ClCompile Include="secure-streams\plugins\ssp-h1url\h1url.c" />
+    <ClCompile Include="secure-streams\policy-common.c" />
+    <ClCompile Include="secure-streams\policy-json.c" />
+    <ClCompile Include="secure-streams\protocols\ss-h1.c" />
+    <ClCompile Include="secure-streams\protocols\ss-h2.c" />
+    <ClCompile Include="secure-streams\protocols\ss-mqtt.c" />
+    <ClCompile Include="secure-streams\protocols\ss-raw.c" />
+    <ClCompile Include="secure-streams\protocols\ss-ws.c" />
+    <ClCompile Include="secure-streams\secure-streams.c" />
+    <ClCompile Include="secure-streams\serialized\client\sspc-deserialize.c" />
+    <ClCompile Include="secure-streams\serialized\client\sspc-transport-wsi.c" />
+    <ClCompile Include="secure-streams\serialized\client\sspc-transport.c" />
+    <ClCompile Include="secure-streams\serialized\client\sspc.c" />
+    <ClCompile Include="secure-streams\serialized\proxy\proxy-deserialize.c" />
+    <ClCompile Include="secure-streams\serialized\proxy\proxy-transport-wsi.c" />
+    <ClCompile Include="secure-streams\serialized\proxy\proxy-transport.c" />
+    <ClCompile Include="secure-streams\serialized\proxy\proxy.c" />
+    <ClCompile Include="secure-streams\system\auth-api.amazon.com\auth.c" />
+    <ClCompile Include="secure-streams\system\auth-sigv4\sign.c" />
+    <ClCompile Include="secure-streams\system\captive-portal-detect\captive-portal-detect.c" />
+    <ClCompile Include="secure-streams\system\fetch-policy\fetch-policy.c" />
+    <ClCompile Include="system\async-dns\async-dns-parse.c" />
+    <ClCompile Include="system\async-dns\async-dns.c" />
+    <ClCompile Include="system\dhcpclient\dhcpc4.c" />
+    <ClCompile Include="system\dhcpclient\dhcpclient.c" />
+    <ClCompile Include="system\fault-injection\fault-injection.c" />
+    <ClCompile Include="system\metrics\metrics.c" />
+    <ClCompile Include="system\ntpclient\ntpclient.c" />
+    <ClCompile Include="system\ota\ota.c" />
+    <ClCompile Include="system\smd\smd.c" />
+    <ClCompile Include="system\system.c" />
+    <ClCompile Include="tls\lws-gencrypto-common.c" />
+    <ClCompile Include="tls\lws-genec-common.c" />
+    <ClCompile Include="tls\openssl\lws-genaes.c" />
+    <ClCompile Include="tls\openssl\lws-gencrypto.c" />
+    <ClCompile Include="tls\openssl\lws-genec.c" />
+    <ClCompile Include="tls\openssl\lws-genhash.c" />
+    <ClCompile Include="tls\openssl\lws-genrsa.c" />
+    <ClCompile Include="tls\openssl\openssl-client.c" />
+    <ClCompile Include="tls\openssl\openssl-server.c" />
+    <ClCompile Include="tls\openssl\openssl-session.c" />
+    <ClCompile Include="tls\openssl\openssl-ssl.c" />
+    <ClCompile Include="tls\openssl\openssl-tls.c" />
+    <ClCompile Include="tls\openssl\openssl-x509.c" />
+    <ClCompile Include="tls\tls-client.c" />
+    <ClCompile Include="tls\tls-jit-trust.c" />
+    <ClCompile Include="tls\tls-network.c" />
+    <ClCompile Include="tls\tls-server.c" />
+    <ClCompile Include="tls\tls-sessions.c" />
+    <ClCompile Include="tls\tls.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{23344cdb-bb3c-4450-ab5c-0866b1509fdc}</ProjectGuid>
+    <RootNamespace>libwebsockets</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <ReferencePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ReferencePath>
+    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include;$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\include\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <PreBuildEventUseInBuild />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions> _CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/zlib</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions> _CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/zlib</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions> _CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/zlib</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions> _CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4996;4003</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)libs/openssl/include;$(SolutionDir)libs/zlib</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)pdb_vc\$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

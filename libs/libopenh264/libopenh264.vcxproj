@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{48C5BA89-B033-4914-A0F3-09D43F17B19C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libopenh264</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(SolutionDir)tools\nasm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;.\;</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;X86_ASM;WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBOPENH264_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;./common;./decoder;./encoder;./processing</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4819;4996</DisableSpecificWarnings>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>openh264.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;X86_ASM;_DEBUG;_WINDOWS;_USRDLL;LIBOPENH264_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;./common;./decoder;./encoder;./processing</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4819;4996</DisableSpecificWarnings>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>openh264.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;X86_ASM;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBOPENH264_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;./common;./decoder;./encoder;./processing</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4819;4996</DisableSpecificWarnings>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>openh264.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;X86_ASM;NDEBUG;_WINDOWS;_USRDLL;LIBOPENH264_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;./common;./decoder;./encoder;./processing</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4819;4996</DisableSpecificWarnings>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>openh264.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="common\common_tables.cpp" />
+    <ClCompile Include="common\copy_mb.cpp" />
+    <ClCompile Include="common\cpu.cpp" />
+    <ClCompile Include="common\crt_util_safe_x.cpp" />
+    <ClCompile Include="common\deblocking_common.cpp" />
+    <ClCompile Include="common\expand_pic.cpp" />
+    <ClCompile Include="common\intra_pred_common.cpp" />
+    <ClCompile Include="common\mc.cpp" />
+    <ClCompile Include="common\memory_align.cpp" />
+    <ClCompile Include="common\sad_common.cpp" />
+    <ClCompile Include="common\utils.cpp" />
+    <ClCompile Include="common\welsCodecTrace.cpp" />
+    <ClCompile Include="common\WelsTaskThread.cpp" />
+    <ClCompile Include="common\WelsThread.cpp" />
+    <ClCompile Include="common\WelsThreadLib.cpp" />
+    <ClCompile Include="common\WelsThreadPool.cpp" />
+    <ClCompile Include="decoder\au_parser.cpp" />
+    <ClCompile Include="decoder\bit_stream.cpp" />
+    <ClCompile Include="decoder\cabac_decoder.cpp" />
+    <ClCompile Include="decoder\deblocking.cpp" />
+    <ClCompile Include="decoder\decoder.cpp" />
+    <ClCompile Include="decoder\decoder_core.cpp" />
+    <ClCompile Include="decoder\decoder_data_tables.cpp" />
+    <ClCompile Include="decoder\decode_mb_aux.cpp" />
+    <ClCompile Include="decoder\decode_slice.cpp" />
+    <ClCompile Include="decoder\error_concealment.cpp" />
+    <ClCompile Include="decoder\fmo.cpp" />
+    <ClCompile Include="decoder\get_intra_predictor.cpp" />
+    <ClCompile Include="decoder\manage_dec_ref.cpp" />
+    <ClCompile Include="decoder\memmgr_nal_unit.cpp" />
+    <ClCompile Include="decoder\mv_pred.cpp" />
+    <ClCompile Include="decoder\parse_mb_syn_cabac.cpp" />
+    <ClCompile Include="decoder\parse_mb_syn_cavlc.cpp" />
+    <ClCompile Include="decoder\pic_queue.cpp" />
+    <ClCompile Include="decoder\rec_mb.cpp" />
+    <ClCompile Include="decoder\wels_decoder_thread.cpp" />
+    <ClCompile Include="DllEntry.cpp" />
+    <ClCompile Include="encoder\au_set.cpp" />
+    <ClCompile Include="encoder\encdoer_deblocking.cpp" />
+    <ClCompile Include="encoder\encoder_decode_mb_aux.cpp" />
+    <ClCompile Include="encoder\encoder.cpp" />
+    <ClCompile Include="encoder\encoder_data_tables.cpp" />
+    <ClCompile Include="encoder\encoder_ext.cpp" />
+    <ClCompile Include="encoder\encode_mb_aux.cpp" />
+    <ClCompile Include="encoder\encoder_get_intra_predictorencoder.cpp" />
+    <ClCompile Include="encoder\md.cpp" />
+    <ClCompile Include="encoder\encoder_mv_pred.cpp" />
+    <ClCompile Include="encoder\nal_encap.cpp" />
+    <ClCompile Include="encoder\paraset_strategy.cpp" />
+    <ClCompile Include="encoder\picture_handle.cpp" />
+    <ClCompile Include="encoder\ratectl.cpp" />
+    <ClCompile Include="encoder\ref_list_mgr_svc.cpp" />
+    <ClCompile Include="encoder\sample.cpp" />
+    <ClCompile Include="encoder\set_mb_syn_cabac.cpp" />
+    <ClCompile Include="encoder\set_mb_syn_cavlc.cpp" />
+    <ClCompile Include="encoder\slice_multi_threading.cpp" />
+    <ClCompile Include="encoder\svc_base_layer_md.cpp" />
+    <ClCompile Include="encoder\svc_encode_mb.cpp" />
+    <ClCompile Include="encoder\svc_encode_slice.cpp" />
+    <ClCompile Include="encoder\svc_enc_slice_segment.cpp" />
+    <ClCompile Include="encoder\svc_mode_decision.cpp" />
+    <ClCompile Include="encoder\svc_motion_estimate.cpp" />
+    <ClCompile Include="encoder\svc_set_mb_syn_cabac.cpp" />
+    <ClCompile Include="encoder\svc_set_mb_syn_cavlc.cpp" />
+    <ClCompile Include="encoder\wels_preprocess.cpp" />
+    <ClCompile Include="encoder\wels_task_base.cpp" />
+    <ClCompile Include="encoder\wels_task_encoder.cpp" />
+    <ClCompile Include="encoder\wels_task_management.cpp" />
+    <ClCompile Include="processing\AdaptiveQuantization.cpp" />
+    <ClCompile Include="processing\BackgroundDetection.cpp" />
+    <ClCompile Include="processing\ComplexityAnalysis.cpp" />
+    <ClCompile Include="processing\denoise.cpp" />
+    <ClCompile Include="processing\denoise_filter.cpp" />
+    <ClCompile Include="processing\downsample.cpp" />
+    <ClCompile Include="processing\downsamplefuncs.cpp" />
+    <ClCompile Include="processing\imagerotate.cpp" />
+    <ClCompile Include="processing\imagerotatefuncs.cpp" />
+    <ClCompile Include="processing\memory.cpp" />
+    <ClCompile Include="processing\SceneChangeDetection.cpp" />
+    <ClCompile Include="processing\ScrollDetection.cpp" />
+    <ClCompile Include="processing\ScrollDetectionFuncs.cpp" />
+    <ClCompile Include="processing\vaacalcfuncs.cpp" />
+    <ClCompile Include="processing\vaacalculation.cpp" />
+    <ClCompile Include="processing\WelsFrameWork.cpp" />
+    <ClCompile Include="processing\WelsFrameWorkEx.cpp" />
+    <ClCompile Include="welsDecoderExt.cpp" />
+    <ClCompile Include="welsEncoderExt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="codec_api.h" />
+    <ClInclude Include="codec_app_def.h" />
+    <ClInclude Include="codec_def.h" />
+    <ClInclude Include="codec_ver.h" />
+    <ClInclude Include="common\asmdefs_mmi.h" />
+    <ClInclude Include="common\copy_mb.h" />
+    <ClInclude Include="common\cpu.h" />
+    <ClInclude Include="common\cpu_core.h" />
+    <ClInclude Include="common\crt_util_safe_x.h" />
+    <ClInclude Include="common\deblocking_common.h" />
+    <ClInclude Include="common\expand_pic.h" />
+    <ClInclude Include="common\golomb_common.h" />
+    <ClInclude Include="common\intra_pred_common.h" />
+    <ClInclude Include="common\ls_defines.h" />
+    <ClInclude Include="common\macros.h" />
+    <ClInclude Include="common\mc.h" />
+    <ClInclude Include="common\measure_time.h" />
+    <ClInclude Include="common\memory_align.h" />
+    <ClInclude Include="common\sad_common.h" />
+    <ClInclude Include="common\typedefs.h" />
+    <ClInclude Include="common\utils.h" />
+    <ClInclude Include="common\version.h" />
+    <ClInclude Include="common\welsCodecTrace.h" />
+    <ClInclude Include="common\WelsList.h" />
+    <ClInclude Include="common\WelsLock.h" />
+    <ClInclude Include="common\WelsTask.h" />
+    <ClInclude Include="common\WelsTaskThread.h" />
+    <ClInclude Include="common\WelsThread.h" />
+    <ClInclude Include="common\WelsThreadLib.h" />
+    <ClInclude Include="common\WelsThreadPool.h" />
+    <ClInclude Include="common\wels_common_defs.h" />
+    <ClInclude Include="common\wels_const_common.h" />
+    <ClInclude Include="common\x86\asm_inc.asm.h" />
+    <ClInclude Include="decoder\au_parser.h" />
+    <ClInclude Include="decoder\bit_stream.h" />
+    <ClInclude Include="decoder\cabac_decoder.h" />
+    <ClInclude Include="decoder\deblocking.h" />
+    <ClInclude Include="decoder\decoder.h" />
+    <ClInclude Include="decoder\decoder_context.h" />
+    <ClInclude Include="decoder\decoder_core.h" />
+    <ClInclude Include="decoder\decode_mb_aux.h" />
+    <ClInclude Include="decoder\decode_slice.h" />
+    <ClInclude Include="decoder\dec_frame.h" />
+    <ClInclude Include="decoder\dec_golomb.h" />
+    <ClInclude Include="decoder\error_code.h" />
+    <ClInclude Include="decoder\error_concealment.h" />
+    <ClInclude Include="decoder\fmo.h" />
+    <ClInclude Include="decoder\get_intra_predictor.h" />
+    <ClInclude Include="decoder\manage_dec_ref.h" />
+    <ClInclude Include="decoder\mb_cache.h" />
+    <ClInclude Include="decoder\memmgr_nal_unit.h" />
+    <ClInclude Include="decoder\mv_pred.h" />
+    <ClInclude Include="decoder\nalu.h" />
+    <ClInclude Include="decoder\nal_prefix.h" />
+    <ClInclude Include="decoder\parameter_sets.h" />
+    <ClInclude Include="decoder\parse_mb_syn_cabac.h" />
+    <ClInclude Include="decoder\parse_mb_syn_cavlc.h" />
+    <ClInclude Include="decoder\picture.h" />
+    <ClInclude Include="decoder\pic_queue.h" />
+    <ClInclude Include="decoder\rec_mb.h" />
+    <ClInclude Include="decoder\slice.h" />
+    <ClInclude Include="decoder\vlc_decoder.h" />
+    <ClInclude Include="decoder\wels_common_basis.h" />
+    <ClInclude Include="decoder\wels_const.h" />
+    <ClInclude Include="decoder\wels_decoder_thread.h" />
+    <ClInclude Include="encoder\as264_common.h" />
+    <ClInclude Include="encoder\au_set.h" />
+    <ClInclude Include="encoder\deblocking.h" />
+    <ClInclude Include="encoder\decode_mb_aux.h" />
+    <ClInclude Include="encoder\dq_map.h" />
+    <ClInclude Include="encoder\encoder.h" />
+    <ClInclude Include="encoder\encoder_context.h" />
+    <ClInclude Include="encoder\encode_mb_aux.h" />
+    <ClInclude Include="encoder\extern.h" />
+    <ClInclude Include="encoder\get_intra_predictor.h" />
+    <ClInclude Include="encoder\mb_cache.h" />
+    <ClInclude Include="encoder\md.h" />
+    <ClInclude Include="encoder\mt_defs.h" />
+    <ClInclude Include="encoder\mv_pred.h" />
+    <ClInclude Include="encoder\nal_encap.h" />
+    <ClInclude Include="encoder\parameter_sets.h" />
+    <ClInclude Include="encoder\param_svc.h" />
+    <ClInclude Include="encoder\paraset_strategy.h" />
+    <ClInclude Include="encoder\picture.h" />
+    <ClInclude Include="encoder\picture_handle.h" />
+    <ClInclude Include="encoder\rc.h" />
+    <ClInclude Include="encoder\ref_list_mgr_svc.h" />
+    <ClInclude Include="encoder\sample.h" />
+    <ClInclude Include="encoder\set_mb_syn_cabac.h" />
+    <ClInclude Include="encoder\set_mb_syn_cavlc.h" />
+    <ClInclude Include="encoder\slice.h" />
+    <ClInclude Include="encoder\slice_multi_threading.h" />
+    <ClInclude Include="encoder\stat.h" />
+    <ClInclude Include="encoder\svc_base_layer_md.h" />
+    <ClInclude Include="encoder\svc_encode_mb.h" />
+    <ClInclude Include="encoder\svc_encode_slice.h" />
+    <ClInclude Include="encoder\svc_enc_frame.h" />
+    <ClInclude Include="encoder\svc_enc_golomb.h" />
+    <ClInclude Include="encoder\svc_enc_macroblock.h" />
+    <ClInclude Include="encoder\svc_enc_slice_segment.h" />
+    <ClInclude Include="encoder\svc_mode_decision.h" />
+    <ClInclude Include="encoder\svc_motion_estimate.h" />
+    <ClInclude Include="encoder\svc_set_mb_syn.h" />
+    <ClInclude Include="encoder\svc_set_mb_syn_cavlc.h" />
+    <ClInclude Include="encoder\vlc_encoder.h" />
+    <ClInclude Include="encoder\wels_common_basis.h" />
+    <ClInclude Include="encoder\wels_const.h" />
+    <ClInclude Include="encoder\wels_func_ptr_def.h" />
+    <ClInclude Include="encoder\wels_preprocess.h" />
+    <ClInclude Include="encoder\wels_task_base.h" />
+    <ClInclude Include="encoder\wels_task_encoder.h" />
+    <ClInclude Include="encoder\wels_task_management.h" />
+    <ClInclude Include="encoder\wels_transpose_matrix.h" />
+    <ClInclude Include="IWelsVP.h" />
+    <ClInclude Include="processing\AdaptiveQuantization.h" />
+    <ClInclude Include="processing\BackgroundDetection.h" />
+    <ClInclude Include="processing\common.h" />
+    <ClInclude Include="processing\ComplexityAnalysis.h" />
+    <ClInclude Include="processing\denoise.h" />
+    <ClInclude Include="processing\downsample.h" />
+    <ClInclude Include="processing\imagerotate.h" />
+    <ClInclude Include="processing\memory.h" />
+    <ClInclude Include="processing\resource.h" />
+    <ClInclude Include="processing\SceneChangeDetection.h" />
+    <ClInclude Include="processing\ScrollDetection.h" />
+    <ClInclude Include="processing\ScrollDetectionFuncs.h" />
+    <ClInclude Include="processing\typedef.h" />
+    <ClInclude Include="processing\util.h" />
+    <ClInclude Include="processing\vaacalculation.h" />
+    <ClInclude Include="processing\WelsFrameWork.h" />
+    <ClInclude Include="welsDecoderExt.h" />
+    <ClInclude Include="welsEncoderExt.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="openh264.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <NASM Include="common\x86\cpuid.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\dct.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\deblock.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\expand_picture.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\intra_pred_com.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\mb_copy.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\mc_chroma.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\mc_luma.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\satd_sad.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="common\x86\vaa.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="decoder\x86\decoder_dct.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="decoder\x86\decoder_intra_pred.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_coeff.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_dct.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_intra_pred.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_matrix_transpose.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_memzero.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_quant.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_sample_sc.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_score.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="processing\x86\denoisefilter.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="processing\x86\downsample_bilinear.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+    <NASM Include="processing\x86\processing_vaa.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./common/x86</IncludePaths>
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./common/x86</IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PREFIX;X86_32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN64</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN64</PreprocessorDefinitions>
+    </NASM>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(SolutionDir)tools\nasm.targets" />
+  </ImportGroup>
+</Project>

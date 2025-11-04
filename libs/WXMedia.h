@@ -2030,9 +2030,7 @@ extern "C" {
 	WXMEDIA_API int      WXMediaInfoGetVideoChannelNumber(void* p);//Type=1
 	WXMEDIA_API int      WXMediaInfoGetAttachChannelNumber(void* p);//Type=2 //add
 
-	WXMEDIA_API int64_t  WXMediaInfoGetFileSize(void* p);
-	WXMEDIA_API int64_t  WXMediaInfoGetFileDuration(void* p);
-	WXMEDIA_API WXCTSTR  WXMediaInfoGetFormat(void* p);
+
 	WXMEDIA_API int      WXMediaInfoGetChannelNumber(void* p);
 	WXMEDIA_API int64_t  WXMediaInfoGetVideoBitrate(void* p);
 	WXMEDIA_API double   WXMediaInfoGetVideoAvgFps(void* p);//获取帧率

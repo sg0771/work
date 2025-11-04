@@ -7,6 +7,9 @@
 #include "resource.h"
 #include <shellapi.h>  // 必须包含，定义了 HDROP、DragQueryFile、DragFinish 等
 #include <windows.h>   // 基础 Windows 类型定义（通常 WTL 会间接包含，但保险起见可添加）
+#include "MediaInfoDLL.h"
+#include <WXMedia.h>
+#pragma comment(lib,"WXMedia.lib")
 
 class CMainDlg : 
 	public CDialogImpl<CMainDlg>, 
@@ -16,7 +19,11 @@ class CMainDlg :
 	CString m_strInput = L"1.mp4";
 	CString m_strName = L"1.txt";
 	CString m_strMsg = L"";
-	void Handle();
+
+	void HandleMI();
+	void HandleWX();
+
+	BOOL m_bMI = FALSE;
 public:
 
 	enum { IDD = IDD_MAINDLG };
@@ -24,6 +31,7 @@ public:
 	//控件变量
 	BEGIN_DDX_MAP(CMainDlg)
 		DDX_TEXT(IDC_EDIT1, m_strMsg)
+		DDX_CHECK(IDC_CHECK1, m_bMI)
 	END_DDX_MAP()
 
 	// 消息映射

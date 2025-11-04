@@ -1,0 +1,1101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libwebsockets.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets.hxx">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tls\openssl\private-lib-tls-openssl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tls\private-jit-trust.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tls\private-lib-tls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tls\private-network.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core\private-lib-core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="core-net\private-lib-core-net.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cose\private-lib-cose.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\led\private-lib-drivers-led.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event-libs\glib\private-lib-event-libs-glib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event-libs\libev\private-lib-event-libs-libev.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event-libs\libevent\private-lib-event-libs-libevent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event-libs\libuv\private-lib-event-libs-libuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event-libs\poll\private-lib-event-libs-poll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event-libs\sdevent\private-lib-event-libs-sdevent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event-libs\uloop\private-lib-event-libs-uloop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="event-libs\private-lib-event-libs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="jose\jwe\private-lib-jose-jwe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="jose\jws\private-lib-jose-jws.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="jose\private-lib-jose.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-adopt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-async-dns.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-backtrace.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-bb-i2c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-bb-spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-button.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-cache-ttl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-callbacks.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-cgi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-conmon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-context-vhost.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-cose.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-dbus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-diskcache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-display.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-dll2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-dlo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-dsh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-esp32-spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-eventlib-exports.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-fault-injection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-freertos.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-fts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-genaes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-gencrypto.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-genec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-genhash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-genrsa.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-gpio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-html.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-http.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-i2c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-ili9341-spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-jose.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-jpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-jrpc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-jwe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-jwk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-jws.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-lecp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-led.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-lejp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-logs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-lwsac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-map.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-metrics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-misc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-mqtt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-netdev.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-network-helper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-optee.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-ota.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-protocols-plugins.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-purify.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-pwm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-retry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-ring.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-secure-streams.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-secure-streams-client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-secure-streams-policy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-secure-streams-serialization.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-secure-streams-transport-proxy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-service.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-settings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-sha1-base64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-smd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-spa.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-spd1656-spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-ssd1306-i2c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-ssd1675b-spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-state.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-struct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-test-sequencer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-threadpool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-timeout-timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-tls-sessions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-tokenize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-uc8176-spi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-upng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-vfs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-write.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-writeable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-ws-close.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-ws-ext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-ws-state.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libwebsockets\lws-x509.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\cache-ttl\private-lib-misc-cache-ttl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\dlo\private-lib-drivers-display-dlo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\fts\private-lib-misc-fts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\jrpc\private-lib-misc-jrpc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\lwsac\private-lib-misc-lwsac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\css-lextable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\css-propconst-lextable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\getifaddrs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\romfs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="plat\windows\private-lib-plat-windows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\cgi\private-lib-roles-cgi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\dbus\private-lib-roles-dbus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\h1\private-lib-roles-h1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\h2\huftable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\h2\private-lib-roles-h2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\http\compression\private-lib-roles-http-compression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\http\lextable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\http\lextable-strings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\http\private-lib-roles-http.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\mqtt\private-lib-roles-mqtt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\raw-proxy\private-lib-roles-raw-proxy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\ws\ext\extension-permessage-deflate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\ws\private-lib-roles-ws.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="roles\private-lib-roles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="secure-streams\private-lib-secure-streams.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="system\async-dns\private-lib-async-dns.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="system\dhcpclient\private-lib-system-dhcpclient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="system\fault-injection\private-lib-system-fault-injection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="system\metrics\private-lib-system-metrics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="system\smd\private-lib-system-smd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lws_config_private.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lws_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tls\openssl\lws-genaes.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\lws-gencrypto.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\lws-genec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\lws-genhash.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\lws-genrsa.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\openssl-client.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\openssl-server.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\openssl-session.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\openssl-ssl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\openssl-tls.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\openssl\openssl-x509.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\lws-gencrypto-common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\lws-genec-common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\tls.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\tls-client.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\tls-jit-trust.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\tls-network.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\tls-server.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tls\tls-sessions.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\alloc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\buflist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\context.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\libwebsockets.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\logs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\lws_dll2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\lws_map.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vfs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\client\client.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\client\conmon.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\client\connect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\client\connect2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\client\connect3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\client\connect4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\client\sort-dns.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\adopt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\close.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\dummy-callback.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\lws-dsh.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\network.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\output.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\pollfd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\route.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\service.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\socks5-client.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\sorted-usec-list.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\state.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\transport-mux-client.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\transport-mux-common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\transport-mux-proxy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\vhost.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\wsi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core-net\wsi-timeout.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cose\cose_key.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cose\cose_sign.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cose\cose_sign_alg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cose\cose_validate.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cose\cose_validate_alg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\button\lws-button.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\display\ili9341-spi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\display\lws-display.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\display\spd1656-spi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\display\ssd1306-i2c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\display\ssd1675b-spi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\display\uc8176-spi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\i2c\bitbang\lws-bb-i2c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\i2c\lws-i2c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\led\led-gpio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\led\led-seq.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\netdev\netdev.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\netdev\wifi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\pwm\pwm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\settings\settings.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\spi\bitbang\lws-bb-spi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\spi\lws-spi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="event-libs\glib\glib.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="event-libs\libev\libev.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="event-libs\libevent\libevent.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="event-libs\libuv\libuv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="event-libs\poll\poll.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="event-libs\sdevent\sdevent.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="event-libs\uloop\uloop.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwe\enc\aescbc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwe\enc\aesgcm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwe\enc\aeskw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwe\jwe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwe\jwe-ecdh-es-aeskw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwe\jwe-rsa-aescbc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwe\jwe-rsa-aesgcm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwk\jose_key.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jwk\jwk.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jws\jose.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jose\jws\jws.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\cache-ttl\file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\cache-ttl\heap.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\cache-ttl\lws-cache-ttl.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dlo\dlo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dlo\dlo-font-mcufont.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dlo\dlo-jpeg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dlo\dlo-lhp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dlo\dlo-png.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dlo\dlo-rect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dlo\dlo-ss.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dlo\dlo-text.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\fts\trie.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\fts\trie-fd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\jrpc\jrpc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lwsac\cached-file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lwsac\lwsac.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lwsac\lwsac_cpp.cxx">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\threadpool\threadpool.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\backtrace.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\base64-decode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\daemonize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\dir.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\diskcache.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\fsmount.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\getifaddrs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\ieeehalfprecision.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\jpeg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lecp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lejp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lhp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lhp-ss.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lws-ring.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lws-struct-lejp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\lws-struct-sqlite.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\minilex.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\peer-limits.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\prng.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\romfs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\sha-1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\upng.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\upng-gzip.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-fds.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-misc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-pipe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-plugins.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-resolv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-service.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-sockets.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plat\windows\windows-spawn.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\cgi\cgi-server.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\cgi\ops-cgi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\dbus\dbus.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\h1\ops-h1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\h2\hpack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\h2\http2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\h2\minihuf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\h2\ops-h2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\client\client-http.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\compression\brotli\brotli.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\compression\deflate\deflate.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\compression\stream.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\server\access-log.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\server\fops-zip.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\server\lejp-conf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\server\lws-spa.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\server\ranges.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\server\rewrite.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\server\server.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\cookie.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\date.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\header.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\http_minilex.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\http\parsers.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\listen\ops-listen.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\mqtt\client\client-mqtt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\mqtt\client\client-mqtt-handshake.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\mqtt\mqtt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\mqtt\ops-mqtt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\mqtt\primitives.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\netlink\ops-netlink.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\pipe\ops-pipe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\raw-file\ops-raw-file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\raw-proxy\ops-raw-proxy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\raw-skt\ops-raw-skt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\ws\ext\extension.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\ws\ext\extension-permessage-deflate.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\ws\client-parser-ws.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\ws\client-ws.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\ws\ops-ws.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="roles\ws\server-ws.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\cpp\lss.cxx">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\cpp\lssFile.cxx">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\cpp\lssMsg.cxx">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\plugins\ssp-h1url\h1url.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\protocols\ss-h1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\protocols\ss-h2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\protocols\ss-mqtt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\protocols\ss-raw.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\protocols\ss-ws.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\serialized\client\sspc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\serialized\client\sspc-deserialize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\serialized\client\sspc-transport.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\serialized\client\sspc-transport-wsi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\serialized\proxy\proxy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\serialized\proxy\proxy-deserialize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\serialized\proxy\proxy-transport.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\serialized\proxy\proxy-transport-wsi.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\system\auth-api.amazon.com\auth.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\system\auth-sigv4\sign.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\system\captive-portal-detect\captive-portal-detect.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\system\fetch-policy\fetch-policy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\policy-common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\policy-json.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="secure-streams\secure-streams.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\async-dns\async-dns.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\async-dns\async-dns-parse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\dhcpclient\dhcpc4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\dhcpclient\dhcpclient.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\fault-injection\fault-injection.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\metrics\metrics.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\ntpclient\ntpclient.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\ota\ota.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\smd\smd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="system\system.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

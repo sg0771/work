@@ -5,10 +5,11 @@
 #include "stdafx.h"
 #include "resource.h"
 #include "MainDlg.h"
-#include "MediaInfoDLL.h"
+
 
 LRESULT CMainDlg::OnDropFiles(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 {
+	DoDataExchange(TRUE);
 	HDROP hDrop = reinterpret_cast<HDROP>(wParam); // 拖拽句柄
 	TCHAR szFilePath[MAX_PATH] = { 0 };              // 存储文件路径（支持长路径）
 
@@ -30,7 +31,8 @@ LRESULT CMainDlg::OnDropFiles(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHa
 	::DragFinish(hDrop);
 
 	m_strInput = szFilePath;
-	Handle();
+
+	m_bMI ? HandleMI() : HandleWX();
 	return 0;
 }
 
@@ -65,7 +67,8 @@ CString GetFileNameWithoutExtension(const CString& strFullPath) {
 		return strFileName.Left(nLastDot);
 	}
 }
-void CMainDlg::Handle() {
+
+void CMainDlg::HandleMI() {
 	std::wstring s_Name = GetFileNameWithoutExtension(m_strInput);//无目录，无后缀的文件名
 
 	m_strName = s_Name.c_str();
@@ -73,20 +76,45 @@ void CMainDlg::Handle() {
 
 	MediaInfoDLL::MediaInfo MI;
 	MI.Open((LPCTSTR)m_strInput);
-	CString width, height, count, rate, duration;
-	width = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"Width").c_str();
-	height = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"Height").c_str();
-	count = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"FrameCount").c_str();
-	rate = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"FrameRate").c_str();
-	duration = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"Duration").c_str();
 
-	m_strMsg = MI.Inform().c_str();
+	CString strDuration = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"Duration").c_str();
+	CString strWidth = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"Width").c_str();
+	CString strHeight = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"Height").c_str();
+	CString strVB = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"BitRate").c_str();
+	CString strFps = MI.Get(MediaInfoDLL::stream_t::Stream_Video, 0, L"FrameRate").c_str();
 
+	CString strInfo = MI.Inform().c_str();
+	m_strMsg.Format(L"%ws\r\nduration=%ws [%wsx%ws,%ws fps %ws]\r\n\r\n%ws", 
+		m_strInput, strDuration, strWidth, strHeight, strFps, strVB, strInfo);
 	MI.Close();
-
 	DoDataExchange(FALSE);
-
 }
+
+void CMainDlg::HandleWX() {
+	std::wstring s_Name = GetFileNameWithoutExtension(m_strInput);//无目录，无后缀的文件名
+
+	m_strName = s_Name.c_str();
+	m_strName += L".txt";
+
+
+	int err = 0;
+	void* pMI = WXMediaInfoCreateFast(m_strInput, &err);
+	if (pMI) {
+		int64_t time = WXMediaInfoGetFileDuration(pMI);
+
+		int width  = WXMediaInfoGetVideoWidth(pMI);
+		int height = WXMediaInfoGetVideoHeight(pMI);
+		double  fps =  WXMediaInfoGetVideoAvgFps(pMI);
+		int64_t vb = WXMediaInfoGetVideoBitrate(pMI);
+		m_strMsg.Format(L"%ws\r\nduration=%lld\r\n[%dx%d %0.2ffps%lld]\r\n",
+			m_strInput, time, width,height, fps, vb);
+		WXMediaInfoDestroy(pMI);
+		DoDataExchange(FALSE);
+	}
+	DoDataExchange(FALSE);
+}
+
+
 LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 {
 	// center the dialog on the screen
@@ -133,10 +161,11 @@ LRESULT CMainDlg::OnSize(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BO
 
 LRESULT CMainDlg::OnBnClickedInput(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
 {
+	DoDataExchange (TRUE);
 	CFileDialog dlg(TRUE);
 	if (IDOK == dlg.DoModal()) {
 		m_strInput = dlg.m_ofn.lpstrFile;
-		Handle();
+		m_bMI ? HandleMI() : HandleWX();
 	}
 	return 0;
 }

@@ -1,0 +1,790 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\common">
+      <UniqueIdentifier>{9d9ead62-44f8-48a6-a148-83c1a29bea14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common\inc">
+      <UniqueIdentifier>{b54f45d3-073b-4d1d-b348-fb9db8eae6a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\processing">
+      <UniqueIdentifier>{69224d6d-0ff8-400b-aa81-a96b9cb4edf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\processing\inc">
+      <UniqueIdentifier>{5e68157c-7483-4767-847e-5c75bd4dfd23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\decoder">
+      <UniqueIdentifier>{6eb69a6b-1b9d-484e-bae3-3be558a3a7e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\encoder">
+      <UniqueIdentifier>{c8aad535-e36f-44eb-b862-1e285b6a0687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\decoder\inc">
+      <UniqueIdentifier>{f5f4478b-b56d-4f6d-93df-10ee2c6020f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\encoder\inc">
+      <UniqueIdentifier>{15bb789f-50f6-4172-8208-bea52589e45a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common\asm">
+      <UniqueIdentifier>{3b91c4d9-297f-4184-9ff4-f21ceafea9c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\processing\asm">
+      <UniqueIdentifier>{f50aaa0d-abdc-4d97-ba06-304441b0f5ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\decoder\asm">
+      <UniqueIdentifier>{8f75638c-66d6-4e63-a68b-bacce08653f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\encoder\asm">
+      <UniqueIdentifier>{90c9b370-7ae4-44b7-a197-32d831008458}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DllEntry.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="welsDecoderExt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="welsEncoderExt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common_tables.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\copy_mb.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\cpu.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\crt_util_safe_x.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\deblocking_common.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\expand_pic.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\intra_pred_common.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\mc.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\memory_align.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\sad_common.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\utils.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\welsCodecTrace.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WelsTaskThread.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WelsThread.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WelsThreadLib.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WelsThreadPool.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\AdaptiveQuantization.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\BackgroundDetection.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\ComplexityAnalysis.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\denoise.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\denoise_filter.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\downsample.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\downsamplefuncs.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\imagerotate.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\imagerotatefuncs.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\memory.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\SceneChangeDetection.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\ScrollDetection.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\ScrollDetectionFuncs.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\vaacalcfuncs.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\vaacalculation.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\WelsFrameWork.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="processing\WelsFrameWorkEx.cpp">
+      <Filter>源文件\processing</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\au_parser.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\bit_stream.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\cabac_decoder.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\deblocking.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\decode_mb_aux.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\decode_slice.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\decoder.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\decoder_core.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\decoder_data_tables.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\error_concealment.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\fmo.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\get_intra_predictor.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\manage_dec_ref.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\memmgr_nal_unit.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\mv_pred.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\parse_mb_syn_cabac.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\parse_mb_syn_cavlc.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\pic_queue.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\rec_mb.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="decoder\wels_decoder_thread.cpp">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\wels_task_management.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\wels_task_encoder.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\wels_task_base.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\wels_preprocess.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\svc_set_mb_syn_cavlc.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\svc_set_mb_syn_cabac.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\svc_motion_estimate.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\svc_mode_decision.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\svc_encode_slice.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\svc_encode_mb.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\svc_enc_slice_segment.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\svc_base_layer_md.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\slice_multi_threading.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\set_mb_syn_cavlc.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\set_mb_syn_cabac.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\sample.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\ref_list_mgr_svc.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\ratectl.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\picture_handle.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\paraset_strategy.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\nal_encap.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\md.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder_ext.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder_data_tables.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encode_mb_aux.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\au_set.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encdoer_deblocking.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder_decode_mb_aux.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder_get_intra_predictorencoder.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="encoder\encoder_mv_pred.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="welsDecoderExt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="welsEncoderExt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_api.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_app_def.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_def.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codec_ver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IWelsVP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\asmdefs_mmi.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\copy_mb.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cpu.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cpu_core.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\crt_util_safe_x.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\deblocking_common.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\expand_pic.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\golomb_common.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\intra_pred_common.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ls_defines.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\macros.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\mc.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\measure_time.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\memory_align.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\sad_common.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\typedefs.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\utils.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\version.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\wels_common_defs.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\wels_const_common.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\welsCodecTrace.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WelsList.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WelsLock.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WelsTask.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WelsTaskThread.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WelsThread.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WelsThreadLib.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WelsThreadPool.h">
+      <Filter>源文件\common\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\AdaptiveQuantization.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\BackgroundDetection.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\common.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\ComplexityAnalysis.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\denoise.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\downsample.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\imagerotate.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\memory.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\resource.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\SceneChangeDetection.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\ScrollDetection.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\ScrollDetectionFuncs.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\typedef.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\util.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\vaacalculation.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="processing\WelsFrameWork.h">
+      <Filter>源文件\processing\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\au_parser.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\bit_stream.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\cabac_decoder.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\deblocking.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\dec_frame.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\dec_golomb.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\decode_mb_aux.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\decode_slice.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\decoder.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\decoder_context.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\decoder_core.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\error_code.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\error_concealment.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\fmo.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\get_intra_predictor.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\manage_dec_ref.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\mb_cache.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\memmgr_nal_unit.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\mv_pred.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\nal_prefix.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\nalu.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\parameter_sets.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\parse_mb_syn_cabac.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\parse_mb_syn_cavlc.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\pic_queue.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\picture.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\rec_mb.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\slice.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\vlc_decoder.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\wels_common_basis.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\wels_const.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="decoder\wels_decoder_thread.h">
+      <Filter>源文件\decoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\wels_transpose_matrix.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\wels_task_management.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\wels_task_encoder.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\wels_task_base.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\wels_preprocess.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\wels_func_ptr_def.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\wels_const.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\wels_common_basis.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\vlc_encoder.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_set_mb_syn_cavlc.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_set_mb_syn.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_motion_estimate.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_mode_decision.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_encode_slice.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_encode_mb.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_enc_slice_segment.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_enc_macroblock.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_enc_golomb.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_enc_frame.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\svc_base_layer_md.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\stat.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\slice_multi_threading.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\slice.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\set_mb_syn_cavlc.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\set_mb_syn_cabac.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\sample.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\ref_list_mgr_svc.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\rc.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\picture_handle.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\picture.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\paraset_strategy.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\parameter_sets.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\param_svc.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\nal_encap.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\mv_pred.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\mt_defs.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\md.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\mb_cache.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\get_intra_predictor.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\extern.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\encoder_context.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\encoder.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\encode_mb_aux.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\dq_map.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\decode_mb_aux.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\deblocking.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\au_set.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="encoder\as264_common.h">
+      <Filter>源文件\encoder\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\x86\asm_inc.asm.h">
+      <Filter>源文件\common\asm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="openh264.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <NASM Include="common\x86\cpuid.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\dct.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\deblock.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\expand_picture.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\intra_pred_com.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\mb_copy.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\mc_chroma.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\mc_luma.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\satd_sad.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="common\x86\vaa.asm">
+      <Filter>源文件\common\asm</Filter>
+    </NASM>
+    <NASM Include="processing\x86\denoisefilter.asm">
+      <Filter>源文件\processing\asm</Filter>
+    </NASM>
+    <NASM Include="processing\x86\downsample_bilinear.asm">
+      <Filter>源文件\processing\asm</Filter>
+    </NASM>
+    <NASM Include="processing\x86\processing_vaa.asm">
+      <Filter>源文件\processing\asm</Filter>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_score.asm">
+      <Filter>源文件\encoder\asm</Filter>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_sample_sc.asm">
+      <Filter>源文件\encoder\asm</Filter>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_quant.asm">
+      <Filter>源文件\encoder\asm</Filter>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_memzero.asm">
+      <Filter>源文件\encoder\asm</Filter>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_matrix_transpose.asm">
+      <Filter>源文件\encoder\asm</Filter>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_intra_pred.asm">
+      <Filter>源文件\encoder\asm</Filter>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_dct.asm">
+      <Filter>源文件\encoder\asm</Filter>
+    </NASM>
+    <NASM Include="encoder\x86\encoder_coeff.asm">
+      <Filter>源文件\encoder\asm</Filter>
+    </NASM>
+    <NASM Include="decoder\x86\decoder_dct.asm">
+      <Filter>源文件\decoder\asm</Filter>
+    </NASM>
+    <NASM Include="decoder\x86\decoder_intra_pred.asm">
+      <Filter>源文件\decoder\asm</Filter>
+    </NASM>
+  </ItemGroup>
+</Project>
