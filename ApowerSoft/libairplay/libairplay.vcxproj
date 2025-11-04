@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2d33aed9-fc14-44d1-9131-07dd0d2b0d38}</ProjectGuid>
+    <RootNamespace>libairplay</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;LIBAIRPLAY_EXPORTS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)libs/openssl-1.1.1k/include;$(SolutionDir)libs/libffmpeg;$(SolutionDir)image/sdl2;$(SolutionDir)libs;$(SolutionDir)image;$(SolutionDir)\ZLMediaKit\libcurl\include;$(SolutionDir)\ApowerSoft\WXMedia\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>-wd4996 -wd4146 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4789;4996</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;LIBAIRPLAY_EXPORTS;_WINSOCK_DEPRECATED_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)libs/openssl-1.1.1k/include;$(SolutionDir)libs/libffmpeg;$(SolutionDir)image/sdl2;$(SolutionDir)libs;$(SolutionDir)image;$(SolutionDir)\ZLMediaKit\libcurl\include;$(SolutionDir)\ApowerSoft\WXMedia\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>-wd4996 -wd4146 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4789;4996</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;LIBAIRPLAY_EXPORTS;_WINSOCK_DEPRECATED_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)libs/openssl-1.1.1k/include;$(SolutionDir)libs/libffmpeg;$(SolutionDir)image/sdl2;$(SolutionDir)libs;$(SolutionDir)image;$(SolutionDir)\ZLMediaKit\libcurl\include;$(SolutionDir)\ApowerSoft\WXMedia\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>-wd4996 -wd4146 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4789;4996</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;LIBAIRPLAY_EXPORTS;_WINSOCK_DEPRECATED_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)libs/openssl-1.1.1k/include;$(SolutionDir)libs/libffmpeg;$(SolutionDir)image/sdl2;$(SolutionDir)libs;$(SolutionDir)image;$(SolutionDir)\ZLMediaKit\libcurl\include;$(SolutionDir)\ApowerSoft\WXMedia\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>-wd4996 -wd4146 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4789;4996</DisableSpecificWarnings>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Network\dnssd.h" />
+    <ClInclude Include="utils\CacheStrategy.h" />
+    <ClInclude Include="utils\CircularCache.h" />
+    <ClInclude Include="utils\CurlFile.h" />
+    <ClInclude Include="utils\DllLibCurl.h" />
+    <ClInclude Include="utils\File.h" />
+    <ClInclude Include="utils\FileCache.h" />
+    <ClInclude Include="utils\FileFactory.h" />
+    <ClInclude Include="utils\FileItem.h" />
+    <ClInclude Include="utils\HTTPFile.h" />
+    <ClInclude Include="utils\IDirectory.h" />
+    <ClInclude Include="utils\IFile.h" />
+    <ClInclude Include="utils\IFileDirectory.h" />
+    <ClInclude Include="utils\IFileTypes.h" />
+    <ClInclude Include="utils\OverrideFile.h" />
+    <ClInclude Include="utils\SpecialProtocol.h" />
+    <ClInclude Include="utils\SpecialProtocolFile.h" />
+    <ClInclude Include="utils\StackDirectory.h" />
+    <ClInclude Include="utils\Win32File.h" />
+    <ClInclude Include="Network\httpd.h" />
+    <ClInclude Include="Network\AirPlayServer.h" />
+    <ClInclude Include="Network\AirTunesServer.h" />
+    <ClInclude Include="Network\IAnnouncer.h" />
+    <ClInclude Include="Network\mycommon.h" />
+    <ClInclude Include="Network\network.h" />
+    <ClInclude Include="Network\NetworkServices.h" />
+    <ClInclude Include="Network\NetworkWin32.h" />
+    <ClInclude Include="plist\Array.h" />
+    <ClInclude Include="plist\base64.h" />
+    <ClInclude Include="plist\Boolean.h" />
+    <ClInclude Include="plist\bytearray.h" />
+    <ClInclude Include="plist\Data.h" />
+    <ClInclude Include="plist\Date.h" />
+    <ClInclude Include="plist\Dictionary.h" />
+    <ClInclude Include="plist\hashtable.h" />
+    <ClInclude Include="plist\Integer.h" />
+    <ClInclude Include="plist\Key.h" />
+    <ClInclude Include="plist\libcnary_node.h" />
+    <ClInclude Include="plist\libcnary_node_list.h" />
+    <ClInclude Include="plist\libcnary_object.h" />
+    <ClInclude Include="plist\Node.h" />
+    <ClInclude Include="plist\plist++.h" />
+    <ClInclude Include="plist\plist.h" />
+    <ClInclude Include="plist\plist_impl.h" />
+    <ClInclude Include="plist\ptrarray.h" />
+    <ClInclude Include="plist\Real.h" />
+    <ClInclude Include="plist\strbuf.h" />
+    <ClInclude Include="plist\String.h" />
+    <ClInclude Include="plist\Structure.h" />
+    <ClInclude Include="plist\time64.h" />
+    <ClInclude Include="plist\time64_limits.h" />
+    <ClInclude Include="plist\Uid.h" />
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="Network\libSetting.h" />
+    <ClInclude Include="Network\airplay.h" />
+    <ClInclude Include="Network\raop.h" />
+    <ClInclude Include="utils\utils.h" />
+    <ClInclude Include="utils\auto_buffer.h" />
+    <ClInclude Include="utils\BitstreamStats.h" />
+    <ClInclude Include="utils\HttpHeader.h" />
+    <ClInclude Include="utils\HttpParser.h" />
+    <ClInclude Include="utils\md5.h" />
+    <ClInclude Include="utils\RingBuffer.h" />
+    <ClInclude Include="utils\Stopwatch.h" />
+    <ClInclude Include="utils\StringUtils.h" />
+    <ClInclude Include="utils\Thread.h" />
+    <ClInclude Include="utils\URIUtils.h" />
+    <ClInclude Include="utils\URL.h" />
+    <ClInclude Include="utils\UrlOptions.h" />
+    <ClInclude Include="utils\Variant.h" />
+    <ClInclude Include="utils\WIN32Utils.h" />
+    <ClInclude Include="utils\XBDateTime.h" />
+    <ClInclude Include="WXAirPlayAPI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Network\dnssd.cpp" />
+    <ClCompile Include="utils\CacheStrategy.cpp" />
+    <ClCompile Include="utils\CircularCache.cpp" />
+    <ClCompile Include="utils\CurlFile.cpp" />
+    <ClCompile Include="utils\DllLibCurl.cpp" />
+    <ClCompile Include="utils\File.cpp" />
+    <ClCompile Include="utils\FileCache.cpp" />
+    <ClCompile Include="utils\FileFactory.cpp" />
+    <ClCompile Include="utils\HTTPFile.cpp" />
+    <ClCompile Include="utils\IDirectory.cpp" />
+    <ClCompile Include="utils\IFile.cpp" />
+    <ClCompile Include="utils\OverrideFile.cpp" />
+    <ClCompile Include="utils\SpecialProtocol.cpp" />
+    <ClCompile Include="utils\SpecialProtocolFile.cpp" />
+    <ClCompile Include="utils\StackDirectory.cpp" />
+    <ClCompile Include="utils\Win32File.cpp" />
+    <ClCompile Include="Network\airplay.cpp" />
+    <ClCompile Include="Network\httpd.c" />
+    <ClCompile Include="Network\AirPlayServer.cpp" />
+    <ClCompile Include="Network\AirTunesServer.cpp" />
+    <ClCompile Include="Network\libshairplay_roap.cpp" />
+    <ClCompile Include="Network\mycommon.cpp" />
+    <ClCompile Include="Network\Network.cpp" />
+    <ClCompile Include="Network\NetworkServices.cpp" />
+    <ClCompile Include="Network\NetworkWin32.cpp" />
+    <ClCompile Include="Network\WXAirPlayAPI.cpp" />
+    <ClCompile Include="plist\Array.cpp" />
+    <ClCompile Include="plist\Boolean.cpp" />
+    <ClCompile Include="plist\bplist.cpp" />
+    <ClCompile Include="plist\bytearray.cpp" />
+    <ClCompile Include="plist\Data.cpp" />
+    <ClCompile Include="plist\Date.cpp" />
+    <ClCompile Include="plist\Dictionary.cpp" />
+    <ClCompile Include="plist\hashtable.cpp" />
+    <ClCompile Include="plist\Integer.cpp" />
+    <ClCompile Include="plist\Key.cpp" />
+    <ClCompile Include="plist\libcnary_cnary.cpp" />
+    <ClCompile Include="plist\libcnary_node.cpp" />
+    <ClCompile Include="plist\libcnary_node_list.cpp" />
+    <ClCompile Include="plist\Node.cpp" />
+    <ClCompile Include="plist\plist.cpp" />
+    <ClCompile Include="plist\plist_base64.cpp" />
+    <ClCompile Include="plist\ptrarray.cpp" />
+    <ClCompile Include="plist\Real.cpp" />
+    <ClCompile Include="plist\String.cpp" />
+    <ClCompile Include="plist\Structure.cpp" />
+    <ClCompile Include="plist\time64.cpp" />
+    <ClCompile Include="plist\Uid.cpp" />
+    <ClCompile Include="plist\xplist.cpp" />
+    <ClCompile Include="utils\auto_buffer.cpp" />
+    <ClCompile Include="utils\BitstreamStats.cpp" />
+    <ClCompile Include="utils\HttpHeader.cpp" />
+    <ClCompile Include="utils\HttpParser.cpp" />
+    <ClCompile Include="utils\md5.cpp" />
+    <ClCompile Include="utils\RingBuffer.cpp" />
+    <ClCompile Include="utils\Stopwatch.cpp" />
+    <ClCompile Include="utils\StringUtils.cpp" />
+    <ClCompile Include="utils\Thread.cpp" />
+    <ClCompile Include="utils\URIUtils.cpp" />
+    <ClCompile Include="utils\URL.cpp" />
+    <ClCompile Include="utils\UrlOptions.cpp" />
+    <ClCompile Include="utils\Variant.cpp" />
+    <ClCompile Include="utils\WIN32Utils.cpp" />
+    <ClCompile Include="utils\XBDateTime.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\libairplay.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

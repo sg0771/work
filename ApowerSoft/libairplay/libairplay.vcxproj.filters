@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\network">
+      <UniqueIdentifier>{112fc802-d522-4a90-9e6f-9cad04d7f008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\utils">
+      <UniqueIdentifier>{894ce6ec-7603-4d6d-badc-71ac7823fef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\plist">
+      <UniqueIdentifier>{6967fc2c-3439-41c7-95c3-29fecd006d2e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Network\AirPlayServer.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\AirTunesServer.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\IAnnouncer.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\mycommon.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\network.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\NetworkServices.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\NetworkWin32.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\auto_buffer.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\BitstreamStats.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\HttpHeader.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\HttpParser.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\md5.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\RingBuffer.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Stopwatch.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\StringUtils.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Thread.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\URIUtils.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\URL.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\UrlOptions.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Variant.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\WIN32Utils.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\XBDateTime.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Array.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\base64.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Boolean.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\bytearray.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Data.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Date.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Dictionary.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\hashtable.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Integer.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Key.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\libcnary_node.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\libcnary_node_list.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\libcnary_object.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Node.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\plist.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\plist_impl.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\plist++.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\ptrarray.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Real.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\strbuf.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\String.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Structure.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\time64.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\time64_limits.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="plist\Uid.h">
+      <Filter>源文件\plist</Filter>
+    </ClInclude>
+    <ClInclude Include="res\resource.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WXAirPlayAPI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\raop.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\dnssd.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\airplay.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\httpd.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\utils.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CacheStrategy.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CircularCache.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CurlFile.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\DllLibCurl.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\File.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\FileCache.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\FileFactory.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\FileItem.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\HTTPFile.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\IDirectory.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\IFile.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\IFileDirectory.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\IFileTypes.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\OverrideFile.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\SpecialProtocol.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\SpecialProtocolFile.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\StackDirectory.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Win32File.h">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\libSetting.h">
+      <Filter>源文件\network</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Network\AirPlayServer.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\AirTunesServer.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\libshairplay_roap.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\mycommon.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Network.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\NetworkServices.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\NetworkWin32.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\WXAirPlayAPI.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\auto_buffer.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\BitstreamStats.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\HttpHeader.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\HttpParser.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\md5.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\RingBuffer.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Stopwatch.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\StringUtils.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Thread.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\URIUtils.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\URL.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\UrlOptions.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Variant.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\WIN32Utils.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\XBDateTime.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Array.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Boolean.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\bplist.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\bytearray.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Data.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Date.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Dictionary.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\hashtable.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Integer.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Key.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\libcnary_cnary.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\libcnary_node.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\libcnary_node_list.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Node.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\plist.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\plist_base64.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\ptrarray.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Real.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\String.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Structure.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\time64.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\Uid.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="plist\xplist.cpp">
+      <Filter>源文件\plist</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\dnssd.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\airplay.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\httpd.c">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CacheStrategy.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CircularCache.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CurlFile.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\DllLibCurl.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\File.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\FileCache.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\FileFactory.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\HTTPFile.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\IDirectory.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\IFile.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\OverrideFile.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\SpecialProtocol.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\SpecialProtocolFile.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\StackDirectory.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Win32File.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\libairplay.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
