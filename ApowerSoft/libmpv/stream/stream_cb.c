@@ -1,4 +1,4 @@
-﻿#include "common/mpv-config.h"
+﻿#include "mpv-config.h"
 
 #include <stdio.h>
 #include <sys/types.h>
@@ -16,7 +16,7 @@
 #include "options/m_option.h"
 #include "options/path.h"
 #include "player/client.h"
-#include "libmpv.h"
+#include "libmpv/stream_cb.h"
 #include "misc/thread_tools.h"
 
 struct priv {

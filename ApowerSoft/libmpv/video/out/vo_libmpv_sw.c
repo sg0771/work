@@ -1,5 +1,6 @@
-﻿#include "common/mpv-config.h"
-#include "video_out_libmpv.h"
+﻿#include "mpv-config.h"
+#include "libmpv/render_gl.h"
+#include "libmpv.h"
 #include "sub/osd.h"
 #include "video/sws_utils.h"
 

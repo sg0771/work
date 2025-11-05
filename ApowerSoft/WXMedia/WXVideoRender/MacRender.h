@@ -10,7 +10,7 @@
 #define Header_h
 
 #include "WXMediaCpp.h"
-#include <libyuv.h>
+#include <libyuv/libyuv.h>
 #import  <Cocoa/Cocoa.h>
 #import  <OpenGL/OpenGL.h>
 #import  <OpenGL/gl.h>

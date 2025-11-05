@@ -23,7 +23,7 @@
 #include <libavutil/mem.h>
 #include <libavutil/opt.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #if HAVE_JPEG
 #include <setjmp.h>
@@ -33,7 +33,7 @@
 #include "osdep/io.h"
 
 #include "image_writer.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "video/img_format.h"
 #include "video/mp_image.h"
 #include "video/fmt-conversion.h"

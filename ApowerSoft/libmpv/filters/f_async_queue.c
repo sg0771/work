@@ -1,5 +1,5 @@
 #include <limits.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "audio/aframe.h"
 #include "common/common.h"

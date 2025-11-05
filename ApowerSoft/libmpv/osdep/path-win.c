@@ -18,7 +18,7 @@
 #include <windows.h>
 #include <shlobj.h>
 #include <knownfolders.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "osdep/path.h"
 #include "osdep/io.h"

@@ -19,11 +19,11 @@
 #include <string.h>
 #include <time.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "osdep/io.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "screenshot.h"
 #include "core.h"
 #include "command.h"

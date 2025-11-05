@@ -61,7 +61,7 @@ void ML_Shader::SetIntArray(const std::string& name, int* value, int count)
 	DXCall(constanttable->SetIntArray(Device, GetUniformLocation(name), value, count));
 }
 
-void ML_Shader::SetFloat4(const std::string& name, WX_D3DXVECTOR4* value, int count)
+void ML_Shader::SetFloat4(const std::string& name, RectF* value, int count)
 {
 	HRESULT hr;
 	DXCall(constanttable->SetVectorArray(Device, GetUniformLocation(name), (D3DXVECTOR4*)value, count));

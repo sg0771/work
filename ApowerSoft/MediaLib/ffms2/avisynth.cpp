@@ -97,9 +97,9 @@ FFMS_API(FFMS_Index*)FFMS_ProcessIndex(const char* Source, int* Track){
 
 	ErrorInfo E;
 	FFMS_Index* pIndex = nullptr;
-	std::string CacheFile;  // ��cache�ļ���ȡIndex
+	std::string CacheFile;
 	char* base64str = getmd5str((char*)Source);
-	CacheFile = Env->GetTimelineInfo()->m_IndexDir;
+	CacheFile = Env->GetTimelineInfo()->m_IndexDir;//获取Index目录
 	if (strlen(base64str) > 50) {
 		base64str += (strlen(base64str) - 50);
 	}

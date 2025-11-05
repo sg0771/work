@@ -2,7 +2,7 @@
 
 #define SDL_MAIN_HANDLED
 #include <SDL2/SDL.h>
-#include "MediaLibAPI.h"
+#include "MediaLibAPIExt.h"
 #include <ffms2/ffms.h>
 #include <libavcodec/avcodec.h>
 #include <libavcodec/avfft.h>
@@ -13,6 +13,11 @@
 
 #include  <WXMediaDefines.h>
 
+//渲染视频帧
+MEDIALIB_API void* RenderCreate(HWND hwnd);
+MEDIALIB_API void RenderDestroy(void* obj);
+MEDIALIB_API void RenderDraw(void* obj, struct AVFrame* frame);
+MEDIALIB_API void RenderDrawData(void* p, int bRGB32, int width, int height, uint8_t* buf, int pitch);
 
 #define MIN_FRAMES 1
 #define EXTERNAL_CLOCK_MIN_FRAMES 2

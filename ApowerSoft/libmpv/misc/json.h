@@ -19,7 +19,7 @@
 #define MP_JSON_H
 
 // We reuse mpv_node.
-#include "libmpv.h"
+#include "libmpv/client.h"
 
 int json_parse(void *ta_parent, struct mpv_node *dst, char **src, int max_depth);
 void json_skip_whitespace(char **src);

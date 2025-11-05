@@ -20,11 +20,11 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <math.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <assert.h>
 #include <unistd.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "osdep/io.h"
 #include "osdep/subprocess.h"
@@ -39,7 +39,7 @@
 #include "misc/bstr.h"
 #include "core.h"
 #include "client.h"
-#include "libmpv.h"
+#include "libmpv/client.h"
 
 extern const struct mp_scripting mp_scripting_lua;
 extern const struct mp_scripting mp_scripting_cplugin;

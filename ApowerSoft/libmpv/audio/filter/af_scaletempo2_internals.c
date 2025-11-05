@@ -4,7 +4,7 @@
 #include "audio/chmap.h"
 #include "audio/filter/af_scaletempo2_internals.h"
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 // Algorithm overview (from chromium):
 // Waveform Similarity Overlap-and-add (WSOLA).

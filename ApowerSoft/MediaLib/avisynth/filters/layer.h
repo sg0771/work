@@ -1,4 +1,4 @@
-// Avisynth v2.5.  Copyright 2002 Ben Rudiak-Gould et al.
+﻿// Avisynth v2.5.  Copyright 2002 Ben Rudiak-Gould et al.
 // http://www.avisynth.org
 
 // This program is free software; you can redistribute it and/or modify
@@ -44,6 +44,9 @@
 
 #include "avisynth/avisynth_stdafx.h"
 #include <vector>
+#include <libyuv/libyuv.h>
+/********************************************************************
+********************************************************************/
 
 class Mask : public IClip 
 /**

@@ -15,18 +15,18 @@
  * License along with mpv.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <stddef.h>
 #include <stdbool.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <assert.h>
 
 #include <libavutil/buffer.h>
 #include <libavutil/hwcontext.h>
 #include <libavutil/mem.h>
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
 #include "common/common.h"
 

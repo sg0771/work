@@ -18,7 +18,7 @@
 #include <float.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <assert.h>
 #include <stdbool.h>
 
@@ -29,9 +29,9 @@
 #include <libavutil/intreadwrite.h>
 #include <libavutil/pixdesc.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "common/global.h"
 #include "common/msg.h"
 #include "options/m_config.h"

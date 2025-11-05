@@ -23,7 +23,7 @@
 #include "codec_tags.h"
 #include "stheader.h"
 #include "common/av_common.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 static const char *lookup_tag(int type, uint32_t tag)
 {

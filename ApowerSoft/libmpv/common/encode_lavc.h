@@ -22,7 +22,7 @@
 #ifndef MPLAYER_ENCODE_LAVC_H
 #define MPLAYER_ENCODE_LAVC_H
 
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>

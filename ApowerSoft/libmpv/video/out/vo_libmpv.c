@@ -4,12 +4,12 @@
 #include <math.h>
 #include <stdbool.h>
 #include <limits.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <assert.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "common/common.h"
 #include "misc/bstr.h"
 #include "misc/dispatch.h"
@@ -27,7 +27,7 @@
 #include "common/global.h"
 #include "player/client.h"
 
-#include "video_out_libmpv.h"
+#include "libmpv.h"
 
 /*
  * mpv_render_context is managed by the host application - the host application

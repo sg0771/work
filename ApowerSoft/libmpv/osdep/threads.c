@@ -17,10 +17,10 @@
 
 #include <stdio.h>
 #include <errno.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "common/common.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "threads.h"
 #include "timer.h"
 

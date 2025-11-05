@@ -22,7 +22,7 @@
 #include <libavutil/mathematics.h>
 #include <libswresample/swresample.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "audio/aframe.h"
 #include "audio/fmt-conversion.h"

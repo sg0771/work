@@ -16,7 +16,7 @@
  */
 
 #include <limits.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <assert.h>
 
 #include <libavutil/mem.h>
@@ -29,9 +29,9 @@
 #include <libavcodec/avcodec.h>
 #include <libavutil/mastering_display_metadata.h>
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "common/av_common.h"
 #include "common/common.h"
 #include "hwdec.h"

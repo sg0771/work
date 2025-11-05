@@ -24,12 +24,12 @@
 
 #include <libswscale/swscale.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "misc/bstr.h"
 #include "osdep/io.h"
 #include "options/m_config.h"
 #include "options/path.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "common/common.h"
 #include "common/msg.h"
 #include "video/out/vo.h"

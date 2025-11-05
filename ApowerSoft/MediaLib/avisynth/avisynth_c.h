@@ -1,7 +1,7 @@
 #ifndef __AVISYNTH_C_H_
 #define __AVISYNTH_C_H_
 
-#include <MediaLibAPI.h>
+#include <MediaLibAPIExt.h>
 
 #define FRAME_ALIGN 16
 

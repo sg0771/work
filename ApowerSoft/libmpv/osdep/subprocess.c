@@ -15,9 +15,9 @@
  * License along with mpv.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <common/pthread.h>
+#include <pthread.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "common/common.h"
 #include "common/msg.h"

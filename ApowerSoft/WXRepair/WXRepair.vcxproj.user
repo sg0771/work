@@ -17,6 +17,6 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <RESOURCE_FILE>WXRepair.rc</RESOURCE_FILE>
+    <RESOURCE_FILE>wtl.rc</RESOURCE_FILE>
   </PropertyGroup>
 </Project>

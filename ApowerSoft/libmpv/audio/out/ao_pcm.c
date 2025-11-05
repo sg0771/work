@@ -19,7 +19,7 @@
  * License along with mpv.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,7 +27,7 @@
 
 #include <libavutil/common.h>
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
 #include "options/m_option.h"
 #include "audio/format.h"

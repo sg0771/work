@@ -26,9 +26,9 @@
 #include <libavutil/common.h>
 #include <libavutil/intreadwrite.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "audio/aframe.h"
 #include "audio/chmap_avchannel.h"
 #include "audio/fmt-conversion.h"

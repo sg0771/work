@@ -21,11 +21,11 @@
 #include <math.h>
 #include <assert.h>
 #include <string.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <locale.h>
 
-#include "common/mpv-config.h"
-#include "common/mpv_talloc.h"
+#include "mpv-config.h"
+#include "mpv_talloc.h"
 
 #include "misc/dispatch.h"
 #include "misc/thread_pool.h"

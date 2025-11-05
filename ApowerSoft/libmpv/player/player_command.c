@@ -24,15 +24,15 @@
 #include <assert.h>
 #include <time.h>
 #include <math.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <sys/types.h>
 
 #include <libass/ass.h>
 #include <libavutil/avstring.h>
 #include <libavutil/common.h>
 
-#include "common/mpv-config.h"
-#include "common/mpv_talloc.h"
+#include "mpv-config.h"
+#include "mpv_talloc.h"
 #include "client.h"
 #include "common/av_common.h"
 #include "common/codecs.h"

@@ -1,4 +1,4 @@
-﻿#include "common/mpv-config.h"
+﻿#include "mpv-config.h"
 
 #include "audio/aframe.h"
 #include "audio/chmap_sel.h"

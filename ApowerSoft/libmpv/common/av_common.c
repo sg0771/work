@@ -28,7 +28,7 @@
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "audio/chmap_avchannel.h"
 #include "common/common.h"

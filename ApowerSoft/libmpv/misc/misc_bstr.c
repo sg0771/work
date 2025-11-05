@@ -22,7 +22,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
 #include "common/common.h"
 #include "misc/ctype.h"

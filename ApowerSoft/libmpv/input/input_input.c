@@ -15,7 +15,7 @@
  * License along with mpv.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -34,7 +34,7 @@
 
 
 #include <fcntl.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <assert.h>
 
 #include "osdep/io.h"
@@ -49,7 +49,7 @@
 #include "options/m_config.h"
 #include "options/m_option.h"
 #include "options/path.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "options/options.h"
 #include "misc/bstr.h"
 #include "misc/node.h"

@@ -18,7 +18,7 @@
 #include <libavutil/frame.h>
 #include <libavutil/mem.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "common/common.h"
 

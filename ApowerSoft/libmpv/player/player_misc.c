@@ -20,8 +20,8 @@
 #include <errno.h>
 #include <assert.h>
 
-#include "common/mpv-config.h"
-#include "common/mpv_talloc.h"
+#include "mpv-config.h"
+#include "mpv_talloc.h"
 
 #include "osdep/io.h"
 #include "osdep/timer.h"

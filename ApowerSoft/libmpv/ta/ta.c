@@ -267,7 +267,7 @@ void ta_set_destructor(void *ptr, void (*destructor)(void *))
 
 #if TA_MEMORY_DEBUGGING
 
-#include <common/pthread.h>
+#include <pthread.h>
 
 static pthread_mutex_t ta_dbg_mutex = PTHREAD_MUTEX_INITIALIZER;
 static bool enable_leak_check; // pretty much constant

@@ -21,9 +21,9 @@
 #include <math.h>
 #include <assert.h>
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "ao.h"
 #include "internal.h"
 #include "audio/format.h"

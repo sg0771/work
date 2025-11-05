@@ -20,7 +20,7 @@
 
 #include "video/img_format.h"
 #include "fmt-conversion.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 static const struct {
     int fmt;

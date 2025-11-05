@@ -20,7 +20,7 @@
 #define MP_ATOMIC_H
 
 #include <inttypes.h>
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #if HAVE_STDATOMIC
 
@@ -61,7 +61,7 @@ typedef struct { uint64_t v;           } mp_atomic_uint64;
 #define memory_order_seq_cst 2
 #define memory_order_acq_rel 3
 
-#include <common/pthread.h>
+#include <pthread.h>
 
 extern pthread_mutex_t mp_atomic_mutex;
 

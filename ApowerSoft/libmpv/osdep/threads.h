@@ -1,7 +1,7 @@
 #ifndef MP_OSDEP_THREADS_H_
 #define MP_OSDEP_THREADS_H_
 
-#include <common/pthread.h>
+#include <pthread.h>
 #include <inttypes.h>
 
 // Helper to reduce boiler plate.

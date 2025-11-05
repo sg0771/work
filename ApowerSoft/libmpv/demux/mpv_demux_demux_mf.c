@@ -25,7 +25,7 @@
 
 #include "osdep/io.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "common/msg.h"
 #include "options/options.h"
 #include "options/m_config.h"
@@ -124,7 +124,7 @@ static mf_t *open_mf_pattern(void *talloc_ctx, struct demuxer *d, char *filename
     size_t fname_avail = strlen(filename) + 32;
     char *fname = talloc_size(mf, fname_avail);
 
-#if HAVE_GLOB
+#if HAVE_GLOB_MPV
     if (!strchr(filename, '%')) {
         strcpy(fname, filename);
         if (!strchr(filename, '*'))

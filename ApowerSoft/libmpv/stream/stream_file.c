@@ -17,7 +17,7 @@
  * License along with mpv.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <stdio.h>
 #include <sys/types.h>

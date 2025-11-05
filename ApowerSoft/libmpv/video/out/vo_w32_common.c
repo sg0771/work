@@ -17,7 +17,7 @@
 
 #include <stdio.h>
 #include <limits.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <assert.h>
 #include <windows.h>
 #include <windowsx.h>
@@ -45,7 +45,7 @@
 #include "osdep/atomic.h"
 #include "misc/dispatch.h"
 #include "misc/rendezvous.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
 EXTERN_C IMAGE_DOS_HEADER __ImageBase;
 #define HINST_THISCOMPONENT ((HINSTANCE)&__ImageBase)

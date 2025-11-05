@@ -25,7 +25,7 @@
 #include <errno.h>
 #include <assert.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <libavformat/avformat.h>
 #include <libavformat/avio.h>

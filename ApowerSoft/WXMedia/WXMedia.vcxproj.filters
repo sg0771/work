@@ -894,16 +894,31 @@
     <ClInclude Include="Lav\VSFilter\XSUBSubtitle.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="WXMediaCpp.h">
+    <ClInclude Include="..\..\libs\cblas.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\libs\ff_stdatomic.h">
+    <ClInclude Include="..\..\libs\f77blas.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\FfmpegIncludes.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\json.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\lapack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\lapacke.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\lapacke_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\lapacke_mangling.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\lapacke_utils.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\libimagequant.h">
@@ -913,6 +928,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\librnnoise.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\MediaInfoDLL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\openblas_config.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\SoundTouch.h">
@@ -925,6 +946,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\WXMedia.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\WXMediaCpp.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\WXMediaDefines.h">

@@ -1,4 +1,4 @@
-// ApowerSoft Corporation. All Rights Reserved.
+﻿// ApowerSoft Corporation. All Rights Reserved.
 // 显示器录制+声音录制+摄像头录制+系统声音录制+麦克风录制+鼠标点击录制+键盘按键录制
 
 #include "stdafx.h"

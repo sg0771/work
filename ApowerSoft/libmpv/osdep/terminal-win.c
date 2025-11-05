@@ -18,14 +18,14 @@
  * License along with mpv.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 #include <windows.h>
 #include <io.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <assert.h>
 #include "common/common.h"
 #include "input/keycodes.h"

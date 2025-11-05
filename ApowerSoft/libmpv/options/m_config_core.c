@@ -22,7 +22,7 @@
 #include <strings.h>
 #include <assert.h>
 #include <stdbool.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "m_config_core.h"
 #include "options/m_option.h"

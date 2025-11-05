@@ -20,7 +20,7 @@
 #ifndef MP_OSDEP_STRNLEN
 #define MP_OSDEP_STRNLEN
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #if HAVE_ANDROID
 // strnlen is broken on current android ndk, see https://code.google.com/p/android/issues/detail?id=74741

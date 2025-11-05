@@ -1,7 +1,7 @@
 #ifndef MP_OSD_STATE_H_
 #define MP_OSD_STATE_H_
 
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "osdep/atomic.h"
 #include "osd.h"

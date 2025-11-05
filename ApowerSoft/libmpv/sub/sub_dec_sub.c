@@ -20,9 +20,9 @@
 #include <string.h>
 #include <math.h>
 #include <assert.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "demux/demux.h"
 #include "sd.h"
 #include "dec_sub.h"

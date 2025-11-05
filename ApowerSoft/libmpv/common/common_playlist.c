@@ -16,12 +16,12 @@
  */
 
 #include <assert.h>
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "playlist.h"
 #include "common/common.h"
 #include "common/global.h"
 #include "common/msg.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "options/path.h"
 
 #include "demux/demux.h"

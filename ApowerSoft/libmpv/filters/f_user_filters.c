@@ -1,6 +1,6 @@
 ﻿#include <libavutil/avutil.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "common/common.h"
 #include "common/msg.h"

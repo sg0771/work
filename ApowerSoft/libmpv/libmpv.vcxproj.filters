@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="common\mpv-config.h">
+    <ClInclude Include="mpv-config.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="common\mpv_talloc.h">
+    <ClInclude Include="mpv_talloc.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ta\ta.h">
@@ -96,10 +96,10 @@
     <ClInclude Include="audio\format.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="common\semaphore.h">
+    <ClInclude Include="semaphore.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="common\pthread.h">
+    <ClInclude Include="pthread.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="osdep\atomic.h">
@@ -387,7 +387,7 @@
     <ClInclude Include="video\out\filter_kernels.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="video\out\video_out_libmpv.h">
+    <ClInclude Include="video\out\libmpv.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="video\out\present_sync.h">
@@ -433,9 +433,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="video\sws_utils.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="libmpv.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -548,7 +545,7 @@
     <ClCompile Include="audio\audio_format.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="common\pthread.c">
+    <ClCompile Include="pthread.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="osdep\glob-win.c">

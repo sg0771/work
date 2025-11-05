@@ -18,11 +18,11 @@
 #include <windows.h>
 #include <stdbool.h>
 #include <string.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "displayconfig.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
 // Some DisplayConfig definitions are broken in mingw-w64 (as of 2015-3-13.) To
 // get the correct struct alignment, it's necessary to define them properly.

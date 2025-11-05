@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 // This is basically a single-shot semaphore, intended as light-weight solution
 // for just making a thread wait for another thread.

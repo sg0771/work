@@ -24,9 +24,9 @@
 #include <libavutil/common.h>
 #include <libass/ass.h>
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "options/m_config.h"
 #include "options/options.h"
 #include "common/common.h"

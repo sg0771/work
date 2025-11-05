@@ -33,7 +33,7 @@
 #include "osdep/timer.h"
 
 #include "thread_tools.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 uintptr_t mp_waiter_wait(struct mp_waiter *waiter)
 {

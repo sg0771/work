@@ -1,4 +1,4 @@
-/*
+﻿/*
 内部编译使用的头文件
 */
 #ifndef  _WXMEDIA_CPP_H_
@@ -313,5 +313,19 @@ private:
 		return S_OK;
 	}
 };
+
+
+//全局参数设置
+//设置strType键的int数值
+EXTERN_C void     WXSetGlobalValue(WXCTSTR strType, int nValue);
+
+//获取strType键的int数值
+EXTERN_C int      WXGetGlobalValue(WXCTSTR strType);
+
+//设置strType键的字符串数值
+EXTERN_C void     WXSetGlobalString(WXCTSTR strType, WXCTSTR strValue);
+
+//获取strType键的字符串数值
+EXTERN_C WXCTSTR  WXGetGlobalString(WXCTSTR strType);
 
 #endif

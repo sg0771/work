@@ -18,7 +18,7 @@
 /// \file
 /// \ingroup Options
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -33,10 +33,10 @@
 
 #include <libavutil/common.h>
 
-#include "libmpv.h"
+#include "libmpv/client.h"
 #include "player/client.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "common/common.h"
 #include "common/msg.h"
 #include "common/msg_control.h"

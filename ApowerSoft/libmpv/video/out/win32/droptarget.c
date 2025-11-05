@@ -26,7 +26,7 @@
 #include "osdep/atomic.h"
 #include "osdep/io.h"
 #include "osdep/windows_utils.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
 #include "droptarget.h"
 

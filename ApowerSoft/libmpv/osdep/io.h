@@ -20,7 +20,7 @@
 #ifndef MPLAYER_OSDEP_IO
 #define MPLAYER_OSDEP_IO
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include <stdbool.h>
 #include <stdint.h>
 #include <limits.h>

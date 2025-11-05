@@ -32,8 +32,8 @@
 
 #include <libavutil/md5.h>
 
-#include "common/mpv-config.h"
-#include "common/mpv_talloc.h"
+#include "mpv-config.h"
+#include "mpv_talloc.h"
 
 #include "osdep/io.h"
 

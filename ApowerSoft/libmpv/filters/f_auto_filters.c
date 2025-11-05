@@ -17,7 +17,7 @@
 #include "filter.h"
 #include "filter_internal.h"
 #include "user_filters.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 struct deint_priv {
     struct mp_subfilter sub;

@@ -16,7 +16,7 @@
  */
 
 #include <assert.h>
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "misc/bstr.h"
 #include "common/msg.h"
 #include "codecs.h"

@@ -888,12 +888,6 @@
     <ClInclude Include="glew\wglew.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\libs\json.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\LibInst.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\libs\SoundTouch.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -903,7 +897,13 @@
     <ClInclude Include="..\..\libs\WXLog.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\libs\WXMediaDefines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\libs\libyuv\libyuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaLibAPIext.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -23,7 +23,7 @@
 #include <libavcodec/avcodec.h>
 #include <libavutil/intreadwrite.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "common/av_common.h"
 #include "common/common.h"

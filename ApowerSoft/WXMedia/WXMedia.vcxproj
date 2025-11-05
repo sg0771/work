@@ -19,17 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\libs\cblas.h" />
+    <ClInclude Include="..\..\libs\f77blas.h" />
     <ClInclude Include="..\..\libs\FfmpegIncludes.h" />
-    <ClInclude Include="..\..\libs\ff_stdatomic.h" />
     <ClInclude Include="..\..\libs\json.hpp" />
+    <ClInclude Include="..\..\libs\lapack.h" />
+    <ClInclude Include="..\..\libs\lapacke.h" />
+    <ClInclude Include="..\..\libs\lapacke_config.h" />
+    <ClInclude Include="..\..\libs\lapacke_mangling.h" />
+    <ClInclude Include="..\..\libs\lapacke_utils.h" />
     <ClInclude Include="..\..\libs\libimagequant.h" />
     <ClInclude Include="..\..\libs\LibInst.hpp" />
     <ClInclude Include="..\..\libs\librnnoise.h" />
     <ClInclude Include="..\..\libs\libyuv\libyuv.h" />
+    <ClInclude Include="..\..\libs\MediaInfoDLL.h" />
+    <ClInclude Include="..\..\libs\openblas_config.h" />
     <ClInclude Include="..\..\libs\SoundTouch.h" />
     <ClInclude Include="..\..\libs\WXBase.h" />
     <ClInclude Include="..\..\libs\WXLog.h" />
     <ClInclude Include="..\..\libs\WXMedia.h" />
+    <ClInclude Include="..\..\libs\WXMediaCpp.h" />
     <ClInclude Include="..\..\libs\WXMediaDefines.h" />
     <ClInclude Include="GameCapture\WXGameCapture.h" />
     <ClInclude Include="GameCapture\wx_hook_helper.h" />
@@ -321,7 +330,6 @@
     <ClInclude Include="Win32\WXImageWaterMark.h" />
     <ClInclude Include="WXffmpeg\FfmpegExe.h" />
     <ClInclude Include="WXffmpeg\parseCmd.hpp" />
-    <ClInclude Include="WXMediaCpp.h" />
     <ClInclude Include="WXVideoRender\MacImageRender.h" />
     <ClInclude Include="WXVideoRender\MacOpenGLViewRender.h" />
     <ClInclude Include="WXVideoRender\MacRender.h" />
@@ -676,61 +684,61 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>.\;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
-    <ExcludePath>$(ExcludePath)</ExcludePath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>.\;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
-    <ExcludePath>$(ExcludePath)</ExcludePath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>.\;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
-    <ExcludePath>$(ExcludePath)</ExcludePath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
-    <IncludePath>.\;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs;$(IncludePath)</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
-    <ExcludePath>$(ExcludePath)</ExcludePath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_FILE_OFFSET_BITS=64;WIN32_LEAN_AND_MEAN;NOMINMAX;_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <DisableSpecificWarnings>4703;4018;4244;4996;4305;4116;4146;4005</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
       <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>./;../;./libyuv;./libyuv/jpeg_src</AdditionalIncludeDirectories>
@@ -740,7 +748,9 @@
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <OmitFramePointers>true</OmitFramePointers>
+      <BasicRuntimeChecks>StackFrameRuntimeCheck</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -756,15 +766,15 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_FILE_OFFSET_BITS=64;WIN32_LEAN_AND_MEAN;NOMINMAX;_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <DisableSpecificWarnings>4703;4018;4244;4996;4305;4116;4146;4005</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
       <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AdditionalIncludeDirectories>./;../;./libyuv;./libyuv/jpeg_src</AdditionalIncludeDirectories>
@@ -774,6 +784,8 @@
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -792,12 +804,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_FILE_OFFSET_BITS=64;WIN32_LEAN_AND_MEAN;NOMINMAX;_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <DisableSpecificWarnings>4703;4018;4244;4996;4305;4116;4146;4005</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
       <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>./;../;./libyuv;./libyuv/jpeg_src</AdditionalIncludeDirectories>
@@ -807,7 +819,9 @@
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <OmitFramePointers>true</OmitFramePointers>
+      <BasicRuntimeChecks>StackFrameRuntimeCheck</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -823,15 +837,15 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_FILE_OFFSET_BITS=64;WIN32_LEAN_AND_MEAN;NOMINMAX;_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;WXMEDIA_EXPORTS;WIN32_LEAN_AND_MEAN;NOMINMAX;WINVER=0x0601;_WIN32_WINNT=0x0601;HAVE_JPEG;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <DisableSpecificWarnings>4703;4018;4244;4996;4305;4116;4146;4005</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
       <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AdditionalIncludeDirectories>./;../;./libyuv;./libyuv/jpeg_src</AdditionalIncludeDirectories>
@@ -841,6 +855,8 @@
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
     </ClCompile>
     <Link>
       <SubSystem>

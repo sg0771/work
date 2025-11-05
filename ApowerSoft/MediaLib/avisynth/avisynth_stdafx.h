@@ -34,7 +34,7 @@
 extern "C" {
 #include "libavutil/mem.h"
 }
-#include <libyuv/libyuv.h>
+
 
 
 // Tells if a number is a power of two.

@@ -18,7 +18,7 @@
 /// \file
 /// \ingroup Properties
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -28,9 +28,9 @@
 
 #include <libavutil/common.h>
 
-#include "libmpv.h"
+#include "libmpv/client.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "m_option.h"
 #include "m_property.h"
 #include "common/msg.h"

@@ -18,7 +18,7 @@
 #include <windows.h>
 #include <sddl.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "osdep/io.h"
 #include "osdep/threads.h"
@@ -28,7 +28,7 @@
 #include "common/global.h"
 #include "common/msg.h"
 #include "input/input.h"
-#include "libmpv.h"
+#include "libmpv/client.h"
 #include "options/m_config.h"
 #include "options/options.h"
 #include "player/client.h"

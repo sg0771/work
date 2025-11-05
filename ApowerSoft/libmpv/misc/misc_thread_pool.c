@@ -13,14 +13,14 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "common/common.h"
 #include "osdep/threads.h"
 #include "osdep/timer.h"
 
 #include "thread_pool.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include <time.h>
 
 // Threads destroy themselves after this many seconds, if there's no new work

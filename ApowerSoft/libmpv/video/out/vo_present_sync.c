@@ -17,10 +17,10 @@
 
 #include <time.h>
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "osdep/timer.h"
 #include "present_sync.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 
 /* General nonsense about this mechanism.

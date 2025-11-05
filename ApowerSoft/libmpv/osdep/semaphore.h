@@ -14,7 +14,7 @@
 
 #define MP_SEMAPHORE_EMULATION
 
-#include <common/pthread.h>
+#include <pthread.h>
 
 #define MP_SEM_VALUE_MAX 4096
 

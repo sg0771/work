@@ -27,11 +27,11 @@
 #include <d3d9.h>
 #include <inttypes.h>
 #include <limits.h>
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "options/options.h"
 #include "options/m_option.h"
 #include "sub/draw_bmp.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "vo.h"
 #include "video/csputils.h"
 #include "video/mp_image.h"
@@ -41,7 +41,7 @@
 #include "w32_common.h"
 #include "sub/osd.h"
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #if !HAVE_GPL
 #error GPL only
 #endif

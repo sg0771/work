@@ -19,11 +19,11 @@
 #define MPLAYER_MP_CORE_H
 
 #include <stdbool.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "osdep/atomic.h"
 
-#include "libmpv.h"
+#include "libmpv/client.h"
 
 #include "common/common.h"
 #include "filters/filter.h"

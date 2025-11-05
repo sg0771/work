@@ -23,9 +23,9 @@
 #include <strings.h>
 #include <assert.h>
 #include <stdbool.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
-#include "libmpv.h"
+#include "libmpv/client.h"
 
 #include "m_config.h"
 #include "m_config_frontend.h"

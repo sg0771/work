@@ -19,7 +19,7 @@
 #define MP_AO_INTERNAL_H_
 
 #include <stdbool.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "osdep/atomic.h"
 #include "audio/out/ao.h"

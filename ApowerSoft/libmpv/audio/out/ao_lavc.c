@@ -27,7 +27,7 @@
 
 #include <libavutil/common.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "options/options.h"
 #include "common/common.h"
 #include "audio/aframe.h"
@@ -36,7 +36,7 @@
 #include "audio/fmt-conversion.h"
 #include "filters/filter_internal.h"
 #include "filters/f_utils.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "ao.h"
 #include "internal.h"
 #include "common/msg.h"

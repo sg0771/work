@@ -27,14 +27,14 @@
 #include <unistd.h>
 #include <errno.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "common/common.h"
 #include "common/global.h"
 #include "common/msg.h"
 #include "options/options.h"
 #include "options/path.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "osdep/io.h"
 #include "osdep/path.h"
 #include "misc/ctype.h"

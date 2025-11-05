@@ -1,4 +1,4 @@
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "rendezvous.h"
 

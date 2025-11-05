@@ -36,13 +36,13 @@
 #include <libavcodec/avcodec.h>
 #include <libavcodec/version.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #if HAVE_ZLIB
 #include <zlib.h>
 #endif
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "common/av_common.h"
 #include "options/m_config.h"
 #include "options/m_option.h"

@@ -23,7 +23,7 @@
 #include "osdep/timer.h"
 
 #include "dispatch.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include <time.h>
 
 struct mp_dispatch_queue {

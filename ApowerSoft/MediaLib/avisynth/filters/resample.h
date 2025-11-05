@@ -1,4 +1,4 @@
-// Avisynth v2.5.  Copyright 2002 Ben Rudiak-Gould et al.
+﻿// Avisynth v2.5.  Copyright 2002 Ben Rudiak-Gould et al.
 // http://www.avisynth.org
 
 // This program is free software; you can redistribute it and/or modify
@@ -39,6 +39,7 @@
 #include "resample_functions.h"
 #include "transform.h"
 #include "../core/softwire_helpers.h"
+#include <libyuv/libyuv.h>
 
 class FilteredResizeV : public GenericVideoFilter, public  CodeGenerator 
 /**

@@ -33,7 +33,7 @@
 #include <libavfilter/buffersink.h>
 #include <libavfilter/buffersrc.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "common/common.h"
 #include "common/av_common.h"

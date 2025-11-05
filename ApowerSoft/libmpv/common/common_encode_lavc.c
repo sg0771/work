@@ -23,7 +23,7 @@
 #include <libavutil/avutil.h>
 #include <libavutil/timestamp.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "encode_lavc.h"
 #include "common/av_common.h"
 #include "common/global.h"
@@ -34,7 +34,7 @@
 #include "options/options.h"
 #include "osdep/timer.h"
 #include "video/out/vo.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "stream/stream.h"
 
 struct encode_priv {

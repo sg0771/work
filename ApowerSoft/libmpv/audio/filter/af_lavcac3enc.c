@@ -31,7 +31,7 @@
 #include <libavutil/bswap.h>
 #include <libavutil/mem.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "audio/aframe.h"
 #include "audio/chmap_avchannel.h"

@@ -20,7 +20,7 @@
 
 #include <stdbool.h>
 
-#include "libmpv.h"
+#include "libmpv/client.h"
 
 struct MPContext;
 struct mp_cmd;

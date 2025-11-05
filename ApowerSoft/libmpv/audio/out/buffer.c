@@ -16,7 +16,7 @@
  */
 
 #include <stddef.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <inttypes.h>
 #include <math.h>
 #include <unistd.h>

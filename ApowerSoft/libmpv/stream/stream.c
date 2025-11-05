@@ -24,9 +24,9 @@
 
 #include "osdep/io.h"
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "common/common.h"
 #include "common/global.h"

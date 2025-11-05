@@ -1,4 +1,4 @@
-//
+﻿//
 #include "ML_d3dUtility.h"
 
 #include <assert.h>

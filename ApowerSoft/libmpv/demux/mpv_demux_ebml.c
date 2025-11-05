@@ -20,7 +20,7 @@
  * License along with mpv.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
@@ -30,7 +30,7 @@
 
 #include <libavutil/intfloat.h>
 #include <libavutil/common.h>
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "ebml.h"
 #include "stream/stream.h"
 #include "common/msg.h"

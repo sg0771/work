@@ -24,7 +24,7 @@
 #include <strings.h>
 #include <assert.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include "common/msg.h"
 

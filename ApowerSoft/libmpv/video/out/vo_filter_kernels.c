@@ -30,7 +30,7 @@
 #include "filter_kernels.h"
 #include "common/common.h"
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #ifndef M_SQRT2
 #define M_SQRT2 1.4142135623730950488016887
 #endif

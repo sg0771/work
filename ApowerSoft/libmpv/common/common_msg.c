@@ -21,10 +21,10 @@
 #include <string.h>
 #include <unistd.h>
 #include <assert.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <stdint.h>
 
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 
 #include "misc/bstr.h"
 #include "osdep/atomic.h"
@@ -38,7 +38,7 @@
 #include "osdep/threads.h"
 #include "osdep/timer.h"
 
-#include "libmpv.h"
+#include "libmpv/client.h"
 
 #include "msg.h"
 #include "msg_control.h"

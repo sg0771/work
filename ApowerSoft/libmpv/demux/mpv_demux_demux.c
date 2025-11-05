@@ -22,7 +22,7 @@
 #include <assert.h>
 #include <unistd.h>
 #include <limits.h>
-#include <common/pthread.h>
+#include <pthread.h>
 #include <stdint.h>
 
 #include <math.h>
@@ -31,10 +31,10 @@
 #include <sys/stat.h>
 
 #include "cache.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "options/m_config.h"
 #include "options/m_option.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "common/av_common.h"
 #include "common/msg.h"
 #include "common/global.h"

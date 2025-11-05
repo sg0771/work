@@ -17,7 +17,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #if HAVE_POSIX
 #include <sys/ioctl.h>
@@ -26,7 +26,7 @@
 #include <libswscale/swscale.h>
 
 #include "options/m_config.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "osdep/terminal.h"
 #include "osdep/io.h"
 #include "vo.h"

@@ -22,10 +22,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include "av_log.h"
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "common/common.h"
 #include "common/global.h"
 #include "common/msg.h"

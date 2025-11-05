@@ -18,7 +18,7 @@
  */
 
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,7 +27,7 @@
 #include <assert.h>
 #include <libavutil/common.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "common/msg.h"
 #include "filters/filter.h"
 #include "filters/filter_internal.h"

@@ -28,7 +28,7 @@
 #include <limits.h>
 #include <math.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 #ifdef _WIN32
 #include <windows.h>

@@ -8,7 +8,7 @@
 #ifndef MPLAYER_DVBIN_H
 #define MPLAYER_DVBIN_H
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "stream.h"
 
 #if !HAVE_GPL

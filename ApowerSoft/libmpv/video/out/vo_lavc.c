@@ -23,12 +23,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "common/common.h"
 #include "options/options.h"
 #include "video/fmt-conversion.h"
 #include "video/mp_image.h"
-#include "common/mpv_talloc.h"
+#include "mpv_talloc.h"
 #include "vo.h"
 
 #include "common/encode_lavc.h"

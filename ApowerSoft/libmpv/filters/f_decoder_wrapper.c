@@ -21,13 +21,13 @@
 #include <stdbool.h>
 #include <math.h>
 #include <assert.h>
-#include <common/pthread.h>
+#include <pthread.h>
 
 #include <libavutil/buffer.h>
 #include <libavutil/common.h>
 #include <libavutil/rational.h>
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 #include "options/options.h"
 #include "common/msg.h"
 #include "options/m_config.h"

@@ -27,7 +27,7 @@
 
 #include "timer.h"
 
-#include "common/mpv-config.h"
+#include "mpv-config.h"
 
 static LARGE_INTEGER perf_freq;
 

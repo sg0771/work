@@ -89,7 +89,7 @@
 
 #define HAVE_GLIBC_THREAD_NAME 0
 
-#define HAVE_GLOB 1
+#define HAVE_MPV_GLOB 1
 
 #define HAVE_GLOB_POSIX 0
 

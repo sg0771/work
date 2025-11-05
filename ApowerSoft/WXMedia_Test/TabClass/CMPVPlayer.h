@@ -6,7 +6,7 @@
 #include "stdafx.h"
 #include "resource.h"
 
-#include  "../libmpv/libmpv.h"
+#include  <libmpv/client.h>
 #include  <LibInst.hpp>
 
 extern "C" {
