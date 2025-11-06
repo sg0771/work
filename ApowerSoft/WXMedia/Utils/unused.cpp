@@ -53,7 +53,7 @@ public:
 	}
 };
 
-EXTERN_C void     WXSetGlobalValue(WXCTSTR strType, int nValue) {
+WXMEDIA_API void     WXSetGlobalValue(WXCTSTR strType, int nValue) {
 
 	//WXLogW(L"WXSetGlobalValue[%ws]=%d", strType, nValue);
 
@@ -101,7 +101,7 @@ EXTERN_C void     WXSetGlobalValue(WXCTSTR strType, int nValue) {
 	WXMediaGlobalValue::GetInt()[str] = nValue;
 }
 
-EXTERN_C int      WXGetGlobalValue(WXCTSTR strType) {
+WXMEDIA_API int      WXGetGlobalValue(WXCTSTR strType) {
 	std::wstring str = strType;
 	if (WXMediaGlobalValue::GetInt().count(str) == 0) {
 		WXMediaGlobalValue::GetInt()[str] = 0;
@@ -131,7 +131,7 @@ EXTERN_C int      WXGetGlobalValue(WXCTSTR strType) {
 }
 
 
-EXTERN_C void     WXSetGlobalString(WXCTSTR strType, WXCTSTR strValue) {
+WXMEDIA_API void     WXSetGlobalString(WXCTSTR strType, WXCTSTR strValue) {
 	//WXLogW(L"WXSetGlobalValue[%ws]=%ws", strType, strValue);
 	if (wcsicmp(strType, L"MediaPlayer") == 0) {
 		if (wcsicmp(strValue, L"Lav") == 0) {
@@ -172,7 +172,7 @@ EXTERN_C void     WXSetGlobalString(WXCTSTR strType, WXCTSTR strValue) {
 }
 
 
-EXTERN_C WXCTSTR  WXGetGlobalString(WXCTSTR strType) {
+WXMEDIA_API WXCTSTR  WXGetGlobalString(WXCTSTR strType) {
 	std::wstring str = strType;
 	if (WXMediaGlobalValue::GetString().count(str) == 0) {
 		WXMediaGlobalValue::GetString()[str] = L"";

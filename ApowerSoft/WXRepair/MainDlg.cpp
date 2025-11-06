@@ -1,4 +1,4 @@
-﻿// MainDlg.cpp : implementation of the CMainDlg class
+// MainDlg.cpp : implementation of the CMainDlg class
 //
 /////////////////////////////////////////////////////////////////////////////
 
@@ -157,7 +157,8 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 	);
 	if (lResult != ERROR_SUCCESS)
 	{
-		::MessageBox(NULL, _T("打开注册表项失败！"), _T("错误"), MB_ICONERROR);
+		::MessageBox(NULL, _T("请以管理员运行！"), _T("错误"), MB_ICONERROR);
+		exit(-1);
 		return FALSE;
 	}
 
@@ -171,7 +172,7 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 	{
 		// 3.1 版本号不存在（首次运行）：写入版本号和当前日期
 		WriteRegValues(hKey, pszVersionKey, pszDateKey, strCurrentVersion);
-		::MessageBox(NULL, _T("首次运行，已记录版本信息和安装日期"), _T("提示"), MB_ICONINFORMATION);
+		//::MessageBox(NULL, _T("首次运行，已记录版本信息和安装日期"), _T("提示"), MB_ICONINFORMATION);
 	}
 	else
 	{
@@ -181,7 +182,7 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 		{
 			// 版本号不一致（程序更新）：更新版本号和当前日期
 			WriteRegValues(hKey, pszVersionKey, pszDateKey, strCurrentVersion);
-			::MessageBox(NULL, _T("程序已更新，已重置有效期"), _T("提示"), MB_ICONINFORMATION);
+			//::MessageBox(NULL, _T("程序已更新，已重置有效期"), _T("提示"), MB_ICONINFORMATION);
 		}
 		else
 		{
@@ -196,11 +197,11 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 				int nDays = CalculateDateDiff(szSavedDate);
 				if (nDays == -1)
 				{
-					::MessageBox(NULL, _T("日期格式错误！"), _T("错误"), MB_ICONERROR);
+					//::MessageBox(NULL, _T("日期格式错误！"), _T("错误"), MB_ICONERROR);
 				}
 				else if (nDays > 30)
 				{
-					::MessageBox(NULL, _T("程序使用已超过30天，请联系管理员！"), _T("提示"), MB_ICONWARNING);
+					::MessageBox(NULL, _T("有效期超时，请联系管理员！"), _T("提示"), MB_ICONWARNING);
 					RegCloseKey(hKey);
 					exit(-1);
 					return FALSE; // 强制退出
@@ -211,12 +212,14 @@ LRESULT CMainDlg::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam
 					CString strMsg;
 					strMsg.Format(_T("当前版本：%s\n已使用：%d天\n剩余：%d天"),
 						strCurrentVersion, nDays, 30 - nDays);
-					::MessageBox(NULL, strMsg, _T("提示"), MB_ICONINFORMATION);
+					//::MessageBox(NULL, strMsg, _T("提示"), MB_ICONINFORMATION);
 				}
 			}
 			else
 			{
-				::MessageBox(NULL, _T("读取安装日期失败！"), _T("错误"), MB_ICONERROR);
+				//::MessageBox(NULL, _T("读取安装日期失败！"), _T("错误"), MB_ICONERROR);
+				::MessageBox(NULL, _T("请以管理员运行！"), _T("错误"), MB_ICONERROR);
+				exit(-1);
 			}
 		}
 	}

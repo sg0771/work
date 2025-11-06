@@ -948,13 +948,13 @@
     <ClInclude Include="..\..\libs\WXMedia.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\libs\WXMediaCpp.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\libs\WXMediaDefines.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\libyuv\libyuv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WXMediaCpp.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

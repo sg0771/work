@@ -38,7 +38,6 @@
     <ClInclude Include="..\..\libs\WXBase.h" />
     <ClInclude Include="..\..\libs\WXLog.h" />
     <ClInclude Include="..\..\libs\WXMedia.h" />
-    <ClInclude Include="..\..\libs\WXMediaCpp.h" />
     <ClInclude Include="..\..\libs\WXMediaDefines.h" />
     <ClInclude Include="GameCapture\WXGameCapture.h" />
     <ClInclude Include="GameCapture\wx_hook_helper.h" />
@@ -330,6 +329,7 @@
     <ClInclude Include="Win32\WXImageWaterMark.h" />
     <ClInclude Include="WXffmpeg\FfmpegExe.h" />
     <ClInclude Include="WXffmpeg\parseCmd.hpp" />
+    <ClInclude Include="WXMediaCpp.h" />
     <ClInclude Include="WXVideoRender\MacImageRender.h" />
     <ClInclude Include="WXVideoRender\MacOpenGLViewRender.h" />
     <ClInclude Include="WXVideoRender\MacRender.h" />

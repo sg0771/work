@@ -21,7 +21,7 @@
 
 /*---------------------------------------------------------------------------*/
 /*Win32*/
-#if defined(__NT__) || defined(_WIN32) || defined(_WIN32)
+#if defined(__NT__) || defined(_WIN32) || defined(WIN32)
     #ifndef WIN32
         #define WIN32
     #endif
@@ -49,7 +49,7 @@
 
 /*---------------------------------------------------------------------------*/
 /*Windows*/
-#if defined(_WIN32) || defined(WIN64)
+#if defined(WIN32) || defined(WIN64)
     #ifndef WINDOWS
         #define WINDOWS
     #endif
@@ -112,12 +112,12 @@
     #pragma message Multiple platforms???
 #endif
 
-#if !defined(_WIN32) && !defined(UNIX) && !defined(MACOS) && !defined(MACOSX)
+#if !defined(WIN32) && !defined(UNIX) && !defined(MACOS) && !defined(MACOSX)
     #pragma message No known platforms, assume default
 #endif
 
 /*-------------------------------------------------------------------------*/
-#if defined(_WIN32) || defined(_WIN32)
+#if defined(_WIN32) || defined(WIN32)
     #ifdef _UNICODE
         #define MEDIAINFODLL_NAME L"MediaInfo.dll"
     #else //_UNICODE
@@ -134,7 +134,7 @@
 #else
     #define MEDIAINFODLL_NAME "libmediainfo.so.0"
     #define __stdcall
-#endif //!defined(_WIN32) || defined(_WIN32)
+#endif //!defined(_WIN32) || defined(WIN32)
 
 /*-------------------------------------------------------------------------*/
 /*Char types                                                               */
@@ -231,7 +231,7 @@ extern "C"
 #ifdef MEDIAINFO_GLIBC
     #include <gmodule.h>
     static GModule* MediaInfo_Module = NULL;
-#elif defined(_WIN32) || defined(_WIN32)
+#elif defined(_WIN32) || defined(WIN32)
     #include <windows.h>
     static HMODULE MediaInfo_Module = NULL;
 #else
@@ -251,7 +251,7 @@ extern "C"
 #define MEDIAINFOLIST_ASSIGN(_Name,_Name2) \
     if (!g_module_symbol (MediaInfo_Module, "MediaInfoList" MEDIAINFO_Ansi "_" _Name2, (gpointer*)&MediaInfoList_##_Name)) \
         Errors++;
-#elif defined(_WIN32) || defined(_WIN32)
+#elif defined(_WIN32) || defined(WIN32)
 #define MEDIAINFO_ASSIGN(_Name,_Name2) \
     MediaInfo_##_Name=(MEDIAINFO_##_Name)GetProcAddress(MediaInfo_Module, "MediaInfo" MEDIAINFO_Ansi "_" _Name2); \
     if (MediaInfo_##_Name==NULL) Errors++;
@@ -338,7 +338,7 @@ extern "C"
     /* Load library */
     #ifdef MEDIAINFO_GLIBC
         MediaInfo_Module = g_module_open(MEDIAINFODLL_NAME, G_MODULE_BIND_LAZY);
-    #elif defined(_WIN32) || defined(_WIN32)
+    #elif defined(_WIN32) || defined(WIN32)
         MediaInfo_Module = LoadLibrary(MEDIAINFODLL_NAME);
     #else
         #ifdef MACOSX
@@ -417,7 +417,7 @@ extern "C"
         // Unload DLL with errors
         #ifdef MEDIAINFO_GLIBC
             g_module_close(MediaInfo_Module);
-        #elif defined(_WIN32) || defined(_WIN32)
+        #elif defined(_WIN32) || defined(WIN32)
             FreeLibrary(MediaInfo_Module);
         #else
             dlclose(MediaInfo_Module);
@@ -446,7 +446,7 @@ extern "C"
 
     #ifdef MEDIAINFO_GLIBC
         g_module_close(MediaInfo_Module);
-    #elif defined(_WIN32) || defined(_WIN32)
+    #elif defined(_WIN32) || defined(WIN32)
         FreeLibrary(MediaInfo_Module);
     #else
         dlclose(MediaInfo_Module);

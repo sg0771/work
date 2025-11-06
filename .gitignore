@@ -4,6 +4,7 @@
 */.vs
 *.aps
 *.log
+*.xws
 /update_version/env
 /packages
 *.mp4

@@ -1,4 +1,4 @@
-﻿/*
+/*
 WXMedia 总接口
 */
 #ifndef _WX_MEDIA_H_
@@ -993,6 +993,7 @@ extern "C" {
 	//H264硬编码能力检测
 #define WXSupportH264Codec WXSupportHarewareCodec
 	WXMEDIA_API int          WXSupportHarewareCodec();
+
 	//本机支持的H264硬编码器名字，不支持则返回"libx264"
 	WXMEDIA_API WXCTSTR      WXGetH264Codec();
 
@@ -2030,7 +2031,9 @@ extern "C" {
 	WXMEDIA_API int      WXMediaInfoGetVideoChannelNumber(void* p);//Type=1
 	WXMEDIA_API int      WXMediaInfoGetAttachChannelNumber(void* p);//Type=2 //add
 
-
+	WXMEDIA_API int64_t  WXMediaInfoGetFileSize(void* p);
+	WXMEDIA_API int64_t  WXMediaInfoGetFileDuration(void* p);
+	WXMEDIA_API WXCTSTR  WXMediaInfoGetFormat(void* p);
 	WXMEDIA_API int      WXMediaInfoGetChannelNumber(void* p);
 	WXMEDIA_API int64_t  WXMediaInfoGetVideoBitrate(void* p);
 	WXMEDIA_API double   WXMediaInfoGetVideoAvgFps(void* p);//获取帧率
@@ -2176,15 +2179,15 @@ extern "C" {
 	//全局参数设置和配置
 
 	// 获取EXE所在的路径
-	//WXGetGlobalString(L"ExePath")
+	//WXIniGetString(L"ExePath")
 
 	//设置DUMP文件路径
-	//WXSetGlobalString(L"DumpFile", strFile);
+	//WXIniSetString(L"DumpFile", strFile);
 
 	//设置DUMP回调程序名
-	//WXSetGlobalString(L"DumpCallBackExe", strExeFile);
+	//WXIniSetString(L"DumpCallBackExe", strExeFile);
 	//设置调用DUMP回调程序的参数
-	//WXSetGlobalString(L"DumpCallBackParam", strExeParam);
+	//WXIniSetString(L"DumpCallBackParam", strExeParam);
 
 	//
 
@@ -2202,11 +2205,28 @@ extern "C" {
 	//L"DisbaleDXGI" 是否禁用DXGI采集，某些硬件设备硬件采集有问题
 
 	//摄像头叠加位置，0右上角，1右下角，2左下角，3，左上角
-	//WXSetGlobalValue(L"Capture_CameraType", type);
+	//WXIniSetValue(L"Capture_CameraType", type);
 
 	//摄像头显示窗口宽度，0 表示禁用
-	//WXSetGlobalValue(L"Capture_CameraWindowWidth", nWndWidth);
+	//WXIniSetValue(L"Capture_CameraWindowWidth", nWndWidth);
 
+
+	/// ---------------- INI配置参数 ------------------------
+	//从ini获取数值
+	WXMEDIA_API int WXIniGetValue(const wchar_t* wszKey, int nDefaultValue);
+
+	// strValue 一般用  wchar_t arr[MAX_PATH];
+	//失败返回strDef
+	WXMEDIA_API void WXIniGetString(const wchar_t* wszKey, wchar_t* strValue, const wchar_t* strDef);
+
+	//配置ini的数值
+	WXMEDIA_API void WXIniSetValue(const wchar_t* wszKey, int nValue);
+
+	//配置ini的字符串
+	WXMEDIA_API void WXIniSetString(const wchar_t* wszKey, const wchar_t* strValue);
+
+
+	//运行期修改全局配置参数
 	//全局参数设置
 	//设置strType键的int数值
 	WXMEDIA_API void     WXSetGlobalValue(WXCTSTR strType, int nValue);
@@ -2219,20 +2239,6 @@ extern "C" {
 
 	//获取strType键的字符串数值
 	WXMEDIA_API WXCTSTR  WXGetGlobalString(WXCTSTR strType);
-
-	//从ini获取键wszKey的数值， 不存在则返回 nDefaultValue
-	WXMEDIA_API int WXGetIniValue(WXCTSTR wszReg, WXCTSTR wszKey, int nDefaultValue);
-
-	//ini配置
-
-	//从ini获取键wszKey的字符串， 不存在则返回 nDefaultValue 
-	WXMEDIA_API void WXGetStringValue(WXCTSTR wszReg, WXCTSTR wszKey, WXCHAR* strValue);
-
-	//配置ini的wszKey键的数值
-	WXMEDIA_API void WXSetIniValue(WXCTSTR wszReg, WXCTSTR wszKey, int nValue);
-
-	//配置ini的wszKey键的字符串
-	WXMEDIA_API void WXSetIniString(WXCTSTR wszReg, WXCTSTR wszKey, WXCTSTR strValue);
 
 #ifdef __cplusplus
 }

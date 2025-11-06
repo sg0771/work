@@ -55,7 +55,7 @@ std::wstring get_upper_dir(const wchar_t* dir_path)
 	std::wstring::size_type pos;
 	if (pos1 != std::wstring::npos && pos2 != std::wstring::npos)
 	{
-		pos = max(pos1, pos2);
+		pos = std::max(pos1, pos2);
 	}
 	else
 	{
