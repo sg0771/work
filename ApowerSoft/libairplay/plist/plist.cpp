@@ -830,7 +830,7 @@ PLIST_API plist_t plist_access_path(plist_t plist, uint32_t length, ...)
     return ret;
 }
 
-static void plist_get_type_and_value(plist_t node, plist_type * type, void *value, uint64_t * length)
+static void plist_get_type_and_value(plist_t node,void *value, uint64_t * length)
 {
     plist_data_t data = NULL;
 
@@ -839,10 +839,10 @@ static void plist_get_type_and_value(plist_t node, plist_type * type, void *valu
 
     data = plist_get_data(node);
 
-    *type = data->type;
+    plist_type type = data->type;
     *length = data->length;
 
-    switch (*type)
+    switch (type)
     {
     case PLIST_BOOLEAN:
         *((char *) value) = data->boolval;
@@ -860,8 +860,8 @@ static void plist_get_type_and_value(plist_t node, plist_type * type, void *valu
         *((char **) value) = strdup(data->strval);
         break;
     case PLIST_DATA:
-        *((uint8_t **) value) = (uint8_t *) malloc(*length * sizeof(uint8_t));
-        memcpy(*((uint8_t **) value), data->buff, *length * sizeof(uint8_t));
+        //*((uint8_t **) value) = (uint8_t *) malloc(*length * sizeof(uint8_t));
+        //memcpy(*((uint8_t **) value), data->buff, *length * sizeof(uint8_t));
         break;
     case PLIST_ARRAY:
     case PLIST_DICT:
@@ -894,7 +894,11 @@ PLIST_API void plist_get_key_val(plist_t node, char **val)
     uint64_t length = 0;
     if (PLIST_KEY != type)
         return;
-    plist_get_type_and_value(node, &type, (void *) val, &length);
+   // plist_get_type_and_value(node, (void *) val, &length);
+
+	plist_data_t data = plist_get_data(node);
+    *((char**)val) = strdup(data->strval);
+
     if (!*val)
         return;
     assert(length == strlen(*val));
@@ -908,7 +912,12 @@ PLIST_API void plist_get_string_val(plist_t node, char **val)
     uint64_t length = 0;
     if (PLIST_STRING != type)
         return;
-    plist_get_type_and_value(node, &type, (void *) val, &length);
+    //plist_get_type_and_value(node,  (void *) val, &length);
+       // plist_get_type_and_value(node, (void *) val, &length);
+
+    plist_data_t data = plist_get_data(node);
+    *((char**)val) = strdup(data->strval);
+
     if (!*val)
         return;
     assert(length == strlen(*val));
@@ -935,7 +944,9 @@ PLIST_API void plist_get_bool_val(plist_t node, uint8_t * val)
     uint64_t length = 0;
     if (PLIST_BOOLEAN != type)
         return;
-    plist_get_type_and_value(node, &type, (void *) val, &length);
+    //plist_get_type_and_value(node, (void *) val, &length);
+    plist_data_t data = plist_get_data(node);
+    *((char*)val) = data->boolval;
     assert(length == sizeof(uint8_t));
 }
 
@@ -947,7 +958,9 @@ PLIST_API void plist_get_uint_val(plist_t node, uint64_t * val)
     uint64_t length = 0;
     if (PLIST_UINT != type)
         return;
-    plist_get_type_and_value(node, &type, (void *) val, &length);
+    //plist_get_type_and_value(node,(void *) val, &length);
+    plist_data_t data = plist_get_data(node);
+    *val = data->intval;
     assert(length == sizeof(uint64_t) || length == 16);
 }
 
@@ -959,7 +972,9 @@ PLIST_API void plist_get_uid_val(plist_t node, uint64_t * val)
     uint64_t length = 0;
     if (PLIST_UID != type)
         return;
-    plist_get_type_and_value(node, &type, (void *) val, &length);
+    //plist_get_type_and_value(node,  (void *) val, &length);
+    plist_data_t data = plist_get_data(node);
+    *val = data->intval;
     assert(length == sizeof(uint64_t));
 }
 
@@ -971,7 +986,9 @@ PLIST_API void plist_get_real_val(plist_t node, double *val)
     uint64_t length = 0;
     if (PLIST_REAL != type)
         return;
-    plist_get_type_and_value(node, &type, (void *) val, &length);
+   // plist_get_type_and_value(node,  (void *) val, &length);
+    plist_data_t data = plist_get_data(node);
+    *val = data->realval;
     assert(length == sizeof(double));
 }
 
@@ -982,7 +999,10 @@ PLIST_API void plist_get_data_val(plist_t node, char **val, uint64_t * length)
     plist_type type = plist_get_node_type(node);
     if (PLIST_DATA != type)
         return;
-    plist_get_type_and_value(node, &type, (void *) val, length);
+    //plist_get_type_and_value(node, (void *) val, length);
+    plist_data_t data = plist_get_data(node);
+    *((uint8_t**)val) = (uint8_t*)malloc(*length * sizeof(uint8_t));
+    memcpy(*((uint8_t**)val), data->buff, *length * sizeof(uint8_t));
 }
 
 PLIST_API const char* plist_get_data_ptr(plist_t node, uint64_t* length)
@@ -1006,7 +1026,7 @@ PLIST_API void plist_get_date_val(plist_t node, int32_t * sec, int32_t * usec)
     double val = 0;
     if (PLIST_DATE != type)
         return;
-    plist_get_type_and_value(node, &type, (void *) &val, &length);
+    plist_get_type_and_value(node, (void *) &val, &length);
     assert(length == sizeof(double));
     if (sec)
         *sec = (int32_t)val;

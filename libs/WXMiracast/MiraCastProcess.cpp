@@ -1,3 +1,4 @@
+#define NOMINMAX
 #include <stdint.h>
 #include "MiraCastProcess.h"
 #include "MiraCastCommon.h"
