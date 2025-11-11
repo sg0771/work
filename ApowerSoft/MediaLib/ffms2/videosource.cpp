@@ -212,9 +212,9 @@ FFMS_VideoSource::FFMS_VideoSource(const char *SourceFile, FFMS_Index &Index, in
    //         int bDxvaSupport = MLGetIniValue(L"WXMedia", L"DxvaSupport", -1);
 
    //         if (bDxvaSupport && CodecContext->codec_id == AV_CODEC_ID_H264) {
-   //             dxva2 = MLGetIniValue(L"WXMedia", L"H264_DXVA", 0);
+   //             dxva2 = MLGetIniValue(L"VideoDecoder", L"H264_DXVA", 0);
    //         }else if (bDxvaSupport && CodecContext->codec_id == AV_CODEC_ID_H265) {
-   //             dxva2 = MLGetIniValue(L"WXMedia", L"H265_DXVA", 0);
+   //             dxva2 = MLGetIniValue(L"VideoDecoder", L"H265_DXVA", 0);
    //         }
 
    //         std::string ss = SourceFile;
@@ -279,9 +279,9 @@ FFMS_VideoSource::FFMS_VideoSource(const char *SourceFile, FFMS_Index &Index, in
    //         int bDxvaSupport = MLGetIniValue(L"WXMedia", L"DxvaSupport", -1);
 
    //         if (bDxvaSupport && CodecContext->codec_id == AV_CODEC_ID_H264) {
-   //             dxva2 = MLGetIniValue(L"WXMedia", L"H264_DXVA", 0);
+   //             dxva2 = MLGetIniValue(L"VideoDecoder", L"H264_DXVA", 0);
    //         }else if (bDxvaSupport && CodecContext->codec_id == AV_CODEC_ID_H265) {
-   //             dxva2 = MLGetIniValue(L"WXMedia", L"H265_DXVA", 0);
+   //             dxva2 = MLGetIniValue(L"VideoDecoder", L"H265_DXVA", 0);
    //         }
 
    //         std::string ss = SourceFile;

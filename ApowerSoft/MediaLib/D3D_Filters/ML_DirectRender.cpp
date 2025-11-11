@@ -1,4 +1,4 @@
-﻿//
+//
 #include "ML_d3dUtility.h"
 
 #include <assert.h>
@@ -6,7 +6,7 @@
 #include <fstream>
 #include <ffms2/ffms.h>
 #include "ML_DirectRender.h"
-#include <libyuv/libyuv.h>
+#include <libyuv.h>
 #include "../ML_stdafx.h"
 
 
@@ -232,7 +232,7 @@ HRESULT DirectRender::SetPreviewAss(std::string asscontent)
 	}
 	if (asscontent.length() <= 0)
 		return E_FAIL;
-	m_track = AssEngine::Instance().Read(asscontent.c_str());
+	m_track = AssEngine::InstanceDX().Read(asscontent.c_str());
 	needRefresh = true;
 
 	return S_OK;
@@ -248,7 +248,7 @@ HRESULT DirectRender::SetCacheAss(std::string asscontent)
 			ass_free_track(m_cachetrack);
 			m_cachetrack = NULL;
 		}
-		m_cachetrack = AssEngine::Instance().Read(asscontent.c_str());
+		m_cachetrack = AssEngine::InstanceDX().Read(asscontent.c_str());
 
 		if (m_track!= NULL)
 		{
@@ -288,10 +288,10 @@ RECT DirectRender::GetAssEventSize(int width, int height, float ts, std::string 
 
 		if (m_track != NULL)
 		{
-			ass_set_frame_size(AssEngine::Instance().ass_renderer, width, height);
+			ass_set_frame_size(AssEngine::InstanceDX().ass_renderer, width, height);
 			SIZE location = { width,height };
 			SIZE rb = { 0,0 };
-			Rect rect =  ass_bound_rect(AssEngine::Instance().ass_renderer, m_track, INT64(ts * 1000), name.c_str());
+			Rect rect =  ass_bound_rect(AssEngine::InstanceDX().ass_renderer, m_track, INT64(ts * 1000), name.c_str());
 			s = { rect.x0, rect.y0, rect.x1, rect.y1 };
 
 			needRefresh = true;
@@ -305,11 +305,11 @@ RECT DirectRender::GetAssPreviewSize(int width, int height, float ts, std::strin
 	WXAutoLock al(m_lckAss);
 	RECT s = { width, height, 20,20 };
 
-	auto track = AssEngine::Instance().Read(asscontent.c_str());
+	auto track = AssEngine::InstanceDX().Read(asscontent.c_str());
 	if (track != NULL)
 	{
-		ass_set_frame_size(AssEngine::Instance().ass_renderer, width, height);
-		Rect rect =   ass_bound_rect(AssEngine::Instance().ass_renderer, track, INT64(ts * 1000), name.c_str());
+		ass_set_frame_size(AssEngine::InstanceDX().ass_renderer, width, height);
+		Rect rect =   ass_bound_rect(AssEngine::InstanceDX().ass_renderer, track, INT64(ts * 1000), name.c_str());
 		s = { rect.x0, rect.y0, rect.x1, rect.y1 };
 		ass_free_track(track);
 	}
@@ -493,7 +493,7 @@ HRESULT DirectRender::RenderFrame(AVFrame* frame, bool paused)
 		if (m_track != NULL || m_assTracks.size() > 0)
 		{
 			SIZE size_hd = Get720Size(frame->width, frame->height);
-			ass_set_frame_size(AssEngine::Instance().ass_renderer, size_hd.cx, size_hd.cy);
+			ass_set_frame_size(AssEngine::InstanceDX().ass_renderer, size_hd.cx, size_hd.cy);
 			int subtime = frame->pts * 1000 / 20;
 
 
@@ -534,7 +534,7 @@ HRESULT DirectRender::RenderFrame(AVFrame* frame, bool paused)
 			}
 			if (m_track != NULL) //设置的字幕叠加
 			{
-				ass_image* imgAss = ass_render_frame(AssEngine::Instance().ass_renderer, m_track, subtime, NULL);
+				ass_image* imgAss = ass_render_frame(AssEngine::InstanceDX().ass_renderer, m_track, subtime, NULL);
 				if (imgAss != NULL)
 				{
 					blendass(frame->data[0], frame->linesize[0], frame->height, imgAss);
@@ -544,7 +544,7 @@ HRESULT DirectRender::RenderFrame(AVFrame* frame, bool paused)
 
 			if (m_cachetrack != NULL) //cache字幕叠加
 			{
-				ass_image* imgCache = ass_render_frame(AssEngine::Instance().ass_renderer, m_cachetrack, subtime, NULL);
+				ass_image* imgCache = ass_render_frame(AssEngine::InstanceDX().ass_renderer, m_cachetrack, subtime, NULL);
 				if (imgCache != NULL)
 				{
 					blendass(frame->data[0], frame->linesize[0], frame->height, imgCache);

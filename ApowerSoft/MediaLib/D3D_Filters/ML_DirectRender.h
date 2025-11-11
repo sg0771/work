@@ -18,31 +18,31 @@
 #define _b(c)  (((c)>>8)&0xFF)
 #define _a(c)  ((c)&0xFF)
 
-  struct FpsInfo {
-	float  fps; //ÎÒÃÇĞèÒª¼ÆËãµÄFPSÖµ
-	int     frameCount;//Ö¡Êı
-	float  currentTime;//µ±Ç°Ê±¼ä
-	float  lastTime;//³ÖĞøÊ±¼ä
+struct FpsInfo {
+	float  fps; //æˆ‘ä»¬éœ€è¦è®¡ç®—çš„FPSå€¼
+	int     frameCount;//å¸§æ•°
+	float  currentTime;//å½“å‰æ—¶é—´
+	float  lastTime;//æŒç»­æ—¶é—´
 };
 
-  struct Vertex
-  {
-	  Vertex() {}
-	  Vertex(
-		  float x, float y, float z,
-		  float nx, float ny, float nz,
-		  float u, float v)
-	  {
-		  _x = x;  _y = y;  _z = z;
-		  _nx = nx; _ny = ny; _nz = nz;
-		  _u = u;  _v = v;
-	  }
-	  float _x, _y, _z;
-	  float _nx, _ny, _nz;
-	  float _u, _v;
-	  static const DWORD FVF;
+struct Vertex
+{
+	Vertex() {}
+	Vertex(
+		float x, float y, float z,
+		float nx, float ny, float nz,
+		float u, float v)
+	{
+		_x = x;  _y = y;  _z = z;
+		_nx = nx; _ny = ny; _nz = nz;
+		_u = u;  _v = v;
+	}
+	float _x, _y, _z;
+	float _nx, _ny, _nz;
+	float _u, _v;
+	static const DWORD FVF;
 
-  };
+};
 
 
 class DirectRender
@@ -50,7 +50,7 @@ class DirectRender
 	int width;
 	int height;
 
-	IDirect3DDevice9Ex *Device;
+	IDirect3DDevice9Ex* Device;
 
 	FpsInfo fps_info;
 	D3DVIEWPORT9 viewport;
@@ -58,7 +58,7 @@ class DirectRender
 	int frameheight;
 
 	int render_width;
-	int render_height ;
+	int render_height;
 
 
 
@@ -70,9 +70,9 @@ class DirectRender
 	IMulD3DFilter* m_ColorFilter;
 	ID3DFilter* m_CurrentFilter;
 	ID3DFilter* m_delogoFilter;
-	
 
-	
+
+
 	bool needupdaterendersize = true;
 	bool needRefresh = true;
 	bool RealtimeRefresh = false;
@@ -80,8 +80,8 @@ class DirectRender
 
 	int64_t lastpts;
 	bool IsInvalid = false;
-	ASS_Track* m_track  = NULL;
-	std::vector<ASSTrackHandler> m_assTracks;//×ÖÄ»¹ìµÀ
+	ASS_Track* m_track = NULL;
+	std::vector<ASSTrackHandler> m_assTracks;//å­—å¹•è½¨é“
 	ASS_Track* m_cachetrack = NULL;
 
 	WXLocker m_lckAss;
@@ -90,7 +90,7 @@ public:
 	int64_t GetLastPTS() { return lastpts; }
 	HRESULT SetPreviewSize(int width, int height);
 	HRESULT InitDevice(BOOL debugmode);
-	
+
 	HRESULT ReleaseDevice();
 	HRESULT ResetFilterParamenter();
 	HRESULT SetChromaParamenter(ChromaKeyContext context);
@@ -101,8 +101,8 @@ public:
 	HRESULT SetPreviewAss(std::string asscontent);
 	HRESULT SetTrackAss(std::vector<AssContext> asscontexts);
 	HRESULT SetCacheAss(std::string asscontent);
-	RECT GetAssEventSize(int framewidth, int frameheight, float ts , std::string name);
-	RECT GetAssPreviewSize(int width, int height, float ts, std::string name , std::string asscontent);
+	RECT GetAssEventSize(int framewidth, int frameheight, float ts, std::string name);
+	RECT GetAssPreviewSize(int width, int height, float ts, std::string name, std::string asscontent);
 	RECT GetAssCursorRect(int framewidth, int frameheight, float ts, int index, int cursorindex);
 	IDirect3DSurface9* GetFrontSurface();
 	HRESULT RenderFrame(AVFrame* frame, bool paused);
@@ -112,7 +112,7 @@ public:
 	}
 	HRESULT Setup();
 	HRESULT CompileShader();
-	
+
 private:
 	DirectRender();
 	~DirectRender();

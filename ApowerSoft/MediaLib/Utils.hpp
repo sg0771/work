@@ -1,4 +1,4 @@
-﻿#ifndef __UTILS_HPP__
+#ifndef __UTILS_HPP__
 #define __UTILS_HPP__
 
 
@@ -51,7 +51,7 @@
 #include <cstddef>
 #include <xutility>
 #include <type_traits>
-#include <libyuv/libyuv.h>
+#include <libyuv.h>
 
 #include <libass/ass.h>
 #include <initializer_list>
@@ -120,7 +120,13 @@ public:
     }
     ~AssEngine() {}
 
-    static AssEngine& Instance()
+    static AssEngine& InstanceDX()
+    {
+        static AssEngine engine;
+        return engine;
+    }
+
+    static AssEngine& InstanceML()
     {
         static AssEngine engine;
         return engine;
@@ -149,12 +155,11 @@ public:
         ass_set_fonts(ass_renderer, NULL, "arial", ASS_FONTPROVIDER_AUTODETECT, NULL, 1);
     }
 
-
     ASS_Track* Read(std::string strContext) {
         ASS_Track* track = nullptr;
         if (strContext.length() == 0)
             return track;
-        track = ass_read_memory(AssEngine::Instance().ass_library, (char*)strContext.c_str(), strContext.length(), NULL);
+        track = ass_read_memory(this->ass_library, (char*)strContext.c_str(), strContext.length(), NULL);
         if (track != nullptr) { // 内存数据
             return track;
         }
@@ -165,9 +170,10 @@ public:
         if (assContext.length() == 0) { //空文本
             return nullptr;
         }
-        track = ass_read_memory(AssEngine::Instance().ass_library, (char*)assContext.c_str(), assContext.length(), NULL);
+        track = ass_read_memory(this->ass_library, (char*)assContext.c_str(), assContext.length(), NULL);
         return track;
     }
+
 };
 
 typedef struct image_s {

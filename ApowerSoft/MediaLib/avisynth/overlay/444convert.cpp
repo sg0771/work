@@ -37,7 +37,7 @@
 #include "avisynth/avisynth_stdafx.h"
 
 #include "444convert.h"
-#include <libyuv/libyuv.h>
+#include <libyuv.h>
 void Convert444FromYV12::ConvertImage(PVideoFrame src, Image444* dst, IScriptEnvironment* env) {
   env->BitBlt(dst->GetPtr(PLANAR_Y), dst->pitch,
     src->GetReadPtr(PLANAR_Y),src->GetPitch(PLANAR_Y), src->GetRowSize(PLANAR_Y), src->GetHeight());

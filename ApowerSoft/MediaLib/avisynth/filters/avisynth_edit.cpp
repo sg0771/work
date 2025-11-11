@@ -1,4 +1,4 @@
-﻿// Avisynth v2.5.  Copyright 2002 Ben Rudiak-Gould et al.
+// Avisynth v2.5.  Copyright 2002 Ben Rudiak-Gould et al.
 // http://www.avisynth.org
 
 // This program is free software; you can redistribute it and/or modify
@@ -813,7 +813,7 @@ const VideoInfo& AudioDub::GetVideoInfo()
 PVideoFrame AudioDub::GetFrame(int n, IScriptEnvironment* env) 
 {
     PVideoFrame pDst =  vchild->GetFrame(n, env);
-    if (pDst.m_ptr == nullptr)
+    if (pDst == nullptr || pDst.m_ptr == nullptr)
         return nullptr;
     return pDst;
 }

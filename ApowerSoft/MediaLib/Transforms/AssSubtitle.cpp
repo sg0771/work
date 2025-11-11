@@ -15,7 +15,7 @@ protected:
     PVideoFrame blendimage24(PVideoFrame baseframe, ass_image* subimage, IScriptEnvironment* env);
 
 public:
-    //ass ÎÄ¼þÄÚÈÝ×îºÃÊÇ±ê×¼¸ñÊ½
+    //ass æ–‡ä»¶å†…å®¹æœ€å¥½æ˜¯æ ‡å‡†æ ¼å¼
     AssSubtitle(PClip clip, std::string assfile, std::string font, int offset, int substart, int subend, IScriptEnvironment* env);
     ~AssSubtitle();
     PVideoFrame __stdcall GetFrame(int n, IScriptEnvironment* env) override;
@@ -34,14 +34,14 @@ public:
 
 AssSubtitle::~AssSubtitle()
 {
-  if(m_track)
-      ass_free_track(m_track);
+    if (m_track)
+        ass_free_track(m_track);
 }
 
-AssSubtitle::AssSubtitle(PClip clip, std::string _assfile_utf8, std::string font, int _offset, int _substart, int _subend, IScriptEnvironment* env):
-    GenericVideoFilter(clip,__FUNCTION__ ), assfile(_assfile_utf8), offset(_offset), substart(_substart), subend(_subend){
-    m_ass_renderer = AssEngine::Instance().ass_renderer;
-    m_track = AssEngine::Instance().Read(_assfile_utf8);
+AssSubtitle::AssSubtitle(PClip clip, std::string _assfile_utf8, std::string font, int _offset, int _substart, int _subend, IScriptEnvironment* env) :
+    GenericVideoFilter(clip, __FUNCTION__), assfile(_assfile_utf8), offset(_offset), substart(_substart), subend(_subend) {
+    m_ass_renderer = AssEngine::InstanceML().ass_renderer;
+    m_track = AssEngine::InstanceML().Read(_assfile_utf8);
 }
 
 AVSValue Create_AssSubtitle(AVSValue args, void* user_data, IScriptEnvironment* env) {
@@ -58,14 +58,14 @@ PVideoFrame AssSubtitle::blendimage(PVideoFrame baseframe, ass_image* subimage, 
     auto baseimage_read = baseframe->GetReadPtr();
 
     env->MakeWritable(&baseframe);
-    
+
     auto baseimage_write = baseframe->GetWritePtr();
 
     while (subimage) {
         if (subimage->w >= 65535 || subimage->h >= 65535 || subimage->w <= 0 || subimage->h <= 0)
             break;
 
-        //»Ò¶ÈÍ¼»¹Ô­³Érgba¸ñÊ½
+        //ç°åº¦å›¾è¿˜åŽŸæˆrgbaæ ¼å¼
         int x, y;
         unsigned char opacity = 255 - _a(subimage->color);
         unsigned char r = _r(subimage->color);
@@ -74,13 +74,13 @@ PVideoFrame AssSubtitle::blendimage(PVideoFrame baseframe, ass_image* subimage, 
 
         unsigned char* src = subimage->bitmap;
         unsigned char* dst;
-        
-        auto subargbdata = gen_image(subimage->w , subimage->h );
+
+        auto subargbdata = gen_image(subimage->w, subimage->h);
         if (subargbdata == NULL || subargbdata->buffer == NULL)
         {
             break;
         }
-        dst = subargbdata->buffer + subargbdata->stride* (subimage->h-1);
+        dst = subargbdata->buffer + subargbdata->stride * (subimage->h - 1);
 
         uint8_t ks[256] = {};
         for (size_t i = 0; i < 256; i++)
@@ -88,11 +88,11 @@ PVideoFrame AssSubtitle::blendimage(PVideoFrame baseframe, ass_image* subimage, 
             ks[i] = (uint8_t)(i * opacity / 255);
         }
 
-       
+
         for (y = 0; y < subimage->h; ++y) {
             for (x = 0; x < subimage->w; ++x) {
 
-                if (src[x]==0)
+                if (src[x] == 0)
                 {
                     continue;
                 }
@@ -100,7 +100,7 @@ PVideoFrame AssSubtitle::blendimage(PVideoFrame baseframe, ass_image* subimage, 
                 //*((int*)dst) = k << 24 +  r<< 16 + g << 8 + b;
                 // possible endianness problems
                 dst[x * 4] = b;
-                dst[x * 4 + 1] = g ;
+                dst[x * 4 + 1] = g;
                 dst[x * 4 + 2] = r;
                 dst[x * 4 + 3] = k;
 
@@ -109,17 +109,17 @@ PVideoFrame AssSubtitle::blendimage(PVideoFrame baseframe, ass_image* subimage, 
             dst -= subargbdata->stride;
         }
 
-        //rgbaÊý¾Ýµþ¼Óµ½µ×Í¼ÉÏ
+        //rgbaæ•°æ®å åŠ åˆ°åº•å›¾ä¸Š
         int xdest = subimage->dst_x;
 
 
-        int ydest = vi.height - subimage->h- subimage->dst_y;
+        int ydest = vi.height - subimage->h - subimage->dst_y;
         ydest = (ydest < 0) ? 0 : ydest;
         auto baseimage_read_clip = baseimage_write + 4 * xdest + ydest * baseframe->GetPitch();
 
-        auto baseimage_write_clip = baseimage_write + 4 * xdest + ydest  * baseframe->GetPitch();
+        auto baseimage_write_clip = baseimage_write + 4 * xdest + ydest * baseframe->GetPitch();
         auto over = subargbdata->buffer;
-        
+
         libyuv::ARGBAttenuate(over, subargbdata->stride, over, subargbdata->stride, subargbdata->width, subargbdata->height);
         libyuv::ARGBBlend(over, subargbdata->stride, baseimage_read_clip, baseframe->GetPitch(), baseimage_write_clip, baseframe->GetPitch(), subargbdata->width, subargbdata->height);
 
@@ -148,7 +148,7 @@ PVideoFrame AssSubtitle::blendimage24(PVideoFrame baseframe, ass_image* subimage
     auto baseimage_read = baseframe->GetReadPtr();
 
     env->MakeWritable(&baseframe);
-    
+
     auto baseimage_write = baseframe->GetWritePtr();
 
     while (subimage) {
@@ -162,7 +162,7 @@ PVideoFrame AssSubtitle::blendimage24(PVideoFrame baseframe, ass_image* subimage
         unsigned char b = _b(subimage->color);
 
 
-        //×ÖÄ»µþ¼Óµ½µ×Í¼ÉÏ
+        //å­—å¹•å åŠ åˆ°åº•å›¾ä¸Š
         int xdest = subimage->dst_x;
 
 
@@ -202,10 +202,10 @@ PVideoFrame __stdcall AssSubtitle::GetFrame(int n, IScriptEnvironment* env) {
         return srcFrame;
     }
 
-    //ÐÞ¸´×ÖÄ»Ê±¼ä´ÁÎÊÌâ
+    //ä¿®å¤å­—å¹•æ—¶é—´æˆ³é—®é¢˜
     if (n >= offset && n <= offset + subend - substart)
     {
-        int subtime = (n-offset + this->substart) * vi.fps_denominator * 1000 / vi.fps_numerator;
+        int subtime = (n - offset + this->substart) * vi.fps_denominator * 1000 / vi.fps_numerator;
         ass_set_frame_size(m_ass_renderer, vi.width, vi.height);
         ass_image* imgAss = ass_render_frame(m_ass_renderer, m_track, subtime, NULL);
         if (imgAss)

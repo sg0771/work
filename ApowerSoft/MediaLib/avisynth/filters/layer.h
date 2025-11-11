@@ -44,7 +44,7 @@
 
 #include "avisynth/avisynth_stdafx.h"
 #include <vector>
-#include <libyuv/libyuv.h>
+#include <libyuv.h>
 /********************************************************************
 ********************************************************************/
 

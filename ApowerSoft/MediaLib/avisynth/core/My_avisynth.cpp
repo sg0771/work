@@ -774,6 +774,7 @@ void __stdcall ScriptEnvironment::SetTimelineInfo(TimelineInfo  info)
     timelineInfo->m_IndexDir= info.m_IndexDir;
     timelineInfo->ispreview = info.ispreview;
     timelineInfo->SampleRate= info.SampleRate;
+   // timelineInfo->m_TransDir = info.m_TransDir;
 }
 
 TimelineInfo * __stdcall ScriptEnvironment::GetTimelineInfo()
@@ -1660,7 +1661,7 @@ success:;
 bool ScriptEnvironment::FunctionExists(const char* name) {
   return function_table.Exists(name);
 }
-#include <libyuv/libyuv.h>
+#include <libyuv.h>
 void BitBlt(BYTE* dstp, int dst_pitch, const BYTE* srcp, int src_pitch, int row_size, int height) {
    
     if ((!dstp) || (!srcp)) return;
@@ -1988,7 +1989,7 @@ EXTERN_C void* __stdcall CreateScriptEnvironment(int version/* = AVISYNTH_INTERF
 }
 
 //--------------------------------------------------------------------------------------------------------
-static int g_count_clip = 0;//clip count
+static int g_count_clip = 0;//clip ����
 
 IClip::IClip(const char* name) {
     std::string str = name;
@@ -1999,16 +2000,16 @@ IClip::IClip(const char* name) {
     else {
         m_strName = name;
     }
-    int uselog = MLIniGetValue(L"uselog",-1);
-    if (uselog > 0) {
+    int uselog = ML_GetValue(L"uselog");
+    if (uselog) {
         g_count_clip++;
         WXLogA("ICip Create [%s]  [count=%d]", m_strName.c_str(), g_count_clip);
     }
 }
 
 __stdcall IClip::~IClip() {
-    int uselog = MLIniGetValue(L"uselog", -1);
-    if (uselog > 0) {
+    int uselog = ML_GetValue(L"uselog");
+    if (uselog) {
         g_count_clip--;
         WXLogA("ICip Destroy [%s]  [count=%d]", m_strName.c_str(), g_count_clip);
         WXLogA("Malloc [%lld][%lld]", g_malloc, g_malloc_size);

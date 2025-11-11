@@ -91,10 +91,10 @@ enum {
 class AVSValue;
 
 // Base class for all filters.
-#define MAIN_VIDEO     0   //ä¸»è½¨é“/è½¬åœº
-#define MASK_VIDEO     1   //åŠ¨ç”»çš„Mask
-#define SUB_VIDEO      2   //åŒ…æ‹¬ç”»ä¸­ç”»/åŠ¨ç”»ï¼Œä»Ž2 å¼€å§‹ , æœ€å¤§å€¼6 è’™ç‰ˆåº”è¯¥æ˜¯å›¾åƒï¼Œä¸ä½¿ç”¨
-#define MAX_CHANNEL    10   //æœ€å¤§è½¨é“æ•°é‡
+#define MAIN_VIDEO     0   //Ö÷¹ìµÀ/×ª³¡
+#define MASK_VIDEO     1   //¶¯»­µÄMask
+#define SUB_VIDEO      2   //°üÀ¨»­ÖÐ»­/¶¯»­£¬´Ó2 ¿ªÊ¼ , ×î´óÖµ6 ÃÉ°æÓ¦¸ÃÊÇÍ¼Ïñ£¬²»Ê¹ÓÃ
+#define MAX_CHANNEL    10   //×î´ó¹ìµÀÊýÁ¿
 class IClip {
 	friend class PClip;
 	friend class AVSValue;
@@ -102,7 +102,7 @@ class IClip {
 	void AddRef() { InterlockedIncrement(&refcnt); }
 	void Release() { if (!InterlockedDecrement(&refcnt)) delete this; }
 
-	int m_id = -1;//æ ‡è®°è§†é¢‘åœ¨å“ªä¸ªè½¨é“ä¸Š
+	int m_id = -1;//±ê¼ÇÊÓÆµÔÚÄÄ¸ö¹ìµÀÉÏ
 	std::string m_strName = "IClip";
 public:
 	void SetID(int id) {
@@ -116,14 +116,14 @@ public:
 	virtual PVideoFrame __stdcall GetFrame(int n, IScriptEnvironment* env) = 0;
 	virtual bool __stdcall GetParity(int n) = 0;  // return field parity if field_based, else parity of first field in frame
 	virtual void __stdcall GetAudio(void* buf, __int64 start, __int64 count, IScriptEnvironment* env) = 0;  // start and count are in samples
-	/* Need to check GetVersion first, pre v5 will return random crap from EAX reg. */
+																											/* Need to check GetVersion first, pre v5 will return random crap from EAX reg. */
 	virtual intptr_t __stdcall SetCacheHints(int cachehints, int frame_range) = 0;  // We do not pass cache requests upwards, only to the next filter.
 	virtual const VideoInfo& __stdcall GetVideoInfo() = 0;
 	//virtual void __stdcall Invoke(const char* name,  void * args) { return ; };
 	virtual __stdcall ~IClip();
 }; // end class IClip
 
-// smart pointer to IClip
+   // smart pointer to IClip
 class PClip {
 	IClip* GetPointerWithAddRef() const { if (p) p->AddRef(); return p; }
 
@@ -248,9 +248,9 @@ public:
 	void CONSTRUCTOR7(const char* s) { type = 's'; string = s; }
 
 	AVSValue(const AVSValue* a, int size) { CONSTRUCTOR8(a, size); }
-	void CONSTRUCTOR8(const AVSValue* a, int size) {
+	void CONSTRUCTOR8(const AVSValue* a, int size) { 
 		type = 'a';
-		array = a;
+		array = a; 
 		array_size = (short)size;
 	}
 
@@ -286,9 +286,9 @@ public:
 	bool AsBool1() const { _ASSERTE(IsBool()); return boolean; }
 	bool AsBool() const { return AsBool1(); }
 
-	intptr_t AsPtr() const { _ASSERTE(IsPtr()); return integer; }//è¿”å›žæŒ‡é’ˆå€¼
+	intptr_t AsPtr() const { _ASSERTE(IsPtr()); return integer; }//·µ»ØÖ¸ÕëÖµ
 
-	int AsInt()      const { _ASSERTE(IsInt()); return integer; }//è¿”å›žIntå€¼
+	int AsInt()      const { _ASSERTE(IsInt()); return integer; }//·µ»ØIntÖµ
 
 
 	const char* AsString1() const { _ASSERTE(IsString()); return IsString() ? string : 0; }
@@ -357,8 +357,8 @@ enum {
 	CPUF_SSE4_1 = 0x400,
 	//CPUF_AVX          =  0x800,   //  Sandy Bridge, Bulldozer
 	CPUF_SSE4_2 = 0x1000,   //  Nehalem
-	//CPUF_AVX2         = 0x2000,   //  Haswell
-	//CPUF_AVX512       = 0x4000,   //  Knights Landing
+							//CPUF_AVX2         = 0x2000,   //  Haswell
+							//CPUF_AVX512       = 0x4000,   //  Knights Landing
 };
 
 struct TimelineInfo
@@ -449,7 +449,7 @@ protected:
 public:
 	virtual ~GenericVideoFilter() {}
 	GenericVideoFilter(PClip _child, const char* name) :
-		IClip(name), child(_child) {
+		IClip(name), child(_child) { 
 		int id = _child->GetID();
 		this->SetID(id);
 		vi = child->GetVideoInfo();

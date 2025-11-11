@@ -38,7 +38,7 @@
 #define __Convert_PLANAR_H__
 
 #include "avisynth/avisynth_stdafx.h"
-#include <libyuv/libyuv.h>
+#include <libyuv.h>
 
 class ConvertToY8 : public GenericVideoFilter
 {

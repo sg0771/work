@@ -39,7 +39,7 @@
 #include "resample_functions.h"
 #include "transform.h"
 #include "../core/softwire_helpers.h"
-#include <libyuv/libyuv.h>
+#include <libyuv.h>
 
 class FilteredResizeV : public GenericVideoFilter, public  CodeGenerator 
 /**
