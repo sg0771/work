@@ -10,7 +10,7 @@
 #define MacImageRender_h
 
 #include "WXMediaCpp.h"
-#include <libyuv/libyuv.h>
+#include <libyuv.h>
 #import  <Cocoa/Cocoa.h>
 #import  <Appkit/Appkit.h>
 

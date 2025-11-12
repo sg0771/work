@@ -77,8 +77,8 @@ LRESULT CLASS_NAME::OnBnClickedStartStop(WORD /*wNotifyCode*/, WORD /*wID*/, HWN
 		else {
 			return 0;
 		}
-		WXIniSetValue(L"HwVideoDecode", m_bHW); //使用硬解码
-		WXIniSetValue(L"MediaPlayer", m_bLav); // 是否使用LAV播放器
+		WXSetGlobalValue(L"HwVideoDecode", m_bHW); //使用硬解码
+		WXSetGlobalValue(L"MediaPlayer", m_bLav); // 是否使用LAV播放器
 		m_player = WXFfplayCreate(L"FFPLAY", m_strFileName, 100, 0);
 		if (m_player) {
 			WXFfplaySetView(m_player, m_hWndVideo);

@@ -45,10 +45,6 @@ public:
   STDMETHODIMP PostConnect(IPin *pPin);
   STDMETHODIMP BreakConnect();
 
-  // HWAccel Query
-  STDMETHODIMP_(BOOL) IsHWDecoderActive() { return m_bHWDecoder; }
-  STDMETHODIMP GetHWAccelActiveDevice(BSTR *pstrDeviceName) { return m_pDecoder ? m_pDecoder->GetHWAccelActiveDevice(pstrDeviceName) : E_UNEXPECTED; }
-
   // ILAVDecoder (partial)
   STDMETHODIMP_(const WCHAR*) GetDecoderName() { return m_pDecoder ? m_pDecoder->GetDecoderName() : nullptr; }
   STDMETHODIMP_(long) GetBufferCount(long *pMaxBuffers) { return m_pDecoder ? m_pDecoder->GetBufferCount(pMaxBuffers) : 4; }
@@ -64,8 +60,7 @@ private:
 
   AVCodecID    m_Codec      = AV_CODEC_ID_NONE;
 
-  BOOL         m_bHWDecoder = FALSE;
-  BOOL         m_bHWDecoderFailed = FALSE;
+
 
   BOOL         m_bWMV9Failed = FALSE;
 

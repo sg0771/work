@@ -124,30 +124,10 @@ HRESULT CLAVVideo::LoadDefaults()
   m_settings.bPixFmts[LAVOutPixFmt_YV16] = FALSE;
   m_settings.bPixFmts[LAVOutPixFmt_AYUV] = FALSE;
 
-  m_settings.HWAccel = HWAccel_None;
-  for (int i = 0; i < HWCodec_NB; ++i)
-    m_settings.bHWFormats[i] = TRUE;
-
-  m_settings.bHWFormats[HWCodec_MPEG4] = FALSE;
-  m_settings.bHWFormats[HWCodec_VP9] = FALSE;
-
-  m_settings.HWAccelResFlags = LAVHWResFlag_SD|LAVHWResFlag_HD|LAVHWResFlag_UHD;
-
-  m_settings.HWAccelCUVIDXVA = TRUE;
-
-  m_settings.HWDeintMode = HWDeintMode_Weave;
-  m_settings.HWDeintOutput = DeintOutput_FramePerField;
-
   m_settings.SWDeintMode = SWDeintMode_None;
   m_settings.SWDeintOutput = DeintOutput_FramePerField;
 
   m_settings.DitherMode = LAVDither_Random;
-
-  m_settings.HWAccelDeviceDXVA2 = LAVHWACCEL_DEVICE_DEFAULT;
-  m_settings.HWAccelDeviceDXVA2Desc = 0;
-
-  m_settings.HWAccelDeviceD3D11 = LAVHWACCEL_DEVICE_DEFAULT;
-  m_settings.HWAccelDeviceD3D11Desc = 0;
 
   m_settings.bH264MVCOverride = TRUE;
 
@@ -170,124 +150,7 @@ HRESULT CLAVVideo::LoadSettings()
 
 HRESULT CLAVVideo::ReadSettings(HKEY rootKey)
 {
-  //HRESULT hr;
-  //BOOL bFlag;
-  //DWORD dwVal;
 
-  //CRegistry reg = CRegistry(rootKey, LAVC_VIDEO_REGISTRY_KEY, hr, TRUE);
-  //if (SUCCEEDED(hr)) {
-
-  //  dwVal = reg.ReadDWORD(L"StreamAR", hr);
-  //  if (SUCCEEDED(hr)) m_settings.StreamAR = dwVal;
-
-  //  dwVal = reg.ReadDWORD(L"NumThreads", hr);
-  //  if (SUCCEEDED(hr)) m_settings.NumThreads = dwVal;
-
-  //  dwVal = reg.ReadDWORD(L"DeintFieldOrder", hr);
-  //  if (SUCCEEDED(hr)) m_settings.DeintFieldOrder = dwVal;
-
-  //  // Load deprecated deint flags and convert them
-  //  bFlag = reg.ReadBOOL(L"DeintAggressive", hr);
-  //  if (SUCCEEDED(hr) && bFlag) m_settings.DeintMode = DeintMode_Aggressive;
-
-  //  bFlag = reg.ReadBOOL(L"DeintForce", hr);
-  //  if (SUCCEEDED(hr) && bFlag) m_settings.DeintMode = DeintMode_Force;
-
-  //  bFlag = reg.ReadBOOL(L"DeintTreatAsProgressive", hr);
-  //  if (SUCCEEDED(hr) && bFlag) m_settings.DeintMode = DeintMode_Disable;
-
-  //  dwVal = reg.ReadDWORD(L"DeintMode", hr);
-  //  if (SUCCEEDED(hr)) m_settings.DeintMode = (LAVDeintMode)dwVal;
-
-  //  dwVal = reg.ReadDWORD(L"RGBRange", hr);
-  //  if (SUCCEEDED(hr)) m_settings.RGBRange = dwVal;
-
-  //  dwVal = reg.ReadDWORD(L"SWDeintMode", hr);
-  //  if (SUCCEEDED(hr)) m_settings.SWDeintMode = dwVal;
-
-  //  dwVal = reg.ReadDWORD(L"SWDeintOutput", hr);
-  //  if (SUCCEEDED(hr)) m_settings.SWDeintOutput = dwVal;
-
-  //  dwVal = reg.ReadDWORD(L"DitherMode", hr);
-  //  if (SUCCEEDED(hr)) m_settings.DitherMode = dwVal;
-
-  //  bFlag = reg.ReadBOOL(L"DVDVideo", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bDVDVideo = bFlag;
-
-  //  bFlag = reg.ReadBOOL(L"MSWMV9DMO", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bMSWMV9DMO = bFlag;
-  //}
-
-  //CRegistry regF = CRegistry(rootKey, LAVC_VIDEO_REGISTRY_KEY_FORMATS, hr, TRUE);
-  //if (SUCCEEDED(hr)) {
-  //  for (int i = 0; i < Codec_VideoNB; ++i) {
-  //    const video_codec_config_t *info = get_codec_config((LAVVideoCodec)i);
-  //    ATL::CA2W name(info->name);
-  //    bFlag = regF.ReadBOOL(name, hr);
-  //    if (SUCCEEDED(hr)) m_settings.bFormats[i] = bFlag;
-  //  }
-  //}
-
-  //CRegistry regP = CRegistry(rootKey, LAVC_VIDEO_REGISTRY_KEY_OUTPUT, hr, TRUE);
-  //if (SUCCEEDED(hr)) {
-  //  for (int i = 0; i < LAVOutPixFmt_NB; ++i) {
-  //    bFlag = regP.ReadBOOL(pixFmtSettingsMap[i], hr);
-  //    if (SUCCEEDED(hr)) m_settings.bPixFmts[i] = bFlag;
-  //  }
-  //  // Force disable, for future use
-  //  m_settings.bPixFmts[LAVOutPixFmt_YV16] = FALSE;
-  //}
-
-  //CRegistry regHW = CRegistry(rootKey, LAVC_VIDEO_REGISTRY_KEY_HWACCEL, hr, TRUE);
-  //if (SUCCEEDED(hr)) {
-  //  dwVal = regHW.ReadDWORD(L"HWAccel", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWAccel = dwVal;
-
-  //  bFlag = regHW.ReadBOOL(L"h264", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bHWFormats[HWCodec_H264] = bFlag;
-
-  //  bFlag = regHW.ReadBOOL(L"vc1", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bHWFormats[HWCodec_VC1] = bFlag;
-
-  //  bFlag = regHW.ReadBOOL(L"mpeg2", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bHWFormats[HWCodec_MPEG2] = bFlag;
-
-  //  bFlag = regHW.ReadBOOL(L"mpeg4", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bHWFormats[HWCodec_MPEG4] = bFlag;
-
-  //  bFlag = regHW.ReadBOOL(L"dvd", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bHWFormats[HWCodec_MPEG2DVD] = bFlag;
-
-  //  bFlag = regHW.ReadBOOL(L"hevc", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bHWFormats[HWCodec_HEVC] = bFlag;
-
-  //  bFlag = regHW.ReadBOOL(L"vp9", hr);
-  //  if (SUCCEEDED(hr)) m_settings.bHWFormats[HWCodec_VP9] = bFlag;
-
-  //  dwVal = regHW.ReadDWORD(L"HWResFlags", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWAccelResFlags = dwVal;
-
-  //  dwVal = regHW.ReadDWORD(L"HWDeintMode", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWDeintMode = dwVal;
-
-  //  dwVal = regHW.ReadDWORD(L"HWDeintOutput", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWDeintOutput = dwVal;
-
-  //  dwVal = regHW.ReadDWORD(L"HWAccelDeviceDXVA2", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWAccelDeviceDXVA2 = dwVal;
-
-  //  dwVal = regHW.ReadDWORD(L"HWAccelDeviceDXVA2Desc", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWAccelDeviceDXVA2Desc = dwVal;
-
-  //  dwVal = regHW.ReadDWORD(L"HWAccelDeviceD3D11", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWAccelDeviceD3D11 = dwVal;
-
-  //  dwVal = regHW.ReadDWORD(L"HWAccelDeviceD3D11Desc", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWAccelDeviceD3D11Desc = dwVal;
-
-  //  bFlag = regHW.ReadBOOL(L"HWAccelCUVIDXVA", hr);
-  //  if (SUCCEEDED(hr)) m_settings.HWAccelCUVIDXVA = bFlag;
-  //}
 
   return S_OK;
 }
@@ -2151,86 +2014,6 @@ STDMETHODIMP_(DWORD) CLAVVideo::GetRGBOutputRange()
   return m_settings.RGBRange;
 }
 
-STDMETHODIMP_(DWORD) CLAVVideo::CheckHWAccelSupport(LAVHWAccel hwAccel)
-{
-  if (hwAccel == m_settings.HWAccel && m_Decoder.IsHWDecoderActive())
-    return 2;
-
-  HRESULT hr = E_FAIL;
-  ILAVDecoder *pDecoder = CDecodeManager::CreateHWAccelDecoder(hwAccel);
-
-  if (pDecoder) {
-    hr = pDecoder->InitInterfaces(this, this);
-    if (SUCCEEDED(hr)) {
-      hr = pDecoder->Check();
-    }
-    SAFE_DELETE(pDecoder);
-  }
-
-  return SUCCEEDED(hr) ? 1 : 0;
-}
-
-STDMETHODIMP CLAVVideo::SetHWAccel(LAVHWAccel hwAccel)
-{
-  m_settings.HWAccel = hwAccel;
-  return SaveSettings();
-}
-
-STDMETHODIMP_(LAVHWAccel) CLAVVideo::GetHWAccel()
-{
-  return (LAVHWAccel)m_settings.HWAccel;
-}
-
-STDMETHODIMP CLAVVideo::SetHWAccelCodec(LAVVideoHWCodec hwAccelCodec, BOOL bEnabled)
-{
-  if (hwAccelCodec < 0 || hwAccelCodec >= HWCodec_NB)
-    return E_FAIL;
-
-  m_settings.bHWFormats[hwAccelCodec] = bEnabled;
-  m_settings.HWAccel = HWAccel_DXVA2;
-  return SaveSettings();
-}
-
-STDMETHODIMP_(BOOL) CLAVVideo::GetHWAccelCodec(LAVVideoHWCodec hwAccelCodec)
-{
-  if (hwAccelCodec < 0 || hwAccelCodec >= HWCodec_NB)
-    return FALSE;
-
-  return m_settings.bHWFormats[hwAccelCodec];
-}
-
-STDMETHODIMP CLAVVideo::SetHWAccelDeintMode(LAVHWDeintModes deintMode)
-{
-  m_settings.HWDeintMode = deintMode;
-  return SaveSettings();
-}
-
-STDMETHODIMP_(LAVHWDeintModes) CLAVVideo::GetHWAccelDeintMode()
-{
-  return (LAVHWDeintModes)m_settings.HWDeintMode;
-}
-
-STDMETHODIMP CLAVVideo::SetHWAccelDeintOutput(LAVDeintOutput deintOutput)
-{
-  m_settings.HWDeintOutput = deintOutput;
-  return SaveSettings();
-}
-
-STDMETHODIMP_(LAVDeintOutput) CLAVVideo::GetHWAccelDeintOutput()
-{
-  return (LAVDeintOutput)m_settings.HWDeintOutput;
-}
-
-STDMETHODIMP CLAVVideo::SetHWAccelDeintHQ(BOOL bHQ)
-{
-  m_settings.HWAccelCUVIDXVA = bHQ;
-  return SaveSettings();
-}
-
-STDMETHODIMP_(BOOL) CLAVVideo::GetHWAccelDeintHQ()
-{
-  return m_settings.HWAccelCUVIDXVA;
-}
 
 STDMETHODIMP CLAVVideo::SetSWDeintMode(LAVSWDeintModes deintMode)
 {
@@ -2298,16 +2081,7 @@ STDMETHODIMP_(BOOL) CLAVVideo::GetDVDVideoSupport()
   return m_settings.bDVDVideo;
 }
 
-STDMETHODIMP CLAVVideo::SetHWAccelResolutionFlags(DWORD dwResFlags)
-{
-  m_settings.HWAccelResFlags = dwResFlags;
-  return SaveSettings();
-}
 
-STDMETHODIMP_(DWORD) CLAVVideo::GetHWAccelResolutionFlags()
-{
-  return m_settings.HWAccelResFlags;
-}
 
 STDMETHODIMP CLAVVideo::SetDeinterlacingMode(LAVDeintMode deintMode)
 {
@@ -2320,72 +2094,8 @@ STDMETHODIMP_(LAVDeintMode) CLAVVideo::GetDeinterlacingMode()
   return m_settings.DeintMode;
 }
 
-STDMETHODIMP CLAVVideo::SetGPUDeviceIndex(DWORD dwDevice)
-{
-  m_dwGPUDeviceIndex = dwDevice;
-  return S_OK;
-}
 
-STDMETHODIMP_(DWORD) CLAVVideo::GetHWAccelNumDevices(LAVHWAccel hwAccel)
-{
-  HRESULT hr = S_OK;
-  ILAVDecoder *pDecoder = CDecodeManager::CreateHWAccelDecoder(hwAccel);
-  DWORD dwDevices = 0;
-  if (pDecoder) {
-    hr = pDecoder->InitInterfaces(this, this);
-    if (SUCCEEDED(hr)) {
-      dwDevices = pDecoder->GetHWAccelNumDevices();
-    }
-    SAFE_DELETE(pDecoder);
-  }
-  return dwDevices;
-}
 
-STDMETHODIMP CLAVVideo::GetHWAccelDeviceInfo(LAVHWAccel hwAccel, DWORD dwIndex, BSTR *pstrDeviceName, DWORD *pdwDeviceIdentifier)
-{
-  HRESULT hr = E_NOINTERFACE;
-  ILAVDecoder *pDecoder = CDecodeManager::CreateHWAccelDecoder(hwAccel);
-  if (pDecoder) {
-    hr = pDecoder->InitInterfaces(this, this);
-    if (SUCCEEDED(hr)) {
-      hr = pDecoder->GetHWAccelDeviceInfo(dwIndex, pstrDeviceName, pdwDeviceIdentifier);
-    }
-    SAFE_DELETE(pDecoder);
-  }
-  return hr;
-}
-
-STDMETHODIMP_(DWORD) CLAVVideo::GetHWAccelDeviceIndex(LAVHWAccel hwAccel, DWORD *pdwDeviceIdentifier)
-{
-  HRESULT hr = S_OK;
-
-  if (pdwDeviceIdentifier)
-    *pdwDeviceIdentifier = 0;
-  return LAVHWACCEL_DEVICE_DEFAULT;
-}
-
-STDMETHODIMP CLAVVideo::SetHWAccelDeviceIndex(LAVHWAccel hwAccel, DWORD dwIndex, DWORD dwDeviceIdentifier)
-{
-  HRESULT hr = S_OK;
-
-  if (dwIndex != LAVHWACCEL_DEVICE_DEFAULT && dwDeviceIdentifier == 0)
-    hr = GetHWAccelDeviceInfo(hwAccel, dwIndex, nullptr, &dwDeviceIdentifier);
-
-  if (SUCCEEDED(hr)) {
-    if (hwAccel == HWAccel_DXVA2CopyBack) {
-      m_settings.HWAccelDeviceDXVA2 = dwIndex;
-      m_settings.HWAccelDeviceDXVA2Desc = dwDeviceIdentifier;
-    }
-    else if (hwAccel == HWAccel_D3D11) {
-      m_settings.HWAccelDeviceD3D11 = dwIndex;
-      m_settings.HWAccelDeviceD3D11Desc = dwDeviceIdentifier;
-    }
-    return SaveSettings();
-  }
-  else {
-    return E_INVALIDARG;
-  }
-}
 
 STDMETHODIMP CLAVVideo::SetH264MVCDecodingOverride(BOOL bEnabled)
 {
@@ -2393,7 +2103,3 @@ STDMETHODIMP CLAVVideo::SetH264MVCDecodingOverride(BOOL bEnabled)
   return S_OK;
 }
 
-STDMETHODIMP CLAVVideo::GetHWAccelActiveDevice(BSTR *pstrDeviceName)
-{
-  return m_Decoder.GetHWAccelActiveDevice(pstrDeviceName);
-}

@@ -1,7 +1,7 @@
 #include "ML_stdafx.h"
 #include <gdiplus.h>
 #include <dbghelp.h>
-#include <libheif/libheif/heif.h>
+#include <libheif/heif.h>
 #include <WXBase.h>
 
 EXTERN_C{

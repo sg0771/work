@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="WXMediaCpp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="GameCapture\wx_hook_helper.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -195,9 +198,6 @@
     <ClInclude Include="Lav\LavFilter\DSUtilLite_FontInstaller.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Lav\LavFilter\DSUtilLite_gpu_memcpy_sse4.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Lav\LavFilter\DSUtilLite_growarray.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -211,18 +211,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Lav\LavFilter\DSUtilLite_registry.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Lav\LavFilter\dxva_common.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Lav\LavFilter\dxva_dec.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Lav\LavFilter\dxva_SurfaceAllocator.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Lav\LavFilter\ID3DVideoMemoryConfiguration.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Lav\LavFilter\LAVAudio.h">
@@ -472,12 +460,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Lav\LavFilter\WXVideo_avcodec.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Lav\LavFilter\WXVideo_D3D11SurfaceAllocator.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Lav\LavFilter\WXVideo_d3d11va.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Lav\LavFilter\WXVideo_DecBase.h">
@@ -894,31 +876,10 @@
     <ClInclude Include="Lav\VSFilter\XSUBSubtitle.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\libs\cblas.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\f77blas.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\libs\FfmpegIncludes.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\json.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\lapack.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\lapacke.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\lapacke_config.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\lapacke_mangling.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\lapacke_utils.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\libimagequant.h">
@@ -931,9 +892,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\MediaInfoDLL.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\libs\openblas_config.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\SoundTouch.h">
@@ -952,9 +910,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libs\libyuv\libyuv.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="WXMediaCpp.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1119,15 +1074,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Lav\LavFilter\DSUtilLite_registry.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Lav\LavFilter\dxva_common.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Lav\LavFilter\dxva_dec.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Lav\LavFilter\dxva_SurfaceAllocator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Lav\LavFilter\libbluray_aacs.c">
@@ -1317,12 +1263,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Lav\LavFilter\WXSplitter_WXSplitter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Lav\LavFilter\WXVideo_D3D11SurfaceAllocator.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Lav\LavFilter\WXVideo_d3d11va.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Lav\LavFilter\WXVideo_DecodeManager.cpp">

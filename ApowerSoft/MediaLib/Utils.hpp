@@ -51,7 +51,7 @@
 #include <cstddef>
 #include <xutility>
 #include <type_traits>
-#include <libyuv.h>
+#include <libyuv/libyuv.h>
 
 #include <libass/ass.h>
 #include <initializer_list>

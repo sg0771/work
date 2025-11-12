@@ -45,32 +45,6 @@ STDMETHODIMP CDecodeManager::Close()
   return S_OK;
 }
 
-#define HWFORMAT_ENABLED \
-   ((codec == AV_CODEC_ID_H264 && m_pLAVVideo->GetHWAccelCodec(HWCodec_H264))                                                       \
-|| ((codec == AV_CODEC_ID_VC1 || codec == AV_CODEC_ID_WMV3) && m_pLAVVideo->GetHWAccelCodec(HWCodec_VC1))                           \
-|| ((codec == AV_CODEC_ID_MPEG2VIDEO || codec == AV_CODEC_ID_MPEG1VIDEO) && m_pLAVVideo->GetHWAccelCodec(HWCodec_MPEG2) && (!(m_pLAVVideo->GetDecodeFlags() & LAV_VIDEO_DEC_FLAG_DVD) || m_pLAVVideo->GetHWAccelCodec(HWCodec_MPEG2DVD)))            \
-|| (codec == AV_CODEC_ID_MPEG4 && m_pLAVVideo->GetHWAccelCodec(HWCodec_MPEG4)) \
-|| (codec == AV_CODEC_ID_HEVC && m_pLAVVideo->GetHWAccelCodec(HWCodec_HEVC)) \
-|| (codec == AV_CODEC_ID_VP9 && m_pLAVVideo->GetHWAccelCodec(HWCodec_VP9)))
-
-#define HWRESOLUTION_ENABLED \
-  ((pBMI->biHeight <= 576 && pBMI->biWidth <= 1024 && m_pLAVVideo->GetHWAccelResolutionFlags() & LAVHWResFlag_SD)     \
-|| ((pBMI->biHeight > 576 || pBMI->biWidth > 1024) && pBMI->biHeight <= 1200 && pBMI->biWidth <= 1920 && m_pLAVVideo->GetHWAccelResolutionFlags() & LAVHWResFlag_HD)    \
-|| ((pBMI->biHeight > 1200 || pBMI->biWidth > 1920) && m_pLAVVideo->GetHWAccelResolutionFlags() & LAVHWResFlag_UHD))
-
-
-//ʹ��DXVA Ӳ��a
-ILAVDecoder* CreateDecoderDXVA2();
-
-//ILAVDecoder* CreateDecoderD3D11();//D3D11
-
-ILAVDecoder * CDecodeManager::CreateHWAccelDecoder(LAVHWAccel hwAccel)
-{
-    ILAVDecoder* pDecoder = nullptr;
-    if (hwAccel == HWAccel_DXVA2)
-        pDecoder = CreateDecoderDXVA2();
-    return pDecoder;
-}
 
 STDMETHODIMP CDecodeManager::CreateDecoder(const CMediaType *pmt, AVCodecID codec)
 {
@@ -79,7 +53,7 @@ STDMETHODIMP CDecodeManager::CreateDecoder(const CMediaType *pmt, AVCodecID code
   DbgLog((LOG_TRACE, 10, L"CDecodeThread::CreateDecoder(): Creating new decoder for codec %S", avcodec_get_name(codec)));
   HRESULT hr = S_OK;
   BOOL bWMV9 = FALSE;
-  LAVHWAccel hwAccel;
+
 
   BOOL bHWDecBlackList = _wcsicmp(m_processName.c_str(), L"dllhost.exe") == 0 || _wcsicmp(m_processName.c_str(), L"explorer.exe") == 0 || _wcsicmp(m_processName.c_str(), L"ReClockHelper.dll") == 0;
   DbgLog((LOG_TRACE, 10, L"-> Process is %s, blacklist: %d", m_processName.c_str(), bHWDecBlackList));
@@ -87,27 +61,11 @@ STDMETHODIMP CDecodeManager::CreateDecoder(const CMediaType *pmt, AVCodecID code
   BITMAPINFOHEADER *pBMI = nullptr;
   videoFormatTypeHandler(*pmt, &pBMI);
 
-  // Try reusing the current HW decoder
-  if (m_pDecoder && m_bHWDecoder && !m_bHWDecoderFailed && HWFORMAT_ENABLED && HWRESOLUTION_ENABLED) {
-    DbgLog((LOG_TRACE, 10, L"-> Trying to re-use old HW Decoder"));
-    hr = m_pDecoder->InitDecoder(codec, pmt);
-    goto done;
-  }
-  SAFE_DELETE(m_pDecoder);
 
-   hwAccel = m_pLAVVideo->GetHWAccel();
-  if (!bHWDecBlackList &&  hwAccel != HWAccel_None && !m_bHWDecoderFailed && HWFORMAT_ENABLED && HWRESOLUTION_ENABLED)
-  {
-    DbgLog((LOG_TRACE, 10, L"-> Trying Hardware Codec %d", hwAccel));
-    m_pDecoder = CreateHWAccelDecoder(hwAccel);
-    m_bHWDecoder = TRUE;
-  }
-
-softwaredec:
+  softwaredec:
   // Fallback for software
   if (!m_pDecoder) {
     DbgLog((LOG_TRACE, 10, L"-> No HW Codec, using Software"));
-    m_bHWDecoder = FALSE;
     if (m_pLAVVideo->GetUseMSWMV9Decoder() && (codec == AV_CODEC_ID_VC1 || codec == AV_CODEC_ID_WMV3) && !m_bWMV9Failed) {
       m_pDecoder = CreateDecoderWMV9MFT();
       bWMV9 = TRUE;
@@ -131,11 +89,6 @@ softwaredec:
 done:
   if (FAILED(hr)) {
     SAFE_DELETE(m_pDecoder);
-    if (m_bHWDecoder) {
-      DbgLog((LOG_TRACE, 10, L"-> Hardware decoder failed to initialize, re-trying with software..."));
-      m_bHWDecoderFailed = TRUE;
-      goto softwaredec;
-    }
     if (bWMV9) {
       DbgLog((LOG_TRACE, 10, L"-> WMV9 MFT decoder failed, trying avcodec instead..."));
       m_bWMV9Failed = TRUE;
@@ -159,29 +112,6 @@ STDMETHODIMP CDecodeManager::Decode(IMediaSample *pSample)
     return E_UNEXPECTED;
 
   hr = m_pDecoder->Decode(pSample);
-
-  // If a hardware decoder indicates a hard failure, we switch back to software
-  // This is used to indicate incompatible media
-  if (FAILED(hr) && m_bHWDecoder) {
-    DbgLog((LOG_TRACE, 10, L"CDecodeManager::Decode(): Hardware decoder indicates failure, switching back to software"));
-    m_bHWDecoderFailed = TRUE;
-
-    // If we're disabling DXVA2 Native decoding, we need to release resources now
-    if (wcscmp(m_pDecoder->GetDecoderName(), L"dxva2n") == 0 || wcscmp(m_pDecoder->GetDecoderName(), L"d3d11 native") == 0) {
-      m_pLAVVideo->ReleaseAllDXVAResources();
-      m_pLAVVideo->GetOutputPin()->GetConnected()->BeginFlush();
-      m_pLAVVideo->GetOutputPin()->GetConnected()->EndFlush();
-
-      // TODO: further decoding still fails when DXVA2-Native fails mid-decoding, since we can't inform the renderer about no longer delivering DXVA surfaces
-    }
-
-    CMediaType &mt = m_pLAVVideo->GetInputMediaType();
-    hr = CreateDecoder(&mt, m_Codec);
-
-    if (SUCCEEDED(hr)) {
-      hr = m_pDecoder->Decode(pSample);
-    }
-  }
 
   return S_OK;
 }
@@ -223,7 +153,6 @@ STDMETHODIMP CDecodeManager::PostConnect(IPin *pPin)
   if (m_pDecoder) {
     hr = m_pDecoder->PostConnect(pPin);
     if (FAILED(hr)) {
-      m_bHWDecoderFailed = TRUE;
       CMediaType &mt = m_pLAVVideo->GetInputMediaType();
       hr = CreateDecoder(&mt, m_Codec);
     }

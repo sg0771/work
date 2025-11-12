@@ -58,9 +58,12 @@ extern CAppModule _Module;
 #pragma warning(disable: 4244)
 #pragma warning(disable: 4838)
 
+
 #include <WXMedia.h>
+//#include <WXMediaCpp.h>
 #include <WXBase.h>
 #include <FfmpegIncludes.h>
+#include <timeapi.h>
 
 enum { TIMER_ID = 1001 };
 

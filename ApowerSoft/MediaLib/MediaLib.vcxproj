@@ -72,48 +72,64 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <PreBuildEventUseInBuild>
     </PreBuildEventUseInBuild>
     <GenerateManifest>false</GenerateManifest>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>
     </LinkIncremental>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <PreBuildEventUseInBuild>
     </PreBuildEventUseInBuild>
     <GenerateManifest>false</GenerateManifest>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild>
     </PreBuildEventUseInBuild>
     <GenerateManifest>false</GenerateManifest>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>
     </LinkIncremental>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
-    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)Image;$(SolutionDir)libs</IncludePath>
-    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)WXMedia_SDK\include;$(SolutionDir)libs\libffmpeg;$(SolutionDir)libs\WTL;$(SolutionDir)libs\libffmpeg;$(SolutionDir)Image;$(SolutionDir)libs</ExternalIncludePath>
-    <LibraryPath>$(SolutionDir)WXMedia_SDK\ffmpeg_sdk\$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
+    <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <PreBuildEventUseInBuild>
     </PreBuildEventUseInBuild>
     <GenerateManifest>false</GenerateManifest>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExcludePath>$(ExcludePath)</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnabled>false</VcpkgEnabled>
@@ -145,7 +161,7 @@
       <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101;4005;4554</DisableSpecificWarnings>
       <SupportJustMyCode>false</SupportJustMyCode>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
@@ -189,7 +205,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101;4005;4554</DisableSpecificWarnings>
-      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -233,7 +249,7 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101;4005;4554</DisableSpecificWarnings>
@@ -276,7 +292,7 @@
       <ConformanceMode>false</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
-      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DisableSpecificWarnings>4146;4305;4703;4018;4244;4996;4819;4267;4101;4005;4554</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
@@ -311,18 +327,12 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\WXMedia_SDK\include\FfmpegIncludes.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\json.hpp" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\libimagequant.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\LibInst.hpp" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\librnnoise.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\libyuv.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\SoundTouch.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXBase.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXLog.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXMedia.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaCpp.h" />
-    <ClInclude Include="..\..\WXMedia_SDK\include\WXMediaDefines.h" />
+    <ClInclude Include="..\..\libs\FfmpegIncludes.h" />
+    <ClInclude Include="..\..\libs\LibInst.hpp" />
+    <ClInclude Include="..\..\libs\libyuv\libyuv.h" />
+    <ClInclude Include="..\..\libs\SoundTouch.h" />
+    <ClInclude Include="..\..\libs\WXBase.h" />
+    <ClInclude Include="..\..\libs\WXLog.h" />
     <ClInclude Include="apm\aec_common.h" />
     <ClInclude Include="apm\aec_core.h" />
     <ClInclude Include="apm\aec_core_internal.h" />
@@ -615,10 +625,9 @@
     <ClInclude Include="D3D_Filters\ML_Texture.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\WXMedia_SDK\include\libimagequant.c" />
-    <ClCompile Include="..\..\WXMedia_SDK\include\libyuv.cc" />
-    <ClCompile Include="..\..\WXMedia_SDK\include\SoundTouch.cpp" />
-    <ClCompile Include="..\..\WXMedia_SDK\include\WXLog.cpp" />
+    <ClCompile Include="..\..\libs\libyuv\libyuv.cc" />
+    <ClCompile Include="..\..\libs\SoundTouch.cpp" />
+    <ClCompile Include="..\..\libs\WXLog.cpp" />
     <ClCompile Include="apm\aec_core.c" />
     <ClCompile Include="apm\aec_core_neon.c" />
     <ClCompile Include="apm\aec_core_sse2.c" />

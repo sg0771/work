@@ -88,17 +88,7 @@ public:
   STDMETHODIMP SetDeintAggressive(BOOL bAggressive);
   STDMETHODIMP_(BOOL) GetDeintAggressive();
 
-  STDMETHODIMP_(DWORD) CheckHWAccelSupport(LAVHWAccel hwAccel);
-  STDMETHODIMP SetHWAccel(LAVHWAccel hwAccel);
-  STDMETHODIMP_(LAVHWAccel) GetHWAccel();
-  STDMETHODIMP SetHWAccelCodec(LAVVideoHWCodec hwAccelCodec, BOOL bEnabled);
-  STDMETHODIMP_(BOOL) GetHWAccelCodec(LAVVideoHWCodec hwAccelCodec);
-  STDMETHODIMP SetHWAccelDeintMode(LAVHWDeintModes deintMode);
-  STDMETHODIMP_(LAVHWDeintModes) GetHWAccelDeintMode();
-  STDMETHODIMP SetHWAccelDeintOutput(LAVDeintOutput deintOutput);
-  STDMETHODIMP_(LAVDeintOutput) GetHWAccelDeintOutput();
-  STDMETHODIMP SetHWAccelDeintHQ(BOOL bHQ);
-  STDMETHODIMP_(BOOL) GetHWAccelDeintHQ();
+ 
   STDMETHODIMP SetSWDeintMode(LAVSWDeintModes deintMode);
   STDMETHODIMP_(LAVSWDeintModes) GetSWDeintMode();
   STDMETHODIMP SetSWDeintOutput(LAVDeintOutput deintOutput);
@@ -116,25 +106,14 @@ public:
   STDMETHODIMP SetDVDVideoSupport(BOOL bEnabled);
   STDMETHODIMP_(BOOL) GetDVDVideoSupport();
 
-  STDMETHODIMP SetHWAccelResolutionFlags(DWORD dwResFlags);
-  STDMETHODIMP_(DWORD) GetHWAccelResolutionFlags();
 
   STDMETHODIMP SetDeinterlacingMode(LAVDeintMode deintMode);
   STDMETHODIMP_(LAVDeintMode) GetDeinterlacingMode();
-
-  STDMETHODIMP SetGPUDeviceIndex(DWORD dwDevice);
-
-  STDMETHODIMP_(DWORD) GetHWAccelNumDevices(LAVHWAccel hwAccel);
-  STDMETHODIMP GetHWAccelDeviceInfo(LAVHWAccel hwAccel, DWORD dwIndex, BSTR *pstrDeviceName, DWORD *pdwDeviceIdentifier);
-
-  STDMETHODIMP_(DWORD) GetHWAccelDeviceIndex(LAVHWAccel hwAccel, DWORD *pdwDeviceIdentifier);
-  STDMETHODIMP SetHWAccelDeviceIndex(LAVHWAccel hwAccel, DWORD dwIndex, DWORD dwDeviceIdentifier);
 
   STDMETHODIMP SetH264MVCDecodingOverride(BOOL bEnabled);
 
   // ILAVVideoStatus
   STDMETHODIMP_(const WCHAR *) GetActiveDecoderName() { return m_Decoder.GetDecoderName(); }
-  STDMETHODIMP GetHWAccelActiveDevice(BSTR *pstrDeviceName);
 
   // CTransformFilter
   STDMETHODIMP Stop();
@@ -178,8 +157,6 @@ public:
   STDMETHODIMP_(CMediaType&) GetOutputMediaType() { return m_pOutput->CurrentMediaType(); }
   STDMETHODIMP DVDStripPacket(BYTE*& p, long& len) { static_cast<CDeCSSTransformInputPin*>(m_pInput)->StripPacket(p, len); return S_OK; }
   STDMETHODIMP_(LAVFrame*) GetFlushFrame();
-  STDMETHODIMP ReleaseAllDXVAResources() { ReleaseLastSequenceFrame(); return S_OK; }
-  STDMETHODIMP_(DWORD) GetGPUDeviceIndex() { return m_dwGPUDeviceIndex; }
   STDMETHODIMP_(BOOL) HasDynamicInputAllocator();
 
   // IPropertyBag
@@ -285,24 +262,19 @@ private:
     BOOL bMSWMV9DMO;
     BOOL bPixFmts[LAVOutPixFmt_NB];
     DWORD RGBRange;
-    DWORD HWAccel;
-    BOOL bHWFormats[HWCodec_NB];
-    DWORD HWAccelResFlags;
-    BOOL  HWAccelCUVIDXVA;
-    DWORD HWDeintMode;
-    DWORD HWDeintOutput;
+
+
+
     DWORD DeintFieldOrder;
     LAVDeintMode DeintMode;
     DWORD SWDeintMode;
     DWORD SWDeintOutput;
     DWORD DitherMode;
     BOOL bDVDVideo;
-    DWORD HWAccelDeviceDXVA2;
-    DWORD HWAccelDeviceDXVA2Desc;
-    DWORD HWAccelDeviceD3D11;
-    DWORD HWAccelDeviceD3D11Desc;
+
+
+
     BOOL bH264MVCOverride;
   } m_settings;
 
-  DWORD m_dwGPUDeviceIndex = DWORD_MAX;
 };

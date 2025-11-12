@@ -396,7 +396,7 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
@@ -407,7 +407,7 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
@@ -418,7 +418,7 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ExcludePath>$(ExcludePath)</ExcludePath>
@@ -429,7 +429,7 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
     <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <LibraryWPath>$(LibraryWPath)</LibraryWPath>
     <ExcludePath>$(ExcludePath)</ExcludePath>

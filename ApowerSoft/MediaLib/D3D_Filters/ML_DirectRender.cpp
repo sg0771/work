@@ -6,7 +6,6 @@
 #include <fstream>
 #include <ffms2/ffms.h>
 #include "ML_DirectRender.h"
-#include <libyuv.h>
 #include "../ML_stdafx.h"
 
 

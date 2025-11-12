@@ -110,7 +110,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
@@ -123,7 +123,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
@@ -136,7 +136,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
@@ -149,7 +149,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(IncludePath);$(SolutionDir)libs\WTL</IncludePath>
-    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs\;$(SolutionDir)libs\libffmpeg</ExternalIncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(SolutionDir)libs;$(SolutionDir)libs\libffmpeg;.\;</ExternalIncludePath>
     <IntDir>$(SolutionDir).vs\ipch\$(Configuration)_$(Platform)\tmp_obj\$(ProjectName)\</IntDir>
     <OutDir>$(SolutionDir)\WXMedia_SDK\$(Configuration)\$(Platform)\</OutDir>
     <LibraryPath>$(SolutionDir)ffmpeg_sdk\lib\$(Platform)\;$(OutDir);$(LibraryPath)</LibraryPath>
@@ -165,20 +165,15 @@
       <WarningLevel>Level3</WarningLevel>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <BasicRuntimeChecks>StackFrameRuntimeCheck</BasicRuntimeChecks>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_FILE_OFFSET_BITS=64;WIN32_LEAN_AND_MEAN;NOMINMAX;_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WINDOWS;STRICT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WINDOWS;STRICT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
       <AdditionalIncludeDirectories>./;../;../libmpv</AdditionalIncludeDirectories>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <OmitFramePointers>true</OmitFramePointers>
-      <ConformanceMode>false</ConformanceMode>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -219,20 +214,15 @@
       <WarningLevel>Level3</WarningLevel>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <BasicRuntimeChecks>StackFrameRuntimeCheck</BasicRuntimeChecks>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_FILE_OFFSET_BITS=64;WIN32_LEAN_AND_MEAN;NOMINMAX;_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;WIN32;_WINDOWS;STRICT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;WIN32;_WINDOWS;STRICT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
       <AdditionalIncludeDirectories>./;../;../libmpv</AdditionalIncludeDirectories>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <OmitFramePointers>true</OmitFramePointers>
-      <ConformanceMode>false</ConformanceMode>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -273,22 +263,15 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExceptionHandling />
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_FILE_OFFSET_BITS=64;WIN32_LEAN_AND_MEAN;NOMINMAX;_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;WIN32;_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;WIN32;_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
       <AdditionalIncludeDirectories>./;../;../libmpv</AdditionalIncludeDirectories>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <OmitFramePointers>true</OmitFramePointers>
-      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <WholeProgramOptimization>true</WholeProgramOptimization>
-      <ConformanceMode>false</ConformanceMode>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -328,22 +311,15 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExceptionHandling />
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_FILE_OFFSET_BITS=64;WIN32_LEAN_AND_MEAN;NOMINMAX;_WIN32_WINNT=0x0601;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;WIN32_LEAN_AND_MEAN;_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)pdb\$(TargetName).pdb</ProgramDataBaseFileName>
       <AdditionalIncludeDirectories>./;../;../libmpv</AdditionalIncludeDirectories>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <OmitFramePointers>true</OmitFramePointers>
-      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <WholeProgramOptimization>true</WholeProgramOptimization>
-      <ConformanceMode>false</ConformanceMode>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

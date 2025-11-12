@@ -280,16 +280,6 @@ interface ILAVVideoCallback
   STDMETHOD_(LAVFrame*,GetFlushFrame)() PURE;
 
   /**
-   * Ask the decoder to release all DXVA resources
-   */
-  STDMETHOD(ReleaseAllDXVAResources)() PURE;
-
-  /**
-   * Get the index of the GPU device to be used for HW decoding, DWORD_MAX if not set
-   */
-  STDMETHOD_(DWORD, GetGPUDeviceIndex)() PURE;
-
-  /**
    * Check if the input is using a dynamic allocator
    */
   STDMETHOD_(BOOL, HasDynamicInputAllocator)() PURE;
@@ -415,20 +405,6 @@ interface ILAVDecoder
    */
   STDMETHOD(SetDirectOutput)(BOOL bDirect) PURE;
 
-  /**
-   * Get the number of available hw accel devices
-   */
-  STDMETHOD_(DWORD, GetHWAccelNumDevices)() PURE;
-
-  /**
-   * Get information about a hwaccel device
-   */
-  STDMETHOD(GetHWAccelDeviceInfo)(DWORD dwIndex, BSTR *pstrDeviceName, DWORD *dwDeviceIdentifier) PURE;
-
-  /**
-   * Get the description of the currently active hwaccel device
-   */
-  STDMETHOD(GetHWAccelActiveDevice)(BSTR *pstrDeviceName) PURE;
 };
 
 /**

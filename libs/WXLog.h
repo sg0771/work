@@ -3,10 +3,10 @@
 
 #include <Windows.h>
 
-EXTERN_C int   WXLogInit(const wchar_t* strFileName);//æˆåŠŸè¿”å›1ï¼Œå¤±è´¥è¿”å›0
+EXTERN_C int   WXLogInit(const wchar_t* strFileName);//³É¹¦·µ»Ø1£¬Ê§°Ü·µ»Ø0
 EXTERN_C void  WXLogA(const char* format, ...);
 EXTERN_C void  WXLogW(const wchar_t* format, ...);
-EXTERN_C void  WXLogAOnce(const char* format, ...);//åªå†™ä¸€æ¬¡log
-EXTERN_C void  WXLogWOnce(const wchar_t* format, ...);//åªå†™ä¸€æ¬¡log
+EXTERN_C void  WXLogAOnce(const char* format, ...);//Ö»Ğ´Ò»´Îlog
+EXTERN_C void  WXLogWOnce(const wchar_t* format, ...);//Ö»Ğ´Ò»´Îlog
 
 #endif

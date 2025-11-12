@@ -241,41 +241,6 @@ interface __declspec(uuid("FA40D6E9-4D38-4761-ADD2-71A9EC5FD32F")) ILAVVideoSett
   // DEPRECATED, use GetDeinterlacingMode
   STDMETHOD_(BOOL, GetDeintForce)() = 0;
 
-  // Check if the specified HWAccel is supported
-  // Note: This will usually only check the availability of the required libraries (ie. for NVIDIA if a recent enough NVIDIA driver is installed)
-  // and not check actual hardware support
-  // Returns: 0 = Unsupported, 1 = Supported, 2 = Currently running
-  STDMETHOD_(DWORD,CheckHWAccelSupport)(LAVHWAccel hwAccel) = 0;
-
-  // Set which HW Accel method is used
-  // See LAVHWAccel for options.
-  STDMETHOD(SetHWAccel)(LAVHWAccel hwAccel) = 0;
-
-  // Get which HW Accel method is active
-  STDMETHOD_(LAVHWAccel, GetHWAccel)() = 0;
-
-  // Set which codecs should use HW Acceleration
-  STDMETHOD(SetHWAccelCodec)(LAVVideoHWCodec hwAccelCodec, BOOL bEnabled) = 0;
-
-  // Get which codecs should use HW Acceleration
-  STDMETHOD_(BOOL, GetHWAccelCodec)(LAVVideoHWCodec hwAccelCodec) = 0;
-
-  // Set the deinterlacing mode used by the hardware decoder
-  STDMETHOD(SetHWAccelDeintMode)(LAVHWDeintModes deintMode) = 0;
-
-  // Get the deinterlacing mode used by the hardware decoder
-  STDMETHOD_(LAVHWDeintModes, GetHWAccelDeintMode)() = 0;
-
-  // Set the deinterlacing output for the hardware decoder
-  STDMETHOD(SetHWAccelDeintOutput)(LAVDeintOutput deintOutput) = 0;
-
-  // Get the deinterlacing output for the hardware decoder
-  STDMETHOD_(LAVDeintOutput, GetHWAccelDeintOutput)() = 0;
-
-  // deprecated. HQ mode is only supported by NVIDIA CUVID/NVDEC and officially deprecated by NVIDIA
-  STDMETHOD(SetHWAccelDeintHQ)(BOOL bHQ) = 0;
-  STDMETHOD_(BOOL, GetHWAccelDeintHQ)() = 0;
-
   // Set the software deinterlacing mode used
   STDMETHOD(SetSWDeintMode)(LAVSWDeintModes deintMode) = 0;
 
@@ -312,13 +277,6 @@ interface __declspec(uuid("FA40D6E9-4D38-4761-ADD2-71A9EC5FD32F")) ILAVVideoSett
   // Get if DVD Video support is enabled
   STDMETHOD_(BOOL,GetDVDVideoSupport)() = 0;
 
-  // Set the HW Accel Resolution Flags
-  // flags: bitmask of LAVHWResFlag flags
-  STDMETHOD(SetHWAccelResolutionFlags)(DWORD dwResFlags) = 0;
-
-  // Get the HW Accel Resolution Flags
-  // flags: bitmask of LAVHWResFlag flags
-  STDMETHOD_(DWORD, GetHWAccelResolutionFlags)() = 0;
 
 
 
@@ -328,24 +286,6 @@ interface __declspec(uuid("FA40D6E9-4D38-4761-ADD2-71A9EC5FD32F")) ILAVVideoSett
   // Get the Deint Mode
   STDMETHOD_(LAVDeintMode,GetDeinterlacingMode)() = 0;
 
-  // Set the index of the GPU to be used for hardware decoding
-  // Only supported for CUVID and DXVA2 copy-back. If the device is not valid, it'll fallback to auto-detection
-  // Must be called before an input is connected to LAV Video, and the setting is non-persistent
-  // NOTE: For CUVID, the index defines the index of the CUDA capable device, while for DXVA2, the list includes all D3D9 devices
-  STDMETHOD(SetGPUDeviceIndex)(DWORD dwDevice) = 0;
-
-  // Get the number of available devices for the specified HWAccel
-  STDMETHOD_(DWORD, GetHWAccelNumDevices)(LAVHWAccel hwAccel) = 0;
-
-  // Get a list of available HWAccel devices for the specified HWAccel
-  STDMETHOD(GetHWAccelDeviceInfo)(LAVHWAccel hwAccel, DWORD dwIndex, BSTR *pstrDeviceName, DWORD *pdwDeviceIdentifier) = 0;
-
-  // Get/Set the device for a specified HWAccel
-  // In contrast to SetGPUDeviceIndex, this setting is hwaccel-specific and persistent
-  // dwDeviceIdentifier is an optional parameter that identifies the selected device (ie. its device id), set to 0 if not used
-#define LAVHWACCEL_DEVICE_DEFAULT ((DWORD)-1)
-  STDMETHOD_(DWORD, GetHWAccelDeviceIndex)(LAVHWAccel hwAccel, DWORD *pdwDeviceIdentifier) = 0;
-  STDMETHOD(SetHWAccelDeviceIndex)(LAVHWAccel hwAccel, DWORD dwIndex, DWORD dwDeviceIdentifier) = 0;
 
   // Temporary Override for players to disable H.264 MVC decoding
   // This is not a permanent setting and not saved, but can be used by players to offer a "Play in 2D" option, or similar.
@@ -360,6 +300,4 @@ interface __declspec(uuid("1CC2385F-36FA-41B1-9942-5024CE0235DC")) ILAVVideoStat
   // Get the name of the active decoder (can return NULL if none is active)
   STDMETHOD_(LPCWSTR, GetActiveDecoderName)() = 0;
 
-  // Get the name of the currently active hwaccel device
-  STDMETHOD(GetHWAccelActiveDevice)(BSTR *pstrDeviceName) = 0;
 };

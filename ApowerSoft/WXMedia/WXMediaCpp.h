@@ -1,4 +1,4 @@
-/*
+﻿/*
 内部编译使用的头文件
 */
 #ifndef  _WXMEDIA_CPP_H_
@@ -313,7 +313,5 @@ private:
 		return S_OK;
 	}
 };
-
-
 
 #endif

@@ -35,7 +35,7 @@ extern "C" {
 #include "libavutil/mem.h"
 }
 
-
+#include <libyuv/libyuv.h>
 
 // Tells if a number is a power of two.
 #define IS_POWER2(n) ((n) && !((n) & ((n) - 1)))

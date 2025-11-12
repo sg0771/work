@@ -1,19 +1,19 @@
 #include "LibInst.hpp"
 #include "WXLog.h"
 
-//æ—¥å¿—ç±»
+//ÈÕÖ¾Àà
 class WXLogInstance {
 	WXLocker m_mutex;
 	WXString m_strFileName;
 	std::ofstream m_fout;
 public:
-	WXLocker s_lockLog;//æ—¥å¿—é”
+	 WXLocker s_lockLog;//ÈÕÖ¾Ëø
 public:
 	int s_bInitLog = 0;
 	bool s_bCreateFile = false;
-	//é™åˆ¶ç¨‹åºä¸€æ¬¡è¿è¡Œçš„æœ€å¤§æ—¥å¿—æ•°é‡ï¼Œé¿å…æ—¥å¿—è¿‡å¤š
-	int64_t s_nMaxLog = 20000;//ç¨‹åºè¿è¡Œä¸­æœ€å¤šçš„æ—¥å¿—æ•°é‡
-	int64_t s_nCountLog = 0;//log æ•°é‡
+	//ÏŞÖÆ³ÌĞòÒ»´ÎÔËĞĞµÄ×î´óÈÕÖ¾ÊıÁ¿£¬±ÜÃâÈÕÖ¾¹ı¶à
+	int64_t s_nMaxLog = 20000;//³ÌĞòÔËĞĞÖĞ×î¶àµÄÈÕÖ¾ÊıÁ¿
+	int64_t s_nCountLog = 0;//log ÊıÁ¿
 public:
 	static WXLogInstance& GetInst() {
 		static WXLogInstance s_inst;
@@ -62,7 +62,7 @@ public:
 			s_bCreateFile = false;
 		}
 		else {
-			s_bCreateFile = true;//åˆ›å»ºæ–‡ä»¶
+			s_bCreateFile = true;//´´½¨ÎÄ¼ş
 		}
 
 		m_fout.open(m_strFileName.str(), std::ios::app | std::ios::out | std::ios::binary);
@@ -98,16 +98,16 @@ public:
 		if (s_bInitLog) {
 			s_nCountLog++;
 			if (s_nCountLog >= s_nMaxLog) {
-				s_bInitLog = false;//ç¦æ­¢å†™æ—¥å¿—
+				s_bInitLog = false;//½ûÖ¹Ğ´ÈÕÖ¾
 				return;
 			}
-			//å†™å…¥æ—¥å¿—	
+			//Ğ´ÈëÈÕÖ¾	
 			char    szMsg[4096];
 			memset(szMsg, 0, 4096);
 			vsprintf(szMsg, format, args);
 			WXString wxstr;
 			auto now = std::chrono::system_clock::now();
-			//é€šè¿‡ä¸åŒç²¾åº¦è·å–ç›¸å·®çš„æ¯«ç§’æ•°
+			//Í¨¹ı²»Í¬¾«¶È»ñÈ¡Ïà²îµÄºÁÃëÊı
 			uint64_t dis_millseconds = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count()
 				- std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch()).count() * 1000;
 			time_t tt = std::chrono::system_clock::to_time_t(now);
@@ -125,10 +125,10 @@ public:
 		if (s_bInitLog) {
 			s_nCountLog++;
 			if (s_nCountLog >= s_nMaxLog) {
-				s_bInitLog = false;//ç¦æ­¢å†™æ—¥å¿—
+				s_bInitLog = false;//½ûÖ¹Ğ´ÈÕÖ¾
 				return;
 			}
-			//å†™å…¥æ—¥å¿—
+			//Ğ´ÈëÈÕÖ¾
 			wchar_t wszMsg[4096];
 			memset(wszMsg, 0, 4096 * 2);
 			vswprintf(wszMsg,
@@ -138,7 +138,7 @@ public:
 				format, args);
 			WXString wxstr;
 			auto now = std::chrono::system_clock::now();
-			//é€šè¿‡ä¸åŒç²¾åº¦è·å–ç›¸å·®çš„æ¯«ç§’æ•°
+			//Í¨¹ı²»Í¬¾«¶È»ñÈ¡Ïà²îµÄºÁÃëÊı
 			uint64_t dis_millseconds = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count()
 				- std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch()).count() * 1000;
 			time_t tt = std::chrono::system_clock::to_time_t(now);
@@ -157,16 +157,16 @@ public:
 		if (s_bInitLog && s_bCreateFile) {
 			s_nCountLog++;
 			if (s_nCountLog >= s_nMaxLog) {
-				s_bInitLog = false;//ç¦æ­¢å†™æ—¥å¿—
+				s_bInitLog = false;//½ûÖ¹Ğ´ÈÕÖ¾
 				return;
 			}
-			//å†™å…¥æ—¥å¿—	
+			//Ğ´ÈëÈÕÖ¾	
 			char    szMsg[4096];
 			memset(szMsg, 0, 4096);
 			vsprintf(szMsg, format, args);
 			WXString wxstr;
 			auto now = std::chrono::system_clock::now();
-			//é€šè¿‡ä¸åŒç²¾åº¦è·å–ç›¸å·®çš„æ¯«ç§’æ•°
+			//Í¨¹ı²»Í¬¾«¶È»ñÈ¡Ïà²îµÄºÁÃëÊı
 			uint64_t dis_millseconds = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count()
 				- std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch()).count() * 1000;
 			time_t tt = std::chrono::system_clock::to_time_t(now);
@@ -184,10 +184,10 @@ public:
 		if (s_bInitLog && s_bCreateFile) {
 			s_nCountLog++;
 			if (s_nCountLog >= s_nMaxLog) {
-				s_bInitLog = false;//ç¦æ­¢å†™æ—¥å¿—
+				s_bInitLog = false;//½ûÖ¹Ğ´ÈÕÖ¾
 				return;
 			}
-			//å†™å…¥æ—¥å¿—
+			//Ğ´ÈëÈÕÖ¾
 			wchar_t wszMsg[4096];
 			memset(wszMsg, 0, 4096 * 2);
 			vswprintf(wszMsg,
@@ -197,7 +197,7 @@ public:
 				format, args);
 			WXString wxstr;
 			auto now = std::chrono::system_clock::now();
-			//é€šè¿‡ä¸åŒç²¾åº¦è·å–ç›¸å·®çš„æ¯«ç§’æ•°
+			//Í¨¹ı²»Í¬¾«¶È»ñÈ¡Ïà²îµÄºÁÃëÊı
 			uint64_t dis_millseconds = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count()
 				- std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch()).count() * 1000;
 			time_t tt = std::chrono::system_clock::to_time_t(now);
@@ -220,20 +220,20 @@ public:
 	}
 };
 
-//è®¾ç½®æ—¥å¿—æ–‡ä»¶
+//ÉèÖÃÈÕÖ¾ÎÄ¼ş
 EXTERN_C int   WXLogInit(const wchar_t* strFileName) {
 	return WXLogInstance::GetInst().Init(strFileName);
 }
 
 EXTERN_C void  WXLogAOnce(const char* format, ...) {
-	va_list args
+		va_list args
 #ifdef _WIN32
-		= nullptr
+			= nullptr
 #endif
-		;
-	va_start(args, format);
-	WXLogInstance::GetInst().WXLogVOnce(format, args);    // è°ƒç”¨å†…éƒ¨å¤„ç†å‡½æ•°
-	va_end(args);
+			;
+		va_start(args, format);
+		WXLogInstance::GetInst().WXLogVOnce(format, args);    // µ÷ÓÃÄÚ²¿´¦Àíº¯Êı
+		va_end(args);
 }
 
 EXTERN_C void  WXLogWOnce(const wchar_t* format, ...) {
@@ -243,7 +243,7 @@ EXTERN_C void  WXLogWOnce(const wchar_t* format, ...) {
 #endif
 		;
 	va_start(args, format);
-	WXLogInstance::GetInst().WXLogVOnce(format, args);    // è°ƒç”¨å†…éƒ¨å¤„ç†å‡½æ•°
+	WXLogInstance::GetInst().WXLogVOnce(format, args);    // µ÷ÓÃÄÚ²¿´¦Àíº¯Êı
 	va_end(args);
 }
 
@@ -254,7 +254,7 @@ EXTERN_C void  WXLogA(const char* format, ...) {
 #endif
 		;
 	va_start(args, format);
-	WXLogInstance::GetInst().WXLogV(format, args);    // è°ƒç”¨å†…éƒ¨å¤„ç†å‡½æ•°
+	WXLogInstance::GetInst().WXLogV(format, args);    // µ÷ÓÃÄÚ²¿´¦Àíº¯Êı
 	va_end(args);
 }
 
@@ -265,7 +265,7 @@ EXTERN_C void  WXLogW(const wchar_t* format, ...) {
 #endif
 		;
 	va_start(args, format);
-	WXLogInstance::GetInst().WXLogV(format, args);    // è°ƒç”¨å†…éƒ¨å¤„ç†å‡½æ•°
+	WXLogInstance::GetInst().WXLogV(format, args);    // µ÷ÓÃÄÚ²¿´¦Àíº¯Êı
 	va_end(args);
 }
 

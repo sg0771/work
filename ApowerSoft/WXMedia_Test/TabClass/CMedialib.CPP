@@ -160,8 +160,8 @@ LRESULT CLASS_NAME::OnBnClickedPlayStartStop(WORD /*wNotifyCode*/, WORD /*wID*/,
 		DoDataExchange(TRUE);
 
 		//ML_SetValue(L"uselog", m_bUselog);//更多日志信息
-		MLIniSetValue(L"HwVideoDecode", m_bHW_Dec);//H264 硬解码优化
-		MLIniSetValue(L"HwVideoEncode", m_bHW_Enc);//QSV 硬编码优化
+		ML_SetValue(L"HwVideoDecode", m_bHW_Dec);//H264 硬解码优化
+		ML_SetValue(L"HwVideoEncode", m_bHW_Enc);//QSV 硬编码优化
 
 	
 		int count = m_listView.GetItemCount();
@@ -349,8 +349,8 @@ LRESULT CLASS_NAME::OnBnClickedExport(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /
 		return 0;
 	}
 	DoDataExchange(TRUE);
-	MLIniSetValue(L"HwVideoDecode", m_bHW_Dec);//H264 硬解码优化
-	MLIniSetValue(L"HwVideoEncode", m_bHW_Enc);//QSV 硬编码优化
+	ML_SetValue(L"HwVideoDecode", m_bHW_Dec);//H264 硬解码优化
+	ML_SetValue(L"HwVideoEncode", m_bHW_Enc);//QSV 硬编码优化
 	if (m_threadTask == nullptr) {
 		m_threadTask = new std::thread(&CLASS_NAME::funcConv, this);
 	}

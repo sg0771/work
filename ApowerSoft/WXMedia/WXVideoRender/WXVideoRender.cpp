@@ -2177,8 +2177,8 @@ public:
 
 		m_bStill = WXGetGlobalValue(L"Still");
 
-		m_bSupportD3DX = WXIniGetValue( L"SupportD3DX", 0);
-		m_bSupportD3D = WXIniGetValue( L"SupportD3D", 0);
+		m_bSupportD3DX = WXGetIniValue(_T("WXMedia"), L"SupportD3DX", 0);
+		m_bSupportD3D = WXGetIniValue(_T("WXMedia"), L"SupportD3D", 0);
 
 		//WXLogA("!!! %s m_bSupportD3DX=%d ", __FUNCTION__, m_bSupportD3DX);
 		//WXLogA("!!! %s m_bSupportD3D =%d", __FUNCTION__, m_bSupportD3D);
